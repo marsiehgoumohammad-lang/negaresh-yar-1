@@ -3,24 +3,16 @@
 -- Run AFTER 001_create_schema.sql (idempotent: safe to run more than once)
 -- ==========================================================================
 
--- Default business/system settings
-insert into public.settings (key, value)
-values (
-  'business_config',
-  jsonb_build_object(
-    'siteTitle', 'نگارش‌یار',
-    'sitePhone', '',
-    'siteAddress', '',
-    'workingHours', 'شنبه تا چهارشنبه ۹ تا ۱۷',
-    'defaultTaxPercentage', 9,
-    'invoicePrefix', 'NY-',
-    'invoiceFooterText', 'با تشکر از اعتماد شما',
-    'geminiApiKey', '',
-    'openaiApiKey', '',
-    'activeAiProvider', 'gemini'
-  )
+-- Default business settings (single row, id = 1)
+insert into public.business_settings (
+  id, site_title, phone_number, city, province,
+  invoice_footer_text, active_ai_provider
 )
-on conflict (key) do nothing;
+values (
+  1, 'نگارش یار', '+989915147789', 'مشهد', 'خراسان رضوی',
+  'با تشکر از اعتماد شما', 'auto'
+)
+on conflict (id) do nothing;
 
 -- Default messengers
 insert into public.messengers (id, name, url, icon, label, order_index, active) values

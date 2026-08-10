@@ -5,19 +5,19 @@
 -- Model:
 --   * Public (anon) can READ active/published customer-facing content:
 --       services, articles, messengers
---   * Sensitive tables (customers, invoices, invoice_items, settings)
+--   * Sensitive tables (customers, invoices, invoice_items, business_settings)
 --     have NO public policies -> only the service_role key (used from your
 --     server) can read/write them. RLS is bypassed by the service_role.
 -- ==========================================================================
 
 -- Enable RLS on every table
-alter table public.customers      enable row level security;
-alter table public.services       enable row level security;
-alter table public.invoices       enable row level security;
-alter table public.invoice_items  enable row level security;
-alter table public.articles       enable row level security;
-alter table public.messengers     enable row level security;
-alter table public.settings       enable row level security;
+alter table public.customers          enable row level security;
+alter table public.services           enable row level security;
+alter table public.invoices           enable row level security;
+alter table public.invoice_items      enable row level security;
+alter table public.articles           enable row level security;
+alter table public.messengers         enable row level security;
+alter table public.business_settings  enable row level security;
 
 -- --------------------------------------------------------------------------
 -- Public read: active services
@@ -46,6 +46,6 @@ create policy "public read active messengers"
   to anon, authenticated
   using (active = true);
 
--- NOTE: customers, invoices, invoice_items and settings intentionally have
--- no anon/authenticated policies. Access them from your server using the
+-- NOTE: customers, invoices, invoice_items and business_settings intentionally
+-- have no anon/authenticated policies. Access them from your server using the
 -- SUPABASE_SERVICE_ROLE_KEY, which bypasses RLS.

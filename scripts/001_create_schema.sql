@@ -116,16 +116,32 @@ create table if not exists public.messengers (
 );
 
 -- --------------------------------------------------------------------------
--- ۷. جدول تنظیمات کلی سیستم (settings)
+-- ۷. جدول تنظیمات کسب‌وکار (business_settings) — تک‌ردیفی (id = 1)
 -- --------------------------------------------------------------------------
-create table if not exists public.settings (
-  key         varchar(100) primary key,
-  value       jsonb not null default '{}'::jsonb,
-  updated_at  timestamptz not null default now()
+create table if not exists public.business_settings (
+  id                   integer primary key default 1 check (id = 1),
+  site_title           varchar(255) default 'نگارش یار',
+  phone_number         varchar(50)  default '+989915147789',
+  city                 varchar(100) default 'مشهد',
+  province             varchar(100) default 'خراسان رضوی',
+  address              text,
+  national_id          varchar(50),
+  registration_number  varchar(50),
+  postal_code          varchar(20),
+  bank_card_number     varchar(30),
+  bank_sheba           varchar(34),
+  bank_account_owner   varchar(255),
+  invoice_footer_text  text,
+  invoice_description  text,
+  payment_gateway_url  text,
+  gemini_api_key       text,
+  openai_api_key       text,
+  active_ai_provider   varchar(20) default 'auto',
+  updated_at           timestamptz not null default now()
 );
 
 -- --------------------------------------------------------------------------
--- Trigger: keep updated_at fresh on articles & settings
+-- Trigger: keep updated_at fresh on articles & business_settings
 -- --------------------------------------------------------------------------
 create or replace function public.set_updated_at()
 returns trigger as $$
@@ -140,7 +156,7 @@ create trigger trg_articles_updated_at
   before update on public.articles
   for each row execute function public.set_updated_at();
 
-drop trigger if exists trg_settings_updated_at on public.settings;
-create trigger trg_settings_updated_at
-  before update on public.settings
+drop trigger if exists trg_business_settings_updated_at on public.business_settings;
+create trigger trg_business_settings_updated_at
+  before update on public.business_settings
   for each row execute function public.set_updated_at();
