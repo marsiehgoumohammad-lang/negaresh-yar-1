@@ -99,16 +99,16 @@ create table if not exists public.articles (
 create index if not exists idx_articles_status on public.articles(status);
 
 -- --------------------------------------------------------------------------
--- ۶. جدول پیام‌رسان‌ها (messengers)
+-- ۶. جدول پیام‌رسان‌ها (messengers_config)
 -- --------------------------------------------------------------------------
-create table if not exists public.messengers (
-  id           varchar(50) primary key,
-  name         varchar(100) not null,
-  url          text,
-  icon         text,
-  label        varchar(255),
-  order_index  integer not null default 0,
-  active       boolean not null default true
+create table if not exists public.messengers_config (
+  code           varchar(50) primary key,
+  name           varchar(100) not null,
+  label          varchar(255),
+  url            text not null,
+  icon           text,
+  display_order  integer default 0,
+  active          boolean default true
 );
 
 -- --------------------------------------------------------------------------

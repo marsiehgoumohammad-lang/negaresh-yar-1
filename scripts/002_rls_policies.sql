@@ -16,7 +16,7 @@ alter table public.services           enable row level security;
 alter table public.invoices           enable row level security;
 alter table public.invoice_items      enable row level security;
 alter table public.articles           enable row level security;
-alter table public.messengers         enable row level security;
+alter table public.messengers_config  enable row level security;
 alter table public.business_settings  enable row level security;
 
 -- --------------------------------------------------------------------------
@@ -40,9 +40,9 @@ create policy "public read published articles"
 -- --------------------------------------------------------------------------
 -- Public read: active messengers
 -- --------------------------------------------------------------------------
-drop policy if exists "public read active messengers" on public.messengers;
+drop policy if exists "public read active messengers" on public.messengers_config;
 create policy "public read active messengers"
-  on public.messengers for select
+  on public.messengers_config for select
   to anon, authenticated
   using (active = true);
 
