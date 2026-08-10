@@ -26,18 +26,14 @@ create table if not exists public.customers (
 -- ۲. جدول خدمات نگارش (services)
 -- --------------------------------------------------------------------------
 create table if not exists public.services (
-  id               text primary key,
-  title            varchar(255) not null,
-  slug             varchar(255) not null unique,
-  category         varchar(100),
-  price            bigint not null default 0,
-  turnaround_time  varchar(100),
-  description      text,
-  popular          boolean not null default false,
-  active           boolean not null default true,
-  order_index      integer not null default 0,
-  form_fields      jsonb not null default '[]'::jsonb,
-  required_docs    jsonb not null default '[]'::jsonb
+  id                  varchar(100) primary key,
+  title               varchar(255) not null,
+  category            varchar(100) not null,
+  short_description   text,
+  base_price          bigint not null default 0,
+  delivery_time_days  integer default 1,
+  active              boolean default true,
+  created_at          timestamptz not null default now()
 );
 
 -- --------------------------------------------------------------------------
