@@ -1,0 +1,8 @@
+{
+  "name": "نگارش یار - AI Legal Interpreter",
+  "description": "تفسیر هوشمند اوراق و اسناد قضایی به زبان ساده با هوش مصنوعی",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

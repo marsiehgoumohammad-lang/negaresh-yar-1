@@ -1,8 +1,8 @@
 'use client';
 
-/* eslint-disable @next/next/no-html-link-for-pages */
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { motion, AnimatePresence } from 'motion/react';
 import { Container } from '../ui/container';
 
@@ -32,7 +32,7 @@ const menuLinks = [
   {
     number: '۰۳',
     title: 'خدمات نگارش و عریضه‌نویسی',
-    href: '/#services',
+    href: '/services',
     icon: (
       <svg className="w-5 h-5 text-[#E5C158]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.8} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
@@ -64,8 +64,8 @@ const menuLinks = [
   },
   {
     number: '۰۶',
-    title: 'تماس و ثبت درخواست',
-    href: '/#contact',
+    title: 'ثبت درخواست خدمات',
+    href: '/request',
     icon: (
       <svg className="w-5 h-5 text-[#E5C158]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.8} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
@@ -86,7 +86,7 @@ const messengers = [
 export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
-  // Body scroll locking and Esc / Popstate handling
+  // Body scroll locking and Esc key handling
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === 'Escape') {
@@ -96,31 +96,19 @@ export function Header() {
 
     if (mobileMenuOpen) {
       document.body.style.overflow = 'hidden';
-      window.history.pushState({ menuOpen: true }, '');
-
-      const handlePopState = () => {
-        setMobileMenuOpen(false);
-      };
-
-      window.addEventListener('popstate', handlePopState);
       window.addEventListener('keydown', handleKeyDown);
-
-      return () => {
-        document.body.style.overflow = '';
-        window.removeEventListener('popstate', handlePopState);
-        window.removeEventListener('keydown', handleKeyDown);
-      };
     } else {
       document.body.style.overflow = '';
     }
+
+    return () => {
+      document.body.style.overflow = '';
+      window.removeEventListener('keydown', handleKeyDown);
+    };
   }, [mobileMenuOpen]);
 
   const handleCloseMenu = () => {
-    if (typeof window !== 'undefined' && window.history.state?.menuOpen) {
-      window.history.back();
-    } else {
-      setMobileMenuOpen(false);
-    }
+    setMobileMenuOpen(false);
   };
 
   const touchStartX = React.useRef<number | null>(null);
@@ -132,9 +120,9 @@ export function Header() {
   const handleTouchEnd = (e: React.TouchEvent) => {
     if (touchStartX.current !== null) {
       const deltaX = e.changedTouches[0].clientX - touchStartX.current;
-      // Swiping from right to left (deltaX < -40) closes left drawer
-      if (deltaX < -40) {
-        handleCloseMenu();
+      // Swiping from right to left (deltaX < -30) closes left drawer
+      if (deltaX < -30) {
+        setMobileMenuOpen(false);
       }
     }
     touchStartX.current = null;
@@ -147,9 +135,14 @@ export function Header() {
           
           {/* Logo Brand on Right (RTL context) */}
           <Link href="/" className="flex items-center gap-3 group">
-            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[#D4AF37] via-[#E5C158] to-[#D4AF37] text-[#070B15] font-black text-2xl flex items-center justify-center shadow-[0_0_15px_rgba(229,193,88,0.3)] shrink-0 group-hover:scale-105 transition-transform">
-              ن
-            </div>
+            <Image
+              src="/logo.jpg"
+              alt="لوگوی رسمی نگارش یار"
+              width={40}
+              height={40}
+              referrerPolicy="no-referrer"
+              className="w-10 h-10 rounded-xl object-contain bg-white p-0.5 border border-[#E5C158]/50 shadow-[0_0_15px_rgba(229,193,88,0.25)] shrink-0 group-hover:scale-105 transition-transform"
+            />
             <div className="flex flex-col">
               <span className="font-black text-lg sm:text-xl text-white group-hover:text-[#E5C158] transition-colors leading-tight tracking-tight">
                 نگارش یار
@@ -161,29 +154,29 @@ export function Header() {
           </Link>
 
           {/* Desktop Navigation Links */}
-          <nav className="hidden lg:flex items-center gap-8">
-            <a href="/#services" className="text-sm font-bold text-slate-300 hover:text-[#E5C158] transition-colors">
+          <nav className="hidden lg:flex items-center gap-7">
+            <Link href="/services" className="text-sm font-bold text-slate-300 hover:text-[#E5C158] transition-colors">
               خدمات نگارش
-            </a>
+            </Link>
+            <Link href="/samples" className="text-sm font-bold text-slate-300 hover:text-[#E5C158] transition-colors">
+              نمونه اسناد
+            </Link>
+            <Link href="/knowledge" className="text-sm font-bold text-slate-300 hover:text-[#E5C158] transition-colors">
+              پایگاه دانش
+            </Link>
             <Link href="/ai-interpreter" className="text-sm font-bold text-slate-300 hover:text-[#E5C158] transition-colors flex items-center gap-1.5">
               <span className="w-2 h-2 rounded-full bg-[#E5C158] animate-pulse" />
               <span>تفسیر قضایی با AI</span>
             </Link>
-            <a href="/#why-us" className="text-sm font-bold text-slate-300 hover:text-[#E5C158] transition-colors">
-              چرا نگارش یار
-            </a>
-            <a href="/#articles" className="text-sm font-bold text-slate-300 hover:text-[#E5C158] transition-colors">
-              راهنمای حقوقی
-            </a>
-            <a href="/#contact" className="text-sm font-bold text-slate-300 hover:text-[#E5C158] transition-colors">
-              تماس با ما
-            </a>
+            <Link href="/request" className="text-sm font-bold text-slate-300 hover:text-[#E5C158] transition-colors">
+              ثبت درخواست
+            </Link>
           </nav>
 
           {/* Desktop CTA + Mobile Animated Hamburger Button */}
           <div className="flex items-center gap-3">
             <Link
-              href="/#contact"
+              href="/request"
               className="hidden sm:inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-gradient-to-r from-[#D4AF37] via-[#E5C158] to-[#D4AF37] text-[#070B15] font-black text-xs shadow-[0_0_15px_rgba(229,193,88,0.25)] hover:brightness-110 transition-all active:scale-95"
             >
               <span>ثبت درخواست</span>
@@ -221,41 +214,31 @@ export function Header() {
         </div>
       </Container>
 
-      {/* LUXURY INTERNATIONAL MOTION GRAPHICS MOBILE MENU OVERLAY - OPEN FROM LEFT */}
+      {/* LUXURY INTERNATIONAL MOTION GRAPHICS MOBILE MENU OVERLAY - FIXED TO LEFT EDGE */}
       <AnimatePresence>
         {mobileMenuOpen && (
-          <div
-            className="fixed inset-0 z-50 lg:hidden flex justify-start"
-            onTouchStart={handleTouchStart}
-            onTouchEnd={handleTouchEnd}
-          >
+          <div className="fixed inset-0 z-50 lg:hidden">
             
             {/* Backdrop Blur Fade In - Touch/Click Backdrop Closes Menu */}
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              transition={{ duration: 0.3 }}
+              transition={{ duration: 0.25 }}
               onClick={handleCloseMenu}
-              onTouchStart={handleCloseMenu}
               className="fixed inset-0 bg-[#070B15]/80 backdrop-blur-xl cursor-pointer"
             />
 
-            {/* Sliding Curved Drawer Panel - Positioned Left & Supports Drag-Left to Close */}
+            {/* Sliding Curved Drawer Panel - Fixed Physically to Left Edge */}
             <motion.div
               initial={{ x: '-100%' }}
               animate={{ x: 0 }}
               exit={{ x: '-100%' }}
-              transition={{ type: 'spring', damping: 28, stiffness: 220 }}
-              drag="x"
-              dragConstraints={{ left: -380, right: 0 }}
-              dragElastic={{ left: 0.1, right: 0 }}
-              onDragEnd={(_, info) => {
-                if (info.offset.x < -40 || info.velocity.x < -200) {
-                  handleCloseMenu();
-                }
-              }}
-              className="relative z-10 w-[88%] max-w-[380px] h-[100dvh] bg-[#070B15] border-l border-slate-800 shadow-[0_0_50px_rgba(0,0,0,0.9)] flex flex-col justify-between overflow-y-auto"
+              transition={{ type: 'spring', damping: 26, stiffness: 240 }}
+              onTouchStart={handleTouchStart}
+              onTouchEnd={handleTouchEnd}
+              dir="rtl"
+              className="fixed top-0 left-0 bottom-0 z-10 w-[88%] max-w-[380px] h-[100dvh] bg-[#070B15] border-r border-slate-800 shadow-[0_0_50px_rgba(0,0,0,0.9)] flex flex-col justify-between overflow-y-auto"
             >
               {/* Radial Lighting Accent inside Menu */}
               <div className="absolute top-0 left-0 w-[250px] h-[250px] bg-[radial-gradient(circle_at_center,rgba(229,193,88,0.12)_0%,transparent_70%)] pointer-events-none" />
@@ -386,7 +369,7 @@ export function Header() {
                 {/* Bottom Action CTA & Version info */}
                 <div className="pt-6 border-t border-slate-800/80 mt-6 space-y-3">
                   <Link
-                    href="/#contact"
+                    href="/request"
                     onClick={handleCloseMenu}
                     className="w-full py-3.5 px-4 rounded-xl bg-gradient-to-r from-[#D4AF37] via-[#E5C158] to-[#D4AF37] hover:brightness-110 text-[#070B14] font-black text-xs sm:text-sm flex items-center justify-center gap-2 shadow-[0_0_20px_rgba(229,193,88,0.3)] transition-all"
                   >

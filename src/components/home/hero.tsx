@@ -2,6 +2,7 @@
 
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import { Container } from '../ui/container';
 
 export function Hero() {
@@ -53,23 +54,23 @@ export function Hero() {
           <div className="w-full max-w-sm sm:max-w-md mx-auto space-y-3.5 my-4 sm:my-6">
             
             {/* Primary Button: Solid Gold Fill with Left Arrow */}
-            <a
-              href="#contact"
+            <Link
+              href="/request"
               className="flex items-center justify-center gap-3 w-full py-3.5 px-6 rounded-xl bg-gradient-to-r from-[#D4AF37] via-[#E5C158] to-[#D4AF37] hover:brightness-110 active:scale-[0.985] text-[#070B14] font-extrabold text-base sm:text-lg shadow-[0_6px_25px_-2px_rgba(229,193,88,0.35)] transition-all duration-200"
             >
               <svg className="w-5 h-5 stroke-[2.5]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18" />
               </svg>
               <span>ثبت درخواست جدید</span>
-            </a>
+            </Link>
 
             {/* Secondary Button: Dark Fill with Gold Outline */}
-            <a
-              href="#services"
+            <Link
+              href="/services"
               className="flex items-center justify-center w-full py-3.5 px-6 rounded-xl bg-[#0B101D]/90 hover:bg-[#121A2D] active:scale-[0.985] border border-[#E5C158]/60 text-[#E5C158] font-bold text-base sm:text-lg shadow-sm transition-all duration-200"
             >
               <span>مشاهده خدمات</span>
-            </a>
+            </Link>
           </div>
 
           {/* Trust Bar Row (4 Key Badges matching reference) */}

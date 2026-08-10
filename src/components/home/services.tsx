@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import { Container } from '../ui/container';
 
 const services = [
@@ -107,15 +108,15 @@ export function Services() {
 
               {/* Card Footer Action Link */}
               <div className="p-5 sm:p-6 pt-3 border-t border-slate-800/80 mt-2">
-                <a
-                  href="#contact"
+                <Link
+                  href="/request"
                   className="flex items-center justify-between w-full py-2.5 px-4 rounded-xl bg-[#121A2D] hover:bg-[#E5C158] text-[#E5C158] hover:text-[#070B15] border border-[#E5C158]/30 hover:border-[#E5C158] font-bold text-xs sm:text-sm transition-all duration-200 group/btn shadow-sm"
                 >
                   <span>{service.actionText}</span>
                   <svg className="w-4 h-4 transform group-hover/btn:-translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18" />
                   </svg>
-                </a>
+                </Link>
               </div>
             </div>
           ))}
