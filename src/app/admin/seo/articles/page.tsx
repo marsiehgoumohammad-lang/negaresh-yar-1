@@ -27,6 +27,7 @@ import {
   BookOpen,
 } from 'lucide-react';
 import { AdminLayout } from '@/components/admin/AdminLayout';
+import { ArticleCmsEditor } from '@/components/admin/ArticleCmsEditor';
 import { Article, ArticleStatus } from '@/lib/stores/types';
 
 function slugifyPersian(text: string): string {
@@ -928,24 +929,12 @@ export default function AdminArticlesCmsPage() {
 
                     {/* Article Content Editor */}
                     <div>
-                      <div className="flex items-center justify-between mb-1.5">
-                        <label className="block text-xs font-bold text-slate-300">
-                          محتوای مقاله (Markdown / HTML) <span className="text-rose-500">*</span>
-                        </label>
-                        <div className="text-[11px] text-slate-400 font-mono space-x-3 space-x-reverse">
-                          <span>تعداد کلمات: <strong className="text-[#E5C158]">{countWords(formContent)}</strong></span>
-                          <span>|</span>
-                          <span>تعداد کاراکترها: <strong className="text-slate-200">{formContent.length}</strong></span>
-                        </div>
-                      </div>
-
-                      <textarea
-                        rows={14}
+                      <ArticleCmsEditor
                         value={formContent}
-                        onChange={(e) => setFormContent(e.target.value)}
-                        placeholder="محتوای کامل مقاله را با ساختار تیترها (##) و پاراگراف‌ها وارد نمایید..."
-                        className="w-full bg-[#070B15] border border-slate-700 focus:border-[#E5C158] rounded-xl p-4 text-xs text-white placeholder-slate-500 focus:outline-none transition-colors font-mono leading-relaxed"
-                        required
+                        onChange={setFormContent}
+                        label="محتوای مقاله (ویرایشگر حرفه‌ای CMS)"
+                        placeholder="محتوای مقاله را تایپ کنید و از نوار ابزار کامل بالا جهت انتخاب تیترها (H1-H3)، درج لینک، درج عکس با متن جایگزین، تغییر فونت و رنگ استفاده نمایید..."
+                        minRows={16}
                       />
                     </div>
                   </div>

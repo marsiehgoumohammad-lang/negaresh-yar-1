@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useEffect, useState, useCallback } from 'react';
-import { Users, Search, Eye, RefreshCw } from 'lucide-react';
+import { Users, Search, Eye, RefreshCw, FileSpreadsheet, Printer } from 'lucide-react';
 import { AdminLayout } from '@/components/admin/AdminLayout';
 import { Customer, Invoice } from '@/lib/stores/types';
 
@@ -44,6 +44,250 @@ export default function CustomersManagementPage() {
   const totalCustomerPaid = customers.reduce((acc, c) => acc + c.totalPaidAmount, 0);
   const totalCustomerUnpaid = customers.reduce((acc, c) => acc + c.totalUnpaidAmount, 0);
 
+  // 1. EXPORT TO EXCEL / CSV
+  const handleExportExcel = () => {
+    if (customers.length === 0) return;
+
+    const headers = [
+      'ردیف',
+      'نام مشتری',
+      'شماره همراه',
+      'تعداد فاکتورها',
+      'مجموع خریدهای مشتری (تومان)',
+      'مجموع دریافتی تسویه‌شده (تومان)',
+      'بدهی معوق (تومان)',
+      'وضعیت تسویه',
+      'تاریخ آخرین فاکتور',
+      'شماره آخرین فاکتور'
+    ];
+
+    const rows = customers.map((c, idx) => [
+      idx + 1,
+      `"${(c.name || '').replace(/"/g, '""')}"`,
+      `"${c.phone || ''}"`,
+      c.totalInvoicesCount || 0,
+      c.totalBilledAmount || 0,
+      c.totalPaidAmount || 0,
+      c.totalUnpaidAmount || 0,
+      c.totalUnpaidAmount > 0 ? 'دارای بدهی معوق' : 'تسویه کامل',
+      `"${c.lastInvoiceDate || ''}"`,
+      `"${c.lastInvoiceNumber || ''}"`
+    ]);
+
+    const csvContent = '\uFEFF' + [headers.join(','), ...rows.map((r) => r.join(','))].join('\n');
+    const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement('a');
+    link.setAttribute('href', url);
+    link.setAttribute('download', `دفترچه_مشتریان_نگارش_یار_${new Date().toISOString().slice(0, 10)}.csv`);
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
+  // 2. EXPORT TO PDF / PRINTABLE REPORT
+  const handleExportPdf = () => {
+    if (customers.length === 0) return;
+
+    const printWindow = window.open('', '_blank');
+    if (!printWindow) {
+      alert('لطفاً اجازه باز شدن پاپ‌آپ (Pop-up) را در مرورگر خود بدهید.');
+      return;
+    }
+
+    const currentDate = new Date().toLocaleDateString('fa-IR');
+
+    const htmlContent = `
+      <!DOCTYPE html>
+      <html dir="rtl" lang="fa">
+      <head>
+        <meta charset="utf-8" />
+        <title-[#1a0dab]>گزارش دفترچه مشتریان - نگارش یار</title>
+        <style>
+          @import url('https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css');
+          body {
+            font-family: 'Vazirmatn', sans-serif;
+            direction: rtl;
+            padding: 24px;
+            color: #0f172a;
+            background: #ffffff;
+          }
+          .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 14px;
+            margin-bottom: 20px;
+          }
+          .title {
+            font-size: 18px;
+            font-weight: 900;
+            color: #0f172a;
+          }
+          .subtitle {
+            font-size: 11px;
+            color: #64748b;
+            margin-top: 4px;
+          }
+          .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 12px;
+            margin-bottom: 20px;
+          }
+          .stat-card {
+            border: 1px solid #cbd5e1;
+            border-radius: 12px;
+            padding: 12px;
+            text-align: right;
+            background: #f8fafc;
+          }
+          .stat-label {
+            font-size: 11px;
+            color: #64748b;
+          }
+          .stat-value {
+            font-size: 15px;
+            font-weight: 800;
+            color: #0f172a;
+            margin-top: 4px;
+          }
+          table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 11px;
+          }
+          th, td {
+            border: 1px solid #cbd5e1;
+            padding: 9px 12px;
+            text-align: right;
+          }
+          th {
+            background-color: #0f172a;
+            color: #E5C158;
+            font-weight: bold;
+          }
+          tr:nth-child(even) {
+            background-color: #f8fafc;
+          }
+          .badge-unpaid {
+            color: #b45309;
+            font-weight: bold;
+          }
+          .badge-paid {
+            color: #15803d;
+            font-weight: bold;
+          }
+          .footer {
+            margin-top: 30px;
+            padding-top: 12px;
+            border-top: 1px dashed #cbd5e1;
+            font-size: 10px;
+            color: #64748b;
+            display: flex;
+            justify-content: space-between;
+          }
+          @media print {
+            body { padding: 0; }
+            @page { size: A4 landscape; margin: 10mm; }
+          }
+        </style>
+      </head>
+      <body>
+        <div class="header">
+          <div>
+            <div class="title">گزارش جامع دفترچه مشتریان - مجموعه نگارش یار</div>
+            <div class="subtitle">خدمات تخصصی تنظیم دادخواست، شکواییه، لایحه و اسناد اداری | تلفن: ۰۹۹۱۵۱۴۷۷۸۹ | مشهد، خراسان رضوی</div>
+          </div>
+          <div style="text-align: left; font-size: 11px; color: #475569;">
+            <div>تاریخ استخراج: ${currentDate}</div>
+            <div>تعداد کل مشتریان: ${customers.length} نفر</div>
+          </div>
+        </div>
+
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-label">تعداد کل مشتریان:</div>
+            <div class="stat-value">${totalCustomersCount.toLocaleString('fa-IR')} نفر</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-label">ارزش کل فاکتورها:</div>
+            <div class="stat-value">${totalCustomerBilled.toLocaleString('fa-IR')} تومان</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-label">دریافتی تسویه‌شده:</div>
+            <div class="stat-value" style="color: #15803d;">${totalCustomerPaid.toLocaleString('fa-IR')} تومان</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-label">بدهی در انتظار تسویه:</div>
+            <div class="stat-value" style="color: #b45309;">${totalCustomerUnpaid.toLocaleString('fa-IR')} تومان</div>
+          </div>
+        </div>
+
+        <table>
+          <thead>
+            <tr>
+              <th style="width: 35px;">#</th>
+              <th>نام مشتری</th>
+              <th>شماره همراه</th>
+              <th>تعداد فاکتور</th>
+              <th>مجموع خرید (تومان)</th>
+              <th>دریافتی تسویه‌شده (تومان)</th>
+              <th>بدهی معوق (تومان)</th>
+              <th>وضعیت تسویه</th>
+              <th>آخرین فاکتور</th>
+            </tr>
+          </thead>
+          <tbody>
+            ${customers
+              .map(
+                (c, idx) => `
+              <tr>
+                <td>${idx + 1}</td>
+                <td style="font-weight: bold;">${c.name}</td>
+                <td style="font-family: monospace; direction: ltr; text-align: right;">${c.phone}</td>
+                <td>${c.totalInvoicesCount} عدد</td>
+                <td>${c.totalBilledAmount.toLocaleString('fa-IR')}</td>
+                <td style="color: #15803d; font-weight: bold;">${c.totalPaidAmount.toLocaleString('fa-IR')}</td>
+                <td>${
+                  c.totalUnpaidAmount > 0
+                    ? `<span class="badge-unpaid">${c.totalUnpaidAmount.toLocaleString('fa-IR')}</span>`
+                    : '۰'
+                }</td>
+                <td>${
+                  c.totalUnpaidAmount > 0
+                    ? '<span class="badge-unpaid">دارای بدهی</span>'
+                    : '<span class="badge-paid">تسویه کامل</span>'
+                }</td>
+                <td>${c.lastInvoiceDate || '-'}</td>
+              </tr>
+            `
+              )
+              .join('')}
+          </tbody>
+        </table>
+
+        <div class="footer">
+          <div>سامانه خدمات اداری و حقوقی نگارش یار (تلفن پشتیبانی: ۰۹۹۱۵۱۴۷۷۸۹)</div>
+          <div>گزارش رسمی خروجی سیستم</div>
+        </div>
+
+        <script>
+          window.onload = function() {
+            setTimeout(function() {
+              window.print();
+            }, 300);
+          };
+        </script>
+      </body>
+      </html>
+    `;
+
+    printWindow.document.write(htmlContent);
+    printWindow.document.close();
+  };
+
   const customerInvoices = selectedCustomer
     ? invoices.filter(
         (inv) =>
@@ -63,17 +307,41 @@ export default function CustomersManagementPage() {
               <span>دفترچه مشتریان (استخراج‌شده از فاکتورها)</span>
             </h1>
             <p className="text-xs text-slate-400 mt-1">
-              لیست خودکار مشتریان همراه با سابقه خرید، بدهی معوق و مجموع تراکنش‌ها
+              لیست خودکار مشتریان همراه با سابقه خرید، بدهی معوق و امکان دریافت خروجی اکسل و PDF
             </p>
           </div>
 
-          <button
-            onClick={fetchCustomersAndInvoices}
-            className="p-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-300 transition-colors border border-slate-700 text-xs flex items-center gap-1.5 self-start sm:self-auto"
-          >
-            <RefreshCw className={`w-3.5 h-3.5 ${loading ? 'animate-spin' : ''}`} />
-            <span>به‌روزرسانی داده‌ها</span>
-          </button>
+          <div className="flex flex-wrap items-center gap-2 self-start sm:self-auto">
+            {/* EXCEL EXPORT BUTTON */}
+            <button
+              onClick={handleExportExcel}
+              disabled={customers.length === 0}
+              className="px-3.5 py-2 rounded-xl bg-emerald-500/10 hover:bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 text-xs font-bold transition-all flex items-center gap-1.5 disabled:opacity-50"
+              title="دانلود فایل اکسل / CSV لیست مشتریان"
+            >
+              <FileSpreadsheet className="w-4 h-4" />
+              <span>خروجی اکسل</span>
+            </button>
+
+            {/* PDF EXPORT BUTTON */}
+            <button
+              onClick={handleExportPdf}
+              disabled={customers.length === 0}
+              className="px-3.5 py-2 rounded-xl bg-rose-500/10 hover:bg-rose-500/20 text-rose-400 border border-rose-500/30 text-xs font-bold transition-all flex items-center gap-1.5 disabled:opacity-50"
+              title="پرینت و دانلود خروجی PDF لیست مشتریان"
+            >
+              <Printer className="w-4 h-4" />
+              <span>خروجی پی‌دی‌اف (PDF)</span>
+            </button>
+
+            <button
+              onClick={fetchCustomersAndInvoices}
+              className="p-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-300 transition-colors border border-slate-700 text-xs flex items-center gap-1.5"
+            >
+              <RefreshCw className={`w-3.5 h-3.5 ${loading ? 'animate-spin' : ''}`} />
+              <span>به‌روزرسانی</span>
+            </button>
+          </div>
         </div>
 
         {/* Metrics Grid */}

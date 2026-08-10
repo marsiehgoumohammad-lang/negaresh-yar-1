@@ -22,12 +22,19 @@ export const DEFAULT_SETTINGS: BusinessSettings = {
   paymentGatewayUrl: '',
 };
 
+let inMemorySettings: BusinessSettings | null = null;
+
 export function getSettings(): BusinessSettings {
+  if (inMemorySettings) {
+    return { ...DEFAULT_SETTINGS, ...inMemorySettings };
+  }
   try {
     if (fs.existsSync(FILE_PATH)) {
       const data = fs.readFileSync(FILE_PATH, 'utf-8');
       const parsed = JSON.parse(data);
-      return { ...DEFAULT_SETTINGS, ...parsed };
+      const settingsObj: BusinessSettings = { ...DEFAULT_SETTINGS, ...parsed };
+      inMemorySettings = settingsObj;
+      return settingsObj;
     }
   } catch (err) {
     console.error('Error reading settings file:', err);
@@ -42,10 +49,12 @@ export function saveSettings(newSettings: Partial<BusinessSettings>): BusinessSe
     }
     const current = getSettings();
     const updated = { ...current, ...newSettings };
+    inMemorySettings = updated;
     fs.writeFileSync(FILE_PATH, JSON.stringify(updated, null, 2), 'utf-8');
     return updated;
   } catch (err) {
     console.error('Error saving settings file:', err);
+    if (inMemorySettings) return inMemorySettings;
     return getSettings();
   }
 }

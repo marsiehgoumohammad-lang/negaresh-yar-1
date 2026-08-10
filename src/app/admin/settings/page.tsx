@@ -13,12 +13,13 @@ export default function SettingsPage() {
     province: 'خراسان رضوی',
     address: 'مشهد، خراسان رضوی',
     logoUrl: '/logo.jpg',
-    invoicePrefix: 'NY-1403-',
-    nextInvoiceNumber: 1004,
+    invoicePrefix: 'NY-1405-',
+    nextInvoiceNumber: 1001,
     currency: 'تومان',
     invoiceTitle: 'صورت‌حساب خدمات نگارش یار',
     headerSubtitle: 'دفتر تخصصی تنظیم دادخواست، شکواییه، لایحه دفاعیه و نامه‌های اداری',
     invoiceFooterText: 'با تشکر از اعتماد شما به نگارش یار. مشهد، تلفن تماس: 09915147789',
+    invoiceDescription: 'توضیحات اختصاصی فاکتور، شرایط تحویل خدمات، شماره حساب و راهنمای پرداخت.',
     paymentGatewayUrl: '',
   });
 
@@ -32,16 +33,6 @@ export default function SettingsPage() {
 
   const fetchSettings = async () => {
     try {
-      // Check local cache first as fast fallback
-      const cached = localStorage.getItem('negaresh_admin_settings_cache');
-      if (cached) {
-        try {
-          setSettings(JSON.parse(cached));
-        } catch {
-          // ignore invalid cache
-        }
-      }
-
       const res = await fetch(`/api/admin/settings?t=${Date.now()}`, {
         cache: 'no-store',
         headers: { 'Cache-Control': 'no-cache' },
@@ -51,10 +42,21 @@ export default function SettingsPage() {
         if (data.settings) {
           setSettings(data.settings);
           localStorage.setItem('negaresh_admin_settings_cache', JSON.stringify(data.settings));
+          return;
         }
       }
     } catch (err) {
       console.error('Error fetching settings:', err);
+    }
+
+    // Fallback to local cache if server is offline
+    const cached = localStorage.getItem('negaresh_admin_settings_cache');
+    if (cached) {
+      try {
+        setSettings(JSON.parse(cached));
+      } catch {
+        // ignore invalid cache
+      }
     }
   };
 
@@ -66,9 +68,6 @@ export default function SettingsPage() {
     e.preventDefault();
     setSaving(true);
     setMessage(null);
-
-    // Immediately persist locally
-    localStorage.setItem('negaresh_admin_settings_cache', JSON.stringify(settings));
 
     try {
       const res = await fetch('/api/admin/settings', {
@@ -83,12 +82,14 @@ export default function SettingsPage() {
           setSettings(data.settings);
           localStorage.setItem('negaresh_admin_settings_cache', JSON.stringify(data.settings));
         }
-        setMessage({ type: 'success', text: 'تنظیمات با موفقیت ذخیره گردید.' });
+        setMessage({ type: 'success', text: 'تنظیمات و توضیحات فاکتور با موفقیت ذخیره گردید.' });
       } else {
+        localStorage.setItem('negaresh_admin_settings_cache', JSON.stringify(settings));
         setMessage({ type: 'error', text: 'خطا در ذخیره‌سازی تنظیمات در سرور (ذخیره محلی انجام شد)' });
       }
     } catch (err) {
       console.error('Error saving settings:', err);
+      localStorage.setItem('negaresh_admin_settings_cache', JSON.stringify(settings));
       setMessage({ type: 'error', text: 'ذخیره‌سازی در حافظه انجام شد، اما ارتباط با سرور برقرار نشد.' });
     } finally {
       setSaving(false);

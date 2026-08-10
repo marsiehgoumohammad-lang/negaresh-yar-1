@@ -30,13 +30,15 @@ export default function AdminMessengersPage() {
 
   const fetchMessengers = async () => {
     setLoading(true);
+    let cachedList: MessengerConfig[] | null = null;
     try {
       const cached = localStorage.getItem('negaresh_admin_messengers_cache');
       if (cached) {
         try {
           const parsed = JSON.parse(cached);
           if (Array.isArray(parsed) && parsed.length > 0) {
-            setMessengers(parsed.sort((a: MessengerConfig, b: MessengerConfig) => a.order - b.order));
+            cachedList = parsed.sort((a: MessengerConfig, b: MessengerConfig) => a.order - b.order);
+            setMessengers(cachedList);
           }
         } catch {
           // ignore
@@ -51,17 +53,38 @@ export default function AdminMessengersPage() {
         const data = await res.json();
         if (Array.isArray(data) && data.length > 0) {
           const sorted = data.sort((a: MessengerConfig, b: MessengerConfig) => a.order - b.order);
-          setMessengers(sorted);
-          localStorage.setItem('negaresh_admin_messengers_cache', JSON.stringify(sorted));
-        } else if (!cached) {
+          
+          // Check if server returned default config while client has customized cached config
+          const isServerDefault = JSON.stringify(sorted) === JSON.stringify(DEFAULT_MESSENGERS);
+          const isCachedCustomized = cachedList && JSON.stringify(cachedList) !== JSON.stringify(DEFAULT_MESSENGERS);
+
+          if (isServerDefault && isCachedCustomized && cachedList) {
+            // Re-sync client's saved custom config back to the server automatically
+            setMessengers(cachedList);
+            await fetch('/api/messengers', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify(cachedList),
+            });
+          } else {
+            setMessengers(sorted);
+            localStorage.setItem('negaresh_admin_messengers_cache', JSON.stringify(sorted));
+          }
+        } else if (cachedList) {
+          setMessengers(cachedList);
+        } else {
           setMessengers(DEFAULT_MESSENGERS);
         }
-      } else if (!cached) {
+      } else if (cachedList) {
+        setMessengers(cachedList);
+      } else {
         setMessengers(DEFAULT_MESSENGERS);
       }
     } catch (err) {
       console.error(err);
-      if (!localStorage.getItem('negaresh_admin_messengers_cache')) {
+      if (cachedList) {
+        setMessengers(cachedList);
+      } else {
         setMessengers(DEFAULT_MESSENGERS);
       }
     } finally {

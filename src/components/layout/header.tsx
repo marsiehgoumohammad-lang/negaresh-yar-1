@@ -345,7 +345,7 @@ export function Header() {
                       {messengers.map((m) => (
                         <Link
                           key={m.code}
-                          href="/#contact"
+                          href="/request"
                           onClick={handleCloseMenu}
                           className="flex flex-col items-center justify-center p-2 rounded-xl bg-[#0D1424] hover:bg-[#121A2D] border border-slate-800 hover:border-[#E5C158]/40 transition-all text-center group"
                           title={m.label}

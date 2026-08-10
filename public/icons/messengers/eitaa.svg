@@ -1,4 +1,13 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-  <rect width="100" height="100" rx="22" fill="#E65100"/>
-  <path d="M 50,22 C 32,22 24,36 24,52 C 24,68 34,78 50,78 C 64,78 74,68 76,54 H 50 V 44 H 87 C 88,47 88,51 88,55 C 88,75 72,88 50,88 C 26,88 12,71 12,50 C 12,28 28,12 50,12 C 64,12 76,18 83,27 L 74,34 C 69,27 60,22 50,22 Z" fill="#FFFFFF"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" width="100%" height="100%">
+  <!-- Orange Squircle Frame with Black Border -->
+  <rect x="30" y="30" width="940" height="940" rx="250" ry="250" fill="#F37021" stroke="#000000" stroke-width="32" stroke-linejoin="round"/>
+  
+  <!-- Outer White Calligraphic 'e' Symbol with Black Border -->
+  <path d="M 945,480 C 890,535 790,635 690,715 C 560,815 410,875 275,820 C 155,770 115,625 155,470 C 195,280 355,120 575,110 C 725,100 805,185 775,325 C 745,500 515,660 345,660 C 275,660 265,590 305,520 C 345,450 455,365 575,315 C 665,275 705,225 665,185 C 605,135 465,175 365,275 C 245,395 235,600 345,710 C 455,810 625,760 755,650 C 845,570 905,505 945,480 Z" fill="#FFFFFF" stroke="#000000" stroke-width="28" stroke-linecap="round" stroke-linejoin="round"/>
+  
+  <!-- Calligraphic Hook/Tail -->
+  <path d="M 420,375 C 345,430 325,515 355,645 C 375,725 425,770 455,740 C 475,720 435,630 405,530 C 385,460 395,410 420,375 Z" fill="#FFFFFF" stroke="#000000" stroke-width="28" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Inner Orange Core in Hook -->
+  <path d="M 395,420 C 360,465 350,535 370,630 C 390,695 425,720 435,705 C 430,680 410,615 390,525 C 380,475 385,435 395,420 Z" fill="#F37021" stroke="#000000" stroke-width="20" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>
