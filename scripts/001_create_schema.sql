@@ -40,25 +40,26 @@ create table if not exists public.services (
 -- ۳. جدول فاکتورها و سفارش‌ها (invoices)
 -- --------------------------------------------------------------------------
 create table if not exists public.invoices (
-  id              uuid primary key default gen_random_uuid(),
-  tracking_code   varchar(50) not null unique,
+  id              varchar(50) primary key,          -- e.g. NY-1403-1001
   customer_id     uuid references public.customers(id) on delete set null,
-  customer_name   varchar(255),
-  customer_phone  varchar(20),
-  title           varchar(255),
-  amount          bigint not null default 0,
-  tax_amount      bigint not null default 0,
-  discount_amount bigint not null default 0,
-  total_amount    bigint not null default 0,
-  status          varchar(20) not null default 'draft'
-                    check (status in ('draft', 'pending', 'paid', 'cancelled')),
-  issue_date      date,
-  due_date        date,
-  notes           text,
-  created_at      timestamptz not null default now()
+  customer_name   varchar(255) not null,
+  customer_phone  varchar(50) not null,
+  service_id      varchar(100) references public.services(id) on delete set null,
+  service_title   varchar(255) not null,
+  subtotal        bigint not null,
+  discount        bigint default 0,
+  tax             bigint default 0,
+  final_amount    bigint not null,
+  status          varchar(30) not null default 'pending'
+                    check (status in ('pending', 'paid', 'processing', 'completed', 'cancelled')),
+  payment_method  varchar(50) default 'online',
+  description     text,
+  issue_date      timestamptz default now(),
+  due_date        timestamptz
 );
 
 create index if not exists idx_invoices_customer_id on public.invoices(customer_id);
+create index if not exists idx_invoices_service_id on public.invoices(service_id);
 create index if not exists idx_invoices_status on public.invoices(status);
 
 -- --------------------------------------------------------------------------
@@ -66,8 +67,8 @@ create index if not exists idx_invoices_status on public.invoices(status);
 -- --------------------------------------------------------------------------
 create table if not exists public.invoice_items (
   id           uuid primary key default gen_random_uuid(),
-  invoice_id   uuid not null references public.invoices(id) on delete cascade,
-  service_id   text references public.services(id) on delete set null,
+  invoice_id   varchar(50) not null references public.invoices(id) on delete cascade,
+  service_id   varchar(100) references public.services(id) on delete set null,
   description  text,
   quantity     integer not null default 1,
   unit_price   bigint not null default 0,
