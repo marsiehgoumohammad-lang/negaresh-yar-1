@@ -20,6 +20,9 @@ export const DEFAULT_SETTINGS: BusinessSettings = {
   invoiceFooterText: 'با تشکر از اعتماد شما به دفتر نگارش یار. تمامی خدمات بر اساس درخواست مشتری و استانداردهای حقوقی و اداری کشور ارائه گردیده است.',
   invoiceDescription: 'توضیحات اختصاصی فاکتور، شرایط تحویل خدمات، شماره حساب و راهنمای پرداخت.',
   paymentGatewayUrl: '',
+  geminiApiKey: '',
+  openaiApiKey: '',
+  activeAiProvider: 'auto',
 };
 
 let inMemorySettings: BusinessSettings | null = null;

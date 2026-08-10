@@ -97,6 +97,9 @@ export interface BusinessSettings {
   invoiceFooterText: string;
   invoiceDescription?: string;
   paymentGatewayUrl?: string;
+  geminiApiKey?: string;
+  openaiApiKey?: string;
+  activeAiProvider?: 'auto' | 'gemini' | 'openai';
 }
 
 export type ArticleStatus = 'draft' | 'published' | 'paused';

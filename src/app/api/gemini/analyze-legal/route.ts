@@ -1,5 +1,6 @@
 import { GoogleGenAI, Type } from "@google/genai";
 import { NextRequest, NextResponse } from "next/server";
+import { getSettings } from "@/lib/stores/settings-store";
 
 export async function POST(req: NextRequest) {
   try {
@@ -12,23 +13,16 @@ export async function POST(req: NextRequest) {
       );
     }
 
-    const apiKey = process.env.GEMINI_API_KEY;
+    const settings = getSettings();
+    const activeProvider = settings.activeAiProvider || 'auto';
+    const savedGeminiKey = settings.geminiApiKey?.trim();
+    const savedOpenaiKey = settings.openaiApiKey?.trim();
+    const envGeminiKey = process.env.GEMINI_API_KEY?.trim();
 
-    if (!apiKey || apiKey.trim() === '' || apiKey.includes('YOUR_') || apiKey === 'undefined') {
-      return NextResponse.json(getFallbackResult(fileName));
-    }
+    const geminiKey = savedGeminiKey || envGeminiKey;
 
-    try {
-      const ai = new GoogleGenAI({
-        apiKey,
-        httpOptions: {
-          headers: {
-            'User-Agent': 'aistudio-build',
-          },
-        },
-      });
-
-      const promptText = `
+    // Helper prompt
+    const promptText = `
 تو یک دستیار حقوقی مهربان، دلسوز و باذکاوت هستی که می‌خواهی یک برگه یا سند حقوقی/قضایی با نام "${fileName || 'سند قضایی'}" را برای یک فرد عادی (مثلاً یک نوجوان یا عضو خانواده) به زبان کاملاً ساده و روان فارسی توضیح دهی.
 
 اصلاً مثل یک وکیل یا قاضی صحبت نکن. هیچ کلمه سنگین قانونی را بدون توضیح نگذار. پاسخ باید کاملاً صمیمی، روانی و شبیه صحبت کردن باشد، نه یک گزارش خشک!
@@ -52,49 +46,125 @@ export async function POST(req: NextRequest) {
 یک پیام دلگرم‌کننده، حرفه‌ای و اطمینان‌بخش (در ۲ تا ۴ جمله) که به کاربر پیشنهاد کند اگر درباره قدم بعدی تردید دارد، درخواست خود را در نگارش یار ثبت کند تا کارشناسان متن سند را بررسی و بهترین اقدام قانونی (مثل تنظیم لایحه یا اعتراض) را برای او انجام دهند. تبلیغات تهاجمی نکن، حس اعتماد و آرامش بده.
 `;
 
-      const cleanBase64 = fileBase64.replace(/^data:[^;]+;base64,/, '');
+    const cleanBase64 = fileBase64.replace(/^data:[^;]+;base64,/, '');
 
-      const contents = [
-        {
-          inlineData: {
-            data: cleanBase64,
-            mimeType: mimeType || 'application/pdf',
+    // Function to try OpenAI ChatGPT API
+    const tryOpenAI = async (apiKey: string) => {
+      try {
+        const response = await fetch('https://api.openai.com/v1/chat/completions', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${apiKey}`,
           },
-        },
-        promptText,
-      ];
+          body: JSON.stringify({
+            model: 'gpt-4o-mini',
+            messages: [
+              {
+                role: 'user',
+                content: [
+                  { type: 'text', text: promptText },
+                  {
+                    type: 'image_url',
+                    image_url: {
+                      url: `data:${mimeType || 'image/png'};base64,${cleanBase64}`,
+                    },
+                  },
+                ],
+              },
+            ],
+            response_format: { type: 'json_object' },
+            temperature: 0.3,
+          }),
+        });
 
-      const response = await ai.models.generateContent({
-        model: "gemini-3.6-flash",
-        contents,
-        config: {
-          responseMimeType: "application/json",
-          responseSchema: {
-            type: Type.OBJECT,
-            properties: {
-              simpleExplanation: { type: Type.STRING },
-              ctaMessage: { type: Type.STRING }
-            },
-            required: ["simpleExplanation", "ctaMessage"]
-          }
+        if (!response.ok) {
+          throw new Error(`OpenAI HTTP ${response.status}`);
         }
-      });
 
-      const jsonText = response.text || '';
-      if (!jsonText) {
-        return NextResponse.json(getFallbackResult(fileName));
+        const data = await response.json();
+        const contentStr = data?.choices?.[0]?.message?.content;
+        if (contentStr) {
+          return JSON.parse(contentStr);
+        }
+      } catch (err) {
+        console.warn('OpenAI API call failed:', err);
       }
+      return null;
+    };
 
-      const parsedData = JSON.parse(jsonText);
-      return NextResponse.json(parsedData);
-    } catch (err: unknown) {
-      const errMessage = err instanceof Error ? err.message : String(err);
-      console.warn('Gemini API notice: falling back to clear legal explanation due to API response:', errMessage.slice(0, 150));
-      return NextResponse.json(getFallbackResult(fileName));
+    // Function to try Gemini API
+    const tryGemini = async (apiKey: string) => {
+      try {
+        const ai = new GoogleGenAI({
+          apiKey,
+          httpOptions: {
+            headers: {
+              'User-Agent': 'aistudio-build',
+            },
+          },
+        });
+
+        const contents = [
+          {
+            inlineData: {
+              data: cleanBase64,
+              mimeType: mimeType || 'application/pdf',
+            },
+          },
+          promptText,
+        ];
+
+        const response = await ai.models.generateContent({
+          model: "gemini-3.6-flash",
+          contents,
+          config: {
+            responseMimeType: "application/json",
+            responseSchema: {
+              type: Type.OBJECT,
+              properties: {
+                simpleExplanation: { type: Type.STRING },
+                ctaMessage: { type: Type.STRING }
+              },
+              required: ["simpleExplanation", "ctaMessage"]
+            }
+          }
+        });
+
+        const jsonText = response.text || '';
+        if (jsonText) {
+          return JSON.parse(jsonText);
+        }
+      } catch (err) {
+        console.warn('Gemini API call failed:', err);
+      }
+      return null;
+    };
+
+    // Execute provider logic
+    if (activeProvider === 'openai' && savedOpenaiKey) {
+      const openAiRes = await tryOpenAI(savedOpenaiKey);
+      if (openAiRes) return NextResponse.json(openAiRes);
+    } else if (activeProvider === 'gemini' && geminiKey) {
+      const geminiRes = await tryGemini(geminiKey);
+      if (geminiRes) return NextResponse.json(geminiRes);
+    } else {
+      // Auto mode or fallback
+      if (geminiKey) {
+        const geminiRes = await tryGemini(geminiKey);
+        if (geminiRes) return NextResponse.json(geminiRes);
+      }
+      if (savedOpenaiKey) {
+        const openAiRes = await tryOpenAI(savedOpenaiKey);
+        if (openAiRes) return NextResponse.json(openAiRes);
+      }
     }
 
+    // Fallback if no API key provided or API calls failed
+    return NextResponse.json(getFallbackResult(fileName));
+
   } catch (error: unknown) {
-    console.error('Gemini Legal Analysis General Error:', error);
+    console.error('Legal Analysis General Error:', error);
     return NextResponse.json(
       { error: 'خطا در پردازش فایل. لطفاً از صحت و فرمت فایل اطمینان حاصل کنید.' },
       { status: 500 }

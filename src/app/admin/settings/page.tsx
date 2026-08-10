@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useEffect, useState } from 'react';
-import { Settings, Save, CheckCircle2, AlertCircle, Key } from 'lucide-react';
+import { Settings, Save, CheckCircle2, AlertCircle, Key, Bot, Sparkles } from 'lucide-react';
 import { AdminLayout } from '@/components/admin/AdminLayout';
 import { BusinessSettings } from '@/lib/stores/types';
 
@@ -21,6 +21,9 @@ export default function SettingsPage() {
     invoiceFooterText: 'با تشکر از اعتماد شما به نگارش یار. مشهد، تلفن تماس: 09915147789',
     invoiceDescription: 'توضیحات اختصاصی فاکتور، شرایط تحویل خدمات، شماره حساب و راهنمای پرداخت.',
     paymentGatewayUrl: '',
+    geminiApiKey: '',
+    openaiApiKey: '',
+    activeAiProvider: 'auto',
   });
 
   const [saving, setSaving] = useState<boolean>(false);
@@ -325,6 +328,67 @@ export default function SettingsPage() {
                   onChange={(e) => setSettings({ ...settings, invoiceFooterText: e.target.value })}
                   className="w-full bg-[#070B15] border border-slate-700 rounded-xl px-3.5 py-2.5 text-white focus:outline-none"
                 />
+              </div>
+            </div>
+          </div>
+
+          {/* AI Settings Section */}
+          <div className="bg-[#0D1424] border border-slate-800 rounded-2xl p-6 space-y-4">
+            <h2 className="font-bold text-white text-sm border-b border-slate-800 pb-3 flex items-center gap-2">
+              <Bot className="w-4 h-4 text-[#E5C158]" />
+              <span>تنظیمات کلید هوش مصنوعی (Google Gemini & OpenAI ChatGPT)</span>
+            </h2>
+
+            <p className="text-xs text-slate-400">
+              کلیدهای API برای بخش تفسیر اوراق قضایی و دستیار هوشمند استفاده می‌شوند. در صورت ثبت کلید در اینجا، سامانه اولویت اول را به کلیدهای این بخش می‌دهد.
+            </p>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs">
+              <div>
+                <label className="block font-bold text-slate-300 mb-1.5 flex items-center justify-between">
+                  <span>کلید API گوگل جیمینی (Google Gemini API Key)</span>
+                  <span className="text-[10px] text-emerald-400 font-normal">پیش‌فرض سیستم</span>
+                </label>
+                <input
+                  type="password"
+                  value={settings.geminiApiKey || ''}
+                  onChange={(e) => setSettings({ ...settings, geminiApiKey: e.target.value })}
+                  placeholder="AIzaSy..."
+                  className="w-full bg-[#070B15] border border-slate-700 rounded-xl px-3.5 py-2.5 text-white focus:outline-none font-mono text-left dir-ltr focus:border-[#E5C158]"
+                />
+                <p className="text-[10px] text-slate-500 mt-1">
+                  در صورت خالی بودن، از کلید پیش‌فرض سرور استفاده می‌شود.
+                </p>
+              </div>
+
+              <div>
+                <label className="block font-bold text-slate-300 mb-1.5 flex items-center justify-between">
+                  <span>کلید API چت‌جی‌پی‌تی (OpenAI ChatGPT API Key)</span>
+                  <span className="text-[10px] text-blue-400 font-normal">پشتیبان / جایگزین</span>
+                </label>
+                <input
+                  type="password"
+                  value={settings.openaiApiKey || ''}
+                  onChange={(e) => setSettings({ ...settings, openaiApiKey: e.target.value })}
+                  placeholder="sk-proj-..."
+                  className="w-full bg-[#070B15] border border-slate-700 rounded-xl px-3.5 py-2.5 text-white focus:outline-none font-mono text-left dir-ltr focus:border-[#E5C158]"
+                />
+                <p className="text-[10px] text-slate-500 mt-1">
+                  می‌توانید کلید OpenAI خود را برای پردازش متون قضایی وارد کنید.
+                </p>
+              </div>
+
+              <div className="sm:col-span-2">
+                <label className="block font-bold text-slate-300 mb-1.5">سرویس هوش مصنوعی فعال برای تحلیل اوراق</label>
+                <select
+                  value={settings.activeAiProvider || 'auto'}
+                  onChange={(e) => setSettings({ ...settings, activeAiProvider: e.target.value as 'auto' | 'gemini' | 'openai' })}
+                  className="w-full bg-[#070B15] border border-slate-700 rounded-xl px-3.5 py-2.5 text-white focus:outline-none focus:border-[#E5C158]"
+                >
+                  <option value="auto">خودکار (ابتدا جیمینی، در صورت عدم پاسخ‌گویی سوئیچ به چت‌جی‌پی‌تی)</option>
+                  <option value="gemini">فقط گوگل جیمینی (Google Gemini)</option>
+                  <option value="openai">فقط چت‌جی‌پی‌تی (OpenAI ChatGPT)</option>
+                </select>
               </div>
             </div>
           </div>
