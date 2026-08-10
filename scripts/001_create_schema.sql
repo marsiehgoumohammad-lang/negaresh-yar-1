@@ -11,16 +11,15 @@ create extension if not exists "pgcrypto";
 -- ۱. جدول مشتریان (customers)
 -- --------------------------------------------------------------------------
 create table if not exists public.customers (
-  id            uuid primary key default gen_random_uuid(),
-  name          varchar(255) not null,
-  phone         varchar(20) not null unique,
-  national_id   varchar(20),
-  address       text,
-  total_orders  integer not null default 0,
-  total_spent   bigint not null default 0,
-  is_vip        boolean not null default false,
-  notes         text,
-  created_at    timestamptz not null default now()
+  id             uuid primary key default gen_random_uuid(),
+  name           varchar(255) not null,
+  phone          varchar(50) not null unique,
+  national_code  varchar(20),
+  email          varchar(255),
+  address        text,
+  total_orders   integer not null default 0,
+  total_spent    bigint not null default 0,
+  created_at     timestamptz not null default now()
 );
 
 -- --------------------------------------------------------------------------
