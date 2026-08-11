@@ -304,6 +304,21 @@ export const samplePetitionData: SampleLandingData = {
     },
   ],
 
+  relatedArticles: [
+    {
+      title: 'دادخواست حقوقی چیست و چه ارکانی دارد؟',
+      href: '/knowledge/what-is-petition',
+      desc: 'آموزش نحوه تنظیم خواسته، ستون دلایل و مواد قانونی در دادگاه.',
+      badge: 'مقاله آموزشی',
+    },
+    {
+      title: 'تفاوت دادخواست و شکواییه چیست؟',
+      href: '/knowledge/petition-vs-complaint',
+      desc: 'بررسی تفاوت مرجع رسیدگی، هزینه‌ها و نحوه اجرا.',
+      badge: 'مقاله آموزشی',
+    },
+  ],
+
   ctaTitle: 'سفارش تنظیم تخصصی دادخواست حقوقی بدون نقص شکلی',
   ctaDescription: 'با سپردن تنظیم دادخواست به کارشناسان حقوقی نگارش یار، از پذیرش ۱۰۰٪ شکلی دادخواست در دفاتر خدمات قضایی مطمئن شوید.',
   ctaPrimaryBtnText: 'سفارش تنظیم دادخواست اختصاصی',

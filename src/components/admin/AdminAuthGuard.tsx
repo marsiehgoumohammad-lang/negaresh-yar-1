@@ -51,7 +51,23 @@ export function AdminAuthGuard({ children }: { children: React.ReactNode }) {
       setIsAuthenticated(true);
       setInputPassword('');
     } else {
-      setErrorMsg('رمز عبور وارد شده اشتباه است. لطفاً مجدداً تلاش کنید.');
+      // Check if stored pass was an old sha256 hash
+      const encoder = new TextEncoder();
+      const data = encoder.encode(inputPassword);
+      crypto.subtle.digest('SHA-256', data).then((buffer) => {
+        const hashArray = Array.from(new Uint8Array(buffer));
+        const hashHex = hashArray.map((b) => b.toString(16).padStart(2, '0')).join('');
+        if (hashHex === targetPass) {
+          localStorage.setItem(STORAGE_KEY_PASS, inputPassword);
+          localStorage.setItem(STORAGE_KEY_SESSION, 'true');
+          setIsAuthenticated(true);
+          setInputPassword('');
+        } else {
+          setErrorMsg('رمز عبور وارد شده اشتباه است. لطفاً مجدداً تلاش کنید.');
+        }
+      }).catch(() => {
+        setErrorMsg('رمز عبور وارد شده اشتباه است. لطفاً مجدداً تلاش کنید.');
+      });
     }
   };
 
@@ -162,13 +178,6 @@ export function AdminAuthGuard({ children }: { children: React.ReactNode }) {
               <span>ورود به سامانه</span>
             </button>
           </form>
-
-          <div className="pt-4 border-t border-slate-800 text-center text-[11px] text-slate-500">
-            <span>رمز عبور پیش‌فرض اولیه: </span>
-            <code className="text-[#E5C158] dir-ltr inline-block bg-slate-900 px-2 py-0.5 rounded border border-slate-800 font-mono">
-              negaresh1403
-            </code>
-          </div>
         </div>
       </div>
     );

@@ -70,6 +70,7 @@ export function Footer() {
               <li><Link href="/services/court-document-explainer" className="hover:text-[#E5C158] transition-colors">تفسیر هوشمند رای و ابلاغیه</Link></li>
               <li><Link href="/services/government-auctions" className="hover:text-[#E5C158] transition-colors">ثبت نام مزایدات دولتی</Link></li>
               <li><Link href="/services/online-cafe" className="hover:text-[#E5C158] transition-colors">کافی نت آنلاین و خدمات غیرحضوری</Link></li>
+              <li><Link href="/services/mashhad" className="hover:text-[#E5C158] transition-colors text-[#E5C158] font-semibold">عریضه‌نویسی و ثنا در مشهد</Link></li>
             </ul>
           </div>
 

@@ -10,6 +10,8 @@ export default function ServicesManagementPage() {
   const [loading, setLoading] = useState<boolean>(true);
   const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
   const [editingService, setEditingService] = useState<ServiceItem | null>(null);
+  const [deletingService, setDeletingService] = useState<ServiceItem | null>(null);
+  const [isDeleting, setIsDeleting] = useState<boolean>(false);
 
   // Form State
   const [name, setName] = useState<string>('');
@@ -112,16 +114,20 @@ export default function ServicesManagementPage() {
     }
   };
 
-  const handleDeleteService = async (id: string) => {
-    if (!confirm('آیا از حذف این خدمت اطمینان دارید؟')) return;
+  const confirmDeleteService = async () => {
+    if (!deletingService) return;
+    setIsDeleting(true);
     try {
-      const res = await fetch(`/api/admin/services/${id}`, { method: 'DELETE' });
+      const res = await fetch(`/api/admin/services/${deletingService.id}`, { method: 'DELETE' });
       if (res.ok) {
         localStorage.removeItem('negaresh_admin_services_cache');
+        setDeletingService(null);
         await fetchServices();
       }
     } catch (err) {
       console.error('Error deleting service:', err);
+    } finally {
+      setIsDeleting(false);
     }
   };
 
@@ -230,7 +236,7 @@ export default function ServicesManagementPage() {
                           </button>
                           <button
                             type="button"
-                            onClick={() => handleDeleteService(srv.id)}
+                            onClick={() => setDeletingService(srv)}
                             className="p-1.5 rounded-lg bg-rose-500/10 hover:bg-rose-500/20 text-rose-400 transition-colors"
                             title="حذف خدمت"
                           >
@@ -343,6 +349,46 @@ export default function ServicesManagementPage() {
                   </button>
                 </div>
               </form>
+            </div>
+          </div>
+        )}
+
+        {/* Delete Confirmation Modal */}
+        {deletingService && (
+          <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm dir-rtl">
+            <div className="w-full max-w-md bg-[#0D1424] border border-rose-500/30 rounded-3xl p-6 shadow-2xl space-y-5">
+              <div className="flex items-center gap-3 text-rose-400">
+                <div className="p-2.5 rounded-2xl bg-rose-500/10 border border-rose-500/20">
+                  <Trash2 className="w-6 h-6" />
+                </div>
+                <div>
+                  <h3 className="font-black text-white text-base">حذف خدمت</h3>
+                  <p className="text-xs text-slate-400 mt-0.5">{deletingService.name}</p>
+                </div>
+              </div>
+
+              <p className="text-xs text-slate-300 leading-relaxed">
+                آیا از حذف این خدمت با تعرفه <strong className="text-[#E5C158]">{deletingService.defaultPrice.toLocaleString('fa-IR')} تومان</strong> اطمینان دارید؟
+              </p>
+
+              <div className="flex items-center justify-end gap-3 pt-2">
+                <button
+                  type="button"
+                  onClick={() => setDeletingService(null)}
+                  disabled={isDeleting}
+                  className="px-4 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-300 text-xs font-bold transition-colors cursor-pointer"
+                >
+                  انصراف
+                </button>
+                <button
+                  type="button"
+                  onClick={confirmDeleteService}
+                  disabled={isDeleting}
+                  className="px-4 py-2.5 rounded-xl bg-rose-600 hover:bg-rose-500 text-white text-xs font-bold transition-colors flex items-center gap-2 cursor-pointer disabled:opacity-50"
+                >
+                  {isDeleting ? 'در حال حذف...' : 'تایید و حذف خدمت'}
+                </button>
+              </div>
             </div>
           </div>
         )}

@@ -303,6 +303,21 @@ export const sampleInsolvencyData: SampleLandingData = {
     },
   ],
 
+  relatedArticles: [
+    {
+      title: 'چگونه بدهی و مهریه را قسطی کنیم؟',
+      href: '/knowledge/how-to-install-debt-and-mahrieh',
+      desc: 'راهنمای دادخواست اعسار، تقسیط و آزادی زندانی مالی.',
+      badge: 'مقاله آموزشی',
+    },
+    {
+      title: 'اعسار از هزینه دادرسی و محکوم‌به چیست؟',
+      href: '/knowledge/what-is-insolvency',
+      desc: 'شرایط اثبات عدم تمکن مالی و شهادت شهود.',
+      badge: 'مقاله آموزشی',
+    },
+  ],
+
   ctaTitle: 'سفارش تنظیم دادخواست اعسار و استشهادیه معتبر بدون خطر رد',
   ctaDescription: 'با سپردن تنظیم دادخواست اعسار و فرم لیست اموال به کارشناسان حقوقی نگارش یار، از صدور جلب جلوگیری کرده و بدهی خود را تقسیط نمایید.',
   ctaPrimaryBtnText: 'ثبت سفارش تنظیم اعسار',

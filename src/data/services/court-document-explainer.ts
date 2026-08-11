@@ -275,6 +275,12 @@ export const courtDocumentExplainerData: ServiceLandingData = {
 
   relatedArticles: [
     {
+      title: 'اظهارنامه چیست و چگونه اخطار قانونی ارسال کنیم؟',
+      href: '/knowledge/what-is-legal-notice',
+      desc: 'راهنمای کامل ارسال اخطار قانونی، مطالبه وجه، تحویل کالا و امضای سند.',
+      badge: 'اخطار قانونی',
+    },
+    {
       title: 'ابلاغیه ثنا چیست و چگونه آن را ببینیم؟',
       href: '/knowledge/what-is-e-notification',
       desc: 'راهنمای کامل ورود به سامانه عدل ایران و مهلت‌های قانونی ابلاغ.',

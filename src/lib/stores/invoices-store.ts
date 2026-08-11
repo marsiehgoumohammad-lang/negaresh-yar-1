@@ -97,12 +97,19 @@ function getInitialSampleInvoices(): Invoice[] {
   ];
 }
 
+let inMemoryInvoices: Invoice[] | null = null;
+
 export function getInvoices(): Invoice[] {
+  if (inMemoryInvoices !== null) {
+    return inMemoryInvoices;
+  }
+
   try {
     if (fs.existsSync(FILE_PATH)) {
       const data = fs.readFileSync(FILE_PATH, 'utf-8');
       const parsed = JSON.parse(data) as Invoice[];
-      if (Array.isArray(parsed) && parsed.length > 0) {
+      if (Array.isArray(parsed)) {
+        inMemoryInvoices = parsed;
         return parsed;
       }
     }
@@ -120,11 +127,13 @@ export function saveInvoices(invoices: Invoice[]): boolean {
     if (!fs.existsSync(DATA_DIR)) {
       fs.mkdirSync(DATA_DIR, { recursive: true });
     }
+    inMemoryInvoices = invoices;
     fs.writeFileSync(FILE_PATH, JSON.stringify(invoices, null, 2), 'utf-8');
     syncCustomersFromInvoices(invoices);
     return true;
   } catch (err) {
     console.error('Error saving invoices file:', err);
+    if (inMemoryInvoices !== null) return true;
     return false;
   }
 }

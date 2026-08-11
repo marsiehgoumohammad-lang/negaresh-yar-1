@@ -302,6 +302,21 @@ export const sampleAdministrativeLetterData: SampleLandingData = {
     },
   ],
 
+  relatedArticles: [
+    {
+      title: 'چگونه نامه اداری تاثیرگذار بنویسیم؟',
+      href: '/knowledge/how-to-write-administrative-letter',
+      desc: 'آموزش اصول آیین نگارش اداری و لحن رسمی.',
+      badge: 'مقاله آموزشی',
+    },
+    {
+      title: 'راهنمای نوشتن نامه به ریاست جمهوری',
+      href: '/knowledge/how-to-write-president-letter',
+      desc: 'نکات عریضه‌نویسی و پیگیری از سامانه سامد.',
+      badge: 'مقاله آموزشی',
+    },
+  ],
+
   ctaTitle: 'سفارش تنظیم نامه اداری اختصاصی با لحن کاملاً حرفه‌ای',
   ctaDescription: 'اگر برای مسئله اداری خود نیازمند نامه‌ای موثر، استدلال‌شده و طبق قوانین هستید، کارشناسان نگارش یار در کنار شما هستند.',
   ctaPrimaryBtnText: 'سفارش تنظیم اختصاصی نامه اداری',

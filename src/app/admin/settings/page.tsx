@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useEffect, useState } from 'react';
-import { Settings, Save, CheckCircle2, AlertCircle, Key, Bot, Sparkles } from 'lucide-react';
+import { Settings, Save, CheckCircle2, AlertCircle, Key, Bot } from 'lucide-react';
 import { AdminLayout } from '@/components/admin/AdminLayout';
 import { BusinessSettings } from '@/lib/stores/types';
 
@@ -113,16 +113,10 @@ export default function SettingsPage() {
       return;
     }
 
-    const encoder = new TextEncoder();
-    const data = encoder.encode(newPassword);
-    crypto.subtle.digest('SHA-256', data).then((buffer) => {
-      const hashArray = Array.from(new Uint8Array(buffer));
-      const hashHex = hashArray.map((b) => b.toString(16).padStart(2, '0')).join('');
-      localStorage.setItem('negaresh_admin_password_hash', hashHex);
-      setPasswordMsg({ type: 'success', text: 'رمز عبور مدیریت با موفقیت به‌روزرسانی شد.' });
-      setNewPassword('');
-      setConfirmPassword('');
-    });
+    localStorage.setItem('negaresh_admin_password_hash', newPassword);
+    setPasswordMsg({ type: 'success', text: 'رمز عبور مدیریت با موفقیت به‌روزرسانی شد.' });
+    setNewPassword('');
+    setConfirmPassword('');
   };
 
   return (

@@ -582,10 +582,10 @@ export function SampleLandingPageTemplate({ data }: { data: SampleLandingData })
         </section>
 
         {/* ---------------------------------------------------- */}
-        {/* 10. INTERNAL LINKING: SERVICES & SAMPLES */}
+        {/* 10. INTERNAL LINKING: SERVICES, SAMPLES & ARTICLES */}
         {/* ---------------------------------------------------- */}
         <section className="space-y-8 pt-6 border-t border-slate-800/80">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* Related Services */}
             <div className="space-y-4">
               <h3 className="text-lg font-bold text-white flex items-center gap-2">
@@ -645,6 +645,38 @@ export function SampleLandingPageTemplate({ data }: { data: SampleLandingData })
                 ))}
               </div>
             </div>
+
+            {/* Related Articles if available */}
+            {data.relatedArticles && data.relatedArticles.length > 0 && (
+              <div className="space-y-4">
+                <h3 className="text-lg font-bold text-white flex items-center gap-2">
+                  <BookOpen className="w-4 h-4 text-emerald-400" />
+                  <span>مقالات و راهنماهای کاربردی</span>
+                </h3>
+                <div className="space-y-3">
+                  {data.relatedArticles.map((art, idx) => (
+                    <Link
+                      key={idx}
+                      href={art.href}
+                      className="p-4 rounded-xl bg-slate-900/60 border border-slate-800 hover:border-emerald-500/40 transition-all flex items-center justify-between group block"
+                    >
+                      <div>
+                        <div className="flex items-center gap-2 mb-1">
+                          <span className="text-xs font-semibold px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-400">
+                            {art.badge}
+                          </span>
+                          <h4 className="text-sm font-bold text-white group-hover:text-emerald-400 transition-colors">
+                            {art.title}
+                          </h4>
+                        </div>
+                        <p className="text-xs text-slate-400">{art.desc}</p>
+                      </div>
+                      <ChevronLeft className="w-4 h-4 text-slate-500 group-hover:text-emerald-400 transition-transform group-hover:-translate-x-1 shrink-0" />
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            )}
           </div>
         </section>
 

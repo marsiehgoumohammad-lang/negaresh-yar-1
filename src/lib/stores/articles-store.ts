@@ -49,7 +49,11 @@ export function getArticles(): Article[] {
   ensureDataDirectory();
   if (!fs.existsSync(FILE_PATH)) {
     const initial = getInitialArticles();
-    fs.writeFileSync(FILE_PATH, JSON.stringify(initial, null, 2), 'utf-8');
+    try {
+      fs.writeFileSync(FILE_PATH, JSON.stringify(initial, null, 2), 'utf-8');
+    } catch (e) {
+      console.error('Failed to write initial articles.json', e);
+    }
     return initial;
   }
 
@@ -58,9 +62,17 @@ export function getArticles(): Article[] {
     const articles = JSON.parse(raw);
     if (!Array.isArray(articles)) {
       const initial = getInitialArticles();
-      fs.writeFileSync(FILE_PATH, JSON.stringify(initial, null, 2), 'utf-8');
       return initial;
     }
+
+    // Auto-merge any new static articles defined in ALL_KNOWLEDGE_ARTICLES missing from articles.json (in memory)
+    const initial = getInitialArticles();
+    for (const initArt of initial) {
+      if (!articles.some((a: Article) => a.slug === initArt.slug)) {
+        articles.push(initArt);
+      }
+    }
+
     return articles;
   } catch (err) {
     console.error('Error reading articles.json:', err);

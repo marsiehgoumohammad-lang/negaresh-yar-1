@@ -20,6 +20,10 @@ import { legalSelfServiceGuideData, legalSelfServiceGuideMetadata } from './lega
 import { onlineJudicialServicesGuideData, onlineJudicialServicesGuideMetadata } from './online-judicial-services-guide';
 import { meaningOfCourtTermsData, meaningOfCourtTermsMetadata } from './meaning-of-court-terms';
 import { whatIsFinalCourtJudgmentData, whatIsFinalCourtJudgmentMetadata } from './what-is-final-court-judgment';
+import { howToInstallDebtAndMahriehData, howToInstallDebtAndMahriehMetadata } from './how-to-install-debt-and-mahrieh';
+import { pardonVsConditionalReleaseData, pardonVsConditionalReleaseMetadata } from './pardon-vs-conditional-release';
+import { whatIsLegalNoticeData, whatIsLegalNoticeMetadata } from './what-is-legal-notice';
+import { howToBuyCarAndPropertyFromCourtAuctionData, howToBuyCarAndPropertyFromCourtAuctionMetadata } from './how-to-buy-car-and-property-from-court-auction';
 
 export * from './types';
 
@@ -112,6 +116,10 @@ export const ALL_KNOWLEDGE_ARTICLES: KnowledgeArticleData[] = [
   onlineJudicialServicesGuideData,
   meaningOfCourtTermsData,
   whatIsFinalCourtJudgmentData,
+  howToInstallDebtAndMahriehData,
+  pardonVsConditionalReleaseData,
+  whatIsLegalNoticeData,
+  howToBuyCarAndPropertyFromCourtAuctionData,
 ];
 
 export const KNOWLEDGE_METADATA_MAP = {
@@ -136,6 +144,10 @@ export const KNOWLEDGE_METADATA_MAP = {
   'online-judicial-services-guide': onlineJudicialServicesGuideMetadata,
   'meaning-of-court-terms': meaningOfCourtTermsMetadata,
   'what-is-final-court-judgment': whatIsFinalCourtJudgmentMetadata,
+  'how-to-install-debt-and-mahrieh': howToInstallDebtAndMahriehMetadata,
+  'pardon-vs-conditional-release': pardonVsConditionalReleaseMetadata,
+  'what-is-legal-notice': whatIsLegalNoticeMetadata,
+  'how-to-buy-car-and-property-from-court-auction': howToBuyCarAndPropertyFromCourtAuctionMetadata,
 };
 
 export function getKnowledgeArticleBySlug(slug: string): KnowledgeArticleData | undefined {

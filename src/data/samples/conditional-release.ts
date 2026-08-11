@@ -250,6 +250,15 @@ export const sampleConditionalReleaseData: SampleLandingData = {
     },
   ],
 
+  relatedArticles: [
+    {
+      title: 'فرق عفو و آزادی مشروط چیست؟',
+      href: '/knowledge/pardon-vs-conditional-release',
+      desc: 'شرایط ثبت درخواست آزادی مشروط، عفو معیاری و مرخصی زندانیان.',
+      badge: 'مقاله آموزشی',
+    },
+  ],
+
   ctaTitle: 'سفارش فوری تنظیم درخواست آزادی مشروط و تعلیق مجازات',
   ctaDescription: 'با تنظیم متنی اصولی و مستدل توسط کارشناسان حقوقی نگارش یار، شانس موافقت قاضی با آزادی زندانی خود را به حداکثر برسانید.',
   ctaPrimaryBtnText: 'ثبت سفارش درخواست آزادی مشروط',

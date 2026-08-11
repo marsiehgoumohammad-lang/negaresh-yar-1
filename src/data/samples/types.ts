@@ -50,6 +50,7 @@ export interface SampleLandingData {
   // 9. Internal Linking
   relatedServices: { title: string; href: string; desc: string; badge: string }[];
   relatedSamples: { title: string; href: string; desc: string; badge: string }[];
+  relatedArticles?: { title: string; href: string; desc: string; badge: string }[];
 
   // 10. CTA
   ctaTitle: string;
