@@ -28,9 +28,8 @@ export const metadata: Metadata = {
   },
 };
 
-export default function KnowledgePage() {
-  const publishedArticles = getPublishedArticles();
-
+export default async function KnowledgePage() {
+  const publishedArticles = await getPublishedArticles();
   const breadcrumbSchema = {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
