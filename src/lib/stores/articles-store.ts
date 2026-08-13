@@ -28,7 +28,7 @@ type DbArticle = {
   content: string;
   seo_title: string | null;
   seo_description: string | null;
-  keywords: string[];
+  keywords: string[] | null;
   published_at: string | null;
   created_at: string;
   updated_at: string;
@@ -92,10 +92,7 @@ function toDb(article: Partial<Article>) {
   return {
     title: article.title,
     slug: article.slug,
-    status:
-      article.status === "paused"
-        ? "archived"
-        : article.status,
+    status: article.status === "paused" ? "archived" : article.status,
     excerpt: article.excerpt ?? null,
     content: article.content ?? "",
     seo_title: article.metaTitle ?? null,
@@ -116,6 +113,22 @@ export async function getArticles(): Promise<Article[]> {
 
   if (error) {
     throw new Error(`Failed to load articles: ${error.message}`);
+  }
+
+  return ((data ?? []) as DbArticle[]).map(fromDb);
+}
+
+export async function getPublishedArticles(): Promise<Article[]> {
+  const supabase = await createClient();
+
+  const { data, error } = await supabase
+    .from("articles")
+    .select("*")
+    .eq("status", "published")
+    .order("published_at", { ascending: false });
+
+  if (error) {
+    throw new Error(`Failed to load published articles: ${error.message}`);
   }
 
   return ((data ?? []) as DbArticle[]).map(fromDb);
