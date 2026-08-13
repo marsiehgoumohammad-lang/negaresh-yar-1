@@ -1,5 +1,5 @@
 User-agent: *
-allow: /
+Allow: /
 Disallow: /api/
 Disallow: /admin/
 Sitemap: https://negaresh-yar.ir/sitemap.xml
