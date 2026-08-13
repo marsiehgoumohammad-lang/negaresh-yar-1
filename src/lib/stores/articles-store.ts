@@ -55,16 +55,13 @@ export interface KnowledgeTableOfContentsItem {
   title: string;
 }
 
+export type ArticleStatus = "draft" | "published" | "paused";
+
 export interface Article {
   id: string;
   title: string;
   slug: string;
-
-  /**
-   * Application-level status.
-   * "paused" is mapped to the database "archived" status.
-   */
-  status: "draft" | "published" | "paused";
+  status: ArticleStatus;
 
   excerpt?: string;
   content?: string;
@@ -78,7 +75,6 @@ export interface Article {
 
   category?: string;
 
-  // Knowledge Base fields
   badge?: string;
   h1Title?: string;
   heroSubtitle?: string;
@@ -115,7 +111,6 @@ export interface Article {
   ctaPrimaryBtnText?: string;
   ctaPrimaryHref?: string;
 
-  // CMS / SEO controls
   version?: number;
   isFeatured?: boolean;
   readingTimeMinutes?: number;
@@ -126,32 +121,21 @@ export interface Article {
   publishedAt?: string | null;
 }
 
-type JsonValue =
-  | string
-  | number
-  | boolean
-  | null
-  | JsonValue[]
-  | { [key: string]: JsonValue };
-
 type DbArticle = {
   id: string;
   title: string;
   slug: string;
-  status: "draft" | "published" | "archived";
+  summary: string | null;
+  content: string;
 
-  excerpt: string | null;
-  content: string | null;
-
-  seo_title: string | null;
-  seo_description: string | null;
   keywords: string[] | null;
+  schema: string | null;
+
+  status: "draft" | "published" | "archived";
 
   published_at: string | null;
   created_at: string;
   updated_at: string;
-
-  metadata: Record<string, unknown> | null;
 
   category: string | null;
   badge: string | null;
@@ -160,31 +144,30 @@ type DbArticle = {
   read_time: string | null;
   last_updated: string | null;
 
-  hero_trust_chips: JsonValue[] | null;
-
+  hero_trust_chips: unknown;
   quick_answer_title: string | null;
   quick_answer_paragraph: string | null;
-  quick_answer_highlights: JsonValue[] | null;
+  quick_answer_highlights: unknown;
 
-  table_of_contents: JsonValue[] | null;
-  sections: JsonValue[] | null;
+  table_of_contents: unknown;
+  sections: unknown;
 
   examples_title: string | null;
-  examples_list: JsonValue[] | null;
+  examples_list: unknown;
 
   common_mistakes_title: string | null;
   common_mistakes_subtitle: string | null;
-  common_mistakes_list: JsonValue[] | null;
+  common_mistakes_list: unknown;
 
   legal_notes_title: string | null;
-  legal_notes_list: JsonValue[] | null;
+  legal_notes_list: unknown;
 
   faq_title: string | null;
-  faqs: JsonValue[] | null;
+  faqs: unknown;
 
-  related_services: JsonValue[] | null;
-  related_samples: JsonValue[] | null;
-  related_articles: JsonValue[] | null;
+  related_services: unknown;
+  related_samples: unknown;
+  related_articles: unknown;
 
   cta_title: string | null;
   cta_description: string | null;
@@ -205,18 +188,12 @@ function numberValue(value: unknown): number | undefined {
   return typeof value === "number" ? value : undefined;
 }
 
-function booleanValue(value: unknown): boolean | undefined {
-  return typeof value === "boolean" ? value : undefined;
-}
-
 function stringArrayValue(value: unknown): string[] | undefined {
   if (!Array.isArray(value)) return undefined;
 
-  const result = value.filter(
+  return value.filter(
     (item): item is string => typeof item === "string"
   );
-
-  return result;
 }
 
 function arrayValue<T>(value: unknown): T[] | undefined {
@@ -224,8 +201,6 @@ function arrayValue<T>(value: unknown): T[] | undefined {
 }
 
 function fromDb(row: DbArticle): Article {
-  const metadata = row.metadata ?? {};
-
   return {
     id: row.id,
     title: row.title,
@@ -233,25 +208,26 @@ function fromDb(row: DbArticle): Article {
 
     status: row.status === "archived" ? "paused" : row.status,
 
-    excerpt: row.excerpt ?? undefined,
+    excerpt: row.summary ?? undefined,
     content: row.content ?? undefined,
 
-    metaTitle: row.seo_title ?? undefined,
-    metaDescription: row.seo_description ?? undefined,
+    metaTitle: undefined,
+    metaDescription: undefined,
 
     keywords: row.keywords ?? [],
 
     primaryKeyword:
-      stringValue(metadata.primaryKeyword) ??
-      stringValue(metadata.primary_keyword),
+      row.keywords && row.keywords.length > 0
+        ? row.keywords[0]
+        : undefined,
 
-    schema: stringValue(metadata.schema),
+    schema: row.schema ?? undefined,
 
-    wordCount:
-      numberValue(metadata.wordCount) ??
-      numberValue(metadata.word_count),
+    wordCount: row.content
+      ? row.content.trim().split(/\s+/).filter(Boolean).length
+      : undefined,
 
-    category: row.category ?? stringValue(metadata.category),
+    category: row.category ?? undefined,
 
     badge: row.badge ?? undefined,
     h1Title: row.h1_title ?? undefined,
@@ -260,65 +236,100 @@ function fromDb(row: DbArticle): Article {
     lastUpdated: row.last_updated ?? undefined,
 
     heroTrustChips:
-      stringArrayValue(row.hero_trust_chips) ??
-      stringArrayValue(metadata.heroTrustChips),
+      stringArrayValue(row.hero_trust_chips),
 
-    quickAnswerTitle: row.quick_answer_title ?? undefined,
-    quickAnswerParagraph: row.quick_answer_paragraph ?? undefined,
+    quickAnswerTitle:
+      row.quick_answer_title ?? undefined,
+
+    quickAnswerParagraph:
+      row.quick_answer_paragraph ?? undefined,
 
     quickAnswerHighlights:
-      stringArrayValue(row.quick_answer_highlights) ??
-      stringArrayValue(metadata.quickAnswerHighlights),
+      stringArrayValue(row.quick_answer_highlights),
 
-    tableOfContents: arrayValue<KnowledgeTableOfContentsItem>(
-      row.table_of_contents
-    ),
+    tableOfContents:
+      arrayValue<KnowledgeTableOfContentsItem>(
+        row.table_of_contents
+      ),
 
-    sections: arrayValue<KnowledgeSection>(row.sections),
+    sections:
+      arrayValue<KnowledgeSection>(row.sections),
 
-    examplesTitle: row.examples_title ?? undefined,
-    examplesList: arrayValue<KnowledgeExample>(row.examples_list),
+    examplesTitle:
+      row.examples_title ?? undefined,
 
-    commonMistakesTitle: row.common_mistakes_title ?? undefined,
+    examplesList:
+      arrayValue<KnowledgeExample>(row.examples_list),
+
+    commonMistakesTitle:
+      row.common_mistakes_title ?? undefined,
+
     commonMistakesSubtitle:
       row.common_mistakes_subtitle ?? undefined,
 
     commonMistakesList:
-      arrayValue<KnowledgeMistake>(row.common_mistakes_list),
+      arrayValue<KnowledgeMistake>(
+        row.common_mistakes_list
+      ),
 
-    legalNotesTitle: row.legal_notes_title ?? undefined,
-    legalNotesList: stringArrayValue(row.legal_notes_list),
+    legalNotesTitle:
+      row.legal_notes_title ?? undefined,
 
-    faqTitle: row.faq_title ?? undefined,
-    faqs: arrayValue<KnowledgeFaq>(row.faqs),
+    legalNotesList:
+      stringArrayValue(row.legal_notes_list),
+
+    faqTitle:
+      row.faq_title ?? undefined,
+
+    faqs:
+      arrayValue<KnowledgeFaq>(row.faqs),
 
     relatedServices:
-      arrayValue<KnowledgeRelatedService>(row.related_services),
+      arrayValue<KnowledgeRelatedService>(
+        row.related_services
+      ),
 
     relatedSamples:
-      arrayValue<KnowledgeRelatedSample>(row.related_samples),
+      arrayValue<KnowledgeRelatedSample>(
+        row.related_samples
+      ),
 
     relatedArticles:
-      arrayValue<KnowledgeRelatedArticle>(row.related_articles),
+      arrayValue<KnowledgeRelatedArticle>(
+        row.related_articles
+      ),
 
-    ctaTitle: row.cta_title ?? undefined,
-    ctaDescription: row.cta_description ?? undefined,
+    ctaTitle:
+      row.cta_title ?? undefined,
+
+    ctaDescription:
+      row.cta_description ?? undefined,
+
     ctaPrimaryBtnText:
       row.cta_primary_btn_text ?? undefined,
+
     ctaPrimaryHref:
       row.cta_primary_href ?? undefined,
 
     version: row.version ?? 1,
-    isFeatured: row.is_featured ?? false,
+
+    isFeatured:
+      row.is_featured ?? false,
 
     readingTimeMinutes:
       row.reading_time_minutes ??
-      numberValue(metadata.readingTimeMinutes),
+      (row.content
+        ? Math.max(
+            1,
+            Math.ceil(
+              row.content.trim().split(/\s+/).filter(Boolean).length /
+                200
+            )
+          )
+        : undefined),
 
     seoKeywords:
-      row.seo_keywords ??
-      stringArrayValue(metadata.seoKeywords) ??
-      [],
+      row.seo_keywords ?? [],
 
     createdAt: row.created_at,
     updatedAt: row.updated_at,
@@ -327,217 +338,320 @@ function fromDb(row: DbArticle): Article {
 }
 
 function toDb(article: Partial<Article>) {
-  const metadata: Record<string, unknown> = {};
+  const payload: Record<string, unknown> = {};
 
-  if (article.primaryKeyword !== undefined) {
-    metadata.primaryKeyword = article.primaryKeyword;
+  if (article.title !== undefined) {
+    payload.title = article.title;
+  }
+
+  if (article.slug !== undefined) {
+    payload.slug = article.slug;
+  }
+
+  if (article.status !== undefined) {
+    payload.status =
+      article.status === "paused"
+        ? "archived"
+        : article.status;
+  }
+
+  if (article.excerpt !== undefined) {
+    payload.summary = article.excerpt ?? null;
+  }
+
+  if (article.content !== undefined) {
+    payload.content = article.content ?? "";
+  }
+
+  if (article.keywords !== undefined) {
+    payload.keywords = article.keywords ?? [];
   }
 
   if (article.schema !== undefined) {
-    metadata.schema = article.schema;
+    payload.schema = article.schema ?? null;
   }
 
-  if (article.wordCount !== undefined) {
-    metadata.wordCount = article.wordCount;
+  if (article.publishedAt !== undefined) {
+    payload.published_at = article.publishedAt ?? null;
   }
 
-  return {
-    ...(article.title !== undefined && {
-      title: article.title,
-    }),
+  if (article.category !== undefined) {
+    payload.category = article.category ?? null;
+  }
 
-    ...(article.slug !== undefined && {
-      slug: article.slug,
-    }),
+  if (article.badge !== undefined) {
+    payload.badge = article.badge ?? null;
+  }
 
-    ...(article.status !== undefined && {
-      status:
-        article.status === "paused"
-          ? "archived"
-          : article.status,
-    }),
+  if (article.h1Title !== undefined) {
+    payload.h1_title = article.h1Title ?? null;
+  }
 
-    ...(article.excerpt !== undefined && {
-      excerpt: article.excerpt ?? null,
-    }),
+  if (article.heroSubtitle !== undefined) {
+    payload.hero_subtitle = article.heroSubtitle ?? null;
+  }
 
-    ...(article.content !== undefined && {
-      content: article.content ?? "",
-    }),
+  if (article.readTime !== undefined) {
+    payload.read_time = article.readTime ?? null;
+  }
 
-    ...(article.metaTitle !== undefined && {
-      seo_title: article.metaTitle ?? null,
-    }),
+  if (article.lastUpdated !== undefined) {
+    payload.last_updated = article.lastUpdated ?? null;
+  }
 
-    ...(article.metaDescription !== undefined && {
-      seo_description:
-        article.metaDescription ?? null,
-    }),
+  if (article.heroTrustChips !== undefined) {
+    payload.hero_trust_chips = article.heroTrustChips ?? [];
+  }
 
-    ...(article.keywords !== undefined && {
-      keywords: article.keywords ?? [],
-    }),
+  if (article.quickAnswerTitle !== undefined) {
+    payload.quick_answer_title =
+      article.quickAnswerTitle ?? null;
+  }
 
-    ...(article.publishedAt !== undefined && {
-      published_at: article.publishedAt ?? null,
-    }),
+  if (article.quickAnswerParagraph !== undefined) {
+    payload.quick_answer_paragraph =
+      article.quickAnswerParagraph ?? null;
+  }
 
-    ...(article.category !== undefined && {
-      category: article.category ?? null,
-    }),
+  if (article.quickAnswerHighlights !== undefined) {
+    payload.quick_answer_highlights =
+      article.quickAnswerHighlights ?? [];
+  }
 
-    ...(article.badge !== undefined && {
-      badge: article.badge ?? null,
-    }),
+  if (article.tableOfContents !== undefined) {
+    payload.table_of_contents =
+      article.tableOfContents ?? [];
+  }
 
-    ...(article.h1Title !== undefined && {
-      h1_title: article.h1Title ?? null,
-    }),
+  if (article.sections !== undefined) {
+    payload.sections = article.sections ?? [];
+  }
 
-    ...(article.heroSubtitle !== undefined && {
-      hero_subtitle:
-        article.heroSubtitle ?? null,
-    }),
+  if (article.examplesTitle !== undefined) {
+    payload.examples_title =
+      article.examplesTitle ?? null;
+  }
 
-    ...(article.readTime !== undefined && {
-      read_time: article.readTime ?? null,
-    }),
+  if (article.examplesList !== undefined) {
+    payload.examples_list =
+      article.examplesList ?? [];
+  }
 
-    ...(article.lastUpdated !== undefined && {
-      last_updated:
-        article.lastUpdated ?? null,
-    }),
+  if (article.commonMistakesTitle !== undefined) {
+    payload.common_mistakes_title =
+      article.commonMistakesTitle ?? null;
+  }
 
-    ...(article.heroTrustChips !== undefined && {
-      hero_trust_chips:
-        article.heroTrustChips ?? [],
-    }),
+  if (article.commonMistakesSubtitle !== undefined) {
+    payload.common_mistakes_subtitle =
+      article.commonMistakesSubtitle ?? null;
+  }
 
-    ...(article.quickAnswerTitle !== undefined && {
-      quick_answer_title:
-        article.quickAnswerTitle ?? null,
-    }),
+  if (article.commonMistakesList !== undefined) {
+    payload.common_mistakes_list =
+      article.commonMistakesList ?? [];
+  }
 
-    ...(article.quickAnswerParagraph !== undefined && {
-      quick_answer_paragraph:
-        article.quickAnswerParagraph ?? null,
-    }),
+  if (article.legalNotesTitle !== undefined) {
+    payload.legal_notes_title =
+      article.legalNotesTitle ?? null;
+  }
 
-    ...(article.quickAnswerHighlights !== undefined && {
-      quick_answer_highlights:
-        article.quickAnswerHighlights ?? [],
-    }),
+  if (article.legalNotesList !== undefined) {
+    payload.legal_notes_list =
+      article.legalNotesList ?? [];
+  }
 
-    ...(article.tableOfContents !== undefined && {
-      table_of_contents:
-        article.tableOfContents ?? [],
-    }),
+  if (article.faqTitle !== undefined) {
+    payload.faq_title =
+      article.faqTitle ?? null;
+  }
 
-    ...(article.sections !== undefined && {
-      sections: article.sections ?? [],
-    }),
+  if (article.faqs !== undefined) {
+    payload.faqs = article.faqs ?? [];
+  }
 
-    ...(article.examplesTitle !== undefined && {
-      examples_title:
-        article.examplesTitle ?? null,
-    }),
+  if (article.relatedServices !== undefined) {
+    payload.related_services =
+      article.relatedServices ?? [];
+  }
 
-    ...(article.examplesList !== undefined && {
-      examples_list:
-        article.examplesList ?? [],
-    }),
+  if (article.relatedSamples !== undefined) {
+    payload.related_samples =
+      article.relatedSamples ?? [];
+  }
 
-    ...(article.commonMistakesTitle !== undefined && {
-      common_mistakes_title:
-        article.commonMistakesTitle ?? null,
-    }),
+  if (article.relatedArticles !== undefined) {
+    payload.related_articles =
+      article.relatedArticles ?? [];
+  }
 
-    ...(article.commonMistakesSubtitle !== undefined && {
-      common_mistakes_subtitle:
-        article.commonMistakesSubtitle ?? null,
-    }),
+  if (article.ctaTitle !== undefined) {
+    payload.cta_title =
+      article.ctaTitle ?? null;
+  }
 
-    ...(article.commonMistakesList !== undefined && {
-      common_mistakes_list:
-        article.commonMistakesList ?? [],
-    }),
+  if (article.ctaDescription !== undefined) {
+    payload.cta_description =
+      article.ctaDescription ?? null;
+  }
 
-    ...(article.legalNotesTitle !== undefined && {
-      legal_notes_title:
-        article.legalNotesTitle ?? null,
-    }),
+  if (article.ctaPrimaryBtnText !== undefined) {
+    payload.cta_primary_btn_text =
+      article.ctaPrimaryBtnText ?? null;
+  }
 
-    ...(article.legalNotesList !== undefined && {
-      legal_notes_list:
-        article.legalNotesList ?? [],
-    }),
+  if (article.ctaPrimaryHref !== undefined) {
+    payload.cta_primary_href =
+      article.ctaPrimaryHref ?? null;
+  }
 
-    ...(article.faqTitle !== undefined && {
-      faq_title:
-        article.faqTitle ?? null,
-    }),
+  if (article.version !== undefined) {
+    payload.version = article.version;
+  }
 
-    ...(article.faqs !== undefined && {
-      faqs: article.faqs ?? [],
-    }),
+  if (article.isFeatured !== undefined) {
+    payload.is_featured = article.isFeatured;
+  }
 
-    ...(article.relatedServices !== undefined && {
-      related_services:
-        article.relatedServices ?? [],
-    }),
+  if (article.readingTimeMinutes !== undefined) {
+    payload.reading_time_minutes =
+      article.readingTimeMinutes;
+  }
 
-    ...(article.relatedSamples !== undefined && {
-      related_samples:
-        article.relatedSamples ?? [],
-    }),
+  if (article.seoKeywords !== undefined) {
+    payload.seo_keywords =
+      article.seoKeywords ?? [];
+  }
 
-    ...(article.relatedArticles !== undefined && {
-      related_articles:
-        article.relatedArticles ?? [],
-    }),
-
-    ...(article.ctaTitle !== undefined && {
-      cta_title:
-        article.ctaTitle ?? null,
-    }),
-
-    ...(article.ctaDescription !== undefined && {
-      cta_description:
-        article.ctaDescription ?? null,
-    }),
-
-    ...(article.ctaPrimaryBtnText !== undefined && {
-      cta_primary_btn_text:
-        article.ctaPrimaryBtnText ?? null,
-    }),
-
-    ...(article.ctaPrimaryHref !== undefined && {
-      cta_primary_href:
-        article.ctaPrimaryHref ?? null,
-    }),
-
-    ...(article.version !== undefined && {
-      version: article.version,
-    }),
-
-    ...(article.isFeatured !== undefined && {
-      is_featured: article.isFeatured,
-    }),
-
-    ...(article.readingTimeMinutes !== undefined && {
-      reading_time_minutes:
-        article.readingTimeMinutes,
-    }),
-
-    ...(article.seoKeywords !== undefined && {
-      seo_keywords:
-        article.seoKeywords ?? [],
-    }),
-
-    ...(Object.keys(metadata).length > 0 && {
-      metadata,
-    }),
-  };
+  return payload;
 }
 
-export async function getArticles(): Promise<Article
+export async function getArticles(): Promise<Article[]> {
+  const supabase = await createClient();
+
+  const { data, error } = await supabase
+    .from("articles")
+    .select("*")
+    .order("created_at", { ascending: false });
+
+  if (error) {
+    throw new Error(
+      `Failed to load articles: ${error.message}`
+    );
+  }
+
+  return ((data ?? []) as DbArticle[]).map(fromDb);
+}
+
+export async function getPublishedArticles(): Promise<Article[]> {
+  const supabase = await createClient();
+
+  const { data, error } = await supabase
+    .from("articles")
+    .select("*")
+    .eq("status", "published")
+    .order("published_at", {
+      ascending: false,
+      nullsFirst: false,
+    });
+
+  if (error) {
+    throw new Error(
+      `Failed to load published articles: ${error.message}`
+    );
+  }
+
+  return ((data ?? []) as DbArticle[]).map(fromDb);
+}
+
+export async function getArticleBySlug(
+  slug: string
+): Promise<Article | null> {
+  const supabase = await createClient();
+
+  const { data, error } = await supabase
+    .from("articles")
+    .select("*")
+    .eq("slug", slug)
+    .maybeSingle();
+
+  if (error) {
+    throw new Error(
+      `Failed to load article: ${error.message}`
+    );
+  }
+
+  return data
+    ? fromDb(data as DbArticle)
+    : null;
+}
+
+export async function createArticle(
+  article: Omit<
+    Article,
+    "id" | "createdAt" | "updatedAt"
+  >
+): Promise<Article> {
+  const supabase = await createClient();
+
+  const payload = toDb(article);
+
+  const { data, error } = await supabase
+    .from("articles")
+    .insert(payload)
+    .select("*")
+    .single();
+
+  if (error) {
+    throw new Error(
+      `Failed to create article: ${error.message}`
+    );
+  }
+
+  return fromDb(data as DbArticle);
+}
+
+export async function updateArticle(
+  id: string,
+  changes: Partial<Article>
+): Promise<Article> {
+  const supabase = await createClient();
+
+  const payload = {
+    ...toDb(changes),
+    updated_at: new Date().toISOString(),
+  };
+
+  const { data, error } = await supabase
+    .from("articles")
+    .update(payload)
+    .eq("id", id)
+    .select("*")
+    .single();
+
+  if (error) {
+    throw new Error(
+      `Failed to update article: ${error.message}`
+    );
+  }
+
+  return fromDb(data as DbArticle);
+}
+
+export async function deleteArticle(
+  id: string
+): Promise<void> {
+  const supabase = await createClient();
+
+  const { error } = await supabase
+    .from("articles")
+    .delete()
+    .eq("id", id);
+
+  if (error) {
+    throw new Error(
+      `Failed to delete article: ${error.message}`
+    );
+  }
+}
