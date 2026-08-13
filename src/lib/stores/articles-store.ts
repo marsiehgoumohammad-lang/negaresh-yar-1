@@ -1,276 +1,196 @@
-import fs from 'fs';
-import path from 'path';
-import { Article, ArticleStatus } from './types';
-import { ALL_KNOWLEDGE_ARTICLES, KNOWLEDGE_METADATA_MAP } from '@/data/knowledge';
+import { createClient } from "@/lib/supabase/server";
 
-const DATA_DIR = path.join(process.cwd(), 'data');
-const FILE_PATH = path.join(DATA_DIR, 'articles.json');
-
-function getInitialArticles(): Article[] {
-  const now = new Date().toISOString();
-  
-  return ALL_KNOWLEDGE_ARTICLES.map((art) => {
-    const meta = KNOWLEDGE_METADATA_MAP[art.slug as keyof typeof KNOWLEDGE_METADATA_MAP];
-    const contentText = art.sections
-      ? art.sections.map((s) => `${s.title}\n${s.paragraphs.join('\n')}`).join('\n\n')
-      : art.quickAnswerParagraph || '';
-    
-    const wordCount = contentText
-      ? contentText.trim().split(/\s+/).filter(Boolean).length
-      : 250;
-
-    return {
-      id: art.slug,
-      title: art.h1Title || art.slug,
-      slug: art.slug,
-      status: 'published' as ArticleStatus,
-      excerpt: art.heroSubtitle || art.quickAnswerParagraph || '',
-      content: contentText,
-      metaTitle: (meta?.title as string) || art.h1Title || '',
-      metaDescription: (meta?.description as string) || art.heroSubtitle || '',
-      keywords: [art.category, 'نگارش یار', 'پایگاه دانش'],
-      primaryKeyword: art.category || 'حقوقی',
-      wordCount,
-      category: art.category,
-      createdAt: now,
-      updatedAt: now,
-      publishedAt: now,
-    };
-  });
-}
-
-function ensureDataDirectory() {
-  if (!fs.existsSync(DATA_DIR)) {
-    fs.mkdirSync(DATA_DIR, { recursive: true });
-  }
-}
-
-export function getArticles(): Article[] {
-  ensureDataDirectory();
-  if (!fs.existsSync(FILE_PATH)) {
-    const initial = getInitialArticles();
-    try {
-      fs.writeFileSync(FILE_PATH, JSON.stringify(initial, null, 2), 'utf-8');
-    } catch (e) {
-      console.error('Failed to write initial articles.json', e);
-    }
-    return initial;
-  }
-
-  try {
-    const raw = fs.readFileSync(FILE_PATH, 'utf-8');
-    const articles = JSON.parse(raw);
-    if (!Array.isArray(articles)) {
-      const initial = getInitialArticles();
-      return initial;
-    }
-
-    // Auto-merge any new static articles defined in ALL_KNOWLEDGE_ARTICLES missing from articles.json (in memory)
-    const initial = getInitialArticles();
-    for (const initArt of initial) {
-      if (!articles.some((a: Article) => a.slug === initArt.slug)) {
-        articles.push(initArt);
-      }
-    }
-
-    return articles;
-  } catch (err) {
-    console.error('Error reading articles.json:', err);
-    return getInitialArticles();
-  }
-}
-
-export function saveArticles(articles: Article[]): boolean {
-  try {
-    ensureDataDirectory();
-    fs.writeFileSync(FILE_PATH, JSON.stringify(articles, null, 2), 'utf-8');
-    return true;
-  } catch (err) {
-    console.error('Error saving articles.json:', err);
-    return false;
-  }
-}
-
-export function getArticleBySlug(slug: string): Article | undefined {
-  const articles = getArticles();
-  return articles.find((a) => a.slug === slug);
-}
-
-export function getPublishedArticles(): Article[] {
-  const articles = getArticles();
-  return articles.filter((a) => a.status === 'published');
-}
-
-export interface CreateArticleData {
+export interface Article {
+  id: string;
   title: string;
   slug: string;
-  content: string;
+  status: "draft" | "published" | "paused";
   excerpt?: string;
+  content?: string;
   metaTitle?: string;
   metaDescription?: string;
   keywords?: string[];
   primaryKeyword?: string;
   schema?: string;
-  status: ArticleStatus;
+  wordCount?: number;
+  category?: string;
+  createdAt: string;
+  updatedAt: string;
+  publishedAt?: string | null;
 }
 
-export function createArticle(data: CreateArticleData): { success: boolean; article?: Article; error?: string; code?: number; isUpdate?: boolean } {
-  const articles = getArticles();
-  const existingIndex = articles.findIndex((a) => a.slug === data.slug.trim());
-  const now = new Date().toISOString();
-  const wordCount = data.content ? data.content.trim().split(/\s+/).filter(Boolean).length : 0;
+type DbArticle = {
+  id: string;
+  title: string;
+  slug: string;
+  status: "draft" | "published" | "archived";
+  excerpt: string | null;
+  content: string;
+  seo_title: string | null;
+  seo_description: string | null;
+  keywords: string[];
+  published_at: string | null;
+  created_at: string;
+  updated_at: string;
+  metadata: Record<string, unknown> | null;
+};
 
-  if (existingIndex !== -1) {
-    // Update existing article
-    const existing = articles[existingIndex];
+function fromDb(row: DbArticle): Article {
+  const metadata = row.metadata ?? {};
 
-    let publishedAt = existing.publishedAt;
-    if (data.status === 'published' && !publishedAt) {
-      publishedAt = now;
-    }
+  return {
+    id: row.id,
+    title: row.title,
+    slug: row.slug,
+    status: row.status === "archived" ? "paused" : row.status,
+    excerpt: row.excerpt ?? undefined,
+    content: row.content,
+    metaTitle: row.seo_title ?? undefined,
+    metaDescription: row.seo_description ?? undefined,
+    keywords: row.keywords ?? [],
+    primaryKeyword:
+      typeof metadata.primaryKeyword === "string"
+        ? metadata.primaryKeyword
+        : undefined,
+    schema:
+      typeof metadata.schema === "string"
+        ? metadata.schema
+        : undefined,
+    wordCount:
+      typeof metadata.wordCount === "number"
+        ? metadata.wordCount
+        : undefined,
+    category:
+      typeof metadata.category === "string"
+        ? metadata.category
+        : undefined,
+    createdAt: row.created_at,
+    updatedAt: row.updated_at,
+    publishedAt: row.published_at,
+  };
+}
 
-    const updatedArticle: Article = {
-      ...existing,
-      title: data.title.trim(),
-      slug: data.slug.trim(),
-      status: data.status,
-      excerpt: data.excerpt !== undefined ? data.excerpt : existing.excerpt,
-      content: data.content,
-      metaTitle: data.metaTitle || data.title.trim(),
-      metaDescription: data.metaDescription || data.excerpt || existing.metaDescription || '',
-      keywords: Array.isArray(data.keywords) ? data.keywords : (existing.keywords || []),
-      primaryKeyword: data.primaryKeyword || existing.primaryKeyword || '',
-      schema: data.schema !== undefined ? data.schema : existing.schema,
-      wordCount,
-      updatedAt: now,
-      publishedAt,
-    };
+function toDb(article: Partial<Article>) {
+  const metadata: Record<string, unknown> = {};
 
-    articles[existingIndex] = updatedArticle;
-    saveArticles(articles);
-
-    return { success: true, article: updatedArticle, isUpdate: true };
+  if (article.primaryKeyword !== undefined) {
+    metadata.primaryKeyword = article.primaryKeyword;
   }
 
-  // Create new article
-  const newArticle: Article = {
-    id: `art-${Date.now()}`,
-    title: data.title.trim(),
-    slug: data.slug.trim(),
-    status: data.status,
-    excerpt: data.excerpt || '',
-    content: data.content,
-    metaTitle: data.metaTitle || data.title.trim(),
-    metaDescription: data.metaDescription || data.excerpt || '',
-    keywords: Array.isArray(data.keywords) ? data.keywords : [],
-    primaryKeyword: data.primaryKeyword || '',
-    schema: data.schema || '',
-    wordCount,
-    createdAt: now,
-    updatedAt: now,
-    publishedAt: data.status === 'published' ? now : null,
+  if (article.schema !== undefined) {
+    metadata.schema = article.schema;
+  }
+
+  if (article.wordCount !== undefined) {
+    metadata.wordCount = article.wordCount;
+  }
+
+  if (article.category !== undefined) {
+    metadata.category = article.category;
+  }
+
+  return {
+    title: article.title,
+    slug: article.slug,
+    status:
+      article.status === "paused"
+        ? "archived"
+        : article.status,
+    excerpt: article.excerpt ?? null,
+    content: article.content ?? "",
+    seo_title: article.metaTitle ?? null,
+    seo_description: article.metaDescription ?? null,
+    keywords: article.keywords ?? [],
+    published_at: article.publishedAt ?? null,
+    metadata,
+  };
+}
+
+export async function getArticles(): Promise<Article[]> {
+  const supabase = await createClient();
+
+  const { data, error } = await supabase
+    .from("articles")
+    .select("*")
+    .order("created_at", { ascending: false });
+
+  if (error) {
+    throw new Error(`Failed to load articles: ${error.message}`);
+  }
+
+  return ((data ?? []) as DbArticle[]).map(fromDb);
+}
+
+export async function getArticleBySlug(
+  slug: string
+): Promise<Article | null> {
+  const supabase = await createClient();
+
+  const { data, error } = await supabase
+    .from("articles")
+    .select("*")
+    .eq("slug", slug)
+    .maybeSingle();
+
+  if (error) {
+    throw new Error(`Failed to load article: ${error.message}`);
+  }
+
+  return data ? fromDb(data as DbArticle) : null;
+}
+
+export async function createArticle(
+  article: Omit<Article, "id" | "createdAt" | "updatedAt">
+): Promise<Article> {
+  const supabase = await createClient();
+
+  const { data, error } = await supabase
+    .from("articles")
+    .insert(toDb(article))
+    .select("*")
+    .single();
+
+  if (error) {
+    throw new Error(`Failed to create article: ${error.message}`);
+  }
+
+  return fromDb(data as DbArticle);
+}
+
+export async function updateArticle(
+  id: string,
+  changes: Partial<Article>
+): Promise<Article> {
+  const supabase = await createClient();
+
+  const payload = {
+    ...toDb(changes),
+    updated_at: new Date().toISOString(),
   };
 
-  articles.unshift(newArticle);
-  saveArticles(articles);
+  const { data, error } = await supabase
+    .from("articles")
+    .update(payload)
+    .eq("id", id)
+    .select("*")
+    .single();
 
-  return { success: true, article: newArticle, isUpdate: false };
+  if (error) {
+    throw new Error(`Failed to update article: ${error.message}`);
+  }
+
+  return fromDb(data as DbArticle);
 }
 
-export function updateArticle(
-  targetSlug: string,
-  data: Partial<CreateArticleData>
-): { success: boolean; article?: Article; error?: string; code?: number } {
-  const articles = getArticles();
-  const index = articles.findIndex((a) => a.slug === targetSlug);
+export async function deleteArticle(id: string): Promise<void> {
+  const supabase = await createClient();
 
-  if (index === -1) {
-    return { success: false, error: 'مقاله مورد نظر یافت نشد', code: 404 };
+  const { error } = await supabase
+    .from("articles")
+    .delete()
+    .eq("id", id);
+
+  if (error) {
+    throw new Error(`Failed to delete article: ${error.message}`);
   }
-
-  const existing = articles[index];
-  const now = new Date().toISOString();
-
-  // If slug is changing, verify new slug isn't already taken by another article
-  const newSlug = data.slug ? data.slug.trim() : existing.slug;
-  if (newSlug !== existing.slug) {
-    const slugConflict = articles.some((a, i) => i !== index && a.slug === newSlug);
-    if (slugConflict) {
-      return { success: false, error: 'اسلاگ وارد شده قبلاً برای مقاله دیگری استفاده شده است', code: 400 };
-    }
-  }
-
-  const newContent = data.content !== undefined ? data.content : (existing.content || '');
-  const wordCount = newContent ? newContent.trim().split(/\s+/).filter(Boolean).length : (existing.wordCount || 0);
-
-  const newStatus = data.status || existing.status;
-  let publishedAt = existing.publishedAt;
-  if (newStatus === 'published' && !publishedAt) {
-    publishedAt = now;
-  }
-
-  const updatedArticle: Article = {
-    ...existing,
-    title: data.title !== undefined ? data.title.trim() : existing.title,
-    slug: newSlug,
-    status: newStatus,
-    excerpt: data.excerpt !== undefined ? data.excerpt : existing.excerpt,
-    content: newContent,
-    metaTitle: data.metaTitle !== undefined ? data.metaTitle : existing.metaTitle,
-    metaDescription: data.metaDescription !== undefined ? data.metaDescription : existing.metaDescription,
-    keywords: Array.isArray(data.keywords) ? data.keywords : existing.keywords,
-    primaryKeyword: data.primaryKeyword !== undefined ? data.primaryKeyword : existing.primaryKeyword,
-    schema: data.schema !== undefined ? data.schema : existing.schema,
-    wordCount,
-    updatedAt: now,
-    publishedAt,
-  };
-
-  articles[index] = updatedArticle;
-  saveArticles(articles);
-
-  return { success: true, article: updatedArticle };
-}
-
-export function updateArticleStatus(slug: string, status: ArticleStatus): { success: boolean; article?: Article; error?: string; code?: number } {
-  const articles = getArticles();
-  const index = articles.findIndex((a) => a.slug === slug);
-
-  if (index === -1) {
-    return { success: false, error: 'مقاله مورد نظر یافت نشد', code: 404 };
-  }
-
-  const article = articles[index];
-  const now = new Date().toISOString();
-
-  let publishedAt = article.publishedAt;
-  if (status === 'published' && !publishedAt) {
-    publishedAt = now;
-  }
-
-  const updatedArticle: Article = {
-    ...article,
-    status,
-    publishedAt,
-    updatedAt: now,
-  };
-
-  articles[index] = updatedArticle;
-  saveArticles(articles);
-
-  return { success: true, article: updatedArticle };
-}
-
-export function deleteArticle(slug: string): { success: boolean; error?: string; code?: number } {
-  const articles = getArticles();
-  const index = articles.findIndex((a) => a.slug === slug);
-
-  if (index === -1) {
-    return { success: false, error: 'مقاله مورد نظر یافت نشد', code: 404 };
-  }
-
-  articles.splice(index, 1);
-  saveArticles(articles);
-
-  return { success: true };
 }
