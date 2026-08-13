@@ -1,5 +1,5 @@
 User-agent: *
 allow: /
-disallow: /api/
-disallow: /admin/
-sitemap: https://negaresh-yar.ir/sitemap.xml
+Disallow: /api/
+Disallow: /admin/
+Sitemap: https://negaresh-yar.ir/sitemap.xml
