@@ -39,7 +39,6 @@ interface EditorSection {
   title: string;
   description: string;
   icon: React.ComponentType<{ className?: string }>;
-  accent?: string;
 }
 
 const EDITOR_SECTIONS: EditorSection[] = [
@@ -122,7 +121,6 @@ export interface KnowledgeArticleEditorShellProps {
 
 export function KnowledgeArticleEditorShell({
   article,
-  onChange,
   onSave,
   onCancel,
   saving = false,
@@ -138,8 +136,16 @@ export function KnowledgeArticleEditorShell({
       EDITOR_SECTIONS.map((section) => [
         section.key,
         section.key === 'basic',
-      ])
-    ) as Record<SectionKey, boolean>
+      ]),
+    ) as Record<SectionKey, boolean>,
+  );
+
+  const activeMeta = useMemo(
+    () =>
+      EDITOR_SECTIONS.find(
+        (section) => section.key === activeSection,
+      ),
+    [activeSection],
   );
 
   const toggleSection = (key: SectionKey) => {
@@ -150,14 +156,6 @@ export function KnowledgeArticleEditorShell({
       [key]: !current[key],
     }));
   };
-
-  const activeMeta = useMemo(
-    () =>
-      EDITOR_SECTIONS.find(
-        (section) => section.key === activeSection
-      ),
-    [activeSection]
-  );
 
   const handleSectionChange = (key: SectionKey) => {
     setActiveSection(key);
@@ -344,6 +342,7 @@ export function KnowledgeArticleEditorShell({
               <div className="rounded-2xl border border-slate-700/80 bg-slate-950/80 p-4 shadow-lg">
                 <div className="mb-4 flex items-center gap-2">
                   <Settings2 className="h-4 w-4 text-amber-300" />
+
                   <span className="text-sm font-black text-white">
                     بخش فعال
                   </span>
@@ -363,6 +362,7 @@ export function KnowledgeArticleEditorShell({
               <div className="rounded-2xl border border-slate-700/80 bg-slate-950/80 p-4 shadow-lg">
                 <div className="mb-3 flex items-center gap-2">
                   <Tag className="h-4 w-4 text-amber-300" />
+
                   <span className="text-sm font-black text-white">
                     وضعیت محتوا
                   </span>
@@ -371,19 +371,31 @@ export function KnowledgeArticleEditorShell({
                 <div className="space-y-2 text-xs text-slate-400">
                   <StatusRow
                     label="عنوان"
-                    value={article?.title ? 'تکمیل شده' : 'نیازمند تکمیل'}
+                    value={
+                      article?.title
+                        ? 'تکمیل شده'
+                        : 'نیازمند تکمیل'
+                    }
                     ok={Boolean(article?.title)}
                   />
 
                   <StatusRow
                     label="نامک"
-                    value={article?.slug ? 'تکمیل شده' : 'نیازمند تکمیل'}
+                    value={
+                      article?.slug
+                        ? 'تکمیل شده'
+                        : 'نیازمند تکمیل'
+                    }
                     ok={Boolean(article?.slug)}
                   />
 
                   <StatusRow
                     label="محتوا"
-                    value={article?.content ? 'دارای محتوا' : 'خالی'}
+                    value={
+                      article?.content
+                        ? 'دارای محتوا'
+                        : 'خالی'
+                    }
                     ok={Boolean(article?.content)}
                   />
                 </div>
@@ -418,7 +430,9 @@ export function KnowledgeArticleEditorShell({
                   disabled={saving}
                   className="rounded-xl border border-amber-300/30 bg-amber-400 px-5 py-2.5 text-sm font-black text-slate-950 shadow-lg shadow-amber-500/10 transition hover:bg-amber-300 disabled:cursor-not-allowed disabled:opacity-50"
                 >
-                  {saving ? 'در حال ذخیره...' : 'ذخیره تغییرات'}
+                  {saving
+                    ? 'در حال ذخیره...'
+                    : 'ذخیره تغییرات'}
                 </button>
               )}
             </div>
@@ -445,8 +459,8 @@ function EditorSectionPlaceholder({
       </h4>
 
       <p className="mx-auto mt-2 max-w-md text-xs leading-6 text-slate-500">
-        ساختار این بخش ایجاد شده است. فیلدها و منطق ویرایش
-        در مرحله بعد به این بخش متصل خواهند شد.
+        ساختار این بخش آماده است و فیلدهای تخصصی آن در مرحله
+        بعدی به این ویرایشگر افزوده خواهند شد.
       </p>
     </div>
   );
@@ -462,11 +476,14 @@ function StatusRow({
   ok: boolean;
 }) {
   return (
-    <div className="flex items-center justify-between gap-3 rounded-lg border border-slate-800 bg-slate-900/60 px-3 py-2">
+    <div className="flex items-center justify-between gap-3 rounded-lg border border-slate-800 bg-slate-900/70 px-3 py-2">
       <span>{label}</span>
+
       <span
         className={
-          ok ? 'text-emerald-400' : 'text-amber-400'
+          ok
+            ? 'font-bold text-emerald-400'
+            : 'font-bold text-slate-500'
         }
       >
         {value}
