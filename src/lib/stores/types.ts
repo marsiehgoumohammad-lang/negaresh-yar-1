@@ -138,6 +138,8 @@ export interface Article {
 
   relatedServices?: unknown[];
   relatedSamples?: unknown[];
+  relatedArticles?: unknown[];
+    
   createdAt: string;
   updatedAt: string;
   publishedAt?: string | null;
