@@ -127,7 +127,8 @@ type DbArticle = {
   slug: string;
   summary: string | null;
   content: string;
-
+meta_title: string | null;
+meta_description: string | null;
   keywords: string[] | null;
   schema: string | null;
 
