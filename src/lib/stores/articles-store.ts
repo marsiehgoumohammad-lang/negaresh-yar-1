@@ -211,8 +211,8 @@ function fromDb(row: DbArticle): Article {
     excerpt: row.summary ?? undefined,
     content: row.content ?? undefined,
 
-    metaTitle: undefined,
-    metaDescription: undefined,
+    metaTitle: row.meta_title ?? undefined,
+metaDescription: row.meta_description ?? undefined,
 
     keywords: row.keywords ?? [],
 
