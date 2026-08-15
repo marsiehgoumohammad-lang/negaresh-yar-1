@@ -344,7 +344,13 @@ function toDb(article: Partial<Article>) {
   if (article.title !== undefined) {
     payload.title = article.title;
   }
+   if (article.metaTitle !== undefined) {
+  payload.meta_title = article.metaTitle ?? null;
+}
 
+if (article.metaDescription !== undefined) {
+  payload.meta_description = article.metaDescription ?? null;
+}
   if (article.slug !== undefined) {
     payload.slug = article.slug;
   }
