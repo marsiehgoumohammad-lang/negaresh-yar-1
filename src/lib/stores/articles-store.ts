@@ -595,7 +595,14 @@ export async function createArticle(
 ): Promise<Article> {
   const supabase = await createClient();
 
-  const payload = toDb(article);
+  const payload = {
+    ...toDb(article),
+    content: article.content ?? "",
+    status:
+      article.status === "paused"
+        ? "archived"
+        : article.status ?? "draft",
+  };
 
   const { data, error } = await supabase
     .from("articles")
