@@ -109,15 +109,35 @@ export interface Article {
   title: string;
   slug: string;
   status: ArticleStatus;
+
   excerpt?: string;
   content?: string;
+
   metaTitle?: string;
   metaDescription?: string;
+
   keywords?: string[];
   primaryKeyword?: string;
   schema?: string;
+
   wordCount?: number;
   category?: string;
+
+  examplesTitle?: string;
+  examplesList?: unknown[];
+
+  commonMistakesTitle?: string;
+  commonMistakesSubtitle?: string;
+  commonMistakesList?: unknown[];
+
+  legalNotesTitle?: string;
+  legalNotesList?: unknown[];
+
+  faqTitle?: string;
+  faqs?: unknown[];
+
+  relatedServices?: unknown[];
+
   createdAt: string;
   updatedAt: string;
   publishedAt?: string | null;
