@@ -137,7 +137,7 @@ export interface Article {
   faqs?: unknown[];
 
   relatedServices?: unknown[];
-
+  relatedSamples?: unknown[];
   createdAt: string;
   updatedAt: string;
   publishedAt?: string | null;
