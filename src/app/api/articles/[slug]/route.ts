@@ -3,7 +3,6 @@ import { verifyApiToken } from '@/lib/api-auth';
 import {
   getArticleBySlug,
   updateArticle,
-  updateArticleStatus,
   deleteArticle,
 } from '@/lib/stores/articles-store';
 import { ArticleStatus } from '@/lib/stores/types';
@@ -11,10 +10,13 @@ import { ArticleStatus } from '@/lib/stores/types';
 export const dynamic = 'force-dynamic';
 export const revalidate = 0;
 
-// GET /api/articles/[slug]
+type RouteContext = {
+  params: Promise<{ slug: string }>;
+};
+
 export async function GET(
   req: NextRequest,
-  { params }: { params: Promise<{ slug: string }> }
+  { params }: RouteContext
 ) {
   if (!verifyApiToken(req)) {
     return NextResponse.json(
@@ -33,7 +35,7 @@ export async function GET(
       );
     }
 
-    const article = getArticleBySlug(slug);
+    const article = await getArticleBySlug(slug);
 
     if (!article) {
       return NextResponse.json(
@@ -48,17 +50,22 @@ export async function GET(
     });
   } catch (err) {
     console.error('Error GET /api/articles/[slug]:', err);
+
     return NextResponse.json(
-      { ok: false, error: 'Internal server error' },
+      {
+        ok: false,
+        error: err instanceof Error
+          ? err.message
+          : 'Internal server error',
+      },
       { status: 500 }
     );
   }
 }
 
-// PUT /api/articles/[slug]
 export async function PUT(
   req: NextRequest,
-  { params }: { params: Promise<{ slug: string }> }
+  { params }: RouteContext
 ) {
   if (!verifyApiToken(req)) {
     return NextResponse.json(
@@ -77,6 +84,15 @@ export async function PUT(
       );
     }
 
+    const existingArticle = await getArticleBySlug(slug);
+
+    if (!existingArticle) {
+      return NextResponse.json(
+        { ok: false, error: 'مقاله مورد نظر یافت نشد' },
+        { status: 404 }
+      );
+    }
+
     const body = await req.json().catch(() => null);
 
     if (!body || typeof body !== 'object') {
@@ -86,80 +102,210 @@ export async function PUT(
       );
     }
 
-    const {
-      title,
-      slug: newSlug,
-      content,
-      excerpt,
-      metaTitle,
-      metaDescription,
-      keywords,
-      primaryKeyword,
-      schema,
-      status,
-    } = body;
+    const input = body as Record<string, unknown>;
 
-    const allowedStatuses: ArticleStatus[] = ['draft', 'published', 'paused'];
-    if (status !== undefined && !allowedStatuses.includes(status as ArticleStatus)) {
+    const allowedStatuses: ArticleStatus[] = [
+      'draft',
+      'published',
+      'paused',
+    ];
+
+    if (
+      input.status !== undefined &&
+      !allowedStatuses.includes(
+        input.status as ArticleStatus
+      )
+    ) {
       return NextResponse.json(
-        { ok: false, error: 'Status must be one of: draft, published, paused' },
+        {
+          ok: false,
+          error:
+            'Status must be one of: draft, published, paused',
+        },
         { status: 400 }
       );
     }
 
-    if (keywords !== undefined && !Array.isArray(keywords)) {
-      return NextResponse.json(
-        { ok: false, error: 'Keywords must be an array of strings' },
-        { status: 400 }
-      );
-    }
+    const changes = {
+      ...(typeof input.title === 'string'
+        ? { title: input.title }
+        : {}),
 
-    let schemaStr: string | undefined = undefined;
-    if (schema !== undefined) {
-      if (typeof schema === 'object') {
-        schemaStr = JSON.stringify(schema);
-      } else if (typeof schema === 'string') {
-        schemaStr = schema;
-      }
-    }
+      ...(typeof input.slug === 'string'
+        ? { slug: input.slug }
+        : {}),
 
-    const result = updateArticle(slug, {
-      title: typeof title === 'string' ? title : undefined,
-      slug: typeof newSlug === 'string' ? newSlug : undefined,
-      content: typeof content === 'string' ? content : undefined,
-      excerpt: typeof excerpt === 'string' ? excerpt : undefined,
-      metaTitle: typeof metaTitle === 'string' ? metaTitle : undefined,
-      metaDescription: typeof metaDescription === 'string' ? metaDescription : undefined,
-      keywords: Array.isArray(keywords) ? keywords.map(String) : undefined,
-      primaryKeyword: typeof primaryKeyword === 'string' ? primaryKeyword : undefined,
-      schema: schemaStr,
-      status: status as ArticleStatus | undefined,
-    });
+      ...(typeof input.content === 'string'
+        ? { content: input.content }
+        : {}),
 
-    if (!result.success) {
-      return NextResponse.json(
-        { ok: false, error: result.error },
-        { status: result.code || 400 }
-      );
-    }
+      ...(typeof input.excerpt === 'string'
+        ? { excerpt: input.excerpt }
+        : {}),
+
+      ...(typeof input.category === 'string'
+        ? { category: input.category }
+        : {}),
+
+      ...(typeof input.metaTitle === 'string'
+        ? { metaTitle: input.metaTitle }
+        : {}),
+
+      ...(typeof input.metaDescription === 'string'
+        ? { metaDescription: input.metaDescription }
+        : {}),
+
+      ...(typeof input.primaryKeyword === 'string'
+        ? { primaryKeyword: input.primaryKeyword }
+        : {}),
+
+      ...(Array.isArray(input.keywords)
+        ? {
+            keywords: input.keywords.map(String),
+          }
+        : {}),
+
+      ...(typeof input.schema === 'string'
+        ? { schema: input.schema }
+        : {}),
+
+      ...(typeof input.wordCount === 'number'
+        ? { wordCount: input.wordCount }
+        : {}),
+
+      ...(allowedStatuses.includes(
+        input.status as ArticleStatus
+      )
+        ? {
+            status: input.status as ArticleStatus,
+          }
+        : {}),
+
+      ...(typeof input.examplesTitle === 'string'
+        ? { examplesTitle: input.examplesTitle }
+        : {}),
+
+      ...(Array.isArray(input.examplesList)
+        ? { examplesList: input.examplesList }
+        : {}),
+
+      ...(typeof input.commonMistakesTitle === 'string'
+        ? {
+            commonMistakesTitle:
+              input.commonMistakesTitle,
+          }
+        : {}),
+
+      ...(typeof input.commonMistakesSubtitle === 'string'
+        ? {
+            commonMistakesSubtitle:
+              input.commonMistakesSubtitle,
+          }
+        : {}),
+
+      ...(Array.isArray(input.commonMistakesList)
+        ? {
+            commonMistakesList:
+              input.commonMistakesList,
+          }
+        : {}),
+
+      ...(typeof input.legalNotesTitle === 'string'
+        ? {
+            legalNotesTitle:
+              input.legalNotesTitle,
+          }
+        : {}),
+
+      ...(Array.isArray(input.legalNotesList)
+        ? {
+            legalNotesList:
+              input.legalNotesList,
+          }
+        : {}),
+
+      ...(typeof input.faqTitle === 'string'
+        ? { faqTitle: input.faqTitle }
+        : {}),
+
+      ...(Array.isArray(input.faqs)
+        ? { faqs: input.faqs }
+        : {}),
+
+      ...(Array.isArray(input.relatedServices)
+        ? {
+            relatedServices:
+              input.relatedServices,
+          }
+        : {}),
+
+      ...(Array.isArray(input.relatedSamples)
+        ? {
+            relatedSamples:
+              input.relatedSamples,
+          }
+        : {}),
+
+      ...(Array.isArray(input.relatedArticles)
+        ? {
+            relatedArticles:
+              input.relatedArticles,
+          }
+        : {}),
+
+      ...(typeof input.ctaTitle === 'string'
+        ? { ctaTitle: input.ctaTitle }
+        : {}),
+
+      ...(typeof input.ctaDescription === 'string'
+        ? {
+            ctaDescription:
+              input.ctaDescription,
+          }
+        : {}),
+
+      ...(typeof input.ctaPrimaryBtnText === 'string'
+        ? {
+            ctaPrimaryBtnText:
+              input.ctaPrimaryBtnText,
+          }
+        : {}),
+
+      ...(typeof input.ctaPrimaryHref === 'string'
+        ? {
+            ctaPrimaryHref:
+              input.ctaPrimaryHref,
+          }
+        : {}),
+    };
+
+    const updatedArticle = await updateArticle(
+      existingArticle.id,
+      changes
+    );
 
     return NextResponse.json({
       ok: true,
-      article: result.article,
+      article: updatedArticle,
     });
   } catch (err) {
     console.error('Error PUT /api/articles/[slug]:', err);
+
     return NextResponse.json(
-      { ok: false, error: 'Internal server error' },
+      {
+        ok: false,
+        error: err instanceof Error
+          ? err.message
+          : 'Internal server error',
+      },
       { status: 500 }
     );
   }
 }
 
-// PATCH /api/articles/[slug]
 export async function PATCH(
   req: NextRequest,
-  { params }: { params: Promise<{ slug: string }> }
+  { params }: RouteContext
 ) {
   if (!verifyApiToken(req)) {
     return NextResponse.json(
@@ -171,58 +317,63 @@ export async function PATCH(
   try {
     const { slug } = await params;
 
-    if (!slug) {
+    const existingArticle = await getArticleBySlug(slug);
+
+    if (!existingArticle) {
       return NextResponse.json(
-        { ok: false, error: 'Article slug is required' },
-        { status: 400 }
+        { ok: false, error: 'مقاله مورد نظر یافت نشد' },
+        { status: 404 }
       );
     }
 
     const body = await req.json().catch(() => null);
 
-    if (!body || typeof body !== 'object') {
+    const status = body?.status;
+
+    const allowedStatuses: ArticleStatus[] = [
+      'draft',
+      'published',
+      'paused',
+    ];
+
+    if (!allowedStatuses.includes(status)) {
       return NextResponse.json(
-        { ok: false, error: 'Invalid JSON request body' },
+        {
+          ok: false,
+          error:
+            'Status must be one of: draft, published, paused',
+        },
         { status: 400 }
       );
     }
 
-    const { status } = body;
-
-    const allowedStatuses: ArticleStatus[] = ['draft', 'published', 'paused'];
-    if (!status || !allowedStatuses.includes(status as ArticleStatus)) {
-      return NextResponse.json(
-        { ok: false, error: 'Status must be one of: draft, published, paused' },
-        { status: 400 }
-      );
-    }
-
-    const result = updateArticleStatus(slug, status as ArticleStatus);
-
-    if (!result.success) {
-      return NextResponse.json(
-        { ok: false, error: result.error },
-        { status: result.code || 400 }
-      );
-    }
+    const article = await updateArticle(
+      existingArticle.id,
+      { status }
+    );
 
     return NextResponse.json({
       ok: true,
-      article: result.article,
+      article,
     });
   } catch (err) {
     console.error('Error PATCH /api/articles/[slug]:', err);
+
     return NextResponse.json(
-      { ok: false, error: 'Internal server error' },
+      {
+        ok: false,
+        error: err instanceof Error
+          ? err.message
+          : 'Internal server error',
+      },
       { status: 500 }
     );
   }
 }
 
-// DELETE /api/articles/[slug]
 export async function DELETE(
   req: NextRequest,
-  { params }: { params: Promise<{ slug: string }> }
+  { params }: RouteContext
 ) {
   if (!verifyApiToken(req)) {
     return NextResponse.json(
@@ -234,29 +385,30 @@ export async function DELETE(
   try {
     const { slug } = await params;
 
-    if (!slug) {
+    const existingArticle = await getArticleBySlug(slug);
+
+    if (!existingArticle) {
       return NextResponse.json(
-        { ok: false, error: 'Article slug is required' },
-        { status: 400 }
+        { ok: false, error: 'مقاله مورد نظر یافت نشد' },
+        { status: 404 }
       );
     }
 
-    const result = deleteArticle(slug);
-
-    if (!result.success) {
-      return NextResponse.json(
-        { ok: false, error: result.error },
-        { status: result.code || 404 }
-      );
-    }
+    await deleteArticle(existingArticle.id);
 
     return NextResponse.json({
       ok: true,
     });
   } catch (err) {
     console.error('Error DELETE /api/articles/[slug]:', err);
+
     return NextResponse.json(
-      { ok: false, error: 'Internal server error' },
+      {
+        ok: false,
+        error: err instanceof Error
+          ? err.message
+          : 'Internal server error',
+      },
       { status: 500 }
     );
   }
