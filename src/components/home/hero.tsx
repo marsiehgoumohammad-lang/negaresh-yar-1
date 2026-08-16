@@ -31,9 +31,12 @@ export function Hero() {
           </h1>
 
           {/* Subtitle */}
-          <h2 className="text-base sm:text-lg md:text-xl font-bold text-[#E5C158] tracking-wide mb-6">
+          <h2 className="text-base sm:text-lg md:text-xl font-bold text-[#E5C158] tracking-wide mb-2">
             نگارش نامه اداری - عریضه نویسی - کافی نت آنلاین
           </h2>
+          <h3 className="text-sm sm:text-base md:text-lg font-medium text-slate-300 mb-6">
+            کلیه خدمات ما غیر حضوری و قابل استفاده در سراسر ایران است
+          </h3>
 
           {/* Central 3D Podium & Laptop Hero Image Asset */}
           <div className="relative w-full max-w-lg mx-auto my-3 sm:my-6 flex justify-center items-center">

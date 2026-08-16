@@ -9,7 +9,7 @@ export async function GET(req: NextRequest) {
     const { searchParams } = new URL(req.url);
     const query = searchParams.get('q') || '';
 
-    let customers = getCustomers();
+    let customers = await getCustomers();
 
     if (query.trim()) {
       const q = query.trim().toLowerCase();

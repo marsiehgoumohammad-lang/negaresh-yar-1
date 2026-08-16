@@ -6,8 +6,8 @@ import { adaptArticleToKnowledgeData } from '@/lib/knowledge-adapter';
 
 export const metadata = whatIsInsolvencyMetadata;
 
-export default function Page() {
-  const article = getArticleBySlug('what-is-insolvency');
+export default async function Page() {
+  const article = await getArticleBySlug('what-is-insolvency');
   if (!article || article.status !== 'published') {
     notFound();
   }

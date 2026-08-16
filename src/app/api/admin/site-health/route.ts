@@ -1,6 +1,5 @@
 import { NextResponse } from 'next/server';
-import fs from 'fs';
-import path from 'path';
+import { getSupabaseAdmin } from '@/lib/supabase';
 
 export interface HealthCheckResult {
   id: string;
@@ -15,33 +14,39 @@ export async function GET() {
   try {
     const results: HealthCheckResult[] = [];
 
-    // 1. Storage & Persistence Health
+    // 1. Storage & Persistence Health (Supabase Database)
     try {
-      const dataDir = path.join(process.cwd(), 'data');
-      if (!fs.existsSync(dataDir)) {
-        fs.mkdirSync(dataDir, { recursive: true });
-      }
-      const testFile = path.join(dataDir, '.health_check.tmp');
-      fs.writeFileSync(testFile, 'ok', 'utf-8');
-      fs.unlinkSync(testFile);
+      const supabase = getSupabaseAdmin();
+      const { error } = await supabase.from('site_settings').select('key').limit(1);
 
-      results.push({
-        id: 'storage-access',
-        name: 'دسترسی خواندن و نوشتن پایگاه داده محلی',
-        category: 'ذخیره‌سازی و دیتابیس',
-        status: 'healthy',
-        statusLabel: 'سالم',
-        detail: 'مسیر ذخیره‌سازی داده‌های فاکتورها، مشتریان و تنظیمات کاملاً دسترس‌پذیر و فعال است.',
-      });
+      if (error) {
+        results.push({
+          id: 'storage-access',
+          name: 'اتصال به پایگاه داده ابری (Supabase)',
+          category: 'ذخیره‌سازی و دیتابیس',
+          status: 'error',
+          statusLabel: 'خطا',
+          detail: `خطا در اتصال به پایگاه داده: ${error.message}`,
+        });
+      } else {
+        results.push({
+          id: 'storage-access',
+          name: 'اتصال به پایگاه داده ابری (Supabase)',
+          category: 'ذخیره‌سازی و دیتابیس',
+          status: 'healthy',
+          statusLabel: 'سالم',
+          detail: 'اتصال پایگاه داده پایدار است و تمام عملیات خواندن و نوشتن مقالات، فاکتورها و تنظیمات در فضای ابری انجام می‌شود.',
+        });
+      }
     } catch (err: unknown) {
-      const msg = err instanceof Error ? err.message : 'خطای ناشناخته در دسترسی به فایل‌ها';
+      const msg = err instanceof Error ? err.message : 'خطای ناشناخته در دسترسی به پایگاه داده';
       results.push({
         id: 'storage-access',
-        name: 'دسترسی خواندن و نوشتن پایگاه داده محلی',
+        name: 'اتصال به پایگاه داده ابری (Supabase)',
         category: 'ذخیره‌سازی و دیتابیس',
         status: 'error',
         statusLabel: 'خطا',
-        detail: `خطا در دسترسی به پوشه data: ${msg}`,
+        detail: `خطا در برقراری ارتباط با دیتابیس: ${msg}`,
       });
     }
 
@@ -98,18 +103,30 @@ export async function GET() {
       detail: 'مسیرهای /sitemap.xml و /robots.txt توسط Next.js به‌صورت پویا تولید و ارائه می‌شوند.',
     });
 
-    const hasError = results.some((r) => r.status === 'error');
-    const hasWarning = results.some((r) => r.status === 'warning');
-
-    const overallStatus = hasError ? 'error' : hasWarning ? 'warning' : 'healthy';
+    // 6. Security & Token Verification
+    const hasArticleToken = Boolean(process.env.ARTICLE_API_TOKEN || process.env.API_TOKEN);
+    results.push({
+      id: 'article-api-token',
+      name: 'توکن امنیتی API مقالات (ARTICLE_API_TOKEN)',
+      category: 'امنیت و وب‌سرویس',
+      status: hasArticleToken ? 'healthy' : 'warning',
+      statusLabel: hasArticleToken ? 'سالم' : 'پیش‌فرض',
+      detail: hasArticleToken
+        ? 'کلید اختصاصی احراز هویت برای تبادل داده با نرم‌افزار ویندوز فعال است.'
+        : 'توکن امنیتی پیش‌فرض در دسترس است. جهت امنیت بیشتر متغیر ARTICLE_API_TOKEN را تنظیم کنید.',
+    });
 
     return NextResponse.json({
-      overallStatus,
-      lastCheckedAt: new Date().toISOString(),
+      timestamp: new Date().toISOString(),
+      overallStatus: results.some((r) => r.status === 'error')
+        ? 'error'
+        : results.some((r) => r.status === 'warning')
+        ? 'warning'
+        : 'healthy',
       results,
     });
   } catch (err) {
-    console.error('Error GET /api/admin/site-health:', err);
-    return NextResponse.json({ error: 'خطا در اجرای بررسی سلامت سایت' }, { status: 500 });
+    console.error('Error generating health report:', err);
+    return NextResponse.json({ error: 'خطا در بررسی سلامت سامانه' }, { status: 500 });
   }
 }

@@ -64,6 +64,17 @@ const menuLinks = [
   },
   {
     number: '۰۶',
+    title: 'تماس با ما',
+    href: '/contact',
+    icon: (
+      <svg className="w-5 h-5 text-[#E5C158]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.8} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+      </svg>
+    ),
+    badge: null,
+  },
+  {
+    number: '۰۷',
     title: 'ثبت درخواست خدمات',
     href: '/request',
     icon: (
@@ -163,6 +174,9 @@ export function Header() {
             </Link>
             <Link href="/knowledge" className="text-sm font-bold text-slate-300 hover:text-[#E5C158] transition-colors">
               پایگاه دانش
+            </Link>
+            <Link href="/contact" className="text-sm font-bold text-slate-300 hover:text-[#E5C158] transition-colors">
+              تماس با ما
             </Link>
             <Link href="/ai-interpreter" className="text-sm font-bold text-slate-300 hover:text-[#E5C158] transition-colors flex items-center gap-1.5">
               <span className="w-2 h-2 rounded-full bg-[#E5C158] animate-pulse" />

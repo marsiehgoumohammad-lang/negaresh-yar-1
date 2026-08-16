@@ -9,7 +9,7 @@ export async function PUT(req: NextRequest, { params }: { params: Promise<{ id: 
     const { id } = await params;
     const body = await req.json();
 
-    const updated = updateService(id, body);
+    const updated = await updateService(id, body);
     if (!updated) {
       return NextResponse.json({ error: 'خدمت مورد نظر یافت نشد' }, { status: 404 });
     }
@@ -24,7 +24,7 @@ export async function PUT(req: NextRequest, { params }: { params: Promise<{ id: 
 export async function DELETE(req: NextRequest, { params }: { params: Promise<{ id: string }> }) {
   try {
     const { id } = await params;
-    const success = deleteService(id);
+    const success = await deleteService(id);
     if (!success) {
       return NextResponse.json({ error: 'خدمت مورد نظر یافت نشد' }, { status: 404 });
     }

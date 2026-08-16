@@ -6,8 +6,8 @@ import { adaptArticleToKnowledgeData } from '@/lib/knowledge-adapter';
 
 export const metadata = whatIsBailMetadata;
 
-export default function Page() {
-  const article = getArticleBySlug('what-is-bail');
+export default async function Page() {
+  const article = await getArticleBySlug('what-is-bail');
   if (!article || article.status !== 'published') {
     notFound();
   }

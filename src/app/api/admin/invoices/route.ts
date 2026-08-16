@@ -10,7 +10,7 @@ export async function GET(req: NextRequest) {
     const status = searchParams.get('status');
     const query = searchParams.get('q');
 
-    let invoices = getInvoices();
+    let invoices = await getInvoices();
 
     if (status && status !== 'all') {
       invoices = invoices.filter((inv) => inv.status === status);
@@ -44,7 +44,7 @@ export async function POST(req: NextRequest) {
       );
     }
 
-    const created = createInvoice({
+    const created = await createInvoice({
       customerName: body.customerName,
       customerPhone: body.customerPhone,
       issueDate: body.issueDate || new Date().toLocaleDateString('fa-IR'),

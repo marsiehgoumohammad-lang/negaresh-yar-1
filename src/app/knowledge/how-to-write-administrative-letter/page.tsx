@@ -6,8 +6,8 @@ import { adaptArticleToKnowledgeData } from '@/lib/knowledge-adapter';
 
 export const metadata = howToWriteAdministrativeLetterMetadata;
 
-export default function Page() {
-  const article = getArticleBySlug('how-to-write-administrative-letter');
+export default async function Page() {
+  const article = await getArticleBySlug('how-to-write-administrative-letter');
   if (!article || article.status !== 'published') {
     notFound();
   }

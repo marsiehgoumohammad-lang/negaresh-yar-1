@@ -6,8 +6,8 @@ import { adaptArticleToKnowledgeData } from '@/lib/knowledge-adapter';
 
 export const metadata = petitionVsComplaintMetadata;
 
-export default function Page() {
-  const article = getArticleBySlug('petition-vs-complaint');
+export default async function Page() {
+  const article = await getArticleBySlug('petition-vs-complaint');
   if (!article || article.status !== 'published') {
     notFound();
   }

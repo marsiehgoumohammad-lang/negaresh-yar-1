@@ -6,8 +6,8 @@ import { adaptArticleToKnowledgeData } from '@/lib/knowledge-adapter';
 
 export const metadata = whatIsLegalBriefMetadata;
 
-export default function Page() {
-  const article = getArticleBySlug('what-is-legal-brief');
+export default async function Page() {
+  const article = await getArticleBySlug('what-is-legal-brief');
   if (!article || article.status !== 'published') {
     notFound();
   }

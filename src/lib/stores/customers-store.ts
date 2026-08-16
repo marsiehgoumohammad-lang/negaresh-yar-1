@@ -1,24 +1,17 @@
-import fs from 'fs';
-import path from 'path';
 import { Customer, Invoice } from './types';
 import { normalizePhoneNumber } from '../utils/phone';
+import { getInvoices } from './invoices-store';
 
-const DATA_DIR = path.join(process.cwd(), 'data');
-const FILE_PATH = path.join(DATA_DIR, 'customers.json');
+let inMemoryCustomers: Customer[] = [];
 
-export function getCustomers(): Customer[] {
+export async function getCustomers(): Promise<Customer[]> {
   try {
-    if (fs.existsSync(FILE_PATH)) {
-      const data = fs.readFileSync(FILE_PATH, 'utf-8');
-      const parsed = JSON.parse(data) as Customer[];
-      if (Array.isArray(parsed)) {
-        return parsed;
-      }
-    }
+    const invoices = await getInvoices();
+    return syncCustomersFromInvoices(invoices);
   } catch (err) {
-    console.error('Error reading customers file:', err);
+    console.error('Error in getCustomers():', err);
+    return inMemoryCustomers;
   }
-  return [];
 }
 
 export function syncCustomersFromInvoices(invoices: Invoice[]): Customer[] {
@@ -31,7 +24,7 @@ export function syncCustomersFromInvoices(invoices: Invoice[]): Customer[] {
     const normPhone = normalizePhoneNumber(inv.customerPhone) || inv.customerPhone.trim();
     if (!normPhone) continue;
 
-    const existing = customerMap.get(normPhone) || {
+    const existing: Customer = customerMap.get(normPhone) || {
       id: `cust-${normPhone}`,
       name: inv.customerName || 'مشتری بدون نام',
       phone: normPhone,
@@ -73,14 +66,6 @@ export function syncCustomersFromInvoices(invoices: Invoice[]): Customer[] {
     (a, b) => new Date(b.updatedAt).getTime() - new Date(a.updatedAt).getTime()
   );
 
-  try {
-    if (!fs.existsSync(DATA_DIR)) {
-      fs.mkdirSync(DATA_DIR, { recursive: true });
-    }
-    fs.writeFileSync(FILE_PATH, JSON.stringify(result, null, 2), 'utf-8');
-  } catch (err) {
-    console.error('Error saving customers file:', err);
-  }
-
+  inMemoryCustomers = result;
   return result;
 }

@@ -6,8 +6,8 @@ import { adaptArticleToKnowledgeData } from '@/lib/knowledge-adapter';
 
 export const metadata = whatIsENotificationMetadata;
 
-export default function Page() {
-  const article = getArticleBySlug('what-is-e-notification');
+export default async function Page() {
+  const article = await getArticleBySlug('what-is-e-notification');
   if (!article || article.status !== 'published') {
     notFound();
   }

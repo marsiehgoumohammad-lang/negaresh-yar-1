@@ -12,7 +12,7 @@ export async function GET(req: NextRequest) {
     const { searchParams } = new URL(req.url);
     const reportId = searchParams.get('id');
 
-    const reports = getSearchConsoleReports();
+    const reports = await getSearchConsoleReports();
 
     if (reports.length === 0) {
       return NextResponse.json({ reports: [], latestReport: null, analysis: null });
@@ -44,7 +44,7 @@ export async function POST(req: NextRequest) {
     }
 
     const parsed = parseSearchConsoleCsv(body.content, body.filename);
-    const saved = addSearchConsoleReport(parsed);
+    const saved = await addSearchConsoleReport(parsed);
 
     return NextResponse.json({
       message: 'گزارش Search Console با موفقیت پردازش و ذخیره گردید.',
@@ -65,7 +65,7 @@ export async function DELETE(req: NextRequest) {
       return NextResponse.json({ error: 'شناسه گزارش الزامی است' }, { status: 400 });
     }
 
-    const success = deleteSearchConsoleReport(id);
+    const success = await deleteSearchConsoleReport(id);
     if (!success) {
       return NextResponse.json({ error: 'گزارش یافت نشد' }, { status: 404 });
     }

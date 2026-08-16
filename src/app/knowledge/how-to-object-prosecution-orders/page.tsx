@@ -6,8 +6,8 @@ import { adaptArticleToKnowledgeData } from '@/lib/knowledge-adapter';
 
 export const metadata = howToObjectProsecutionOrdersMetadata;
 
-export default function Page() {
-  const article = getArticleBySlug('how-to-object-prosecution-orders');
+export default async function Page() {
+  const article = await getArticleBySlug('how-to-object-prosecution-orders');
   if (!article || article.status !== 'published') {
     notFound();
   }

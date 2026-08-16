@@ -104,43 +104,34 @@ export interface BusinessSettings {
 
 export type ArticleStatus = 'draft' | 'published' | 'paused';
 
+export interface CreateArticleData {
+  title: string;
+  slug: string;
+  content: string;
+  excerpt?: string;
+  metaTitle?: string;
+  metaDescription?: string;
+  keywords?: string[];
+  primaryKeyword?: string;
+  schema?: string;
+  category?: string;
+  status: ArticleStatus;
+}
+
 export interface Article {
   id: string;
   title: string;
   slug: string;
   status: ArticleStatus;
-
   excerpt?: string;
   content?: string;
-
   metaTitle?: string;
   metaDescription?: string;
-
   keywords?: string[];
   primaryKeyword?: string;
   schema?: string;
-
   wordCount?: number;
   category?: string;
-
-  examplesTitle?: string;
-  examplesList?: unknown[];
-
-  commonMistakesTitle?: string;
-  commonMistakesSubtitle?: string;
-  commonMistakesList?: unknown[];
-
-  legalNotesTitle?: string;
-  legalNotesList?: unknown[];
-
-  faqTitle?: string;
-  faqs?: unknown[];
-
-  relatedServices?: unknown[];
-  relatedSamples?: unknown[];
-  relatedArticles?: unknown[];
-         ctaTitle?: string;
-   ctaDescription?: string;
   createdAt: string;
   updatedAt: string;
   publishedAt?: string | null;

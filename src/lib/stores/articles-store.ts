@@ -1,671 +1,451 @@
-import { createClient } from "@/lib/supabase/server";
+import { Article, ArticleStatus, CreateArticleData } from './types';
+import { ALL_KNOWLEDGE_ARTICLES, KNOWLEDGE_METADATA_MAP } from '@/data/knowledge';
+import { getSupabaseAdmin } from '@/lib/supabase';
+import { SupabaseClient } from '@supabase/supabase-js';
 
-export interface KnowledgeSection {
-  id: string;
-  title: string;
-  paragraphs: string[];
-  bulletPoints?: string[];
-  calloutBox?: {
-    type: "info" | "warning" | "tip" | "law";
-    title: string;
-    text: string;
-  };
+export type { Article, ArticleStatus, CreateArticleData };
+
+export function getInitialArticles(): Article[] {
+  const now = new Date().toISOString();
+
+  return ALL_KNOWLEDGE_ARTICLES.map((art) => {
+    const meta = KNOWLEDGE_METADATA_MAP[art.slug as keyof typeof KNOWLEDGE_METADATA_MAP];
+    const contentText = art.sections
+      ? art.sections.map((s) => `${s.title}\n${s.paragraphs.join('\n')}`).join('\n\n')
+      : art.quickAnswerParagraph || '';
+
+    const wordCount = contentText
+      ? contentText.trim().split(/\s+/).filter(Boolean).length
+      : 250;
+
+    return {
+      id: art.slug,
+      title: art.h1Title || art.slug,
+      slug: art.slug,
+      status: 'published' as ArticleStatus,
+      excerpt: art.heroSubtitle || art.quickAnswerParagraph || '',
+      content: contentText,
+      metaTitle: (meta?.title as string) || art.h1Title || '',
+      metaDescription: (meta?.description as string) || art.heroSubtitle || '',
+      keywords: [art.category, 'نگارش یار', 'پایگاه دانش'],
+      primaryKeyword: art.category || 'حقوقی',
+      wordCount,
+      category: art.category,
+      createdAt: now,
+      updatedAt: now,
+      publishedAt: now,
+    };
+  });
 }
 
-export interface KnowledgeExample {
-  scenarioTitle: string;
-  description: string;
-  legalOutcome: string;
-}
+function mapRowToArticle(row: Record<string, unknown>): Article {
+  const meta = (typeof row.metadata === 'object' && row.metadata !== null) ? (row.metadata as Record<string, unknown>) : {};
+  const contentText = (row.content as string) || '';
+  const wordCount = contentText ? contentText.trim().split(/\s+/).filter(Boolean).length : (Number(meta.wordCount) || 0);
 
-export interface KnowledgeMistake {
-  mistake: string;
-  risk: string;
-  correctAction: string;
-}
-
-export interface KnowledgeRelatedService {
-  title: string;
-  href: string;
-  desc: string;
-  badge: string;
-}
-
-export interface KnowledgeRelatedSample {
-  title: string;
-  href: string;
-  desc: string;
-  badge: string;
-}
-
-export interface KnowledgeRelatedArticle {
-  title: string;
-  href: string;
-  desc: string;
-  category: string;
-}
-
-export interface KnowledgeFaq {
-  q: string;
-  a: string;
-}
-
-export interface KnowledgeTableOfContentsItem {
-  id: string;
-  title: string;
-}
-
-export type ArticleStatus = "draft" | "published" | "paused";
-
-export interface Article {
-  id: string;
-  title: string;
-  slug: string;
-  status: ArticleStatus;
-
-  excerpt?: string;
-  content?: string;
-
-  metaTitle?: string;
-  metaDescription?: string;
-  keywords?: string[];
-  primaryKeyword?: string;
-  schema?: string;
-  wordCount?: number;
-
-  category?: string;
-
-  badge?: string;
-  h1Title?: string;
-  heroSubtitle?: string;
-  readTime?: string;
-  lastUpdated?: string;
-  heroTrustChips?: string[];
-
-  quickAnswerTitle?: string;
-  quickAnswerParagraph?: string;
-  quickAnswerHighlights?: string[];
-
-  tableOfContents?: KnowledgeTableOfContentsItem[];
-  sections?: KnowledgeSection[];
-
-  examplesTitle?: string;
-  examplesList?: KnowledgeExample[];
-
-  commonMistakesTitle?: string;
-  commonMistakesSubtitle?: string;
-  commonMistakesList?: KnowledgeMistake[];
-
-  legalNotesTitle?: string;
-  legalNotesList?: string[];
-
-  faqTitle?: string;
-  faqs?: KnowledgeFaq[];
-
-  relatedServices?: KnowledgeRelatedService[];
-  relatedSamples?: KnowledgeRelatedSample[];
-  relatedArticles?: KnowledgeRelatedArticle[];
-
-  ctaTitle?: string;
-  ctaDescription?: string;
-  ctaPrimaryBtnText?: string;
-  ctaPrimaryHref?: string;
-
-  version?: number;
-  isFeatured?: boolean;
-  readingTimeMinutes?: number;
-  seoKeywords?: string[];
-
-  createdAt: string;
-  updatedAt: string;
-  publishedAt?: string | null;
-}
-
-type DbArticle = {
-  id: string;
-  title: string;
-  slug: string;
-  summary: string | null;
-  content: string;
-meta_title: string | null;
-meta_description: string | null;
-  keywords: string[] | null;
-  schema: string | null;
-
-  status: "draft" | "published" | "archived";
-
-  published_at: string | null;
-  created_at: string;
-  updated_at: string;
-
-  category: string | null;
-  badge: string | null;
-  h1_title: string | null;
-  hero_subtitle: string | null;
-  read_time: string | null;
-  last_updated: string | null;
-
-  hero_trust_chips: unknown;
-  quick_answer_title: string | null;
-  quick_answer_paragraph: string | null;
-  quick_answer_highlights: unknown;
-
-  table_of_contents: unknown;
-  sections: unknown;
-
-  examples_title: string | null;
-  examples_list: unknown;
-
-  common_mistakes_title: string | null;
-  common_mistakes_subtitle: string | null;
-  common_mistakes_list: unknown;
-
-  legal_notes_title: string | null;
-  legal_notes_list: unknown;
-
-  faq_title: string | null;
-  faqs: unknown;
-
-  related_services: unknown;
-  related_samples: unknown;
-  related_articles: unknown;
-
-  cta_title: string | null;
-  cta_description: string | null;
-  cta_primary_btn_text: string | null;
-  cta_primary_href: string | null;
-
-  version: number | null;
-  is_featured: boolean | null;
-  reading_time_minutes: number | null;
-  seo_keywords: string[] | null;
-};
-
-function stringValue(value: unknown): string | undefined {
-  return typeof value === "string" ? value : undefined;
-}
-
-function numberValue(value: unknown): number | undefined {
-  return typeof value === "number" ? value : undefined;
-}
-
-function stringArrayValue(value: unknown): string[] | undefined {
-  if (!Array.isArray(value)) return undefined;
-
-  return value.filter(
-    (item): item is string => typeof item === "string"
-  );
-}
-
-function arrayValue<T>(value: unknown): T[] | undefined {
-  return Array.isArray(value) ? (value as T[]) : undefined;
-}
-
-function fromDb(row: DbArticle): Article {
   return {
-    id: row.id,
-    title: row.title,
-    slug: row.slug,
-
-    status: row.status === "archived" ? "paused" : row.status,
-
-    excerpt: row.summary ?? undefined,
-    content: row.content ?? undefined,
-
-    metaTitle: row.meta_title ?? undefined,
-metaDescription: row.meta_description ?? undefined,
-
-    keywords: row.keywords ?? [],
-
-    primaryKeyword:
-      row.keywords && row.keywords.length > 0
-        ? row.keywords[0]
-        : undefined,
-
-    schema: row.schema ?? undefined,
-
-    wordCount: row.content
-      ? row.content.trim().split(/\s+/).filter(Boolean).length
-      : undefined,
-
-    category: row.category ?? undefined,
-
-    badge: row.badge ?? undefined,
-    h1Title: row.h1_title ?? undefined,
-    heroSubtitle: row.hero_subtitle ?? undefined,
-    readTime: row.read_time ?? undefined,
-    lastUpdated: row.last_updated ?? undefined,
-
-    heroTrustChips:
-      stringArrayValue(row.hero_trust_chips),
-
-    quickAnswerTitle:
-      row.quick_answer_title ?? undefined,
-
-    quickAnswerParagraph:
-      row.quick_answer_paragraph ?? undefined,
-
-    quickAnswerHighlights:
-      stringArrayValue(row.quick_answer_highlights),
-
-    tableOfContents:
-      arrayValue<KnowledgeTableOfContentsItem>(
-        row.table_of_contents
-      ),
-
-    sections:
-      arrayValue<KnowledgeSection>(row.sections),
-
-    examplesTitle:
-      row.examples_title ?? undefined,
-
-    examplesList:
-      arrayValue<KnowledgeExample>(row.examples_list),
-
-    commonMistakesTitle:
-      row.common_mistakes_title ?? undefined,
-
-    commonMistakesSubtitle:
-      row.common_mistakes_subtitle ?? undefined,
-
-    commonMistakesList:
-      arrayValue<KnowledgeMistake>(
-        row.common_mistakes_list
-      ),
-
-    legalNotesTitle:
-      row.legal_notes_title ?? undefined,
-
-    legalNotesList:
-      stringArrayValue(row.legal_notes_list),
-
-    faqTitle:
-      row.faq_title ?? undefined,
-
-    faqs:
-      arrayValue<KnowledgeFaq>(row.faqs),
-
-    relatedServices:
-      arrayValue<KnowledgeRelatedService>(
-        row.related_services
-      ),
-
-    relatedSamples:
-      arrayValue<KnowledgeRelatedSample>(
-        row.related_samples
-      ),
-
-    relatedArticles:
-      arrayValue<KnowledgeRelatedArticle>(
-        row.related_articles
-      ),
-
-    ctaTitle:
-      row.cta_title ?? undefined,
-
-    ctaDescription:
-      row.cta_description ?? undefined,
-
-    ctaPrimaryBtnText:
-      row.cta_primary_btn_text ?? undefined,
-
-    ctaPrimaryHref:
-      row.cta_primary_href ?? undefined,
-
-    version: row.version ?? 1,
-
-    isFeatured:
-      row.is_featured ?? false,
-
-    readingTimeMinutes:
-      row.reading_time_minutes ??
-      (row.content
-        ? Math.max(
-            1,
-            Math.ceil(
-              row.content.trim().split(/\s+/).filter(Boolean).length /
-                200
-            )
-          )
-        : undefined),
-
-    seoKeywords:
-      row.seo_keywords ?? [],
-
-    createdAt: row.created_at,
-    updatedAt: row.updated_at,
-    publishedAt: row.published_at,
+    id: (row.id as string) || (meta.customId as string) || (row.slug as string),
+    title: (row.title as string) || '',
+    slug: (row.slug as string) || '',
+    status: (row.status as ArticleStatus) || 'draft',
+    excerpt: (row.excerpt as string) || (row.seo_description as string) || '',
+    content: contentText,
+    metaTitle: (row.seo_title as string) || (row.title as string) || '',
+    metaDescription: (row.seo_description as string) || (row.excerpt as string) || '',
+    keywords: Array.isArray(row.keywords) ? (row.keywords as string[]) : [],
+    primaryKeyword: (meta.primaryKeyword as string) || (Array.isArray(row.keywords) && (row.keywords[0] as string)) || '',
+    schema: typeof meta.schema === 'string' ? meta.schema : (meta.schema ? JSON.stringify(meta.schema) : ''),
+    wordCount,
+    category: (meta.category as string) || 'حقوقی',
+    createdAt: (row.created_at as string) || new Date().toISOString(),
+    updatedAt: (row.updated_at as string) || new Date().toISOString(),
+    publishedAt: (row.published_at as string) || null,
   };
 }
 
-function toDb(article: Partial<Article>) {
-  const payload: Record<string, unknown> = {};
-
-  if (article.title !== undefined) {
-    payload.title = article.title;
-  }
-   if (article.metaTitle !== undefined) {
-  payload.meta_title = article.metaTitle ?? null;
+function mapArticleToRow(article: Article) {
+  return {
+    title: article.title,
+    slug: article.slug,
+    excerpt: article.excerpt || null,
+    content: article.content || '',
+    status: article.status || 'draft',
+    seo_title: article.metaTitle || article.title,
+    seo_description: article.metaDescription || article.excerpt || null,
+    keywords: Array.isArray(article.keywords) ? article.keywords : [],
+    published_at: article.publishedAt ? new Date(article.publishedAt).toISOString() : null,
+    metadata: {
+      primaryKeyword: article.primaryKeyword || '',
+      schema: article.schema || '',
+      wordCount: article.wordCount || 0,
+      category: article.category || '',
+      customId: article.id,
+    },
+    updated_at: new Date().toISOString(),
+  };
 }
 
-if (article.metaDescription !== undefined) {
-  payload.meta_description = article.metaDescription ?? null;
+let isSeeding = false;
+async function seedInitialArticlesIfEmpty(supabase: SupabaseClient) {
+  if (isSeeding) return;
+  isSeeding = true;
+  try {
+    const { count, error } = await supabase.from('articles').select('*', { count: 'exact', head: true });
+    if (!error && (count === 0 || count === null)) {
+      const initial = getInitialArticles();
+      const rows = initial.map((art) => mapArticleToRow(art));
+      await supabase.from('articles').upsert(rows, { onConflict: 'slug' });
+    }
+  } catch (err) {
+    console.error('Error seeding initial articles to Supabase:', err);
+  } finally {
+    isSeeding = false;
+  }
 }
-  if (article.slug !== undefined) {
-    payload.slug = article.slug;
-  }
 
-  if (article.status !== undefined) {
-    payload.status =
-      article.status === "paused"
-        ? "archived"
-        : article.status;
-  }
-
-  if (article.excerpt !== undefined) {
-    payload.summary = article.excerpt ?? null;
-  }
-
-  if (article.content !== undefined) {
-    payload.content = article.content ?? "";
-  }
-
-  if (article.keywords !== undefined) {
-    payload.keywords = article.keywords ?? [];
-  }
-
-  if (article.schema !== undefined) {
-    payload.schema = article.schema ?? null;
-  }
-
-  if (article.publishedAt !== undefined) {
-    payload.published_at = article.publishedAt ?? null;
-  }
-
-  if (article.category !== undefined) {
-    payload.category = article.category ?? null;
-  }
-
-  if (article.badge !== undefined) {
-    payload.badge = article.badge ?? null;
-  }
-
-  if (article.h1Title !== undefined) {
-    payload.h1_title = article.h1Title ?? null;
-  }
-
-  if (article.heroSubtitle !== undefined) {
-    payload.hero_subtitle = article.heroSubtitle ?? null;
-  }
-
-  if (article.readTime !== undefined) {
-    payload.read_time = article.readTime ?? null;
-  }
-
-  if (article.lastUpdated !== undefined) {
-    payload.last_updated = article.lastUpdated ?? null;
-  }
-
-  if (article.heroTrustChips !== undefined) {
-    payload.hero_trust_chips = article.heroTrustChips ?? [];
-  }
-
-  if (article.quickAnswerTitle !== undefined) {
-    payload.quick_answer_title =
-      article.quickAnswerTitle ?? null;
-  }
-
-  if (article.quickAnswerParagraph !== undefined) {
-    payload.quick_answer_paragraph =
-      article.quickAnswerParagraph ?? null;
-  }
-
-  if (article.quickAnswerHighlights !== undefined) {
-    payload.quick_answer_highlights =
-      article.quickAnswerHighlights ?? [];
-  }
-
-  if (article.tableOfContents !== undefined) {
-    payload.table_of_contents =
-      article.tableOfContents ?? [];
-  }
-
-  if (article.sections !== undefined) {
-    payload.sections = article.sections ?? [];
-  }
-
-  if (article.examplesTitle !== undefined) {
-    payload.examples_title =
-      article.examplesTitle ?? null;
-  }
-
-  if (article.examplesList !== undefined) {
-    payload.examples_list =
-      article.examplesList ?? [];
-  }
-
-  if (article.commonMistakesTitle !== undefined) {
-    payload.common_mistakes_title =
-      article.commonMistakesTitle ?? null;
-  }
-
-  if (article.commonMistakesSubtitle !== undefined) {
-    payload.common_mistakes_subtitle =
-      article.commonMistakesSubtitle ?? null;
-  }
-
-  if (article.commonMistakesList !== undefined) {
-    payload.common_mistakes_list =
-      article.commonMistakesList ?? [];
-  }
-
-  if (article.legalNotesTitle !== undefined) {
-    payload.legal_notes_title =
-      article.legalNotesTitle ?? null;
-  }
-
-  if (article.legalNotesList !== undefined) {
-    payload.legal_notes_list =
-      article.legalNotesList ?? [];
-  }
-
-  if (article.faqTitle !== undefined) {
-    payload.faq_title =
-      article.faqTitle ?? null;
-  }
-
-  if (article.faqs !== undefined) {
-    payload.faqs = article.faqs ?? [];
-  }
-
-  if (article.relatedServices !== undefined) {
-    payload.related_services =
-      article.relatedServices ?? [];
-  }
-
-  if (article.relatedSamples !== undefined) {
-    payload.related_samples =
-      article.relatedSamples ?? [];
-  }
-
-  if (article.relatedArticles !== undefined) {
-    payload.related_articles =
-      article.relatedArticles ?? [];
-  }
-
-  if (article.ctaTitle !== undefined) {
-    payload.cta_title =
-      article.ctaTitle ?? null;
-  }
-
-  if (article.ctaDescription !== undefined) {
-    payload.cta_description =
-      article.ctaDescription ?? null;
-  }
-
-  if (article.ctaPrimaryBtnText !== undefined) {
-    payload.cta_primary_btn_text =
-      article.ctaPrimaryBtnText ?? null;
-  }
-
-  if (article.ctaPrimaryHref !== undefined) {
-    payload.cta_primary_href =
-      article.ctaPrimaryHref ?? null;
-  }
-
-  if (article.version !== undefined) {
-    payload.version = article.version;
-  }
-
-  if (article.isFeatured !== undefined) {
-    payload.is_featured = article.isFeatured;
-  }
-
-  if (article.readingTimeMinutes !== undefined) {
-    payload.reading_time_minutes =
-      article.readingTimeMinutes;
-  }
-
-  if (article.seoKeywords !== undefined) {
-    payload.seo_keywords =
-      article.seoKeywords ?? [];
-  }
-
-  return payload;
-}
+let inMemoryArticles: Article[] | null = null;
 
 export async function getArticles(): Promise<Article[]> {
-  const supabase = await createClient();
+  try {
+    const supabase = getSupabaseAdmin();
+    const { data, error } = await supabase
+      .from('articles')
+      .select('*')
+      .order('created_at', { ascending: false });
 
-  const { data, error } = await supabase
-    .from("articles")
-    .select("*")
-    .order("created_at", { ascending: false });
+    if (error) {
+      console.error('Supabase error reading articles:', error.message);
+      return inMemoryArticles || getInitialArticles();
+    }
 
-  if (error) {
-    throw new Error(
-      `Failed to load articles: ${error.message}`
-    );
+    if (!data || data.length === 0) {
+      seedInitialArticlesIfEmpty(supabase);
+      const initial = getInitialArticles();
+      inMemoryArticles = initial;
+      return initial;
+    }
+
+    const articles = (data as Record<string, unknown>[]).map(mapRowToArticle);
+    inMemoryArticles = articles;
+    return articles;
+  } catch (err) {
+    console.error('Exception in getArticles():', err);
+    return inMemoryArticles || getInitialArticles();
   }
-
-  return ((data ?? []) as DbArticle[]).map(fromDb);
 }
 
 export async function getPublishedArticles(): Promise<Article[]> {
-  const supabase = await createClient();
+  try {
+    const supabase = getSupabaseAdmin();
+    const { data, error } = await supabase
+      .from('articles')
+      .select('*')
+      .eq('status', 'published')
+      .order('created_at', { ascending: false });
 
-  const { data, error } = await supabase
-    .from("articles")
-    .select("*")
-    .eq("status", "published")
-    .order("published_at", {
-      ascending: false,
-      nullsFirst: false,
-    });
+    if (error) {
+      console.error('Supabase error reading published articles:', error.message);
+      const all = inMemoryArticles || getInitialArticles();
+      return all.filter((a) => a.status === 'published');
+    }
 
-  if (error) {
-    throw new Error(
-      `Failed to load published articles: ${error.message}`
-    );
+    if (!data || data.length === 0) {
+      const all = await getArticles();
+      return all.filter((a) => a.status === 'published');
+    }
+
+    return (data as Record<string, unknown>[]).map(mapRowToArticle);
+  } catch (err) {
+    console.error('Exception in getPublishedArticles():', err);
+    const all = inMemoryArticles || getInitialArticles();
+    return all.filter((a) => a.status === 'published');
   }
-
-  return ((data ?? []) as DbArticle[]).map(fromDb);
 }
 
-export async function getArticleBySlug(
-  slug: string
-): Promise<Article | null> {
-  const supabase = await createClient();
+export async function getArticleBySlug(slug: string): Promise<Article | null> {
+  try {
+    const supabase = getSupabaseAdmin();
+    const cleanSlug = slug.trim();
 
-  const { data, error } = await supabase
-    .from("articles")
-    .select("*")
-    .eq("slug", slug)
-    .maybeSingle();
+    const { data, error } = await supabase
+      .from('articles')
+      .select('*')
+      .eq('slug', cleanSlug)
+      .maybeSingle();
 
-  if (error) {
-    throw new Error(
-      `Failed to load article: ${error.message}`
-    );
+    if (!error && data) {
+      return mapRowToArticle(data as Record<string, unknown>);
+    }
+
+    // Fallback to in-memory/initial
+    const fallbackList = inMemoryArticles || getInitialArticles();
+    return fallbackList.find((a) => a.slug === cleanSlug) || null;
+  } catch (err) {
+    console.error('Exception in getArticleBySlug():', err);
+    const fallbackList = inMemoryArticles || getInitialArticles();
+    return fallbackList.find((a) => a.slug === slug.trim()) || null;
   }
-
-  return data
-    ? fromDb(data as DbArticle)
-    : null;
 }
 
 export async function createArticle(
-  article: Omit<
-    Article,
-    "id" | "createdAt" | "updatedAt"
-  >
-): Promise<Article> {
-  const supabase = await createClient();
+  data: CreateArticleData
+): Promise<{ success: boolean; article?: Article; error?: string; code?: number; isUpdate?: boolean }> {
+  try {
+    const supabase = getSupabaseAdmin();
 
-  const payload = {
-    ...toDb(article),
-    content: article.content ?? "",
-    status:
-      article.status === "paused"
-        ? "archived"
-        : article.status ?? "draft",
-  };
+    if (!data.title || !data.slug || !data.content) {
+      return {
+        success: false,
+        error: 'فیلدهای عنوان (title)، اسلاگ (slug) و متن مقاله (content) الزامی هستند.',
+        code: 400,
+      };
+    }
 
-  const { data, error } = await supabase
-    .from("articles")
-    .insert(payload)
-    .select("*")
-    .single();
+    const cleanSlug = data.slug.trim();
 
-  if (error) {
-    throw new Error(
-      `Failed to create article: ${error.message}`
-    );
+    // Check if article with this slug exists
+    const { data: existingRow } = await supabase
+      .from('articles')
+      .select('*')
+      .eq('slug', cleanSlug)
+      .maybeSingle();
+
+    const now = new Date().toISOString();
+    const wordCount = data.content ? data.content.trim().split(/\s+/).filter(Boolean).length : 0;
+    const status = data.status || 'draft';
+    const isUpdate = Boolean(existingRow);
+
+    const publishedAt =
+      status === 'published'
+        ? existingRow?.published_at || now
+        : null;
+
+    const articleToSave: Article = {
+      id: existingRow?.id || cleanSlug,
+      title: data.title.trim(),
+      slug: cleanSlug,
+      status,
+      excerpt: data.excerpt ? data.excerpt.trim() : '',
+      content: data.content,
+      metaTitle: data.metaTitle ? data.metaTitle.trim() : data.title.trim(),
+      metaDescription: data.metaDescription ? data.metaDescription.trim() : (data.excerpt ? data.excerpt.trim() : ''),
+      keywords: Array.isArray(data.keywords) ? data.keywords : [],
+      primaryKeyword: data.primaryKeyword ? data.primaryKeyword.trim() : (data.keywords?.[0] || ''),
+      schema: data.schema ? (typeof data.schema === 'string' ? data.schema : JSON.stringify(data.schema)) : '',
+      wordCount,
+      category: data.category || 'حقوقی',
+      createdAt: existingRow?.created_at || now,
+      updatedAt: now,
+      publishedAt,
+    };
+
+    const row = mapArticleToRow(articleToSave);
+
+    let savedData: Record<string, unknown> | null = null;
+    let error: { message: string } | null = null;
+
+    if (existingRow) {
+      const res = await supabase
+        .from('articles')
+        .update(row)
+        .eq('id', existingRow.id)
+        .select()
+        .single();
+      savedData = res.data as Record<string, unknown> | null;
+      error = res.error;
+    } else {
+      const res = await supabase
+        .from('articles')
+        .insert(row)
+        .select()
+        .single();
+      savedData = res.data as Record<string, unknown> | null;
+      error = res.error;
+    }
+
+    if (error || !savedData) {
+      console.error('Supabase error saving article:', error);
+      return { success: false, error: error?.message || 'خطا در ذخیره مقاله در دیتابیس', code: 500 };
+    }
+
+    return {
+      success: true,
+      article: mapRowToArticle(savedData),
+      isUpdate,
+    };
+  } catch (err: unknown) {
+    console.error('Exception in createArticle():', err);
+    const msg = err instanceof Error ? err.message : 'Internal server error';
+    return { success: false, error: msg, code: 500 };
   }
-
-  return fromDb(data as DbArticle);
 }
 
 export async function updateArticle(
-  id: string,
-  changes: Partial<Article>
-): Promise<Article> {
-  const supabase = await createClient();
+  targetSlug: string,
+  data: Partial<CreateArticleData>
+): Promise<{ success: boolean; article?: Article; error?: string; code?: number }> {
+  try {
+    const supabase = getSupabaseAdmin();
+    const cleanTargetSlug = targetSlug.trim();
 
-  const payload = {
-    ...toDb(changes),
-    updated_at: new Date().toISOString(),
-  };
+    const { data: existingRow, error: findError } = await supabase
+      .from('articles')
+      .select('*')
+      .eq('slug', cleanTargetSlug)
+      .maybeSingle();
 
-  const { data, error } = await supabase
-    .from("articles")
-    .update(payload)
-    .eq("id", id)
-    .select("*")
-    .single();
+    if (findError || !existingRow) {
+      return { success: false, error: 'مقاله مورد نظر یافت نشد', code: 404 };
+    }
 
-  if (error) {
-    throw new Error(
-      `Failed to update article: ${error.message}`
-    );
+    const existing = mapRowToArticle(existingRow as Record<string, unknown>);
+    const newSlug = data.slug ? data.slug.trim() : existing.slug;
+
+    // Check slug conflict if slug is being changed
+    if (newSlug !== existing.slug) {
+      const { data: conflictRow } = await supabase
+        .from('articles')
+        .select('id')
+        .eq('slug', newSlug)
+        .maybeSingle();
+
+      if (conflictRow) {
+        return { success: false, error: 'اسلاگ وارد شده قبلاً برای مقاله دیگری استفاده شده است', code: 400 };
+      }
+    }
+
+    const now = new Date().toISOString();
+    const newContent = data.content !== undefined ? data.content : (existing.content || '');
+    const wordCount = newContent ? newContent.trim().split(/\s+/).filter(Boolean).length : (existing.wordCount || 0);
+
+    const newStatus = data.status || existing.status;
+    let publishedAt = existing.publishedAt;
+    if (newStatus === 'published' && !publishedAt) {
+      publishedAt = now;
+    } else if (newStatus !== 'published') {
+      publishedAt = null;
+    }
+
+    const updatedArticle: Article = {
+      ...existing,
+      title: data.title !== undefined ? data.title.trim() : existing.title,
+      slug: newSlug,
+      status: newStatus,
+      excerpt: data.excerpt !== undefined ? data.excerpt : existing.excerpt,
+      content: newContent,
+      metaTitle: data.metaTitle !== undefined ? data.metaTitle : existing.metaTitle,
+      metaDescription: data.metaDescription !== undefined ? data.metaDescription : existing.metaDescription,
+      keywords: Array.isArray(data.keywords) ? data.keywords : existing.keywords,
+      primaryKeyword: data.primaryKeyword !== undefined ? data.primaryKeyword : existing.primaryKeyword,
+      schema: data.schema !== undefined ? data.schema : existing.schema,
+      wordCount,
+      updatedAt: now,
+      publishedAt,
+    };
+
+    const row = mapArticleToRow(updatedArticle);
+
+    const { data: savedData, error: updateError } = await supabase
+      .from('articles')
+      .update(row)
+      .eq('id', existingRow.id)
+      .select()
+      .single();
+
+    if (updateError || !savedData) {
+      console.error('Supabase error updating article:', updateError);
+      return { success: false, error: updateError?.message || 'خطا در به‌روزرسانی مقاله', code: 500 };
+    }
+
+    return { success: true, article: mapRowToArticle(savedData as Record<string, unknown>) };
+  } catch (err: unknown) {
+    console.error('Exception in updateArticle():', err);
+    const msg = err instanceof Error ? err.message : 'Internal server error';
+    return { success: false, error: msg, code: 500 };
   }
+}
 
-  return fromDb(data as DbArticle);
+export async function updateArticleStatus(
+  slug: string,
+  status: ArticleStatus
+): Promise<{ success: boolean; article?: Article; error?: string; code?: number }> {
+  try {
+    const supabase = getSupabaseAdmin();
+    const cleanSlug = slug.trim();
+
+    const { data: existingRow, error: findError } = await supabase
+      .from('articles')
+      .select('*')
+      .eq('slug', cleanSlug)
+      .maybeSingle();
+
+    if (findError || !existingRow) {
+      return { success: false, error: 'مقاله مورد نظر یافت نشد', code: 404 };
+    }
+
+    const now = new Date().toISOString();
+    let publishedAt = existingRow.published_at;
+    if (status === 'published' && !publishedAt) {
+      publishedAt = now;
+    } else if (status !== 'published') {
+      publishedAt = null;
+    }
+
+    const { data: savedData, error: updateError } = await supabase
+      .from('articles')
+      .update({
+        status,
+        published_at: publishedAt,
+        updated_at: now,
+      })
+      .eq('id', existingRow.id)
+      .select()
+      .single();
+
+    if (updateError || !savedData) {
+      console.error('Supabase error updating status:', updateError);
+      return { success: false, error: updateError?.message || 'خطا در تغییر وضعیت مقاله', code: 500 };
+    }
+
+    return { success: true, article: mapRowToArticle(savedData as Record<string, unknown>) };
+  } catch (err: unknown) {
+    console.error('Exception in updateArticleStatus():', err);
+    const msg = err instanceof Error ? err.message : 'Internal server error';
+    return { success: false, error: msg, code: 500 };
+  }
 }
 
 export async function deleteArticle(
-  id: string
-): Promise<void> {
-  const supabase = await createClient();
+  slug: string
+): Promise<{ success: boolean; error?: string; code?: number }> {
+  try {
+    const supabase = getSupabaseAdmin();
+    const cleanSlug = slug.trim();
 
-  const { error } = await supabase
-    .from("articles")
-    .delete()
-    .eq("id", id);
+    const { data: existingRow } = await supabase
+      .from('articles')
+      .select('id')
+      .eq('slug', cleanSlug)
+      .maybeSingle();
 
-  if (error) {
-    throw new Error(
-      `Failed to delete article: ${error.message}`
-    );
+    if (!existingRow) {
+      return { success: false, error: 'مقاله مورد نظر یافت نشد', code: 404 };
+    }
+
+    const { error: delError } = await supabase
+      .from('articles')
+      .delete()
+      .eq('id', existingRow.id);
+
+    if (delError) {
+      console.error('Supabase error deleting article:', delError);
+      return { success: false, error: delError.message, code: 500 };
+    }
+
+    return { success: true };
+  } catch (err: unknown) {
+    console.error('Exception in deleteArticle():', err);
+    const msg = err instanceof Error ? err.message : 'Internal server error';
+    return { success: false, error: msg, code: 500 };
   }
 }

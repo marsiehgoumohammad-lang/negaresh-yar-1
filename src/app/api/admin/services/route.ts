@@ -6,7 +6,7 @@ export const revalidate = 0;
 
 export async function GET() {
   try {
-    const services = getServices();
+    const services = await getServices();
     return NextResponse.json({ services });
   } catch (err) {
     console.error('Error GET /api/admin/services:', err);
@@ -22,7 +22,7 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: 'نام خدمت و قیمت پیش‌فرض الزامی است.' }, { status: 400 });
     }
 
-    const created = addService({
+    const created = await addService({
       name: body.name,
       category: body.category || 'عمومی',
       defaultPrice: body.defaultPrice,

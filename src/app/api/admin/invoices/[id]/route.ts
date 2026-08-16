@@ -7,7 +7,7 @@ export const revalidate = 0;
 export async function GET(req: NextRequest, { params }: { params: Promise<{ id: string }> }) {
   try {
     const { id } = await params;
-    const invoices = getInvoices();
+    const invoices = await getInvoices();
     const found = invoices.find((inv) => inv.id === id);
     if (!found) {
       return NextResponse.json({ error: 'فاکتور مورد نظر یافت نشد' }, { status: 404 });
@@ -25,14 +25,14 @@ export async function PUT(req: NextRequest, { params }: { params: Promise<{ id: 
     const body = await req.json();
 
     if (body.action === 'change_status' && body.status) {
-      const updated = updateInvoiceStatus(id, body.status);
+      const updated = await updateInvoiceStatus(id, body.status);
       if (!updated) {
         return NextResponse.json({ error: 'فاکتور یافت نشد' }, { status: 404 });
       }
       return NextResponse.json({ message: 'وضعیت فاکتور به‌روزرسانی شد', invoice: updated });
     }
 
-    const updated = updateInvoice(id, body);
+    const updated = await updateInvoice(id, body);
     if (!updated) {
       return NextResponse.json({ error: 'فاکتور یافت نشد' }, { status: 404 });
     }
@@ -47,7 +47,7 @@ export async function PUT(req: NextRequest, { params }: { params: Promise<{ id: 
 export async function DELETE(req: NextRequest, { params }: { params: Promise<{ id: string }> }) {
   try {
     const { id } = await params;
-    const success = deleteInvoice(id);
+    const success = await deleteInvoice(id);
     if (!success) {
       return NextResponse.json({ error: 'فاکتور یافت نشد یا حذف نگردید' }, { status: 404 });
     }

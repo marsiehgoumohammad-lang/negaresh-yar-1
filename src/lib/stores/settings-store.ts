@@ -1,9 +1,5 @@
-import fs from 'fs';
-import path from 'path';
 import { BusinessSettings } from './types';
-
-const DATA_DIR = path.join(process.cwd(), 'data');
-const FILE_PATH = path.join(DATA_DIR, 'settings.json');
+import { getSupabaseAdmin } from '@/lib/supabase';
 
 export const DEFAULT_SETTINGS: BusinessSettings = {
   companyName: 'دفتر نگارش یار - خدمات حقوقی و اداری اینترنتی',
@@ -25,46 +21,55 @@ export const DEFAULT_SETTINGS: BusinessSettings = {
   activeAiProvider: 'auto',
 };
 
-let inMemorySettings: BusinessSettings | null = null;
+let inMemorySettings: BusinessSettings = { ...DEFAULT_SETTINGS };
 
-export function getSettings(): BusinessSettings {
-  if (inMemorySettings) {
-    return { ...DEFAULT_SETTINGS, ...inMemorySettings };
-  }
+export async function getSettings(): Promise<BusinessSettings> {
   try {
-    if (fs.existsSync(FILE_PATH)) {
-      const data = fs.readFileSync(FILE_PATH, 'utf-8');
-      const parsed = JSON.parse(data);
-      const settingsObj: BusinessSettings = { ...DEFAULT_SETTINGS, ...parsed };
-      inMemorySettings = settingsObj;
-      return settingsObj;
+    const supabase = getSupabaseAdmin();
+    const { data, error } = await supabase
+      .from('site_settings')
+      .select('value')
+      .eq('key', 'general')
+      .maybeSingle();
+
+    if (!error && data?.value) {
+      const merged = { ...DEFAULT_SETTINGS, ...data.value };
+      inMemorySettings = merged;
+      return merged;
     }
   } catch (err) {
-    console.error('Error reading settings file:', err);
+    console.error('Error reading site_settings general from Supabase:', err);
   }
-  return DEFAULT_SETTINGS;
+  return inMemorySettings;
 }
 
-export function saveSettings(newSettings: Partial<BusinessSettings>): BusinessSettings {
+export function getCachedSettings(): BusinessSettings {
+  return inMemorySettings;
+}
+
+export async function saveSettings(newSettings: Partial<BusinessSettings>): Promise<BusinessSettings> {
   try {
-    if (!fs.existsSync(DATA_DIR)) {
-      fs.mkdirSync(DATA_DIR, { recursive: true });
-    }
-    const current = getSettings();
-    const updated = { ...current, ...newSettings };
+    const current = await getSettings();
+    const updated: BusinessSettings = { ...current, ...newSettings };
     inMemorySettings = updated;
-    fs.writeFileSync(FILE_PATH, JSON.stringify(updated, null, 2), 'utf-8');
+
+    const supabase = getSupabaseAdmin();
+    await supabase.from('site_settings').upsert({
+      key: 'general',
+      value: updated,
+      updated_at: new Date().toISOString(),
+    });
+
     return updated;
   } catch (err) {
-    console.error('Error saving settings file:', err);
-    if (inMemorySettings) return inMemorySettings;
-    return getSettings();
+    console.error('Error saving site_settings general in Supabase:', err);
+    return inMemorySettings;
   }
 }
 
-export function incrementNextInvoiceNumber(): number {
-  const current = getSettings();
-  const nextNum = current.nextInvoiceNumber;
-  saveSettings({ nextInvoiceNumber: nextNum + 1 });
+export async function incrementNextInvoiceNumber(): Promise<number> {
+  const current = await getSettings();
+  const nextNum = current.nextInvoiceNumber || 1001;
+  await saveSettings({ nextInvoiceNumber: nextNum + 1 });
   return nextNum;
 }

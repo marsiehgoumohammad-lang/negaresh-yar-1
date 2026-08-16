@@ -13,7 +13,7 @@ export async function POST(req: NextRequest) {
       );
     }
 
-    const settings = getSettings();
+    const settings = await getSettings();
     const activeProvider = settings.activeAiProvider || 'auto';
     const savedGeminiKey = settings.geminiApiKey?.trim();
     const savedOpenaiKey = settings.openaiApiKey?.trim();

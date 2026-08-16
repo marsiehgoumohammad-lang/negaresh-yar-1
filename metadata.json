@@ -1,6 +1,6 @@
 {
-  "name": "نگارش یار - AI Legal Interpreter",
-  "description": "تفسیر هوشمند اوراق و اسناد قضایی به زبان ساده با هوش مصنوعی",
+  "name": "نگارش یار",
+  "description": "سامانه خدمات تخصصی نگارش نامه اداری، عریضه‌نویسی و کافی‌نت آنلاین سراسر کشور",
   "requestFramePermissions": [],
   "majorCapabilities": [
     "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"

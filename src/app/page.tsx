@@ -8,6 +8,8 @@ import { AiIntro } from '@/components/home/ai-intro';
 import { Features } from '@/components/home/features';
 import { ArticlesPreview } from '@/components/home/articles-preview';
 
+export const dynamic = 'force-dynamic';
+
 export const metadata: Metadata = {
   title: 'نگارش یار | مرکز تخصصی تنظیم دادخواست، شکواییه، لایحه و نامه‌های اداری',
   description: 'سامانه هوشمند غیرحضوری تنظیم آنلاین دادخواست حقوقی، شکواییه کیفری، لایحه دفاعیه، نامه به رئیس جمهور و دفتر رهبری، عریضه‌نویسی، خدمات کافی‌نت و تفسیر ابلاغیه ثنا با هوش مصنوعی.',

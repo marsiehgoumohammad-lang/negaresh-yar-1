@@ -87,7 +87,7 @@ export async function GET() {
 
     // 2. Audit Knowledge Base Articles
     const allArticles = await getArticles();
-const articleAudits: PageAuditItem[] = allArticles.map((art) => { 
+    const articleAudits: PageAuditItem[] = allArticles.map((art) => {
       const issues: string[] = [];
       let status: 'good' | 'warning' | 'error' = 'good';
 

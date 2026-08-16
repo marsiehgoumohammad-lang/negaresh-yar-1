@@ -6,7 +6,7 @@ export const revalidate = 0;
 
 export async function GET() {
   try {
-    const settings = getSettings();
+    const settings = await getSettings();
     return NextResponse.json({ settings });
   } catch (err) {
     console.error('Error GET /api/admin/settings:', err);
@@ -17,7 +17,7 @@ export async function GET() {
 export async function POST(req: NextRequest) {
   try {
     const body = await req.json();
-    const updated = saveSettings(body);
+    const updated = await saveSettings(body);
     return NextResponse.json({ message: 'تنظیمات با موفقیت ذخیره گردید', settings: updated });
   } catch (err) {
     console.error('Error POST /api/admin/settings:', err);

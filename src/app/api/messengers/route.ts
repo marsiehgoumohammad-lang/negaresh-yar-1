@@ -8,7 +8,7 @@ export async function GET(req: NextRequest) {
   const { searchParams } = new URL(req.url);
   const showAll = searchParams.get('all') === 'true';
 
-  const allMessengers = getMessengersConfig();
+  const allMessengers = await getMessengersConfig();
 
   if (showAll) {
     return NextResponse.json(allMessengers);
@@ -42,7 +42,7 @@ export async function POST(req: NextRequest) {
       badge: item.badge || '',
     }));
 
-    const success = saveMessengersConfig(updatedConfig);
+    const success = await saveMessengersConfig(updatedConfig);
 
     if (!success) {
       return NextResponse.json(
@@ -51,9 +51,11 @@ export async function POST(req: NextRequest) {
       );
     }
 
+    const refreshed = await getMessengersConfig();
+
     return NextResponse.json({
       message: 'تنظیمات پیام‌رسان‌ها با موفقیت به‌روزرسانی شد.',
-      messengers: getMessengersConfig(),
+      messengers: refreshed,
     });
   } catch (err) {
     console.error('API messengers update error:', err);

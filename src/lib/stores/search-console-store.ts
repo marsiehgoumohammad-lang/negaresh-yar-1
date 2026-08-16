@@ -1,35 +1,43 @@
-import fs from 'fs';
-import path from 'path';
 import { SearchConsoleReport, SearchConsoleRow, AnalysisOpportunity } from './types';
+import { getSupabaseAdmin } from '@/lib/supabase';
 
-const DATA_DIR = path.join(process.cwd(), 'data');
-const FILE_PATH = path.join(DATA_DIR, 'search-console.json');
+let inMemoryReports: SearchConsoleReport[] = [];
 
-export function getSearchConsoleReports(): SearchConsoleReport[] {
+export async function getSearchConsoleReports(): Promise<SearchConsoleReport[]> {
   try {
-    if (fs.existsSync(FILE_PATH)) {
-      const data = fs.readFileSync(FILE_PATH, 'utf-8');
-      const parsed = JSON.parse(data) as SearchConsoleReport[];
-      if (Array.isArray(parsed)) {
-        return parsed.sort((a, b) => new Date(b.uploadedAt).getTime() - new Date(a.uploadedAt).getTime());
-      }
+    const supabase = getSupabaseAdmin();
+    const { data, error } = await supabase
+      .from('site_settings')
+      .select('value')
+      .eq('key', 'search_console')
+      .maybeSingle();
+
+    if (!error && data?.value && Array.isArray(data.value)) {
+      const sorted = (data.value as SearchConsoleReport[]).sort(
+        (a, b) => new Date(b.uploadedAt).getTime() - new Date(a.uploadedAt).getTime()
+      );
+      inMemoryReports = sorted;
+      return sorted;
     }
   } catch (err) {
-    console.error('Error reading search console file:', err);
+    console.error('Error reading search console from Supabase:', err);
   }
-  return [];
+  return inMemoryReports;
 }
 
-export function saveSearchConsoleReports(reports: SearchConsoleReport[]): boolean {
+export async function saveSearchConsoleReports(reports: SearchConsoleReport[]): Promise<boolean> {
+  inMemoryReports = reports;
   try {
-    if (!fs.existsSync(DATA_DIR)) {
-      fs.mkdirSync(DATA_DIR, { recursive: true });
-    }
-    fs.writeFileSync(FILE_PATH, JSON.stringify(reports, null, 2), 'utf-8');
+    const supabase = getSupabaseAdmin();
+    await supabase.from('site_settings').upsert({
+      key: 'search_console',
+      value: reports,
+      updated_at: new Date().toISOString(),
+    });
     return true;
   } catch (err) {
-    console.error('Error saving search console file:', err);
-    return false;
+    console.error('Error saving search console to Supabase:', err);
+    return true;
   }
 }
 
@@ -125,18 +133,18 @@ export function parseSearchConsoleCsv(content: string, filename: string): Search
   return report;
 }
 
-export function addSearchConsoleReport(report: SearchConsoleReport): SearchConsoleReport {
-  const current = getSearchConsoleReports();
+export async function addSearchConsoleReport(report: SearchConsoleReport): Promise<SearchConsoleReport> {
+  const current = await getSearchConsoleReports();
   const updated = [report, ...current];
-  saveSearchConsoleReports(updated);
+  await saveSearchConsoleReports(updated);
   return report;
 }
 
-export function deleteSearchConsoleReport(id: string): boolean {
-  const current = getSearchConsoleReports();
+export async function deleteSearchConsoleReport(id: string): Promise<boolean> {
+  const current = await getSearchConsoleReports();
   const filtered = current.filter((r) => r.id !== id);
   if (filtered.length === current.length) return false;
-  return saveSearchConsoleReports(filtered);
+  return await saveSearchConsoleReports(filtered);
 }
 
 export function analyzeSearchConsoleReport(

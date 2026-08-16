@@ -6,8 +6,8 @@ import { adaptArticleToKnowledgeData } from '@/lib/knowledge-adapter';
 
 export const metadata = howToRequestConditionalReleaseMetadata;
 
-export default function Page() {
-  const article = getArticleBySlug('how-to-request-conditional-release');
+export default async function Page() {
+  const article = await getArticleBySlug('how-to-request-conditional-release');
   if (!article || article.status !== 'published') {
     notFound();
   }

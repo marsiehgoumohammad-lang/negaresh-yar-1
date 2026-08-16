@@ -4,6 +4,8 @@ import { getArticleBySlug } from '@/lib/stores/articles-store';
 import { adaptArticleToKnowledgeData } from '@/lib/knowledge-adapter';
 import { KnowledgeArticleTemplate } from '@/components/knowledge/KnowledgeArticleTemplate';
 
+export const dynamic = 'force-dynamic';
+
 interface PageProps {
   params: Promise<{ slug: string }>;
 }
@@ -44,6 +46,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 export default async function KnowledgeArticlePage({ params }: PageProps) {
   const { slug } = await params;
   const article = await getArticleBySlug(slug);
+
   if (!article || article.status !== 'published') {
     notFound();
   }
@@ -52,4 +55,3 @@ export default async function KnowledgeArticlePage({ params }: PageProps) {
 
   return <KnowledgeArticleTemplate data={articleData} />;
 }
-

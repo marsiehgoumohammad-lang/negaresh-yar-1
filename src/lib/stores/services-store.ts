@@ -1,9 +1,5 @@
-import fs from 'fs';
-import path from 'path';
 import { ServiceItem } from './types';
-
-const DATA_DIR = path.join(process.cwd(), 'data');
-const FILE_PATH = path.join(DATA_DIR, 'services.json');
+import { getSupabaseAdmin } from '@/lib/supabase';
 
 export const DEFAULT_SERVICES: ServiceItem[] = [
   {
@@ -88,65 +84,130 @@ export const DEFAULT_SERVICES: ServiceItem[] = [
   },
 ];
 
-export function getServices(): ServiceItem[] {
-  try {
-    if (fs.existsSync(FILE_PATH)) {
-      const data = fs.readFileSync(FILE_PATH, 'utf-8');
-      const parsed = JSON.parse(data) as ServiceItem[];
-      if (Array.isArray(parsed) && parsed.length > 0) {
-        return parsed;
-      }
-    }
-  } catch (err) {
-    console.error('Error reading services file:', err);
-  }
-  return DEFAULT_SERVICES;
+let inMemoryServices: ServiceItem[] = [...DEFAULT_SERVICES];
+
+function mapRowToService(row: Record<string, unknown>): ServiceItem {
+  const meta = (typeof row.metadata === 'object' && row.metadata !== null) ? (row.metadata as Record<string, unknown>) : {};
+  return {
+    id: (meta.customId as string) || (row.slug as string) || (row.id as string),
+    name: (row.name as string) || (meta.name as string) || '',
+    category: (row.category as string) || (meta.category as string) || 'عمومی',
+    defaultPrice: Number(row.price) || Number(meta.defaultPrice) || 0,
+    description: (row.description as string) || (meta.description as string) || '',
+    enabled: row.active !== undefined ? Boolean(row.active) : (meta.enabled !== undefined ? Boolean(meta.enabled) : true),
+    createdAt: (row.created_at as string) || new Date().toISOString(),
+    updatedAt: (row.updated_at as string) || new Date().toISOString(),
+  };
 }
 
-export function saveServices(services: ServiceItem[]): boolean {
+export async function getServices(): Promise<ServiceItem[]> {
   try {
-    if (!fs.existsSync(DATA_DIR)) {
-      fs.mkdirSync(DATA_DIR, { recursive: true });
+    const supabase = getSupabaseAdmin();
+    const { data, error } = await supabase
+      .from('services')
+      .select('*')
+      .order('sort_order', { ascending: true });
+
+    if (!error && data && data.length > 0) {
+      const items = data.map(mapRowToService);
+      inMemoryServices = items;
+      return items;
     }
-    fs.writeFileSync(FILE_PATH, JSON.stringify(services, null, 2), 'utf-8');
-    return true;
   } catch (err) {
-    console.error('Error saving services file:', err);
-    return false;
+    console.error('Error fetching services from Supabase:', err);
   }
+  return inMemoryServices;
 }
 
-export function addService(item: Omit<ServiceItem, 'id' | 'createdAt' | 'updatedAt'>): ServiceItem {
-  const current = getServices();
+export function getCachedServices(): ServiceItem[] {
+  return inMemoryServices;
+}
+
+export async function addService(item: Omit<ServiceItem, 'id' | 'createdAt' | 'updatedAt'>): Promise<ServiceItem> {
+  const now = new Date().toISOString();
+  const id = `srv-${Date.now()}`;
   const newItem: ServiceItem = {
     ...item,
-    id: `srv-${Date.now()}`,
-    createdAt: new Date().toISOString(),
-    updatedAt: new Date().toISOString(),
+    id,
+    createdAt: now,
+    updatedAt: now,
   };
-  const updated = [newItem, ...current];
-  saveServices(updated);
+
+  try {
+    const supabase = getSupabaseAdmin();
+    await supabase.from('services').insert({
+      name: newItem.name,
+      slug: id,
+      description: newItem.description,
+      category: newItem.category,
+      price: newItem.defaultPrice,
+      active: newItem.enabled,
+      metadata: { customId: id, defaultPrice: newItem.defaultPrice, enabled: newItem.enabled },
+      created_at: now,
+      updated_at: now,
+    });
+  } catch (err) {
+    console.error('Error inserting service in Supabase:', err);
+  }
+
+  inMemoryServices = [newItem, ...inMemoryServices];
   return newItem;
 }
 
-export function updateService(id: string, updates: Partial<Omit<ServiceItem, 'id'>>): ServiceItem | null {
-  const current = getServices();
+export async function updateService(id: string, updates: Partial<Omit<ServiceItem, 'id'>>): Promise<ServiceItem | null> {
+  const current = await getServices();
   const index = current.findIndex((s) => s.id === id);
   if (index === -1) return null;
 
-  const updatedItem = {
+  const updatedItem: ServiceItem = {
     ...current[index],
     ...updates,
     updatedAt: new Date().toISOString(),
   };
-  current[index] = updatedItem;
-  saveServices(current);
+
+  try {
+    const supabase = getSupabaseAdmin();
+    const { data: rows } = await supabase.from('services').select('*');
+    const target = rows?.find((r) => {
+      const meta = (typeof r.metadata === 'object' && r.metadata !== null) ? r.metadata : {};
+      return meta.customId === id || r.slug === id || r.id === id;
+    });
+
+    if (target) {
+      await supabase.from('services').update({
+        name: updatedItem.name,
+        description: updatedItem.description,
+        category: updatedItem.category,
+        price: updatedItem.defaultPrice,
+        active: updatedItem.enabled,
+        metadata: { customId: id, defaultPrice: updatedItem.defaultPrice, enabled: updatedItem.enabled },
+        updated_at: updatedItem.updatedAt,
+      }).eq('id', target.id);
+    }
+  } catch (err) {
+    console.error('Error updating service in Supabase:', err);
+  }
+
+  inMemoryServices[index] = updatedItem;
   return updatedItem;
 }
 
-export function deleteService(id: string): boolean {
-  const current = getServices();
-  const filtered = current.filter((s) => s.id !== id);
-  if (filtered.length === current.length) return false;
-  return saveServices(filtered);
+export async function deleteService(id: string): Promise<boolean> {
+  try {
+    const supabase = getSupabaseAdmin();
+    const { data: rows } = await supabase.from('services').select('*');
+    const target = rows?.find((r) => {
+      const meta = (typeof r.metadata === 'object' && r.metadata !== null) ? r.metadata : {};
+      return meta.customId === id || r.slug === id || r.id === id;
+    });
+
+    if (target) {
+      await supabase.from('services').delete().eq('id', target.id);
+    }
+  } catch (err) {
+    console.error('Error deleting service from Supabase:', err);
+  }
+
+  inMemoryServices = inMemoryServices.filter((s) => s.id !== id);
+  return true;
 }

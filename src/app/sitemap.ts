@@ -1,36 +1,98 @@
-import type { MetadataRoute } from 'next';
+import { MetadataRoute } from 'next';
 import { getPublishedArticles } from '@/lib/stores/articles-store';
 
-const baseUrl = 'https://www.negaresh-yar.ir';
-
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const publishedArticles = await getPublishedArticles();
+  const baseUrl = 'https://www.negaresh-yar.ir';
+  const lastModified = new Date();
 
-  const knowledgeRoutes: MetadataRoute.Sitemap = publishedArticles.map(
-    (article) => ({
-      url: `${baseUrl}/knowledge/${article.slug}`,
-      lastModified: article.updatedAt
-        ? new Date(article.updatedAt)
-        : new Date(),
-      changeFrequency: 'weekly',
-      priority: 0.8,
-    })
-  );
+  // Static / Core routes
+  const coreRoutes = [
+    '',
+    '/services',
+    '/samples',
+    '/knowledge',
+    '/request',
+    '/ai-interpreter',
+  ].map((route) => ({
+    url: `${baseUrl}${route}`,
+    lastModified,
+    changeFrequency: 'weekly' as const,
+    priority: route === '' ? 1.0 : 0.9,
+  }));
 
-  const staticRoutes: MetadataRoute.Sitemap = [
-    {
-      url: baseUrl,
-      lastModified: new Date(),
-      changeFrequency: 'weekly',
-      priority: 1,
-    },
-    {
-      url: `${baseUrl}/knowledge`,
-      lastModified: new Date(),
-      changeFrequency: 'weekly',
-      priority: 0.9,
-    },
+  // Services priority routes (22 routes)
+  const serviceSlugs = [
+    'administrative-letter',
+    'appeal',
+    'bail-reduction',
+    'content-marketing-seo',
+    'court-document-explainer',
+    'government-auctions',
+    'insolvency-petition',
+    'leader-office-letter',
+    'legal-brief',
+    'online-cafe',
+    'petition-writing',
+    'president-letter',
+    'objection-non-prosecution-order',
+    'objection-absent-judgment',
+    'conditional-release',
+    'bail-to-surety',
+    'insolvency-from-judgment',
+    'insolvency-court-fee',
+    'letter-to-governor',
+    'letter-to-tax-office',
+    'judiciary-auction',
+    'impounded-assets-auction',
   ];
 
-  return [...staticRoutes, ...knowledgeRoutes];
+  const serviceRoutes = serviceSlugs.map((slug) => ({
+    url: `${baseUrl}/services/${slug}`,
+    lastModified,
+    changeFrequency: 'weekly' as const,
+    priority: 0.9,
+  }));
+
+  // Sample document routes (16 routes)
+  const sampleSlugs = [
+    'administrative-letter',
+    'appeal',
+    'bail-reduction',
+    'complaint',
+    'insolvency',
+    'leader-office-letter',
+    'legal-brief',
+    'legal-notice',
+    'petition',
+    'president-letter',
+    'objection-non-prosecution-order',
+    'objection-absent-judgment',
+    'conditional-release',
+    'bail-to-surety',
+    'letter-to-governor',
+    'letter-to-tax-office',
+  ];
+
+  const sampleRoutes = sampleSlugs.map((slug) => ({
+    url: `${baseUrl}/samples/${slug}`,
+    lastModified,
+    changeFrequency: 'weekly' as const,
+    priority: 0.8,
+  }));
+
+  // Dynamic Knowledge article routes (only published articles from Single Source of Truth)
+  const publishedArticles = await getPublishedArticles();
+  const knowledgeRoutes = publishedArticles.map((art) => ({
+    url: `${baseUrl}/knowledge/${art.slug}`,
+    lastModified: art.updatedAt ? new Date(art.updatedAt) : lastModified,
+    changeFrequency: 'weekly' as const,
+    priority: 0.8,
+  }));
+
+  return [
+    ...coreRoutes,
+    ...serviceRoutes,
+    ...sampleRoutes,
+    ...knowledgeRoutes,
+  ];
 }
