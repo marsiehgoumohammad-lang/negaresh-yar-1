@@ -52,3 +52,4 @@ export default async function KnowledgeArticlePage({ params }: PageProps) {
 
   return <KnowledgeArticleTemplate data={articleData} />;
 }
+
