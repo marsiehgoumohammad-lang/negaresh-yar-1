@@ -6,8 +6,8 @@ import { adaptArticleToKnowledgeData } from '@/lib/knowledge-adapter';
 
 export const metadata = governmentAuctionGuideMetadata;
 
-export default function Page() {
-  const article = getArticleBySlug('government-auction-guide');
+export default async function Page() {
+  const article = await getArticleBySlug('government-auction-guide');
   if (!article || article.status !== 'published') {
     notFound();
   }
