@@ -139,7 +139,7 @@ export interface Article {
   relatedServices?: unknown[];
   relatedSamples?: unknown[];
   relatedArticles?: unknown[];
-    
+         ctaTitle?: string;
   createdAt: string;
   updatedAt: string;
   publishedAt?: string | null;
