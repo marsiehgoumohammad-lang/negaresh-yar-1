@@ -3,8 +3,9 @@ import { verifyApiToken } from '@/lib/api-auth';
 import {
   getArticles,
   createArticle,
+  Article,
 } from '@/lib/stores/articles-store';
-import { ArticleStatus, Article } from '@/lib/stores/types';
+import { ArticleStatus } from '@/lib/stores/types';;
 
 export const dynamic = 'force-dynamic';
 export const revalidate = 0;
