@@ -140,6 +140,7 @@ export interface Article {
   relatedSamples?: unknown[];
   relatedArticles?: unknown[];
          ctaTitle?: string;
+   ctaDescription?: string;
   createdAt: string;
   updatedAt: string;
   publishedAt?: string | null;
