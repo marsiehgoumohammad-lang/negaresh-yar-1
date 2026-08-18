@@ -36,6 +36,16 @@ import { sampleEvictionExpiredLeaseData, sampleEvictionExpiredLeaseMetadata } fr
 import { sampleEvictionNonpaymentRentData, sampleEvictionNonpaymentRentMetadata } from './eviction-nonpayment-rent';
 import { sampleRentDepositClaimData, sampleRentDepositClaimMetadata } from './rent-deposit-claim';
 import { samplePropertyPossessionClaimData, samplePropertyPossessionClaimMetadata } from './property-possession-claim';
+import { sampleObjectionToCriminalSecurityData, sampleObjectionToCriminalSecurityMetadata } from './objection-to-criminal-security';
+import { sampleBailReleaseSuretyRequestData, sampleBailReleaseSuretyRequestMetadata } from './bail-release-surety-request';
+import { samplePrisonerFurloughRequestData, samplePrisonerFurloughRequestMetadata } from './prisoner-furlough-request';
+import { sampleFineInstallmentPetitionData, sampleFineInstallmentPetitionMetadata } from './fine-installment-petition';
+import { sampleSayadCheckClaimPetitionData, sampleSayadCheckClaimPetitionMetadata } from './sayad-check-claim-petition';
+import { sampleCheckExecutionObjectionData, sampleCheckExecutionObjectionMetadata } from './check-execution-objection';
+import { samplePromissoryNoteProtestObjectionData, samplePromissoryNoteProtestObjectionMetadata } from './promissory-note-protest-objection';
+import { sampleAuctionDepositRefundRequestData, sampleAuctionDepositRefundRequestMetadata } from './auction-deposit-refund-request';
+import { sampleAuctionDeedTransferRequestData, sampleAuctionDeedTransferRequestMetadata } from './auction-deed-transfer-request';
+import { sampleAuctionCancellationObjectionData, sampleAuctionCancellationObjectionMetadata } from './auction-cancellation-objection';
 import { SampleLandingData } from './types';
 
 export const allSamplesList: {
@@ -389,6 +399,96 @@ export const allSamplesList: {
     href: '/samples/property-possession-claim',
     data: samplePropertyPossessionClaimData,
   },
+  {
+    slug: 'objection-to-criminal-security',
+    title: 'نمونه لایحه اعتراض به قرار تأمین کیفری و وثیقه سنگین',
+    badge: 'اعتراض به قرار تأمین',
+    description: 'الگوی لایحه اعتراض به نامتناسب بودن قرار وثیقه یا کفالت منتهی به بازداشت مستند به ماده ۲۴۶ و ۲۲۶ ق.آ.د.ک.',
+    category: 'وثیقه و قرارهای تأمین',
+    href: '/samples/objection-to-criminal-security',
+    data: sampleObjectionToCriminalSecurityData,
+  },
+  {
+    slug: 'bail-release-surety-request',
+    title: 'نمونه درخواست فک قرار کفالت و آزادی فیش حقوقی ضامن',
+    badge: 'فک فیش حقوقی ضامن',
+    description: 'الگوی درخواست کتبی ضامن جهت فک تعهد کفالت و آزادسازی فیش حقوقی یا جواز کسب پس از پایان پرونده کیفری.',
+    category: 'وثیقه و قرارهای تأمین',
+    href: '/samples/bail-release-surety-request',
+    data: sampleBailReleaseSuretyRequestData,
+  },
+  {
+    slug: 'prisoner-furlough-request',
+    title: 'نمونه درخواست مرخصی زندانی و تقلیل وثیقه مرخصی',
+    badge: 'مرخصی زندانیان',
+    description: 'الگوی درخواست مرخصی زندانی، مرخصی استعلاجی، تمدید مرخصی و تبدیل تأمین مرخصی به دادستان و دادیار ناظر زندان.',
+    category: 'اجرای احکام کیفری و تقسیط دیون',
+    href: '/samples/prisoner-furlough-request',
+    data: samplePrisonerFurloughRequestData,
+  },
+  {
+    slug: 'fine-installment-petition',
+    title: 'نمونه دادخواست تقسیط جزای نقدی و اعسار از پرداخت جریمه',
+    badge: 'تقسیط جریمه دادگاه',
+    description: 'الگوی دادخواست اعسار و تقسیط جزای نقدی صادره از دادگاه کیفری جهت جلوگیری از بازداشت بدل از جریمه مستند به ماده ۵۲۹ و ۵۳۹.',
+    category: 'اجرای احکام کیفری و تقسیط دیون',
+    href: '/samples/fine-installment-petition',
+    data: sampleFineInstallmentPetitionData,
+  },
+  {
+    slug: 'sayad-check-claim-petition',
+    title: 'نمونه دادخواست مطالبه وجه چک صیادی بنفش با خسارت تأخیر',
+    badge: 'مطالبه چک صیادی',
+    description: 'الگوی دادخواست حقوقی مطالبه چک صیادی دارای کد رهگیری، تأمین خواسته فوری و مطالبه خسارت تأخیر تأدیه از سررسید.',
+    category: 'دعاوی اسناد تجاری و وصول مطالبات',
+    href: '/samples/sayad-check-claim-petition',
+    data: sampleSayadCheckClaimPetitionData,
+  },
+  {
+    slug: 'check-execution-objection',
+    title: 'نمونه دادخواست ابطال و توقف اجراییه مستقیم چک (ماده ۲۳)',
+    badge: 'ابطال اجراییه ماده ۲۳',
+    description: 'الگوی دادخواست ابطال اجراییه چک صیادی، دستور موقت توقف عملیات اجرایی و رفع مسدودی حساب‌ها به دلیل چک تضمینی یا امانی.',
+    category: 'دعاوی اسناد تجاری و وصول مطالبات',
+    href: '/samples/check-execution-objection',
+    data: sampleCheckExecutionObjectionData,
+  },
+  {
+    slug: 'promissory-note-protest-objection',
+    title: 'نمونه دادخواست مطالبه وجه سفته با واخواست و خسارت تأخیر',
+    badge: 'مطالبه سفته واخواست‌شده',
+    description: 'الگوی دادخواست مطالبه سفته واخواست‌شده، صدور قرار تأمین خواسته بدون خسارت احتمالی و مسئولیت تضامنی ضامنان.',
+    category: 'دعاوی اسناد تجاری و وصول مطالبات',
+    href: '/samples/promissory-note-protest-objection',
+    data: samplePromissoryNoteProtestObjectionData,
+  },
+  {
+    slug: 'auction-deposit-refund-request',
+    title: 'نمونه درخواست استرداد ۱۰ درصد سپرده مزایده دادگستری',
+    badge: 'استرداد سپرده مزایده',
+    description: 'الگوی درخواست عودت ۱۰ درصد ودیعه تضمین شرکت در مزایده اجرای احکام و سامانه ستاد ایران برای متقاضیان غیربرنده.',
+    category: 'مزایده‌های دادگستری و ستاد ایران',
+    href: '/samples/auction-deposit-refund-request',
+    data: sampleAuctionDepositRefundRequestData,
+  },
+  {
+    slug: 'auction-deed-transfer-request',
+    title: 'نمونه درخواست انتقال سند رسمی ملک مزایده‌ای (ماده ۱۴۳)',
+    badge: 'انتقال سند رسمی مزایده',
+    description: 'الگوی درخواست صدور دستور انتقال سند رسمی به نام برنده مزایده، معرفی‌نامه دفترخانه و دستور تخلیه مستند به ماده ۱۴۳ و ۱۴۴.',
+    category: 'مزایده‌های دادگستری و ستاد ایران',
+    href: '/samples/auction-deed-transfer-request',
+    data: sampleAuctionDeedTransferRequestData,
+  },
+  {
+    slug: 'auction-cancellation-objection',
+    title: 'نمونه لایحه اعتراض به نحوه برگزاری و تقاضای ابطال مزایده',
+    badge: 'ابطال مزایده دادگاه',
+    description: 'الگوی لایحه اعتراض به صحت مزایده و تقاضای ابطال به دلیل عدم نشر آگهی یا ارزیابی نامعتبر مستند به مواد ۱۳۶ و ۱۴۲ ق.ا.ا.م.',
+    category: 'مزایده‌های دادگستری و ستاد ایران',
+    href: '/samples/auction-cancellation-objection',
+    data: sampleAuctionCancellationObjectionData,
+  },
 ];
 
 export {
@@ -468,6 +568,26 @@ export {
   sampleRentDepositClaimMetadata,
   samplePropertyPossessionClaimData,
   samplePropertyPossessionClaimMetadata,
+  sampleObjectionToCriminalSecurityData,
+  sampleObjectionToCriminalSecurityMetadata,
+  sampleBailReleaseSuretyRequestData,
+  sampleBailReleaseSuretyRequestMetadata,
+  samplePrisonerFurloughRequestData,
+  samplePrisonerFurloughRequestMetadata,
+  sampleFineInstallmentPetitionData,
+  sampleFineInstallmentPetitionMetadata,
+  sampleSayadCheckClaimPetitionData,
+  sampleSayadCheckClaimPetitionMetadata,
+  sampleCheckExecutionObjectionData,
+  sampleCheckExecutionObjectionMetadata,
+  samplePromissoryNoteProtestObjectionData,
+  samplePromissoryNoteProtestObjectionMetadata,
+  sampleAuctionDepositRefundRequestData,
+  sampleAuctionDepositRefundRequestMetadata,
+  sampleAuctionDeedTransferRequestData,
+  sampleAuctionDeedTransferRequestMetadata,
+  sampleAuctionCancellationObjectionData,
+  sampleAuctionCancellationObjectionMetadata,
 };
 
 

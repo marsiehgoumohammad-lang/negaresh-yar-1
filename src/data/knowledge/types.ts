@@ -68,6 +68,7 @@ export interface KnowledgeArticleData {
   ctaDescription: string;
   ctaPrimaryBtnText: string;
   ctaPrimaryHref: string;
+  messengerMessage?: string;
 }
 
 export type KnowledgeMetadata = Metadata;

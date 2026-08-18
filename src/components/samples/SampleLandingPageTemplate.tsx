@@ -38,7 +38,7 @@ export function SampleLandingPageTemplate({ data }: { data: SampleLandingData })
   };
 
   const sampleContent =
-    data.content || data.sampleStructureContent || '';
+    data.content || data.sampleStructureContent || data.sampleText || '';
 
   const handleCopyText = () => {
     if (typeof window !== 'undefined' && sampleContent) {
@@ -75,6 +75,8 @@ export function SampleLandingPageTemplate({ data }: { data: SampleLandingData })
     data.documents ||
     (data.requiredInfoList
       ? data.requiredInfoList.map((r) => ({ title: r.title, desc: r.desc }))
+      : data.guideSteps
+      ? data.guideSteps.map((g) => ({ title: `گام ${g.stepNumber}: ${g.title}`, desc: g.desc }))
       : []);
 
   const importantNotesList =
@@ -99,6 +101,12 @@ export function SampleLandingPageTemplate({ data }: { data: SampleLandingData })
   const legalBasisList =
     data.legalBasis && data.legalBasis.length > 0
       ? data.legalBasis
+      : data.legalArticles && data.legalArticles.length > 0
+      ? data.legalArticles.map((la) => ({
+          article: la.articleName,
+          title: 'مستند قانونی',
+          description: la.description,
+        }))
       : [
           {
             article: 'قوانین و مقررات عمومی آیین دادرسی',
@@ -467,7 +475,7 @@ export function SampleLandingPageTemplate({ data }: { data: SampleLandingData })
                     </div>
                     <div className="p-2.5 rounded-xl bg-rose-950/40 border border-rose-900/20 text-xs text-rose-300 leading-relaxed">
                       <span className="font-bold block mb-0.5">اثر / پیامد:</span>
-                      {item.impact}
+                      {item.impact || item.consequence}
                     </div>
                   </div>
                   <div className="mt-3 pt-3 border-t border-slate-800 text-xs text-emerald-400 leading-relaxed">

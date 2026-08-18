@@ -46,7 +46,7 @@ export interface SampleDocument {
   importantNotes?: string[];
 
   // اشتباهات رایج
-  commonMistakes?: { mistake: string; impact: string; solution: string }[];
+  commonMistakes?: { mistake: string; impact?: string; consequence?: string; solution: string }[];
 
   // مبانی و مستندات قانونی
   legalBasis?: { article: string; title: string; description: string }[];
@@ -95,14 +95,23 @@ export interface SampleDocument {
   writingTipsList?: { title: string; desc: string }[];
   commonMistakesTitle?: string;
   commonMistakesSubtitle?: string;
-  commonMistakesList?: { mistake: string; impact: string; solution: string }[];
+  commonMistakesList?: { mistake: string; impact?: string; consequence?: string; solution: string }[];
   legalNotesTitle?: string;
   legalNotesList?: string[];
   sampleStructureTitle?: string;
   sampleStructureIntro?: string;
   sampleStructureContent?: string;
   sampleStructureFeatures?: string[];
+  sampleBoxTitle?: string;
+  sampleBoxSubtitle?: string;
+  sampleText?: string;
+  guideStepsTitle?: string;
+  guideStepsSubtitle?: string;
+  guideSteps?: { stepNumber: number; title: string; desc: string }[];
+  legalArticlesTitle?: string;
+  legalArticles?: { articleName: string; description: string }[];
   faqTitle?: string;
+  faqsTitle?: string;
   faqs?: { q: string; a: string }[];
   relatedServices?: { title: string; href: string; desc: string; badge: string }[];
   relatedArticles?: { title: string; href: string; desc: string; badge: string }[];
