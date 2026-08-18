@@ -46,6 +46,16 @@ import { samplePromissoryNoteProtestObjectionData, samplePromissoryNoteProtestOb
 import { sampleAuctionDepositRefundRequestData, sampleAuctionDepositRefundRequestMetadata } from './auction-deposit-refund-request';
 import { sampleAuctionDeedTransferRequestData, sampleAuctionDeedTransferRequestMetadata } from './auction-deed-transfer-request';
 import { sampleAuctionCancellationObjectionData, sampleAuctionCancellationObjectionMetadata } from './auction-cancellation-objection';
+import { sampleMehriehExecutionRegistryPetitionData, sampleMehriehExecutionRegistryPetitionMetadata } from './mehrieh-execution-registry-petition';
+import { sampleMehriehInstallmentPetitionData, sampleMehriehInstallmentPetitionMetadata } from './mehrieh-installment-petition';
+import { sampleNafaqahClaimPetitionData, sampleNafaqahClaimPetitionMetadata } from './nafaqah-claim-petition';
+import { sampleProvisionalAttachmentPetitionData, sampleProvisionalAttachmentPetitionMetadata } from './provisional-attachment-petition';
+import { samplePropertyAttachmentLiftingRequestData, samplePropertyAttachmentLiftingRequestMetadata } from './property-attachment-lifting-request';
+import { sampleThirdPartyObjectionToExecutionData, sampleThirdPartyObjectionToExecutionMetadata } from './third-party-objection-to-execution';
+import { sampleOfficialDeedCompulsionPetitionData, sampleOfficialDeedCompulsionPetitionMetadata } from './official-deed-compulsion-petition';
+import { sampleContractCancellationNoticePetitionData, sampleContractCancellationNoticePetitionMetadata } from './contract-cancellation-notice-petition';
+import { sampleAdministrativeCourtJusticeComplaintData, sampleAdministrativeCourtJusticeComplaintMetadata } from './administrative-court-justice-complaint';
+import { sampleLaborBoardWageInsuranceComplaintData, sampleLaborBoardWageInsuranceComplaintMetadata } from './labor-board-wage-insurance-complaint';
 import { SampleLandingData } from './types';
 
 export const allSamplesList: {
@@ -489,6 +499,96 @@ export const allSamplesList: {
     href: '/samples/auction-cancellation-objection',
     data: sampleAuctionCancellationObjectionData,
   },
+  {
+    slug: 'mehrieh-execution-registry-petition',
+    title: 'نمونه تقاضای صدور اجراییه مهریه از طریق ثبت اسناد رسمی',
+    badge: 'خانواده و اسناد لازم‌الاجرا',
+    description: 'الگوی درخواست صدور اجراییه مهریه در دفترخانه ازدواج و اداره اجرای ثبت، توقیف حساب بانکی و پلاک ثبتی مستند به ماده ۱۱۳ برنامه ششم.',
+    category: 'دعاوی خانواده و اجرای ثبت',
+    href: '/samples/mehrieh-execution-registry-petition',
+    data: sampleMehriehExecutionRegistryPetitionData,
+  },
+  {
+    slug: 'mehrieh-installment-petition',
+    title: 'نمونه دادخواست اعسار و تقسیط مهریه و تعدیل اقساط',
+    badge: 'اعسار و خانواده',
+    description: 'دادخواست رسمی اثبات عدم تمکن مالی پرداخت یکجای سکه، تقسیط متناسب با درآمد و جلوگیری از جلب وفق ماده ۳ قانون محکومیت‌های مالی.',
+    category: 'دعاوی خانواده و اجرای احکام',
+    href: '/samples/mehrieh-installment-petition',
+    data: sampleMehriehInstallmentPetitionData,
+  },
+  {
+    slug: 'nafaqah-claim-petition',
+    title: 'نمونه دادخواست مطالبه نفقه زوجه و فرزند مشترک به همراه دستور موقت',
+    badge: 'خانواده و نفقه',
+    description: 'دادخواست مطالبه نفقه معوقه زوجه، نفقه جاریه فرزندان، ارجاع به کارشناسی و صدور دستور موقت فوری پرداخت وفق مواد ۱۱۰۶ و ۱۱۱۱ ق.م.',
+    category: 'دعاوی خانواده',
+    href: '/samples/nafaqah-claim-petition',
+    data: sampleNafaqahClaimPetitionData,
+  },
+  {
+    slug: 'provisional-attachment-petition',
+    title: 'نمونه درخواست تأمین خواسته و توقیف فوری اموال (ماده ۱۰۸ ق.آ.د.م)',
+    badge: 'حقوقی و توقیف اموال',
+    description: 'درخواست صدور قرار تأمین خواسته قبل از اقامه دعوای اصلی و توقیف اموال، حساب‌های بانکی و پلاک ثبتی پیش از ابلاغ مستند به ماده ۱۰۸ و ۱۱۷.',
+    category: 'آیین دادرسی و توقیف اموال',
+    href: '/samples/provisional-attachment-petition',
+    data: sampleProvisionalAttachmentPetitionData,
+  },
+  {
+    slug: 'property-attachment-lifting-request',
+    title: 'نمونه درخواست رفع توقیف اموال و حساب‌های جزء مستثنیات دین',
+    badge: 'اجرای احکام و مستثنیات دین',
+    description: 'لایحه رسمی رفع توقیف از منزل مسکونی در حد شأن، خودروی امرار معاش، ابزار کار و حساب بانکی مستند به ماده ۲۴ قانون محکومیت‌های مالی.',
+    category: 'اجرای احکام و توقیف اموال',
+    href: '/samples/property-attachment-lifting-request',
+    data: samplePropertyAttachmentLiftingRequestData,
+  },
+  {
+    slug: 'third-party-objection-to-execution',
+    title: 'نمونه دادخواست اعتراض ثالث اجرایی و رفع توقیف مال (مواد ۱۴۶ و ۱۴۷)',
+    badge: 'اجرای احکام و اعتراض ثالث',
+    description: 'دادخواست اثبات مالکیت شخص ثالث با سند عادی یا رسمی بر مال توقیف‌شده در اجرای احکام و صدور دستور فوری توقف مزایده و رفع توقیف.',
+    category: 'اجرای احکام و توقیف اموال',
+    href: '/samples/third-party-objection-to-execution',
+    data: sampleThirdPartyObjectionToExecutionData,
+  },
+  {
+    slug: 'official-deed-compulsion-petition',
+    title: 'نمونه دادخواست الزام به تنظیم سند رسمی ملک، پایان‌کار و تفکیک',
+    badge: 'دعاوی ملکی و قراردادها',
+    description: 'الگوی قضایی الزام فروشنده و سازنده به اخذ پایان‌کار، صورتمجلس تفکیکی، تنظیم سند رسمی تک‌برگ و مطالبه وجه التزام تاخیر مواد ۲۱۹ و ۲۲۰ ق.م.',
+    category: 'دعاوی ملکی و ثبتی',
+    href: '/samples/official-deed-compulsion-petition',
+    data: sampleOfficialDeedCompulsionPetitionData,
+  },
+  {
+    slug: 'contract-cancellation-notice-petition',
+    title: 'نمونه دادخواست تأیید فسخ قرارداد و استرداد ثمن معامله',
+    badge: 'قراردادها و خیارات قانونی',
+    description: 'دادخواست و اظهارنامه رسمی تأیید فسخ مبایعه‌نامه به استناد خیار غبن فاحش، عیب یا تخلف از شرط و استرداد ثمن با خسارت تاخیر مواد ۴۱۶ و ۴۲۲.',
+    category: 'دعاوی ملکی و قراردادها',
+    href: '/samples/contract-cancellation-notice-petition',
+    data: sampleContractCancellationNoticePetitionData,
+  },
+  {
+    slug: 'administrative-court-justice-complaint',
+    title: 'نمونه دادخواست شکایت به دیوان عدالت اداری و دستور موقت توقف اجرا',
+    badge: 'دیوان عدالت اداری و شهرداری',
+    description: 'دادخواست ابطال رأی کمیسیون ماده ۱۰۰ شهرداری، گزینش و ادارات دولتی و تقاضای صدور فوری دستور موقت توقف تخریب و اجرا مواد ۱۰ و ۳۴.',
+    category: 'دعاوی اداری و دیوان عدالت',
+    href: '/samples/administrative-court-justice-complaint',
+    data: sampleAdministrativeCourtJusticeComplaintData,
+  },
+  {
+    slug: 'labor-board-wage-insurance-complaint',
+    title: 'نمونه دادخواست شکایت از کارفرما در اداره کار (حقوق، سنوات و بیمه)',
+    badge: 'قانون کار و تأمین اجتماعی',
+    description: 'دادخواست کارگری در سامانه جامع روابط کار جهت مطالبه حقوق معوقه، سنوات خدمت، عیدی و الزام به پرداخت حق بیمه ماده ۱۴۸ در هیئت تشخیص.',
+    category: 'دعاوی کار و تأمین اجتماعی',
+    href: '/samples/labor-board-wage-insurance-complaint',
+    data: sampleLaborBoardWageInsuranceComplaintData,
+  },
 ];
 
 export {
@@ -588,6 +688,26 @@ export {
   sampleAuctionDeedTransferRequestMetadata,
   sampleAuctionCancellationObjectionData,
   sampleAuctionCancellationObjectionMetadata,
+  sampleMehriehExecutionRegistryPetitionData,
+  sampleMehriehExecutionRegistryPetitionMetadata,
+  sampleMehriehInstallmentPetitionData,
+  sampleMehriehInstallmentPetitionMetadata,
+  sampleNafaqahClaimPetitionData,
+  sampleNafaqahClaimPetitionMetadata,
+  sampleProvisionalAttachmentPetitionData,
+  sampleProvisionalAttachmentPetitionMetadata,
+  samplePropertyAttachmentLiftingRequestData,
+  samplePropertyAttachmentLiftingRequestMetadata,
+  sampleThirdPartyObjectionToExecutionData,
+  sampleThirdPartyObjectionToExecutionMetadata,
+  sampleOfficialDeedCompulsionPetitionData,
+  sampleOfficialDeedCompulsionPetitionMetadata,
+  sampleContractCancellationNoticePetitionData,
+  sampleContractCancellationNoticePetitionMetadata,
+  sampleAdministrativeCourtJusticeComplaintData,
+  sampleAdministrativeCourtJusticeComplaintMetadata,
+  sampleLaborBoardWageInsuranceComplaintData,
+  sampleLaborBoardWageInsuranceComplaintMetadata,
 };
 
 

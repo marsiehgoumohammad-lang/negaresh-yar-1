@@ -48,6 +48,16 @@ import {
   sampleAuctionDepositRefundRequestData,
   sampleAuctionDeedTransferRequestData,
   sampleAuctionCancellationObjectionData,
+  sampleMehriehExecutionRegistryPetitionData,
+  sampleMehriehInstallmentPetitionData,
+  sampleNafaqahClaimPetitionData,
+  sampleProvisionalAttachmentPetitionData,
+  samplePropertyAttachmentLiftingRequestData,
+  sampleThirdPartyObjectionToExecutionData,
+  sampleOfficialDeedCompulsionPetitionData,
+  sampleContractCancellationNoticePetitionData,
+  sampleAdministrativeCourtJusticeComplaintData,
+  sampleLaborBoardWageInsuranceComplaintData,
 } from '@/data/samples';
 
 // Helper to normalize and ensure all required fields for a SampleDocument
@@ -200,6 +210,16 @@ const rawSamples: SampleDocument[] = [
   sampleAuctionDepositRefundRequestData,
   sampleAuctionDeedTransferRequestData,
   sampleAuctionCancellationObjectionData,
+  sampleMehriehExecutionRegistryPetitionData,
+  sampleMehriehInstallmentPetitionData,
+  sampleNafaqahClaimPetitionData,
+  sampleProvisionalAttachmentPetitionData,
+  samplePropertyAttachmentLiftingRequestData,
+  sampleThirdPartyObjectionToExecutionData,
+  sampleOfficialDeedCompulsionPetitionData,
+  sampleContractCancellationNoticePetitionData,
+  sampleAdministrativeCourtJusticeComplaintData,
+  sampleLaborBoardWageInsuranceComplaintData,
 ];
 
 const normalizedSamples = rawSamples.map(normalizeSample);
