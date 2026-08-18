@@ -318,6 +318,13 @@ export const sampleComplaintData: SampleLandingData = {
   ctaDescription: 'با سپردن تنظیم شکواییه به کارشناسان متخصص کیفری نگارش یار، پرونده خود را با محکم‌ترین عناوین اتهامی و ادله در دادسرا به جریان بیندازید.',
   ctaPrimaryBtnText: 'سفارش تنظیم شکواییه اختصاصی',
   ctaPrimaryHref: '/request?service=petition-writing',
+  messengerMessage: 'سلام، درباره تنظیم شکواییه کیفری (کلاهبرداری، خیانت در امانت، سرقت یا توهین) سوال دارم. لطفا راهنمایی بفرمایید.',
+
+  publishedAt: '2026-01-12T08:00:00.000Z',
+  updatedAt: '2026-08-17T10:00:00.000Z',
+  author: { name: 'تیم تحریریه و پژوهش حقوقی نگارش یار', role: 'دپارتمان دادرسی کیفری' },
+  reviewer: { name: 'دپارتمان پژوهش حقوقی نگارش یار', role: 'بازبینی و نظارت حقوقی' },
+  status: 'published',
 };
 
 export const sampleComplaintMetadata: Metadata = {

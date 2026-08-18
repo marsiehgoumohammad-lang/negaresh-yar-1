@@ -223,6 +223,13 @@ export const sampleLetterToGovernorData: SampleLandingData = {
   ctaDescription: 'برای حل مشکلات اداری و عمرانی خود، تنظیم نامه‌ای اثرگذار و قانونی به استاندار یا فرماندار را به متخصصان نگارش یار بسپارید.',
   ctaPrimaryBtnText: 'ثبت سفارش نامه به استاندار',
   ctaPrimaryHref: '/request?service=letter-to-governor',
+  messengerMessage: 'سلام، درباره تنظیم نامه اداری و عریضه به استاندار یا فرماندار سوال دارم. لطفا راهنمایی بفرمایید.',
+
+  publishedAt: '2026-02-05T08:00:00.000Z',
+  updatedAt: '2026-08-17T10:00:00.000Z',
+  author: { name: 'تیم تحریریه و مکاتبات اداری نگارش یار', role: 'دپارتمان نامه‌نگاری و عریضه‌نویسی' },
+  reviewer: { name: 'دپارتمان پژوهش حقوقی نگارش یار', role: 'بازبینی و نظارت حقوقی' },
+  status: 'published',
 };
 
 export const sampleLetterToGovernorMetadata: Metadata = {

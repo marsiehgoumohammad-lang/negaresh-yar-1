@@ -303,6 +303,13 @@ export const sampleLeaderOfficeLetterData: SampleLandingData = {
   ctaDescription: 'با سپردن نگارش عریضه خود به کارشناسان نگارش یار، نامه‌ای شایسته، محترمانه و مستدل بر اساس اصول دفتر ارتباطات مردمی دریافت کنید.',
   ctaPrimaryBtnText: 'ثبت سفارش تنظیم عریضه دفتر رهبری',
   ctaPrimaryHref: '/request?service=leader-office-letter',
+  messengerMessage: 'سلام، درباره تنظیم عریضه و نامه به دفتر مقام معظم رهبری سوال دارم. لطفا راهنمایی بفرمایید.',
+
+  publishedAt: '2026-01-18T08:00:00.000Z',
+  updatedAt: '2026-08-17T10:00:00.000Z',
+  author: { name: 'تیم تحریریه و مکاتبات رسمی نگارش یار', role: 'دپارتمان نامه‌نگاری و عریضه‌نویسی' },
+  reviewer: { name: 'دپارتمان پژوهش حقوقی نگارش یار', role: 'بازبینی و نظارت حقوقی' },
+  status: 'published',
 };
 
 export const sampleLeaderOfficeLetterMetadata: Metadata = {

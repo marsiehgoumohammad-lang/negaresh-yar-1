@@ -302,6 +302,13 @@ export const sampleLegalBriefData: SampleLandingData = {
   ctaDescription: 'با سپردن لایحه دفاعیه خود به کارشناسان ارشد نگارش یار، از دفاعی قوی، مستدل و مبتنی بر مواد قانونی و آرای وحدت رویه بهره‌مند شوید.',
   ctaPrimaryBtnText: 'ثبت سفارش تنظیم لایحه دفاعیه',
   ctaPrimaryHref: '/request?service=legal-brief',
+  messengerMessage: 'سلام، درباره تنظیم لایحه دفاعیه حقوقی یا کیفری سوال دارم. لطفا راهنمایی بفرمایید.',
+
+  publishedAt: '2026-01-16T08:00:00.000Z',
+  updatedAt: '2026-08-17T10:00:00.000Z',
+  author: { name: 'تیم تحریریه و پژوهش حقوقی نگارش یار', role: 'دپارتمان دادرسی مدنی و کیفری' },
+  reviewer: { name: 'دپارتمان پژوهش حقوقی نگارش یار', role: 'بازبینی و نظارت حقوقی' },
+  status: 'published',
 };
 
 export const sampleLegalBriefMetadata: Metadata = {

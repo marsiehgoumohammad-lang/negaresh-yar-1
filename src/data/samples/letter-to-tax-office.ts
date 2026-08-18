@@ -228,6 +228,13 @@ export const sampleLetterToTaxOfficeData: SampleLandingData = {
   ctaDescription: 'تنها ۳۰ روز مهلت دارید تا جلوی قطعی شدن مالیات سنگین خود را بگیرید. لایحه دفاعیه خود را به متخصصان مالیاتی نگارش یار بسپارید.',
   ctaPrimaryBtnText: 'ثبت سفارش لایحه اعتراض مالیاتی',
   ctaPrimaryHref: '/request?service=letter-to-tax-office',
+  messengerMessage: 'سلام، درباره لایحه اعتراض به برگ تشخیص مالیات و توافق ماده ۲۳۸ سوال دارم. لطفا راهنمایی بفرمایید.',
+
+  publishedAt: '2026-02-10T08:00:00.000Z',
+  updatedAt: '2026-08-17T10:00:00.000Z',
+  author: { name: 'تیم تحریریه و دعاوی مالیاتی نگارش یار', role: 'دپارتمان دادرسی مالیاتی و مالیه عمومی' },
+  reviewer: { name: 'دپارتمان پژوهش حقوقی نگارش یار', role: 'بازبینی و نظارت حقوقی' },
+  status: 'published',
 };
 
 export const sampleLetterToTaxOfficeMetadata: Metadata = {

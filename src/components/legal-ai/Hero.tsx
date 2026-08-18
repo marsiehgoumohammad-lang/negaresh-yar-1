@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import Link from 'next/link';
 import { motion } from 'motion/react';
 import { Upload, Cpu, CheckCircle2, ShieldCheck, Sparkles, FileText, Scale } from 'lucide-react';
 
@@ -63,13 +64,13 @@ export function Hero() {
               <Upload className="w-4 h-4" />
               <span>تفسیر رای من</span>
             </a>
-            <a
+            <Link
               href="/samples/appeal"
               className="px-4 py-2.5 rounded-xl bg-slate-800/90 border border-slate-700/80 text-white font-bold text-xs sm:text-sm hover:border-[#E5C158]/50 hover:text-[#E5C158] transition-all flex items-center gap-2"
             >
               <FileText className="w-4 h-4 text-[#E5C158]" />
               <span>نمونه رای و دادنامه را ببینید</span>
-            </a>
+            </Link>
           </motion.div>
 
           {/* Step Flow Cards */}

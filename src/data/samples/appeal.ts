@@ -305,6 +305,13 @@ export const sampleAppealData: SampleLandingData = {
   ctaDescription: 'مهلت ۲۰ روزه تجدیدنظرخواهی تنها فرصت شما برای تغییر سرنوشت رای است. کارشناسان نگارش یار لایحه‌ای کاملا مستدل جهت نقض دادنامه بدوی تنظیم می‌کنند.',
   ctaPrimaryBtnText: 'ثبت سفارش لایحه تجدیدنظر',
   ctaPrimaryHref: '/request?service=appeal',
+  messengerMessage: 'سلام، درباره لایحه تجدیدنظرخواهی حقوقی یا کیفری و مهلت ۲۰ روزه دادگاه تجدیدنظر استان سوال دارم. لطفا راهنمایی بفرمایید.',
+
+  publishedAt: '2026-01-20T08:00:00.000Z',
+  updatedAt: '2026-08-17T10:00:00.000Z',
+  author: { name: 'تیم تحریریه و پژوهش حقوقی نگارش یار', role: 'دپارتمان دادرسی و تجدیدنظرخواهی' },
+  reviewer: { name: 'دپارتمان پژوهش حقوقی نگارش یار', role: 'بازبینی و نظارت حقوقی' },
+  status: 'published',
 };
 
 export const sampleAppealMetadata: Metadata = {

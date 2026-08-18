@@ -321,6 +321,13 @@ export const sampleAdministrativeLetterData: SampleLandingData = {
   ctaDescription: 'اگر برای مسئله اداری خود نیازمند نامه‌ای موثر، استدلال‌شده و طبق قوانین هستید، کارشناسان نگارش یار در کنار شما هستند.',
   ctaPrimaryBtnText: 'سفارش تنظیم اختصاصی نامه اداری',
   ctaPrimaryHref: '/request?service=administrative-letter',
+  messengerMessage: 'سلام، درباره تنظیم نامه اداری رسمی و عریضه به ادارات یا سازمان‌ها سوال دارم. لطفا راهنمایی بفرمایید.',
+
+  publishedAt: '2026-01-10T08:00:00.000Z',
+  updatedAt: '2026-08-17T10:00:00.000Z',
+  author: { name: 'تیم تحریریه و مکاتبات اداری نگارش یار', role: 'دپارتمان نامه‌نگاری اداری و عریضه‌نویسی' },
+  reviewer: { name: 'دپارتمان پژوهش حقوقی نگارش یار', role: 'بازبینی و نظارت حقوقی' },
+  status: 'published',
 };
 
 export const sampleAdministrativeLetterMetadata: Metadata = {

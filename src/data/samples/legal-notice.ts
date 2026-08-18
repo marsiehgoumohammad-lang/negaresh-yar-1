@@ -311,6 +311,13 @@ export const sampleLegalNoticeData: SampleLandingData = {
   ctaDescription: 'با سپردن تنظیم اظهارنامه رسمی خود به کارشناسان نگارش یار، از متنی محکم، مستدل و بدون خطر ادعاهای متقابل بهره‌مند شوید.',
   ctaPrimaryBtnText: 'ثبت سفارش تنظیم اظهارنامه',
   ctaPrimaryHref: '/request?service=legal-notice',
+  messengerMessage: 'سلام، درباره تنظیم اظهارنامه رسمی ماده ۱۵۶ در سامانه ثنا سوال دارم. لطفا راهنمایی بفرمایید.',
+
+  publishedAt: '2026-01-22T08:00:00.000Z',
+  updatedAt: '2026-08-17T10:00:00.000Z',
+  author: { name: 'تیم تحریریه و پژوهش حقوقی نگارش یار', role: 'دپارتمان دادرسی مدنی و اسناد قضایی' },
+  reviewer: { name: 'دپارتمان پژوهش حقوقی نگارش یار', role: 'بازبینی و نظارت حقوقی' },
+  status: 'published',
 };
 
 export const sampleLegalNoticeMetadata: Metadata = {

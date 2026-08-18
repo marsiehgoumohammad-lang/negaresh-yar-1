@@ -1,5 +1,6 @@
 import { MetadataRoute } from 'next';
 import { getPublishedArticles } from '@/lib/stores/articles-store';
+import { getPublishedSamples } from '@/lib/stores/samples-store';
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const baseUrl = 'https://www.negaresh-yar.ir';
@@ -53,31 +54,13 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.9,
   }));
 
-  // Sample document routes (16 routes)
-  const sampleSlugs = [
-    'administrative-letter',
-    'appeal',
-    'bail-reduction',
-    'complaint',
-    'insolvency',
-    'leader-office-letter',
-    'legal-brief',
-    'legal-notice',
-    'petition',
-    'president-letter',
-    'objection-non-prosecution-order',
-    'objection-absent-judgment',
-    'conditional-release',
-    'bail-to-surety',
-    'letter-to-governor',
-    'letter-to-tax-office',
-  ];
-
-  const sampleRoutes = sampleSlugs.map((slug) => ({
-    url: `${baseUrl}/samples/${slug}`,
-    lastModified,
+  // Dynamic Sample document routes (automatically retrieved from Samples Store)
+  const publishedSamples = getPublishedSamples();
+  const sampleRoutes = publishedSamples.map((sample) => ({
+    url: `${baseUrl}/samples/${sample.slug}`,
+    lastModified: sample.updatedAt ? new Date(sample.updatedAt) : lastModified,
     changeFrequency: 'weekly' as const,
-    priority: 0.8,
+    priority: 0.85,
   }));
 
   // Dynamic Knowledge article routes (only published articles from Single Source of Truth)

@@ -322,6 +322,13 @@ export const sampleInsolvencyData: SampleLandingData = {
   ctaDescription: 'با سپردن تنظیم دادخواست اعسار و فرم لیست اموال به کارشناسان حقوقی نگارش یار، از صدور جلب جلوگیری کرده و بدهی خود را تقسیط نمایید.',
   ctaPrimaryBtnText: 'ثبت سفارش تنظیم اعسار',
   ctaPrimaryHref: '/request?service=insolvency-petition',
+  messengerMessage: 'سلام، درباره دادخواست اعسار و تقسیط محکوم‌به و مهریه سوال دارم. لطفا راهنمایی بفرمایید.',
+
+  publishedAt: '2026-01-15T08:00:00.000Z',
+  updatedAt: '2026-08-17T10:00:00.000Z',
+  author: { name: 'تیم تحریریه و پژوهش حقوقی نگارش یار', role: 'دپارتمان دادرسی مدنی و اجرای احکام' },
+  reviewer: { name: 'دپارتمان پژوهش حقوقی نگارش یار', role: 'بازبینی و نظارت حقوقی' },
+  status: 'published',
 };
 
 export const sampleInsolvencyMetadata: Metadata = {

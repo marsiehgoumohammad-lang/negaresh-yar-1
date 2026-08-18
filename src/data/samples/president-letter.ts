@@ -302,6 +302,13 @@ export const samplePresidentLetterData: SampleLandingData = {
   ctaDescription: 'کارشناسان نگارش یار با آگاهی کامل از ضوابط مرکز ارتباطات مردمی، نامه شما را با لحنی کاملا تاثیرگذار و استاندارد تنظیم می‌کنند.',
   ctaPrimaryBtnText: 'ثبت سفارش تنظیم نامه به رئیس جمهور',
   ctaPrimaryHref: '/request?service=president-letter',
+  messengerMessage: 'سلام، درباره تنظیم نامه به رئیس جمهور و سامانه ۱۱۱ (سامد) سوال دارم. لطفا راهنمایی بفرمایید.',
+
+  publishedAt: '2026-01-17T08:00:00.000Z',
+  updatedAt: '2026-08-17T10:00:00.000Z',
+  author: { name: 'تیم تحریریه و مکاتبات دولتی نگارش یار', role: 'دپارتمان نامه‌نگاری و عریضه‌نویسی' },
+  reviewer: { name: 'دپارتمان پژوهش حقوقی نگارش یار', role: 'بازبینی و نظارت حقوقی' },
+  status: 'published',
 };
 
 export const samplePresidentLetterMetadata: Metadata = {
