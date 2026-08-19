@@ -187,23 +187,44 @@ export const sampleCheckExecutionObjectionData: SampleLandingData = {
 
   relatedSamples: [
     {
-      title: 'نمونه درخواست صدور اجراییه مستقیم چک صیادی (ماده ۲۳)',
-      href: '/samples/check-direct-execution',
-      desc: 'الگوی تقاضای صدور اجراییه مستقیم چک صیادی بدون دادگاه.',
-      badge: 'اجراییه چک',
-    },
-    {
-      title: 'نمونه دادخواست مطالبه وجه چک صیادی بنفش',
-      href: '/samples/sayad-check-claim-petition',
-      desc: 'الگوی مطالبه اصل وجه و خسارت تأخیر تأدیه چک صیادی.',
-      badge: 'مطالبه چک',
-    },
-    {
-      title: 'نمونه دادخواست مطالبه وجه سفته واخواست شده',
+      title: 'نمونه دادخواست مطالبه وجه سفته واخواست‌شده',
       href: '/samples/promissory-note-protest-objection',
-      desc: 'الگوی مطالبه طلب با سفته و واخواست تجاری.',
-      badge: 'مطالبه سفته',
+      desc: 'مطالبه طلب با سفته و خسارت تاخیر تادیه.',
+      badge: 'مطالبه سفته'
     },
+    {
+      title: 'نمونه دادخواست حقوقی مطالبه چک قدیمی',
+      href: '/samples/check-civil-claim',
+      desc: 'وصول وجه چک‌های عادی و فاقد صیاد.',
+      badge: 'مطالبه چک'
+    },
+    {
+      title: 'نمونه اظهارنامه رسمی مطالبه وجه چک',
+      href: '/samples/check-payment-demand',
+      desc: 'اخطار قانونی رسمی به صادرکننده و ظهرنویس.',
+      badge: 'اظهارنامه چک'
+    }
+  ],
+
+  relatedArticles: [
+    {
+      title: 'تفاوت چک حقوقی و چک کیفری در قانون جدید',
+      href: '/knowledge/civil-vs-criminal-check',
+      desc: 'مقایسه ۴ روش وصول چک و مزایای اجراییه ماده ۲۳.',
+      badge: 'مقاله آموزشی'
+    },
+    {
+      title: 'اظهارنامه رسمی چیست و چگونه ارسال می‌شود؟',
+      href: '/knowledge/what-is-legal-notice',
+      desc: 'اخطار رسمی و قانونی پیش از طرح دعوای تجاری.',
+      badge: 'مقاله آموزشی'
+    },
+    {
+      title: 'دادخواست چیست و چگونه تنظیم می‌شود؟',
+      href: '/knowledge/what-is-petition',
+      desc: 'راهنمای کامل ثبت دادخواست مالی در دفاتر قضایی.',
+      badge: 'مقاله آموزشی'
+    }
   ],
 
   ctaTitle: 'سفارش تنظیم دادخواست ابطال و توقف فوری اجراییه چک',

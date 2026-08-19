@@ -1,5 +1,5 @@
 import { ServiceItem } from './types';
-import { getSupabaseAdmin } from '@/lib/supabase';
+import { getSupabaseAdmin, isSupabaseConfigured } from '@/lib/supabase';
 
 export const DEFAULT_SERVICES: ServiceItem[] = [
   {
@@ -102,6 +102,9 @@ function mapRowToService(row: Record<string, unknown>): ServiceItem {
 
 export async function getServices(): Promise<ServiceItem[]> {
   try {
+    if (!isSupabaseConfigured()) {
+      return inMemoryServices;
+    }
     const supabase = getSupabaseAdmin();
     const { data, error } = await supabase
       .from('services')
@@ -114,7 +117,7 @@ export async function getServices(): Promise<ServiceItem[]> {
       return items;
     }
   } catch (err) {
-    console.error('Error fetching services from Supabase:', err);
+    console.warn('Error fetching services from Supabase (fallback to local):', err);
   }
   return inMemoryServices;
 }

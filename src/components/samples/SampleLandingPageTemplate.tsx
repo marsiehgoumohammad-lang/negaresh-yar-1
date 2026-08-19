@@ -587,47 +587,51 @@ export function SampleLandingPageTemplate({ data }: { data: SampleLandingData })
         )}
 
         {/* ---------------------------------------------------- */}
-        {/* 12. INTERNAL LINKING: RELATED SAMPLES & SERVICES */}
+        {/* 12. INTERNAL LINKING: RELATED SAMPLES, ARTICLES & SERVICES */}
         {/* ---------------------------------------------------- */}
-        {data.relatedServices && data.relatedServices.length > 0 && (
+        {((data.relatedServices && data.relatedServices.length > 0) ||
+          (data.relatedSamples && data.relatedSamples.length > 0) ||
+          (data.relatedArticles && data.relatedArticles.length > 0)) && (
           <section className="space-y-6 pt-6 border-t border-slate-800/80">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className={`grid grid-cols-1 ${data.relatedArticles && data.relatedArticles.length > 0 ? 'lg:grid-cols-3' : 'md:grid-cols-2'} gap-6`}>
               {/* Related Services */}
-              <div className="space-y-3">
-                <h3 className="text-base font-bold text-white flex items-center gap-2">
-                  <Sparkles className="w-4 h-4 text-[#E5C158]" />
-                  <span>خدمات تخصصی مرتبط در نگارش یار</span>
-                </h3>
-                <div className="space-y-2.5">
-                  {data.relatedServices.map((srv, idx) => (
-                    <Link
-                      key={idx}
-                      href={srv.href}
-                      className="p-3.5 rounded-xl bg-slate-900/60 border border-slate-800 hover:border-[#E5C158]/40 transition-all flex items-center justify-between group block"
-                    >
-                      <div>
-                        <div className="flex items-center gap-2 mb-0.5">
-                          <span className="text-[11px] font-semibold px-2 py-0.5 rounded bg-[#E5C158]/10 text-[#E5C158]">
-                            {srv.badge}
-                          </span>
-                          <h4 className="text-xs sm:text-sm font-bold text-white group-hover:text-[#E5C158] transition-colors">
-                            {srv.title}
-                          </h4>
+              {data.relatedServices && data.relatedServices.length > 0 && (
+                <div className="space-y-3">
+                  <h3 className="text-base font-bold text-white flex items-center gap-2">
+                    <Sparkles className="w-4 h-4 text-[#E5C158]" />
+                    <span>خدمات تخصصی نگارش یار</span>
+                  </h3>
+                  <div className="space-y-2.5">
+                    {data.relatedServices.map((srv, idx) => (
+                      <Link
+                        key={idx}
+                        href={srv.href}
+                        className="p-3.5 rounded-xl bg-slate-900/60 border border-slate-800 hover:border-[#E5C158]/40 transition-all flex items-center justify-between group block"
+                      >
+                        <div>
+                          <div className="flex items-center gap-2 mb-0.5">
+                            <span className="text-[11px] font-semibold px-2 py-0.5 rounded bg-[#E5C158]/10 text-[#E5C158]">
+                              {srv.badge}
+                            </span>
+                            <h4 className="text-xs sm:text-sm font-bold text-white group-hover:text-[#E5C158] transition-colors">
+                              {srv.title}
+                            </h4>
+                          </div>
+                          <p className="text-xs text-slate-400">{srv.desc}</p>
                         </div>
-                        <p className="text-xs text-slate-400">{srv.desc}</p>
-                      </div>
-                      <ChevronLeft className="w-4 h-4 text-slate-500 group-hover:text-[#E5C158] transition-transform group-hover:-translate-x-1 shrink-0" />
-                    </Link>
-                  ))}
+                        <ChevronLeft className="w-4 h-4 text-slate-500 group-hover:text-[#E5C158] transition-transform group-hover:-translate-x-1 shrink-0" />
+                      </Link>
+                    ))}
+                  </div>
                 </div>
-              </div>
+              )}
 
               {/* Related Samples */}
               {data.relatedSamples && data.relatedSamples.length > 0 && (
                 <div className="space-y-3">
                   <h3 className="text-base font-bold text-white flex items-center gap-2">
                     <BookOpen className="w-4 h-4 text-blue-400" />
-                    <span>سایر نمونه اسناد مرتبط</span>
+                    <span>نمونه اسناد و لوایح مرتبط</span>
                   </h3>
                   <div className="space-y-2.5">
                     {data.relatedSamples.map((smp, idx) => {
@@ -669,6 +673,38 @@ export function SampleLandingPageTemplate({ data }: { data: SampleLandingData })
                         </Link>
                       );
                     })}
+                  </div>
+                </div>
+              )}
+
+              {/* Related Knowledge Articles */}
+              {data.relatedArticles && data.relatedArticles.length > 0 && (
+                <div className="space-y-3">
+                  <h3 className="text-base font-bold text-white flex items-center gap-2">
+                    <FileText className="w-4 h-4 text-emerald-400" />
+                    <span>راهنماها و مقالات حقوقی</span>
+                  </h3>
+                  <div className="space-y-2.5">
+                    {data.relatedArticles.map((art, idx) => (
+                      <Link
+                        key={idx}
+                        href={art.href}
+                        className="p-3.5 rounded-xl bg-slate-900/60 border border-slate-800 hover:border-emerald-500/40 transition-all flex items-center justify-between group block"
+                      >
+                        <div>
+                          <div className="flex items-center gap-2 mb-0.5">
+                            <span className="text-[11px] font-semibold px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-400">
+                              {art.badge || 'مقاله آموزشی'}
+                            </span>
+                            <h4 className="text-xs sm:text-sm font-bold text-white group-hover:text-emerald-400 transition-colors">
+                              {art.title}
+                            </h4>
+                          </div>
+                          <p className="text-xs text-slate-400">{art.desc}</p>
+                        </div>
+                        <ChevronLeft className="w-4 h-4 text-slate-500 group-hover:text-emerald-400 transition-transform group-hover:-translate-x-1 shrink-0" />
+                      </Link>
+                    ))}
                   </div>
                 </div>
               )}

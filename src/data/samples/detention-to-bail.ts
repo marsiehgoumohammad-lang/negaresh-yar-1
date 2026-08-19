@@ -183,35 +183,44 @@ export const sampleDetentionToBailData: SampleLandingData = {
 
   relatedSamples: [
     {
-      title: 'نمونه درخواست تبدیل وثیقه به کفالت',
-      href: '/samples/bail-to-surety',
-      desc: 'الگوی فک سند ملکی و معرفی ضامن فیش حقوقی یا جواز کسب.',
-      badge: 'تبدیل وثیقه',
+      title: 'نمونه درخواست انصراف ضامن و فک فیش حقوقی',
+      href: '/samples/bail-release-surety-request',
+      desc: 'رفع اثر از تعهد کفیل و فیش حقوقی.',
+      badge: 'انصراف ضامن'
     },
     {
-      title: 'نمونه درخواست تخفیف و کاهش مبلغ وثیقه',
-      href: '/samples/bail-reduction',
-      desc: 'الگوی تقاضای تعدیل مبلغ سنگین وثیقه متناسب با خسارت پرونده.',
-      badge: 'کاهش وثیقه',
-    },
-    {
-      title: 'نمونه درخواست تعویض و جایگزینی وثیقه',
-      href: '/samples/bail-substitution',
-      desc: 'الگوی جایگزین کردن سند ملکی قبلی با سند ملک جدید.',
-      badge: 'تعویض سند',
-    },
-    {
-      title: 'نمونه درخواست فک وثیقه و رفع اثر از سند',
-      href: '/samples/release-of-bail',
-      desc: 'الگوی رفع توقیف از سند ملک پس از صدور برائت یا اجرای حکم.',
-      badge: 'فک وثیقه',
-    },
-    {
-      title: 'نمونه درخواست تسریع در قبولی وثیقه',
+      title: 'نمونه تقاضای قبولی وثیقه و ارزیابی ملک',
       href: '/samples/bail-acceptance-request',
-      desc: 'الگوی تسریع در کارشناسی و صدور قبولی وثیقه جهت ممانعت از بازداشت.',
-      badge: 'قبولی وثیقه',
+      desc: 'معرفی سند ملکی و تقاضای کارشناسی ارزش.',
+      badge: 'تودیع وثیقه'
     },
+    {
+      title: 'نمونه درخواست تبدیل و تعویض وثیقه',
+      href: '/samples/bail-substitution',
+      desc: 'جایگزینی سند ملکی دیگر یا ضمانت‌نامه.',
+      badge: 'تعویض وثیقه'
+    }
+  ],
+
+  relatedArticles: [
+    {
+      title: 'قرار وثیقه چیست و چگونه تبدیل یا آزاد می‌شود؟',
+      href: '/knowledge/what-is-bail',
+      desc: 'راهنمای جامع تودیع وثیقه، رفع بازداشت و استرداد سند.',
+      badge: 'مقاله آموزشی'
+    },
+    {
+      title: 'تفاوت عفو عمومی با آزادی مشروط',
+      href: '/knowledge/pardon-vs-conditional-release',
+      desc: 'بررسی راهکارهای قانونی آزادی و ارفاقات کیفری.',
+      badge: 'مقاله آموزشی'
+    },
+    {
+      title: 'راهنمای سامانه خدمات الکترونیک قضایی ثنا',
+      href: '/knowledge/online-judicial-services-guide',
+      desc: 'نحوه پیگیری قرارهای تامین در سامانه ثنا.',
+      badge: 'مقاله آموزشی'
+    }
   ],
 
   ctaTitle: 'آیا متهم شما در بازداشت موقت به سر می‌برد؟',

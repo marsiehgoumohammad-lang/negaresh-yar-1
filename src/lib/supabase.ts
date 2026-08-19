@@ -16,11 +16,29 @@ const supabaseSecretKey =
   supabaseAnonKey;
 
 let cachedAdminClient: SupabaseClient | null = null;
+let cachedPublicClient: SupabaseClient | null = null;
+
+export function isSupabaseConfigured(): boolean {
+  const key = supabaseSecretKey || supabaseAnonKey;
+  return Boolean(supabaseUrl && key && key.trim().length > 0 && !key.includes('placeholder'));
+}
 
 /**
  * Standard Supabase client (for client components & public operations)
  */
-export const supabase = createClient(supabaseUrl, supabaseAnonKey || supabaseSecretKey);
+export const supabase = (function getPublicClient(): SupabaseClient {
+  if (cachedPublicClient) {
+    return cachedPublicClient;
+  }
+  const key = supabaseAnonKey || supabaseSecretKey || 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.dummy';
+  cachedPublicClient = createClient(supabaseUrl, key, {
+    auth: {
+      persistSession: false,
+      autoRefreshToken: false,
+    },
+  });
+  return cachedPublicClient;
+})();
 
 /**
  * Admin Supabase client (for server-side API routes & stores to bypass RLS)
@@ -29,7 +47,7 @@ export function getSupabaseAdmin(): SupabaseClient {
   if (cachedAdminClient) {
     return cachedAdminClient;
   }
-  const key = supabaseSecretKey || supabaseAnonKey;
+  const key = supabaseSecretKey || supabaseAnonKey || 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.dummy';
   cachedAdminClient = createClient(supabaseUrl, key, {
     auth: {
       persistSession: false,

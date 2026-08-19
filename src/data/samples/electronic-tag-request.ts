@@ -81,7 +81,7 @@ export const sampleElectronicTagRequestData: SampleLandingData = {
   ],
 
   writingTipsTitle: 'اصول نگارش لایحه درخواست پابند الکترونیکی',
-  writingTipsSubtitle: 'نکاتی که جلب موافقت قاضی اجرای احکام و دادگاه را تضمین می‌نماید',
+  writingTipsSubtitle: 'نکاتی که موجب تسهیل ارزیابی و بررسی دقیق‌تر لایحه توسط قاضی اجرای احکام و دادگاه می‌شود',
   writingTipsList: [
     {
       title: 'استناد صریح به اصلاحات ماده ۶۲ قانون مجازات اسلامی',
@@ -185,11 +185,44 @@ export const sampleElectronicTagRequestData: SampleLandingData = {
 
   relatedArticles: [
     {
-      title: 'راهنمای کامل شرایط و مراحل دریافت پابند الکترونیک',
-      href: '/knowledge/electronic-tag-prison-guide',
-      badge: 'مقاله آموزشی',
-      desc: 'بررسی آیین‌نامه اجرایی مراقبت الکترونیکی، درجات مشمول و مراحل درخواست از زندان.',
+      title: 'چگونه درخواست آزادی مشروط بدهیم؟',
+      href: '/knowledge/how-to-request-conditional-release',
+      desc: 'شرایط بهره‌مندی از ارفاقات قانونی و کاهش دوران حبس.',
+      badge: 'مقاله آموزشی'
     },
+    {
+      title: 'تفاوت عفو عمومی با آزادی مشروط',
+      href: '/knowledge/pardon-vs-conditional-release',
+      desc: 'راهنمای جامع ارفاقات قانونی و آزادی محکومان.',
+      badge: 'مقاله آموزشی'
+    },
+    {
+      title: 'نحوه خواندن و درک دادنامه و احکام دادگاه',
+      href: '/knowledge/how-to-read-court-verdict',
+      desc: 'تشخیص قطعیت دادنامه و مهلت‌های اعتراض.',
+      badge: 'مقاله آموزشی'
+    }
+  ],
+
+  relatedSamples: [
+    {
+      title: 'نمونه درخواست تعلیق اجرای مجازات',
+      href: '/samples/sentence-suspension-request',
+      desc: 'تقاضای تعلیق حبس با استناد به ماده ۴۶ قانون مجازات.',
+      badge: 'تعلیق مجازات'
+    },
+    {
+      title: 'نمونه درخواست تخفیف تسلیم به رای',
+      href: '/samples/verdict-surrender-discount',
+      desc: 'کاهش یک‌چهارم حبس با اسقاط حق تجدیدنظرخواهی.',
+      badge: 'تسلیم به رأی'
+    },
+    {
+      title: 'نمونه درخواست مرخصی زندانی با وثیقه',
+      href: '/samples/prisoner-furlough-request',
+      desc: 'تقاضای اعطای مرخصی از دادیار ناظر زندان.',
+      badge: 'مرخصی زندانی'
+    }
   ],
 
   ctaTitle: 'آیا متهم یا زندانی شما خواهان استفاده از پابند الکترونیک است؟',

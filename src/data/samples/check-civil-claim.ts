@@ -181,29 +181,44 @@ export const sampleCheckCivilClaimData: SampleLandingData = {
 
   relatedSamples: [
     {
-      title: 'نمونه درخواست صدور اجراییه چک',
-      href: '/samples/check-execution-petition',
-      badge: 'اجراییه مستقیم',
-      desc: 'صدور سریع اجراییه ماده ۲۳ قانون صدور چک بدون جلسه دادگاه.',
+      title: 'نمونه اظهارنامه رسمی مطالبه وجه چک',
+      href: '/samples/check-payment-demand',
+      desc: 'اخطار قانونی رسمی به صادرکننده و ظهرنویس.',
+      badge: 'اظهارنامه چک'
     },
     {
-      title: 'نمونه شکواییه صدور چک بلامحل',
-      href: '/samples/check-bounced-complaint',
-      badge: 'شکایت کیفری',
-      desc: 'پیگیری کیفری و مجازات حبس صادرکننده چک بلامحل.',
+      title: 'نمونه دادخواست رفع دستور عدم پرداخت چک',
+      href: '/samples/check-stop-payment-objection',
+      desc: 'ابطال ادعای سرقت یا کلاهبرداری صادرکننده.',
+      badge: 'رفع مسدودی چک'
     },
     {
-      title: 'نمونه دادخواست مطالبه وجه سفته',
+      title: 'نمونه دادخواست مطالبه وجه سفته حسن انجام کار',
       href: '/samples/promissory-note-claim',
-      badge: 'اسناد تجاری',
-      desc: 'مشاهده الگوی دادخواست مطالبه وجه سفته واخواست‌شده.',
+      desc: 'استرداد یا مطالبه سفته‌های امانی استخدامی.',
+      badge: 'سفته کارگری'
+    }
+  ],
+
+  relatedArticles: [
+    {
+      title: 'تفاوت چک حقوقی و چک کیفری در قانون جدید',
+      href: '/knowledge/civil-vs-criminal-check',
+      desc: 'مقایسه ۴ روش وصول چک و مزایای اجراییه ماده ۲۳.',
+      badge: 'مقاله آموزشی'
     },
     {
-      title: 'نمونه دادخواست حقوقی ثنا',
-      href: '/samples/petition',
-      badge: 'اوراق قضایی',
-      desc: 'مشاهده چارچوب کلی دادخواست‌های عمومی دادگاه حقوقی.',
+      title: 'اظهارنامه رسمی چیست و چگونه ارسال می‌شود؟',
+      href: '/knowledge/what-is-legal-notice',
+      desc: 'اخطار رسمی و قانونی پیش از طرح دعوای تجاری.',
+      badge: 'مقاله آموزشی'
     },
+    {
+      title: 'دادخواست چیست و چگونه تنظیم می‌شود؟',
+      href: '/knowledge/what-is-petition',
+      desc: 'راهنمای کامل ثبت دادخواست مالی در دفاتر قضایی.',
+      badge: 'مقاله آموزشی'
+    }
   ],
 
   ctaTitle: 'آیا مایلید دادخواست مطالبه وجه چک را با تامین خواسته فوری ثبت کنید؟',

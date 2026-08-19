@@ -186,23 +186,44 @@ export const sampleSayadCheckClaimPetitionData: SampleLandingData = {
 
   relatedSamples: [
     {
-      title: 'نمونه درخواست صدور اجراییه مستقیم چک صیادی (ماده ۲۳)',
-      href: '/samples/check-direct-execution',
-      desc: 'الگوی درخواست توقیف فوری حساب‌ها بدون نیاز به رسیدگی در دادگاه.',
-      badge: 'اجراییه مستقیم',
+      title: 'نمونه درخواست صدور اجراییه مستقیم چک',
+      href: '/samples/check-execution-petition',
+      desc: 'صدور فوری اجراییه ماده ۲۳ بدون نیاز به دادرسی.',
+      badge: 'اجراییه مستقیم'
     },
     {
-      title: 'نمونه دادخواست ابطال و توقف اجراییه مستقیم چک',
+      title: 'نمونه شکواییه چک بلامحل کیفری',
+      href: '/samples/check-bounced-complaint',
+      desc: 'شکایت کیفری از صادرکننده چک در دادسرا.',
+      badge: 'شکایت کیفری'
+    },
+    {
+      title: 'نمونه ابطال و توقف اجراییه مستقیم چک',
       href: '/samples/check-execution-objection',
-      desc: 'الگوی دادخواست توقف اجرای چک‌های تضمینی و امانی.',
-      badge: 'ابطال اجراییه',
+      desc: 'دادخواست توقف اجرای چک‌های تضمینی و امانی.',
+      badge: 'ابطال اجراییه'
+    }
+  ],
+
+  relatedArticles: [
+    {
+      title: 'تفاوت چک حقوقی و چک کیفری در قانون جدید',
+      href: '/knowledge/civil-vs-criminal-check',
+      desc: 'مقایسه ۴ روش وصول چک و مزایای اجراییه ماده ۲۳.',
+      badge: 'مقاله آموزشی'
     },
     {
-      title: 'نمونه دادخواست مطالبه وجه سفته واخواست شده',
-      href: '/samples/promissory-note-protest-objection',
-      desc: 'الگوی مطالبه طلب با سفته و واخواست با خسارت تأخیر.',
-      badge: 'مطالبه سفته',
+      title: 'اظهارنامه رسمی چیست و چگونه ارسال می‌شود؟',
+      href: '/knowledge/what-is-legal-notice',
+      desc: 'اخطار رسمی و قانونی پیش از طرح دعوای تجاری.',
+      badge: 'مقاله آموزشی'
     },
+    {
+      title: 'دادخواست چیست و چگونه تنظیم می‌شود؟',
+      href: '/knowledge/what-is-petition',
+      desc: 'راهنمای کامل ثبت دادخواست مالی در دفاتر قضایی.',
+      badge: 'مقاله آموزشی'
+    }
   ],
 
   ctaTitle: 'سفارش تنظیم دادخواست مطالبه وجه چک صیادی و توقیف اموال',

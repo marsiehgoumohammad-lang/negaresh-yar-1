@@ -279,32 +279,44 @@ export const sampleLegalNoticeData: SampleLandingData = {
 
   relatedArticles: [
     {
-      title: 'اظهارنامه چیست و چگونه اخطار قانونی ارسال کنیم؟',
+      title: 'اظهارنامه رسمی چیست و چگونه ارسال می‌شود؟',
       href: '/knowledge/what-is-legal-notice',
-      desc: 'راهنمای کامل ارسال اخطار قانونی، مطالبه وجه، تحویل کالا و امضای سند.',
-      badge: 'راهنمای اظهارنامه',
+      desc: 'ضرورت ارسال اظهارنامه پیش از ثبت دادخواست ملکی.',
+      badge: 'مقاله آموزشی'
     },
     {
-      title: 'ابلاغیه ثنا چیست و چگونه آن را ببینیم؟',
-      href: '/knowledge/what-is-e-notification',
-      desc: 'راهنمای کامل ورود به سامانه عدل ایران و مشاهده ابلاغیه اظهارنامه.',
-      badge: 'سامانه ثنا',
+      title: 'دادخواست چیست و مراحل ثبت آن در دادگاه',
+      href: '/knowledge/what-is-petition',
+      desc: 'راهنمای تنظیم دادخواست‌های ملکی و قراردادی.',
+      badge: 'مقاله آموزشی'
     },
+    {
+      title: 'لایحه دفاعیه چیست و چگونه نوشته می‌شود؟',
+      href: '/knowledge/what-is-legal-brief',
+      desc: 'اصول تنظیم لوایح دفاعیه در محاکم عمومی حقوقی.',
+      badge: 'مقاله آموزشی'
+    }
   ],
 
   relatedSamples: [
     {
-      title: 'نمونه دادخواست حقوقی',
-      href: '/samples/petition',
-      desc: 'الگوی کامل دادخواست مطالبه وجه.',
-      badge: 'نمونه حقوقی',
+      title: 'نمونه دستور تخلیه فوری ملک استیجاری',
+      href: '/samples/eviction-expired-lease',
+      desc: 'تخلیه فوری مستاجر پس از انقضای مدت قرارداد.',
+      badge: 'تخلیه فوری'
     },
     {
-      title: 'نمونه لایحه دفاعیه',
-      href: '/samples/legal-brief',
-      desc: 'الگوی لایحه پاسخ به دادخواست.',
-      badge: 'نمونه حقوقی',
+      title: 'نمونه دادخواست فسخ اجاره و تخلیه به دلیل عدم پرداخت اجاره‌بها',
+      href: '/samples/eviction-nonpayment-rent',
+      desc: 'فسخ قرارداد به علت تعویق ۳ ماهه کرایه.',
+      badge: 'تخلیه با حکم'
     },
+    {
+      title: 'نمونه دادخواست الزام به تنظیم سند رسمی',
+      href: '/samples/official-deed-compulsion-petition',
+      desc: 'الزام فروشنده به انتقال سند و اخذ پایان‌کار.',
+      badge: 'الزام به سند'
+    }
   ],
 
   ctaTitle: 'سفارش تنظیم اظهارنامه رسمی ثنا با وزن حقوقی بالا',

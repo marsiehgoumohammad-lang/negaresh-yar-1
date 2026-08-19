@@ -185,21 +185,42 @@ export const sampleAuctionDeedTransferRequestData: SampleLandingData = {
     {
       title: 'نمونه درخواست استرداد ۱۰ درصد سپرده مزایده',
       href: '/samples/auction-deposit-refund-request',
-      desc: 'الگوی تقاضای عودت وجه برای افراد غیربرنده.',
-      badge: 'استرداد سپرده',
+      desc: 'بازپس‌گیری ودیعه واریزی شرکت در حراج دادگاه.',
+      badge: 'استرداد ودیعه مزایده'
     },
     {
-      title: 'نمونه لایحه اعتراض و ابطال مزایده اجرای احکام',
-      href: '/samples/auction-cancellation-objection',
-      desc: 'الگوی لایحه اعتراض به تخلفات شکلی و ماهوی مزایده.',
-      badge: 'ابطال مزایده',
+      title: 'نمونه درخواست مهلت پرداخت محکوم‌به',
+      href: '/samples/judgment-enforcement-grace-period',
+      desc: 'تقاضای اعطای مهلت جهت تامین وجه و جلوگیری از جلب.',
+      badge: 'مهلت اجرای حکم'
     },
     {
-      title: 'نمونه درخواست فک وثیقه و رفع اثر از سند',
-      href: '/samples/release-of-bail',
-      desc: 'الگوی رفع توقیف سند ملکی پس از پایان پرونده.',
-      badge: 'فک وثیقه',
+      title: 'نمونه لایحه اعتراض به نظریه کارشناس',
+      href: '/samples/expert-opinion-objection',
+      desc: 'اعتراض به ارزیابی غیرواقعی و ارجاع به هیئت ۳ نفره.',
+      badge: 'اعتراض به کارشناسی'
+    }
+  ],
+
+  relatedArticles: [
+    {
+      title: 'راهنمای جامع کارشناسی سه نفره و پنج نفره دادگاه',
+      href: '/knowledge/expert-panel-court',
+      desc: 'شرایط، مهلت یک‌هفته‌ای و فرمول اعتراض به نظریه کارشناس.',
+      badge: 'مقاله آموزشی'
     },
+    {
+      title: 'راهنمای ثبت نام و شرکت در مزایده‌های ستاد ایران',
+      href: '/knowledge/setad-auction-registration',
+      desc: 'آموزش گام‌به‌گام خرید املاک و خودرو در حراج دولتی.',
+      badge: 'مقاله آموزشی'
+    },
+    {
+      title: 'راهنمای خرید ملک و خودرو از مزایده‌های دادگاه',
+      href: '/knowledge/how-to-buy-car-and-property-from-court-auction',
+      desc: 'نحوه شرکت در مزایده‌های اجرای احکام و حقوق برنده حراج.',
+      badge: 'مقاله آموزشی'
+    }
   ],
 
   ctaTitle: 'سفارش تنظیم درخواست انتقال سند رسمی ملک مزایده‌ای',

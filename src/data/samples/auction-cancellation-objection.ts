@@ -182,23 +182,44 @@ export const sampleAuctionCancellationObjectionData: SampleLandingData = {
 
   relatedSamples: [
     {
-      title: 'نمونه درخواست استرداد ۱۰ درصد سپرده مزایده',
-      href: '/samples/auction-deposit-refund-request',
-      desc: 'الگوی استرداد ودیعه برای افراد غیربرنده.',
-      badge: 'استرداد سپرده',
+      title: 'نمونه درخواست رفع توقیف مستثنیات دین',
+      href: '/samples/property-attachment-lifting-request',
+      desc: 'آزادی منزل مسکونی یا خودروی کسب درآمد.',
+      badge: 'مستثنیات دین'
     },
     {
-      title: 'نمونه درخواست انتقال سند رسمی ملک مزایده‌ای',
+      title: 'نمونه دادخواست تامین خواسته فوری اموال',
+      href: '/samples/provisional-attachment-petition',
+      desc: 'توقیف اموال بدهکار قبل از صدور رأی قطعی.',
+      badge: 'تامین خواسته'
+    },
+    {
+      title: 'نمونه درخواست انتقال سند پس از مزایده',
       href: '/samples/auction-deed-transfer-request',
-      desc: 'الگوی صدور سند رسمی انتقال به نام برنده مزایده.',
-      badge: 'انتقال سند',
+      desc: 'تقاضای صدور سند رسمی به نام برنده حراج.',
+      badge: 'انتقال سند مزایده'
+    }
+  ],
+
+  relatedArticles: [
+    {
+      title: 'راهنمای جامع کارشناسی سه نفره و پنج نفره دادگاه',
+      href: '/knowledge/expert-panel-court',
+      desc: 'شرایط، مهلت یک‌هفته‌ای و فرمول اعتراض به نظریه کارشناس.',
+      badge: 'مقاله آموزشی'
     },
     {
-      title: 'نمونه لایحه اعتراض به گزارش کارشناس رسمی',
-      href: '/samples/expert-opinion-objection',
-      desc: 'الگوی اعتراض به ارزیابی نامتعارف قیمت ملک توسط کارشناس.',
-      badge: 'اعتراض کارشناسی',
+      title: 'راهنمای ثبت نام و شرکت در مزایده‌های ستاد ایران',
+      href: '/knowledge/setad-auction-registration',
+      desc: 'آموزش گام‌به‌گام خرید املاک و خودرو در حراج دولتی.',
+      badge: 'مقاله آموزشی'
     },
+    {
+      title: 'راهنمای خرید ملک و خودرو از مزایده‌های دادگاه',
+      href: '/knowledge/how-to-buy-car-and-property-from-court-auction',
+      desc: 'نحوه شرکت در مزایده‌های اجرای احکام و حقوق برنده حراج.',
+      badge: 'مقاله آموزشی'
+    }
   ],
 
   ctaTitle: 'سفارش تنظیم لایحه اعتراض به صحت و ابطال مزایده دادگاه',

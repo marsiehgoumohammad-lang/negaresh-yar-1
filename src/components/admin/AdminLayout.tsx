@@ -131,7 +131,7 @@ export function AdminLayout({ children }: AdminLayoutProps) {
             {/* Navigation Menu */}
             <nav className="space-y-1">
               {navItems.map((item) => {
-                const isActive = pathname === item.href || (item.href !== '/admin' && pathname.startsWith(item.href));
+                const isActive = pathname ? (pathname === item.href || (item.href !== '/admin' && pathname.startsWith(item.href))) : false;
                 const Icon = item.icon;
                 return (
                   <Link

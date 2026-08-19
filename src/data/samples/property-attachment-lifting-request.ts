@@ -195,6 +195,48 @@ export const samplePropertyAttachmentLiftingRequestData: SampleDocument = {
     },
   ],
 
+  relatedSamples: [
+    {
+      title: 'نمونه دادخواست تامین خواسته فوری اموال',
+      href: '/samples/provisional-attachment-petition',
+      desc: 'توقیف اموال بدهکار قبل از صدور رأی قطعی.',
+      badge: 'تامین خواسته'
+    },
+    {
+      title: 'نمونه درخواست انتقال سند پس از مزایده',
+      href: '/samples/auction-deed-transfer-request',
+      desc: 'تقاضای صدور سند رسمی به نام برنده حراج.',
+      badge: 'انتقال سند مزایده'
+    },
+    {
+      title: 'نمونه درخواست استرداد ۱۰ درصد سپرده مزایده',
+      href: '/samples/auction-deposit-refund-request',
+      desc: 'بازپس‌گیری ودیعه واریزی شرکت در حراج دادگاه.',
+      badge: 'استرداد ودیعه مزایده'
+    }
+  ],
+
+  relatedArticles: [
+    {
+      title: 'راهنمای جامع کارشناسی سه نفره و پنج نفره دادگاه',
+      href: '/knowledge/expert-panel-court',
+      desc: 'شرایط، مهلت یک‌هفته‌ای و فرمول اعتراض به نظریه کارشناس.',
+      badge: 'مقاله آموزشی'
+    },
+    {
+      title: 'راهنمای ثبت نام و شرکت در مزایده‌های ستاد ایران',
+      href: '/knowledge/setad-auction-registration',
+      desc: 'آموزش گام‌به‌گام خرید املاک و خودرو در حراج دولتی.',
+      badge: 'مقاله آموزشی'
+    },
+    {
+      title: 'راهنمای خرید ملک و خودرو از مزایده‌های دادگاه',
+      href: '/knowledge/how-to-buy-car-and-property-from-court-auction',
+      desc: 'نحوه شرکت در مزایده‌های اجرای احکام و حقوق برنده حراج.',
+      badge: 'مقاله آموزشی'
+    }
+  ],
+
   ctaTitle: 'نیاز به تنظیم فوری لایحه رفع توقیف مستثنیات دین دارید؟',
   ctaDescription:
     'متخصصان نگارش یار با استناد به مستندات قانونی و تجارب قضایی، لایحه رفع توقیف مسکن، خودرو یا حساب بانکی شما را در کوتاه‌ترین زمان آماده می‌کنند.',

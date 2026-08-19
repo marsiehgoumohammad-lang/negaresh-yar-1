@@ -1,6 +1,6 @@
 import { Article, ArticleStatus, CreateArticleData } from './types';
 import { ALL_KNOWLEDGE_ARTICLES, KNOWLEDGE_METADATA_MAP } from '@/data/knowledge';
-import { getSupabaseAdmin } from '@/lib/supabase';
+import { getSupabaseAdmin, isSupabaseConfigured } from '@/lib/supabase';
 import { SupabaseClient } from '@supabase/supabase-js';
 
 export type { Article, ArticleStatus, CreateArticleData };
@@ -43,10 +43,19 @@ function mapRowToArticle(row: Record<string, unknown>): Article {
   const contentText = (row.content as string) || '';
   const wordCount = contentText ? contentText.trim().split(/\s+/).filter(Boolean).length : (Number(meta.wordCount) || 0);
 
+  const metaCat = (typeof meta.category === 'string' && meta.category.trim()) ? meta.category.trim() : '';
+  const rowCat = (typeof row.category === 'string' && row.category.trim()) ? row.category.trim() : '';
+  let category = metaCat || rowCat || 'حقوقی';
+
+  const slug = (row.slug as string) || '';
+  if (slug === 'sabt-nam-site-mazaiede-dolat-ghove-ghazaiye' && category === 'حقوقی') {
+    category = 'مالیات، بیمه و امور تجاری';
+  }
+
   return {
-    id: (row.id as string) || (meta.customId as string) || (row.slug as string),
+    id: (row.id as string) || (meta.customId as string) || slug,
     title: (row.title as string) || '',
-    slug: (row.slug as string) || '',
+    slug,
     status: (row.status as ArticleStatus) || 'draft',
     excerpt: (row.excerpt as string) || (row.seo_description as string) || '',
     content: contentText,
@@ -56,7 +65,7 @@ function mapRowToArticle(row: Record<string, unknown>): Article {
     primaryKeyword: (meta.primaryKeyword as string) || (Array.isArray(row.keywords) && (row.keywords[0] as string)) || '',
     schema: typeof meta.schema === 'string' ? meta.schema : (meta.schema ? JSON.stringify(meta.schema) : ''),
     wordCount,
-    category: (meta.category as string) || 'حقوقی',
+    category,
     createdAt: (row.created_at as string) || new Date().toISOString(),
     updatedAt: (row.updated_at as string) || new Date().toISOString(),
     publishedAt: (row.published_at as string) || null,
@@ -78,7 +87,7 @@ function mapArticleToRow(article: Article) {
       primaryKeyword: article.primaryKeyword || '',
       schema: article.schema || '',
       wordCount: article.wordCount || 0,
-      category: article.category || '',
+      category: article.category || 'حقوقی',
       customId: article.id,
     },
     updated_at: new Date().toISOString(),
@@ -103,10 +112,30 @@ async function seedInitialArticlesIfEmpty(supabase: SupabaseClient) {
   }
 }
 
+let hasMigratedAuction = false;
+async function migrateAuctionArticleCategory(supabase: SupabaseClient, articles: Article[]) {
+  if (hasMigratedAuction) return;
+  hasMigratedAuction = true;
+  try {
+    const slug = 'sabt-nam-site-mazaiede-dolat-ghove-ghazaiye';
+    const target = articles.find((a) => a.slug === slug);
+    if (target && target.category !== 'مالیات، بیمه و امور تجاری') {
+      target.category = 'مالیات، بیمه و امور تجاری';
+      const row = mapArticleToRow(target);
+      await supabase.from('articles').update(row).eq('slug', slug);
+    }
+  } catch (err) {
+    console.error('Error migrating auction article category:', err);
+  }
+}
+
 let inMemoryArticles: Article[] | null = null;
 
 export async function getArticles(): Promise<Article[]> {
   try {
+    if (!isSupabaseConfigured()) {
+      return inMemoryArticles || getInitialArticles();
+    }
     const supabase = getSupabaseAdmin();
     const { data, error } = await supabase
       .from('articles')
@@ -114,7 +143,7 @@ export async function getArticles(): Promise<Article[]> {
       .order('created_at', { ascending: false });
 
     if (error) {
-      console.error('Supabase error reading articles:', error.message);
+      console.warn('Supabase reading articles fallback:', error.message);
       return inMemoryArticles || getInitialArticles();
     }
 
@@ -126,16 +155,21 @@ export async function getArticles(): Promise<Article[]> {
     }
 
     const articles = (data as Record<string, unknown>[]).map(mapRowToArticle);
+    migrateAuctionArticleCategory(supabase, articles);
     inMemoryArticles = articles;
     return articles;
   } catch (err) {
-    console.error('Exception in getArticles():', err);
+    console.warn('Exception in getArticles() (falling back to initial):', err);
     return inMemoryArticles || getInitialArticles();
   }
 }
 
 export async function getPublishedArticles(): Promise<Article[]> {
   try {
+    if (!isSupabaseConfigured()) {
+      const all = inMemoryArticles || getInitialArticles();
+      return all.filter((a) => a.status === 'published');
+    }
     const supabase = getSupabaseAdmin();
     const { data, error } = await supabase
       .from('articles')
@@ -144,7 +178,7 @@ export async function getPublishedArticles(): Promise<Article[]> {
       .order('created_at', { ascending: false });
 
     if (error) {
-      console.error('Supabase error reading published articles:', error.message);
+      console.warn('Supabase reading published articles fallback:', error.message);
       const all = inMemoryArticles || getInitialArticles();
       return all.filter((a) => a.status === 'published');
     }
@@ -156,7 +190,7 @@ export async function getPublishedArticles(): Promise<Article[]> {
 
     return (data as Record<string, unknown>[]).map(mapRowToArticle);
   } catch (err) {
-    console.error('Exception in getPublishedArticles():', err);
+    console.warn('Exception in getPublishedArticles() (falling back to initial):', err);
     const all = inMemoryArticles || getInitialArticles();
     return all.filter((a) => a.status === 'published');
   }
@@ -164,8 +198,12 @@ export async function getPublishedArticles(): Promise<Article[]> {
 
 export async function getArticleBySlug(slug: string): Promise<Article | null> {
   try {
-    const supabase = getSupabaseAdmin();
     const cleanSlug = slug.trim();
+    if (!isSupabaseConfigured()) {
+      const fallbackList = inMemoryArticles || getInitialArticles();
+      return fallbackList.find((a) => a.slug === cleanSlug) || null;
+    }
+    const supabase = getSupabaseAdmin();
 
     const { data, error } = await supabase
       .from('articles')
@@ -181,7 +219,7 @@ export async function getArticleBySlug(slug: string): Promise<Article | null> {
     const fallbackList = inMemoryArticles || getInitialArticles();
     return fallbackList.find((a) => a.slug === cleanSlug) || null;
   } catch (err) {
-    console.error('Exception in getArticleBySlug():', err);
+    console.warn('Exception in getArticleBySlug() (falling back to initial):', err);
     const fallbackList = inMemoryArticles || getInitialArticles();
     return fallbackList.find((a) => a.slug === slug.trim()) || null;
   }
@@ -220,6 +258,11 @@ export async function createArticle(
         ? existingRow?.published_at || now
         : null;
 
+    const existingCategory = existingRow ? mapRowToArticle(existingRow as Record<string, unknown>).category : undefined;
+    const category = (data.category && data.category.trim())
+      ? data.category.trim()
+      : (existingCategory || 'حقوقی');
+
     const articleToSave: Article = {
       id: existingRow?.id || cleanSlug,
       title: data.title.trim(),
@@ -233,7 +276,7 @@ export async function createArticle(
       primaryKeyword: data.primaryKeyword ? data.primaryKeyword.trim() : (data.keywords?.[0] || ''),
       schema: data.schema ? (typeof data.schema === 'string' ? data.schema : JSON.stringify(data.schema)) : '',
       wordCount,
-      category: data.category || 'حقوقی',
+      category,
       createdAt: existingRow?.created_at || now,
       updatedAt: now,
       publishedAt,
@@ -331,6 +374,7 @@ export async function updateArticle(
       title: data.title !== undefined ? data.title.trim() : existing.title,
       slug: newSlug,
       status: newStatus,
+      category: (data.category !== undefined && data.category.trim()) ? data.category.trim() : existing.category,
       excerpt: data.excerpt !== undefined ? data.excerpt : existing.excerpt,
       content: newContent,
       metaTitle: data.metaTitle !== undefined ? data.metaTitle : existing.metaTitle,

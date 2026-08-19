@@ -183,29 +183,44 @@ export const sampleCheckStopPaymentObjectionData: SampleLandingData = {
 
   relatedSamples: [
     {
-      title: 'نمونه درخواست صدور اجراییه چک',
+      title: 'نمونه دادخواست مطالبه وجه سفته حسن انجام کار',
+      href: '/samples/promissory-note-claim',
+      desc: 'استرداد یا مطالبه سفته‌های امانی استخدامی.',
+      badge: 'سفته کارگری'
+    },
+    {
+      title: 'نمونه دادخواست مطالبه وجه چک صیادی',
+      href: '/samples/sayad-check-claim-petition',
+      desc: 'مطالبه اصل وجه با خسارت تاخیر تادیه از سررسید.',
+      badge: 'چک صیادی'
+    },
+    {
+      title: 'نمونه درخواست صدور اجراییه مستقیم چک',
       href: '/samples/check-execution-petition',
-      badge: 'اجراییه چک',
-      desc: 'مشاهده شرایط و شیوه صدور اجراییه مستقیم ماده ۲۳.',
+      desc: 'صدور فوری اجراییه ماده ۲۳ بدون نیاز به دادرسی.',
+      badge: 'اجراییه مستقیم'
+    }
+  ],
+
+  relatedArticles: [
+    {
+      title: 'تفاوت چک حقوقی و چک کیفری در قانون جدید',
+      href: '/knowledge/civil-vs-criminal-check',
+      desc: 'مقایسه ۴ روش وصول چک و مزایای اجراییه ماده ۲۳.',
+      badge: 'مقاله آموزشی'
     },
     {
-      title: 'نمونه دادخواست مطالبه وجه چک',
-      href: '/samples/check-civil-claim',
-      badge: 'دادرسی حقوقی',
-      desc: 'دادرسی ماهوی چک و دفاع در برابر ادعاهای دارنده.',
+      title: 'اظهارنامه رسمی چیست و چگونه ارسال می‌شود؟',
+      href: '/knowledge/what-is-legal-notice',
+      desc: 'اخطار رسمی و قانونی پیش از طرح دعوای تجاری.',
+      badge: 'مقاله آموزشی'
     },
     {
-      title: 'نمونه دادخواست اعسار و تقسیط محکوم‌به',
-      href: '/samples/insolvency',
-      badge: 'تقسیط بدهی',
-      desc: 'الگوی تقسیط بدهی و جلوگیری از بازداشت در اجرای احکام.',
-    },
-    {
-      title: 'نمونه درخواست مهلت برای پرداخت محکوم‌به',
-      href: '/samples/judgment-enforcement-grace-period',
-      badge: 'مهلت پرداخت',
-      desc: 'تقاضای مهلت از قاضی اجرای احکام جهت تسویه بدهی.',
-    },
+      title: 'دادخواست چیست و چگونه تنظیم می‌شود؟',
+      href: '/knowledge/what-is-petition',
+      desc: 'راهنمای کامل ثبت دادخواست مالی در دفاتر قضایی.',
+      badge: 'مقاله آموزشی'
+    }
   ],
 
   ctaTitle: 'آیا برای چکی که تسویه کرده‌اید یا امانی بوده اجراییه صادر شده است؟',

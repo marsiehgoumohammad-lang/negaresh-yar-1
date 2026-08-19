@@ -187,29 +187,44 @@ export const sampleObjectionAbsentJudgmentData: SampleLandingData = {
 
   relatedSamples: [
     {
-      title: 'نمونه دادخواست تجدیدنظرخواهی دادگاه استان',
+      title: 'نمونه لایحه تجدیدنظرخواهی حقوقی و کیفری',
       href: '/samples/appeal',
-      badge: 'تجدیدنظرخواهی',
-      desc: 'الگوی تجدیدنظرخواهی از دادنامه در صورت حضوری بودن رأی دادگاه بدوی.',
+      desc: 'اعتراض به دادنامه‌های بدوی در دادگاه تجدیدنظر استان.',
+      badge: 'تجدیدنظر'
     },
     {
-      title: 'نمونه لایحه مهلت پرداخت در اجرای احکام',
-      href: '/samples/judgment-enforcement-grace-period',
-      badge: 'اجرای احکام',
-      desc: 'الگوی تقاضای استمهال و توقف عملیات اجرایی و جلب.',
+      title: 'نمونه لایحه دفاعیه جامع دادگاه',
+      href: '/samples/legal-brief',
+      desc: 'الگوی استاندارد دفاع حقوقی و استناد به قوانین.',
+      badge: 'لایحه دفاعیه'
     },
     {
-      title: 'نمونه دادخواست اعسار و تقسیط بدهی',
-      href: '/samples/insolvency',
-      badge: 'اعسار و تقسیط',
-      desc: 'الگوی تقسیط محکوم‌به و مهریه جهت جلوگیری از حبس ماده ۳.',
+      title: 'نمونه اعتراض به قرار موقوفی تعقیب دادسرا',
+      href: '/samples/objection-stay-of-prosecution',
+      desc: 'اعتراض به قرار موقوفی به علت مرور زمان یا فوت.',
+      badge: 'موقوفی تعقیب'
+    }
+  ],
+
+  relatedArticles: [
+    {
+      title: 'چگونه به قرار منع تعقیب دادسرا اعتراض کنیم؟',
+      href: '/knowledge/how-to-object-prosecution-orders',
+      desc: 'مهلت‌ها و نحوه تنظیم لایحه اعتراضیه در دادگاه کیفری دو.',
+      badge: 'مقاله آموزشی'
     },
     {
-      title: 'نمونه لایحه اعتراض به قرار منع تعقیب',
-      href: '/samples/objection-non-prosecution-order',
-      badge: 'منع تعقیب',
-      desc: 'الگوی اعتراض به قرارهای نهایی دادسرا و نقض آن در دادگاه کیفری.',
+      title: 'چگونه به رأی دادگاه تجدیدنظرخواهی کنیم؟',
+      href: '/knowledge/how-to-appeal-court-decision',
+      desc: 'اصول تنظیم دادخواست و لایحه اعتراضیه در دادگاه تجدیدنظر.',
+      badge: 'مقاله آموزشی'
     },
+    {
+      title: 'تفاوت دادخواست و شکواییه چیست؟',
+      href: '/knowledge/petition-vs-complaint',
+      desc: 'مقایسه جامع مسیرهای دادرسی حقوقی و کیفری در محاکم.',
+      badge: 'مقاله آموزشی'
+    }
   ],
 
   ctaTitle: 'حکم غیابی علیه شما صادر شده و در مهلت ۲۰ روزه واخواهی هستید؟',

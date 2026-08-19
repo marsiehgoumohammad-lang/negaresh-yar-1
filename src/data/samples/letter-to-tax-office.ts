@@ -211,17 +211,44 @@ export const sampleLetterToTaxOfficeData: SampleLandingData = {
 
   relatedSamples: [
     {
-      title: 'نمونه نامه اداری رسمی',
+      title: 'نمونه نامه رسمی اداری و سازمانی',
       href: '/samples/administrative-letter',
-      desc: 'الگوی مکاتبات رسمی با سازمان‌ها.',
-      badge: 'نمونه سند',
+      desc: 'فرم عمومی مکاتبات و درخواست‌های رسمی ادارات.',
+      badge: 'نامه اداری'
     },
     {
-      title: 'نمونه لایحه دفاعیه دادگاه',
-      href: '/samples/legal-brief',
-      desc: 'الگوی لوایح حقوقی و قضایی.',
-      badge: 'نمونه سند',
+      title: 'نمونه دادخواست دیوان عدالت اداری',
+      href: '/samples/administrative-court-justice-complaint',
+      desc: 'ابطال آرای کمیسیون‌های شهرداری و هیئت‌های دولتی.',
+      badge: 'دیوان عدالت'
     },
+    {
+      title: 'نمونه شکایت اداره کار و سابقه بیمه',
+      href: '/samples/labor-board-wage-insurance-complaint',
+      desc: 'مطالبه حقوق، سنوات و حق بیمه کارگری.',
+      badge: 'اداره کار'
+    }
+  ],
+
+  relatedArticles: [
+    {
+      title: 'اصول و قواعد نگارش نامه‌های اداری استاندارد',
+      href: '/knowledge/how-to-write-administrative-letter',
+      desc: 'راهنمای کامل مکاتبات سازمانی، لحن رسمی و ارکان نامه.',
+      badge: 'مقاله آموزشی'
+    },
+    {
+      title: 'چگونه به رئیس جمهور و مسئولان نامه بنویسیم؟',
+      href: '/knowledge/how-to-write-president-letter',
+      desc: 'اصول تنظیم نامه‌های مردمی اثرگذار و پیگیری در سامد.',
+      badge: 'مقاله آموزشی'
+    },
+    {
+      title: 'راهنمای سامانه ساجد دیوان عدالت اداری',
+      href: '/knowledge/online-judicial-services-guide',
+      desc: 'آموزش ثبت الکترونیکی دادخواست‌ها و لوایح دیوان عدالت.',
+      badge: 'مقاله آموزشی'
+    }
   ],
 
   ctaTitle: 'سفارش فوری تنظیم لایحه اعتراض به برگ تشخیص مالیات',

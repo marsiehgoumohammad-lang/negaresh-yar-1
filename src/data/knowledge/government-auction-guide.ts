@@ -222,16 +222,22 @@ export const governmentAuctionGuideData: KnowledgeArticleData = {
 
   relatedArticles: [
     {
+      title: 'راهنمای ثبت‌نام و شرکت در مزایده‌های سامانه ستاد ایران',
+      href: '/knowledge/setad-auction-registration',
+      desc: 'آموزش گام‌به‌گام دریافت توکن، واریز فیش و خرید آنلاین در ستاد.',
+      category: 'مزایده و حراج',
+    },
+    {
+      title: 'راهنمای جامع کارشناسی سه نفره و پنج نفره دادگاه',
+      href: '/knowledge/expert-panel-court',
+      desc: 'مواعد و نحوه اعتراض به ارزیابی قیمت پایه کارشناسی ملک در حراج.',
+      category: 'کارشناسی دادگستری',
+    },
+    {
       title: 'چگونه دادنامه و رای دادگاه را بخوانیم؟',
       href: '/knowledge/how-to-read-court-verdict',
       desc: 'تحلیل دقیق احکام و اجراییه‌های دادگاه.',
       category: 'اجرای احکام',
-    },
-    {
-      title: 'ابلاغیه الکترونیکی ثنا چیست؟',
-      href: '/knowledge/what-is-e-notification',
-      desc: 'مشاهده و پیگیری ابلاغیه‌های قضایی در ثنا.',
-      category: 'سامانه‌های قضایی',
     },
   ],
 

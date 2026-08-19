@@ -186,29 +186,44 @@ export const sampleEvictionNonpaymentRentData: SampleLandingData = {
 
   relatedSamples: [
     {
-      title: 'نمونه دادخواست تخلیه ملک پس از پایان مدت اجاره',
-      href: '/samples/eviction-expired-lease',
-      badge: 'پایان مدت اجاره',
-      desc: 'درخواست دستور تخلیه فوری پس از انقضای تاریخ قرارداد.',
+      title: 'نمونه دادخواست الزام به تنظیم سند رسمی',
+      href: '/samples/official-deed-compulsion-petition',
+      desc: 'الزام فروشنده به انتقال سند و اخذ پایان‌کار.',
+      badge: 'الزام به سند'
     },
     {
-      title: 'نمونه دادخواست مطالبه ودیعه و قرض‌الحسنه',
+      title: 'نمونه دادخواست فسخ و ابطال قرارداد',
+      href: '/samples/contract-cancellation-notice-petition',
+      desc: 'اعلام رسمی فسخ مبایعه‌نامه به علت غبن یا تخلف شرط.',
+      badge: 'فسخ معامله'
+    },
+    {
+      title: 'نمونه دادخواست استرداد ودیعه مسکن',
       href: '/samples/rent-deposit-claim',
-      badge: 'استرداد پول پیش',
-      desc: 'دادخواست مستاجر برای بازپس‌گیری مبلغ ودیعه مسکن.',
+      desc: 'مطالبه پول پیش اجاره از موجر پس از تحویل کلید.',
+      badge: 'استرداد ودیعه'
+    }
+  ],
+
+  relatedArticles: [
+    {
+      title: 'اظهارنامه رسمی چیست و چگونه ارسال می‌شود؟',
+      href: '/knowledge/what-is-legal-notice',
+      desc: 'ضرورت ارسال اظهارنامه پیش از ثبت دادخواست ملکی.',
+      badge: 'مقاله آموزشی'
     },
     {
-      title: 'نمونه دادخواست رفع تصرف عدوانی',
-      href: '/samples/property-possession-claim',
-      badge: 'دعاوی ملکی',
-      desc: 'مشاهده الگوی دادخواست رفع تصرف عدوانی غیرمنقول.',
+      title: 'دادخواست چیست و مراحل ثبت آن در دادگاه',
+      href: '/knowledge/what-is-petition',
+      desc: 'راهنمای تنظیم دادخواست‌های ملکی و قراردادی.',
+      badge: 'مقاله آموزشی'
     },
     {
-      title: 'نمونه اظهارنامه رسمی ثنا',
-      href: '/samples/legal-notice',
-      badge: 'اظهارنامه',
-      desc: 'الگوی اخطارنامه رسمی پیش از اقامه دعوای قضایی.',
-    },
+      title: 'لایحه دفاعیه چیست و چگونه نوشته می‌شود؟',
+      href: '/knowledge/what-is-legal-brief',
+      desc: 'اصول تنظیم لوایح دفاعیه در محاکم عمومی حقوقی.',
+      badge: 'مقاله آموزشی'
+    }
   ],
 
   ctaTitle: 'آیا مستاجر از پرداخت اجاره‌بها خودداری کرده و ملک را تحویل نمی‌دهد؟',

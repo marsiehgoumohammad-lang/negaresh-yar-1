@@ -176,29 +176,44 @@ export const sampleCheckPaymentDemandData: SampleLandingData = {
 
   relatedSamples: [
     {
-      title: 'نمونه دادخواست مطالبه وجه چک',
-      href: '/samples/check-civil-claim',
-      badge: 'دادخواست حقوقی',
-      desc: 'مطالبه حقوقی وجه چک و خسارت تاخیر تادیه در دادگاه حقوقی.',
+      title: 'نمونه دادخواست رفع دستور عدم پرداخت چک',
+      href: '/samples/check-stop-payment-objection',
+      desc: 'ابطال ادعای سرقت یا کلاهبرداری صادرکننده.',
+      badge: 'رفع مسدودی چک'
     },
     {
-      title: 'نمونه درخواست صدور اجراییه چک',
-      href: '/samples/check-execution-petition',
-      badge: 'اجراییه مستقیم',
-      desc: 'صدور فوری اجراییه دادگاه بدون رسیدگی ماهوی.',
+      title: 'نمونه دادخواست مطالبه وجه سفته حسن انجام کار',
+      href: '/samples/promissory-note-claim',
+      desc: 'استرداد یا مطالبه سفته‌های امانی استخدامی.',
+      badge: 'سفته کارگری'
     },
     {
-      title: 'نمونه شکواییه صدور چک بلامحل',
-      href: '/samples/check-bounced-complaint',
-      badge: 'شکایت کیفری',
-      desc: 'تعقیب کیفری و مجازات حبس صادرکننده چک بلامحل.',
+      title: 'نمونه دادخواست مطالبه وجه چک صیادی',
+      href: '/samples/sayad-check-claim-petition',
+      desc: 'مطالبه اصل وجه با خسارت تاخیر تادیه از سررسید.',
+      badge: 'چک صیادی'
+    }
+  ],
+
+  relatedArticles: [
+    {
+      title: 'تفاوت چک حقوقی و چک کیفری در قانون جدید',
+      href: '/knowledge/civil-vs-criminal-check',
+      desc: 'مقایسه ۴ روش وصول چک و مزایای اجراییه ماده ۲۳.',
+      badge: 'مقاله آموزشی'
     },
     {
-      title: 'نمونه اظهارنامه رسمی ثنا',
-      href: '/samples/legal-notice',
-      badge: 'الگوی عمومی',
-      desc: 'مشاهده فرمت کلی اظهارنامه‌های ماده ۱۵۶ قانون آیین دادرسی مدنی.',
+      title: 'اظهارنامه رسمی چیست و چگونه ارسال می‌شود؟',
+      href: '/knowledge/what-is-legal-notice',
+      desc: 'اخطار رسمی و قانونی پیش از طرح دعوای تجاری.',
+      badge: 'مقاله آموزشی'
     },
+    {
+      title: 'دادخواست چیست و چگونه تنظیم می‌شود؟',
+      href: '/knowledge/what-is-petition',
+      desc: 'راهنمای کامل ثبت دادخواست مالی در دفاتر قضایی.',
+      badge: 'مقاله آموزشی'
+    }
   ],
 
   ctaTitle: 'نیاز به تنظیم اظهارنامه قاطع و قانونی برای مطالبه وجه چک دارید؟',

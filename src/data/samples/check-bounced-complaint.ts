@@ -174,29 +174,44 @@ export const sampleCheckBouncedComplaintData: SampleLandingData = {
 
   relatedSamples: [
     {
-      title: 'نمونه درخواست صدور اجراییه چک',
-      href: '/samples/check-execution-petition',
-      badge: 'اجراییه مستقیم',
-      desc: 'تقاضای صدور اجراییه ماده ۲۳ قانون چک بدون تشکیل دادگاه.',
+      title: 'نمونه ابطال و توقف اجراییه مستقیم چک',
+      href: '/samples/check-execution-objection',
+      desc: 'دادخواست توقف اجرای چک‌های تضمینی و امانی.',
+      badge: 'ابطال اجراییه'
     },
     {
-      title: 'نمونه اظهارنامه مطالبه وجه چک',
-      href: '/samples/check-payment-demand',
-      badge: 'اظهارنامه رسمی',
-      desc: 'ارسال اخطار رسمی قبل از اقدام قضایی به صادرکننده و ضامنین.',
+      title: 'نمونه دادخواست مطالبه وجه سفته واخواست‌شده',
+      href: '/samples/promissory-note-protest-objection',
+      desc: 'مطالبه طلب با سفته و خسارت تاخیر تادیه.',
+      badge: 'مطالبه سفته'
     },
     {
-      title: 'نمونه دادخواست مطالبه وجه چک',
+      title: 'نمونه دادخواست حقوقی مطالبه چک قدیمی',
       href: '/samples/check-civil-claim',
-      badge: 'دادخواست حقوقی',
-      desc: 'مطالبه حقوقی وجه چک و خسارت تاخیر تادیه از صادرکننده و ظهرنویس.',
+      desc: 'وصول وجه چک‌های عادی و فاقد صیاد.',
+      badge: 'مطالبه چک'
+    }
+  ],
+
+  relatedArticles: [
+    {
+      title: 'تفاوت چک حقوقی و چک کیفری در قانون جدید',
+      href: '/knowledge/civil-vs-criminal-check',
+      desc: 'مقایسه ۴ روش وصول چک و مزایای اجراییه ماده ۲۳.',
+      badge: 'مقاله آموزشی'
     },
     {
-      title: 'نمونه شکواییه کیفری دادسرا',
-      href: '/samples/complaint',
-      badge: 'امور کیفری',
-      desc: 'مشاهده فرمت کلی شکواییه‌های کیفری در دادسرا.',
+      title: 'اظهارنامه رسمی چیست و چگونه ارسال می‌شود؟',
+      href: '/knowledge/what-is-legal-notice',
+      desc: 'اخطار رسمی و قانونی پیش از طرح دعوای تجاری.',
+      badge: 'مقاله آموزشی'
     },
+    {
+      title: 'دادخواست چیست و چگونه تنظیم می‌شود؟',
+      href: '/knowledge/what-is-petition',
+      desc: 'راهنمای کامل ثبت دادخواست مالی در دفاتر قضایی.',
+      badge: 'مقاله آموزشی'
+    }
   ],
 
   ctaTitle: 'نیاز به تنظیم شکواییه کیفری مستدل برای چک برگشتی دارید؟',

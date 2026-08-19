@@ -58,6 +58,7 @@ export async function POST(req: NextRequest) {
       primaryKeyword,
       schema,
       status,
+      category,
     } = body;
 
     // Validation
@@ -115,15 +116,16 @@ export async function POST(req: NextRequest) {
     }
 
     const result = await createArticle({
-      title,
-      slug,
+      title: title.trim(),
+      slug: slug.trim(),
       content,
-      excerpt: typeof excerpt === 'string' ? excerpt : '',
-      metaTitle: typeof metaTitle === 'string' ? metaTitle : '',
-      metaDescription: typeof metaDescription === 'string' ? metaDescription : '',
+      excerpt: typeof excerpt === 'string' ? excerpt.trim() : '',
+      metaTitle: typeof metaTitle === 'string' ? metaTitle.trim() : '',
+      metaDescription: typeof metaDescription === 'string' ? metaDescription.trim() : '',
       keywords: Array.isArray(keywords) ? keywords.map(String) : [],
-      primaryKeyword: typeof primaryKeyword === 'string' ? primaryKeyword : '',
+      primaryKeyword: typeof primaryKeyword === 'string' ? primaryKeyword.trim() : '',
       schema: schemaStr,
+      category: typeof category === 'string' && category.trim() ? category.trim() : undefined,
       status: status as ArticleStatus,
     });
 

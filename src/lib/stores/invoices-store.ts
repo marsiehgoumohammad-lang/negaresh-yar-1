@@ -2,7 +2,7 @@ import { Invoice } from './types';
 import { syncCustomersFromInvoices } from './customers-store';
 import { getSettings, incrementNextInvoiceNumber } from './settings-store';
 import { normalizePhoneNumber } from '../utils/phone';
-import { getSupabaseAdmin } from '@/lib/supabase';
+import { getSupabaseAdmin, isSupabaseConfigured } from '@/lib/supabase';
 import { SupabaseClient } from '@supabase/supabase-js';
 
 function getInitialSampleInvoices(): Invoice[] {
@@ -176,6 +176,9 @@ async function seedInitialInvoicesIfEmpty(supabase: SupabaseClient) {
 
 export async function getInvoices(): Promise<Invoice[]> {
   try {
+    if (!isSupabaseConfigured()) {
+      return inMemoryInvoices || getInitialSampleInvoices();
+    }
     const supabase = getSupabaseAdmin();
     const { data, error } = await supabase
       .from('invoices')
@@ -183,7 +186,7 @@ export async function getInvoices(): Promise<Invoice[]> {
       .order('created_at', { ascending: false });
 
     if (error) {
-      console.error('Error reading invoices from Supabase:', error.message);
+      console.warn('Reading invoices from Supabase fallback:', error.message);
       return inMemoryInvoices || getInitialSampleInvoices();
     }
 
@@ -199,7 +202,7 @@ export async function getInvoices(): Promise<Invoice[]> {
     syncCustomersFromInvoices(invoices);
     return invoices;
   } catch (err) {
-    console.error('Exception in getInvoices():', err);
+    console.warn('Exception in getInvoices() (falling back to initial):', err);
     return inMemoryInvoices || getInitialSampleInvoices();
   }
 }

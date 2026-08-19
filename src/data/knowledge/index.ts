@@ -24,6 +24,9 @@ import { howToInstallDebtAndMahriehData, howToInstallDebtAndMahriehMetadata } fr
 import { pardonVsConditionalReleaseData, pardonVsConditionalReleaseMetadata } from './pardon-vs-conditional-release';
 import { whatIsLegalNoticeData, whatIsLegalNoticeMetadata } from './what-is-legal-notice';
 import { howToBuyCarAndPropertyFromCourtAuctionData, howToBuyCarAndPropertyFromCourtAuctionMetadata } from './how-to-buy-car-and-property-from-court-auction';
+import { expertPanelCourtData, expertPanelCourtMetadata } from './expert-panel-court';
+import { setadAuctionRegistrationData, setadAuctionRegistrationMetadata } from './setad-auction-registration';
+import { civilVsCriminalCheckData, civilVsCriminalCheckMetadata } from './civil-vs-criminal-check';
 
 export * from './types';
 
@@ -120,6 +123,9 @@ export const ALL_KNOWLEDGE_ARTICLES: KnowledgeArticleData[] = [
   pardonVsConditionalReleaseData,
   whatIsLegalNoticeData,
   howToBuyCarAndPropertyFromCourtAuctionData,
+  expertPanelCourtData,
+  setadAuctionRegistrationData,
+  civilVsCriminalCheckData,
 ];
 
 export const KNOWLEDGE_METADATA_MAP = {
@@ -148,6 +154,9 @@ export const KNOWLEDGE_METADATA_MAP = {
   'pardon-vs-conditional-release': pardonVsConditionalReleaseMetadata,
   'what-is-legal-notice': whatIsLegalNoticeMetadata,
   'how-to-buy-car-and-property-from-court-auction': howToBuyCarAndPropertyFromCourtAuctionMetadata,
+  'expert-panel-court': expertPanelCourtMetadata,
+  'setad-auction-registration': setadAuctionRegistrationMetadata,
+  'civil-vs-criminal-check': civilVsCriminalCheckMetadata,
 };
 
 export function getKnowledgeArticleBySlug(slug: string): KnowledgeArticleData | undefined {

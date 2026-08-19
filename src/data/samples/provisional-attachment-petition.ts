@@ -201,6 +201,48 @@ export const sampleProvisionalAttachmentPetitionData: SampleDocument = {
     },
   ],
 
+  relatedSamples: [
+    {
+      title: 'نمونه درخواست انتقال سند پس از مزایده',
+      href: '/samples/auction-deed-transfer-request',
+      desc: 'تقاضای صدور سند رسمی به نام برنده حراج.',
+      badge: 'انتقال سند مزایده'
+    },
+    {
+      title: 'نمونه درخواست استرداد ۱۰ درصد سپرده مزایده',
+      href: '/samples/auction-deposit-refund-request',
+      desc: 'بازپس‌گیری ودیعه واریزی شرکت در حراج دادگاه.',
+      badge: 'استرداد ودیعه مزایده'
+    },
+    {
+      title: 'نمونه درخواست مهلت پرداخت محکوم‌به',
+      href: '/samples/judgment-enforcement-grace-period',
+      desc: 'تقاضای اعطای مهلت جهت تامین وجه و جلوگیری از جلب.',
+      badge: 'مهلت اجرای حکم'
+    }
+  ],
+
+  relatedArticles: [
+    {
+      title: 'راهنمای جامع کارشناسی سه نفره و پنج نفره دادگاه',
+      href: '/knowledge/expert-panel-court',
+      desc: 'شرایط، مهلت یک‌هفته‌ای و فرمول اعتراض به نظریه کارشناس.',
+      badge: 'مقاله آموزشی'
+    },
+    {
+      title: 'راهنمای ثبت نام و شرکت در مزایده‌های ستاد ایران',
+      href: '/knowledge/setad-auction-registration',
+      desc: 'آموزش گام‌به‌گام خرید املاک و خودرو در حراج دولتی.',
+      badge: 'مقاله آموزشی'
+    },
+    {
+      title: 'راهنمای خرید ملک و خودرو از مزایده‌های دادگاه',
+      href: '/knowledge/how-to-buy-car-and-property-from-court-auction',
+      desc: 'نحوه شرکت در مزایده‌های اجرای احکام و حقوق برنده حراج.',
+      badge: 'مقاله آموزشی'
+    }
+  ],
+
   ctaTitle: 'نیاز به تنظیم فوری دادخواست تأمین خواسته و توقیف اموال دارید؟',
   ctaDescription:
     'کارشناسان نگارش یار درخواست تأمین خواسته شما را با استناد به دقیق‌ترین مواد قانونی آماده می‌کنند تا اموال پیش از ابلاغ توقیف گردد.',

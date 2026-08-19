@@ -184,29 +184,44 @@ export const sampleCheckExecutionPetitionData: SampleLandingData = {
 
   relatedSamples: [
     {
-      title: 'نمونه شکواییه صدور چک بلامحل',
+      title: 'نمونه شکواییه چک بلامحل کیفری',
       href: '/samples/check-bounced-complaint',
-      badge: 'شکایت کیفری',
-      desc: 'پیگیری کیفری و مجازات حبس صادرکننده چک بلامحل.',
+      desc: 'شکایت کیفری از صادرکننده چک در دادسرا.',
+      badge: 'شکایت کیفری'
     },
     {
-      title: 'نمونه دادخواست مطالبه وجه چک',
-      href: '/samples/check-civil-claim',
-      badge: 'دادخواست حقوقی',
-      desc: 'دادخواست حقوقی جهت وصول همزمان اصل وجه، خسارت تاخیر و محکومیت ضامنین.',
+      title: 'نمونه ابطال و توقف اجراییه مستقیم چک',
+      href: '/samples/check-execution-objection',
+      desc: 'دادخواست توقف اجرای چک‌های تضمینی و امانی.',
+      badge: 'ابطال اجراییه'
     },
     {
-      title: 'نمونه درخواست اعتراض به عملیات اجرایی چک',
-      href: '/samples/check-stop-payment-objection',
-      badge: 'اعتراض به اجراییه',
-      desc: 'الگوی دادخواست توقف عملیات اجرایی چک به دلیل پرداخت وجه یا امانی بودن.',
+      title: 'نمونه دادخواست مطالبه وجه سفته واخواست‌شده',
+      href: '/samples/promissory-note-protest-objection',
+      desc: 'مطالبه طلب با سفته و خسارت تاخیر تادیه.',
+      badge: 'مطالبه سفته'
+    }
+  ],
+
+  relatedArticles: [
+    {
+      title: 'تفاوت چک حقوقی و چک کیفری در قانون جدید',
+      href: '/knowledge/civil-vs-criminal-check',
+      desc: 'مقایسه ۴ روش وصول چک و مزایای اجراییه ماده ۲۳.',
+      badge: 'مقاله آموزشی'
     },
     {
-      title: 'نمونه اظهارنامه مطالبه وجه چک',
-      href: '/samples/check-payment-demand',
-      badge: 'اظهارنامه رسمی',
-      desc: 'اخطار رسمی و قانونی به صادرکننده قبل از توقیف اموال.',
+      title: 'اظهارنامه رسمی چیست و چگونه ارسال می‌شود؟',
+      href: '/knowledge/what-is-legal-notice',
+      desc: 'اخطار رسمی و قانونی پیش از طرح دعوای تجاری.',
+      badge: 'مقاله آموزشی'
     },
+    {
+      title: 'دادخواست چیست و چگونه تنظیم می‌شود؟',
+      href: '/knowledge/what-is-petition',
+      desc: 'راهنمای کامل ثبت دادخواست مالی در دفاتر قضایی.',
+      badge: 'مقاله آموزشی'
+    }
   ],
 
   ctaTitle: 'آیا می‌خواهید وجه چک صیادی خود را بدون معطلی در دادگاه وصول کنید؟',

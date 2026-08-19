@@ -286,32 +286,44 @@ export const sampleComplaintData: SampleLandingData = {
 
   relatedSamples: [
     {
-      title: 'نمونه لایحه دفاعیه کیفری',
-      href: '/samples/legal-brief',
-      desc: 'الگوی دفاع در برابر کیفرخواست دادسرا.',
-      badge: 'نمونه حقوقی',
+      title: 'نمونه دادخواست عمومی حقوقی',
+      href: '/samples/petition',
+      desc: 'فرم استاندارد طرح دعاوی مالی و غیرمالی در دادگاه.',
+      badge: 'دادخواست حقوقی'
     },
     {
-      title: 'نمونه درخواست تخفیف وثیقه',
-      href: '/samples/bail-reduction',
-      desc: 'الگوی درخواست تبدیل قرار کفالت و وثیقه.',
-      badge: 'نمونه حقوقی',
+      title: 'نمونه اعتراض به قرار منع تعقیب دادسرا',
+      href: '/samples/objection-non-prosecution-order',
+      desc: 'اعتراض به قرار بازپرس در دادگاه کیفری دو.',
+      badge: 'منع تعقیب'
     },
     {
-      title: 'نمونه اظهارنامه رسمی',
-      href: '/samples/legal-notice',
-      desc: 'الگوی ابلاغ رسمی اخطار قبل از شکایت.',
-      badge: 'نمونه حقوقی',
-    },
+      title: 'نمونه واخواهی از حکم غیابی دادگاه',
+      href: '/samples/objection-absent-judgment',
+      desc: 'اعتراض به دادنامه‌های غیابی کیفری و حقوقی.',
+      badge: 'واخواهی'
+    }
   ],
 
   relatedArticles: [
     {
-      title: 'تفاوت دادخواست حقوقی و شکواییه کیفری چیست؟',
-      href: '/knowledge/petition-vs-complaint',
-      desc: 'راهنمای کامل تمایز دعاوی حقوقی و شکایت کیفری در دادسرا.',
-      badge: 'مقاله آموزشی',
+      title: 'چگونه به قرار منع تعقیب دادسرا اعتراض کنیم؟',
+      href: '/knowledge/how-to-object-prosecution-orders',
+      desc: 'مهلت‌ها و نحوه تنظیم لایحه اعتراضیه در دادگاه کیفری دو.',
+      badge: 'مقاله آموزشی'
     },
+    {
+      title: 'چگونه به رأی دادگاه تجدیدنظرخواهی کنیم؟',
+      href: '/knowledge/how-to-appeal-court-decision',
+      desc: 'اصول تنظیم دادخواست و لایحه اعتراضیه در دادگاه تجدیدنظر.',
+      badge: 'مقاله آموزشی'
+    },
+    {
+      title: 'تفاوت دادخواست و شکواییه چیست؟',
+      href: '/knowledge/petition-vs-complaint',
+      desc: 'مقایسه جامع مسیرهای دادرسی حقوقی و کیفری در محاکم.',
+      badge: 'مقاله آموزشی'
+    }
   ],
 
   ctaTitle: 'سفارش تنظیم شکواییه کیفری مستدل با ضمانت پذیرش در ثنا',

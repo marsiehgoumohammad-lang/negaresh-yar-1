@@ -182,29 +182,44 @@ export const sampleJudgmentEnforcementGracePeriodData: SampleLandingData = {
 
   relatedSamples: [
     {
-      title: 'نمونه دادخواست اعسار و تقسیط بدهی و مهریه',
-      href: '/samples/insolvency',
-      badge: 'اعسار و تقسیط',
-      desc: 'مشاهده الگوی تقسیط بدهی و منع صدور دستور جلب ماده ۳.',
-    },
-    {
-      title: 'نمونه دادخواست اعسار از پرداخت هزینه دادرسی',
-      href: '/samples/court-fee-insolvency',
-      badge: 'اعسار هزینه دادرسی',
-      desc: 'الگوی تقاضای اعسار از تمبر دادرسی بدوی و تجدیدنظر.',
-    },
-    {
-      title: 'نمونه دادخواست واخواهی از حکم غیابی',
-      href: '/samples/objection-absent-judgment',
-      badge: 'واخواهی',
-      desc: 'الگوی اعتراض به احکام غیابی دادگاه و توقف عملیات اجرایی.',
-    },
-    {
-      title: 'نمونه لایحه اعتراض به نظریه کارشناسی',
+      title: 'نمونه لایحه اعتراض به نظریه کارشناس',
       href: '/samples/expert-opinion-objection',
-      badge: 'اعتراض به کارشناسی',
-      desc: 'الگوی اعتراض به قیمت‌گذاری و ارزیابی اموال در مرحله مزایده اجرای احکام.',
+      desc: 'اعتراض به ارزیابی غیرواقعی و ارجاع به هیئت ۳ نفره.',
+      badge: 'اعتراض به کارشناسی'
     },
+    {
+      title: 'نمونه اعتراض شخص ثالث به توقیف اموال',
+      href: '/samples/third-party-objection-to-execution',
+      desc: 'درخواست رفع توقیف مال متعلق به غیر در اجرای احکام.',
+      badge: 'اعتراض ثالث'
+    },
+    {
+      title: 'نمونه درخواست ابطال مزایده اجرای احکام',
+      href: '/samples/auction-cancellation-objection',
+      desc: 'اعتراض به تخلفات شکلی و قانونی حراج دادگاه.',
+      badge: 'ابطال مزایده'
+    }
+  ],
+
+  relatedArticles: [
+    {
+      title: 'راهنمای جامع کارشناسی سه نفره و پنج نفره دادگاه',
+      href: '/knowledge/expert-panel-court',
+      desc: 'شرایط، مهلت یک‌هفته‌ای و فرمول اعتراض به نظریه کارشناس.',
+      badge: 'مقاله آموزشی'
+    },
+    {
+      title: 'راهنمای ثبت نام و شرکت در مزایده‌های ستاد ایران',
+      href: '/knowledge/setad-auction-registration',
+      desc: 'آموزش گام‌به‌گام خرید املاک و خودرو در حراج دولتی.',
+      badge: 'مقاله آموزشی'
+    },
+    {
+      title: 'راهنمای خرید ملک و خودرو از مزایده‌های دادگاه',
+      href: '/knowledge/how-to-buy-car-and-property-from-court-auction',
+      desc: 'نحوه شرکت در مزایده‌های اجرای احکام و حقوق برنده حراج.',
+      badge: 'مقاله آموزشی'
+    }
   ],
 
   ctaTitle: 'اجرائیه صادر شده و نیاز به فرصت جهت پرداخت بدهی دارید؟',

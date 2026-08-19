@@ -283,38 +283,44 @@ export const sampleAdministrativeLetterData: SampleLandingData = {
 
   relatedSamples: [
     {
-      title: 'نمونه نامه به رئیس جمهور',
+      title: 'نمونه دادخواست دیوان عدالت اداری',
+      href: '/samples/administrative-court-justice-complaint',
+      desc: 'ابطال آرای کمیسیون‌های شهرداری و هیئت‌های دولتی.',
+      badge: 'دیوان عدالت'
+    },
+    {
+      title: 'نمونه شکایت اداره کار و سابقه بیمه',
+      href: '/samples/labor-board-wage-insurance-complaint',
+      desc: 'مطالبه حقوق، سنوات و حق بیمه کارگری.',
+      badge: 'اداره کار'
+    },
+    {
+      title: 'نمونه نامه به رئیس جمهور و سامانه سامد',
       href: '/samples/president-letter',
-      desc: 'الگوی عریضه درخواست مساعدت از نهاد ریاست جمهوری.',
-      badge: 'نمونه نامه',
-    },
-    {
-      title: 'نمونه نامه به دفتر رهبری',
-      href: '/samples/leader-office-letter',
-      desc: 'متن استاندارد عریضه و تقاضای گره‌گشایی.',
-      badge: 'نمونه نامه',
-    },
-    {
-      title: 'نمونه اظهارنامه رسمی',
-      href: '/samples/legal-notice',
-      desc: 'الگوی ابلاغ رسمی اخطار حقوقی به طرف مقابل.',
-      badge: 'نمونه حقوقی',
-    },
+      desc: 'درخواست رسیدگی به مشکلات اشتغال، وام و تسهیلات.',
+      badge: 'ریاست جمهوری'
+    }
   ],
 
   relatedArticles: [
     {
-      title: 'چگونه نامه اداری تاثیرگذار بنویسیم؟',
+      title: 'اصول و قواعد نگارش نامه‌های اداری استاندارد',
       href: '/knowledge/how-to-write-administrative-letter',
-      desc: 'آموزش اصول آیین نگارش اداری و لحن رسمی.',
-      badge: 'مقاله آموزشی',
+      desc: 'راهنمای کامل مکاتبات سازمانی، لحن رسمی و ارکان نامه.',
+      badge: 'مقاله آموزشی'
     },
     {
-      title: 'راهنمای نوشتن نامه به ریاست جمهوری',
+      title: 'چگونه به رئیس جمهور و مسئولان نامه بنویسیم؟',
       href: '/knowledge/how-to-write-president-letter',
-      desc: 'نکات عریضه‌نویسی و پیگیری از سامانه سامد.',
-      badge: 'مقاله آموزشی',
+      desc: 'اصول تنظیم نامه‌های مردمی اثرگذار و پیگیری در سامد.',
+      badge: 'مقاله آموزشی'
     },
+    {
+      title: 'راهنمای سامانه ساجد دیوان عدالت اداری',
+      href: '/knowledge/online-judicial-services-guide',
+      desc: 'آموزش ثبت الکترونیکی دادخواست‌ها و لوایح دیوان عدالت.',
+      badge: 'مقاله آموزشی'
+    }
   ],
 
   ctaTitle: 'سفارش تنظیم نامه اداری اختصاصی با لحن کاملاً حرفه‌ای',

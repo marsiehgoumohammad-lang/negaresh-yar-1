@@ -279,23 +279,44 @@ export const samplePresidentLetterData: SampleLandingData = {
 
   relatedSamples: [
     {
-      title: 'نمونه نامه اداری رسمی',
-      href: '/samples/administrative-letter',
-      desc: 'الگوی مکاتبات رسمی اداری.',
-      badge: 'نمونه نامه',
-    },
-    {
-      title: 'نمونه نامه به دفتر رهبری',
+      title: 'نمونه نامه به دفتر مقام معظم رهبری',
       href: '/samples/leader-office-letter',
-      desc: 'متن عریضه و تقاضای گره‌گشایی.',
-      badge: 'نمونه نامه',
+      desc: 'تقاضای مساعدت، عفو و رسیدگی به تظلم‌خواهی.',
+      badge: 'دفتر رهبری'
     },
     {
-      title: 'نمونه دادخواست اعسار',
-      href: '/samples/insolvency',
-      desc: 'الگوی دادخواست تقسیط محکوم‌به و هزینه دادرسی.',
-      badge: 'نمونه حقوقی',
+      title: 'نمونه نامه رسمی به استانداری و فرمانداری',
+      href: '/samples/letter-to-governor',
+      desc: 'رسیدگی به امور شهری، صنفی و اداری استان.',
+      badge: 'استانداری'
     },
+    {
+      title: 'نمونه نامه اعتراض به برگ تشخیص مالیاتی',
+      href: '/samples/letter-to-tax-office',
+      desc: 'تقاضای تعدیل مالیات در هیئت‌های حل اختلاف.',
+      badge: 'امور مالیاتی'
+    }
+  ],
+
+  relatedArticles: [
+    {
+      title: 'اصول و قواعد نگارش نامه‌های اداری استاندارد',
+      href: '/knowledge/how-to-write-administrative-letter',
+      desc: 'راهنمای کامل مکاتبات سازمانی، لحن رسمی و ارکان نامه.',
+      badge: 'مقاله آموزشی'
+    },
+    {
+      title: 'چگونه به رئیس جمهور و مسئولان نامه بنویسیم؟',
+      href: '/knowledge/how-to-write-president-letter',
+      desc: 'اصول تنظیم نامه‌های مردمی اثرگذار و پیگیری در سامد.',
+      badge: 'مقاله آموزشی'
+    },
+    {
+      title: 'راهنمای سامانه ساجد دیوان عدالت اداری',
+      href: '/knowledge/online-judicial-services-guide',
+      desc: 'آموزش ثبت الکترونیکی دادخواست‌ها و لوایح دیوان عدالت.',
+      badge: 'مقاله آموزشی'
+    }
   ],
 
   ctaTitle: 'سفارش نگارش تخصصی نامه به رئیس جمهور با بالاترین اثرگذاری',

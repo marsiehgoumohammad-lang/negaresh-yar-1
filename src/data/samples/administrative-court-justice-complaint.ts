@@ -205,6 +205,48 @@ export const sampleAdministrativeCourtJusticeComplaintData: SampleDocument = {
     },
   ],
 
+  relatedSamples: [
+    {
+      title: 'نمونه شکایت اداره کار و سابقه بیمه',
+      href: '/samples/labor-board-wage-insurance-complaint',
+      desc: 'مطالبه حقوق، سنوات و حق بیمه کارگری.',
+      badge: 'اداره کار'
+    },
+    {
+      title: 'نمونه نامه به رئیس جمهور و سامانه سامد',
+      href: '/samples/president-letter',
+      desc: 'درخواست رسیدگی به مشکلات اشتغال، وام و تسهیلات.',
+      badge: 'ریاست جمهوری'
+    },
+    {
+      title: 'نمونه نامه به دفتر مقام معظم رهبری',
+      href: '/samples/leader-office-letter',
+      desc: 'تقاضای مساعدت، عفو و رسیدگی به تظلم‌خواهی.',
+      badge: 'دفتر رهبری'
+    }
+  ],
+
+  relatedArticles: [
+    {
+      title: 'اصول و قواعد نگارش نامه‌های اداری استاندارد',
+      href: '/knowledge/how-to-write-administrative-letter',
+      desc: 'راهنمای کامل مکاتبات سازمانی، لحن رسمی و ارکان نامه.',
+      badge: 'مقاله آموزشی'
+    },
+    {
+      title: 'چگونه به رئیس جمهور و مسئولان نامه بنویسیم؟',
+      href: '/knowledge/how-to-write-president-letter',
+      desc: 'اصول تنظیم نامه‌های مردمی اثرگذار و پیگیری در سامد.',
+      badge: 'مقاله آموزشی'
+    },
+    {
+      title: 'راهنمای سامانه ساجد دیوان عدالت اداری',
+      href: '/knowledge/online-judicial-services-guide',
+      desc: 'آموزش ثبت الکترونیکی دادخواست‌ها و لوایح دیوان عدالت.',
+      badge: 'مقاله آموزشی'
+    }
+  ],
+
   ctaTitle: 'کمیسیون ماده ۱۰۰ شهرداری رأی تخریب یا جریمه سنگین صادر کرده است؟',
   ctaDescription:
     'متخصصان نگارش یار دادخواست تخصصی دیوان عدالت اداری و تقاضای دستور موقت توقف اجرای رأی را برای شما تنظیم می‌نمایند.',

@@ -178,29 +178,44 @@ export const sampleEvictionExpiredLeaseData: SampleLandingData = {
 
   relatedSamples: [
     {
-      title: 'نمونه دادخواست تخلیه به علت عدم پرداخت اجاره‌بها',
+      title: 'نمونه دادخواست فسخ اجاره و تخلیه به دلیل عدم پرداخت اجاره‌بها',
       href: '/samples/eviction-nonpayment-rent',
-      badge: 'عدم پرداخت اجاره',
-      desc: 'فسخ اجاره و تخلیه به دلیل معوق ماندن اجاره‌بها.',
+      desc: 'فسخ قرارداد به علت تعویق ۳ ماهه کرایه.',
+      badge: 'تخلیه با حکم'
     },
     {
-      title: 'نمونه دادخواست مطالبه ودیعه و قرض‌الحسنه',
-      href: '/samples/rent-deposit-claim',
-      badge: 'استرداد ودیعه',
-      desc: 'دادخواست مستاجر علیه مالک برای پس گرفتن پول پیش.',
+      title: 'نمونه دادخواست الزام به تنظیم سند رسمی',
+      href: '/samples/official-deed-compulsion-petition',
+      desc: 'الزام فروشنده به انتقال سند و اخذ پایان‌کار.',
+      badge: 'الزام به سند'
     },
     {
-      title: 'نمونه دادخواست رفع تصرف عدوانی',
-      href: '/samples/property-possession-claim',
-      badge: 'دعاوی تصرف',
-      desc: 'خلع ید و رفع تصرف عدوانی از املاک غیرمنقول.',
+      title: 'نمونه دادخواست فسخ و ابطال قرارداد',
+      href: '/samples/contract-cancellation-notice-petition',
+      desc: 'اعلام رسمی فسخ مبایعه‌نامه به علت غبن یا تخلف شرط.',
+      badge: 'فسخ معامله'
+    }
+  ],
+
+  relatedArticles: [
+    {
+      title: 'اظهارنامه رسمی چیست و چگونه ارسال می‌شود؟',
+      href: '/knowledge/what-is-legal-notice',
+      desc: 'ضرورت ارسال اظهارنامه پیش از ثبت دادخواست ملکی.',
+      badge: 'مقاله آموزشی'
     },
     {
-      title: 'نمونه دادخواست حقوقی ثنا',
-      href: '/samples/petition',
-      badge: 'اوراق قضایی',
-      desc: 'مشاهده چارچوب کلی دادخواست‌های ملکی و قراردادها.',
+      title: 'دادخواست چیست و مراحل ثبت آن در دادگاه',
+      href: '/knowledge/what-is-petition',
+      desc: 'راهنمای تنظیم دادخواست‌های ملکی و قراردادی.',
+      badge: 'مقاله آموزشی'
     },
+    {
+      title: 'لایحه دفاعیه چیست و چگونه نوشته می‌شود؟',
+      href: '/knowledge/what-is-legal-brief',
+      desc: 'اصول تنظیم لوایح دفاعیه در محاکم عمومی حقوقی.',
+      badge: 'مقاله آموزشی'
+    }
   ],
 
   ctaTitle: 'آیا مهلت اجاره تمام شده و مستاجر از تحویل خانه خودداری می‌کند؟',

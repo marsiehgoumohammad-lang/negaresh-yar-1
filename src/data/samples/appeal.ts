@@ -282,23 +282,44 @@ export const sampleAppealData: SampleLandingData = {
 
   relatedSamples: [
     {
-      title: 'نمونه لایحه دفاعیه',
+      title: 'نمونه لایحه دفاعیه جامع دادگاه',
       href: '/samples/legal-brief',
-      desc: 'الگوی لایحه پاسخ به ادعاهای طرف مقابل.',
-      badge: 'نمونه حقوقی',
+      desc: 'الگوی استاندارد دفاع حقوقی و استناد به قوانین.',
+      badge: 'لایحه دفاعیه'
     },
     {
-      title: 'نمونه دادخواست حقوقی',
-      href: '/samples/petition',
-      desc: 'الگوی کامل دادخواست بدوی.',
-      badge: 'نمونه حقوقی',
+      title: 'نمونه اعتراض به قرار موقوفی تعقیب دادسرا',
+      href: '/samples/objection-stay-of-prosecution',
+      desc: 'اعتراض به قرار موقوفی به علت مرور زمان یا فوت.',
+      badge: 'موقوفی تعقیب'
     },
     {
-      title: 'نمونه دادخواست اعسار',
-      href: '/samples/insolvency',
-      desc: 'الگوی دادخواست اعسار از هزینه دادرسی.',
-      badge: 'نمونه حقوقی',
+      title: 'نمونه شکواییه عمومی کیفری',
+      href: '/samples/complaint',
+      desc: 'فرم استاندارد طرح شکایت در دادسرا و کلانتری.',
+      badge: 'شکواییه کیفری'
+    }
+  ],
+
+  relatedArticles: [
+    {
+      title: 'چگونه به قرار منع تعقیب دادسرا اعتراض کنیم؟',
+      href: '/knowledge/how-to-object-prosecution-orders',
+      desc: 'مهلت‌ها و نحوه تنظیم لایحه اعتراضیه در دادگاه کیفری دو.',
+      badge: 'مقاله آموزشی'
     },
+    {
+      title: 'چگونه به رأی دادگاه تجدیدنظرخواهی کنیم؟',
+      href: '/knowledge/how-to-appeal-court-decision',
+      desc: 'اصول تنظیم دادخواست و لایحه اعتراضیه در دادگاه تجدیدنظر.',
+      badge: 'مقاله آموزشی'
+    },
+    {
+      title: 'تفاوت دادخواست و شکواییه چیست؟',
+      href: '/knowledge/petition-vs-complaint',
+      desc: 'مقایسه جامع مسیرهای دادرسی حقوقی و کیفری در محاکم.',
+      badge: 'مقاله آموزشی'
+    }
   ],
 
   ctaTitle: 'سفارش تنظیم لایحه تجدیدنظرخواهی تخصصی جهت نقض رای بدوی',

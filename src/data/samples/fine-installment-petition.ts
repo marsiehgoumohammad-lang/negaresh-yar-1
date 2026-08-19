@@ -182,23 +182,44 @@ export const sampleFineInstallmentPetitionData: SampleLandingData = {
 
   relatedSamples: [
     {
-      title: 'نمونه دادخواست اعسار از پرداخت محکوم‌به و تقسیط',
+      title: 'نمونه دادخواست تقسیط مهریه و تعدیل اقساط',
+      href: '/samples/mehrieh-installment-petition',
+      desc: 'تعدیل و تقسیط سکه‌های مهریه در دادگاه خانواده.',
+      badge: 'تقسیط مهریه'
+    },
+    {
+      title: 'نمونه دادخواست اعسار و تقسیط محکوم‌به',
       href: '/samples/insolvency',
-      desc: 'الگوی تقسیط بدهی‌های مالی، مهریه و دیون احکام مدنی.',
-      badge: 'اعسار مدنی',
+      desc: 'الگوی عمومی اعسار از پرداخت یکباره بدهی و جلب.',
+      badge: 'اعسار و تقسیط'
     },
     {
-      title: 'نمونه درخواست تسلیم به رای و تخفیف مجازات',
-      href: '/samples/verdict-surrender-discount',
-      desc: 'الگوی تقاضای کسر یک‌چهارم جریمه و مجازات مستند به ماده ۴۴۲.',
-      badge: 'تسلیم به رأی',
+      title: 'نمونه دادخواست اعسار از هزینه دادرسی',
+      href: '/samples/court-fee-insolvency',
+      desc: 'معافیت موقت از پرداخت هزینه دادرسی پرونده.',
+      badge: 'اعسار هزینه دادرسی'
+    }
+  ],
+
+  relatedArticles: [
+    {
+      title: 'اعسار از هزینه دادرسی و محکوم‌به چیست؟',
+      href: '/knowledge/what-is-insolvency',
+      desc: 'شرایط اثبات عسرت مالی، استشهادیه شهود و ماده ۸.',
+      badge: 'مقاله آموزشی'
     },
     {
-      title: 'نمونه لایحه اعتراض به قرار تأمین کیفری و وثیقه سنگین',
-      href: '/samples/objection-to-criminal-security',
-      desc: 'الگوی دفاع در برابر قرارهای تأمین منتهی به بازداشت.',
-      badge: 'اعتراض به تأمین',
+      title: 'چگونه بدهی و مهریه را قسطی کنیم؟',
+      href: '/knowledge/how-to-install-debt-and-mahrieh',
+      desc: 'راهنمای کامل دادخواست اعسار، تقسیط و آزادی از جلب.',
+      badge: 'مقاله آموزشی'
     },
+    {
+      title: 'حکم قطعی دادگاه چیست و چگونه اجرا می‌شود؟',
+      href: '/knowledge/what-is-final-court-judgment',
+      desc: 'مراحل صدور اجراییه، مهلت ۱۰ روزه و جلب محکوم‌علیه.',
+      badge: 'مقاله آموزشی'
+    }
   ],
 
   ctaTitle: 'سفارش تنظیم دادخواست تقسیط جزای نقدی و توقف بازداشت',

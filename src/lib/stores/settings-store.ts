@@ -1,5 +1,5 @@
 import { BusinessSettings } from './types';
-import { getSupabaseAdmin } from '@/lib/supabase';
+import { getSupabaseAdmin, isSupabaseConfigured } from '@/lib/supabase';
 
 export const DEFAULT_SETTINGS: BusinessSettings = {
   companyName: 'دفتر نگارش یار - خدمات حقوقی و اداری اینترنتی',
@@ -25,6 +25,9 @@ let inMemorySettings: BusinessSettings = { ...DEFAULT_SETTINGS };
 
 export async function getSettings(): Promise<BusinessSettings> {
   try {
+    if (!isSupabaseConfigured()) {
+      return inMemorySettings;
+    }
     const supabase = getSupabaseAdmin();
     const { data, error } = await supabase
       .from('site_settings')
@@ -38,7 +41,7 @@ export async function getSettings(): Promise<BusinessSettings> {
       return merged;
     }
   } catch (err) {
-    console.error('Error reading site_settings general from Supabase:', err);
+    console.warn('Reading site_settings general fallback to local:', err);
   }
   return inMemorySettings;
 }

@@ -1,10 +1,13 @@
 import { SearchConsoleReport, SearchConsoleRow, AnalysisOpportunity } from './types';
-import { getSupabaseAdmin } from '@/lib/supabase';
+import { getSupabaseAdmin, isSupabaseConfigured } from '@/lib/supabase';
 
 let inMemoryReports: SearchConsoleReport[] = [];
 
 export async function getSearchConsoleReports(): Promise<SearchConsoleReport[]> {
   try {
+    if (!isSupabaseConfigured()) {
+      return inMemoryReports;
+    }
     const supabase = getSupabaseAdmin();
     const { data, error } = await supabase
       .from('site_settings')
@@ -20,7 +23,7 @@ export async function getSearchConsoleReports(): Promise<SearchConsoleReport[]> 
       return sorted;
     }
   } catch (err) {
-    console.error('Error reading search console from Supabase:', err);
+    console.warn('Error reading search console from Supabase (fallback):', err);
   }
   return inMemoryReports;
 }

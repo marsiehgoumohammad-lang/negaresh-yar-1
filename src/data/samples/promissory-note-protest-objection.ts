@@ -186,23 +186,44 @@ export const samplePromissoryNoteProtestObjectionData: SampleLandingData = {
 
   relatedSamples: [
     {
-      title: 'نمونه دادخواست مطالبه وجه چک صیادی بنفش',
-      href: '/samples/sayad-check-claim-petition',
-      desc: 'الگوی مطالبه چک صیادی با خسارت تأخیر تأدیه.',
-      badge: 'مطالبه چک',
+      title: 'نمونه دادخواست حقوقی مطالبه چک قدیمی',
+      href: '/samples/check-civil-claim',
+      desc: 'وصول وجه چک‌های عادی و فاقد صیاد.',
+      badge: 'مطالبه چک'
     },
     {
-      title: 'نمونه درخواست صدور اجراییه مستقیم چک صیادی',
-      href: '/samples/check-direct-execution',
-      desc: 'الگوی درخواست توقیف فوری حساب‌ها بر اساس ماده ۲۳.',
-      badge: 'اجراییه چک',
+      title: 'نمونه اظهارنامه رسمی مطالبه وجه چک',
+      href: '/samples/check-payment-demand',
+      desc: 'اخطار قانونی رسمی به صادرکننده و ظهرنویس.',
+      badge: 'اظهارنامه چک'
     },
     {
-      title: 'نمونه دادخواست اعسار از پرداخت محکوم‌به و تقسیط',
-      href: '/samples/insolvency',
-      desc: 'الگوی تقسیط بدهی‌ها و دیون مالی احکام دادگاه.',
-      badge: 'اعسار مالی',
+      title: 'نمونه دادخواست رفع دستور عدم پرداخت چک',
+      href: '/samples/check-stop-payment-objection',
+      desc: 'ابطال ادعای سرقت یا کلاهبرداری صادرکننده.',
+      badge: 'رفع مسدودی چک'
+    }
+  ],
+
+  relatedArticles: [
+    {
+      title: 'تفاوت چک حقوقی و چک کیفری در قانون جدید',
+      href: '/knowledge/civil-vs-criminal-check',
+      desc: 'مقایسه ۴ روش وصول چک و مزایای اجراییه ماده ۲۳.',
+      badge: 'مقاله آموزشی'
     },
+    {
+      title: 'اظهارنامه رسمی چیست و چگونه ارسال می‌شود؟',
+      href: '/knowledge/what-is-legal-notice',
+      desc: 'اخطار رسمی و قانونی پیش از طرح دعوای تجاری.',
+      badge: 'مقاله آموزشی'
+    },
+    {
+      title: 'دادخواست چیست و چگونه تنظیم می‌شود؟',
+      href: '/knowledge/what-is-petition',
+      desc: 'راهنمای کامل ثبت دادخواست مالی در دفاتر قضایی.',
+      badge: 'مقاله آموزشی'
+    }
   ],
 
   ctaTitle: 'سفارش تنظیم دادخواست مطالبه وجه سفته و توقیف اموال',

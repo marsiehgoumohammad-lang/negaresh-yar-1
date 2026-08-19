@@ -226,9 +226,10 @@ export function KnowledgeArticleTemplate({ data }: { data: KnowledgeArticleData 
                 {data.quickAnswerTitle}
               </h2>
             </div>
-            <p className="text-slate-200 text-sm md:text-base leading-relaxed md:leading-loose mb-5 font-medium">
-              {data.quickAnswerParagraph}
-            </p>
+            <div
+              className="text-slate-200 text-sm md:text-base leading-relaxed md:leading-loose mb-5 font-medium [&_a]:text-[#E5C158] [&_a]:underline [&_a]:underline-offset-4 hover:[&_a]:text-amber-300"
+              dangerouslySetInnerHTML={{ __html: data.quickAnswerParagraph }}
+            />
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 pt-4 border-t border-slate-800">
               {data.quickAnswerHighlights.map((hl, idx) => (
                 <div key={idx} className="flex items-start gap-2 text-xs text-slate-300">
@@ -271,9 +272,12 @@ export function KnowledgeArticleTemplate({ data }: { data: KnowledgeArticleData 
                 {section.title}
               </h2>
 
-              <div className="space-y-4 text-slate-300 text-sm md:text-base leading-relaxed md:leading-loose">
+              <div className="space-y-4 text-slate-300 text-sm md:text-base leading-relaxed md:leading-loose [&_a]:text-[#E5C158] [&_a]:underline [&_a]:underline-offset-4 [&_a]:font-semibold hover:[&_a]:text-amber-300 hover:[&_a]:decoration-amber-300 [&_a]:transition-colors [&_strong]:text-white [&_strong]:font-bold [&_ul]:list-disc [&_ul]:pr-5 [&_ul]:space-y-1.5 [&_ol]:list-decimal [&_ol]:pr-5 [&_ol]:space-y-1.5 [&_li]:text-slate-300 [&_blockquote]:border-r-4 [&_blockquote]:border-[#E5C158] [&_blockquote]:pr-4 [&_blockquote]:py-1 [&_blockquote]:italic [&_blockquote]:text-slate-300 [&_blockquote]:bg-slate-900/50 [&_blockquote]:rounded-l-lg [&_table]:w-full [&_table]:border-collapse [&_th]:border [&_th]:border-slate-700 [&_th]:p-2.5 [&_th]:bg-slate-800 [&_th]:text-white [&_td]:border [&_td]:border-slate-800 [&_td]:p-2.5">
                 {section.paragraphs.map((p, idx) => (
-                  <p key={idx}>{p}</p>
+                  <div
+                    key={idx}
+                    dangerouslySetInnerHTML={{ __html: p }}
+                  />
                 ))}
               </div>
 

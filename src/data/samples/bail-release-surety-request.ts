@@ -178,23 +178,44 @@ export const sampleBailReleaseSuretyRequestData: SampleLandingData = {
 
   relatedSamples: [
     {
-      title: 'نمونه درخواست تبدیل وثیقه به کفالت و فیش حقوقی',
+      title: 'نمونه تقاضای قبولی وثیقه و ارزیابی ملک',
+      href: '/samples/bail-acceptance-request',
+      desc: 'معرفی سند ملکی و تقاضای کارشناسی ارزش.',
+      badge: 'تودیع وثیقه'
+    },
+    {
+      title: 'نمونه درخواست تبدیل و تعویض وثیقه',
+      href: '/samples/bail-substitution',
+      desc: 'جایگزینی سند ملکی دیگر یا ضمانت‌نامه.',
+      badge: 'تعویض وثیقه'
+    },
+    {
+      title: 'نمونه تبدیل قرار وثیقه به کفالت کارمند',
       href: '/samples/bail-to-surety',
-      desc: 'الگوی تقاضای آزادسازی سند ملک و جایگزینی ضامن کارمند.',
-      badge: 'تبدیل وثیقه',
+      desc: 'آزادی سند ملک با معرفی ضامن معتبر.',
+      badge: 'تبدیل به کفالت'
+    }
+  ],
+
+  relatedArticles: [
+    {
+      title: 'قرار وثیقه چیست و چگونه تبدیل یا آزاد می‌شود؟',
+      href: '/knowledge/what-is-bail',
+      desc: 'راهنمای جامع تودیع وثیقه، رفع بازداشت و استرداد سند.',
+      badge: 'مقاله آموزشی'
     },
     {
-      title: 'نمونه درخواست فک وثیقه و رفع اثر از سند',
-      href: '/samples/release-of-bail',
-      desc: 'الگوی رفع توقیف از سند ملک پس از برائت یا اجرای کامل حکم.',
-      badge: 'فک وثیقه',
+      title: 'تفاوت عفو عمومی با آزادی مشروط',
+      href: '/knowledge/pardon-vs-conditional-release',
+      desc: 'بررسی راهکارهای قانونی آزادی و ارفاقات کیفری.',
+      badge: 'مقاله آموزشی'
     },
     {
-      title: 'نمونه لایحه اعتراض به دستور ضبط وثیقه و وجه‌الکفاله',
-      href: '/samples/bail-forfeiture-objection',
-      desc: 'الگوی دفاع از وثیقه‌گذار در برابر دستور ضبط وثیقه مستند به ماده ۲۳۲.',
-      badge: 'ابطال ضبط وثیقه',
-    },
+      title: 'راهنمای سامانه خدمات الکترونیک قضایی ثنا',
+      href: '/knowledge/online-judicial-services-guide',
+      desc: 'نحوه پیگیری قرارهای تامین در سامانه ثنا.',
+      badge: 'مقاله آموزشی'
+    }
   ],
 
   ctaTitle: 'سفارش تنظیم درخواست انصراف ضامن و آزادسازی فیش حقوقی',

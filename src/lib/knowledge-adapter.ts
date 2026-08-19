@@ -2,10 +2,97 @@ import { Article } from '@/lib/stores/types';
 import { ALL_KNOWLEDGE_ARTICLES } from '@/data/knowledge';
 import { KnowledgeArticleData, KnowledgeSection } from '@/data/knowledge/types';
 
+function splitBodyIntoParagraphs(bodyText: string): string[] {
+  if (!bodyText || !bodyText.trim()) return [];
+
+  // Convert markdown links [text](url) to <a> tags if any
+  const processedText = bodyText.replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2">$1</a>');
+
+  // Check if text has <p> tags
+  const pRegex = /<p[^>]*>([\s\S]*?)<\/p>/gi;
+  const pMatches = Array.from(processedText.matchAll(pRegex));
+
+  if (pMatches.length > 0) {
+    const list: string[] = [];
+    pMatches.forEach((m) => {
+      const inner = m[1].trim();
+      if (inner) {
+        list.push(inner);
+      }
+    });
+
+    // Also capture any standalone <ul>, <ol>, <blockquote>, <table>, <div> blocks
+    const blockRegex = /<(?:ul|ol|blockquote|table|div)[^>]*>[\s\S]*?<\/(?:ul|ol|blockquote|table|div)>/gi;
+    const blockMatches = Array.from(processedText.matchAll(blockRegex));
+    blockMatches.forEach((bm) => {
+      const blockHtml = bm[0].trim();
+      if (blockHtml && !list.some((item) => item.includes(blockHtml))) {
+        list.push(blockHtml);
+      }
+    });
+
+    if (list.length > 0) return list;
+  }
+
+  // Fallback: split by double newlines or single newlines without stripping any HTML tags
+  return processedText
+    .split(/\n\s*\n/)
+    .map((p) => p.trim())
+    .filter(Boolean);
+}
+
 export function adaptArticleToKnowledgeData(article: Article): KnowledgeArticleData {
   const staticMatch = ALL_KNOWLEDGE_ARTICLES.find((s) => s.slug === article.slug);
 
-  if (staticMatch) {
+  // Parse sections from content string
+  const rawContent = article.content || '';
+  const parsedSections: KnowledgeSection[] = [];
+
+  // Match headings: <h2>...</h2>, <h3>...</h3>, ## ..., ### ...
+  const headingRegex = /(?:^|\n)(?:<h([2-4])[^>]*>([\s\S]*?)<\/h\1>|#{2,4}\s+(.*?)(?:\n|$))/gi;
+  const matches: { index: number; length: number; title: string }[] = [];
+  let match: RegExpExecArray | null;
+
+  while ((match = headingRegex.exec(rawContent)) !== null) {
+    const rawTitle = match[2] || match[3] || '';
+    const cleanTitle = rawTitle.replace(/<[^>]+>/g, '').trim();
+    if (cleanTitle) {
+      matches.push({
+        index: match.index,
+        length: match[0].length,
+        title: cleanTitle,
+      });
+    }
+  }
+
+  if (matches.length > 0) {
+    if (matches[0].index > 0) {
+      const introBody = rawContent.slice(0, matches[0].index).trim();
+      const introParagraphs = splitBodyIntoParagraphs(introBody);
+      if (introParagraphs.length > 0) {
+        parsedSections.push({
+          id: 'sec-intro',
+          title: 'مقدمه و کلیات',
+          paragraphs: introParagraphs,
+        });
+      }
+    }
+
+    matches.forEach((m, index) => {
+      const nextMatchIndex = matches[index + 1] ? matches[index + 1].index : rawContent.length;
+      const bodyText = rawContent.slice(m.index + m.length, nextMatchIndex).trim();
+      const paragraphs = splitBodyIntoParagraphs(bodyText);
+
+      parsedSections.push({
+        id: `sec-${index + 1}`,
+        title: m.title,
+        paragraphs: paragraphs.length > 0 ? paragraphs : [bodyText || 'توضیحات این بخش به زودی تکمیل خواهد شد.'],
+      });
+    });
+  }
+
+  // If staticMatch exists and no custom parsed sections were found, or if static match is exact
+  if (staticMatch && parsedSections.length === 0) {
     return {
       ...staticMatch,
       h1Title: article.title || staticMatch.h1Title,
@@ -17,42 +104,9 @@ export function adaptArticleToKnowledgeData(article: Article): KnowledgeArticleD
     };
   }
 
-  // Parse sections from content string
-  const rawContent = article.content || '';
-  const parsedSections: KnowledgeSection[] = [];
-
-  // Check if content has headings like ## or <h2>
-  const headingRegex = /(?:^|\n)(#{2,3}|<h[23][^>]*>)\s*(.*?)(?:<\/h[23]>|\n|$)/gi;
-  const matches = Array.from(rawContent.matchAll(headingRegex));
-
-  if (matches.length > 0) {
-    matches.forEach((match, index) => {
-      const matchIndex = match.index || 0;
-      const title = match[2].trim().replace(/<[^>]+>/g, '');
-      const nextMatchIndex = matches[index + 1] ? (matches[index + 1].index || rawContent.length) : rawContent.length;
-
-      const bodyText = rawContent.slice(matchIndex + match[0].length, nextMatchIndex).trim();
-      const paragraphs = bodyText
-        .split(/\n\s*\n/)
-        .map((p) => p.replace(/<[^>]+>/g, '').trim())
-        .filter(Boolean);
-
-      if (title && paragraphs.length > 0) {
-        parsedSections.push({
-          id: `sec-${index + 1}`,
-          title,
-          paragraphs,
-        });
-      }
-    });
-  }
-
   // Fallback if no headings found
   if (parsedSections.length === 0) {
-    const paragraphs = rawContent
-      .split(/\n\s*\n/)
-      .map((p) => p.replace(/<[^>]+>/g, '').trim())
-      .filter(Boolean);
+    const paragraphs = splitBodyIntoParagraphs(rawContent);
 
     if (paragraphs.length > 0) {
       parsedSections.push({

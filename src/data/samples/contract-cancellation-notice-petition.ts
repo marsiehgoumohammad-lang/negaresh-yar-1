@@ -205,6 +205,48 @@ export const sampleContractCancellationNoticePetitionData: SampleDocument = {
     },
   ],
 
+  relatedSamples: [
+    {
+      title: 'نمونه دادخواست استرداد ودیعه مسکن',
+      href: '/samples/rent-deposit-claim',
+      desc: 'مطالبه پول پیش اجاره از موجر پس از تحویل کلید.',
+      badge: 'استرداد ودیعه'
+    },
+    {
+      title: 'نمونه دادخواست خلع ید و رفع تصرف عدوانی',
+      href: '/samples/property-possession-claim',
+      desc: 'اخراج متصرف غیرقانونی از ملک دارای سند رسمی.',
+      badge: 'خلع ید'
+    },
+    {
+      title: 'نمونه اظهارنامه رسمی حقوقی',
+      href: '/samples/legal-notice',
+      desc: 'ارسال اخطار رسمی و قانونی پیش از طرح دعوا.',
+      badge: 'اظهارنامه رسمی'
+    }
+  ],
+
+  relatedArticles: [
+    {
+      title: 'اظهارنامه رسمی چیست و چگونه ارسال می‌شود؟',
+      href: '/knowledge/what-is-legal-notice',
+      desc: 'ضرورت ارسال اظهارنامه پیش از ثبت دادخواست ملکی.',
+      badge: 'مقاله آموزشی'
+    },
+    {
+      title: 'دادخواست چیست و مراحل ثبت آن در دادگاه',
+      href: '/knowledge/what-is-petition',
+      desc: 'راهنمای تنظیم دادخواست‌های ملکی و قراردادی.',
+      badge: 'مقاله آموزشی'
+    },
+    {
+      title: 'لایحه دفاعیه چیست و چگونه نوشته می‌شود؟',
+      href: '/knowledge/what-is-legal-brief',
+      desc: 'اصول تنظیم لوایح دفاعیه در محاکم عمومی حقوقی.',
+      badge: 'مقاله آموزشی'
+    }
+  ],
+
   ctaTitle: 'قصد فسخ قانونی معامله و بازپس‌گیری پول خود را دارید؟',
   ctaDescription:
     'کارشناسان نگارش یار اظهارنامه رسمی و دادخواست تنفیذ فسخ قرارداد شما را منطبق با مواد قانونی و رویه قضایی تنظیم می‌نمایند.',

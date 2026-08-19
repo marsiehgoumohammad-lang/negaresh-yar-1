@@ -184,29 +184,44 @@ export const samplePromissoryNoteClaimData: SampleLandingData = {
 
   relatedSamples: [
     {
-      title: 'نمونه دادخواست مطالبه وجه چک',
-      href: '/samples/check-civil-claim',
-      badge: 'اسناد تجاری',
-      desc: 'مشاهده الگوی دادخواست حقوقی مطالبه وجه چک صیادی.',
+      title: 'نمونه دادخواست مطالبه وجه چک صیادی',
+      href: '/samples/sayad-check-claim-petition',
+      desc: 'مطالبه اصل وجه با خسارت تاخیر تادیه از سررسید.',
+      badge: 'چک صیادی'
     },
     {
-      title: 'نمونه اظهارنامه مطالبه وجه چک',
-      href: '/samples/check-payment-demand',
-      badge: 'اظهارنامه',
-      desc: 'اخطار رسمی به بدهکار پیش از اقامه دعوای قضایی.',
+      title: 'نمونه درخواست صدور اجراییه مستقیم چک',
+      href: '/samples/check-execution-petition',
+      desc: 'صدور فوری اجراییه ماده ۲۳ بدون نیاز به دادرسی.',
+      badge: 'اجراییه مستقیم'
     },
     {
-      title: 'نمونه دادخواست حقوقی ثنا',
-      href: '/samples/petition',
-      badge: 'اوراق قضایی',
-      desc: 'چارچوب کلی دادخواست‌های مالی و تعهدات قراردادی.',
+      title: 'نمونه شکواییه چک بلامحل کیفری',
+      href: '/samples/check-bounced-complaint',
+      desc: 'شکایت کیفری از صادرکننده چک در دادسرا.',
+      badge: 'شکایت کیفری'
+    }
+  ],
+
+  relatedArticles: [
+    {
+      title: 'تفاوت چک حقوقی و چک کیفری در قانون جدید',
+      href: '/knowledge/civil-vs-criminal-check',
+      desc: 'مقایسه ۴ روش وصول چک و مزایای اجراییه ماده ۲۳.',
+      badge: 'مقاله آموزشی'
     },
     {
-      title: 'نمونه دادخواست اعسار از پرداخت محکوم‌به',
-      href: '/samples/insolvency',
-      badge: 'اعسار و تقسیط',
-      desc: 'مشاهده شرایط تقسیط بدهی‌های مالی ناشی از سفته و چک.',
+      title: 'اظهارنامه رسمی چیست و چگونه ارسال می‌شود؟',
+      href: '/knowledge/what-is-legal-notice',
+      desc: 'اخطار رسمی و قانونی پیش از طرح دعوای تجاری.',
+      badge: 'مقاله آموزشی'
     },
+    {
+      title: 'دادخواست چیست و چگونه تنظیم می‌شود؟',
+      href: '/knowledge/what-is-petition',
+      desc: 'راهنمای کامل ثبت دادخواست مالی در دفاتر قضایی.',
+      badge: 'مقاله آموزشی'
+    }
   ],
 
   ctaTitle: 'آیا مایل به وصول وجه سفته و توقیف دارایی‌های بدهکار هستید؟',

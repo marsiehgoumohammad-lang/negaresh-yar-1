@@ -183,35 +183,44 @@ export const sampleReleaseOfBailData: SampleLandingData = {
 
   relatedSamples: [
     {
-      title: 'نمونه درخواست تبدیل وثیقه به کفالت',
-      href: '/samples/bail-to-surety',
-      desc: 'الگوی فک سند ملکی و معرفی ضامن فیش حقوقی یا جواز کسب.',
-      badge: 'تبدیل وثیقه',
+      title: 'نمونه اعتراض به قرار تامین کیفری',
+      href: '/samples/objection-to-criminal-security',
+      desc: 'اعتراض به صدور قرار نامتناسب بازپرس.',
+      badge: 'اعتراض به قرار'
     },
     {
-      title: 'نمونه درخواست تخفیف و کاهش مبلغ وثیقه',
-      href: '/samples/bail-reduction',
-      desc: 'الگوی تقاضای تعدیل مبلغ سنگین وثیقه متناسب با خسارت پرونده.',
-      badge: 'کاهش وثیقه',
-    },
-    {
-      title: 'نمونه درخواست تعویض و جایگزینی وثیقه',
-      href: '/samples/bail-substitution',
-      desc: 'الگوی جایگزین کردن سند ملکی قبلی با سند ملک جدید.',
-      badge: 'تعویض سند',
-    },
-    {
-      title: 'نمونه لایحه تبدیل بازداشت موقت به وثیقه',
+      title: 'نمونه درخواست تبدیل بازداشت به وثیقه',
       href: '/samples/detention-to-bail',
-      desc: 'الگوی تقاضای فک بازداشت موقت و صدور قرار تأمین کیفری.',
-      badge: 'فک بازداشت',
+      desc: 'تقاضای خروج از بازداشت با معرفی سند ملک.',
+      badge: 'قبولی وثیقه'
     },
     {
-      title: 'نمونه درخواست تسریع در قبولی وثیقه',
-      href: '/samples/bail-acceptance-request',
-      desc: 'الگوی تسریع در کارشناسی و صدور قبولی وثیقه جهت ممانعت از بازداشت.',
-      badge: 'قبولی وثیقه',
+      title: 'نمونه درخواست انصراف ضامن و فک فیش حقوقی',
+      href: '/samples/bail-release-surety-request',
+      desc: 'رفع اثر از تعهد کفیل و فیش حقوقی.',
+      badge: 'انصراف ضامن'
+    }
+  ],
+
+  relatedArticles: [
+    {
+      title: 'قرار وثیقه چیست و چگونه تبدیل یا آزاد می‌شود؟',
+      href: '/knowledge/what-is-bail',
+      desc: 'راهنمای جامع تودیع وثیقه، رفع بازداشت و استرداد سند.',
+      badge: 'مقاله آموزشی'
     },
+    {
+      title: 'تفاوت عفو عمومی با آزادی مشروط',
+      href: '/knowledge/pardon-vs-conditional-release',
+      desc: 'بررسی راهکارهای قانونی آزادی و ارفاقات کیفری.',
+      badge: 'مقاله آموزشی'
+    },
+    {
+      title: 'راهنمای سامانه خدمات الکترونیک قضایی ثنا',
+      href: '/knowledge/online-judicial-services-guide',
+      desc: 'نحوه پیگیری قرارهای تامین در سامانه ثنا.',
+      badge: 'مقاله آموزشی'
+    }
   ],
 
   ctaTitle: 'پرونده شما مختومه شده و نیاز به آزادسازی سند دارید؟',

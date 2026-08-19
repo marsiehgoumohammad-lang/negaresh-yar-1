@@ -186,29 +186,44 @@ export const sampleSentenceSuspensionRequestData: SampleLandingData = {
 
   relatedSamples: [
     {
-      title: 'نمونه درخواست استفاده از پابند الکترونیکی',
-      href: '/samples/electronic-tag-request',
-      badge: 'پابند الکترونیک',
-      desc: 'مشاهده شرایط گذراندن دوران حبس در منزل تحت نظارت سامانه الکترونیکی.',
-    },
-    {
-      title: 'نمونه درخواست آزادی مشروط زندانی',
-      href: '/samples/conditional-release',
-      badge: 'آزادی مشروط',
-      desc: 'الگوی تقاضای آزادی مشروط مستند به ماده ۵۸ قانون مجازات اسلامی.',
-    },
-    {
-      title: 'نمونه درخواست تسلیم به رای و تخفیف مجازات',
+      title: 'نمونه درخواست تخفیف تسلیم به رای',
       href: '/samples/verdict-surrender-discount',
-      badge: 'تسلیم به رأی',
-      desc: 'الگوی تقاضای کسر تا یک‌چهارم مجازات مستند به ماده ۴۴۲ آیین دادرسی کیفری.',
+      desc: 'کاهش یک‌چهارم حبس با اسقاط حق تجدیدنظرخواهی.',
+      badge: 'تسلیم به رأی'
     },
     {
-      title: 'نمونه درخواست گواهی اعاده حیثیت و پاکسازی سابقه',
-      href: '/samples/criminal-rehabilitation-certificate',
-      badge: 'اعاده حیثیت',
-      desc: 'الگوی درخواست رفع اثر از پیشینه کیفری موثر مستند به ماده ۲۵ ق.م.ا.',
+      title: 'نمونه درخواست مرخصی زندانی با وثیقه',
+      href: '/samples/prisoner-furlough-request',
+      desc: 'تقاضای اعطای مرخصی از دادیار ناظر زندان.',
+      badge: 'مرخصی زندانی'
     },
+    {
+      title: 'نمونه درخواست اعاده حیثیت کیفری',
+      href: '/samples/criminal-rehabilitation-certificate',
+      desc: 'پاک شدن سابقه کیفری موثر پس از انقضای مواعد قانونی.',
+      badge: 'اعاده حیثیت'
+    }
+  ],
+
+  relatedArticles: [
+    {
+      title: 'چگونه درخواست آزادی مشروط بدهیم؟',
+      href: '/knowledge/how-to-request-conditional-release',
+      desc: 'شرایط بهره‌مندی از ارفاقات قانونی و کاهش دوران حبس.',
+      badge: 'مقاله آموزشی'
+    },
+    {
+      title: 'تفاوت عفو عمومی با آزادی مشروط',
+      href: '/knowledge/pardon-vs-conditional-release',
+      desc: 'راهنمای جامع ارفاقات قانونی و آزادی محکومان.',
+      badge: 'مقاله آموزشی'
+    },
+    {
+      title: 'نحوه خواندن و درک دادنامه و احکام دادگاه',
+      href: '/knowledge/how-to-read-court-verdict',
+      desc: 'تشخیص قطعیت دادنامه و مهلت‌های اعتراض.',
+      badge: 'مقاله آموزشی'
+    }
   ],
 
   ctaTitle: 'آیا مایل به درخواست تعلیق باقی‌مانده مجازات حبس هستید؟',

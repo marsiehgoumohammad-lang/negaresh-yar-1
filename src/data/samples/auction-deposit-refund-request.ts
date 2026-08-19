@@ -184,23 +184,44 @@ IR - - - - - - - - - - - - - - - - - - - - - - - -
 
   relatedSamples: [
     {
-      title: 'نمونه درخواست انتقال سند رسمی ملک مزایده‌ای',
-      href: '/samples/auction-deed-transfer-request',
-      desc: 'الگوی تقاضای صدور سند رسمی به نام برنده مزایده مستند به ماده ۱۴۳.',
-      badge: 'انتقال سند',
+      title: 'نمونه درخواست مهلت پرداخت محکوم‌به',
+      href: '/samples/judgment-enforcement-grace-period',
+      desc: 'تقاضای اعطای مهلت جهت تامین وجه و جلوگیری از جلب.',
+      badge: 'مهلت اجرای حکم'
     },
     {
-      title: 'نمونه لایحه اعتراض و ابطال مزایده اجرای احکام',
-      href: '/samples/auction-cancellation-objection',
-      desc: 'الگوی لایحه اعتراض به تخلفات مزایده مستند به ماده ۱۳۶.',
-      badge: 'ابطال مزایده',
+      title: 'نمونه لایحه اعتراض به نظریه کارشناس',
+      href: '/samples/expert-opinion-objection',
+      desc: 'اعتراض به ارزیابی غیرواقعی و ارجاع به هیئت ۳ نفره.',
+      badge: 'اعتراض به کارشناسی'
     },
     {
-      title: 'نمونه درخواست فک وثیقه و رفع اثر از سند',
-      href: '/samples/release-of-bail',
-      desc: 'الگوی رفع توقیف از سند ملک پس از پایان پرونده.',
-      badge: 'فک وثیقه',
+      title: 'نمونه اعتراض شخص ثالث به توقیف اموال',
+      href: '/samples/third-party-objection-to-execution',
+      desc: 'درخواست رفع توقیف مال متعلق به غیر در اجرای احکام.',
+      badge: 'اعتراض ثالث'
+    }
+  ],
+
+  relatedArticles: [
+    {
+      title: 'راهنمای جامع کارشناسی سه نفره و پنج نفره دادگاه',
+      href: '/knowledge/expert-panel-court',
+      desc: 'شرایط، مهلت یک‌هفته‌ای و فرمول اعتراض به نظریه کارشناس.',
+      badge: 'مقاله آموزشی'
     },
+    {
+      title: 'راهنمای ثبت نام و شرکت در مزایده‌های ستاد ایران',
+      href: '/knowledge/setad-auction-registration',
+      desc: 'آموزش گام‌به‌گام خرید املاک و خودرو در حراج دولتی.',
+      badge: 'مقاله آموزشی'
+    },
+    {
+      title: 'راهنمای خرید ملک و خودرو از مزایده‌های دادگاه',
+      href: '/knowledge/how-to-buy-car-and-property-from-court-auction',
+      desc: 'نحوه شرکت در مزایده‌های اجرای احکام و حقوق برنده حراج.',
+      badge: 'مقاله آموزشی'
+    }
   ],
 
   ctaTitle: 'سفارش تنظیم درخواست استرداد ۱۰ درصد سپرده مزایده',
