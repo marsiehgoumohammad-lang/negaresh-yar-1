@@ -178,7 +178,7 @@ export const sampleEvictionNonpaymentRentData: SampleLandingData = {
     },
     {
       title: 'تنظیم اظهارنامه اخطار پرداخت اجاره',
-      href: '/services/legal-notice',
+      href: '/services/petition-writing',
       badge: 'اظهارنامه رسمی',
       desc: 'ارسال اخطار رسمی ۱۰ روزه به مستاجر جهت ایجاد حق فسخ قانونی.',
     },

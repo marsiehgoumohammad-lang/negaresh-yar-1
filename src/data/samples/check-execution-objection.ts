@@ -173,7 +173,7 @@ export const sampleCheckExecutionObjectionData: SampleLandingData = {
   relatedServices: [
     {
       title: 'تنظیم دادخواست ابطال اجراییه و دستور موقت',
-      href: '/services/petition',
+      href: '/services/petition-writing',
       desc: 'نگارش دادخواست فوری توقف اجرای احکام و رفع مسدودی حساب.',
       badge: 'دادخواست فوری',
     },
@@ -230,7 +230,7 @@ export const sampleCheckExecutionObjectionData: SampleLandingData = {
   ctaTitle: 'سفارش تنظیم دادخواست ابطال و توقف فوری اجراییه چک',
   ctaDescription: 'برای جلوگیری از توقیف اموال و مسدودی حساب‌ها و ابطال اجراییه چک تضمینی، دادخواست خود را به وکلای متخصص نگارش یار بسپارید.',
   ctaPrimaryBtnText: 'ثبت سفارش دادخواست ابطال اجراییه چک',
-  ctaPrimaryHref: '/services/petition',
+  ctaPrimaryHref: '/request?service=petition-writing',
   messengerMessage: 'سلام، درباره دادخواست ابطال اجراییه مستقیم چک صیادی و دستور موقت توقف اجرا سوال دارم. لطفا راهنمایی بفرمایید.',
 
   publishedAt: '2026-08-18T11:00:00.000Z',

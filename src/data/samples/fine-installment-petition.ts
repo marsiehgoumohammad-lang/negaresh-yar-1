@@ -168,7 +168,7 @@ export const sampleFineInstallmentPetitionData: SampleLandingData = {
   relatedServices: [
     {
       title: 'تنظیم دادخواست اعسار و تقسیط محکوم‌به',
-      href: '/services/petition',
+      href: '/services/insolvency-petition',
       desc: 'نگارش دادخواست حقوقی اعسار و جدول اقساط متناسب با درآمد.',
       badge: 'دادخواست اعسار',
     },
@@ -225,7 +225,7 @@ export const sampleFineInstallmentPetitionData: SampleLandingData = {
   ctaTitle: 'سفارش تنظیم دادخواست تقسیط جزای نقدی و توقف بازداشت',
   ctaDescription: 'برای تنظیم دادخواست مستدل با پیوست استشهادیه قانونی و جلوگیری فوری از بازداشت، پرونده خود را به وکلای نگارش یار بسپارید.',
   ctaPrimaryBtnText: 'ثبت سفارش دادخواست تقسیط جریمه',
-  ctaPrimaryHref: '/services/petition',
+  ctaPrimaryHref: '/request?service=insolvency-petition',
   messengerMessage: 'سلام، درباره دادخواست تقسیط جزای نقدی و جلوگیری از حبس بدل از جریمه سوال دارم. لطفا راهنمایی بفرمایید.',
 
   publishedAt: '2026-08-18T11:00:00.000Z',

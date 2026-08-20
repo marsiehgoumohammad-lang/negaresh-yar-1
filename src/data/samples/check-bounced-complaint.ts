@@ -159,16 +159,16 @@ export const sampleCheckBouncedComplaintData: SampleLandingData = {
 
   relatedServices: [
     {
-      title: 'تنظیم شکواییه کیفری اختصاصی',
-      href: '/services/complaint-writing',
+      title: 'تنظیم شکواییه و دادخواست اسناد تجاری',
+      href: '/services/petition-writing',
       badge: 'خدمت تخصصی',
-      desc: 'تنظیم شکواییه کیفری تخصصی چک بلامحل توسط کارشناسان حقوقی نگارش یار.',
+      desc: 'تنظیم شکواییه کیفری تخصصی چک بلامحل و دادخواست مطالبه طلب توسط کارشناسان نگارش یار.',
     },
     {
-      title: 'تنظیم دادخواست صدور اجراییه چک',
-      href: '/services/petition-writing',
-      badge: 'اجراییه چک',
-      desc: 'درخواست صدور مستقیم اجراییه بدون نیاز به دادرسی طولانی.',
+      title: 'تنظیم لایحه اعتراضی و دفاعیه دادسرا',
+      href: '/services/objection-non-prosecution-order',
+      badge: 'دفاع کیفری',
+      desc: 'اعتراض به قرار منع تعقیب چک و پیگیری دادرسی در دادگاه کیفری دو.',
     },
   ],
 
@@ -217,7 +217,7 @@ export const sampleCheckBouncedComplaintData: SampleLandingData = {
   ctaTitle: 'نیاز به تنظیم شکواییه کیفری مستدل برای چک برگشتی دارید؟',
   ctaDescription: 'با تنظیم شکواییه دقیق و رعایت کامل مواعد ۶ ماهه قانونی توسط نگارش یار، پیگیری کیفری پرونده خود را با اطمینان در دادسرا آغاز کنید.',
   ctaPrimaryBtnText: 'ثبت سفارش تنظیم شکواییه چک',
-  ctaPrimaryHref: '/request?service=complaint-writing',
+  ctaPrimaryHref: '/request?service=petition-writing',
   messengerMessage: 'سلام، درباره نمونه شکواییه صدور چک بلامحل و شرایط مهلت‌های ۶ ماهه سوال دارم. لطفا راهنمایی بفرمایید.',
 
   publishedAt: '2026-03-01T08:00:00.000Z',

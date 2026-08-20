@@ -175,10 +175,10 @@ export const samplePromissoryNoteClaimData: SampleLandingData = {
       desc: 'تنظیم دادخواست استاندارد مطالبه سفته و تامین خواسته توسط نگارش یار.',
     },
     {
-      title: 'تنظیم اظهارنامه مطالبه طلب',
-      href: '/services/legal-notice',
-      badge: 'اظهارنامه رسمی',
-      desc: 'ارسال اخطار رسمی به متعهد سفته برای تثبیت تاریخ خسارت تاخیر تادیه.',
+      title: 'تنظیم لایحه دفاعیه اسناد تجاری',
+      href: '/services/legal-brief',
+      badge: 'لایحه حقوقی',
+      desc: 'نگارش لایحه دفاعیه در خصوص اصالت سفته، خسارت تاخیر و ضمانت.',
     },
   ],
 

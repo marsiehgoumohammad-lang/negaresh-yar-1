@@ -172,7 +172,7 @@ export const sampleSayadCheckClaimPetitionData: SampleLandingData = {
   relatedServices: [
     {
       title: 'تنظیم دادخواست مطالبه وجه چک و وصول طلب',
-      href: '/services/petition',
+      href: '/services/petition-writing',
       desc: 'نگارش دادخواست تخصصی اسناد تجاری و تأمین خواسته فوری.',
       badge: 'دادخواست تجاری',
     },
@@ -208,7 +208,7 @@ export const sampleSayadCheckClaimPetitionData: SampleLandingData = {
   ctaTitle: 'سفارش تنظیم دادخواست مطالبه وجه چک صیادی و توقیف اموال',
   ctaDescription: 'برای توقیف فوری حساب‌های بدهکار و دریافت کامل خسارت تأخیر تأدیه از سررسید، دادخواست خود را به کارشناسان نگارش یار بسپارید.',
   ctaPrimaryBtnText: 'ثبت سفارش دادخواست چک صیادی',
-  ctaPrimaryHref: '/services/petition',
+  ctaPrimaryHref: '/request?service=petition-writing',
   messengerMessage: 'سلام، درباره دادخواست مطالبه وجه چک صیادی و محاسبه خسارت تأخیر تأدیه سوال دارم. لطفا راهنمایی بفرمایید.',
 
   publishedAt: '2026-08-18T11:00:00.000Z',

@@ -167,15 +167,15 @@ export const sampleObjectionStayOfProsecutionData: SampleLandingData = {
   relatedServices: [
     {
       title: 'تنظیم لایحه اعتراض به قرارهای نهایی دادسرا',
-      href: '/services/legal-brief',
+      href: '/services/objection-non-prosecution-order',
       badge: 'خدمت تخصصی',
       desc: 'تنظیم لایحه اعتراضی مستدل به قرارهای منع تعقیب و موقوفی توسط کارشناسان حقوقی.',
     },
     {
-      title: 'تنظیم شکواییه و دادخواست کیفری',
-      href: '/services/complaint',
+      title: 'تنظیم لایحه دفاعیه کیفری و حقوقی',
+      href: '/services/legal-brief',
       badge: 'اوراق قضایی',
-      desc: 'تنظیم شکواییه‌های تخصصی دادسرا و پیگیری پرونده‌های کیفری.',
+      desc: 'تنظیم لوایح تخصصی دادسرا و پیگیری پرونده‌های کیفری.',
     },
   ],
 

@@ -176,16 +176,16 @@ export const sampleCourtFeeInsolvencyData: SampleLandingData = {
 
   relatedServices: [
     {
-      title: 'تنظیم دادخواست اعسار و استشهادیه شهود',
-      href: '/services/petition',
+      title: 'تنظیم دادخواست اعسار از هزینه دادرسی',
+      href: '/services/insolvency-court-fee',
       badge: 'خدمت تخصصی',
-      desc: 'تنظیم تخصصی فرم دادخواست اعسار و برگه استشهادیه شهود مطابق استانداردهای دفاتر قضایی.',
+      desc: 'معافیت از پرداخت ۳.۵٪ تا ۴.۵٪ تمبر دادرسی با استشهادیه محلی معتبر.',
     },
     {
-      title: 'تنظیم دادخواست حقوقی و دعاوی مالی',
-      href: '/services/petition-writing',
+      title: 'تنظیم دادخواست اعسار و تقسیط محکوم‌به',
+      href: '/services/insolvency-petition',
       badge: 'اوراق قضایی',
-      desc: 'نگارش انواع دادخواست‌های بدوی و طاری در محاکم عمومی حقوقی.',
+      desc: 'نگارش انواع دادخواست‌های اعسار، تقسیط مهریه و توقف صدور جلب.',
     },
   ],
 
@@ -234,7 +234,7 @@ export const sampleCourtFeeInsolvencyData: SampleLandingData = {
   ctaTitle: 'هزینه دادرسی پرونده شما سنگین است و توان پرداخت ندارید؟',
   ctaDescription: 'دادخواست اعسار از هزینه دادرسی را به همراه فرم استشهادیه قانونی تنظیم کنید تا دادگاه بدون دریافت تمبر به حق شما رسیدگی کند.',
   ctaPrimaryBtnText: 'سفارش دادخواست اعسار از هزینه دادرسی',
-  ctaPrimaryHref: '/services/petition',
+  ctaPrimaryHref: '/request?service=insolvency-court-fee',
   messengerMessage: 'سلام، درباره دادخواست اعسار از پرداخت هزینه دادرسی سوال دارم. لطفا راهنمایی بفرمایید.',
 
   publishedAt: '2026-03-05T08:00:00.000Z',

@@ -170,7 +170,7 @@ export const sampleEvictionExpiredLeaseData: SampleLandingData = {
     },
     {
       title: 'تنظیم اظهارنامه تحویل و تخلیه ملک',
-      href: '/services/legal-notice',
+      href: '/services/petition-writing',
       badge: 'اظهارنامه رسمی',
       desc: 'ارسال اخطار رسمی تخلیه به مستاجر قبل از اقدام به طرح دعوا.',
     },

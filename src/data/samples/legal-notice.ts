@@ -258,22 +258,22 @@ export const sampleLegalNoticeData: SampleLandingData = {
 
   relatedServices: [
     {
-      title: 'تنظیم اظهارنامه رسمی',
-      href: '/services/legal-notice',
-      desc: 'سفارش نگارش تخصصی اظهارنامه‌های ثنا.',
-      badge: 'اظهارنامه',
-    },
-    {
-      title: 'تنظیم دادخواست حقوقی',
+      title: 'تنظیم اظهارنامه و دادخواست رسمی',
       href: '/services/petition-writing',
-      desc: 'تنظیم دادخواست پس از ابلاغ اظهارنامه.',
+      desc: 'سفارش نگارش تخصصی اظهارنامه‌های ثنا و دادخواست حقوقی.',
       badge: 'اوراق قضایی',
     },
     {
-      title: 'تنظیم لایحه دفاعیه',
+      title: 'تنظیم لایحه دفاعیه حقوقی',
       href: '/services/legal-brief',
-      desc: 'تنظیم لایحه دفاع حقوقی.',
+      desc: 'تنظیم لایحه دفاع حقوقی در دادگاه و شورای حل اختلاف.',
       badge: 'دفاعیه',
+    },
+    {
+      title: 'تفسیر و بررسی اوراق قضایی',
+      href: '/services/court-document-explainer',
+      desc: 'تحلیل حقوقی ابلاغیه‌ها، اخطارها و دادنامه‌ها.',
+      badge: 'تحلیل حقوقی',
     },
   ],
 
@@ -322,7 +322,7 @@ export const sampleLegalNoticeData: SampleLandingData = {
   ctaTitle: 'سفارش تنظیم اظهارنامه رسمی ثنا با وزن حقوقی بالا',
   ctaDescription: 'با سپردن تنظیم اظهارنامه رسمی خود به کارشناسان نگارش یار، از متنی محکم، مستدل و بدون خطر ادعاهای متقابل بهره‌مند شوید.',
   ctaPrimaryBtnText: 'ثبت سفارش تنظیم اظهارنامه',
-  ctaPrimaryHref: '/request?service=legal-notice',
+  ctaPrimaryHref: '/request?service=petition-writing',
   messengerMessage: 'سلام، درباره تنظیم اظهارنامه رسمی ماده ۱۵۶ در سامانه ثنا سوال دارم. لطفا راهنمایی بفرمایید.',
 
   publishedAt: '2026-01-22T08:00:00.000Z',

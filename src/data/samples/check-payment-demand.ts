@@ -161,10 +161,10 @@ export const sampleCheckPaymentDemandData: SampleLandingData = {
 
   relatedServices: [
     {
-      title: 'تنظیم اظهارنامه رسمی ثنا',
-      href: '/services/legal-notice',
-      badge: 'اظهارنامه رسمی',
-      desc: 'تنظیم متون قاطع و مستدل اظهارنامه توسط متخصصان نگارش یار.',
+      title: 'تنظیم اظهارنامه و دادخواست رسمی ثنا',
+      href: '/services/petition-writing',
+      badge: 'اوراق قضایی',
+      desc: 'تنظیم متون قاطع و مستدل اظهارنامه و دادخواست توسط متخصصان نگارش یار.',
     },
     {
       title: 'تنظیم دادخواست صدور اجراییه چک',
@@ -219,7 +219,7 @@ export const sampleCheckPaymentDemandData: SampleLandingData = {
   ctaTitle: 'نیاز به تنظیم اظهارنامه قاطع و قانونی برای مطالبه وجه چک دارید؟',
   ctaDescription: 'کارشناسان نگارش یار متنی کاملاً حقوقی، اثرگذار و بدون خطر اقرار به ضرر خودتان برای ابلاغ در سامانه ثنا تنظیم می‌نمایند.',
   ctaPrimaryBtnText: 'ثبت سفارش تنظیم اظهارنامه چک',
-  ctaPrimaryHref: '/request?service=legal-notice',
+  ctaPrimaryHref: '/request?service=petition-writing',
   messengerMessage: 'سلام، درباره تنظیم اظهارنامه مطالبه وجه چک و خسارت تاخیر تادیه سوال دارم. لطفا راهنمایی بفرمایید.',
 
   publishedAt: '2026-03-01T08:00:00.000Z',

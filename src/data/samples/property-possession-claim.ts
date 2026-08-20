@@ -175,10 +175,10 @@ export const samplePropertyPossessionClaimData: SampleLandingData = {
       desc: 'تنظیم تخصصی دادخواست‌های تصرف عدوانی، خلع ید و دستور موقت توسط نگارش یار.',
     },
     {
-      title: 'تنظیم شکواییه کیفری تصرف عدوانی',
-      href: '/services/complaint-writing',
+      title: 'تنظیم لایحه و شکواییه کیفری تصرف عدوانی',
+      href: '/services/legal-brief',
       badge: 'شکایت کیفری',
-      desc: 'تنظیم شکایت کیفری ماده ۶۹۰ قانون مجازات اسلامی در دادسرا.',
+      desc: 'تنظیم شکایت کیفری ماده ۶۹۰ قانون مجازات اسلامی و لایحه در دادسرا.',
     },
   ],
 

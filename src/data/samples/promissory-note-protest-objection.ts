@@ -172,7 +172,7 @@ export const samplePromissoryNoteProtestObjectionData: SampleLandingData = {
   relatedServices: [
     {
       title: 'تنظیم دادخواست مطالبه وجه سفته و چک',
-      href: '/services/petition',
+      href: '/services/petition-writing',
       desc: 'نگارش تخصصی دادخواست اسناد تجاری و تأمین خواسته فوری.',
       badge: 'دادخواست تجاری',
     },
@@ -208,7 +208,7 @@ export const samplePromissoryNoteProtestObjectionData: SampleLandingData = {
   ctaTitle: 'سفارش تنظیم دادخواست مطالبه وجه سفته و توقیف اموال',
   ctaDescription: 'برای تنظیم دادخواست استاندارد، توقیف فوری حساب‌های بانکی و محکومیت تضامنی ضامنان، پرونده خود را به وکلای متخصص نگارش یار بسپارید.',
   ctaPrimaryBtnText: 'ثبت سفارش دادخواست مطالبه سفته',
-  ctaPrimaryHref: '/services/petition',
+  ctaPrimaryHref: '/request?service=petition-writing',
   messengerMessage: 'سلام، درباره دادخواست مطالبه وجه سفته واخواست‌شده و خسارت تأخیر تأدیه سوال دارم. لطفا راهنمایی بفرمایید.',
 
   publishedAt: '2026-08-18T11:00:00.000Z',
