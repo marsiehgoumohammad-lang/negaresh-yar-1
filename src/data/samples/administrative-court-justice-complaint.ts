@@ -207,23 +207,35 @@ export const sampleAdministrativeCourtJusticeComplaintData: SampleDocument = {
 
   relatedSamples: [
     {
+      title: 'نمونه لایحه اعتراض به برگ تشخیص مالیات',
+      href: '/samples/letter-to-tax-office',
+      desc: 'لایحه دفاعیه اعتراض مالیاتی و طرح در هیات حل اختلاف و تجدیدنظر دیوان.',
+      badge: 'امور مالیاتی',
+    },
+    {
+      title: 'نمونه نامه رسمی به استاندار و فرمانداری',
+      href: '/samples/letter-to-governor',
+      desc: 'درخواست پیگیری تخلفات اداری و رفع موانع قبل از طرح دعوا در دیوان.',
+      badge: 'استانداری',
+    },
+    {
       title: 'نمونه شکایت اداره کار و سابقه بیمه',
       href: '/samples/labor-board-wage-insurance-complaint',
       desc: 'مطالبه حقوق، سنوات و حق بیمه کارگری.',
-      badge: 'اداره کار'
+      badge: 'اداره کار',
     },
     {
       title: 'نمونه نامه به رئیس جمهور و سامانه سامد',
       href: '/samples/president-letter',
       desc: 'درخواست رسیدگی به مشکلات اشتغال، وام و تسهیلات.',
-      badge: 'ریاست جمهوری'
+      badge: 'ریاست جمهوری',
     },
     {
       title: 'نمونه نامه به دفتر مقام معظم رهبری',
       href: '/samples/leader-office-letter',
       desc: 'تقاضای مساعدت، عفو و رسیدگی به تظلم‌خواهی.',
-      badge: 'دفتر رهبری'
-    }
+      badge: 'دفتر رهبری',
+    },
   ],
 
   relatedArticles: [

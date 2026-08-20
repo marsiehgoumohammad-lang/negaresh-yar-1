@@ -184,10 +184,22 @@ export const samplePropertyPossessionClaimData: SampleLandingData = {
 
   relatedSamples: [
     {
+      title: 'نمونه دادخواست الزام به تنظیم سند رسمی ملک',
+      href: '/samples/official-deed-compulsion-petition',
+      badge: 'الزام به سند',
+      desc: 'طرح دعوای الزام فروشنده به انتقال سند رسمی و اخذ پایان‌کار.',
+    },
+    {
       title: 'نمونه دادخواست تخلیه ملک پس از پایان مدت اجاره',
       href: '/samples/eviction-expired-lease',
       badge: 'تخلیه ملک',
       desc: 'درخواست صدور دستور تخلیه فوری در روابط استیجاری.',
+    },
+    {
+      title: 'نمونه اظهارنامه رسمی فسخ قرارداد و تعهدات',
+      href: '/samples/contract-cancellation-notice-petition',
+      badge: 'فسخ قرارداد',
+      desc: 'ارسال اخطار رسمی به متعهد پیش از اقامه دعوای قضایی.',
     },
     {
       title: 'نمونه دادخواست تخلیه به علت عدم پرداخت اجاره‌بها',
@@ -195,17 +207,26 @@ export const samplePropertyPossessionClaimData: SampleLandingData = {
       badge: 'عدم پرداخت اجاره',
       desc: 'فسخ و تخلیه ملک به دلیل معوق ماندن اجاره‌بها.',
     },
+  ],
+
+  relatedArticles: [
     {
-      title: 'نمونه دادخواست حقوقی ثنا',
-      href: '/samples/petition',
-      badge: 'اوراق قضایی',
-      desc: 'مشاهده چارچوب کلی دادخواست‌های حقوقی در مراجع قضایی.',
+      title: 'دادخواست چیست و چگونه تنظیم می‌شود؟',
+      href: '/knowledge/what-is-petition',
+      desc: 'راهنمای گام‌به‌گام تنظیم دادخواست حقوقی و ثبت در دفاتر خدمات الکترونیک قضایی.',
+      badge: 'مقاله آموزشی',
     },
     {
-      title: 'نمونه شکواییه کیفری دادسرا',
-      href: '/samples/complaint',
-      badge: 'امور کیفری',
-      desc: 'مشاهده الگوی شکواییه‌های کیفری دادسرای عمومی و انقلاب.',
+      title: 'اظهارنامه رسمی چیست و چگونه ارسال می‌شود؟',
+      href: '/knowledge/what-is-legal-notice',
+      desc: 'نحوه ابلاغ اخطار قانونی رفع تصرف پیش از شکایت در دادسرا یا دادگاه.',
+      badge: 'مقاله آموزشی',
+    },
+    {
+      title: 'لایحه دفاعیه چیست و چگونه نوشته می‌شود؟',
+      href: '/knowledge/what-is-legal-brief',
+      desc: 'اصول دفاع در پرونده‌های تصرف عدوانی، خلع ید و اثبات سبق تصرف.',
+      badge: 'مقاله آموزشی',
     },
   ],
 

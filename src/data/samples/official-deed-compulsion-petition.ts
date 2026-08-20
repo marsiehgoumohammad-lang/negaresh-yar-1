@@ -193,9 +193,9 @@ export const sampleOfficialDeedCompulsionPetitionData: SampleDocument = {
 
   relatedServices: [
     {
-      title: 'تنظیم دادخواست‌های تخصصی ملکی',
+      title: 'تنظیم دادخواست‌های تخصصی ملکی و ثبتی',
       href: '/services/petition-writing',
-      desc: 'تنظیم دادخواست الزام به سند، خلع ید، تصرف عدوانی و فسخ مبایعه‌نامه.',
+      desc: 'تنظیم دادخواست الزام به تنظیم سند رسمی، اخذ پایان‌کار و فک رهن.',
       badge: 'خدمت تخصصی',
     },
     {
@@ -206,9 +206,51 @@ export const sampleOfficialDeedCompulsionPetitionData: SampleDocument = {
     },
   ],
 
+  relatedSamples: [
+    {
+      title: 'نمونه دادخواست خلع ید و رفع تصرف عدوانی',
+      href: '/samples/property-possession-claim',
+      desc: 'طرح دعوای حقوقی تصرف عدوانی و خلع ید با سند مالکیت.',
+      badge: 'دعاوی ملکی',
+    },
+    {
+      title: 'نمونه اظهارنامه رسمی فسخ قرارداد و تعهدات',
+      href: '/samples/contract-cancellation-notice-petition',
+      desc: 'اخطار قانونی پیش از طرح دادخواست الزام به تعهدات قراردادی.',
+      badge: 'فسخ و تعهدات',
+    },
+    {
+      title: 'نمونه دادخواست استرداد ودیعه مسکن',
+      href: '/samples/rent-deposit-claim',
+      desc: 'مطالبه ودیعه رهن ملک پس از انقضای مدت اجاره.',
+      badge: 'روابط موجر و مستاجر',
+    },
+  ],
+
+  relatedArticles: [
+    {
+      title: 'دادخواست چیست و مراحل ثبت آن در دادگاه',
+      href: '/knowledge/what-is-petition',
+      desc: 'راهنمای تنظیم دادخواست‌های ملکی و الزامات ماده ۵۱ قانون آیین دادرسی مدنی.',
+      badge: 'مقاله آموزشی',
+    },
+    {
+      title: 'اظهارنامه رسمی چیست و چگونه ارسال می‌شود؟',
+      href: '/knowledge/what-is-legal-notice',
+      desc: 'ضرورت ارسال اظهارنامه حضور در دفترخانه پیش از دادخواست الزام به سند.',
+      badge: 'مقاله آموزشی',
+    },
+    {
+      title: 'لایحه دفاعیه چیست و چگونه نوشته می‌شود؟',
+      href: '/knowledge/what-is-legal-brief',
+      desc: 'اصول تنظیم لایحه دفاعیه در دعاوی ملکی و اثبات شروط مبایعه‌نامه.',
+      badge: 'مقاله آموزشی',
+    },
+  ],
+
   ctaTitle: 'فروشنده از تنظیم سند رسمی یا پایان‌کار ملک خودداری می‌کند؟',
   ctaDescription:
     'کارشناسان حقوقی نگارش یار دادخواست الزام به تنظیم سند رسمی شما را با گنجاندن تمامی الزامات ثبتی و وجه التزام قراردادی تنظیم می‌کنند.',
-  ctaPrimaryBtnText: 'سفارش دادخواست الزام به سند',
-  ctaPrimaryHref: '/request?service=official-deed-compulsion-petition',
+  ctaPrimaryBtnText: 'سفارش دادخواست الزام به سند رسمی',
+  ctaPrimaryHref: '/request?service=petition-writing',
 };

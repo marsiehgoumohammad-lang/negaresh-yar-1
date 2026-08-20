@@ -262,44 +262,56 @@ export const sampleAdministrativeLetterData: SampleLandingData = {
 
   relatedServices: [
     {
-      title: 'تنظیم تخصصی نامه اداری',
+      title: 'تنظیم تخصصی نامه اداری و سازمانی',
       href: '/services/administrative-letter',
-      desc: 'سفارش تنظیم فوری نامه اداری با لحن حرفه‌ای.',
+      desc: 'سفارش تنظیم فوری نامه اداری استاندارد با لحن حرفه‌ای.',
       badge: 'اداری',
     },
     {
-      title: 'نامه به ریاست جمهوری',
+      title: 'تنظیم عریضه به ریاست جمهوری',
       href: '/services/president-letter',
-      desc: 'تنظیم نامه رسمی به مرکز ارتباطات مردمی ریاست جمهوری.',
+      desc: 'تنظیم نامه رسمی به مرکز ارتباطات مردمی ریاست جمهوری و سامد.',
       badge: 'ارتباط مردمی',
     },
     {
-      title: 'نامه به دفتر مقام معظم رهبری',
+      title: 'تنظیم نامه به دفتر مقام معظم رهبری',
       href: '/services/leader-office-letter',
-      desc: 'تنظیم عریضه به دفتر رهبری.',
+      desc: 'تنظیم عریضه و استمداد به دفتر رهبری.',
       badge: 'دفتر رهبری',
     },
   ],
 
   relatedSamples: [
     {
+      title: 'نمونه نامه رسمی به استاندار و فرمانداری',
+      href: '/samples/letter-to-governor',
+      desc: 'درخواست رسیدگی به معضلات شهری، روستایی و تقاضای ملاقات مردمی.',
+      badge: 'استانداری',
+    },
+    {
+      title: 'نمونه لایحه اعتراض به برگ تشخیص مالیات',
+      href: '/samples/letter-to-tax-office',
+      desc: 'اعتراض به مالیات عملکرد، ارزش افزوده و تراکنش‌های بانکی.',
+      badge: 'امور مالیاتی',
+    },
+    {
       title: 'نمونه دادخواست دیوان عدالت اداری',
       href: '/samples/administrative-court-justice-complaint',
       desc: 'ابطال آرای کمیسیون‌های شهرداری و هیئت‌های دولتی.',
-      badge: 'دیوان عدالت'
+      badge: 'دیوان عدالت',
     },
     {
       title: 'نمونه شکایت اداره کار و سابقه بیمه',
       href: '/samples/labor-board-wage-insurance-complaint',
       desc: 'مطالبه حقوق، سنوات و حق بیمه کارگری.',
-      badge: 'اداره کار'
+      badge: 'اداره کار',
     },
     {
       title: 'نمونه نامه به رئیس جمهور و سامانه سامد',
       href: '/samples/president-letter',
       desc: 'درخواست رسیدگی به مشکلات اشتغال، وام و تسهیلات.',
-      badge: 'ریاست جمهوری'
-    }
+      badge: 'ریاست جمهوری',
+    },
   ],
 
   relatedArticles: [

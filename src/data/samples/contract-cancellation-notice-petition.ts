@@ -207,6 +207,12 @@ export const sampleContractCancellationNoticePetitionData: SampleDocument = {
 
   relatedSamples: [
     {
+      title: 'نمونه دادخواست الزام به تنظیم سند رسمی ملک',
+      href: '/samples/official-deed-compulsion-petition',
+      desc: 'طرح دعوای حقوقی انتقال رسمی سند ملک، آپارتمان و اخذ پایان‌کار.',
+      badge: 'الزام به سند'
+    },
+    {
       title: 'نمونه دادخواست استرداد ودیعه مسکن',
       href: '/samples/rent-deposit-claim',
       desc: 'مطالبه پول پیش اجاره از موجر پس از تحویل کلید.',

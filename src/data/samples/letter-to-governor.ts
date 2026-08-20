@@ -191,39 +191,45 @@ export const sampleLetterToGovernorData: SampleLandingData = {
 
   relatedServices: [
     {
-      title: 'تنظیم نامه اداری و عریضه',
+      title: 'تنظیم نامه اداری و عریضه رسمی',
       href: '/services/administrative-letter',
-      desc: 'سفارش نگارش نامه اداری به کلیه سازمان‌ها.',
+      desc: 'سفارش نگارش نامه اداری به کلیه سازمان‌ها، وزارتخانه‌ها و فرمانداری‌ها.',
       badge: 'خدمت اداری',
     },
     {
-      title: 'تنظیم نامه به رئیس جمهور',
+      title: 'تنظیم عریضه به رئیس جمهور',
       href: '/services/president-letter',
-      desc: 'نگارش عریضه نهاد ریاست جمهوری و سامد.',
+      desc: 'نگارش عریضه رسمی نهاد ریاست جمهوری و سامانه ارتباطات مردمی سامد.',
       badge: 'خدمت اداری',
     },
   ],
 
   relatedSamples: [
     {
-        'title': 'نمونه دادخواست دیوان عدالت اداری',
-        'href': '/samples/administrative-court-justice-complaint',
-        'desc': 'ابطال رأی کمیسیون ماده ۱۰۰، ماده ۷۷ و آرای اداری.',
-        'badge': 'دیوان عدالت'
+      title: 'نمونه لایحه اعتراض به برگ تشخیص مالیات',
+      href: '/samples/letter-to-tax-office',
+      desc: 'لایحه دفاعیه اعتراض مالیاتی و ماده ۲۳۸ قانون مالیات‌های مستقیم.',
+      badge: 'امور مالیاتی',
     },
     {
-        'title': 'نمونه دادخواست شکایت اداره کار و سابقه بیمه',
-        'href': '/samples/labor-board-wage-insurance-complaint',
-        'desc': 'مطالبه حقوق معوقه، سنوات و بیمه کارگری در هیئت کار.',
-        'badge': 'اداره کار'
+      title: 'نمونه دادخواست دیوان عدالت اداری',
+      href: '/samples/administrative-court-justice-complaint',
+      desc: 'ابطال رأی کمیسیون ماده ۱۰۰، ماده ۷۷ و آرای اداری.',
+      badge: 'دیوان عدالت',
     },
     {
-        'title': 'نمونه نامه به رئیس جمهور و سامانه سامد',
-        'href': '/samples/president-letter',
-        'desc': 'درخواست رسیدگی به مشکلات اشتغال، مسکن و تسهیلات.',
-        'badge': 'ریاست جمهوری'
-    }
-],
+      title: 'نمونه دادخواست شکایت اداره کار و سابقه بیمه',
+      href: '/samples/labor-board-wage-insurance-complaint',
+      desc: 'مطالبه حقوق معوقه، سنوات و بیمه کارگری در هیئت کار.',
+      badge: 'اداره کار',
+    },
+    {
+      title: 'نمونه نامه به رئیس جمهور و سامانه سامد',
+      href: '/samples/president-letter',
+      desc: 'درخواست رسیدگی به مشکلات اشتغال، مسکن و تسهیلات.',
+      badge: 'ریاست جمهوری',
+    },
+  ],
 
   relatedArticles: [
     {

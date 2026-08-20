@@ -196,39 +196,45 @@ export const sampleLetterToTaxOfficeData: SampleLandingData = {
 
   relatedServices: [
     {
-      title: 'تنظیم لایحه اعتراض به مالیات',
+      title: 'تنظیم لایحه دفاعیه و اعتراض به برگ تشخیص مالیات',
       href: '/services/letter-to-tax-office',
-      desc: 'سفارش تنظیم تخصصی لایحه اعتراض مالیاتی.',
+      desc: 'سفارش تنظیم تخصصی لایحه دفاعیه مالیاتی و اعتراض در هیات حل اختلاف.',
       badge: 'خدمت تخصصی',
     },
     {
-      title: 'تنظیم نامه اداری',
+      title: 'تنظیم نامه اداری و سازمانی',
       href: '/services/administrative-letter',
-      desc: 'تنظیم نامه‌های رسمی و مکاتبات اداری.',
+      desc: 'تنظیم نامه‌های رسمی و مکاتبات اداری به ادارات کل امور مالیاتی.',
       badge: 'خدمت اداری',
     },
   ],
 
   relatedSamples: [
     {
-        'title': 'نمونه دادخواست دیوان عدالت اداری',
-        'href': '/samples/administrative-court-justice-complaint',
-        'desc': 'ابطال رأی کمیسیون ماده ۱۰۰، ماده ۷۷ و آرای اداری.',
-        'badge': 'دیوان عدالت'
+      title: 'نمونه نامه رسمی به استاندار و فرمانداری',
+      href: '/samples/letter-to-governor',
+      desc: 'عریضه و نامه اداری جهت پیگیری امور صنفی و تولیدی.',
+      badge: 'استانداری',
     },
     {
-        'title': 'نمونه دادخواست شکایت اداره کار و سابقه بیمه',
-        'href': '/samples/labor-board-wage-insurance-complaint',
-        'desc': 'مطالبه حقوق معوقه، سنوات و بیمه کارگری در هیئت کار.',
-        'badge': 'اداره کار'
+      title: 'نمونه دادخواست دیوان عدالت اداری',
+      href: '/samples/administrative-court-justice-complaint',
+      desc: 'ابطال رأی کمیسیون ماده ۱۰۰، ماده ۷۷ و آرای قطعی هیات‌های حل اختلاف مالیاتی.',
+      badge: 'دیوان عدالت',
     },
     {
-        'title': 'نمونه نامه به رئیس جمهور و سامانه سامد',
-        'href': '/samples/president-letter',
-        'desc': 'درخواست رسیدگی به مشکلات اشتغال، مسکن و تسهیلات.',
-        'badge': 'ریاست جمهوری'
-    }
-],
+      title: 'نمونه دادخواست شکایت اداره کار و سابقه بیمه',
+      href: '/samples/labor-board-wage-insurance-complaint',
+      desc: 'مطالبه حقوق معوقه، سنوات و بیمه کارگری در هیئت کار.',
+      badge: 'اداره کار',
+    },
+    {
+      title: 'نمونه نامه به رئیس جمهور و سامانه سامد',
+      href: '/samples/president-letter',
+      desc: 'درخواست رسیدگی به مشکلات اشتغال، مسکن و تسهیلات.',
+      badge: 'ریاست جمهوری',
+    },
+  ],
 
   relatedArticles: [
     {
