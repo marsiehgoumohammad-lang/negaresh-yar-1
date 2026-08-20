@@ -182,45 +182,45 @@ export const sampleFineInstallmentPetitionData: SampleLandingData = {
 
   relatedSamples: [
     {
-      title: 'نمونه دادخواست تقسیط مهریه و تعدیل اقساط',
-      href: '/samples/mehrieh-installment-petition',
-      desc: 'تعدیل و تقسیط سکه‌های مهریه در دادگاه خانواده.',
-      badge: 'تقسیط مهریه'
+        'title': 'نمونه دادخواست اعسار و تقسیط محکوم‌به',
+        'href': '/samples/insolvency',
+        'desc': 'الگوی عمومی اعسار از پرداخت یکباره بدهی و توقف جلب.',
+        'badge': 'اعسار و تقسیط'
     },
     {
-      title: 'نمونه دادخواست اعسار و تقسیط محکوم‌به',
-      href: '/samples/insolvency',
-      desc: 'الگوی عمومی اعسار از پرداخت یکباره بدهی و جلب.',
-      badge: 'اعسار و تقسیط'
+        'title': 'نمونه دادخواست اعسار از هزینه دادرسی',
+        'href': '/samples/court-fee-insolvency',
+        'desc': 'معافیت موقت از پرداخت هزینه دادرسی بدوی یا تجدیدنظر.',
+        'badge': 'اعسار هزینه دادرسی'
     },
     {
-      title: 'نمونه دادخواست اعسار از هزینه دادرسی',
-      href: '/samples/court-fee-insolvency',
-      desc: 'معافیت موقت از پرداخت هزینه دادرسی پرونده.',
-      badge: 'اعسار هزینه دادرسی'
+        'title': 'نمونه دادخواست تقسیط مهریه و تعدیل اقساط',
+        'href': '/samples/mehrieh-installment-petition',
+        'desc': 'درخواست تعدیل و تقسیط سکه‌های مهریه در دادگاه خانواده.',
+        'badge': 'تقسیط مهریه'
     }
-  ],
+],
 
   relatedArticles: [
     {
-      title: 'اعسار از هزینه دادرسی و محکوم‌به چیست؟',
-      href: '/knowledge/what-is-insolvency',
-      desc: 'شرایط اثبات عسرت مالی، استشهادیه شهود و ماده ۸.',
-      badge: 'مقاله آموزشی'
+        'title': 'اعسار از هزینه دادرسی و محکوم‌به چیست؟',
+        'href': '/knowledge/what-is-insolvency',
+        'desc': 'شرایط اثبات عسرت مالی، استشهادیه شهود و ماده ۸.',
+        'badge': 'مقاله آموزشی'
     },
     {
-      title: 'چگونه بدهی و مهریه را قسطی کنیم؟',
-      href: '/knowledge/how-to-install-debt-and-mahrieh',
-      desc: 'راهنمای کامل دادخواست اعسار، تقسیط و آزادی از جلب.',
-      badge: 'مقاله آموزشی'
+        'title': 'چگونه بدهی و مهریه را قسطی کنیم؟',
+        'href': '/knowledge/how-to-install-debt-and-mahrieh',
+        'desc': 'راهنمای کامل دادخواست اعسار، تقسیط و آزادی از جلب.',
+        'badge': 'مقاله آموزشی'
     },
     {
-      title: 'حکم قطعی دادگاه چیست و چگونه اجرا می‌شود؟',
-      href: '/knowledge/what-is-final-court-judgment',
-      desc: 'مراحل صدور اجراییه، مهلت ۱۰ روزه و جلب محکوم‌علیه.',
-      badge: 'مقاله آموزشی'
+        'title': 'حکم قطعی دادگاه چیست و چگونه اجرا می‌شود؟',
+        'href': '/knowledge/what-is-final-court-judgment',
+        'desc': 'مراحل صدور اجراییه، مهلت ۱۰ روزه و جلب محکوم‌علیه.',
+        'badge': 'مقاله آموزشی'
     }
-  ],
+],
 
   ctaTitle: 'سفارش تنظیم دادخواست تقسیط جزای نقدی و توقف بازداشت',
   ctaDescription: 'برای تنظیم دادخواست مستدل با پیوست استشهادیه قانونی و جلوگیری فوری از بازداشت، پرونده خود را به وکلای نگارش یار بسپارید.',

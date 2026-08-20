@@ -206,48 +206,6 @@ export const sampleOfficialDeedCompulsionPetitionData: SampleDocument = {
     },
   ],
 
-  relatedSamples: [
-    {
-      title: 'نمونه دادخواست فسخ و ابطال قرارداد',
-      href: '/samples/contract-cancellation-notice-petition',
-      desc: 'اعلام رسمی فسخ مبایعه‌نامه به علت غبن یا تخلف شرط.',
-      badge: 'فسخ معامله'
-    },
-    {
-      title: 'نمونه دادخواست استرداد ودیعه مسکن',
-      href: '/samples/rent-deposit-claim',
-      desc: 'مطالبه پول پیش اجاره از موجر پس از تحویل کلید.',
-      badge: 'استرداد ودیعه'
-    },
-    {
-      title: 'نمونه دادخواست خلع ید و رفع تصرف عدوانی',
-      href: '/samples/property-possession-claim',
-      desc: 'اخراج متصرف غیرقانونی از ملک دارای سند رسمی.',
-      badge: 'خلع ید'
-    }
-  ],
-
-  relatedArticles: [
-    {
-      title: 'اظهارنامه رسمی چیست و چگونه ارسال می‌شود؟',
-      href: '/knowledge/what-is-legal-notice',
-      desc: 'ضرورت ارسال اظهارنامه پیش از ثبت دادخواست ملکی.',
-      badge: 'مقاله آموزشی'
-    },
-    {
-      title: 'دادخواست چیست و مراحل ثبت آن در دادگاه',
-      href: '/knowledge/what-is-petition',
-      desc: 'راهنمای تنظیم دادخواست‌های ملکی و قراردادی.',
-      badge: 'مقاله آموزشی'
-    },
-    {
-      title: 'لایحه دفاعیه چیست و چگونه نوشته می‌شود؟',
-      href: '/knowledge/what-is-legal-brief',
-      desc: 'اصول تنظیم لوایح دفاعیه در محاکم عمومی حقوقی.',
-      badge: 'مقاله آموزشی'
-    }
-  ],
-
   ctaTitle: 'فروشنده از تنظیم سند رسمی یا پایان‌کار ملک خودداری می‌کند؟',
   ctaDescription:
     'کارشناسان حقوقی نگارش یار دادخواست الزام به تنظیم سند رسمی شما را با گنجاندن تمامی الزامات ثبتی و وجه التزام قراردادی تنظیم می‌کنند.',

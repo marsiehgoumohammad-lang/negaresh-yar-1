@@ -181,44 +181,29 @@ export const sampleObjectionStayOfProsecutionData: SampleLandingData = {
 
   relatedSamples: [
     {
-      title: 'نمونه شکواییه عمومی کیفری',
-      href: '/samples/complaint',
-      desc: 'فرم استاندارد طرح شکایت در دادسرا و کلانتری.',
-      badge: 'شکواییه کیفری'
-    },
-    {
-      title: 'نمونه دادخواست عمومی حقوقی',
-      href: '/samples/petition',
-      desc: 'فرم استاندارد طرح دعاوی مالی و غیرمالی در دادگاه.',
-      badge: 'دادخواست حقوقی'
-    },
-    {
-      title: 'نمونه اعتراض به قرار منع تعقیب دادسرا',
+      title: 'نمونه لایحه اعتراض به قرار منع تعقیب',
       href: '/samples/objection-non-prosecution-order',
-      desc: 'اعتراض به قرار بازپرس در دادگاه کیفری دو.',
-      badge: 'منع تعقیب'
-    }
-  ],
-
-  relatedArticles: [
-    {
-      title: 'چگونه به قرار منع تعقیب دادسرا اعتراض کنیم؟',
-      href: '/knowledge/how-to-object-prosecution-orders',
-      desc: 'مهلت‌ها و نحوه تنظیم لایحه اعتراضیه در دادگاه کیفری دو.',
-      badge: 'مقاله آموزشی'
+      badge: 'منع تعقیب',
+      desc: 'مشاهده الگوی اعتراض به قرار منع تعقیب به دلیل فقدان ادله یا عدم احراز جرم.',
     },
     {
-      title: 'چگونه به رأی دادگاه تجدیدنظرخواهی کنیم؟',
-      href: '/knowledge/how-to-appeal-court-decision',
-      desc: 'اصول تنظیم دادخواست و لایحه اعتراضیه در دادگاه تجدیدنظر.',
-      badge: 'مقاله آموزشی'
+      title: 'نمونه لایحه اعتراض به نظریه کارشناسی',
+      href: '/samples/expert-opinion-objection',
+      badge: 'اعتراض به کارشناسی',
+      desc: 'الگوی اعتراض به نظریه کارشناس رسمی دادگستری در فرجه قانونی ۷ روزه.',
     },
     {
-      title: 'تفاوت دادخواست و شکواییه چیست؟',
-      href: '/knowledge/petition-vs-complaint',
-      desc: 'مقایسه جامع مسیرهای دادرسی حقوقی و کیفری در محاکم.',
-      badge: 'مقاله آموزشی'
-    }
+      title: 'نمونه دادخواست واخواهی از حکم غیابی',
+      href: '/samples/objection-absent-judgment',
+      badge: 'واخواهی',
+      desc: 'الگوی اعتراض به آراء غیابی دادگاه‌های کیفری و حقوقی.',
+    },
+    {
+      title: 'نمونه لایحه دفاعیه دادگاه و دادسرا',
+      href: '/samples/legal-brief',
+      badge: 'لایحه دفاعیه',
+      desc: 'الگوی لوایح دفاعیه مستند به اصول دادرسی کیفری و مدنی.',
+    },
   ],
 
   ctaTitle: 'قرار موقوفی تعقیب به ناحق علیه شکایت شما صادر شده است؟',

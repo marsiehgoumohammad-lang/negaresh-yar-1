@@ -206,45 +206,45 @@ export const sampleLetterToGovernorData: SampleLandingData = {
 
   relatedSamples: [
     {
-      title: 'نمونه نامه اعتراض به برگ تشخیص مالیاتی',
-      href: '/samples/letter-to-tax-office',
-      desc: 'تقاضای تعدیل مالیات در هیئت‌های حل اختلاف.',
-      badge: 'امور مالیاتی'
+        'title': 'نمونه دادخواست دیوان عدالت اداری',
+        'href': '/samples/administrative-court-justice-complaint',
+        'desc': 'ابطال رأی کمیسیون ماده ۱۰۰، ماده ۷۷ و آرای اداری.',
+        'badge': 'دیوان عدالت'
     },
     {
-      title: 'نمونه نامه رسمی اداری و سازمانی',
-      href: '/samples/administrative-letter',
-      desc: 'فرم عمومی مکاتبات و درخواست‌های رسمی ادارات.',
-      badge: 'نامه اداری'
+        'title': 'نمونه دادخواست شکایت اداره کار و سابقه بیمه',
+        'href': '/samples/labor-board-wage-insurance-complaint',
+        'desc': 'مطالبه حقوق معوقه، سنوات و بیمه کارگری در هیئت کار.',
+        'badge': 'اداره کار'
     },
     {
-      title: 'نمونه دادخواست دیوان عدالت اداری',
-      href: '/samples/administrative-court-justice-complaint',
-      desc: 'ابطال آرای کمیسیون‌های شهرداری و هیئت‌های دولتی.',
-      badge: 'دیوان عدالت'
+        'title': 'نمونه نامه به رئیس جمهور و سامانه سامد',
+        'href': '/samples/president-letter',
+        'desc': 'درخواست رسیدگی به مشکلات اشتغال، مسکن و تسهیلات.',
+        'badge': 'ریاست جمهوری'
     }
-  ],
+],
 
   relatedArticles: [
     {
-      title: 'اصول و قواعد نگارش نامه‌های اداری استاندارد',
-      href: '/knowledge/how-to-write-administrative-letter',
-      desc: 'راهنمای کامل مکاتبات سازمانی، لحن رسمی و ارکان نامه.',
-      badge: 'مقاله آموزشی'
+        'title': 'اصول و قواعد نگارش نامه‌های اداری استاندارد',
+        'href': '/knowledge/how-to-write-administrative-letter',
+        'desc': 'راهنمای کامل مکاتبات سازمانی، لحن رسمی و ارکان نامه.',
+        'badge': 'مقاله آموزشی'
     },
     {
-      title: 'چگونه به رئیس جمهور و مسئولان نامه بنویسیم؟',
-      href: '/knowledge/how-to-write-president-letter',
-      desc: 'اصول تنظیم نامه‌های مردمی اثرگذار و پیگیری در سامد.',
-      badge: 'مقاله آموزشی'
+        'title': 'چگونه به رئیس جمهور و مسئولان نامه بنویسیم؟',
+        'href': '/knowledge/how-to-write-president-letter',
+        'desc': 'اصول تنظیم نامه‌های مردمی اثرگذار و پیگیری در سامد.',
+        'badge': 'مقاله آموزشی'
     },
     {
-      title: 'راهنمای سامانه ساجد دیوان عدالت اداری',
-      href: '/knowledge/online-judicial-services-guide',
-      desc: 'آموزش ثبت الکترونیکی دادخواست‌ها و لوایح دیوان عدالت.',
-      badge: 'مقاله آموزشی'
+        'title': 'راهنمای سامانه ساجد دیوان عدالت اداری',
+        'href': '/knowledge/online-judicial-services-guide',
+        'desc': 'آموزش ثبت الکترونیکی دادخواست‌ها و لوایح دیوان عدالت.',
+        'badge': 'مقاله آموزشی'
     }
-  ],
+],
 
   ctaTitle: 'سفارش فوری تنظیم نامه رسمی به استاندار و فرماندار',
   ctaDescription: 'برای حل مشکلات اداری و عمرانی خود، تنظیم نامه‌ای اثرگذار و قانونی به استاندار یا فرماندار را به متخصصان نگارش یار بسپارید.',

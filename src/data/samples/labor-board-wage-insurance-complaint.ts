@@ -210,45 +210,45 @@ export const sampleLaborBoardWageInsuranceComplaintData: SampleDocument = {
 
   relatedSamples: [
     {
-      title: 'نمونه نامه به رئیس جمهور و سامانه سامد',
-      href: '/samples/president-letter',
-      desc: 'درخواست رسیدگی به مشکلات اشتغال، وام و تسهیلات.',
-      badge: 'ریاست جمهوری'
+        'title': 'نمونه دادخواست دیوان عدالت اداری',
+        'href': '/samples/administrative-court-justice-complaint',
+        'desc': 'ابطال رأی کمیسیون ماده ۱۰۰، ماده ۷۷ و آرای اداری.',
+        'badge': 'دیوان عدالت'
     },
     {
-      title: 'نمونه نامه به دفتر مقام معظم رهبری',
-      href: '/samples/leader-office-letter',
-      desc: 'تقاضای مساعدت، عفو و رسیدگی به تظلم‌خواهی.',
-      badge: 'دفتر رهبری'
+        'title': 'نمونه نامه به رئیس جمهور و سامانه سامد',
+        'href': '/samples/president-letter',
+        'desc': 'درخواست رسیدگی به مشکلات اشتغال، مسکن و تسهیلات.',
+        'badge': 'ریاست جمهوری'
     },
     {
-      title: 'نمونه نامه رسمی به استانداری و فرمانداری',
-      href: '/samples/letter-to-governor',
-      desc: 'رسیدگی به امور شهری، صنفی و اداری استان.',
-      badge: 'استانداری'
+        'title': 'نمونه نامه رسمی به استانداری و فرمانداری',
+        'href': '/samples/letter-to-governor',
+        'desc': 'تقاضای رسیدگی به امور شهری، صنفی و اداری استان.',
+        'badge': 'استانداری'
     }
-  ],
+],
 
   relatedArticles: [
     {
-      title: 'اصول و قواعد نگارش نامه‌های اداری استاندارد',
-      href: '/knowledge/how-to-write-administrative-letter',
-      desc: 'راهنمای کامل مکاتبات سازمانی، لحن رسمی و ارکان نامه.',
-      badge: 'مقاله آموزشی'
+        'title': 'اصول و قواعد نگارش نامه‌های اداری استاندارد',
+        'href': '/knowledge/how-to-write-administrative-letter',
+        'desc': 'راهنمای کامل مکاتبات سازمانی، لحن رسمی و ارکان نامه.',
+        'badge': 'مقاله آموزشی'
     },
     {
-      title: 'چگونه به رئیس جمهور و مسئولان نامه بنویسیم؟',
-      href: '/knowledge/how-to-write-president-letter',
-      desc: 'اصول تنظیم نامه‌های مردمی اثرگذار و پیگیری در سامد.',
-      badge: 'مقاله آموزشی'
+        'title': 'چگونه به رئیس جمهور و مسئولان نامه بنویسیم؟',
+        'href': '/knowledge/how-to-write-president-letter',
+        'desc': 'اصول تنظیم نامه‌های مردمی اثرگذار و پیگیری در سامد.',
+        'badge': 'مقاله آموزشی'
     },
     {
-      title: 'راهنمای سامانه ساجد دیوان عدالت اداری',
-      href: '/knowledge/online-judicial-services-guide',
-      desc: 'آموزش ثبت الکترونیکی دادخواست‌ها و لوایح دیوان عدالت.',
-      badge: 'مقاله آموزشی'
+        'title': 'راهنمای سامانه ساجد دیوان عدالت اداری',
+        'href': '/knowledge/online-judicial-services-guide',
+        'desc': 'آموزش ثبت الکترونیکی دادخواست‌ها و لوایح دیوان عدالت.',
+        'badge': 'مقاله آموزشی'
     }
-  ],
+],
 
   ctaTitle: 'کارفرما از پرداخت حقوق، سنوات یا بیمه شما خودداری می‌کند؟',
   ctaDescription:

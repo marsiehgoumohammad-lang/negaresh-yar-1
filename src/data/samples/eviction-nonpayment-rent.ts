@@ -186,45 +186,45 @@ export const sampleEvictionNonpaymentRentData: SampleLandingData = {
 
   relatedSamples: [
     {
-      title: 'نمونه دادخواست الزام به تنظیم سند رسمی',
-      href: '/samples/official-deed-compulsion-petition',
-      desc: 'الزام فروشنده به انتقال سند و اخذ پایان‌کار.',
-      badge: 'الزام به سند'
+        'title': 'نمونه دادخواست دستور تخلیه فوری ملک استیجاری',
+        'href': '/samples/eviction-expired-lease',
+        'desc': 'تخلیه فوری مستاجر پس از انقضای مدت قرارداد اجاره.',
+        'badge': 'تخلیه فوری'
     },
     {
-      title: 'نمونه دادخواست فسخ و ابطال قرارداد',
-      href: '/samples/contract-cancellation-notice-petition',
-      desc: 'اعلام رسمی فسخ مبایعه‌نامه به علت غبن یا تخلف شرط.',
-      badge: 'فسخ معامله'
+        'title': 'نمونه دادخواست الزام به تنظیم سند رسمی ملک',
+        'href': '/samples/official-deed-compulsion-petition',
+        'desc': 'دعوای الزام فروشنده به انتقال رسمی سند و اخذ پایان‌کار.',
+        'badge': 'الزام به سند'
     },
     {
-      title: 'نمونه دادخواست استرداد ودیعه مسکن',
-      href: '/samples/rent-deposit-claim',
-      desc: 'مطالبه پول پیش اجاره از موجر پس از تحویل کلید.',
-      badge: 'استرداد ودیعه'
+        'title': 'نمونه دادخواست فسخ و ابطال قرارداد با اظهارنامه',
+        'href': '/samples/contract-cancellation-notice-petition',
+        'desc': 'اعلام رسمی فسخ مبایعه‌نامه به علت غبن یا تخلف شرط.',
+        'badge': 'فسخ معامله'
     }
-  ],
+],
 
   relatedArticles: [
     {
-      title: 'اظهارنامه رسمی چیست و چگونه ارسال می‌شود؟',
-      href: '/knowledge/what-is-legal-notice',
-      desc: 'ضرورت ارسال اظهارنامه پیش از ثبت دادخواست ملکی.',
-      badge: 'مقاله آموزشی'
+        'title': 'اظهارنامه رسمی چیست و چگونه ارسال می‌شود؟',
+        'href': '/knowledge/what-is-legal-notice',
+        'desc': 'ضرورت ارسال اظهارنامه پیش از ثبت دادخواست ملکی.',
+        'badge': 'مقاله آموزشی'
     },
     {
-      title: 'دادخواست چیست و مراحل ثبت آن در دادگاه',
-      href: '/knowledge/what-is-petition',
-      desc: 'راهنمای تنظیم دادخواست‌های ملکی و قراردادی.',
-      badge: 'مقاله آموزشی'
+        'title': 'دادخواست چیست و مراحل ثبت آن در دادگاه',
+        'href': '/knowledge/what-is-petition',
+        'desc': 'راهنمای تنظیم دادخواست‌های ملکی و قراردادی.',
+        'badge': 'مقاله آموزشی'
     },
     {
-      title: 'لایحه دفاعیه چیست و چگونه نوشته می‌شود؟',
-      href: '/knowledge/what-is-legal-brief',
-      desc: 'اصول تنظیم لوایح دفاعیه در محاکم عمومی حقوقی.',
-      badge: 'مقاله آموزشی'
+        'title': 'لایحه دفاعیه چیست و چگونه نوشته می‌شود؟',
+        'href': '/knowledge/what-is-legal-brief',
+        'desc': 'اصول تنظیم لوایح دفاعیه در محاکم عمومی حقوقی.',
+        'badge': 'مقاله آموزشی'
     }
-  ],
+],
 
   ctaTitle: 'آیا مستاجر از پرداخت اجاره‌بها خودداری کرده و ملک را تحویل نمی‌دهد؟',
   ctaDescription: 'تنظیم دقیق دادخواست فسخ، تخلیه و مطالبه اجور معوقه با قابلیت توقیف پول پیش مستاجر را با اطمینان به متخصصان نگارش یار بسپارید.',

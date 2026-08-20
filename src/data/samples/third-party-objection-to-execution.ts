@@ -206,48 +206,6 @@ export const sampleThirdPartyObjectionToExecutionData: SampleDocument = {
     },
   ],
 
-  relatedSamples: [
-    {
-      title: 'نمونه درخواست ابطال مزایده اجرای احکام',
-      href: '/samples/auction-cancellation-objection',
-      desc: 'اعتراض به تخلفات شکلی و قانونی حراج دادگاه.',
-      badge: 'ابطال مزایده'
-    },
-    {
-      title: 'نمونه درخواست رفع توقیف مستثنیات دین',
-      href: '/samples/property-attachment-lifting-request',
-      desc: 'آزادی منزل مسکونی یا خودروی کسب درآمد.',
-      badge: 'مستثنیات دین'
-    },
-    {
-      title: 'نمونه دادخواست تامین خواسته فوری اموال',
-      href: '/samples/provisional-attachment-petition',
-      desc: 'توقیف اموال بدهکار قبل از صدور رأی قطعی.',
-      badge: 'تامین خواسته'
-    }
-  ],
-
-  relatedArticles: [
-    {
-      title: 'راهنمای جامع کارشناسی سه نفره و پنج نفره دادگاه',
-      href: '/knowledge/expert-panel-court',
-      desc: 'شرایط، مهلت یک‌هفته‌ای و فرمول اعتراض به نظریه کارشناس.',
-      badge: 'مقاله آموزشی'
-    },
-    {
-      title: 'راهنمای ثبت نام و شرکت در مزایده‌های ستاد ایران',
-      href: '/knowledge/setad-auction-registration',
-      desc: 'آموزش گام‌به‌گام خرید املاک و خودرو در حراج دولتی.',
-      badge: 'مقاله آموزشی'
-    },
-    {
-      title: 'راهنمای خرید ملک و خودرو از مزایده‌های دادگاه',
-      href: '/knowledge/how-to-buy-car-and-property-from-court-auction',
-      desc: 'نحوه شرکت در مزایده‌های اجرای احکام و حقوق برنده حراج.',
-      badge: 'مقاله آموزشی'
-    }
-  ],
-
   ctaTitle: 'مال یا خودروی شما در پرونده بدهی دیگران توقیف شده است؟',
   ctaDescription:
     'متخصصان نگارش یار دادخواست اعتراض ثالث اجرایی و تقاضای توقف مزایده شما را با دقیق‌ترین استدلال‌های حقوقی تنظیم می‌کنند.',

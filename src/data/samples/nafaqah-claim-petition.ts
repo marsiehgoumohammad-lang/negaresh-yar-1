@@ -205,48 +205,6 @@ export const sampleNafaqahClaimPetitionData: SampleDocument = {
     },
   ],
 
-  relatedSamples: [
-    {
-      title: 'نمونه دادخواست اعسار و تقسیط محکوم‌به',
-      href: '/samples/insolvency',
-      desc: 'الگوی عمومی اعسار از پرداخت یکباره بدهی و جلب.',
-      badge: 'اعسار و تقسیط'
-    },
-    {
-      title: 'نمونه تقاضای اجرای مهریه از اداره ثبت',
-      href: '/samples/mehrieh-execution-registry-petition',
-      desc: 'توقیف حساب و اموال زوج از طریق اجرای ثبت.',
-      badge: 'اجرای ثبت'
-    },
-    {
-      title: 'نمونه دادخواست تقسیط مهریه و تعدیل اقساط',
-      href: '/samples/mehrieh-installment-petition',
-      desc: 'تعدیل و تقسیط سکه‌های مهریه در دادگاه خانواده.',
-      badge: 'تقسیط مهریه'
-    }
-  ],
-
-  relatedArticles: [
-    {
-      title: 'چگونه بدهی و مهریه را قسطی کنیم؟',
-      href: '/knowledge/how-to-install-debt-and-mahrieh',
-      desc: 'راهنمای کامل دادخواست اعسار، تقسیط و آزادی از جلب.',
-      badge: 'مقاله آموزشی'
-    },
-    {
-      title: 'دادخواست چیست و چگونه تنظیم می‌شود؟',
-      href: '/knowledge/what-is-petition',
-      desc: 'نحوه ثبت دادخواست‌های حقوقی در دادگاه خانواده.',
-      badge: 'مقاله آموزشی'
-    },
-    {
-      title: 'اعسار از هزینه دادرسی و محکوم‌به چیست؟',
-      href: '/knowledge/what-is-insolvency',
-      desc: 'شرایط اثبات عسرت مالی در دعاوی خانوادگی.',
-      badge: 'مقاله آموزشی'
-    }
-  ],
-
   ctaTitle: 'نیاز به تنظیم دادخواست مطالبه نفقه و دستور موقت فوری دارید؟',
   ctaDescription:
     'متخصصان نگارش یار دادخواست شما را با رعایت دقیق بندهای قانون حمایت خانواده و دستور موقت فوری تنظیم می‌نمایند.',

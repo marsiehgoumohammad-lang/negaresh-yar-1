@@ -181,44 +181,23 @@ export const sampleObjectionToCriminalSecurityData: SampleLandingData = {
 
   relatedSamples: [
     {
-      title: 'نمونه درخواست تبدیل بازداشت به وثیقه',
+      title: 'نمونه درخواست تخفیف و کاهش مبلغ قرار وثیقه',
+      href: '/samples/bail-reduction',
+      desc: 'الگوی تقاضای تعدیل ریالی وثیقه به علت عدم تناسب با خسارت پرونده.',
+      badge: 'تخفیف وثیقه',
+    },
+    {
+      title: 'نمونه درخواست تبدیل وثیقه به کفالت و فیش حقوقی',
+      href: '/samples/bail-to-surety',
+      desc: 'الگوی تقاضای فک سند ملک و معرفی ضامن معتبر کارمندی.',
+      badge: 'تبدیل وثیقه',
+    },
+    {
+      title: 'نمونه لایحه تبدیل بازداشت موقت به وثیقه',
       href: '/samples/detention-to-bail',
-      desc: 'تقاضای خروج از بازداشت با معرفی سند ملک.',
-      badge: 'قبولی وثیقه'
+      desc: 'الگوی تقاضای فک بازداشت موقت و صدور قرار تأمین کیفری.',
+      badge: 'فک بازداشت',
     },
-    {
-      title: 'نمونه درخواست انصراف ضامن و فک فیش حقوقی',
-      href: '/samples/bail-release-surety-request',
-      desc: 'رفع اثر از تعهد کفیل و فیش حقوقی.',
-      badge: 'انصراف ضامن'
-    },
-    {
-      title: 'نمونه تقاضای قبولی وثیقه و ارزیابی ملک',
-      href: '/samples/bail-acceptance-request',
-      desc: 'معرفی سند ملکی و تقاضای کارشناسی ارزش.',
-      badge: 'تودیع وثیقه'
-    }
-  ],
-
-  relatedArticles: [
-    {
-      title: 'قرار وثیقه چیست و چگونه تبدیل یا آزاد می‌شود؟',
-      href: '/knowledge/what-is-bail',
-      desc: 'راهنمای جامع تودیع وثیقه، رفع بازداشت و استرداد سند.',
-      badge: 'مقاله آموزشی'
-    },
-    {
-      title: 'تفاوت عفو عمومی با آزادی مشروط',
-      href: '/knowledge/pardon-vs-conditional-release',
-      desc: 'بررسی راهکارهای قانونی آزادی و ارفاقات کیفری.',
-      badge: 'مقاله آموزشی'
-    },
-    {
-      title: 'راهنمای سامانه خدمات الکترونیک قضایی ثنا',
-      href: '/knowledge/online-judicial-services-guide',
-      desc: 'نحوه پیگیری قرارهای تامین در سامانه ثنا.',
-      badge: 'مقاله آموزشی'
-    }
   ],
 
   ctaTitle: 'سفارش تنظیم لایحه اعتراض به قرار تأمین کیفری و وثیقه سنگین',

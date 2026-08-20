@@ -20,6 +20,7 @@ import {
   BookOpen,
   FileCheck,
   Copy,
+  Download,
   PenTool,
   Scale,
   UserCheck,
@@ -32,6 +33,7 @@ import { SampleMessengerCTA } from './SampleMessengerCTA';
 export function SampleLandingPageTemplate({ data }: { data: SampleLandingData }) {
   const [openFaq, setOpenFaq] = useState<number | null>(0);
   const [copied, setCopied] = useState(false);
+  const [downloaded, setDownloaded] = useState(false);
 
   const toggleFaq = (idx: number) => {
     setOpenFaq(openFaq === idx ? null : idx);
@@ -45,6 +47,20 @@ export function SampleLandingPageTemplate({ data }: { data: SampleLandingData })
       navigator.clipboard.writeText(sampleContent);
       setCopied(true);
       setTimeout(() => setCopied(false), 3000);
+    }
+  };
+
+  const handleDownloadTxt = () => {
+    if (typeof window !== 'undefined' && sampleContent) {
+      const element = document.createElement('a');
+      const file = new Blob([sampleContent], { type: 'text/plain;charset=utf-8' });
+      element.href = URL.createObjectURL(file);
+      element.download = `${data.slug || 'sample'}-negaresh-yar.txt`;
+      document.body.appendChild(element);
+      element.click();
+      document.body.removeChild(element);
+      setDownloaded(true);
+      setTimeout(() => setDownloaded(false), 3000);
     }
   };
 
@@ -253,23 +269,43 @@ export function SampleLandingPageTemplate({ data }: { data: SampleLandingData })
               </h2>
             </div>
 
-            <button
-              onClick={handleCopyText}
-              className="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 border border-slate-700 text-xs sm:text-sm text-slate-200 transition-colors shrink-0 shadow-sm"
-              aria-label="کپی متن کامل نمونه به حافظه"
-            >
-              {copied ? (
-                <>
-                  <Check className="w-4 h-4 text-emerald-400" />
-                  <span className="text-emerald-400 font-bold">متن نمونه کپی شد!</span>
-                </>
-              ) : (
-                <>
-                  <Copy className="w-4 h-4 text-[#E5C158]" />
-                  <span>کپی متن نمونه</span>
-                </>
-              )}
-            </button>
+            <div className="flex flex-wrap items-center gap-2.5 shrink-0">
+              <button
+                onClick={handleCopyText}
+                className="inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 border border-slate-700 text-xs sm:text-sm text-slate-200 transition-colors shadow-sm"
+                aria-label="کپی رایگان متن کامل نمونه به حافظه"
+              >
+                {copied ? (
+                  <>
+                    <Check className="w-4 h-4 text-emerald-400" />
+                    <span className="text-emerald-400 font-bold">متن کپی شد!</span>
+                  </>
+                ) : (
+                  <>
+                    <Copy className="w-4 h-4 text-[#E5C158]" />
+                    <span>کپی رایگان متن</span>
+                  </>
+                )}
+              </button>
+
+              <button
+                onClick={handleDownloadTxt}
+                className="inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-[#E5C158]/10 hover:bg-[#E5C158]/20 border border-[#E5C158]/30 text-xs sm:text-sm text-[#E5C158] font-medium transition-colors shadow-sm"
+                aria-label="دانلود رایگان فایل متنی نمونه"
+              >
+                {downloaded ? (
+                  <>
+                    <Check className="w-4 h-4 text-emerald-400" />
+                    <span className="text-emerald-400 font-bold">فایل دانلود شد!</span>
+                  </>
+                ) : (
+                  <>
+                    <Download className="w-4 h-4" />
+                    <span>دانلود رایگان فایل (TXT)</span>
+                  </>
+                )}
+              </button>
+            </div>
           </div>
 
           <p className="text-xs sm:text-sm text-slate-400 leading-relaxed">

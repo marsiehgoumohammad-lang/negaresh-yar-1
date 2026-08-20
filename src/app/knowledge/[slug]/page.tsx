@@ -20,25 +20,39 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     };
   }
 
-  const title = article.metaTitle || article.title;
-  const description = article.metaDescription || article.excerpt || '';
+  const baseTitle = article.metaTitle || article.title;
+  const seoTitle = `${baseTitle} [راهنمای کامل + نمونه متن] | نگارش یار`;
+  
+  const rawDesc = (article.metaDescription || article.excerpt || '').trim();
+  let description = '';
+  if (rawDesc && rawDesc.length >= 30 && rawDesc.length <= 100) {
+    description = `راهنمای کامل ${baseTitle}؛ ${rawDesc.replace(/\.$/, '')} + دانلود نمونه متن و مشاوره تخصصی در نگارش یار.`;
+  } else {
+    description = `راهنمای گام‌به‌گام و حقوقی ${baseTitle} همراه با تشریح مواد قانونی، مواعد رسمی، دانلود رایگان نمونه متن و مشاوره تنظیم در نگارش یار.`;
+  }
+
   const keywords = article.keywords && article.keywords.length > 0
     ? article.keywords
-    : [article.category || 'حقوقی', 'نگارش یار', 'پایگاه دانش'];
+    : [article.category || 'حقوقی', baseTitle, `راهنمای ${baseTitle}`, 'نگارش یار', 'پایگاه دانش'];
 
   return {
-    title: `${title} | نگارش یار`,
+    title: seoTitle,
     description,
     keywords,
     alternates: {
       canonical: `https://www.negaresh-yar.ir/knowledge/${article.slug}`,
     },
     openGraph: {
-      title: `${title} | نگارش یار`,
+      title: seoTitle,
       description,
       url: `https://www.negaresh-yar.ir/knowledge/${article.slug}`,
       siteName: 'نگارش یار',
       type: 'article',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: seoTitle,
+      description,
     },
   };
 }

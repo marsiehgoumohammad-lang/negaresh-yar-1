@@ -181,44 +181,29 @@ export const sampleVerdictSurrenderDiscountData: SampleLandingData = {
 
   relatedSamples: [
     {
-      title: 'نمونه درخواست مرخصی زندانی با وثیقه',
-      href: '/samples/prisoner-furlough-request',
-      desc: 'تقاضای اعطای مرخصی از دادیار ناظر زندان.',
-      badge: 'مرخصی زندانی'
+      title: 'نمونه درخواست تعلیق اجرای مجازات حبس',
+      href: '/samples/sentence-suspension-request',
+      badge: 'تعلیق مجازات',
+      desc: 'الگوی تقاضای تعلیق باقی‌مانده حبس مستند به ماده ۴۶ قانون مجازات اسلامی.',
     },
     {
-      title: 'نمونه درخواست اعاده حیثیت کیفری',
-      href: '/samples/criminal-rehabilitation-certificate',
-      desc: 'پاک شدن سابقه کیفری موثر پس از انقضای مواعد قانونی.',
-      badge: 'اعاده حیثیت'
+      title: 'نمونه درخواست استفاده از پابند الکترونیکی',
+      href: '/samples/electronic-tag-request',
+      badge: 'پابند الکترونیک',
+      desc: 'مشاهده شرایط گذراندن دوران حبس در منزل تحت نظارت سامانه الکترونیکی.',
     },
     {
       title: 'نمونه درخواست آزادی مشروط زندانی',
       href: '/samples/conditional-release',
-      desc: 'تقاضای آزادی پس از تحمل مدت قانونی حبس.',
-      badge: 'آزادی مشروط'
-    }
-  ],
-
-  relatedArticles: [
-    {
-      title: 'چگونه درخواست آزادی مشروط بدهیم؟',
-      href: '/knowledge/how-to-request-conditional-release',
-      desc: 'شرایط بهره‌مندی از ارفاقات قانونی و کاهش دوران حبس.',
-      badge: 'مقاله آموزشی'
+      badge: 'آزادی مشروط',
+      desc: 'الگوی تقاضای آزادی مشروط مستند به ماده ۵۸ قانون مجازات اسلامی.',
     },
     {
-      title: 'تفاوت عفو عمومی با آزادی مشروط',
-      href: '/knowledge/pardon-vs-conditional-release',
-      desc: 'راهنمای جامع ارفاقات قانونی و آزادی محکومان.',
-      badge: 'مقاله آموزشی'
+      title: 'نمونه لایحه تجدیدنظرخواهی دادگاه استان',
+      href: '/samples/appeal',
+      badge: 'تجدیدنظرخواهی',
+      desc: 'مشاهده الگوی اعتراض به دادنامه بدوی در صورت عدم تمایل به تسلیم به رأی.',
     },
-    {
-      title: 'نحوه خواندن و درک دادنامه و احکام دادگاه',
-      href: '/knowledge/how-to-read-court-verdict',
-      desc: 'تشخیص قطعیت دادنامه و مهلت‌های اعتراض.',
-      badge: 'مقاله آموزشی'
-    }
   ],
 
   ctaTitle: 'آیا مایل به کاهش یک‌چهارم مجازات خود در مهلت ۲۰ روزه هستید؟',

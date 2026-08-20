@@ -175,44 +175,17 @@ export const sampleObjectionNonProsecutionOrderData: SampleLandingData = {
 
   relatedSamples: [
     {
-      title: 'نمونه واخواهی از حکم غیابی دادگاه',
-      href: '/samples/objection-absent-judgment',
-      desc: 'اعتراض به دادنامه‌های غیابی کیفری و حقوقی.',
-      badge: 'واخواهی'
+      title: 'نمونه شکواییه کیفری',
+      href: '/samples/complaint',
+      desc: 'الگوی شکایت کیفری.',
+      badge: 'نمونه شکواییه',
     },
     {
-      title: 'نمونه لایحه تجدیدنظرخواهی حقوقی و کیفری',
-      href: '/samples/appeal',
-      desc: 'اعتراض به دادنامه‌های بدوی در دادگاه تجدیدنظر استان.',
-      badge: 'تجدیدنظر'
+      title: 'نمونه لایحه اعتراض به قرار موقوفی تعقیب',
+      href: '/samples/objection-stay-of-prosecution',
+      desc: 'الگوی اعتراض به موقوفی تعقیب.',
+      badge: 'موقوفی تعقیب',
     },
-    {
-      title: 'نمونه لایحه دفاعیه جامع دادگاه',
-      href: '/samples/legal-brief',
-      desc: 'الگوی استاندارد دفاع حقوقی و استناد به قوانین.',
-      badge: 'لایحه دفاعیه'
-    }
-  ],
-
-  relatedArticles: [
-    {
-      title: 'چگونه به قرار منع تعقیب دادسرا اعتراض کنیم؟',
-      href: '/knowledge/how-to-object-prosecution-orders',
-      desc: 'مهلت‌ها و نحوه تنظیم لایحه اعتراضیه در دادگاه کیفری دو.',
-      badge: 'مقاله آموزشی'
-    },
-    {
-      title: 'چگونه به رأی دادگاه تجدیدنظرخواهی کنیم؟',
-      href: '/knowledge/how-to-appeal-court-decision',
-      desc: 'اصول تنظیم دادخواست و لایحه اعتراضیه در دادگاه تجدیدنظر.',
-      badge: 'مقاله آموزشی'
-    },
-    {
-      title: 'تفاوت دادخواست و شکواییه چیست؟',
-      href: '/knowledge/petition-vs-complaint',
-      desc: 'مقایسه جامع مسیرهای دادرسی حقوقی و کیفری در محاکم.',
-      badge: 'مقاله آموزشی'
-    }
   ],
 
   ctaTitle: 'سفارش تنظیم تخصصی لایحه اعتراض به قرار منع تعقیب',

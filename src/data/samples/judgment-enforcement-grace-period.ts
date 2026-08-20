@@ -182,45 +182,45 @@ export const sampleJudgmentEnforcementGracePeriodData: SampleLandingData = {
 
   relatedSamples: [
     {
-      title: 'نمونه لایحه اعتراض به نظریه کارشناس',
-      href: '/samples/expert-opinion-objection',
-      desc: 'اعتراض به ارزیابی غیرواقعی و ارجاع به هیئت ۳ نفره.',
-      badge: 'اعتراض به کارشناسی'
+        'title': 'نمونه لایحه اعتراض به نظریه کارشناس دادگستری',
+        'href': '/samples/expert-opinion-objection',
+        'desc': 'اعتراض به ارزیابی غیرواقعی ملک و ارجاع به هیئت ۳ نفره.',
+        'badge': 'اعتراض به کارشناسی'
     },
     {
-      title: 'نمونه اعتراض شخص ثالث به توقیف اموال',
-      href: '/samples/third-party-objection-to-execution',
-      desc: 'درخواست رفع توقیف مال متعلق به غیر در اجرای احکام.',
-      badge: 'اعتراض ثالث'
+        'title': 'نمونه اعتراض شخص ثالث به توقیف اموال و مزایده',
+        'href': '/samples/third-party-objection-to-execution',
+        'desc': 'درخواست رفع توقیف مال متعلق به غیر در اجرای احکام مدنی.',
+        'badge': 'اعتراض ثالث'
     },
     {
-      title: 'نمونه درخواست ابطال مزایده اجرای احکام',
-      href: '/samples/auction-cancellation-objection',
-      desc: 'اعتراض به تخلفات شکلی و قانونی حراج دادگاه.',
-      badge: 'ابطال مزایده'
+        'title': 'نمونه درخواست ابطال مزایده اجرای احکام',
+        'href': '/samples/auction-cancellation-objection',
+        'desc': 'اعتراض به تخلفات شکلی و قانونی حراج در دادگاه.',
+        'badge': 'ابطال مزایده'
     }
-  ],
+],
 
   relatedArticles: [
     {
-      title: 'راهنمای جامع کارشناسی سه نفره و پنج نفره دادگاه',
-      href: '/knowledge/expert-panel-court',
-      desc: 'شرایط، مهلت یک‌هفته‌ای و فرمول اعتراض به نظریه کارشناس.',
-      badge: 'مقاله آموزشی'
+        'title': 'راهنمای جامع کارشناسی سه نفره و پنج نفره دادگاه',
+        'href': '/knowledge/expert-panel-court',
+        'desc': 'شرایط، مهلت یک‌هفته‌ای و فرمول اعتراض به نظریه کارشناس.',
+        'badge': 'مقاله آموزشی'
     },
     {
-      title: 'راهنمای ثبت نام و شرکت در مزایده‌های ستاد ایران',
-      href: '/knowledge/setad-auction-registration',
-      desc: 'آموزش گام‌به‌گام خرید املاک و خودرو در حراج دولتی.',
-      badge: 'مقاله آموزشی'
+        'title': 'راهنمای ثبت نام و شرکت در مزایده‌های ستاد ایران',
+        'href': '/knowledge/setad-auction-registration',
+        'desc': 'آموزش گام‌به‌گام خرید املاک و خودرو در حراج دولتی.',
+        'badge': 'مقاله آموزشی'
     },
     {
-      title: 'راهنمای خرید ملک و خودرو از مزایده‌های دادگاه',
-      href: '/knowledge/how-to-buy-car-and-property-from-court-auction',
-      desc: 'نحوه شرکت در مزایده‌های اجرای احکام و حقوق برنده حراج.',
-      badge: 'مقاله آموزشی'
+        'title': 'راهنمای خرید ملک و خودرو از مزایده‌های دادگاه',
+        'href': '/knowledge/how-to-buy-car-and-property-from-court-auction',
+        'desc': 'نحوه شرکت در مزایده‌های اجرای احکام و حقوق برنده حراج.',
+        'badge': 'مقاله آموزشی'
     }
-  ],
+],
 
   ctaTitle: 'اجرائیه صادر شده و نیاز به فرصت جهت پرداخت بدهی دارید؟',
   ctaDescription: 'لایحه درخواست مهلت عادلانه را با ادله موجه تنظیم کنید تا از مسدودی حساب‌ها و جلب جلوگیری به عمل آید.',

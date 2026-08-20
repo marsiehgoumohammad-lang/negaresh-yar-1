@@ -285,44 +285,38 @@ export const samplePetitionData: SampleLandingData = {
 
   relatedSamples: [
     {
-      title: 'نمونه اعتراض به قرار منع تعقیب دادسرا',
-      href: '/samples/objection-non-prosecution-order',
-      desc: 'اعتراض به قرار بازپرس در دادگاه کیفری دو.',
-      badge: 'منع تعقیب'
+      title: 'نمونه لایحه دفاعیه',
+      href: '/samples/legal-brief',
+      desc: 'الگوی لایحه پاسخ به دادخواست خوانده.',
+      badge: 'نمونه حقوقی',
     },
     {
-      title: 'نمونه واخواهی از حکم غیابی دادگاه',
-      href: '/samples/objection-absent-judgment',
-      desc: 'اعتراض به دادنامه‌های غیابی کیفری و حقوقی.',
-      badge: 'واخواهی'
+      title: 'نمونه شکواییه کیفری',
+      href: '/samples/complaint',
+      desc: 'الگوی شکایت کیفری کلاهبرداری و خیانت در امانت.',
+      badge: 'نمونه کیفری',
     },
     {
-      title: 'نمونه لایحه تجدیدنظرخواهی حقوقی و کیفری',
-      href: '/samples/appeal',
-      desc: 'اعتراض به دادنامه‌های بدوی در دادگاه تجدیدنظر استان.',
-      badge: 'تجدیدنظر'
-    }
+      title: 'نمونه اظهارنامه رسمی',
+      href: '/samples/legal-notice',
+      desc: 'الگوی ابلاغ رسمی اخطار حقوقی قبل از دادخواست.',
+      badge: 'نمونه حقوقی',
+    },
   ],
 
   relatedArticles: [
     {
-      title: 'چگونه به قرار منع تعقیب دادسرا اعتراض کنیم؟',
-      href: '/knowledge/how-to-object-prosecution-orders',
-      desc: 'مهلت‌ها و نحوه تنظیم لایحه اعتراضیه در دادگاه کیفری دو.',
-      badge: 'مقاله آموزشی'
-    },
-    {
-      title: 'چگونه به رأی دادگاه تجدیدنظرخواهی کنیم؟',
-      href: '/knowledge/how-to-appeal-court-decision',
-      desc: 'اصول تنظیم دادخواست و لایحه اعتراضیه در دادگاه تجدیدنظر.',
-      badge: 'مقاله آموزشی'
+      title: 'دادخواست حقوقی چیست و چه ارکانی دارد؟',
+      href: '/knowledge/what-is-petition',
+      desc: 'آموزش نحوه تنظیم خواسته، ستون دلایل و مواد قانونی در دادگاه.',
+      badge: 'مقاله آموزشی',
     },
     {
       title: 'تفاوت دادخواست و شکواییه چیست؟',
       href: '/knowledge/petition-vs-complaint',
-      desc: 'مقایسه جامع مسیرهای دادرسی حقوقی و کیفری در محاکم.',
-      badge: 'مقاله آموزشی'
-    }
+      desc: 'بررسی تفاوت مرجع رسیدگی، هزینه‌ها و نحوه اجرا.',
+      badge: 'مقاله آموزشی',
+    },
   ],
 
   ctaTitle: 'سفارش تنظیم تخصصی دادخواست حقوقی بدون نقص شکلی',

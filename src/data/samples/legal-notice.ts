@@ -279,45 +279,45 @@ export const sampleLegalNoticeData: SampleLandingData = {
 
   relatedArticles: [
     {
-      title: 'اظهارنامه رسمی چیست و چگونه ارسال می‌شود؟',
-      href: '/knowledge/what-is-legal-notice',
-      desc: 'ضرورت ارسال اظهارنامه پیش از ثبت دادخواست ملکی.',
-      badge: 'مقاله آموزشی'
+        'title': 'اظهارنامه رسمی چیست و چگونه ارسال می‌شود؟',
+        'href': '/knowledge/what-is-legal-notice',
+        'desc': 'ضرورت ارسال اظهارنامه پیش از ثبت دادخواست ملکی.',
+        'badge': 'مقاله آموزشی'
     },
     {
-      title: 'دادخواست چیست و مراحل ثبت آن در دادگاه',
-      href: '/knowledge/what-is-petition',
-      desc: 'راهنمای تنظیم دادخواست‌های ملکی و قراردادی.',
-      badge: 'مقاله آموزشی'
+        'title': 'دادخواست چیست و مراحل ثبت آن در دادگاه',
+        'href': '/knowledge/what-is-petition',
+        'desc': 'راهنمای تنظیم دادخواست‌های ملکی و قراردادی.',
+        'badge': 'مقاله آموزشی'
     },
     {
-      title: 'لایحه دفاعیه چیست و چگونه نوشته می‌شود؟',
-      href: '/knowledge/what-is-legal-brief',
-      desc: 'اصول تنظیم لوایح دفاعیه در محاکم عمومی حقوقی.',
-      badge: 'مقاله آموزشی'
+        'title': 'لایحه دفاعیه چیست و چگونه نوشته می‌شود؟',
+        'href': '/knowledge/what-is-legal-brief',
+        'desc': 'اصول تنظیم لوایح دفاعیه در محاکم عمومی حقوقی.',
+        'badge': 'مقاله آموزشی'
     }
-  ],
+],
 
   relatedSamples: [
     {
-      title: 'نمونه دستور تخلیه فوری ملک استیجاری',
-      href: '/samples/eviction-expired-lease',
-      desc: 'تخلیه فوری مستاجر پس از انقضای مدت قرارداد.',
-      badge: 'تخلیه فوری'
+        'title': 'نمونه دادخواست دستور تخلیه فوری ملک استیجاری',
+        'href': '/samples/eviction-expired-lease',
+        'desc': 'تخلیه فوری مستاجر پس از انقضای مدت قرارداد اجاره.',
+        'badge': 'تخلیه فوری'
     },
     {
-      title: 'نمونه دادخواست فسخ اجاره و تخلیه به دلیل عدم پرداخت اجاره‌بها',
-      href: '/samples/eviction-nonpayment-rent',
-      desc: 'فسخ قرارداد به علت تعویق ۳ ماهه کرایه.',
-      badge: 'تخلیه با حکم'
+        'title': 'نمونه دادخواست الزام به تنظیم سند رسمی ملک',
+        'href': '/samples/official-deed-compulsion-petition',
+        'desc': 'دعوای الزام فروشنده به انتقال رسمی سند و اخذ پایان‌کار.',
+        'badge': 'الزام به سند'
     },
     {
-      title: 'نمونه دادخواست الزام به تنظیم سند رسمی',
-      href: '/samples/official-deed-compulsion-petition',
-      desc: 'الزام فروشنده به انتقال سند و اخذ پایان‌کار.',
-      badge: 'الزام به سند'
+        'title': 'نمونه دادخواست فسخ و ابطال قرارداد با اظهارنامه',
+        'href': '/samples/contract-cancellation-notice-petition',
+        'desc': 'اعلام رسمی فسخ مبایعه‌نامه به علت غبن یا تخلف شرط.',
+        'badge': 'فسخ معامله'
     }
-  ],
+],
 
   ctaTitle: 'سفارش تنظیم اظهارنامه رسمی ثنا با وزن حقوقی بالا',
   ctaDescription: 'با سپردن تنظیم اظهارنامه رسمی خود به کارشناسان نگارش یار، از متنی محکم، مستدل و بدون خطر ادعاهای متقابل بهره‌مند شوید.',

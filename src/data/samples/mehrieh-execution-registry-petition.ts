@@ -198,45 +198,45 @@ export const sampleMehriehExecutionRegistryPetitionData: SampleDocument = {
 
   relatedSamples: [
     {
-      title: 'نمونه دادخواست تقسیط مهریه و تعدیل اقساط',
-      href: '/samples/mehrieh-installment-petition',
-      desc: 'تعدیل و تقسیط سکه‌های مهریه در دادگاه خانواده.',
-      badge: 'تقسیط مهریه'
+        'title': 'نمونه دادخواست تقسیط مهریه و تعدیل اقساط',
+        'href': '/samples/mehrieh-installment-petition',
+        'desc': 'تقسیط سکه‌های مهریه و تقاضای پیش‌پرداخت متناسب.',
+        'badge': 'تقسیط مهریه'
     },
     {
-      title: 'نمونه دادخواست مطالبه نفقه معوقه و جاریه',
-      href: '/samples/nafaqah-claim-petition',
-      desc: 'مطالبه نفقه زوجه و فرزندان با نظر کارشناس.',
-      badge: 'مطالبه نفقه'
+        'title': 'نمونه دادخواست مطالبه نفقه زوجه و فرزندان',
+        'href': '/samples/nafaqah-claim-petition',
+        'desc': 'الگوی مطالبه نفقه معوقه و جاریه با جلب نظر کارشناس.',
+        'badge': 'مطالبه نفقه'
     },
     {
-      title: 'نمونه دادخواست اعسار و تقسیط محکوم‌به',
-      href: '/samples/insolvency',
-      desc: 'الگوی عمومی اعسار از پرداخت یکباره بدهی و جلب.',
-      badge: 'اعسار و تقسیط'
+        'title': 'نمونه دادخواست اعسار و تقسیط محکوم‌به',
+        'href': '/samples/insolvency',
+        'desc': 'الگوی عمومی اعسار از دیون و محکومیت‌های مالی.',
+        'badge': 'اعسار و تقسیط'
     }
-  ],
+],
 
   relatedArticles: [
     {
-      title: 'چگونه بدهی و مهریه را قسطی کنیم؟',
-      href: '/knowledge/how-to-install-debt-and-mahrieh',
-      desc: 'راهنمای کامل دادخواست اعسار، تقسیط و آزادی از جلب.',
-      badge: 'مقاله آموزشی'
+        'title': 'چگونه بدهی و مهریه را قسطی کنیم؟',
+        'href': '/knowledge/how-to-install-debt-and-mahrieh',
+        'desc': 'راهنمای کامل دادخواست اعسار، تقسیط و آزادی از جلب.',
+        'badge': 'مقاله آموزشی'
     },
     {
-      title: 'دادخواست چیست و چگونه تنظیم می‌شود؟',
-      href: '/knowledge/what-is-petition',
-      desc: 'نحوه ثبت دادخواست‌های حقوقی در دادگاه خانواده.',
-      badge: 'مقاله آموزشی'
+        'title': 'دادخواست چیست و چگونه تنظیم می‌شود؟',
+        'href': '/knowledge/what-is-petition',
+        'desc': 'نحوه ثبت دادخواست‌های حقوقی در دادگاه خانواده.',
+        'badge': 'مقاله آموزشی'
     },
     {
-      title: 'اعسار از هزینه دادرسی و محکوم‌به چیست؟',
-      href: '/knowledge/what-is-insolvency',
-      desc: 'شرایط اثبات عسرت مالی در دعاوی خانوادگی.',
-      badge: 'مقاله آموزشی'
+        'title': 'اعسار از هزینه دادرسی و محکوم‌به چیست؟',
+        'href': '/knowledge/what-is-insolvency',
+        'desc': 'شرایط اثبات عسرت مالی در دعاوی خانوادگی.',
+        'badge': 'مقاله آموزشی'
     }
-  ],
+],
 
   ctaTitle: 'نیاز به تنظیم درخواست یا لایحه اجرای ثبت مهریه دارید؟',
   ctaDescription:
