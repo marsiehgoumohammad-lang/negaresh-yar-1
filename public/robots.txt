@@ -1,2 +1,7 @@
 User-agent: *
-Disallow:
+Allow: /
+
+User-agent: Google-Favicon
+Allow: /
+
+Sitemap: https://www.negaresh-yar.ir/sitemap.xml
