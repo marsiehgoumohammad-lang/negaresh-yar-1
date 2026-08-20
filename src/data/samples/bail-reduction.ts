@@ -170,16 +170,22 @@ export const sampleBailReductionData: SampleLandingData = {
 
   relatedServices: [
     {
-      title: 'تنظیم لایحه دفاعیه و تبدیل قرار',
-      href: '/services/legal-brief',
-      desc: 'سفارش نگارش تخصصی لوایح کیفری دادسرا و تعدیل قرارهای تأمین.',
-      badge: 'خدمت تخصصی',
+      title: 'تنظیم درخواست تقلیل وثیقه و تخفیف قرار',
+      href: '/services/bail-reduction',
+      desc: 'سفارش نگارش تخصصی درخواست کاهش مبلغ وثیقه در دادسرا.',
+      badge: 'تخفیف وثیقه',
     },
     {
-      title: 'تنظیم اوراق قضایی و دادخواست',
-      href: '/services/petition-writing',
-      desc: 'تنظیم اوراق و لوایح استاندارد سامانه ثنا.',
-      badge: 'اوراق قضایی',
+      title: 'تبدیل قرار وثیقه به کفالت و فیش حقوقی',
+      href: '/services/bail-to-surety',
+      desc: 'تبدیل سند ملک به کفالت کارمند یا جواز کسب جهت آزادی فوری.',
+      badge: 'تبدیل وثیقه',
+    },
+    {
+      title: 'تنظیم لایحه دفاعیه کیفری',
+      href: '/services/legal-brief',
+      desc: 'نگارش تخصصی لوایح دفاعیه دادسرا و دادگاه کیفری.',
+      badge: 'لایحه دفاعیه',
     },
   ],
 
@@ -226,9 +232,9 @@ export const sampleBailReductionData: SampleLandingData = {
   ],
 
   ctaTitle: 'سفارش تنظیم لایحه تخفیف و تعدیل مبلغ وثیقه کیفری',
-  ctaDescription: 'برای استدلال دقیق بر عدم تناسب قرار و جلب موافقت بازپرس با کاهش مبلغ وثیقه، لایحه خود را به کارشناسان کیفری نگارش یار بسپارید.',
-  ctaPrimaryBtnText: 'ثبت سفارش لایحه کاهش وثیقه',
-  ctaPrimaryHref: '/request?service=legal-brief',
+  ctaDescription: 'برای استدلال دقیق بر عدم تناسب قرار و جلب موافقت بازپرس با کاهش مبلغ وثیقه یا تبدیل به کفالت، لایحه خود را به کارشناسان کیفری نگارش یار بسپارید.',
+  ctaPrimaryBtnText: 'سفارش آنلاین لایحه کاهش وثیقه',
+  ctaPrimaryHref: '/services/bail-reduction',
   messengerMessage: 'سلام، درباره لایحه درخواست تخفیف و کاهش مبلغ قرار وثیقه سوال دارم. لطفا راهنمایی بفرمایید.',
 
   publishedAt: '2026-01-20T08:00:00.000Z',

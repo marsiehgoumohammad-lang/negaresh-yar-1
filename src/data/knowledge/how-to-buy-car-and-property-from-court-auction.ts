@@ -176,14 +176,32 @@ export const howToBuyCarAndPropertyFromCourtAuctionData: KnowledgeArticleData = 
 
   relatedSamples: [
     {
-      title: 'نمونه درخواست شرکت در مزایده و واریز ۱۰ درصد',
-      href: '/samples/administrative-letter',
-      desc: 'مشاهده فرم‌های اداری مرتبط با ثبت‌نام و مزایدات.',
-      badge: 'نمونه سند',
+      title: 'نمونه درخواست انتقال سند ملک مزایده‌ای',
+      href: '/samples/auction-deed-transfer-request',
+      desc: 'درخواست صدور دستور انتقال اجرایی سند به نام برنده مزایده.',
+      badge: 'انتقال سند',
+    },
+    {
+      title: 'نمونه اعتراض و ابطال مزایده دادگاه',
+      href: '/samples/auction-cancellation-objection',
+      desc: 'شکایت از تخلفات برگزاری مزایده و درخواست ابطال صورت‌جلسه.',
+      badge: 'ابطال مزایده',
+    },
+    {
+      title: 'نمونه درخواست استرداد سپرده ۱۰ درصدی',
+      href: '/samples/auction-deposit-refund-request',
+      desc: 'تقاضای عودت وجه تضمین شرکت در مزایده به حساب بانکی.',
+      badge: 'استرداد سپرده',
     },
   ],
 
   relatedArticles: [
+    {
+      title: 'آموزش تصویری ثبت نام در مزایده ستاد ایران',
+      href: '/knowledge/setad-auction-registration',
+      desc: 'نحوه دریافت توکن، گواهی امضای الکترونیک و ورود به سامانه ستاد.',
+      category: 'مزایده و تجارت',
+    },
     {
       title: 'راهنمای ثبت نام در سامانه ستاد ایران setadiran',
       href: '/knowledge/government-auction-guide',

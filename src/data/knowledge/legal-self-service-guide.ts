@@ -178,9 +178,15 @@ export const legalSelfServiceGuideData: KnowledgeArticleData = {
   relatedSamples: [
     {
       title: 'نمونه دادخواست‌های حقوقی و کیفری',
-      href: '/samples/administrative-letter',
+      href: '/samples/petition',
       desc: 'مشاهده فرمت و ساختار استانداردهای نگارش دادخواست.',
       badge: 'نمونه دادخواست',
+    },
+    {
+      title: 'نمونه لایحه دفاعیه دادگاه',
+      href: '/samples/legal-brief',
+      desc: 'مشاهده فرمت استاندارد لایحه دفاعیه جهت ثبت در سامانه خودکاربری.',
+      badge: 'نمونه لایحه',
     },
   ],
 

@@ -168,34 +168,58 @@ export const judiciaryAuctionData: ServiceLandingData = {
 
   relatedServices: [
     {
-      title: 'مزایده اموال تملیکی',
-      href: '/services/impounded-assets-auction',
-      desc: 'حراج خودروهای گمرکی و اموال دولتی.',
-      badge: 'اموال تملیکی',
+      title: 'مزایده‌های دولتی و ستاد ایران',
+      href: '/services/government-auctions',
+      desc: 'ثبت‌نام و شرکت در مزایدات سراسری سازمان‌ها و شهرداری‌ها.',
+      badge: 'ستاد ایران',
     },
     {
-      title: 'کافی نت آنلاین',
-      href: '/services/administrative-letter',
-      desc: 'ثبت‌نام‌های اینترنتی.',
-      badge: 'ثبت نام',
+      title: 'مزایده اموال تملیکی و خودروهای گمرکی',
+      href: '/services/impounded-assets-auction',
+      desc: 'حراج خودروهای خارجی و اموال تملیکی کشور.',
+      badge: 'اموال تملیکی',
     },
   ],
 
   relatedSamples: [
     {
-      title: 'نمونه دادخواست حقوقی',
-      href: '/samples/petition',
-      desc: 'الگوهای دادخواست قضایی.',
-      badge: 'نمونه دادخواست',
+      title: 'نمونه درخواست انتقال سند ملک مزایده‌ای',
+      href: '/samples/auction-deed-transfer-request',
+      desc: 'درخواست صدور دستور انتقال اجرایی سند به نام برنده مزایده.',
+      badge: 'انتقال سند',
+    },
+    {
+      title: 'نمونه اعتراض و ابطال مزایده اجرای احکام',
+      href: '/samples/auction-cancellation-objection',
+      desc: 'شکایت از تخلفات برگزاری مزایده و تقاضای ابطال صورت‌جلسه.',
+      badge: 'ابطال مزایده',
+    },
+    {
+      title: 'نمونه درخواست استرداد سپرده ۱۰ درصدی',
+      href: '/samples/auction-deposit-refund-request',
+      desc: 'تقاضای عودت وجه تضمین شرکت در مزایده اجرای احکام.',
+      badge: 'استرداد ودیعه',
     },
   ],
 
   relatedArticles: [
     {
+      title: 'نحوه خرید خودرو و ملک از مزایده دادگاه',
+      href: '/knowledge/how-to-buy-car-and-property-from-court-auction',
+      desc: 'راهنمای گام‌به‌گام واریز ودیعه، برنده شدن و انتقال سند اجرایی.',
+      badge: 'راهنمای مزایده',
+    },
+    {
+      title: 'آموزش تصویری ثبت نام در مزایده ستاد ایران',
+      href: '/knowledge/setad-auction-registration',
+      desc: 'نحوه دریافت توکن، احراز هویت و شرکت آنلاین در سامانه ستاد.',
+      badge: 'آموزش ستاد',
+    },
+    {
       title: 'راهنمای جامع شرکت در مزایده‌های دولتی',
       href: '/knowledge/government-auction-guide',
-      desc: 'آموزش ثبت نام ستاد ایران و خریدهای مزایده‌ای.',
-      badge: 'مقاله آموزشی',
+      desc: 'آموزش شرکت در حراج‌ها و بررسی کارشناسی اموال دولتی.',
+      badge: 'مقاله جامع',
     },
   ],
 

@@ -276,16 +276,22 @@ export const governmentAuctionsData: ServiceLandingData = {
 
   relatedSamples: [
     {
-      title: 'نمونه درخواست شرکت در مزایده و ثبت‌نام ستاد',
-      href: '/samples/administrative-letter',
-      desc: 'فرمت استانداردهای مکاتبه اداری و ثبت نام مزایده.',
-      badge: 'نمونه اداری',
+      title: 'نمونه درخواست انتقال سند ملک مزایده‌ای',
+      href: '/samples/auction-deed-transfer-request',
+      desc: 'درخواست صدور دستور انتقال رسمی سند به نام برنده مزایده.',
+      badge: 'انتقال سند',
     },
     {
-      title: 'نمونه لایحه دفاعیه قضایی',
-      href: '/samples/legal-brief',
-      desc: 'مشاهده فرمت لایحه دفاعیه پرونده‌های حقوقی و مزایده.',
-      badge: 'نمونه لایحه',
+      title: 'نمونه اعتراض و ابطال مزایده اجرای احکام',
+      href: '/samples/auction-cancellation-objection',
+      desc: 'شکایت از تخلفات برگزاری مزایده و تقاضای ابطال صورت‌جلسه.',
+      badge: 'ابطال مزایده',
+    },
+    {
+      title: 'نمونه درخواست استرداد سپرده ۱۰ درصدی',
+      href: '/samples/auction-deposit-refund-request',
+      desc: 'تقاضای عودت وجه تضمین شرکت در مزایده اجرای احکام.',
+      badge: 'استرداد ودیعه',
     },
   ],
 
@@ -297,20 +303,20 @@ export const governmentAuctionsData: ServiceLandingData = {
       badge: 'راهنمای خرید',
     },
     {
+      title: 'آموزش ثبت نام در مزایده ستاد ایران',
+      href: '/knowledge/setad-auction-registration',
+      desc: 'نحوه دریافت توکن، گواهی امضای الکترونیک و ورود به سامانه ستاد.',
+      badge: 'ثبت نام ستاد',
+    },
+    {
       title: 'راهنمای جامع شرکت در مزایدات دولتی و ستاد ایران',
       href: '/knowledge/government-auction-guide',
       desc: 'آموزش گام به گام دریافت توکن، گواهی امضای دیجیتال و ثبت قیمت.',
       badge: 'راهنمای مزایده',
     },
-    {
-      title: 'نحوه خواندن و تفسیر ابلاغیه‌های ثنا',
-      href: '/knowledge/what-is-e-notification',
-      desc: 'شناخت ابلاغیه‌ها و مهلت‌های شرکت در مزایده اجرای احکام.',
-      badge: 'راهنمای ابلاغیه',
-    },
   ],
 
-  ctaTitle: 'ثبت‌نام فوری و شرکت تضمینی در مزایدات دولتی و قضایی',
+  ctaTitle: 'ثبت‌نام فوری و شرکت در مزایدات دولتی و قضایی',
   ctaDescription: 'فرصت‌های طلایی خرید خودرو، املاک و کالاهای گمرکی زیر قیمت بازار را با خدمات تخصصی کافی‌نت آنلاین نگارش یار از دست ندهید.',
   ctaPrimaryBtnText: 'ثبت سفارش کافی‌نت مزایدات در پیام‌رسان',
   ctaPrimaryHref: '/request?service=government-auctions',
