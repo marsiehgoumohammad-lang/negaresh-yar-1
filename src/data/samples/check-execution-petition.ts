@@ -238,7 +238,7 @@ export const sampleCheckExecutionPetitionData: SampleLandingData = {
 };
 
 export const sampleCheckExecutionPetitionMetadata: Metadata = {
-  title: 'نمونه درخواست صدور اجراییه چک (ماده ۲۳) | اجرای مستقیم چک صیادی | نگارش یار',
+  title: 'نمونه درخواست صدور اجراییه چک صیادی (ماده ۲۳) | نگارش یار',
   description: 'متن آماده درخواست صدور اجراییه مستقیم چک صیادی برگشتی از دادگاه طبق ماده ۲۳ قانون صدور چک بدون نیاز به جلسه رسیدگی و با حداقل هزینه دادرسی در ثنا.',
   keywords: [
     'نمونه درخواست صدور اجراییه چک',
@@ -252,7 +252,7 @@ export const sampleCheckExecutionPetitionMetadata: Metadata = {
     canonical: 'https://www.negaresh-yar.ir/samples/check-execution-petition',
   },
   openGraph: {
-    title: 'نمونه درخواست صدور اجراییه چک (ماده ۲۳) | اجرای مستقیم چک صیادی | نگارش یار',
+    title: 'نمونه درخواست صدور اجراییه چک صیادی (ماده ۲۳) | نگارش یار',
     description: 'متن آماده درخواست صدور اجراییه مستقیم چک صیادی برگشتی از دادگاه طبق ماده ۲۳ قانون صدور چک.',
     url: 'https://www.negaresh-yar.ir/samples/check-execution-petition',
     siteName: 'نگارش یار',

@@ -63,9 +63,9 @@ export const insolvencyFromJudgmentData: ServiceLandingData = {
   whyUsSubtitle: 'تنظیم کاملاً قانونی بدون نقص شکلی جهت جلوگیری از رد دادخواست در دادگاه',
   whyUsPillars: [
     {
-      title: 'توقف قطعی حکم جلب',
-      desc: 'تنظیم دقیق که قاضی اجرای احکام را مکلف به توقیف جلب تا پایان دادرسی می‌کند.',
-      metric: 'توقف ۱۰۰٪ جلب',
+      title: 'توقف قانونی حکم جلب (ماده ۳)',
+      desc: 'تنظیم دقیق که طبق تبصره ۱ ماده ۳ قانون اجرای محکومیت‌های مالی مانع از جلب بدهکار در طول دادرسی می‌شود.',
+      metric: 'استناد صریح به قانون',
     },
     {
       title: 'تحویل فوق‌سریع',
@@ -226,8 +226,8 @@ export const insolvencyFromJudgmentData: ServiceLandingData = {
 };
 
 export const insolvencyFromJudgmentMetadata: Metadata = {
-  title: 'دادخواست اعسار از پرداخت محکوم‌به، قسطی کردن بدهی و مهریه | نگارش یار',
-  description: 'آموزش و تنظیم دادخواست اعسار، قسطی کردن بدهی دادگاه و مهریه، توقف فوری حکم جلب ماده ۳، آزادی زندانی مالی و فرم اموال ماده ۸ در ثنا.',
+  title: 'دادخواست اعسار از پرداخت محکوم‌به و تقسیط بدهی و مهریه | نگارش یار',
+  description: 'تنظیم دادخواست اعسار، تقسیط بدهی دادگاه و مهریه، استناد به تبصره ماده ۳ جهت توقف جلب و تکمیل صورت دارایی موضوع ماده ۸ در ثنا.',
   keywords: [
     'قسطی کردن بدهی',
     'چطور بدهی را قسطی کنم',
@@ -245,7 +245,7 @@ export const insolvencyFromJudgmentMetadata: Metadata = {
   },
   openGraph: {
     title: 'دادخواست اعسار از پرداخت محکوم‌به و تقسیط بدهی | نگارش یار',
-    description: 'تنظیم تخصصی دادخواست اعسار جهت توقف فوری حکم جلب و تقسیط بدهی.',
+    description: 'تنظیم تخصصی دادخواست اعسار جهت توقف قانونی حکم جلب و تقسیط بدهی.',
     url: 'https://www.negaresh-yar.ir/services/insolvency-from-judgment',
     siteName: 'نگارش یار',
     type: 'website',

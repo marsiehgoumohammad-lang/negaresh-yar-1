@@ -9,7 +9,7 @@ export const howToInstallDebtAndMahriehData: KnowledgeArticleData = {
   readTime: '۱۰ دقیقه',
   lastUpdated: '۱۴۰۳/۰۵/۲۰',
   heroTrustChips: [
-    'توقف فوری جلب ماده ۳',
+    'توقف قانونی جلب (ماده ۳)',
     'تقسیط مهریه و محکومیت‌های مالی',
     'فرم لیست اموال ماده ۸ قانون',
     'نقش ستاد دیه در آزادی بدهکار',

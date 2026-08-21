@@ -223,8 +223,8 @@ export const howToBuyCarAndPropertyFromCourtAuctionData: KnowledgeArticleData = 
 };
 
 export const howToBuyCarAndPropertyFromCourtAuctionMetadata: KnowledgeMetadata = {
-  title: 'چگونه در مزایده دادگاه شرکت کنیم؟ راهنمای خرید خودرو و ملک از اجرای احکام',
-  description: 'راهنمای کامل خرید خودرو، ماشین و ملک از مزایده دادگاه، ثبت‌نام در سامانه ستاد ایران و واریز ۱۰٪ سپرده تضمین.',
+  title: 'چگونه در مزایده دادگاه شرکت کنیم؟ راهنمای خرید خودرو و ملک از ستاد ایران',
+  description: 'آموزش گام‌به‌گام خرید خودرو و ملک از مزایده‌های اجرای احکام دادگاه و سامانه ستاد ایران (setadiran.ir)، نحوه بازدید و واریز ۱۰ درصد سپرده تضمین.',
   keywords: [
     'مزایده دولتی چیست',
     'چگونه در مزایده شرکت کنیم',
