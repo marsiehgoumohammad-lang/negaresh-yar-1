@@ -206,9 +206,10 @@ export const scrappedCarRegistrationGuideData: KnowledgeArticleData = {
 };
 
 export const scrappedCarRegistrationGuideMetadata: KnowledgeMetadata = {
-  title: 'راهنمای جامع ثبت نام اسقاط خودرو فرسوده و طرح جایگزینی | نگارش یار',
-  description: 'آموزش ثبت نام اسقاط خودرو فرسوده در سامانه نوسازی ناوگان، جدول سن فرسودگی سواری و وانت، طرح جایگزینی ایران خودرو و سایپا و مدارک لازم.',
+  title: 'ثبت نام اسقاط خودرو فرسوده و طرح جایگزینی؛ شرایط و مدارک | نگارش یار',
+  description: 'راهنمای ثبت نام اسقاط خودرو فرسوده در سامانه نوسازی ناوگان، جدول سن فرسودگی سواری و وانت، طرح جایگزینی سایپا و ایران خودرو و مدارک تحویل به مراکز اسقاط.',
   keywords: [
+    'ثبت نام اسقاط خودرو فرسوده',
     'اسقاط خودرو فرسوده',
     'خودرو فرسوده',
     'طرح جایگزینی خودرو',
@@ -225,8 +226,8 @@ export const scrappedCarRegistrationGuideMetadata: KnowledgeMetadata = {
     canonical: 'https://www.negaresh-yar.ir/knowledge/scrapped-car-registration-guide',
   },
   openGraph: {
-    title: 'راهنمای جامع ثبت نام اسقاط خودرو فرسوده و طرح جایگزینی | نگارش یار',
-    description: 'راهنمای ثبت نام اسقاط خودرو فرسوده، سن فرسودگی سواری و وانت، و طرح جایگزینی.',
+    title: 'ثبت نام اسقاط خودرو فرسوده و طرح جایگزینی؛ شرایط و مدارک | نگارش یار',
+    description: 'راهنمای ثبت نام اسقاط خودرو فرسوده، سن فرسودگی سواری و وانت، و طرح جایگزینی خودروسازان.',
     url: 'https://www.negaresh-yar.ir/knowledge/scrapped-car-registration-guide',
     siteName: 'نگارش یار',
     type: 'article',
