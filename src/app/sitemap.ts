@@ -21,7 +21,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: route === '' ? 1.0 : 0.9,
   }));
 
-  // Services priority routes (22 routes)
+  // Services priority routes (23 routes)
   const serviceSlugs = [
     'administrative-letter',
     'appeal',
@@ -45,6 +45,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     'letter-to-tax-office',
     'judiciary-auction',
     'impounded-assets-auction',
+    'mashhad',
   ];
 
   const serviceRoutes = serviceSlugs.map((slug) => ({
