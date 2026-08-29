@@ -123,7 +123,6 @@ export function Footer() {
             <Link href="/knowledge" className="hover:text-[#E5C158] transition-colors">پایگاه دانش</Link>
             <Link href="/contact" className="hover:text-[#E5C158] transition-colors">تماس با ما</Link>
             <Link href="/request" className="hover:text-[#E5C158] transition-colors">ثبت درخواست</Link>
-            <Link href="/admin" className="hover:text-[#E5C158] transition-colors text-slate-500 hover:text-slate-300">پنل مدیریت</Link>
           </div>
         </div>
       </Container>
