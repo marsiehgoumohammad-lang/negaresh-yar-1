@@ -287,6 +287,7 @@ const featuredServices: ServiceCardType[] = [
 const completeDirectoryData = [
   {
     category: 'نگارش اداری و عریضه‌نویسی',
+    targetId: 'administrative-letters',
     items: [
       'نامه به رئیس جمهور',
       'نامه به دفتر مقام معظم رهبری',
@@ -304,6 +305,7 @@ const completeDirectoryData = [
   },
   {
     category: 'امور حقوقی و دادگستری',
+    targetId: 'legal-drafting',
     items: [
       'تنظیم دادخواست حقوقی',
       'تنظیم شکواییه کیفری',
@@ -321,6 +323,7 @@ const completeDirectoryData = [
   },
   {
     category: 'تفسیر اسناد و مزایده‌ها',
+    targetId: 'auctions',
     items: [
       'تفسیر رای دادگاه با AI',
       'تفسیر ابلاغیه ثنا عدل ایران',
@@ -336,6 +339,7 @@ const completeDirectoryData = [
   },
   {
     category: 'کافی نت آنلاین و سامانه‌های ملی',
+    targetId: 'online-office',
     items: [
       'ثبت نام سامانه ثنا',
       'احراز هویت الکترونیک ثنا',
@@ -353,6 +357,7 @@ const completeDirectoryData = [
   },
   {
     category: 'امور مالیاتی، بیمه و خودرو',
+    targetId: 'tax-insurance',
     items: [
       'اظهارنامه مالیاتی مشاغل',
       'اظهارنامه تبصره ماده ۱۰۰',
@@ -368,6 +373,7 @@ const completeDirectoryData = [
   },
   {
     category: 'خدمات دیجیتال، سئو و رزومه',
+    targetId: 'digital-services',
     items: [
       'طراحی وب‌سایت شرکتی',
       'سئو سایت و گوگل',
@@ -791,11 +797,12 @@ export function ServicesPageClient() {
               return (
                 <motion.article
                   key={cat.id}
+                  id={cat.id}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.4, delay: idx * 0.05 }}
-                  className="relative flex flex-col justify-between p-6 sm:p-8 rounded-3xl bg-gradient-to-b from-[#0D1424] to-[#090D1A] border border-slate-800 hover:border-[#E5C158]/60 shadow-xl hover:shadow-[0_0_30px_rgba(229,193,88,0.18)] transition-all duration-300 group overflow-hidden"
+                  className="relative flex flex-col justify-between p-6 sm:p-8 rounded-3xl bg-gradient-to-b from-[#0D1424] to-[#090D1A] border border-slate-800 hover:border-[#E5C158]/60 shadow-xl hover:shadow-[0_0_30px_rgba(229,193,88,0.18)] transition-all duration-300 group overflow-hidden scroll-mt-24"
                 >
                   {/* Subtle Top Ambient Gradient */}
                   <div
@@ -954,7 +961,7 @@ export function ServicesPageClient() {
                     {group.items.map((item, itemIdx) => (
                       <Link
                         key={itemIdx}
-                        href="/request"
+                        href={`#${group.targetId}`}
                         className="text-xs px-3 py-1.5 rounded-lg bg-slate-900/90 hover:bg-[#E5C158] text-slate-300 hover:text-[#070B15] border border-slate-800 hover:border-[#E5C158] transition-all font-medium inline-block"
                       >
                         {item}

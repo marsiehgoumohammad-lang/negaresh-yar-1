@@ -194,7 +194,7 @@ export function KnowledgeHubClient({ initialArticles }: KnowledgeHubClientProps)
                 : 'bg-slate-900 border border-slate-800 text-slate-300 hover:border-slate-700'
             }`}
           >
-            همه موضوعات ({ALL_KNOWLEDGE_ARTICLES.length})
+            همه موضوعات ({initialArticles.length})
           </button>
 
           {KNOWLEDGE_CATEGORIES.map((cat) => {
