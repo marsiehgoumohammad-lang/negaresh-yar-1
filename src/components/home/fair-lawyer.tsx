@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { Container } from '@/components/ui/container';
-import { ShieldCheck, Scale, FileSignature, CheckCircle2, ChevronLeft } from 'lucide-react';
+import { ShieldCheck, Scale, CheckCircle2, ChevronLeft } from 'lucide-react';
 
 const features = [
   'انتخاب وکیل متناسب با موضوع و پیچیدگی پرونده',

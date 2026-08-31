@@ -34,9 +34,12 @@ export function Hero() {
           <h2 className="text-base sm:text-lg md:text-xl font-bold text-[#E5C158] tracking-wide mb-2">
             نگارش نامه اداری - عریضه نویسی - کافی نت آنلاین
           </h2>
-          <h3 className="text-sm sm:text-base md:text-lg font-medium text-slate-300 mb-6">
-            کلیه خدمات ما غیر حضوری و قابل استفاده در سراسر ایران است
+          <h3 className="text-sm sm:text-base md:text-lg font-semibold text-slate-200 mb-1.5">
+            معرفی وکیل مناسب با پرونده و توان مالی شما
           </h3>
+          <p className="text-xs sm:text-sm md:text-base font-medium text-slate-400 mb-6">
+            کلیه خدمات ما غیر حضوری و قابل استفاده در سراسر ایران است
+          </p>
 
           {/* Central 3D Podium & Laptop Hero Image Asset */}
           <div className="relative w-full max-w-lg mx-auto my-3 sm:my-6 flex justify-center items-center">

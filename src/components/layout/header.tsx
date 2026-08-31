@@ -187,9 +187,12 @@ export function Header() {
           </Link>
 
           {/* Desktop Navigation Links */}
-          <nav className="hidden lg:flex items-center gap-7">
+          <nav className="hidden lg:flex items-center gap-6 xl:gap-7">
             <Link href="/services" className="text-sm font-bold text-slate-300 hover:text-[#E5C158] transition-colors">
               خدمات نگارش
+            </Link>
+            <Link href="/lawyer-referral" className="text-sm font-bold text-slate-300 hover:text-[#E5C158] transition-colors">
+              وکیل منصف
             </Link>
             <Link href="/samples" className="text-sm font-bold text-slate-300 hover:text-[#E5C158] transition-colors">
               نمونه اسناد

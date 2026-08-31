@@ -148,10 +148,10 @@ export default function Home() {
 
       <main className="flex-1">
         <Hero />
+        <FairLawyer />
         <Services />
         <AiIntro />
         <Features />
-        <FairLawyer />
         <ArticlesPreview />
       </main>
     </div>
