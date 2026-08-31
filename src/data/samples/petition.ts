@@ -285,6 +285,19 @@ export const samplePetitionData: SampleLandingData = {
 
   relatedSamples: [
     {
+      title: 'نمونه دادخواست خلع ید',
+      href: '/samples/property-eviction-removal-claim',
+      desc: 'دعوای خلع ید ویژه املاک دارای سند رسمی',
+      badge: 'ملکی',
+    },
+    {
+      title: 'دادخواست مطالبه خسارت',
+      href: '/samples/damages-claim-petition',
+      desc: 'الگوی مطالبه خسارت مادی و معنوی',
+      badge: 'مالی',
+    },
+
+    {
       title: 'نمونه لایحه دفاعیه',
       href: '/samples/legal-brief',
       desc: 'الگوی لایحه پاسخ به دادخواست خوانده.',
@@ -349,7 +362,7 @@ export const samplePetitionMetadata: Metadata = {
   },
   openGraph: {
     title: 'نمونه دادخواست حقوقی ثنا، مطالبه وجه، چک و ملک | نگارش یار',
-    description: 'الگوی استاندارد و کامل دادخواست حقوقی جهت ثبت در دفاتر خدمات قضایی.',
+  description: 'الگوی استاندارد و کامل دادخواست حقوقی جهت ثبت در دفاتر خدمات قضایی.',
     url: 'https://www.negaresh-yar.ir/samples/petition',
     siteName: 'نگارش یار',
     type: 'article',

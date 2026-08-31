@@ -230,7 +230,7 @@ export const sampleArticle477RequestMetadata: Metadata = {
   },
   openGraph: {
     title: 'نمونه درخواست اعمال ماده ۴۷۷ قانون آیین دادرسی کیفری | نگارش یار',
-    description: 'دانلود رایگان و کپی متن درخواست اعمال ماده ۴۷۷ و اعاده دادرسی خلاف بیّن شرع.',
+  description: 'دانلود رایگان و کپی متن درخواست اعمال ماده ۴۷۷ و اعاده دادرسی خلاف بیّن شرع.',
     url: 'https://www.negaresh-yar.ir/samples/article-477-request',
     siteName: 'نگارش یار',
     type: 'article',

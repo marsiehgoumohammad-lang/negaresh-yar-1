@@ -145,11 +145,11 @@ export const samplePromissoryNoteProtestObjectionData: SampleLandingData = {
     },
     {
       articleName: 'ماده ۲۹۲ تا ۲۹۷ قانون تجارت',
-      description: 'ضوابط واخواست و اعتراض عدم تأدیه و مواعد قانونی طرح دعوا علیه مسئولین سند.',
+  description: 'ضوابط واخواست و اعتراض عدم تأدیه و مواعد قانونی طرح دعوا علیه مسئولین سند.',
     },
     {
       articleName: 'ماده ۱۰۸ قانون آیین دادرسی مدنی',
-      description: 'صدور قرار تأمین خواسته بدون پرداخت خسارت احتمالی در اسناد تجاری واخواست‌شده.',
+  description: 'صدور قرار تأمین خواسته بدون پرداخت خسارت احتمالی در اسناد تجاری واخواست‌شده.',
     },
   ],
 
@@ -236,7 +236,7 @@ export const samplePromissoryNoteProtestObjectionMetadata: Metadata = {
   },
   openGraph: {
     title: 'نمونه دادخواست مطالبه وجه سفته واخواست شده با خسارت تأخیر | نگارش یار',
-    description: 'الگوی کاربردی و مستند دادخواست مطالبه سفته واخواست‌شده و توقیف فوری اموال بدهکار.',
+  description: 'الگوی کاربردی و مستند دادخواست مطالبه سفته واخواست‌شده و توقیف فوری اموال بدهکار.',
     url: 'https://www.negaresh-yar.ir/samples/promissory-note-protest-objection',
     siteName: 'نگارش یار',
     type: 'article',

@@ -287,7 +287,7 @@ export const sampleLetterToTaxOfficeMetadata: Metadata = {
   },
   openGraph: {
     title: 'نمونه نامه و لایحه اعتراض به برگ تشخیص مالیات | نگارش یار',
-    description: 'الگوی استاندارد دفاعیه مالیاتی جهت ارائه به ممیز کل و هیات حل اختلاف مالیاتی.',
+  description: 'الگوی استاندارد دفاعیه مالیاتی جهت ارائه به ممیز کل و هیات حل اختلاف مالیاتی.',
     url: 'https://www.negaresh-yar.ir/samples/letter-to-tax-office',
     siteName: 'نگارش یار',
     type: 'article',

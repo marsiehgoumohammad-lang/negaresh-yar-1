@@ -250,7 +250,7 @@ export const sampleCriminalRehabilitationCertificateMetadata: Metadata = {
   },
   openGraph: {
     title: 'نمونه درخواست صدور گواهی اعاده حیثیت و رفع سوء پیشینه | نگارش یار',
-    description: 'متن آماده درخواست صدور گواهی اعاده حیثیت و پاکسازی سابقه کیفری در دادسرا.',
+  description: 'متن آماده درخواست صدور گواهی اعاده حیثیت و پاکسازی سابقه کیفری در دادسرا.',
     url: 'https://www.negaresh-yar.ir/samples/criminal-rehabilitation-certificate',
     siteName: 'نگارش یار',
     type: 'article',

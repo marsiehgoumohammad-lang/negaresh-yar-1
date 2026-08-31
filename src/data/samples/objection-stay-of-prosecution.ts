@@ -235,7 +235,7 @@ export const sampleObjectionStayOfProsecutionMetadata: Metadata = {
   },
   openGraph: {
     title: 'نمونه لایحه اعتراض به قرار موقوفی تعقیب دادسرا | نگارش یار',
-    description: 'متن آماده لایحه اعتراض به قرار موقوفی تعقیب دادسرا و تقاضای نقض در دادگاه کیفری دو.',
+  description: 'متن آماده لایحه اعتراض به قرار موقوفی تعقیب دادسرا و تقاضای نقض در دادگاه کیفری دو.',
     url: 'https://www.negaresh-yar.ir/samples/objection-stay-of-prosecution',
     siteName: 'نگارش یار',
     type: 'article',

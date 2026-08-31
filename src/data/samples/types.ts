@@ -22,6 +22,7 @@ export interface SampleDocument {
   slug: string;
   title?: string;
   shortDescription?: string;
+  description?: string;
   category?: SampleCategoryType;
   subcategory?: string;
   intent?: SearchIntent;
@@ -49,7 +50,7 @@ export interface SampleDocument {
   commonMistakes?: { mistake: string; impact?: string; consequence?: string; solution: string }[];
 
   // مبانی و مستندات قانونی
-  legalBasis?: { article: string; title: string; description: string }[];
+  legalBasis?: { article?: string; articleName?: string; title?: string; description?: string; shortDescription?: string }[];
 
   // FAQ
   faq?: { question: string; answer: string }[];
@@ -83,16 +84,16 @@ export interface SampleDocument {
   heroTrustChips?: string[];
   whatIsTitle?: string;
   whatIsParagraphs?: string[];
-  whatIsHighlights?: { title: string; desc: string }[];
+  whatIsHighlights?: { title: string; desc?: string }[];
   whenToUseTitle?: string;
   whenToUseSubtitle?: string;
-  whenToUseList?: { title: string; desc: string }[];
+  whenToUseList?: { title: string; desc?: string }[];
   requiredInfoTitle?: string;
   requiredInfoSubtitle?: string;
-  requiredInfoList?: { title: string; desc: string }[];
+  requiredInfoList?: { title: string; desc?: string }[];
   writingTipsTitle?: string;
   writingTipsSubtitle?: string;
-  writingTipsList?: { title: string; desc: string }[];
+  writingTipsList?: { title: string; desc?: string }[];
   commonMistakesTitle?: string;
   commonMistakesSubtitle?: string;
   commonMistakesList?: { mistake: string; impact?: string; consequence?: string; solution: string }[];
@@ -109,7 +110,7 @@ export interface SampleDocument {
   guideStepsSubtitle?: string;
   guideSteps?: { stepNumber: number; title: string; desc: string }[];
   legalArticlesTitle?: string;
-  legalArticles?: { articleName: string; description: string }[];
+  legalArticles?: { articleName?: string; article?: string; title?: string; description?: string; shortDescription?: string }[];
   faqTitle?: string;
   faqsTitle?: string;
   faqs?: { q: string; a: string }[];

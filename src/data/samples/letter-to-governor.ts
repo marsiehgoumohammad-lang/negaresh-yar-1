@@ -282,7 +282,7 @@ export const sampleLetterToGovernorMetadata: Metadata = {
   },
   openGraph: {
     title: 'نمونه نامه اداری و عریضه به استاندار و فرماندار | نگارش یار',
-    description: 'الگوی استاندارد و رسمی مکاتبه با استاندار و فرماندار جهت پیگیری مشکلات اداری و عمرانی.',
+  description: 'الگوی استاندارد و رسمی مکاتبه با استاندار و فرماندار جهت پیگیری مشکلات اداری و عمرانی.',
     url: 'https://www.negaresh-yar.ir/samples/letter-to-governor',
     siteName: 'نگارش یار',
     type: 'article',

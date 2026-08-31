@@ -349,7 +349,7 @@ export const sampleLeaderOfficeLetterMetadata: Metadata = {
   },
   openGraph: {
     title: 'نمونه متن نامه به دفتر مقام معظم رهبری و leader.ir | نگارش یار',
-    description: 'الگوی شایسته و استاندارد نگارش عریضه به دفتر مقام معظم رهبری.',
+  description: 'الگوی شایسته و استاندارد نگارش عریضه به دفتر مقام معظم رهبری.',
     url: 'https://www.negaresh-yar.ir/samples/leader-office-letter',
     siteName: 'نگارش یار',
     type: 'article',

@@ -142,11 +142,11 @@ export const sampleAuctionDeedTransferRequestData: SampleLandingData = {
     },
     {
       articleName: 'ماده ۱۴۴ قانون اجرای احکام مدنی',
-      description: 'نحوه تسلیم و تخلیه مال غیرمنقول مزایده‌شده به خریدار توسط مامورین اجرا.',
+  description: 'نحوه تسلیم و تخلیه مال غیرمنقول مزایده‌شده به خریدار توسط مامورین اجرا.',
     },
     {
       articleName: 'ماده ۱۴۵ قانون اجرای احکام مدنی',
-      description: 'تسویه حساب مطالبات و حقوق دولتی پس از انجام کامل مزایده و انتقال سند.',
+  description: 'تسویه حساب مطالبات و حقوق دولتی پس از انجام کامل مزایده و انتقال سند.',
     },
   ],
 
@@ -254,7 +254,7 @@ export const sampleAuctionDeedTransferRequestMetadata: Metadata = {
   },
   openGraph: {
     title: 'نمونه درخواست انتقال سند رسمی ملک مزایده‌ای (ماده ۱۴۳) | نگارش یار',
-    description: 'الگوی حقوقی تقاضای انتقال سند رسمی و معرفی‌نامه به دفترخانه برای برنده مزایده دادگاه.',
+  description: 'الگوی حقوقی تقاضای انتقال سند رسمی و معرفی‌نامه به دفترخانه برای برنده مزایده دادگاه.',
     url: 'https://www.negaresh-yar.ir/samples/auction-deed-transfer-request',
     siteName: 'نگارش یار',
     type: 'article',

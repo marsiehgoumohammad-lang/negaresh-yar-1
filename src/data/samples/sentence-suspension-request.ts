@@ -240,7 +240,7 @@ export const sampleSentenceSuspensionRequestMetadata: Metadata = {
   },
   openGraph: {
     title: 'نمونه درخواست تعلیق اجرای مجازات حبس در دادگاه | نگارش یار',
-    description: 'متن آماده لایحه تقاضای تعلیق اجرای باقی‌مانده مجازات حبس تعزیری در دادگاه.',
+  description: 'متن آماده لایحه تقاضای تعلیق اجرای باقی‌مانده مجازات حبس تعزیری در دادگاه.',
     url: 'https://www.negaresh-yar.ir/samples/sentence-suspension-request',
     siteName: 'نگارش یار',
     type: 'article',

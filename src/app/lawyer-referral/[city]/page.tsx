@@ -32,7 +32,7 @@ export async function generateMetadata({
     };
   }
 
-  const canonicalUrl = `https://negaresh-yar.ir/lawyer-referral/${cityData.slug}`;
+  const canonicalUrl = `https://www.negaresh-yar.ir/lawyer-referral/${cityData.slug}`;
 
   return {
     title: cityData.seoTitle,

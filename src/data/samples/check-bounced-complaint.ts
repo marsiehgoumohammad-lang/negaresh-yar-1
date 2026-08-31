@@ -243,7 +243,7 @@ export const sampleCheckBouncedComplaintMetadata: Metadata = {
   },
   openGraph: {
     title: 'نمونه شکواییه صدور چک بلامحل | شکایت کیفری چک برگشتی | نگارش یار',
-    description: 'متن آماده و استاندارد شکواییه کیفری صدور چک بلامحل در دادسرا با رعایت کامل مواعد قانونی.',
+  description: 'متن آماده و استاندارد شکواییه کیفری صدور چک بلامحل در دادسرا با رعایت کامل مواعد قانونی.',
     url: 'https://www.negaresh-yar.ir/samples/check-bounced-complaint',
     siteName: 'نگارش یار',
     type: 'article',

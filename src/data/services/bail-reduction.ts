@@ -181,6 +181,7 @@ export const bailReductionData: ServiceLandingData = {
     },
   ],
 
+  showLawyerReferral: true,
   relatedServices: [
     {
       title: 'تبدیل قرار وثیقه به کفالت',

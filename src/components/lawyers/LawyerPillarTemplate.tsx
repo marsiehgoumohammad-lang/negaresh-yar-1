@@ -19,9 +19,11 @@ import {
   Gavel,
   CreditCard,
   Building2,
+  AlertCircle,
 } from 'lucide-react';
 import { ALL_LAWYER_CITIES } from '@/data/lawyers/lawyer-referral-cities';
 import { LawyerMessengerCTA } from './LawyerMessengerCTA';
+import { LawyerStickyMobileCTA } from './LawyerStickyMobileCTA';
 
 export function LawyerPillarTemplate() {
   const [searchTerm, setSearchTerm] = useState('');
@@ -39,24 +41,34 @@ export function LawyerPillarTemplate() {
 
   const pillarFaqs = [
     {
+      question: 'آیا وکیل ارزان همیشه انتخاب مناسبی است؟',
+      answer:
+        'خیر؛ پرونده‌های قضایی سرنوشت مالی، خانوادگی یا آزادی افراد را تعیین می‌کنند. وکیل ارزان یا بی‌تجربه ممکن است به دلیل عدم تسلط به تشریفات دادرسی یا مهلت‌های قانونی اعتراض، خسارت جبران‌ناپذیری به بار آورد. مفهوم «وکیل منصف» به معنای کم‌کیفیت بودن کار نیست، بلکه به معنای دستمزد متناسب و شفاف بر پایه حجم واقعی پرونده، تعهد اخلاقی و پرهیز از هزینه‌های کاذب است.',
+    },
+    {
+      question: 'هزینه وکیل و حق‌الوکاله چگونه تعیین می‌شود؟',
+      answer:
+        'حق‌الوکاله وکیل دادگستری بر اساس آیین‌نامه تعرفه حق‌الوکاله مصوب قوه قضائیه یا توافق کتبی میان وکیل و موکل در سامانه ثنا تعیین می‌شود. فاکتورهای اثرگذار شامل موضوع دعوا (مالی، ملکی، کیفری یا خانواده)، مرحله دادرسی (بدوی، تجدیدنظر یا فرجام‌خواهی)، میزان پیچیدگی و ارزش مالی خواسته است.',
+    },
+    {
+      question: 'چگونه وکیل مناسب پرونده خود پیدا کنیم؟',
+      answer:
+        'بهترین شیوه، انتخاب وکیل بر اساس «تخصص موضوعی» (مانند وکیل ملکی، وکیل کیفری، وکیل خانواده یا وکیل چک) و «شهر محل رسیدگی» است. سامانه نگارش یار با ارزیابی شرح ماجرای شما و دادگاه رسیدگی‌کننده، وکلای باتجربه و منصف همان حوزه را جهت بررسی پرونده به شما پیوند می‌دهد.',
+    },
+    {
+      question: 'آیا امکان معرفی وکیل با شرایط مالی متفاوت و پرداخت اقساطی وجود دارد؟',
+      answer:
+        'بله؛ با توجه به اینکه موکلان دارای توانمندی‌های مالی گوناگون هستند، در زمان اعلام شرایط پرونده در پیام‌رسان می‌توانید امکان پرداخت اقساطی حق‌الوکاله یا بودجه مدنظرتان را اعلام کنید تا هماهنگی با وکلایی که انعطاف‌پذیری مالی و شرایط اقساطی دارند انجام پذیرد.',
+    },
+    {
       question: 'سامانه نگارش یار چگونه به من در انتخاب وکیل کمک می‌کند؟',
       answer:
         'نگارش یار پس از دریافت خلاصه موضوع حقوقی یا کیفری شما و مشخص شدن شهر محل دادرسی، موضوع را با وکلای پایه یک دادگستری معتمد و دارای سابقه موثر که به تعرفه عادلانه و منصفانه پایبند هستند مطرح کرده و در صورت توافق، هماهنگی‌های لازم را جهت ارتباط مستقیم انجام می‌دهد.',
     },
     {
-      question: 'آیا هزینه اولیه برای درخواست معرفی وکیل دریافت می‌شود؟',
+      question: 'آیا برای تمام پرونده‌ها حتماً نیاز به استخدام وکیل داریم یا تنظیم لایحه کفایت می‌کند؟',
       answer:
-        'خیر، دریافت راهنمایی و استعلام اولیه از طریق پیام‌رسان‌های نگارش یار هزینه‌ای ندارد و حق‌الوکاله پس از توافق مستقیم شما با وکیل و بر اساس قرارداد مالی وکالت معین می‌گردد.',
-    },
-    {
-      question: 'منظور از «وکیل منصف» چیست؟ آیا به معنای خدمات ارزان و بی‌کیفیت است؟',
-      answer:
-        'خیر، وکیل منصف به معنای حق‌الوکاله متناسب با حجم و پیچیدگی واقعی پرونده، شفافیت کامل قرارداد مالی، پرهیز از ادعاهای واهی یا مبالغ نامتعارف و تعهد صادقانه به پیگیری پرونده است.',
-    },
-    {
-      question: 'آیا برای تمام دعاوی ملکی، کیفری، خانواده و دیوان عدالت اداری امکان راهنمایی وجود دارد؟',
-      answer:
-        'بله، از آنجا که هر وکیل در حوزه‌های معینی تخصص و تجربه بیشتری دارد، نگارش یار پرونده‌های ملکی، مالی، تجاری، خانوادگی، کیفری و اداری را تفکیک نموده و متناسب با موضوع پرونده اقدام می‌کند.',
+        'خیر؛ در بسیاری از پرونده‌ها که فرد توانایی حضور در جلسه دادگاه را دارد، صرفاً با یک دادخواست اصولی، شکواییه استاندارد یا لایحه دفاعیه تخصصی که توسط کارشناسان نگارش یار تدوین شده است می‌تواند از حق خود دفاع کند و نیازی به صرف هزینه‌های سنگین استخدام وکیل برای تمام مراحل دادرسی نیست. در مواردی که حضور وکیل ضرورت دارد، مسیر معرفی وکیل منصف فراهم است.',
     },
     {
       question: 'چرا اطلاعات شخصی و شماره تلفن وکلا در سایت منتشر نمی‌شود؟',
@@ -65,7 +77,7 @@ export function LawyerPillarTemplate() {
     },
   ];
 
-  const baseUrl = 'https://negaresh-yar.ir';
+  const baseUrl = 'https://www.negaresh-yar.ir';
   const pageUrl = `${baseUrl}/lawyer-referral`;
 
   const breadcrumbSchema = {
@@ -103,9 +115,9 @@ export function LawyerPillarTemplate() {
   const webPageSchema = {
     '@context': 'https://schema.org',
     '@type': 'WebPage',
-    name: 'معرفی وکیل منصف در سراسر ایران | حمایت حقوقی و انتخاب وکیل متناسب - نگارش یار',
+    name: 'معرفی وکیل منصف در سراسر ایران | وکیل متناسب با پرونده و شرایط مالی - نگارش یار',
     description:
-      'راهنمای معرفی وکیل منصف در سراسر کشور با دستمزد عادلانه و تعهد حرفه‌ای برای دعاوی ملکی، کیفری، خانواده، چک و مطالبات مالی در ۳۱ استان ایران.',
+      'راهنمای معرفی وکیل منصف و باانصاف در سراسر کشور با دستمزد عادلانه برای پرونده‌های ملکی، کیفری، خانواده، چک و دیوان عدالت اداری در ۳۱ مرکز استان.',
     url: pageUrl,
     inLanguage: 'fa-IR',
     isPartOf: {
@@ -191,26 +203,27 @@ export function LawyerPillarTemplate() {
               <span>پوشش سراسری در ۳۱ مرکز استان کشور</span>
             </div>
 
+            {/* Core Approved H1 Headline */}
             <h1 className="text-2xl sm:text-4xl md:text-5xl font-black text-white leading-tight mb-4">
-              معرفی وکیل منصف در سراسر ایران؛ حمایت حقوقی متناسب با شرایط شما
+              وکیل منصف، متناسب با پرونده و شرایط مالی شما
             </h1>
 
             <p className="text-sm sm:text-base md:text-lg text-slate-300 leading-relaxed mb-6">
-              نگارش یار با در نظر گرفتن موضوع دعوا، شهر محل طرح پرونده و امکانات مالی شما، مسیر ارتباط با وکلای متعهد و منصف را هموار می‌سازد.
+              نگارش یار با در نظر گرفتن موضوع دعوا، حوزه قضایی و توان مالی شما، مسیر انتخاب و معرفی وکیل منصف، با‌تجربه و متعهد را هموار می‌سازد تا بدون مواجهه با هزینه‌های نامتعارف، از حقوقتان دفاع کنید.
             </p>
 
-            {/* Direct Answer Box for Google AI Overview */}
+            {/* Direct Answer & Core Philosophy Box */}
             <div className="rounded-2xl border border-emerald-500/30 bg-emerald-950/20 p-5 sm:p-6 mb-8 backdrop-blur-sm shadow-sm">
               <div className="flex items-start gap-3.5">
                 <div className="w-9 h-9 rounded-xl bg-emerald-500/20 border border-emerald-500/40 flex items-center justify-center text-emerald-400 shrink-0 mt-0.5">
                   <ShieldCheck className="w-5 h-5" />
                 </div>
-                <div>
-                  <h2 className="text-sm sm:text-base font-bold text-emerald-300 mb-1.5">
-                    پاسخ سریع و راهنمای معرفی وکیل:
+                <div className="space-y-1.5">
+                  <h2 className="text-sm sm:text-base font-bold text-emerald-300">
+                    مفهوم وکیل منصف در سامانه نگارش یار:
                   </h2>
                   <p className="text-xs sm:text-sm text-slate-200 leading-relaxed">
-                    اگر برای پیگیری پرونده حقوقی، کیفری، ملکی یا خانواده خود نیازمند حمایت وکیل هستید، سامانه نگارش یار با ارزیابی دقیق موضوع پرونده، شهر و توان مالی، شما را به وکلای منصف، معتمد و با دستمزد عادلانه متصل می‌نماید تا بدون دغدغه هزینه‌های نامتعارف، از حقوقتان دفاع کنید.
+                    <strong>وکیل منصف لزوماً به معنای ارزان‌ترین وکیل نیست؛</strong> بلکه وکیلی است که تخصص او با موضوع دقیق دعوای شما تطابق داشته، حق‌الوکاله را بر پایه کار واقعی تعیین نموده و شرایط پرداخت منصفانه را فراهم می‌آورد.
                   </p>
                 </div>
               </div>
@@ -312,9 +325,9 @@ export function LawyerPillarTemplate() {
                 <span className="w-8 h-8 rounded-xl bg-[#E5C158]/20 text-[#E5C158] font-black text-sm flex items-center justify-center">
                   ۲
                 </span>
-                <h3 className="text-base font-bold text-white">بیان شهر و موضوع پرونده</h3>
+                <h3 className="text-base font-bold text-white">بیان شهر، موضوع و توان مالی</h3>
                 <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
-                  شهر محل رسیدگی، مرحله دادرسی (بدوی، تجدیدنظر یا دیوان) و خلاصه موضوع دعوا را مطرح فرمایید.
+                  شهر محل رسیدگی، مرحله دادرسی (بدوی، تجدیدنظر یا اجرای احکام) و شرایط مالی مدنظرتان را مطرح فرمایید.
                 </p>
               </div>
 
@@ -324,8 +337,40 @@ export function LawyerPillarTemplate() {
                 </span>
                 <h3 className="text-base font-bold text-white">بررسی و ارتباط با وکیل منصف</h3>
                 <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
-                  پس از ارزیابی، وکیل متخصص در آن شهر که با شرایط و تعرفه منصفانه هماهنگ است به شما معرفی می‌شود.
+                  پس از ارزیابی، وکیل متناسب با موضوع پرونده و متعهد به تعرفه عادلانه به شما معرفی و هماهنگی لازم انجام می‌پذیرد.
                 </p>
+              </div>
+            </div>
+          </section>
+
+          {/* Section 2.5: Self-Service Option vs Lawyer Representation */}
+          <section className="mb-16 rounded-2xl border border-slate-800 bg-slate-900/60 p-6 sm:p-8">
+            <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+              <div className="space-y-2">
+                <div className="flex items-center gap-2 text-[#E5C158] font-bold text-sm">
+                  <Scale className="w-4 h-4" />
+                  <span>آیا پرونده شما حتماً نیاز به حضور وکیل دارد؟</span>
+                </div>
+                <h3 className="text-lg sm:text-xl font-bold text-white">
+                  تنظیم تخصصی دادخواست و لایحه؛ راهکار کم‌هزینه برای دفاع مستقل
+                </h3>
+                <p className="text-xs sm:text-sm text-slate-300 max-w-2xl leading-relaxed">
+                  اگر مایل هستید بدون تحمیل هزینه‌های وکالت، خودتان در جلسات دادگاه حاضر شوید، می‌توانید نگارش لایحه دفاعیه، دادخواست یا شکواییه خود را با استناد به مواد قانونی به کارشناسان نگارش یار بسپارید.
+                </p>
+              </div>
+              <div className="flex flex-wrap gap-3 shrink-0">
+                <Link
+                  href="/services/legal-brief"
+                  className="px-4 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-xs sm:text-sm font-bold text-white border border-slate-700 transition-colors"
+                >
+                  تنظیم لایحه دفاعیه
+                </Link>
+                <Link
+                  href="/services/petition"
+                  className="px-4 py-2.5 rounded-xl bg-[#E5C158] hover:bg-[#d4af37] text-slate-950 text-xs sm:text-sm font-black transition-colors"
+                >
+                  تنظیم دادخواست
+                </Link>
               </div>
             </div>
           </section>
@@ -473,6 +518,21 @@ export function LawyerPillarTemplate() {
             <LawyerMessengerCTA variant="bottom" />
           </section>
 
+          {/* Section 6.5: Ethical Conduct Notice */}
+          <section className="max-w-4xl mx-auto mb-16 rounded-2xl border border-amber-500/30 bg-amber-950/20 p-5 sm:p-6 text-slate-200">
+            <div className="flex items-start gap-3">
+              <AlertCircle className="w-5 h-5 text-amber-400 shrink-0 mt-0.5" />
+              <div className="space-y-1.5 text-xs sm:text-sm leading-relaxed">
+                <h3 className="font-bold text-amber-300">
+                  نکته ضروری در خصوص ادعاهای تضمین نتیجه در وکالت
+                </h3>
+                <p className="text-slate-300">
+                  طبق قوانین وکالت دادگستری، هیچ وکیلی از نظر قانونی و حرفه‌ای مجاز به دادن «تضمین ۱۰۰٪ پیروزی یا تضمین قطعی رای» نیست. وظیفه وکیل متعهد، استفاده حداکثری از دانش حقوقی، رویه‌های قضایی و دفاع همه‌جانبه از حقوق موکل است.
+                </p>
+              </div>
+            </div>
+          </section>
+
           {/* Section 7: Lawyer Partnership Info Banner */}
           <section className="max-w-4xl mx-auto rounded-2xl border border-blue-500/30 bg-blue-950/20 p-6 sm:p-8">
             <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
@@ -496,6 +556,9 @@ export function LawyerPillarTemplate() {
           </section>
         </Container>
       </main>
+
+      {/* Mobile Sticky CTA */}
+      <LawyerStickyMobileCTA />
     </div>
   );
 }

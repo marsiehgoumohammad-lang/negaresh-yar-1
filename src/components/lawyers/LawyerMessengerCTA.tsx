@@ -3,6 +3,7 @@
 import React from 'react';
 import { MessageCircle, ExternalLink, PhoneCall, Shield } from 'lucide-react';
 import { generateMessengerLinks, OFFICIAL_PHONE } from '@/lib/messengers-links';
+import { trackLawyerConversion, trackPhoneConversion } from '@/lib/analytics';
 
 interface LawyerMessengerCTAProps {
   cityName?: string;
@@ -23,6 +24,21 @@ export function LawyerMessengerCTA({
 
   const message = customMessage || defaultMsg;
   const messengers = generateMessengerLinks(message);
+
+  const handleMessengerClick = (messengerId: string) => {
+    trackLawyerConversion({
+      messenger_name: messengerId,
+      city: cityName || 'national',
+      source: `lawyer_cta_${variant}`,
+    });
+  };
+
+  const handlePhoneClick = () => {
+    trackPhoneConversion({
+      city: cityName || 'national',
+      source: `lawyer_phone_${variant}`,
+    });
+  };
 
   return (
     <div
@@ -58,7 +74,7 @@ export function LawyerMessengerCTA({
         </div>
 
         {/* Messenger Buttons Grid */}
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-1">
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-2.5 sm:gap-3 pt-1">
           {messengers.map((m) => (
             <a
               key={m.id}
@@ -66,8 +82,9 @@ export function LawyerMessengerCTA({
               href={m.url}
               target="_blank"
               rel="noopener noreferrer"
+              onClick={() => handleMessengerClick(m.id)}
               aria-label={m.ariaLabel}
-              className="flex items-center justify-center gap-2 px-3.5 py-3 rounded-xl text-xs sm:text-sm font-bold transition-all border border-slate-700/70 hover:border-[#E5C158]/60 bg-slate-800/90 hover:bg-slate-800 text-slate-100 hover:text-white shadow-sm focus:outline-none focus:ring-2 focus:ring-[#E5C158]/50 active:scale-[0.98]"
+              className="flex items-center justify-center gap-2 px-3 py-3 rounded-xl text-xs sm:text-sm font-bold transition-all border border-slate-700/70 hover:border-[#E5C158]/60 bg-slate-800/90 hover:bg-slate-800 text-slate-100 hover:text-white shadow-sm focus:outline-none focus:ring-2 focus:ring-[#E5C158]/50 active:scale-[0.98]"
             >
               <span
                 className="w-2.5 h-2.5 rounded-full flex-shrink-0"
@@ -88,6 +105,7 @@ export function LawyerMessengerCTA({
           </span>
           <a
             href={`tel:${OFFICIAL_PHONE}`}
+            onClick={handlePhoneClick}
             className="flex items-center gap-1.5 text-slate-300 hover:text-[#E5C158] transition-colors font-semibold"
           >
             <PhoneCall className="w-3.5 h-3.5 text-[#E5C158]" />

@@ -252,7 +252,7 @@ export const sampleCheckStopPaymentObjectionMetadata: Metadata = {
   },
   openGraph: {
     title: 'نمونه دادخواست اعتراض و توقف عملیات اجرایی چک (ماده ۲۳) | نگارش یار',
-    description: 'متن آماده دادخواست ابطال اجراییه و توقف فوری عملیات اجرایی چک صیادی در ثنا.',
+  description: 'متن آماده دادخواست ابطال اجراییه و توقف فوری عملیات اجرایی چک صیادی در ثنا.',
     url: 'https://www.negaresh-yar.ir/samples/check-stop-payment-objection',
     siteName: 'نگارش یار',
     type: 'article',

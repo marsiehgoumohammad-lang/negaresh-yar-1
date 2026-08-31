@@ -66,6 +66,7 @@ export interface ServiceLandingData {
   // Related services (Internal linking)
   relatedServices: { title: string; href: string; desc: string; badge: string }[];
   relatedSamples?: { title: string; href: string; desc: string; badge: string }[];
+  showLawyerReferral?: boolean;
   relatedArticles?: { title: string; href: string; desc: string; badge: string }[];
 
   // CTA
@@ -581,6 +582,43 @@ export function LandingPageTemplate({ data }: { data: ServiceLandingData }) {
       </section>
 
       {/* ---------------------------------------------------- */}
+      
+      {/* ---------------------------------------------------- */}
+      {/* 8.5 LAWYER REFERRAL (وکیل منصف) */}
+      {/* ---------------------------------------------------- */}
+      {data.showLawyerReferral && (
+        <section className="relative">
+          <Container>
+            <div className="bg-[#0A101A] border border-[#D4AF37]/30 rounded-3xl p-6 sm:p-10 relative overflow-hidden group">
+              <div className="absolute top-0 right-0 w-64 h-64 bg-[#D4AF37]/5 rounded-full blur-3xl pointer-events-none" />
+              <div className="flex flex-col md:flex-row gap-8 items-center relative z-10">
+                <div className="flex-1 space-y-4 text-center md:text-right">
+                  <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-[#D4AF37]/10 border border-[#D4AF37]/20 text-[#E5C158] text-xs font-bold">
+                    <ShieldCheck className="w-4 h-4" />
+                    <span>وکیل منصف، متناسب با پرونده شما</span>
+                  </div>
+                  <h2 className="text-2xl sm:text-3xl font-black text-white">
+                    نیاز به وکیل برای حضور در دادگاه دارید؟
+                  </h2>
+                  <p className="text-slate-300 text-sm sm:text-base leading-relaxed max-w-2xl">
+                    اگر خدمات نگارش یار (تنظیم لایحه و دادخواست) برای پرونده شما کافی نیست و نیاز به حضور وکیل در دادگاه، دفاع شفاهی، و پیگیری مستمر دارید، ما می‌توانیم شما را به یک <strong>وکیل منصف و متخصص</strong> در زمینه پرونده‌تان معرفی کنیم. ما بر اساس بودجه و نوع دعوای شما، بهترین گزینه را پیشنهاد می‌دهیم تا انتخاب آگاهانه‌ای داشته باشید.
+                  </p>
+                  <div className="pt-2">
+                    <Link
+                      href="/lawyer-referral"
+                      className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-[#D4AF37] via-[#E5C158] to-[#D4AF37] text-[#070B15] font-black text-sm shadow-lg shadow-[#E5C158]/20 hover:shadow-[#E5C158]/40 hover:scale-105 transition-all"
+                    >
+                      <span>بررسی شرایط و معرفی وکیل منصف</span>
+                      <ChevronLeft className="w-4 h-4" />
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </Container>
+        </section>
+      )}
+
       {/* 9. RELATED SERVICES (لینک‌سازی داخلی و خدمات مرتبط) */}
       {/* ---------------------------------------------------- */}
       <section className="relative">

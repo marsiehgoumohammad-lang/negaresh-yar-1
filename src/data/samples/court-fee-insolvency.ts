@@ -260,7 +260,7 @@ export const sampleCourtFeeInsolvencyMetadata: Metadata = {
   },
   openGraph: {
     title: 'نمونه دادخواست اعسار از هزینه دادرسی بدوی و تجدیدنظر | نگارش یار',
-    description: 'متن آماده دادخواست اعسار از پرداخت هزینه دادرسی در مرحله بدوی و تجدیدنظر همراه با استشهادیه.',
+  description: 'متن آماده دادخواست اعسار از پرداخت هزینه دادرسی در مرحله بدوی و تجدیدنظر همراه با استشهادیه.',
     url: 'https://www.negaresh-yar.ir/samples/court-fee-insolvency',
     siteName: 'نگارش یار',
     type: 'article',

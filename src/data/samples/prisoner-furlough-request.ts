@@ -139,11 +139,11 @@ export const samplePrisonerFurloughRequestData: SampleLandingData = {
     },
     {
       articleName: 'ماده ۵۲۰ قانون آیین دادرسی کیفری',
-      description: 'اختیارات قاضی اجرای احکام و دادیار ناظر در اعطای مرخصی به محکومان با اخذ تأمین مناسب.',
+  description: 'اختیارات قاضی اجرای احکام و دادیار ناظر در اعطای مرخصی به محکومان با اخذ تأمین مناسب.',
     },
     {
       articleName: 'ماده ۵۲۱ قانون آیین دادرسی کیفری',
-      description: 'ضمانت‌اجراهای قانونی در صورت عدم بازگشت به موقع زندانی و تمدید مرخصی.',
+  description: 'ضمانت‌اجراهای قانونی در صورت عدم بازگشت به موقع زندانی و تمدید مرخصی.',
     },
   ],
 
@@ -230,7 +230,7 @@ export const samplePrisonerFurloughRequestMetadata: Metadata = {
   },
   openGraph: {
     title: 'نمونه درخواست مرخصی زندانی و اعطای مرخصی اضطراری | نگارش یار',
-    description: 'الگوی قانونی تقاضای مرخصی زندانی جهت ارائه به دادیاری ناظر بر زندان و اجرای احکام.',
+  description: 'الگوی قانونی تقاضای مرخصی زندانی جهت ارائه به دادیاری ناظر بر زندان و اجرای احکام.',
     url: 'https://www.negaresh-yar.ir/samples/prisoner-furlough-request',
     siteName: 'نگارش یار',
     type: 'article',

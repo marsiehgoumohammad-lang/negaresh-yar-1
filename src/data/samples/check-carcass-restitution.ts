@@ -240,7 +240,7 @@ export const sampleCheckCarcassRestitutionMetadata: Metadata = {
   },
   openGraph: {
     title: 'نمونه دادخواست استرداد لاشه چک و اسناد تجاری امانی | نگارش یار',
-    description: 'دانلود رایگان و کپی متن استاندارد دادخواست حقوقی استرداد لاشه چک تضمینی.',
+  description: 'دانلود رایگان و کپی متن استاندارد دادخواست حقوقی استرداد لاشه چک تضمینی.',
     url: 'https://www.negaresh-yar.ir/samples/check-carcass-restitution',
     siteName: 'نگارش یار',
     type: 'article',

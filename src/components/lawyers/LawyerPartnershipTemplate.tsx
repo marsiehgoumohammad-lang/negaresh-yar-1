@@ -12,13 +12,31 @@ import {
   Briefcase,
 } from 'lucide-react';
 import { generateMessengerLinks, OFFICIAL_PHONE } from '@/lib/messengers-links';
+import { trackLawyerConversion, trackPhoneConversion } from '@/lib/analytics';
 
 export function LawyerPartnershipTemplate() {
   const partnerMessage =
     'سلام. وکیل دادگستری هستم و مایل به بررسی شرایط همکاری و دریافت ارجاع پرونده در نگارش یار می‌باشم.';
   const messengers = generateMessengerLinks(partnerMessage);
 
-  const baseUrl = 'https://negaresh-yar.ir';
+  const handleMessengerClick = (messengerId: string) => {
+    trackLawyerConversion({
+      messenger_name: messengerId,
+      city: 'national',
+      source: 'lawyer_partnership_cta',
+      campaign: 'lawyer_partnership',
+    });
+  };
+
+  const handlePhoneClick = () => {
+    trackPhoneConversion({
+      city: 'national',
+      source: 'lawyer_partnership_phone',
+      campaign: 'lawyer_partnership',
+    });
+  };
+
+  const baseUrl = 'https://www.negaresh-yar.ir';
   const pageUrl = `${baseUrl}/lawyer-partnership`;
 
   const breadcrumbSchema = {
@@ -187,9 +205,11 @@ export function LawyerPartnershipTemplate() {
                   {messengers.map((m) => (
                     <a
                       key={m.id}
+                      id={`partner-btn-${m.id}`}
                       href={m.url}
                       target="_blank"
                       rel="noopener noreferrer"
+                      onClick={() => handleMessengerClick(m.id)}
                       className="flex items-center justify-center gap-2 p-3 rounded-xl bg-slate-800 hover:bg-slate-700 text-xs sm:text-sm font-bold text-white border border-slate-700 transition-colors"
                     >
                       <span
@@ -203,7 +223,11 @@ export function LawyerPartnershipTemplate() {
 
                 <div className="pt-2 text-center text-xs text-slate-400">
                   همچنین امکان تماس مستقیم با شماره تلفن{' '}
-                  <a href={`tel:${OFFICIAL_PHONE}`} className="text-[#E5C158] font-bold">
+                  <a
+                    href={`tel:${OFFICIAL_PHONE}`}
+                    onClick={handlePhoneClick}
+                    className="text-[#E5C158] font-bold"
+                  >
                     {OFFICIAL_PHONE}
                   </a>{' '}
                   وجود دارد.

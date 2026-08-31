@@ -247,7 +247,7 @@ export const sampleEvictionExpiredLeaseMetadata: Metadata = {
   },
   openGraph: {
     title: 'نمونه درخواست و دادخواست دستور تخلیه فوری ملک (پایان مدت اجاره) | نگارش یار',
-    description: 'متن آماده درخواست صدور دستور تخلیه فوری ملک به علت اتمام مدت قرارداد اجاره در ثنا.',
+  description: 'متن آماده درخواست صدور دستور تخلیه فوری ملک به علت اتمام مدت قرارداد اجاره در ثنا.',
     url: 'https://www.negaresh-yar.ir/samples/eviction-expired-lease',
     siteName: 'نگارش یار',
     type: 'article',

@@ -245,7 +245,7 @@ export const sampleCheckPaymentDemandMetadata: Metadata = {
   },
   openGraph: {
     title: 'نمونه اظهارنامه مطالبه وجه چک و خسارت تأخیر تأدیه | نگارش یار',
-    description: 'متن آماده اظهارنامه رسمی مطالبه وجه چک صیادی برگشتی و خسارت تاخیر تادیه در سامانه ثنا.',
+  description: 'متن آماده اظهارنامه رسمی مطالبه وجه چک صیادی برگشتی و خسارت تاخیر تادیه در سامانه ثنا.',
     url: 'https://www.negaresh-yar.ir/samples/check-payment-demand',
     siteName: 'نگارش یار',
     type: 'article',

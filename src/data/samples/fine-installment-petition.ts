@@ -141,11 +141,11 @@ export const sampleFineInstallmentPetitionData: SampleLandingData = {
     },
     {
       articleName: 'ماده ۵۳۹ قانون آیین دادرسی کیفری',
-      description: 'تکلیف مرجع قضایی به توقف بازداشت بدل از جریمه با ثبت دادخواست اعسار تا صدور رای نهایی.',
+  description: 'تکلیف مرجع قضایی به توقف بازداشت بدل از جریمه با ثبت دادخواست اعسار تا صدور رای نهایی.',
     },
     {
       articleName: 'قانون نحوه اجرای محکومیت‌های مالی (مصوب ۱۳۹۴)',
-      description: 'مقررات عمومی استماع دعوای اعسار، شرایط شهود و ضمانت‌اجراهای کتمان مال.',
+  description: 'مقررات عمومی استماع دعوای اعسار، شرایط شهود و ضمانت‌اجراهای کتمان مال.',
     },
   ],
 
@@ -253,7 +253,7 @@ export const sampleFineInstallmentPetitionMetadata: Metadata = {
   },
   openGraph: {
     title: 'نمونه دادخواست تقسیط جزای نقدی و اعسار از جریمه دادگاه | نگارش یار',
-    description: 'الگوی قانونی و استاندارد دادخواست تقسیط جریمه کیفری و ممانعت از بازداشت بدل از جزای نقدی.',
+  description: 'الگوی قانونی و استاندارد دادخواست تقسیط جریمه کیفری و ممانعت از بازداشت بدل از جزای نقدی.',
     url: 'https://www.negaresh-yar.ir/samples/fine-installment-petition',
     siteName: 'نگارش یار',
     type: 'article',

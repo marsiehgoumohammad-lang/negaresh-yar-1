@@ -286,6 +286,19 @@ export const sampleComplaintData: SampleLandingData = {
 
   relatedSamples: [
     {
+      title: 'نمونه شکواییه کلاهبرداری',
+      href: '/samples/fraud-complaint',
+      desc: 'الگوی استاندارد شکواییه جرم کلاهبرداری',
+      badge: 'کیفری',
+    },
+    {
+      title: 'نمونه شکواییه خیانت در امانت',
+      href: '/samples/breach-of-trust-complaint',
+      desc: 'طرح شکایت خیانت در امانت در دادسرا',
+      badge: 'کیفری',
+    },
+
+    {
       title: 'نمونه دادخواست عمومی حقوقی',
       href: '/samples/petition',
       desc: 'فرم استاندارد طرح دعاوی مالی و غیرمالی در دادگاه.',
@@ -356,7 +369,7 @@ export const sampleComplaintMetadata: Metadata = {
   },
   openGraph: {
     title: 'نمونه شکواییه کیفری کلاهبرداری، خیانت در امانت و ثنا | نگارش یار',
-    description: 'الگوی استاندارد و کامل شکایت کیفری جهت ارائه به دادسرا و دفاتر خدمات قضایی.',
+  description: 'الگوی استاندارد و کامل شکایت کیفری جهت ارائه به دادسرا و دفاتر خدمات قضایی.',
     url: 'https://www.negaresh-yar.ir/samples/complaint',
     siteName: 'نگارش یار',
     type: 'article',

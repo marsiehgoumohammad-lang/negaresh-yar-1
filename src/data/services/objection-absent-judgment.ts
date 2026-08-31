@@ -164,6 +164,7 @@ export const objectionAbsentJudgmentData: ServiceLandingData = {
     },
   ],
 
+  showLawyerReferral: true,
   relatedServices: [
     {
       title: 'تنظیم لایحه تجدیدنظر',

@@ -164,6 +164,7 @@ export const objectionNonProsecutionOrderData: ServiceLandingData = {
     },
   ],
 
+  showLawyerReferral: true,
   relatedServices: [
     {
       title: 'تنظیم لایحه تجدیدنظر',

@@ -63,6 +63,26 @@ import {
   sampleCheckCarcassRestitutionData,
   sampleInsultDefamationDefenseData,
   sampleArticle477RequestData,
+  samplePropertyEvictionRemovalClaimData,
+  sampleRentEquivalentClaimData,
+  sampleRightInterferenceRemovalClaimData,
+  sampleContractNullificationPetitionData,
+  sampleMoneyRefundPetitionData,
+  sampleDamagesClaimPetitionData,
+  sampleMahriehCourtPetitionData,
+  sampleDowryReturnPetitionData,
+  sampleChildCustodyPetitionData,
+  sampleChildVisitationPetitionData,
+  sampleDivorceByWifePetitionData,
+  sampleMutualConsentDivorcePetitionData,
+  sampleInheritanceCertificatePetitionData,
+  sampleLicensePlateRemovalPetitionData,
+  sampleNameChangePetitionData,
+  sampleRentAdjustmentPetitionData,
+  sampleFraudComplaintData,
+  sampleBreachOfTrustComplaintData,
+  sampleTheftComplaintData,
+  sampleForgeryComplaintData,
 } from '@/data/samples';
 
 // Helper to normalize and ensure all required fields for a SampleDocument
@@ -86,13 +106,13 @@ function normalizeSample(item: SampleDocument): SampleDocument {
   const whenToUse =
     item.whenToUse ||
     (item.whenToUseList
-      ? item.whenToUseList.map((w) => ({ title: w.title, desc: w.desc }))
+      ? item.whenToUseList.map((w) => ({ title: w.title, desc: w.desc || '' }))
       : []);
 
   const documents =
     item.documents ||
     (item.requiredInfoList
-      ? item.requiredInfoList.map((r) => ({ title: r.title, desc: r.desc }))
+      ? item.requiredInfoList.map((r) => ({ title: r.title, desc: r.desc || '' }))
       : []);
 
   const importantNotes =
@@ -230,8 +250,27 @@ const rawSamples: SampleDocument[] = [
   sampleCheckCarcassRestitutionData,
   sampleInsultDefamationDefenseData,
   sampleArticle477RequestData,
+  samplePropertyEvictionRemovalClaimData,
+  sampleRentEquivalentClaimData,
+  sampleRightInterferenceRemovalClaimData,
+  sampleContractNullificationPetitionData,
+  sampleMoneyRefundPetitionData,
+  sampleDamagesClaimPetitionData,
+  sampleMahriehCourtPetitionData,
+  sampleDowryReturnPetitionData,
+  sampleChildCustodyPetitionData,
+  sampleChildVisitationPetitionData,
+  sampleDivorceByWifePetitionData,
+  sampleMutualConsentDivorcePetitionData,
+  sampleInheritanceCertificatePetitionData,
+  sampleLicensePlateRemovalPetitionData,
+  sampleNameChangePetitionData,
+  sampleRentAdjustmentPetitionData,
+  sampleFraudComplaintData,
+  sampleBreachOfTrustComplaintData,
+  sampleTheftComplaintData,
+  sampleForgeryComplaintData,
 ];
-
 const normalizedSamples = rawSamples.map(normalizeSample);
 
 export function getAllSamples(): SampleDocument[] {

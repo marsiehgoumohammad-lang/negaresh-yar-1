@@ -238,7 +238,7 @@ export const samplePromissoryNoteClaimMetadata: Metadata = {
   },
   openGraph: {
     title: 'نمونه دادخواست مطالبه وجه سفته، خسارت تأخیر و تأمین خواسته | نگارش یار',
-    description: 'متن آماده دادخواست حقوقی مطالبه وجه سفته واخواست‌شده با تامین خواسته و خسارت تاخیر در ثنا.',
+  description: 'متن آماده دادخواست حقوقی مطالبه وجه سفته واخواست‌شده با تامین خواسته و خسارت تاخیر در ثنا.',
     url: 'https://www.negaresh-yar.ir/samples/promissory-note-claim',
     siteName: 'نگارش یار',
     type: 'article',

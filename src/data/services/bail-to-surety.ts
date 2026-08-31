@@ -160,6 +160,7 @@ export const bailToSuretyData: ServiceLandingData = {
     },
   ],
 
+  showLawyerReferral: true,
   relatedServices: [
     {
       title: 'تقلیل و تخفیف مبلغ وثیقه',

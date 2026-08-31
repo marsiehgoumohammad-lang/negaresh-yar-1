@@ -2,8 +2,7 @@ import { SampleDocument } from './types';
 
 export const sampleMehriehExecutionRegistryPetitionMetadata = {
   title: 'نمونه تقاضای صدور اجراییه مهریه از طریق ثبت اسناد | نگارش یار',
-  description:
-    'متن کامل و استاندارد فرم درخواست به اجرا گذاشتن مهریه از طریق دفتر ازدواج و اداره اجرای اسناد رسمی ثبت، توقیف اموال و حساب بانکی زوج با رعایت ماده ۱۱۳ قانون برنامه ششم.',
+  description: 'متن کامل و استاندارد فرم درخواست به اجرا گذاشتن مهریه از طریق دفتر ازدواج و اداره اجرای اسناد رسمی ثبت، توقیف اموال و حساب بانکی زوج با رعایت ماده ۱۱۳ قانون برنامه ششم.',
   keywords: [
     'اجرای ثبت مهریه',
     'نمونه فرم به اجرا گذاشتن مهریه ثبت',
@@ -15,8 +14,7 @@ export const sampleMehriehExecutionRegistryPetitionMetadata = {
   ],
   openGraph: {
     title: 'نمونه درخواست صدور اجراییه مهریه از طریق اداره اجرای ثبت',
-    description:
-      'فرمت رسمی و گام‌به‌گام به اجرا گذاشتن سند ازدواج و مهریه در اجرای اسناد رسمی و توقیف پلاک ثبتی و حساب بانکی زوج.',
+  description: 'فرمت رسمی و گام‌به‌گام به اجرا گذاشتن سند ازدواج و مهریه در اجرای اسناد رسمی و توقیف پلاک ثبتی و حساب بانکی زوج.',
     url: 'https://www.negaresh-yar.ir/samples/mehrieh-execution-registry-petition',
   },
   alternates: {
@@ -31,7 +29,7 @@ export const sampleMehriehExecutionRegistryPetitionData: SampleDocument = {
   badge: 'خانواده و اسناد لازم‌الاجرا',
   category: 'دعاوی خانواده و اجرای ثبت',
   categoryName: 'دعاوی خانواده و اجرای ثبت',
-  shortDescription:
+  description:
     'متن و فرم استاندارد تقاضای صدور اجراییه مهریه از طریق دفترخانه تنظیم‌کننده سند ازدواج و پیگیری در اداره اجرای ثبت جهت استعلام و توقیف اموال.',
   excerpt:
     'بر اساس بند «ب» ماده ۱۱۳ قانون برنامه ششم توسعه، زوجه برای وصول مهریه خود ابتدا ملزم است به دفترخانه ازدواج صادرکننده سند نکاحیه مراجعه و سپس پرونده را در اداره اجرای اسناد رسمی ثبت به جریان بیندازد و مراجعه مستقیم به دادگاه بدون گواهی اداره ثبت امکان‌پذیر نیست.',
@@ -197,6 +195,19 @@ export const sampleMehriehExecutionRegistryPetitionData: SampleDocument = {
   ],
 
   relatedSamples: [
+    {
+      title: 'مطالبه مهریه از دادگاه',
+      href: '/samples/mahrieh-court-petition',
+      desc: 'دعوای مطالبه مهریه در دادگاه خانواده',
+      badge: 'خانواده',
+    },
+    {
+      title: 'استرداد جهیزیه',
+      href: '/samples/dowry-return-petition',
+      desc: 'دادخواست حقوقی استرداد جهیزیه',
+      badge: 'خانواده',
+    },
+
     {
         'title': 'نمونه دادخواست تقسیط مهریه و تعدیل اقساط',
         'href': '/samples/mehrieh-installment-petition',

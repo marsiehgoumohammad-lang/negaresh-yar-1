@@ -250,7 +250,7 @@ export const sampleBailAcceptanceRequestMetadata: Metadata = {
   },
   openGraph: {
     title: 'نمونه درخواست تسریع در ارزیابی، قبولی وثیقه و جلوگیری از بازداشت | نگارش یار',
-    description: 'متن آماده درخواست تسریع در معرفی کارشناس ارزیاب و صدور قرار قبولی وثیقه.',
+  description: 'متن آماده درخواست تسریع در معرفی کارشناس ارزیاب و صدور قرار قبولی وثیقه.',
     url: 'https://www.negaresh-yar.ir/samples/bail-acceptance-request',
     siteName: 'نگارش یار',
     type: 'article',

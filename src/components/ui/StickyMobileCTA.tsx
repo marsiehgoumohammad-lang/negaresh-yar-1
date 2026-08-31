@@ -8,8 +8,13 @@ import { Sparkles, Scale } from 'lucide-react';
 export function StickyMobileCTA() {
   const pathname = usePathname();
 
-  // Hide on admin panel, checkout/request form to avoid overlapping form controls
-  if (pathname?.startsWith('/admin') || pathname?.startsWith('/request')) {
+  // Hide on admin panel, checkout/request form, and lawyer referral pages to avoid overlapping form controls
+  if (
+    pathname?.startsWith('/admin') ||
+    pathname?.startsWith('/request') ||
+    pathname?.startsWith('/lawyer-referral') ||
+    pathname?.startsWith('/lawyer-partnership')
+  ) {
     return null;
   }
 

@@ -237,6 +237,7 @@ export const insolvencyPetitionData: ServiceLandingData = {
     },
   ],
 
+  showLawyerReferral: true,
   relatedServices: [
     {
       title: 'اعسار از پرداخت محکوم‌به و توقف جلب',

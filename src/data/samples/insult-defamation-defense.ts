@@ -223,7 +223,7 @@ export const sampleInsultDefamationDefenseMetadata: Metadata = {
   },
   openGraph: {
     title: 'نمونه لایحه دفاعیه اتهام توهین و فحاشی در دادسرا | نگارش یار',
-    description: 'دانلود رایگان و کپی الگوی لایحه دفاعیه اتهام توهین و سب و اهانت در دادسرا و دادگاه کیفری.',
+  description: 'دانلود رایگان و کپی الگوی لایحه دفاعیه اتهام توهین و سب و اهانت در دادسرا و دادگاه کیفری.',
     url: 'https://www.negaresh-yar.ir/samples/insult-defamation-defense',
     siteName: 'نگارش یار',
     type: 'article',

@@ -259,7 +259,7 @@ export const sampleBailToSuretyMetadata: Metadata = {
   },
   openGraph: {
     title: 'نمونه درخواست تبدیل وثیقه به کفالت و فیش حقوقی در دادسرا | نگارش یار',
-    description: 'الگوی حقوقی و استاندارد تبدیل قرار وثیقه ملک به قرار کفالت و فیش حقوقی در دادسرا.',
+  description: 'الگوی حقوقی و استاندارد تبدیل قرار وثیقه ملک به قرار کفالت و فیش حقوقی در دادسرا.',
     url: 'https://www.negaresh-yar.ir/samples/bail-to-surety',
     siteName: 'نگارش یار',
     type: 'article',

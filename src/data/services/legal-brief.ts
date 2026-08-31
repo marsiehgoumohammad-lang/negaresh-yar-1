@@ -241,6 +241,7 @@ export const legalBriefData: ServiceLandingData = {
     },
   ],
 
+  showLawyerReferral: true,
   relatedServices: [
     {
       title: 'تنظیم دادخواست و شکواییه',

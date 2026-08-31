@@ -749,7 +749,35 @@ export function SampleLandingPageTemplate({ data }: { data: SampleLandingData })
         )}
 
         {/* ---------------------------------------------------- */}
-        {/* 13. BOTTOM MESSENGER CTA & FINAL SERVICE CTA */}
+        {/* 13. LAWYER REFERRAL CONTEXTUAL BANNER */}
+        {/* ---------------------------------------------------- */}
+        <section className="rounded-2xl border border-blue-500/30 bg-blue-950/20 p-5 sm:p-7">
+          <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-5">
+            <div className="space-y-1.5">
+              <div className="flex items-center gap-2 text-blue-400 font-bold text-xs sm:text-sm">
+                <Scale className="w-4 h-4" />
+                <span>همراهی وکیل دادگستری در این موضوع حقوقی</span>
+              </div>
+              <h3 className="text-base sm:text-lg font-bold text-white">
+                آیا علاوه بر تنظیم سند، نیازمند وکیل برای پیگیری و حضور در دادگاه هستید؟
+              </h3>
+              <p className="text-xs sm:text-sm text-slate-300 max-w-2xl leading-relaxed">
+                سامانه نگارش یار متناسب با شهر و موضوع پرونده شما، امکان معرفی وکلای منصف و باانصاف پایه یک دادگستری را با قرارداد مالی شفاف و تعرفه عادلانه فراهم می‌نماید.
+              </p>
+            </div>
+            <Link
+              id="sample-bottom-lawyer-referral-btn"
+              href="/lawyer-referral?utm_source=sample_documents&utm_medium=bottom_banner&utm_campaign=fair_lawyers"
+              className="px-5 py-3 rounded-xl bg-blue-600 hover:bg-blue-500 text-white text-xs sm:text-sm font-bold transition-colors shrink-0 inline-flex items-center gap-2 shadow-md shadow-blue-900/30"
+            >
+              <span>معرفی وکیل منصف</span>
+              <ChevronLeft className="w-4 h-4" />
+            </Link>
+          </div>
+        </section>
+
+        {/* ---------------------------------------------------- */}
+        {/* 14. BOTTOM MESSENGER CTA & FINAL SERVICE CTA */}
         {/* ---------------------------------------------------- */}
         <div className="space-y-6 pt-4">
           <SampleMessengerCTA

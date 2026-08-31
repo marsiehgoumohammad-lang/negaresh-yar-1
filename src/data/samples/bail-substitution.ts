@@ -256,7 +256,7 @@ export const sampleBailSubstitutionMetadata: Metadata = {
   },
   openGraph: {
     title: 'نمونه درخواست جایگزینی و تعویض وثیقه ملکی در دادسرا | نگارش یار',
-    description: 'متن آماده و فرمت رسمی درخواست تعویض و جایگزینی وثیقه ملکی، فک سند سابق در دادسرا.',
+  description: 'متن آماده و فرمت رسمی درخواست تعویض و جایگزینی وثیقه ملکی، فک سند سابق در دادسرا.',
     url: 'https://www.negaresh-yar.ir/samples/bail-substitution',
     siteName: 'نگارش یار',
     type: 'article',

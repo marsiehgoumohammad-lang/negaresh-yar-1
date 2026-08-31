@@ -5,7 +5,7 @@
 export interface MessengerLinkItem {
   id: string;
   name: string;
-  code: 'whatsapp' | 'telegram' | 'eitaa' | 'rubika';
+  code: 'whatsapp' | 'telegram' | 'eitaa' | 'rubika' | 'bale';
   url: string;
   color: string;
   bgLight: string;
@@ -53,6 +53,16 @@ export function generateMessengerLinks(message: string): MessengerLinkItem[] {
       bgLight: 'rgba(230, 81, 0, 0.1)',
       badge: 'پیام‌رسان ملی',
       ariaLabel: 'ارتباط در پیام‌رسان ایتا درباره این نمونه',
+    },
+    {
+      id: 'bale',
+      name: 'بله',
+      code: 'bale',
+      url: `https://ble.ir/negareshyar`,
+      color: '#107C41',
+      bgLight: 'rgba(16, 124, 65, 0.1)',
+      badge: 'پیام‌رسان بله',
+      ariaLabel: 'ارتباط در پیام‌رسان بله درباره این نمونه',
     },
     {
       id: 'rubika',

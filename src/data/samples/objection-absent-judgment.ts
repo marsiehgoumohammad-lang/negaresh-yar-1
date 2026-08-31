@@ -241,7 +241,7 @@ export const sampleObjectionAbsentJudgmentMetadata: Metadata = {
   },
   openGraph: {
     title: 'نمونه دادخواست و لایحه واخواهی از حکم غیابی | نگارش یار',
-    description: 'الگوی استاندارد دادخواست واخواهی از حکم غیابی دادگاه و توقف عملیات اجرایی.',
+  description: 'الگوی استاندارد دادخواست واخواهی از حکم غیابی دادگاه و توقف عملیات اجرایی.',
     url: 'https://www.negaresh-yar.ir/samples/objection-absent-judgment',
     siteName: 'نگارش یار',
     type: 'article',

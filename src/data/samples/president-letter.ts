@@ -327,7 +327,7 @@ export const samplePresidentLetterMetadata: Metadata = {
   },
   openGraph: {
     title: 'نمونه متن نامه به رئیس جمهور و سامانه ۱۱۱ | نگارش یار',
-    description: 'الگوی استاندارد نگارش عریضه به نهاد ریاست جمهوری و ثبت در سامانه ۱۱۱.',
+  description: 'الگوی استاندارد نگارش عریضه به نهاد ریاست جمهوری و ثبت در سامانه ۱۱۱.',
     url: 'https://www.negaresh-yar.ir/samples/president-letter',
     siteName: 'نگارش یار',
     type: 'article',

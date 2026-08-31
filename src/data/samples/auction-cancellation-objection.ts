@@ -141,11 +141,11 @@ export const sampleAuctionCancellationObjectionData: SampleLandingData = {
     },
     {
       articleName: 'ماده ۱۴۲ قانون اجرای احکام مدنی',
-      description: 'مهلت یک هفته‌ای شکایت از جریان مزایده و لزوم رسیدگی دادگاه پیش از دستور انتقال.',
+  description: 'مهلت یک هفته‌ای شکایت از جریان مزایده و لزوم رسیدگی دادگاه پیش از دستور انتقال.',
     },
     {
       articleName: 'ماده ۱۴۳ قانون اجرای احکام مدنی',
-      description: 'منوط بودن انتقال سند رسمی به تایید صحت کل فرآیند مزایده توسط دادگاه.',
+  description: 'منوط بودن انتقال سند رسمی به تایید صحت کل فرآیند مزایده توسط دادگاه.',
     },
   ],
 
@@ -253,7 +253,7 @@ export const sampleAuctionCancellationObjectionMetadata: Metadata = {
   },
   openGraph: {
     title: 'نمونه لایحه اعتراض به نحوه برگزاری و ابطال مزایده اجرای احکام | نگارش یار',
-    description: 'الگوی حقوقی اعتراض به تخلفات مزایده دادگستری و توقف انتقال سند رسمی.',
+  description: 'الگوی حقوقی اعتراض به تخلفات مزایده دادگستری و توقف انتقال سند رسمی.',
     url: 'https://www.negaresh-yar.ir/samples/auction-cancellation-objection',
     siteName: 'نگارش یار',
     type: 'article',

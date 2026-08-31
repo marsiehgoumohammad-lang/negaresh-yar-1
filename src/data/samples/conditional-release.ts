@@ -312,7 +312,7 @@ export const sampleConditionalReleaseMetadata: Metadata = {
   },
   openGraph: {
     title: 'نمونه درخواست آزادی مشروط زندانی (ماده ۵۸ قانون مجازات) | نگارش یار',
-    description: 'الگوی متنی استاندارد و قانونی درخواست آزادی مشروط جهت ارائه به دادیار ناظر، شورای طبقه‌بندی زندان و قاضی اجرای احکام.',
+  description: 'الگوی متنی استاندارد و قانونی درخواست آزادی مشروط جهت ارائه به دادیار ناظر، شورای طبقه‌بندی زندان و قاضی اجرای احکام.',
     url: 'https://www.negaresh-yar.ir/samples/conditional-release',
     siteName: 'نگارش یار',
     type: 'article',

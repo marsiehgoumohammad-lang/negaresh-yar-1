@@ -241,6 +241,7 @@ export const petitionWritingData: ServiceLandingData = {
     },
   ],
 
+  showLawyerReferral: true,
   relatedServices: [
     {
       title: 'تنظیم لایحه دفاعیه',

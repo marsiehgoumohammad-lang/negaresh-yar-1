@@ -194,7 +194,7 @@ export function KnowledgeHubClient({ initialArticles }: KnowledgeHubClientProps)
                 : 'bg-slate-900 border border-slate-800 text-slate-300 hover:border-slate-700'
             }`}
           >
-            همه موضوعات ({initialArticles.length})
+            همه موضوعات ({displayArticles.length})
           </button>
 
           {KNOWLEDGE_CATEGORIES.map((cat) => {
@@ -309,7 +309,7 @@ export function KnowledgeHubClient({ initialArticles }: KnowledgeHubClientProps)
                   {categoryIconMap[cat.iconName] || <FileText className="w-5 h-5" />}
                 </div>
                 <span className="text-[11px] px-2.5 py-0.5 rounded-full bg-slate-800 text-slate-300 font-medium">
-                  {cat.articleCount} مقاله
+                  {displayArticles.filter((a) => a.category === cat.name).length} مقاله
                 </span>
               </div>
               <h3 className="font-bold text-sm text-white group-hover:text-[#E5C158] transition-colors">

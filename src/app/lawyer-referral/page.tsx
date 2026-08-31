@@ -2,17 +2,17 @@ import { Metadata } from 'next';
 import { LawyerPillarTemplate } from '@/components/lawyers/LawyerPillarTemplate';
 
 export const metadata: Metadata = {
-  title: 'معرفی وکیل منصف در سراسر ایران | انتخاب وکیل متناسب با پرونده - نگارش یار',
+  title: 'معرفی وکیل منصف در سراسر ایران | وکیل متناسب با پرونده و شرایط مالی - نگارش یار',
   description:
-    'راهنمای معرفی و انتخاب وکیل منصف در سراسر کشور با دستمزد عادلانه و پیگیری دلسوزانه برای پرونده‌های ملکی، کیفری، خانواده، چک و دیوان عدالت اداری در ۳۱ مرکز استان.',
+    'راهنمای معرفی وکیل منصف و باانصاف در سراسر کشور؛ انتخاب وکیل متناسب با موضوع پرونده (ملکی، کیفری، خانواده، چک) و شرایط مالی با حق‌الوکاله عادلانه و شفاف.',
   alternates: {
-    canonical: 'https://negaresh-yar.ir/lawyer-referral',
+    canonical: 'https://www.negaresh-yar.ir/lawyer-referral',
   },
   openGraph: {
-    title: 'معرفی وکیل منصف در سراسر ایران | نگارش یار',
+    title: 'معرفی وکیل منصف در سراسر ایران | وکیل متناسب با شرایط مالی - نگارش یار',
     description:
-      'راهنمای جامع دسترسی به وکیل منصف و متناسب با موضوع پرونده و شرایط مالی در ۳۱ استان کشور.',
-    url: 'https://negaresh-yar.ir/lawyer-referral',
+      'دسترسی به وکیل منصف و متعهد با حق‌الوکاله عادلانه و متناسب با موضوع دعوا و توان مالی در ۳۱ استان کشور.',
+    url: 'https://www.negaresh-yar.ir/lawyer-referral',
     siteName: 'نگارش یار',
     locale: 'fa_IR',
     type: 'website',

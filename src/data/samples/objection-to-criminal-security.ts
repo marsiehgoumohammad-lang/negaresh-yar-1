@@ -140,11 +140,11 @@ export const sampleObjectionToCriminalSecurityData: SampleLandingData = {
     },
     {
       articleName: 'ماده ۲۴۳ قانون آیین دادرسی کیفری',
-      description: 'امکان تقاضای تبدیل قرار تأمین کیفری به نوع خفیف‌تر در هر مرحله از دادرسی.',
+  description: 'امکان تقاضای تبدیل قرار تأمین کیفری به نوع خفیف‌تر در هر مرحله از دادرسی.',
     },
     {
       articleName: 'ماده ۲۵۰ قانون آیین دادرسی کیفری',
-      description: 'لزوم رعایت اصل تناسب قرار تأمین با اهمیت جرم، شدت مجازات و ادله پرونده.',
+  description: 'لزوم رعایت اصل تناسب قرار تأمین با اهمیت جرم، شدت مجازات و ادله پرونده.',
     },
   ],
 
@@ -231,7 +231,7 @@ export const sampleObjectionToCriminalSecurityMetadata: Metadata = {
   },
   openGraph: {
     title: 'نمونه لایحه اعتراض به قرار تأمین کیفری و وثیقه سنگین در دادسرا | نگارش یار',
-    description: 'الگوی قانونی و کاربردی اعتراض به قرارهای تأمین منتهی به بازداشت جهت آزادی سریع متهم.',
+  description: 'الگوی قانونی و کاربردی اعتراض به قرارهای تأمین منتهی به بازداشت جهت آزادی سریع متهم.',
     url: 'https://www.negaresh-yar.ir/samples/objection-to-criminal-security',
     siteName: 'نگارش یار',
     type: 'article',

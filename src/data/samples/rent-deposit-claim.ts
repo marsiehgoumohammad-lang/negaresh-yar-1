@@ -241,7 +241,7 @@ export const sampleRentDepositClaimMetadata: Metadata = {
   },
   openGraph: {
     title: 'نمونه دادخواست مطالبه ودیعه مسکن (استرداد پول پیش) | نگارش یار',
-    description: 'متن آماده دادخواست حقوقی استرداد ودیعه و قرض‌الحسنه اجاره به انضمام تامین خواسته در ثنا.',
+  description: 'متن آماده دادخواست حقوقی استرداد ودیعه و قرض‌الحسنه اجاره به انضمام تامین خواسته در ثنا.',
     url: 'https://www.negaresh-yar.ir/samples/rent-deposit-claim',
     siteName: 'نگارش یار',
     type: 'article',

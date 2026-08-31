@@ -4,6 +4,7 @@ import { Hero } from '@/components/home/hero';
 import { Services } from '@/components/home/services';
 import { AiIntro } from '@/components/home/ai-intro';
 import { Features } from '@/components/home/features';
+import { FairLawyer } from '@/components/home/fair-lawyer';
 import { ArticlesPreview } from '@/components/home/articles-preview';
 
 export const dynamic = 'force-dynamic';
@@ -23,6 +24,9 @@ export const metadata: Metadata = {
     'خدمات کافی نت آنلاین',
     'اعسار از هزینه دادرسی',
     'اعتراض به رای دادگاه',
+    'معرفی وکیل منصف',
+    'انتخاب وکیل متناسب با پرونده',
+    'هزینه وکیل',
   ],
   alternates: {
     canonical: 'https://www.negaresh-yar.ir',
@@ -147,6 +151,7 @@ export default function Home() {
         <Services />
         <AiIntro />
         <Features />
+        <FairLawyer />
         <ArticlesPreview />
       </main>
     </div>

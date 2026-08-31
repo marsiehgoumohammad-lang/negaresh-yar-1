@@ -241,6 +241,7 @@ export const appealData: ServiceLandingData = {
     },
   ],
 
+  showLawyerReferral: true,
   relatedServices: [
     {
       title: 'اعتراض به قرار منع تعقیب',

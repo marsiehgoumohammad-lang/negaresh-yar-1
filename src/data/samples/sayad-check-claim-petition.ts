@@ -145,11 +145,11 @@ export const sampleSayadCheckClaimPetitionData: SampleLandingData = {
     },
     {
       articleName: 'تبصره الحاقی به ماده ۲ قانون صدور چک',
-      description: 'استحقاق دارنده چک به دریافت خسارت تأخیر تأدیه از تاریخ سررسید تا تاریخ وصول.',
+  description: 'استحقاق دارنده چک به دریافت خسارت تأخیر تأدیه از تاریخ سررسید تا تاریخ وصول.',
     },
     {
       articleName: 'ماده ۵۲۲ قانون آیین دادرسی مدنی',
-      description: 'نحوه محاسبه خسارت تأخیر بر مبنای جدول تغییر شاخص سالانه بانک مرکزی.',
+  description: 'نحوه محاسبه خسارت تأخیر بر مبنای جدول تغییر شاخص سالانه بانک مرکزی.',
     },
   ],
 
@@ -236,7 +236,7 @@ export const sampleSayadCheckClaimPetitionMetadata: Metadata = {
   },
   openGraph: {
     title: 'نمونه دادخواست مطالبه وجه چک صیادی بنفش با خسارت تأخیر | نگارش یار',
-    description: 'الگوی کاربردی و حقوقی مطالبه وجه چک صیادی و توقیف اموال بدهکار با خسارت تأخیر تأدیه.',
+  description: 'الگوی کاربردی و حقوقی مطالبه وجه چک صیادی و توقیف اموال بدهکار با خسارت تأخیر تأدیه.',
     url: 'https://www.negaresh-yar.ir/samples/sayad-check-claim-petition',
     siteName: 'نگارش یار',
     type: 'article',

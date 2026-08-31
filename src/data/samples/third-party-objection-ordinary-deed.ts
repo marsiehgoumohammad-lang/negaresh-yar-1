@@ -287,7 +287,7 @@ export const sampleThirdPartyObjectionOrdinaryDeedMetadata: Metadata = {
   },
   openGraph: {
     title: 'نمونه دادخواست اعتراض ثالث اجرایی با سند عادی | نگارش یار',
-    description: 'متن آماده دادخواست اعتراض ثالث اجرایی با سند عادی و تقاضای توقف عملیات اجرای احکام مدنی.',
+  description: 'متن آماده دادخواست اعتراض ثالث اجرایی با سند عادی و تقاضای توقف عملیات اجرای احکام مدنی.',
     url: 'https://www.negaresh-yar.ir/samples/third-party-objection-ordinary-deed',
     siteName: 'نگارش یار',
     type: 'article',

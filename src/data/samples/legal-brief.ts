@@ -349,7 +349,7 @@ export const sampleLegalBriefMetadata: Metadata = {
   },
   openGraph: {
     title: 'نمونه لایحه دفاعیه حقوقی و کیفری ثنا | نگارش یار',
-    description: 'الگوی استاندارد و مستدل لایحه دفاعیه جهت ارائه به دادگاه و ثنا.',
+  description: 'الگوی استاندارد و مستدل لایحه دفاعیه جهت ارائه به دادگاه و ثنا.',
     url: 'https://www.negaresh-yar.ir/samples/legal-brief',
     siteName: 'نگارش یار',
     type: 'article',

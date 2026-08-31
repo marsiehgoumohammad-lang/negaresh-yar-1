@@ -357,7 +357,7 @@ export const sampleInsolvencyMetadata: Metadata = {
   },
   openGraph: {
     title: 'متن و نمونه دادخواست اعسار و تقسیط محکوم‌به (بدهی، سفته، مهریه و دیه) | نگارش یار',
-    description: 'الگوی رسمی دادخواست اعسار از پرداخت محکوم‌به و تقسیط بدهی جهت ارائه به دادگاه و اجرای احکام.',
+  description: 'الگوی رسمی دادخواست اعسار از پرداخت محکوم‌به و تقسیط بدهی جهت ارائه به دادگاه و اجرای احکام.',
     url: 'https://www.negaresh-yar.ir/samples/insolvency',
     siteName: 'نگارش یار',
     type: 'article',

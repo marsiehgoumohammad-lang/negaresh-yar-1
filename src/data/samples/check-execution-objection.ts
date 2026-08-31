@@ -146,11 +146,11 @@ export const sampleCheckExecutionObjectionData: SampleLandingData = {
     },
     {
       articleName: 'ماده ۳۱۰ قانون آیین دادرسی مدنی',
-      description: 'امکان صدور دستور موقت در مواردی که تاخیر در رسیدگی موجب ورود خسارت غیرقابل جبران می‌شود.',
+  description: 'امکان صدور دستور موقت در مواردی که تاخیر در رسیدگی موجب ورود خسارت غیرقابل جبران می‌شود.',
     },
     {
       articleName: 'ماده ۱۱ قانون نحوه اجرای محکومیت‌های مالی',
-      description: 'مقررات توقف اجرای احکام مالی در صورت اثبات عدم استحقاق محکوم‌له.',
+  description: 'مقررات توقف اجرای احکام مالی در صورت اثبات عدم استحقاق محکوم‌له.',
     },
   ],
 
@@ -258,7 +258,7 @@ export const sampleCheckExecutionObjectionMetadata: Metadata = {
   },
   openGraph: {
     title: 'نمونه دادخواست ابطال و توقف اجراییه مستقیم چک (ماده ۲۳) | نگارش یار',
-    description: 'الگوی حقوقی دادخواست توقف عملیات اجرایی و ابطال اجراییه چک‌های تضمینی و امانی.',
+  description: 'الگوی حقوقی دادخواست توقف عملیات اجرایی و ابطال اجراییه چک‌های تضمینی و امانی.',
     url: 'https://www.negaresh-yar.ir/samples/check-execution-objection',
     siteName: 'نگارش یار',
     type: 'article',

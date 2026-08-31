@@ -352,7 +352,7 @@ export const sampleAppealMetadata: Metadata = {
   },
   openGraph: {
     title: 'نمونه لایحه تجدیدنظرخواهی حقوقی و کیفری ثنا | نگارش یار',
-    description: 'الگوی استاندارد و کامل لایحه اعتراض تجدیدنظرخواهی به دادگاه تجدیدنظر استان.',
+  description: 'الگوی استاندارد و کامل لایحه اعتراض تجدیدنظرخواهی به دادگاه تجدیدنظر استان.',
     url: 'https://www.negaresh-yar.ir/samples/appeal',
     siteName: 'نگارش یار',
     type: 'article',

@@ -254,7 +254,7 @@ export const sampleDetentionToBailMetadata: Metadata = {
   },
   openGraph: {
     title: 'نمونه لایحه تبدیل قرار بازداشت موقت به وثیقه و آزادی متهم | نگارش یار',
-    description: 'دانلود رایگان نمونه لایحه تبدیل قرار بازداشت موقت به وثیقه در دادسرا.',
+  description: 'دانلود رایگان نمونه لایحه تبدیل قرار بازداشت موقت به وثیقه در دادسرا.',
     url: 'https://www.negaresh-yar.ir/samples/detention-to-bail',
     siteName: 'نگارش یار',
     type: 'article',

@@ -168,6 +168,7 @@ export const insolvencyFromJudgmentData: ServiceLandingData = {
     },
   ],
 
+  showLawyerReferral: true,
   relatedServices: [
     {
       title: 'راهنمای کلی دادخواست اعسار',

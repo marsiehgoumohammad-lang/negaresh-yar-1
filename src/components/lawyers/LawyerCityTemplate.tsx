@@ -23,6 +23,7 @@ import {
 import { LawyerCityData } from '@/data/lawyers/types';
 import { ALL_LAWYER_CITIES } from '@/data/lawyers/lawyer-referral-cities';
 import { LawyerMessengerCTA } from './LawyerMessengerCTA';
+import { LawyerStickyMobileCTA } from './LawyerStickyMobileCTA';
 
 interface LawyerCityTemplateProps {
   cityData: LawyerCityData;
@@ -38,7 +39,7 @@ export function LawyerCityTemplate({ cityData }: LawyerCityTemplateProps) {
   // Select other cities for cross-linking
   const otherCities = ALL_LAWYER_CITIES.filter((c) => c.slug !== cityData.slug).slice(0, 8);
 
-  const baseUrl = 'https://negaresh-yar.ir';
+  const baseUrl = 'https://www.negaresh-yar.ir';
   const pageUrl = `${baseUrl}/lawyer-referral/${cityData.slug}`;
 
   // Structured Data Schemas (Strictly WebPage, BreadcrumbList, FAQPage - NO Lawyer directory schema)
@@ -95,7 +96,7 @@ export function LawyerCityTemplate({ cityData }: LawyerCityTemplateProps) {
   };
 
   return (
-    <div className="min-h-screen bg-[#070B15] text-slate-100 selection:bg-[#E5C158]/30 selection:text-white" dir="rtl">
+    <div className="min-h-screen bg-[#070B15] text-slate-100 selection:bg-[#E5C158]/30 selection:text-white pb-20 md:pb-0" dir="rtl">
       {/* Schema Injection */}
       <script
         type="application/ld+json"
@@ -534,6 +535,12 @@ export function LawyerCityTemplate({ cityData }: LawyerCityTemplateProps) {
           </div>
         </Container>
       </main>
+
+      {/* Sticky Mobile Bar & Messenger Drawer */}
+      <LawyerStickyMobileCTA
+        cityName={cityData.city}
+        customMessage={cityData.messengerMessage}
+      />
     </div>
   );
 }

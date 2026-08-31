@@ -235,7 +235,7 @@ export const sampleVerdictSurrenderDiscountMetadata: Metadata = {
   },
   openGraph: {
     title: 'نمونه لایحه تسلیم به رأی و تخفیف یک‌چهارم مجازات (ماده ۴۴۲) | نگارش یار',
-    description: 'متن آماده لایحه اسقاط حق تجدیدنظرخواهی و تقاضای اعمال تخفیف تا یک‌چهارم مجازات تعزیری.',
+  description: 'متن آماده لایحه اسقاط حق تجدیدنظرخواهی و تقاضای اعمال تخفیف تا یک‌چهارم مجازات تعزیری.',
     url: 'https://www.negaresh-yar.ir/samples/verdict-surrender-discount',
     siteName: 'نگارش یار',
     type: 'article',

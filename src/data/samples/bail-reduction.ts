@@ -268,7 +268,7 @@ export const sampleBailReductionMetadata: Metadata = {
   },
   openGraph: {
     title: 'نمونه درخواست تخفیف و کاهش مبلغ وثیقه و قرار تامین کیفری | نگارش یار',
-    description: 'الگوی کاربردی درخواست تعدیل و کاهش مبلغ قرار وثیقه جهت آزادی متهم.',
+  description: 'الگوی کاربردی درخواست تعدیل و کاهش مبلغ قرار وثیقه جهت آزادی متهم.',
     url: 'https://www.negaresh-yar.ir/samples/bail-reduction',
     siteName: 'نگارش یار',
     type: 'article',

@@ -250,7 +250,7 @@ export const sampleCheckCivilClaimMetadata: Metadata = {
   },
   openGraph: {
     title: 'نمونه دادخواست مطالبه وجه چک، خسارت تأخیر و تأمین خواسته | نگارش یار',
-    description: 'متن کامل دادخواست حقوقی مطالبه وجه چک برگشتی با تامین خواسته فوری و محاسبه خسارت تاخیر تادیه در ثنا.',
+  description: 'متن کامل دادخواست حقوقی مطالبه وجه چک برگشتی با تامین خواسته فوری و محاسبه خسارت تاخیر تادیه در ثنا.',
     url: 'https://www.negaresh-yar.ir/samples/check-civil-claim',
     siteName: 'نگارش یار',
     type: 'article',

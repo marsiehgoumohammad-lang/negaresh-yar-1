@@ -1,3 +1,24 @@
+import { samplePropertyEvictionRemovalClaimData } from './property-eviction-removal-claim';
+import { sampleRentEquivalentClaimData } from './rent-equivalent-claim';
+import { sampleRightInterferenceRemovalClaimData } from './right-interference-removal-claim';
+import { sampleContractNullificationPetitionData } from './contract-nullification-petition';
+import { sampleMoneyRefundPetitionData } from './money-refund-petition';
+import { sampleDamagesClaimPetitionData } from './damages-claim-petition';
+import { sampleMahriehCourtPetitionData } from './mahrieh-court-petition';
+import { sampleDowryReturnPetitionData } from './dowry-return-petition';
+import { sampleChildCustodyPetitionData } from './child-custody-petition';
+import { sampleChildVisitationPetitionData } from './child-visitation-petition';
+import { sampleDivorceByWifePetitionData } from './divorce-by-wife-petition';
+import { sampleMutualConsentDivorcePetitionData } from './mutual-consent-divorce-petition';
+import { sampleInheritanceCertificatePetitionData } from './inheritance-certificate-petition';
+import { sampleLicensePlateRemovalPetitionData } from './license-plate-removal-petition';
+import { sampleNameChangePetitionData } from './name-change-petition';
+import { sampleRentAdjustmentPetitionData } from './rent-adjustment-petition';
+import { sampleFraudComplaintData } from './fraud-complaint';
+import { sampleBreachOfTrustComplaintData } from './breach-of-trust-complaint';
+import { sampleTheftComplaintData } from './theft-complaint';
+import { sampleForgeryComplaintData } from './forgery-complaint';
+
 import { sampleAdministrativeLetterData, sampleAdministrativeLetterMetadata } from './administrative-letter';
 import { samplePresidentLetterData, samplePresidentLetterMetadata } from './president-letter';
 import { sampleLeaderOfficeLetterData, sampleLeaderOfficeLetterMetadata } from './leader-office-letter';
@@ -639,6 +660,186 @@ export const allSamplesList: {
     href: '/samples/article-477-request',
     data: sampleArticle477RequestData,
   },
+  {
+    slug: 'property-eviction-removal-claim',
+    title: samplePropertyEvictionRemovalClaimData.title || '', // will be populated
+    description: samplePropertyEvictionRemovalClaimData.shortDescription || '',
+    category: samplePropertyEvictionRemovalClaimData.category || 'درخواست‌های قضایی',
+    badge: 'نمونه سند',
+    href: `/samples/property-eviction-removal-claim`,
+    data: samplePropertyEvictionRemovalClaimData,
+  },
+  {
+    slug: 'rent-equivalent-claim',
+    title: sampleRentEquivalentClaimData.title || '', // will be populated
+    description: sampleRentEquivalentClaimData.shortDescription || '',
+    category: sampleRentEquivalentClaimData.category || 'درخواست‌های قضایی',
+    badge: 'نمونه سند',
+    href: `/samples/rent-equivalent-claim`,
+    data: sampleRentEquivalentClaimData,
+  },
+  {
+    slug: 'right-interference-removal-claim',
+    title: sampleRightInterferenceRemovalClaimData.title || '', // will be populated
+    description: sampleRightInterferenceRemovalClaimData.shortDescription || '',
+    category: sampleRightInterferenceRemovalClaimData.category || 'درخواست‌های قضایی',
+    badge: 'نمونه سند',
+    href: `/samples/right-interference-removal-claim`,
+    data: sampleRightInterferenceRemovalClaimData,
+  },
+  {
+    slug: 'contract-nullification-petition',
+    title: sampleContractNullificationPetitionData.title || '', // will be populated
+    description: sampleContractNullificationPetitionData.shortDescription || '',
+    category: sampleContractNullificationPetitionData.category || 'درخواست‌های قضایی',
+    badge: 'نمونه سند',
+    href: `/samples/contract-nullification-petition`,
+    data: sampleContractNullificationPetitionData,
+  },
+  {
+    slug: 'money-refund-petition',
+    title: sampleMoneyRefundPetitionData.title || '', // will be populated
+    description: sampleMoneyRefundPetitionData.shortDescription || '',
+    category: sampleMoneyRefundPetitionData.category || 'درخواست‌های قضایی',
+    badge: 'نمونه سند',
+    href: `/samples/money-refund-petition`,
+    data: sampleMoneyRefundPetitionData,
+  },
+  {
+    slug: 'damages-claim-petition',
+    title: sampleDamagesClaimPetitionData.title || '', // will be populated
+    description: sampleDamagesClaimPetitionData.shortDescription || '',
+    category: sampleDamagesClaimPetitionData.category || 'درخواست‌های قضایی',
+    badge: 'نمونه سند',
+    href: `/samples/damages-claim-petition`,
+    data: sampleDamagesClaimPetitionData,
+  },
+  {
+    slug: 'mahrieh-court-petition',
+    title: sampleMahriehCourtPetitionData.title || '', // will be populated
+    description: sampleMahriehCourtPetitionData.shortDescription || '',
+    category: sampleMahriehCourtPetitionData.category || 'درخواست‌های قضایی',
+    badge: 'نمونه سند',
+    href: `/samples/mahrieh-court-petition`,
+    data: sampleMahriehCourtPetitionData,
+  },
+  {
+    slug: 'dowry-return-petition',
+    title: sampleDowryReturnPetitionData.title || '', // will be populated
+    description: sampleDowryReturnPetitionData.shortDescription || '',
+    category: sampleDowryReturnPetitionData.category || 'درخواست‌های قضایی',
+    badge: 'نمونه سند',
+    href: `/samples/dowry-return-petition`,
+    data: sampleDowryReturnPetitionData,
+  },
+  {
+    slug: 'child-custody-petition',
+    title: sampleChildCustodyPetitionData.title || '', // will be populated
+    description: sampleChildCustodyPetitionData.shortDescription || '',
+    category: sampleChildCustodyPetitionData.category || 'درخواست‌های قضایی',
+    badge: 'نمونه سند',
+    href: `/samples/child-custody-petition`,
+    data: sampleChildCustodyPetitionData,
+  },
+  {
+    slug: 'child-visitation-petition',
+    title: sampleChildVisitationPetitionData.title || '', // will be populated
+    description: sampleChildVisitationPetitionData.shortDescription || '',
+    category: sampleChildVisitationPetitionData.category || 'درخواست‌های قضایی',
+    badge: 'نمونه سند',
+    href: `/samples/child-visitation-petition`,
+    data: sampleChildVisitationPetitionData,
+  },
+  {
+    slug: 'divorce-by-wife-petition',
+    title: sampleDivorceByWifePetitionData.title || '', // will be populated
+    description: sampleDivorceByWifePetitionData.shortDescription || '',
+    category: sampleDivorceByWifePetitionData.category || 'درخواست‌های قضایی',
+    badge: 'نمونه سند',
+    href: `/samples/divorce-by-wife-petition`,
+    data: sampleDivorceByWifePetitionData,
+  },
+  {
+    slug: 'mutual-consent-divorce-petition',
+    title: sampleMutualConsentDivorcePetitionData.title || '', // will be populated
+    description: sampleMutualConsentDivorcePetitionData.shortDescription || '',
+    category: sampleMutualConsentDivorcePetitionData.category || 'درخواست‌های قضایی',
+    badge: 'نمونه سند',
+    href: `/samples/mutual-consent-divorce-petition`,
+    data: sampleMutualConsentDivorcePetitionData,
+  },
+  {
+    slug: 'inheritance-certificate-petition',
+    title: sampleInheritanceCertificatePetitionData.title || '', // will be populated
+    description: sampleInheritanceCertificatePetitionData.shortDescription || '',
+    category: sampleInheritanceCertificatePetitionData.category || 'درخواست‌های قضایی',
+    badge: 'نمونه سند',
+    href: `/samples/inheritance-certificate-petition`,
+    data: sampleInheritanceCertificatePetitionData,
+  },
+  {
+    slug: 'license-plate-removal-petition',
+    title: sampleLicensePlateRemovalPetitionData.title || '', // will be populated
+    description: sampleLicensePlateRemovalPetitionData.shortDescription || '',
+    category: sampleLicensePlateRemovalPetitionData.category || 'درخواست‌های قضایی',
+    badge: 'نمونه سند',
+    href: `/samples/license-plate-removal-petition`,
+    data: sampleLicensePlateRemovalPetitionData,
+  },
+  {
+    slug: 'name-change-petition',
+    title: sampleNameChangePetitionData.title || '', // will be populated
+    description: sampleNameChangePetitionData.shortDescription || '',
+    category: sampleNameChangePetitionData.category || 'درخواست‌های قضایی',
+    badge: 'نمونه سند',
+    href: `/samples/name-change-petition`,
+    data: sampleNameChangePetitionData,
+  },
+  {
+    slug: 'rent-adjustment-petition',
+    title: sampleRentAdjustmentPetitionData.title || '', // will be populated
+    description: sampleRentAdjustmentPetitionData.shortDescription || '',
+    category: sampleRentAdjustmentPetitionData.category || 'درخواست‌های قضایی',
+    badge: 'نمونه سند',
+    href: `/samples/rent-adjustment-petition`,
+    data: sampleRentAdjustmentPetitionData,
+  },
+  {
+    slug: 'fraud-complaint',
+    title: sampleFraudComplaintData.title || '', // will be populated
+    description: sampleFraudComplaintData.shortDescription || '',
+    category: sampleFraudComplaintData.category || 'درخواست‌های قضایی',
+    badge: 'نمونه سند',
+    href: `/samples/fraud-complaint`,
+    data: sampleFraudComplaintData,
+  },
+  {
+    slug: 'breach-of-trust-complaint',
+    title: sampleBreachOfTrustComplaintData.title || '', // will be populated
+    description: sampleBreachOfTrustComplaintData.shortDescription || '',
+    category: sampleBreachOfTrustComplaintData.category || 'درخواست‌های قضایی',
+    badge: 'نمونه سند',
+    href: `/samples/breach-of-trust-complaint`,
+    data: sampleBreachOfTrustComplaintData,
+  },
+  {
+    slug: 'theft-complaint',
+    title: sampleTheftComplaintData.title || '', // will be populated
+    description: sampleTheftComplaintData.shortDescription || '',
+    category: sampleTheftComplaintData.category || 'درخواست‌های قضایی',
+    badge: 'نمونه سند',
+    href: `/samples/theft-complaint`,
+    data: sampleTheftComplaintData,
+  },
+  {
+    slug: 'forgery-complaint',
+    title: sampleForgeryComplaintData.title || '', // will be populated
+    description: sampleForgeryComplaintData.shortDescription || '',
+    category: sampleForgeryComplaintData.category || 'درخواست‌های قضایی',
+    badge: 'نمونه سند',
+    href: `/samples/forgery-complaint`,
+    data: sampleForgeryComplaintData,
+  },
 ];
 
 export {
@@ -768,6 +969,26 @@ export {
   sampleInsultDefamationDefenseMetadata,
   sampleArticle477RequestData,
   sampleArticle477RequestMetadata,
+  samplePropertyEvictionRemovalClaimData,
+  sampleRentEquivalentClaimData,
+  sampleRightInterferenceRemovalClaimData,
+  sampleContractNullificationPetitionData,
+  sampleMoneyRefundPetitionData,
+  sampleDamagesClaimPetitionData,
+  sampleMahriehCourtPetitionData,
+  sampleDowryReturnPetitionData,
+  sampleChildCustodyPetitionData,
+  sampleChildVisitationPetitionData,
+  sampleDivorceByWifePetitionData,
+  sampleMutualConsentDivorcePetitionData,
+  sampleInheritanceCertificatePetitionData,
+  sampleLicensePlateRemovalPetitionData,
+  sampleNameChangePetitionData,
+  sampleRentAdjustmentPetitionData,
+  sampleFraudComplaintData,
+  sampleBreachOfTrustComplaintData,
+  sampleTheftComplaintData,
+  sampleForgeryComplaintData,
 };
 
 

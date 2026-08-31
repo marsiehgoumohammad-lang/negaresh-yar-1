@@ -164,6 +164,7 @@ export const conditionalReleaseData: ServiceLandingData = {
     },
   ],
 
+  showLawyerReferral: true,
   relatedServices: [
     {
       title: 'تقلیل و تخفیف وثیقه',

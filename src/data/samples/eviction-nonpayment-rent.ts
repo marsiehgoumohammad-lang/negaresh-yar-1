@@ -255,7 +255,7 @@ export const sampleEvictionNonpaymentRentMetadata: Metadata = {
   },
   openGraph: {
     title: 'نمونه دادخواست تخلیه به علت عدم پرداخت اجاره‌بها و اجور معوقه | نگارش یار',
-    description: 'متن آماده دادخواست حقوقی صدور حکم تخلیه عین مستاجره به دلیل امتناع از پرداخت اجاره‌بها در ثنا.',
+  description: 'متن آماده دادخواست حقوقی صدور حکم تخلیه عین مستاجره به دلیل امتناع از پرداخت اجاره‌بها در ثنا.',
     url: 'https://www.negaresh-yar.ir/samples/eviction-nonpayment-rent',
     siteName: 'نگارش یار',
     type: 'article',

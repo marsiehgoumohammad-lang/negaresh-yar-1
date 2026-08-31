@@ -23,6 +23,7 @@ import {
   ArrowLeft,
   ListOrdered,
   FileCheck2,
+  Scale,
 } from 'lucide-react';
 import { KnowledgeArticleData } from '@/data/knowledge/types';
 
@@ -591,6 +592,28 @@ export function KnowledgeArticleTemplate({ data }: { data: KnowledgeArticleData 
             >
               <span>ثبت آنلاین سفارش</span>
               <ArrowLeft className="w-4 h-4" />
+            </Link>
+          </div>
+
+          {/* 2.5. LAWYER REFERRAL CONTEXTUAL CARD */}
+          <div className="p-5 rounded-2xl bg-slate-900/80 border border-blue-500/30 shadow-lg space-y-3">
+            <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-blue-500/10 text-blue-400 text-xs font-bold">
+              <Scale className="w-3.5 h-3.5" />
+              <span>پوشش سراسری دادرسی</span>
+            </div>
+            <h3 className="text-sm font-bold text-white leading-snug">
+              نیاز به وکیل منصف برای پیگیری پرونده دارید؟
+            </h3>
+            <p className="text-xs text-slate-300 leading-relaxed">
+              اگر ترجیح می‌دهید پیگیری پرونده توسط وکیل پایه یک دادگستری با دستمزد عادلانه و شفاف انجام شود، نگارش یار شما را به وکلای منصف متصل می‌کند.
+            </p>
+            <Link
+              id="knowledge-sidebar-lawyer-referral-btn"
+              href="/lawyer-referral?utm_source=knowledge_base&utm_medium=sidebar_card&utm_campaign=fair_lawyers"
+              className="w-full flex items-center justify-center gap-2 py-2.5 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-bold text-xs transition-colors"
+            >
+              <span>معرفی وکیل منصف در ۳۱ استان</span>
+              <ArrowLeft className="w-3.5 h-3.5" />
             </Link>
           </div>
 

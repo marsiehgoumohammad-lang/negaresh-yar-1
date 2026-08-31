@@ -137,11 +137,11 @@ export const sampleBailReleaseSuretyRequestData: SampleLandingData = {
     },
     {
       articleName: 'ماده ۲۲۹ قانون آیین دادرسی کیفری',
-      description: 'تکلیف مرجع قضایی به اخذ تأمین جدید از متهم بلافاصله پس از انصراف ضامن قبلی.',
+  description: 'تکلیف مرجع قضایی به اخذ تأمین جدید از متهم بلافاصله پس از انصراف ضامن قبلی.',
     },
     {
       articleName: 'ماده ۲۳۰ قانون آیین دادرسی کیفری',
-      description: 'مهلت یک‌ماهه اخطار به وثیقه‌گذار برای تسلیم متهم پیش از دستور اخذ وجه‌الضمان.',
+  description: 'مهلت یک‌ماهه اخطار به وثیقه‌گذار برای تسلیم متهم پیش از دستور اخذ وجه‌الضمان.',
     },
   ],
 
@@ -249,7 +249,7 @@ export const sampleBailReleaseSuretyRequestMetadata: Metadata = {
   },
   openGraph: {
     title: 'نمونه درخواست انصراف ضامن و فک فیش حقوقی یا سند ملک | نگارش یار',
-    description: 'الگوی قانونی انصراف کفیل و وثیقه‌گذار جهت آزادسازی سریع فیش حقوقی یا سند ملک.',
+  description: 'الگوی قانونی انصراف کفیل و وثیقه‌گذار جهت آزادسازی سریع فیش حقوقی یا سند ملک.',
     url: 'https://www.negaresh-yar.ir/samples/bail-release-surety-request',
     siteName: 'نگارش یار',
     type: 'article',

@@ -351,7 +351,7 @@ export const sampleLegalNoticeMetadata: Metadata = {
   },
   openGraph: {
     title: 'نمونه اظهارنامه رسمی ثنا، مطالبه وجه و تخلیه | نگارش یار',
-    description: 'الگوی استاندارد و کامل اظهارنامه رسمی جهت ثبت در سامانه ثنا و دفاتر قضایی.',
+  description: 'الگوی استاندارد و کامل اظهارنامه رسمی جهت ثبت در سامانه ثنا و دفاتر قضایی.',
     url: 'https://www.negaresh-yar.ir/samples/legal-notice',
     siteName: 'نگارش یار',
     type: 'article',

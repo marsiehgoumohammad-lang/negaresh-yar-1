@@ -251,7 +251,7 @@ export const sampleJudgmentEnforcementGracePeriodMetadata: Metadata = {
   },
   openGraph: {
     title: 'نمونه درخواست مهلت برای پرداخت محکوم‌به در اجرای احکام | نگارش یار',
-    description: 'متن آماده لایحه تقاضای اعطای مهلت عادلانه جهت پرداخت بدهی و توقف عملیات اجرایی.',
+  description: 'متن آماده لایحه تقاضای اعطای مهلت عادلانه جهت پرداخت بدهی و توقف عملیات اجرایی.',
     url: 'https://www.negaresh-yar.ir/samples/judgment-enforcement-grace-period',
     siteName: 'نگارش یار',
     type: 'article',

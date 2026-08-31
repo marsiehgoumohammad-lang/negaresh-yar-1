@@ -266,7 +266,7 @@ export const sampleInsolvencyAppealCourtFeeFormMetadata: Metadata = {
   },
   openGraph: {
     title: 'فرم اعسار از هزینه دادرسی تجدید نظر | نگارش یار',
-    description: 'متن آماده دادخواست و استشهادیه اعسار از پرداخت هزینه دادرسی ۴.۵ درصدی مرحله تجدیدنظر.',
+  description: 'متن آماده دادخواست و استشهادیه اعسار از پرداخت هزینه دادرسی ۴.۵ درصدی مرحله تجدیدنظر.',
     url: 'https://www.negaresh-yar.ir/samples/insolvency-appeal-court-fee-form',
     siteName: 'نگارش یار',
     type: 'article',

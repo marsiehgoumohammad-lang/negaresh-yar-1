@@ -259,7 +259,7 @@ export const samplePropertyPossessionClaimMetadata: Metadata = {
   },
   openGraph: {
     title: 'نمونه دادخواست رفع تصرف عدوانی و دستور موقت | نگارش یار',
-    description: 'متن آماده دادخواست حقوقی رفع تصرف عدوانی ملک غیرمنقول با دستور موقت فوری در ثنا.',
+  description: 'متن آماده دادخواست حقوقی رفع تصرف عدوانی ملک غیرمنقول با دستور موقت فوری در ثنا.',
     url: 'https://www.negaresh-yar.ir/samples/property-possession-claim',
     siteName: 'نگارش یار',
     type: 'article',
