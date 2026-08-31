@@ -1,6 +1,7 @@
 import React from 'react';
 import Script from 'next/script';
 import { LandingPageTemplate } from '@/components/services/LandingPageTemplate';
+import { CourtDocumentExplainerGuideSection } from '@/components/services/CourtDocumentExplainerGuideSection';
 import {
   courtDocumentExplainerData,
   courtDocumentExplainerMetadata,
@@ -9,6 +10,11 @@ import {
 export const metadata = courtDocumentExplainerMetadata;
 
 export default function CourtDocumentExplainerPage() {
+  const data = {
+    ...courtDocumentExplainerData,
+    customGuideContent: <CourtDocumentExplainerGuideSection />,
+  };
+
   const breadcrumbSchema = {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
@@ -28,8 +34,8 @@ export default function CourtDocumentExplainerPage() {
       {
         '@type': 'ListItem',
         position: 3,
-        name: courtDocumentExplainerData.h1Title,
-        item: 'https://www.negaresh-yar.ir/services/court-document-explainer',
+        name: data.h1Title,
+        item: `https://www.negaresh-yar.ir/services/${data.slug}`,
       },
     ],
   };
@@ -37,8 +43,21 @@ export default function CourtDocumentExplainerPage() {
   const serviceSchema = {
     '@context': 'https://schema.org',
     '@type': 'LegalService',
-    name: courtDocumentExplainerData.h1Title,
-    description: courtDocumentExplainerData.heroSubtitle,
+    name: data.h1Title,
+    description: data.heroSubtitle,
+    url: `https://www.negaresh-yar.ir/services/${data.slug}`,
+    telephone: '+989915147789',
+    address: {
+      '@type': 'PostalAddress',
+      addressLocality: 'مشهد',
+      addressRegion: 'خراسان رضوی',
+      addressCountry: 'IR',
+    },
+    geo: {
+      '@type': 'GeoCoordinates',
+      latitude: '36.2972',
+      longitude: '59.6067',
+    },
     provider: {
       '@type': 'Organization',
       name: 'نگارش یار',
@@ -46,7 +65,7 @@ export default function CourtDocumentExplainerPage() {
     },
     areaServed: {
       '@type': 'Country',
-      name: 'ایران',
+      name: 'Iran',
     },
     serviceType: 'AI Court Document Analysis and Explanation',
   };
@@ -54,12 +73,12 @@ export default function CourtDocumentExplainerPage() {
   const faqSchema = {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
-    mainEntity: courtDocumentExplainerData.faqs.map((faq) => ({
+    mainEntity: data.faqs.map((f) => ({
       '@type': 'Question',
-      name: faq.q,
+      name: f.q,
       acceptedAnswer: {
         '@type': 'Answer',
-        text: faq.a,
+        text: f.a,
       },
     })),
   };
@@ -82,7 +101,7 @@ export default function CourtDocumentExplainerPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
       <main className="min-h-screen bg-[#070B15]">
-        <LandingPageTemplate data={courtDocumentExplainerData} />
+        <LandingPageTemplate data={data} />
       </main>
     </>
   );
