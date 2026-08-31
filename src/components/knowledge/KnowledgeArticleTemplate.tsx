@@ -269,13 +269,22 @@ export function KnowledgeArticleTemplate({ data }: { data: KnowledgeArticleData 
             </ul>
           </div>
 
-          {/* C. ARTICLE DETAILED SECTIONS */}
-          {data.sections.map((section) => (
-            <section
-              key={section.id}
-              id={section.id}
-              className="scroll-mt-24 p-6 md:p-8 rounded-2xl bg-slate-900/40 border border-slate-800/80 space-y-4"
-            >
+          {/* CUSTOM GUIDE CONTENT */}
+          {data.customGuideContent && (
+            <div className="my-8">
+              {data.customGuideContent}
+            </div>
+          )}
+
+          {!data.customGuideContent && (
+            <>
+              {/* C. ARTICLE DETAILED SECTIONS */}
+              {data.sections.map((section) => (
+                <section
+                  key={section.id}
+                  id={section.id}
+                  className="scroll-mt-24 p-6 md:p-8 rounded-2xl bg-slate-900/40 border border-slate-800/80 space-y-4"
+                >
               <h2 className="text-xl md:text-2xl font-bold text-white border-b border-slate-800 pb-3 flex items-center gap-2">
                 <span className="w-2 h-6 bg-[#E5C158] rounded-full inline-block" />
                 {section.title}
@@ -411,6 +420,8 @@ export function KnowledgeArticleTemplate({ data }: { data: KnowledgeArticleData 
               ))}
             </ul>
           </section>
+            </>
+          )}
 
           {/* G. FREQUENTLY ASKED QUESTIONS (FAQ ACCORDION) */}
           <section className="p-6 md:p-8 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-6">

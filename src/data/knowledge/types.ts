@@ -63,6 +63,9 @@ export interface KnowledgeArticleData {
   relatedSamples: { title: string; href: string; desc: string; badge: string }[];
   relatedArticles: { title: string; href: string; desc: string; category: string }[];
 
+  // Custom Guide Component
+  customGuideContent?: React.ReactNode;
+  
   // CTA
   ctaTitle: string;
   ctaDescription: string;
