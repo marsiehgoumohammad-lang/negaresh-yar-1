@@ -68,6 +68,7 @@ export interface ServiceLandingData {
   relatedSamples?: { title: string; href: string; desc: string; badge: string }[];
   showLawyerReferral?: boolean;
   relatedArticles?: { title: string; href: string; desc: string; badge: string }[];
+  customGuideContent?: React.ReactNode;
 
   // CTA
   ctaTitle: string;
@@ -517,6 +518,15 @@ export function LandingPageTemplate({ data }: { data: ServiceLandingData }) {
           </div>
         </Container>
       </section>
+
+      {/* ---------------------------------------------------- */}
+      {/* 7.5 CUSTOM GUIDE CONTENT (راهنمای جامع اختصاصی) */}
+      {/* ---------------------------------------------------- */}
+      {data.customGuideContent && (
+        <section className="relative">
+          {data.customGuideContent}
+        </section>
+      )}
 
       {/* ---------------------------------------------------- */}
       {/* 8. FAQS (20-30 سوالات متداول و پاسخ‌های تخصصی) */}
