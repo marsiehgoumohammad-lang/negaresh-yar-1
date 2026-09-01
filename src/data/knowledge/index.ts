@@ -30,6 +30,7 @@ import { bouncedCheckGuideData, bouncedCheckGuideMetadata } from './bounced-chec
 import { sayadCheckRulesData, sayadCheckRulesMetadata } from './sayad-check-rules';
 import { checkBadCreditRemovalData, checkBadCreditRemovalMetadata } from './check-bad-credit-removal';
 import { sayadCheckExecutionArticle23Data, sayadCheckExecutionArticle23Metadata } from './sayad-check-execution-article-23';
+import { guaranteeCheckRulesData, guaranteeCheckRulesMetadata } from './guarantee-check-rules';
 
 export * from './types';
 
@@ -132,6 +133,7 @@ export const ALL_KNOWLEDGE_ARTICLES: KnowledgeArticleData[] = [
   sayadCheckRulesData,
   checkBadCreditRemovalData,
   sayadCheckExecutionArticle23Data,
+  guaranteeCheckRulesData,
 ];
 
 export const KNOWLEDGE_METADATA_MAP = {
@@ -166,6 +168,7 @@ export const KNOWLEDGE_METADATA_MAP = {
   'sayad-check-rules': sayadCheckRulesMetadata,
   'check-bad-credit-removal': checkBadCreditRemovalMetadata,
   'sayad-check-execution-article-23': sayadCheckExecutionArticle23Metadata,
+  'guarantee-check-rules': guaranteeCheckRulesMetadata,
 };
 
 export function getKnowledgeArticleBySlug(slug: string): KnowledgeArticleData | undefined {

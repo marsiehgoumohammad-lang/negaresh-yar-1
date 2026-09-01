@@ -11,7 +11,7 @@ export function getInitialArticles(): Article[] {
   return ALL_KNOWLEDGE_ARTICLES.map((art) => {
     const meta = KNOWLEDGE_METADATA_MAP[art.slug as keyof typeof KNOWLEDGE_METADATA_MAP];
     const contentText = art.sections
-      ? art.sections.map((s) => `${s.title}\n${s.paragraphs.join('\n')}`).join('\n\n')
+      ? art.sections.map((s) => `${s.title}\n${(s.paragraphs || []).join('\n')}`).join('\n\n')
       : art.quickAnswerParagraph || '';
 
     const wordCount = contentText

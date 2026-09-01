@@ -651,6 +651,12 @@ export const sayadCheckExecutionArticle23Data: KnowledgeArticleData = {
       category: 'مالیات و اسناد تجاری',
     },
     {
+      title: 'چک ضمانت و حسن انجام کار؛ شرایط، خطرات، نحوه وصول و استرداد',
+      href: '/knowledge/guarantee-check-rules',
+      desc: 'راهنمای تخصصی ماهیت چک‌های ضمانتی، عدم امکان صدور اجراییه مستقیم، دادخواست استرداد لاشه و ابطال اجراییه.',
+      category: 'اسناد تجاری و چک',
+    },
+    {
       title: 'تفاوت چک حقوقی و کیفری؛ شرایط، مهلت‌ها و آثار قانونی',
       href: '/knowledge/civil-vs-criminal-check',
       desc: 'بررسی شرایط شکایت کیفری چک، مهلت‌های ۶ ماهه و تفاوت‌های بنیادین پیگیری در دادسرا و دادگاه.',

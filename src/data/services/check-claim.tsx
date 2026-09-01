@@ -219,6 +219,12 @@ export const checkClaimData: ServiceLandingData = {
 
   relatedArticles: [
     {
+      title: 'چک ضمانت و حسن انجام کار؛ شرایط، خطرات، نحوه وصول و استرداد',
+      href: '/knowledge/guarantee-check-rules',
+      desc: 'راهنمای تخصصی ماهیت چک‌های ضمانتی، دادخواست استرداد لاشه و ابطال اجراییه ماده ۲۳.',
+      badge: 'مقاله تخصصی',
+    },
+    {
       title: 'اجراییه مستقیم چک صیادی ماده ۲۳؛ شرایط، مراحل و نحوه ابطال',
       href: '/knowledge/sayad-check-execution-article-23',
       desc: 'راهنمای کامل صدور اجراییه مستقیم ماده ۲۳، توقیف اموال و دفاعیات ابطال اجراییه.',

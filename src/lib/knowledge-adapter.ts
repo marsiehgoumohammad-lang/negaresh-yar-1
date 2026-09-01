@@ -178,7 +178,7 @@ export function adaptArticleToKnowledgeData(article: Article): KnowledgeArticleD
       'پاسخگویی و پشتیبانی آنلاین',
     ],
     quickAnswerTitle: `پاسخ خلاصه به ${article.title}`,
-    quickAnswerParagraph: article.excerpt || (parsedSections[0]?.paragraphs[0] ?? article.title),
+    quickAnswerParagraph: article.excerpt || (parsedSections[0]?.paragraphs?.[0] ?? article.title),
     quickAnswerHighlights: [
       'بررسی دقیق آخرین قوانین و آیین‌نامه‌ها',
       'راهنمای عملی جهت جلوگیری از اطاله دادرسی',

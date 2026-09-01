@@ -84,18 +84,18 @@ export function KnowledgeArticleTemplate({ data }: { data: KnowledgeArticleData 
   };
 
   // Generate FAQ Schema JSON-LD
-  const faqSchema = {
+  const faqSchema = data.faqs && data.faqs.length > 0 ? {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
     mainEntity: data.faqs.map((faq) => ({
       '@type': 'Question',
-      name: faq.q,
+      name: faq.q || faq.question || '',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: faq.a,
+        text: faq.a || faq.answer || '',
       },
     })),
-  };
+  } : null;
 
   // Breadcrumb Schema JSON-LD
   const breadcrumbSchema = {
@@ -250,35 +250,37 @@ export function KnowledgeArticleTemplate({ data }: { data: KnowledgeArticleData 
           </section>
 
           {/* B. MOBILE TABLE OF CONTENTS (COLLAPSIBLE) */}
-          <div className="block lg:hidden bg-slate-900/80 border border-slate-800 rounded-2xl p-5">
-            <div className="flex items-center gap-2 mb-3 text-[#E5C158] font-bold text-sm">
-              <ListOrdered className="w-4 h-4" />
-              <span>فهرست مطالب مقاله</span>
-            </div>
-            <ul className="space-y-2 text-xs text-slate-300">
-              {data.tableOfContents.map((item) => (
-                <li key={item.id}>
-                  <a
-                    href={`#${item.id}`}
-                    className="hover:text-[#E5C158] transition-colors block py-1 border-b border-slate-800/60"
-                  >
-                    {item.title}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* CUSTOM GUIDE CONTENT */}
-          {data.customGuideContent && (
-            <div className="my-8">
-              {data.customGuideContent}
+          {data.tableOfContents && data.tableOfContents.length > 0 && (
+            <div className="block lg:hidden bg-slate-900/80 border border-slate-800 rounded-2xl p-5">
+              <div className="flex items-center gap-2 mb-3 text-[#E5C158] font-bold text-sm">
+                <ListOrdered className="w-4 h-4" />
+                <span>فهرست مطالب مقاله</span>
+              </div>
+              <ul className="space-y-2 text-xs text-slate-300">
+                {data.tableOfContents?.map((item) => (
+                  <li key={item.id}>
+                    <a
+                      href={`#${item.id}`}
+                      className="hover:text-[#E5C158] transition-colors block py-1 border-b border-slate-800/60"
+                    >
+                      {item.title}
+                    </a>
+                  </li>
+                ))}
+              </ul>
             </div>
           )}
 
-          {!data.customGuideContent && (
+          {/* CUSTOM GUIDE CONTENT */}
+          {(data.customGuideContent || data.customComponent) && (
+            <div className="my-8">
+              {data.customGuideContent || data.customComponent}
+            </div>
+          )}
+
+          {/* C. ARTICLE DETAILED SECTIONS */}
+          {data.sections && data.sections.length > 0 && (
             <>
-              {/* C. ARTICLE DETAILED SECTIONS */}
               {data.sections.map((section) => (
                 <section
                   key={section.id}
@@ -290,14 +292,20 @@ export function KnowledgeArticleTemplate({ data }: { data: KnowledgeArticleData 
                 {section.title}
               </h2>
 
-              <div className="space-y-4 text-slate-300 text-sm md:text-base leading-relaxed md:leading-loose [&_a]:text-[#E5C158] [&_a]:underline [&_a]:underline-offset-4 [&_a]:font-semibold hover:[&_a]:text-amber-300 hover:[&_a]:decoration-amber-300 [&_a]:transition-colors [&_strong]:text-white [&_strong]:font-bold [&_ul]:list-disc [&_ul]:pr-5 [&_ul]:space-y-1.5 [&_ol]:list-decimal [&_ol]:pr-5 [&_ol]:space-y-1.5 [&_li]:text-slate-300 [&_blockquote]:border-r-4 [&_blockquote]:border-[#E5C158] [&_blockquote]:pr-4 [&_blockquote]:py-1 [&_blockquote]:italic [&_blockquote]:text-slate-300 [&_blockquote]:bg-slate-900/50 [&_blockquote]:rounded-l-lg [&_table]:w-full [&_table]:border-collapse [&_th]:border [&_th]:border-slate-700 [&_th]:p-2.5 [&_th]:bg-slate-800 [&_th]:text-white [&_td]:border [&_td]:border-slate-800 [&_td]:p-2.5">
-                {section.paragraphs.map((p, idx) => (
-                  <div
-                    key={idx}
-                    dangerouslySetInnerHTML={{ __html: p }}
-                  />
-                ))}
-              </div>
+              {section.content ? (
+                <div className="text-slate-300 text-sm md:text-base leading-relaxed md:leading-loose">
+                  {section.content}
+                </div>
+              ) : (
+                <div className="space-y-4 text-slate-300 text-sm md:text-base leading-relaxed md:leading-loose [&_a]:text-[#E5C158] [&_a]:underline [&_a]:underline-offset-4 [&_a]:font-semibold hover:[&_a]:text-amber-300 hover:[&_a]:decoration-amber-300 [&_a]:transition-colors [&_strong]:text-white [&_strong]:font-bold [&_ul]:list-disc [&_ul]:pr-5 [&_ul]:space-y-1.5 [&_ol]:list-decimal [&_ol]:pr-5 [&_ol]:space-y-1.5 [&_li]:text-slate-300 [&_blockquote]:border-r-4 [&_blockquote]:border-[#E5C158] [&_blockquote]:pr-4 [&_blockquote]:py-1 [&_blockquote]:italic [&_blockquote]:text-slate-300 [&_blockquote]:bg-slate-900/50 [&_blockquote]:rounded-l-lg [&_table]:w-full [&_table]:border-collapse [&_th]:border [&_th]:border-slate-700 [&_th]:p-2.5 [&_th]:bg-slate-800 [&_th]:text-white [&_td]:border [&_td]:border-slate-800 [&_td]:p-2.5">
+                  {section.paragraphs?.map((p, idx) => (
+                    <div
+                      key={idx}
+                      dangerouslySetInnerHTML={{ __html: p }}
+                    />
+                  ))}
+                </div>
+              )}
 
               {section.bulletPoints && section.bulletPoints.length > 0 && (
                 <ul className="space-y-2.5 pt-2 pr-2">
@@ -333,200 +341,218 @@ export function KnowledgeArticleTemplate({ data }: { data: KnowledgeArticleData 
               )}
             </section>
           ))}
+          </>
+          )}
 
           {/* D. REAL-WORLD CASE EXAMPLES */}
-          <section className="p-6 md:p-8 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-6">
-            <div className="flex items-center gap-3 border-b border-slate-800 pb-4">
-              <div className="p-2 rounded-lg bg-indigo-500/10 text-indigo-400">
-                <FileText className="w-5 h-5" />
-              </div>
-              <h2 className="text-xl md:text-2xl font-bold text-white">
-                {data.examplesTitle}
-              </h2>
-            </div>
-
-            <div className="grid grid-cols-1 gap-4">
-              {data.examplesList.map((item, idx) => (
-                <div
-                  key={idx}
-                  className="p-5 rounded-xl bg-[#070B15] border border-slate-800 space-y-2.5"
-                >
-                  <h3 className="font-bold text-base text-[#E5C158] flex items-center gap-2">
-                    <CheckCircle2 className="w-4 h-4 text-[#E5C158]" />
-                    {item.scenarioTitle}
-                  </h3>
-                  <p className="text-xs md:text-sm text-slate-300 leading-relaxed">
-                    <strong className="text-white">توضیحات پرونده: </strong>
-                    {item.description}
-                  </p>
-                  <div className="p-3 rounded-lg bg-slate-900 border border-slate-800/80 text-xs text-emerald-300 font-medium">
-                    <strong>نتیجه حقوقی و دستاورد: </strong>
-                    {item.legalOutcome}
-                  </div>
+          {data.examplesList && data.examplesList.length > 0 && (
+            <section className="p-6 md:p-8 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-6">
+              <div className="flex items-center gap-3 border-b border-slate-800 pb-4">
+                <div className="p-2 rounded-lg bg-indigo-500/10 text-indigo-400">
+                  <FileText className="w-5 h-5" />
                 </div>
-              ))}
-            </div>
-          </section>
+                <h2 className="text-xl md:text-2xl font-bold text-white">
+                  {data.examplesTitle || 'نمونه پرونده‌ها و تجربیات واقعی'}
+                </h2>
+              </div>
+
+              <div className="grid grid-cols-1 gap-4">
+                {data.examplesList.map((item, idx) => (
+                  <div
+                    key={idx}
+                    className="p-5 rounded-xl bg-[#070B15] border border-slate-800 space-y-2.5"
+                  >
+                    <h3 className="font-bold text-base text-[#E5C158] flex items-center gap-2">
+                      <CheckCircle2 className="w-4 h-4 text-[#E5C158]" />
+                      {item.scenarioTitle}
+                    </h3>
+                    <p className="text-xs md:text-sm text-slate-300 leading-relaxed">
+                      <strong className="text-white">توضیحات پرونده: </strong>
+                      {item.description}
+                    </p>
+                    <div className="p-3 rounded-lg bg-slate-900 border border-slate-800/80 text-xs text-emerald-300 font-medium">
+                      <strong>نتیجه حقوقی و دستاورد: </strong>
+                      {item.legalOutcome}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </section>
+          )}
 
           {/* E. COMMON MISTAKES & TRAPS */}
-          <section className="p-6 md:p-8 rounded-2xl bg-rose-950/20 border border-rose-900/30 space-y-6">
-            <div className="flex items-center gap-3 border-b border-rose-900/40 pb-4">
-              <div className="p-2 rounded-lg bg-rose-500/10 text-rose-400">
-                <AlertTriangle className="w-5 h-5" />
-              </div>
-              <div>
-                <h2 className="text-xl md:text-2xl font-bold text-white">
-                  {data.commonMistakesTitle}
-                </h2>
-                <p className="text-xs text-rose-300/80">{data.commonMistakesSubtitle}</p>
-              </div>
-            </div>
-
-            <div className="space-y-4">
-              {data.commonMistakesList.map((item, idx) => (
-                <div
-                  key={idx}
-                  className="p-4 rounded-xl bg-[#070B15]/80 border border-rose-900/20 space-y-2"
-                >
-                  <div className="text-sm font-bold text-rose-300 flex items-start gap-2">
-                    <span className="w-2 h-2 rounded-full bg-rose-500 shrink-0 mt-1.5" />
-                    <span>خطا: {item.mistake}</span>
-                  </div>
-                  <p className="text-xs text-slate-400 pr-4">
-                    <span className="text-rose-400 font-semibold">ریسک قانونی: </span>
-                    {item.risk}
-                  </p>
-                  <p className="text-xs text-emerald-300 pr-4 font-medium">
-                    <span className="text-emerald-400 font-semibold">اقدام صحیح: </span>
-                    {item.correctAction}
-                  </p>
+          {data.commonMistakesList && data.commonMistakesList.length > 0 && (
+            <section className="p-6 md:p-8 rounded-2xl bg-rose-950/20 border border-rose-900/30 space-y-6">
+              <div className="flex items-center gap-3 border-b border-rose-900/40 pb-4">
+                <div className="p-2 rounded-lg bg-rose-500/10 text-rose-400">
+                  <AlertTriangle className="w-5 h-5" />
                 </div>
-              ))}
-            </div>
-          </section>
+                <div>
+                  <h2 className="text-xl md:text-2xl font-bold text-white">
+                    {data.commonMistakesTitle || 'اشتباهات رایج'}
+                  </h2>
+                  {data.commonMistakesSubtitle && (
+                    <p className="text-xs text-rose-300/80">{data.commonMistakesSubtitle}</p>
+                  )}
+                </div>
+              </div>
+
+              <div className="space-y-4">
+                {data.commonMistakesList.map((item, idx) => (
+                  <div
+                    key={idx}
+                    className="p-4 rounded-xl bg-[#070B15]/80 border border-rose-900/20 space-y-2"
+                  >
+                    <div className="text-sm font-bold text-rose-300 flex items-start gap-2">
+                      <span className="w-2 h-2 rounded-full bg-rose-500 shrink-0 mt-1.5" />
+                      <span>خطا: {item.mistake}</span>
+                    </div>
+                    <p className="text-xs text-slate-400 pr-4">
+                      <span className="text-rose-400 font-semibold">ریسک قانونی: </span>
+                      {item.risk}
+                    </p>
+                    <p className="text-xs text-emerald-300 pr-4 font-medium">
+                      <span className="text-emerald-400 font-semibold">اقدام صحیح: </span>
+                      {item.correctAction}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </section>
+          )}
 
           {/* F. STATUTORY & LEGAL NOTES */}
-          <section className="p-6 md:p-8 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-4">
-            <h2 className="text-xl font-bold text-white flex items-center gap-2 border-b border-slate-800 pb-3">
-              <ShieldCheck className="w-5 h-5 text-[#E5C158]" />
-              {data.legalNotesTitle}
-            </h2>
-            <ul className="space-y-2.5 text-xs md:text-sm text-slate-300">
-              {data.legalNotesList.map((note, idx) => (
-                <li key={idx} className="flex items-start gap-2.5">
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#E5C158] shrink-0 mt-2" />
-                  <span>{note}</span>
-                </li>
-              ))}
-            </ul>
-          </section>
-            </>
+          {data.legalNotesList && data.legalNotesList.length > 0 && (
+            <section className="p-6 md:p-8 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-4">
+              <h2 className="text-xl font-bold text-white flex items-center gap-2 border-b border-slate-800 pb-3">
+                <ShieldCheck className="w-5 h-5 text-[#E5C158]" />
+                {data.legalNotesTitle || 'مستندات قانونی و مواد مصوب'}
+              </h2>
+              <ul className="space-y-2.5 text-xs md:text-sm text-slate-300">
+                {data.legalNotesList.map((note, idx) => (
+                  <li key={idx} className="flex items-start gap-2.5">
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#E5C158] shrink-0 mt-2" />
+                    <span>{note}</span>
+                  </li>
+                ))}
+              </ul>
+            </section>
           )}
 
           {/* G. FREQUENTLY ASKED QUESTIONS (FAQ ACCORDION) */}
-          <section className="p-6 md:p-8 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-6">
-            <div className="flex items-center gap-3 border-b border-slate-800 pb-4">
-              <div className="p-2 rounded-lg bg-[#E5C158]/10 text-[#E5C158]">
-                <HelpCircle className="w-5 h-5" />
+          {data.faqs && data.faqs.length > 0 && (
+            <section className="p-6 md:p-8 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-6">
+              <div className="flex items-center gap-3 border-b border-slate-800 pb-4">
+                <div className="p-2 rounded-lg bg-[#E5C158]/10 text-[#E5C158]">
+                  <HelpCircle className="w-5 h-5" />
+                </div>
+                <h2 className="text-xl md:text-2xl font-bold text-white">
+                  {data.faqTitle || 'سوالات متداول'}
+                </h2>
               </div>
-              <h2 className="text-xl md:text-2xl font-bold text-white">
-                {data.faqTitle}
-              </h2>
-            </div>
 
-            <div className="space-y-3">
-              {data.faqs.map((faq, idx) => {
-                const isOpen = openFaq === idx;
-                return (
-                  <div
-                    key={idx}
-                    className="border border-slate-800 rounded-xl overflow-hidden bg-[#070B15]/60 transition-colors"
-                  >
-                    <button
-                      onClick={() => toggleFaq(idx)}
-                      className="w-full text-right p-4 font-bold text-sm md:text-base text-white flex items-center justify-between gap-4 hover:text-[#E5C158] transition-colors"
+              <div className="space-y-3">
+                {data.faqs.map((faq, idx) => {
+                  const isOpen = openFaq === idx;
+                  const questionText = faq.q || faq.question || '';
+                  const answerText = faq.a || faq.answer || '';
+                  return (
+                    <div
+                      key={idx}
+                      className="border border-slate-800 rounded-xl overflow-hidden bg-[#070B15]/60 transition-colors"
                     >
-                      <span>{faq.q}</span>
-                      <ChevronDown
-                        className={`w-4 h-4 text-[#E5C158] transition-transform duration-200 shrink-0 ${
-                          isOpen ? 'rotate-180' : ''
-                        }`}
-                      />
-                    </button>
-                    <AnimatePresence>
-                      {isOpen && (
-                        <motion.div
-                          initial={{ height: 0, opacity: 0 }}
-                          animate={{ height: 'auto', opacity: 1 }}
-                          exit={{ height: 0, opacity: 0 }}
-                          className="px-4 pb-4 pt-1 text-xs md:text-sm text-slate-300 leading-relaxed border-t border-slate-800/60"
-                        >
-                          {faq.a}
-                        </motion.div>
-                      )}
-                    </AnimatePresence>
-                  </div>
-                );
-              })}
-            </div>
-          </section>
+                      <button
+                        onClick={() => toggleFaq(idx)}
+                        className="w-full text-right p-4 font-bold text-sm md:text-base text-white flex items-center justify-between gap-4 hover:text-[#E5C158] transition-colors"
+                      >
+                        <span>{questionText}</span>
+                        <ChevronDown
+                          className={`w-4 h-4 text-[#E5C158] transition-transform duration-200 shrink-0 ${
+                            isOpen ? 'rotate-180' : ''
+                          }`}
+                        />
+                      </button>
+                      <AnimatePresence>
+                        {isOpen && (
+                          <motion.div
+                            initial={{ height: 0, opacity: 0 }}
+                            animate={{ height: 'auto', opacity: 1 }}
+                            exit={{ height: 0, opacity: 0 }}
+                            className="px-4 pb-4 pt-1 text-xs md:text-sm text-slate-300 leading-relaxed border-t border-slate-800/60"
+                          >
+                            {answerText}
+                          </motion.div>
+                        )}
+                      </AnimatePresence>
+                    </div>
+                  );
+                })}
+              </div>
+            </section>
+          )}
 
           {/* H. INTERNAL LINKS TO SERVICES & SAMPLES */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {/* Related Services */}
-            <div className="p-6 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-4">
-              <h3 className="font-bold text-base text-white flex items-center gap-2 border-b border-slate-800 pb-3">
-                <Send className="w-4 h-4 text-[#E5C158]" />
-                خدمات تخصصی مرتبط نگارش یار
-              </h3>
-              <div className="space-y-3">
-                {data.relatedServices.map((srv, idx) => (
-                  <Link
-                    key={idx}
-                    href={getSafeUrl(srv.href)}
-                    className="group block p-3.5 rounded-xl bg-[#070B15] border border-slate-800 hover:border-[#E5C158]/50 transition-all"
-                  >
-                    <div className="flex items-center justify-between gap-2 mb-1">
-                      <span className="font-bold text-sm text-slate-200 group-hover:text-[#E5C158] transition-colors">
-                        {srv.title}
-                      </span>
-                      <span className="text-[10px] px-2 py-0.5 rounded-full bg-[#E5C158]/10 text-[#E5C158]">
-                        {srv.badge}
-                      </span>
-                    </div>
-                    <p className="text-xs text-slate-400">{srv.desc}</p>
-                  </Link>
-                ))}
-              </div>
-            </div>
+          {((data.relatedServices && data.relatedServices.length > 0) || (data.relatedSamples && data.relatedSamples.length > 0)) && (
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {/* Related Services */}
+              {data.relatedServices && data.relatedServices.length > 0 && (
+                <div className="p-6 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-4">
+                  <h3 className="font-bold text-base text-white flex items-center gap-2 border-b border-slate-800 pb-3">
+                    <Send className="w-4 h-4 text-[#E5C158]" />
+                    خدمات تخصصی مرتبط نگارش یار
+                  </h3>
+                  <div className="space-y-3">
+                    {data.relatedServices.map((srv, idx) => (
+                      <Link
+                        key={idx}
+                        href={getSafeUrl(srv.href)}
+                        className="group block p-3.5 rounded-xl bg-[#070B15] border border-slate-800 hover:border-[#E5C158]/50 transition-all"
+                      >
+                        <div className="flex items-center justify-between gap-2 mb-1">
+                          <span className="font-bold text-sm text-slate-200 group-hover:text-[#E5C158] transition-colors">
+                            {srv.title}
+                          </span>
+                          <span className="text-[10px] px-2 py-0.5 rounded-full bg-[#E5C158]/10 text-[#E5C158]">
+                            {srv.badge}
+                          </span>
+                        </div>
+                        <p className="text-xs text-slate-400">{srv.desc}</p>
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              )}
 
-            {/* Related Samples */}
-            <div className="p-6 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-4">
-              <h3 className="font-bold text-base text-white flex items-center gap-2 border-b border-slate-800 pb-3">
-                <FileText className="w-4 h-4 text-[#E5C158]" />
-                نمونه اسناد رسمی مرتبط
-              </h3>
-              <div className="space-y-3">
-                {data.relatedSamples.map((smp, idx) => (
-                  <Link
-                    key={idx}
-                    href={getSafeUrl(smp.href)}
-                    className="group block p-3.5 rounded-xl bg-[#070B15] border border-slate-800 hover:border-[#E5C158]/50 transition-all"
-                  >
-                    <div className="flex items-center justify-between gap-2 mb-1">
-                      <span className="font-bold text-sm text-slate-200 group-hover:text-[#E5C158] transition-colors">
-                        {smp.title}
-                      </span>
-                      <span className="text-[10px] px-2 py-0.5 rounded-full bg-indigo-500/10 text-indigo-400">
-                        {smp.badge}
-                      </span>
-                    </div>
-                    <p className="text-xs text-slate-400">{smp.desc}</p>
-                  </Link>
-                ))}
-              </div>
+              {/* Related Samples */}
+              {data.relatedSamples && data.relatedSamples.length > 0 && (
+                <div className="p-6 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-4">
+                  <h3 className="font-bold text-base text-white flex items-center gap-2 border-b border-slate-800 pb-3">
+                    <FileText className="w-4 h-4 text-[#E5C158]" />
+                    نمونه اسناد رسمی مرتبط
+                  </h3>
+                  <div className="space-y-3">
+                    {data.relatedSamples.map((smp, idx) => (
+                      <Link
+                        key={idx}
+                        href={getSafeUrl(smp.href)}
+                        className="group block p-3.5 rounded-xl bg-[#070B15] border border-slate-800 hover:border-[#E5C158]/50 transition-all"
+                      >
+                        <div className="flex items-center justify-between gap-2 mb-1">
+                          <span className="font-bold text-sm text-slate-200 group-hover:text-[#E5C158] transition-colors">
+                            {smp.title}
+                          </span>
+                          <span className="text-[10px] px-2 py-0.5 rounded-full bg-indigo-500/10 text-indigo-400">
+                            {smp.badge}
+                          </span>
+                        </div>
+                        <p className="text-xs text-slate-400">{smp.desc}</p>
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              )}
             </div>
-          </div>
+          )}
 
           {/* I. AUTHOR / EXPERT REVIEW BOX */}
           <div className="p-6 rounded-2xl bg-slate-900/40 border border-slate-800 flex items-center gap-4">
@@ -548,42 +574,44 @@ export function KnowledgeArticleTemplate({ data }: { data: KnowledgeArticleData 
         {/* LEFT COLUMN: STICKY SIDEBAR (4 COLS) */}
         <aside className="lg:col-span-4 space-y-6 lg:sticky lg:top-24 text-right">
           {/* 1. STICKY TABLE OF CONTENTS (DESKTOP) */}
-          <div className="hidden lg:block p-6 rounded-2xl bg-slate-900/80 border border-slate-800">
-            <div className="flex items-center gap-2 mb-4 text-[#E5C158] font-bold text-base border-b border-slate-800 pb-3">
-              <ListOrdered className="w-5 h-5" />
-              <span>فهرست مطالب مقاله</span>
-            </div>
-            <ul className="space-y-2 text-xs text-slate-300">
-              {data.tableOfContents.map((item) => (
-                <li key={item.id}>
-                  <a
-                    href={`#${item.id}`}
-                    className="hover:text-[#E5C158] transition-colors block py-1 border-b border-slate-800/50 hover:pr-1"
-                  >
-                    {item.title}
-                  </a>
-                </li>
-              ))}
-            </ul>
+          {data.tableOfContents && data.tableOfContents.length > 0 && (
+            <div className="hidden lg:block p-6 rounded-2xl bg-slate-900/80 border border-slate-800">
+              <div className="flex items-center gap-2 mb-4 text-[#E5C158] font-bold text-base border-b border-slate-800 pb-3">
+                <ListOrdered className="w-5 h-5" />
+                <span>فهرست مطالب مقاله</span>
+              </div>
+              <ul className="space-y-2 text-xs text-slate-300">
+                {data.tableOfContents?.map((item) => (
+                  <li key={item.id}>
+                    <a
+                      href={`#${item.id}`}
+                      className="hover:text-[#E5C158] transition-colors block py-1 border-b border-slate-800/50 hover:pr-1"
+                    >
+                      {item.title}
+                    </a>
+                  </li>
+                ))}
+              </ul>
 
-            {/* Share link button */}
-            <button
-              onClick={handleShare}
-              className="mt-5 w-full flex items-center justify-center gap-2 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-xs font-semibold text-slate-200 transition-colors"
-            >
-              {copiedLink ? (
-                <>
-                  <Check className="w-4 h-4 text-emerald-400" />
-                  <span>لینک مقاله کپی شد</span>
-                </>
-              ) : (
-                <>
-                  <Share2 className="w-4 h-4 text-[#E5C158]" />
-                  <span>اشتراک‌گذاری مقاله</span>
-                </>
-              )}
-            </button>
-          </div>
+              {/* Share link button */}
+              <button
+                onClick={handleShare}
+                className="mt-5 w-full flex items-center justify-center gap-2 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-xs font-semibold text-slate-200 transition-colors"
+              >
+                {copiedLink ? (
+                  <>
+                    <Check className="w-4 h-4 text-emerald-400" />
+                    <span>لینک مقاله کپی شد</span>
+                  </>
+                ) : (
+                  <>
+                    <Share2 className="w-4 h-4 text-[#E5C158]" />
+                    <span>اشتراک‌گذاری مقاله</span>
+                  </>
+                )}
+              </button>
+            </div>
+          )}
 
           {/* 2. SIDEBAR ORDER CTA WIDGET */}
           <div className="p-6 rounded-2xl bg-gradient-to-b from-[#121A2E] to-[#070B15] border-2 border-[#E5C158]/50 shadow-xl space-y-4">
@@ -598,7 +626,7 @@ export function KnowledgeArticleTemplate({ data }: { data: KnowledgeArticleData 
               تیم تخصصی نگارش یار با استناد به مواد قانونی و رویه قضایی، سند قضایی یا اداری شما را تنظیم می‌کند.
             </p>
             <Link
-              href={getSafeUrl(data.ctaPrimaryHref)}
+              href={getSafeUrl(data.ctaPrimaryHref || '/request')}
               className="w-full flex items-center justify-center gap-2 py-3 rounded-xl bg-gradient-to-r from-[#E5C158] to-[#C59B27] text-[#070B15] font-black text-xs md:text-sm shadow-lg shadow-[#E5C158]/20 hover:brightness-110 transition-all"
             >
               <span>ثبت آنلاین سفارش</span>
@@ -629,62 +657,68 @@ export function KnowledgeArticleTemplate({ data }: { data: KnowledgeArticleData 
           </div>
 
           {/* 3. RELATED ARTICLES SIDEBAR */}
-          <div className="p-6 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-4">
-            <h3 className="font-bold text-sm text-white border-b border-slate-800 pb-3 flex items-center gap-2">
-              <BookOpen className="w-4 h-4 text-[#E5C158]" />
-              مقالات مرتبط پایگاه دانش
-            </h3>
-            <div className="space-y-3 text-xs">
-              {data.relatedArticles.map((art, idx) => (
-                <Link
-                  key={idx}
-                  href={getSafeUrl(art.href)}
-                  className="block p-3 rounded-xl bg-[#070B15] border border-slate-800/80 hover:border-[#E5C158]/40 transition-colors"
-                >
-                  <div className="font-bold text-slate-200 hover:text-[#E5C158] transition-colors mb-1">
-                    {art.title}
-                  </div>
-                  <p className="text-slate-400 text-[11px] line-clamp-1">{art.desc}</p>
-                </Link>
-              ))}
+          {data.relatedArticles && data.relatedArticles.length > 0 && (
+            <div className="p-6 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-4">
+              <h3 className="font-bold text-sm text-white border-b border-slate-800 pb-3 flex items-center gap-2">
+                <BookOpen className="w-4 h-4 text-[#E5C158]" />
+                مقالات مرتبط پایگاه دانش
+              </h3>
+              <div className="space-y-3 text-xs">
+                {data.relatedArticles.map((art, idx) => (
+                  <Link
+                    key={idx}
+                    href={getSafeUrl(art.href)}
+                    className="block p-3 rounded-xl bg-[#070B15] border border-slate-800/80 hover:border-[#E5C158]/40 transition-colors"
+                  >
+                    <div className="font-bold text-slate-200 hover:text-[#E5C158] transition-colors mb-1">
+                      {art.title}
+                    </div>
+                    <p className="text-slate-400 text-[11px] line-clamp-1">{art.desc}</p>
+                  </Link>
+                ))}
+              </div>
             </div>
-          </div>
+          )}
         </aside>
       </Container>
 
       {/* ---------------------------------------------------- */}
       {/* 3. GOLDEN CTA BANNER AT BOTTOM */}
       {/* ---------------------------------------------------- */}
-      <section className="relative overflow-hidden rounded-3xl bg-gradient-to-r from-[#121A2E] via-[#0C1222] to-[#121A2E] border-2 border-[#E5C158]/50 p-8 md:p-12 text-center shadow-2xl">
-        <div className="absolute top-0 right-0 w-64 h-64 bg-[#E5C158]/10 rounded-full blur-3xl pointer-events-none" />
-        <Container className="relative z-10 max-w-3xl space-y-6">
-          <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#E5C158]/10 border border-[#E5C158]/30 text-[#E5C158] text-xs font-bold">
-            <Sparkles className="w-4 h-4" />
-            <span>تنظیم تخصصی اوراق قضایی و اداری</span>
-          </span>
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-black text-white leading-tight">
-            {data.ctaTitle}
-          </h2>
-          <p className="text-slate-300 text-sm md:text-base leading-relaxed">
-            {data.ctaDescription}
-          </p>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-2">
-            <Link
-              href={getSafeUrl(data.ctaPrimaryHref)}
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-gradient-to-r from-[#E5C158] to-[#C59B27] text-[#070B15] font-black text-sm md:text-base shadow-xl shadow-[#E5C158]/20 hover:brightness-110 transition-all"
-            >
-              <span>{data.ctaPrimaryBtnText}</span>
-              <ArrowLeft className="w-5 h-5" />
-            </Link>
-            <Link
-              href="/knowledge"
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-4 rounded-xl bg-slate-900 border border-slate-700 hover:border-slate-500 text-slate-200 font-bold text-sm md:text-base transition-colors"
-            >
-              <span>بازگشت به پایگاه دانش</span>
-            </Link>
-          </div>
-        </Container>
-      </section>
+      {data.ctaTitle && (
+        <section className="relative overflow-hidden rounded-3xl bg-gradient-to-r from-[#121A2E] via-[#0C1222] to-[#121A2E] border-2 border-[#E5C158]/50 p-8 md:p-12 text-center shadow-2xl">
+          <div className="absolute top-0 right-0 w-64 h-64 bg-[#E5C158]/10 rounded-full blur-3xl pointer-events-none" />
+          <Container className="relative z-10 max-w-3xl space-y-6">
+            <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#E5C158]/10 border border-[#E5C158]/30 text-[#E5C158] text-xs font-bold">
+              <Sparkles className="w-4 h-4" />
+              <span>تنظیم تخصصی اوراق قضایی و اداری</span>
+            </span>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-black text-white leading-tight">
+              {data.ctaTitle}
+            </h2>
+            {data.ctaDescription && (
+              <p className="text-slate-300 text-sm md:text-base leading-relaxed">
+                {data.ctaDescription}
+              </p>
+            )}
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-2">
+              <Link
+                href={getSafeUrl(data.ctaPrimaryHref || '/request')}
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-gradient-to-r from-[#E5C158] to-[#C59B27] text-[#070B15] font-black text-sm md:text-base shadow-xl shadow-[#E5C158]/20 hover:brightness-110 transition-all"
+              >
+                <span>{data.ctaPrimaryBtnText || 'ثبت آنلاین درخواست'}</span>
+                <ArrowLeft className="w-5 h-5" />
+              </Link>
+              <Link
+                href="/knowledge"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-4 rounded-xl bg-slate-900 border border-slate-700 hover:border-slate-500 text-slate-200 font-bold text-sm md:text-base transition-colors"
+              >
+                <span>بازگشت به پایگاه دانش</span>
+              </Link>
+            </div>
+          </Container>
+        </section>
+      )}
     </div>
   );
 }

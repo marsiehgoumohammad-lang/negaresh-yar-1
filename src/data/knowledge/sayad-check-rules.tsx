@@ -520,6 +520,12 @@ export const sayadCheckRulesData: KnowledgeArticleData = {
       category: 'مالیات و اسناد تجاری',
     },
     {
+      title: 'چک ضمانت و حسن انجام کار؛ شرایط، خطرات، نحوه وصول و استرداد',
+      href: '/knowledge/guarantee-check-rules',
+      desc: 'راهنمای تخصصی ماهیت چک‌های ضمانتی، دادخواست استرداد لاشه و ابطال اجراییه.',
+      category: 'مالیات و اسناد تجاری',
+    },
+    {
       title: 'رفع سوء اثر چک برگشتی؛ روش‌ها، مدارک و مراحل اقدام',
       href: '/knowledge/check-bad-credit-removal',
       desc: 'راهنمای ۵ روش قانونی رفع سوء اثر از چک برگشتی صیادی، تأمین موجودی، رضایت محضری و سفید شدن رنگ صیاد.',
