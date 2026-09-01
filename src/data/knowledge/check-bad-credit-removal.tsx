@@ -461,6 +461,12 @@ export const checkBadCreditRemovalData: KnowledgeArticleData = {
   // Related Articles
   relatedArticles: [
     {
+      title: 'چک ضمانت و حسن انجام کار؛ شرایط، خطرات، نحوه وصول و استرداد لاشه',
+      href: '/knowledge/guarantee-check-rules',
+      desc: 'راهنمای کامل چک ضمانت استخدام، اجاره و پیمانکاری، وضعیت کیفری و شرایط ابطال اجراییه.',
+      category: 'مالیات و اسناد تجاری',
+    },
+    {
       title: 'اجراییه مستقیم چک صیادی ماده ۲۳؛ شرایط، مراحل و نحوه ابطال',
       href: '/knowledge/sayad-check-execution-article-23',
       desc: 'سریع‌ترین روش وصول وجه چک صیادی بدون دادخواست ماهوی و بدون پرداخت هزینه ۳.۵ درصدی دادرسی.',
