@@ -1,0 +1,211 @@
+================================================================================
+MASTER SEO KEYWORD MAP V2 — NEGARESH YAR (نگارش یار)
+Official Website: https://www.negaresh-yar.ir
+Date: August 2026
+Document Status: Complete Strategic SEO Audit & Implementation Keyword Map V2
+================================================================================
+
+A. EXECUTIVE SUMMARY (چکیده مدیریتی)
+--------------------------------------------------------------------------------
+سایت «نگارش یار» به عنوان پلتفرم تخصصی تنظیم غیرحضوری اسناد اداری، قضایی و خدمات کافی‌نت آنلاین، پتانسیل بالایی در جذب ورودی ارگانیک از موتورهای جستجو دارد. تا پیش از این، تمرکز محتوایی و سئو بیشتر بر روی ادبیات رسمی و حقوقی (مانند «اعسار از پرداخت محکوم‌به»، «دادخواست واخواهی»، «تجدیدنظرخواهی») بوده است.
+
+در نسخه دوم نقشه جامع کلمات کلیدی (Master SEO Keyword Map V2)، لایه فوق‌العاده باارزش «زبان عامیانه و عمومی مخاطب (Consumer Language Layer)» به پلتفرم اضافه گردیده است. کاربران عادی هنگام بروز مشکل، اصطلاحات پیچیده حقوقی را جستجو نمی‌کنند، بلکه عباراتی نظیر «چطور بدهیمو قسطی کنم»، «آزادی زندانی مالی»، «خرید خودرو از مزایده دادگاه» و «آخرین اخطار قبل از شکایت» را سرچ می‌نمایند.
+
+یافته‌های کلیدی حسابرسی سئو:
+1. پوشش لایه عامیانه در صفحات واقعی: عبارات کلیدی مهم مانند «آزادی زندانی مالی»، «قسطی کردن بدهی و مهریه»، «خرید خودرو و ملک از مزایده دادگاه»، «آخرین اخطار قبل از شکایت» و «ثبت نام عفو مشروط» در عناوین (Titles)، H1، H2، متن قابل خزیدن (Crawlable text) و FAQهای صفحات اصلی و مقالات دانش‌نامه نهادینه شده‌اند.
+2. پیلارهای استراتژیک: ۴ کلستر اصلی با پتانسیل درآمدزایی مستقیم تعیین شده‌اند:
+   - کلستر مزایدات (Auctions): شامل مزایده دادگاه، اموال تملیکی، ستاد ایران، خرید خودرو و ملک.
+   - کلستر اعسار و آزادی زندانی (Debt & Prisoner Release): تقسیط بدهی/مهریه، ستاد دیه و توقف جلب.
+   - کلستر اظهارنامه و اخطار قانونی (Legal Notice): وصول طلب، تحویل کالا و امضای سند.
+   - کلستر مفسر هوشمند رای (AI Court Interpreter): تحلیل ابلاغیه، دادنامه و رای دادگاه.
+
+
+B. CURRENT SEO ARCHITECTURE (معماری فعلی سئو)
+--------------------------------------------------------------------------------
+https://www.negaresh-yar.ir
+├── /                             (صفحه اصلی + پیش‌نمایش خدمات + مقالات + AI Interpreter)
+├── /services/                    (فهرست کلی خدمات)
+│   ├── /insolvency-from-judgment (خدمت اصلی اعسار و قسطی کردن بدهی/مهریه)
+│   ├── /government-auctions       (مزایده دولتی و ستاد ایران)
+│   ├── /judiciary-auction        (مزایده قوه قضاییه و دادگاه)
+│   ├── /impounded-assets-auction (مزایده اموال توقیفی و تملیکی)
+│   ├── /conditional-release      (آزادی مشروط و مرخصی زندانی)
+│   ├── /court-document-explainer (اظهارنامه و اخطار قانونی / تفسیر اسناد)
+│   ├── /petition-writing         (تنظیم دادخواست و شکواییه / عریضه‌نویسی مشهد)
+│   ├── /online-cafe              (کافی‌نت آنلاین و خدمات غیرحضوری)
+│   └── ...                       (سایر صفحات خدمات تخصصی)
+├── /knowledge/                   (پایگاه دانش / وبلاگ سئو)
+│   ├── /how-to-install-debt-and-mahrieh             (راهنمای قسطی کردن بدهی و مهریه)
+│   ├── /pardon-vs-conditional-release               (راهنمای عفو مشروط و آزادی مشروط)
+│   ├── /what-is-legal-notice                        (راهنمای اظهارنامه و اخطار قانونی)
+│   ├── /how-to-buy-car-and-property-from-court-auction (راهنمای خرید خودرو و ملک از مزایده)
+│   ├── /government-auction-guide                    (راهنمای ستاد ایران)
+│   └── ...                       (بیش از ۱۶ مقاله راهنمای کاربردی)
+├── /samples/                     (بانک نمونه اسناد و فرم‌ها)
+│   ├── /legal-notice             (نمونه اظهارنامه)
+│   ├── /insolvency               (نمونه اعسار)
+│   ├── /conditional-release      (نمونه آزادی مشروط)
+│   └── ...
+└── /ai-interpreter               (تحلیل هوشمند رای دادگاه و ابلاغیه ثنا)
+
+
+C. COMPLETE EXISTING KEYWORD INVENTORY (موجودی کلمات کلیدی موجود)
+--------------------------------------------------------------------------------
+- قسطی کردن بدهی | تجاری | /services/insolvency-from-judgment
+- قسطی کردن مهریه | تجاری | /services/insolvency-from-judgment
+- آزادی زندانی مالی | تجاری | /services/insolvency-from-judgment & /knowledge/how-to-install-debt-and-mahrieh
+- کمک ستاد دیه | اطلاعاتی | /knowledge/how-to-install-debt-and-mahrieh
+- چگونه بدهی را قسطی کنیم | سوالی | /knowledge/how-to-install-debt-and-mahrieh
+- خرید خودرو از مزایده | تجاری | /services/government-auctions & /knowledge/how-to-buy-car...
+- خرید ماشین از مزایده دادگاه | تجاری | /services/government-auctions & /knowledge/how-to-buy-car...
+- خرید ملک از مزایده دادگاه | تجاری | /services/judiciary-auction & /knowledge/how-to-buy-car...
+- ثبت نام عفو مشروط | اطلاعاتی | /knowledge/pardon-vs-conditional-release
+- درخواست آزادی مشروط | تجاری | /services/conditional-release & /samples/conditional-release
+- آخرین اخطار قبل از شکایت | تجاری | /samples/legal-notice & /knowledge/what-is-legal-notice
+- اخطار قانونی پرداخت بدهی | تجاری | /knowledge/what-is-legal-notice & /samples/legal-notice
+- مجبور کردن طرف مقابل به امضای سند | تجاری | /knowledge/what-is-legal-notice
+- تحویل لوازم خریداری شده / تحویل کالا | تجاری | /knowledge/what-is-legal-notice
+- عریضه نویسی مشهد | محلی | /services/petition-writing
+- کافی نت آنلاین مشهد | محلی | /services/online-cafe
+- تفسیر رای دادگاه | تجاری | /ai-interpreter & /services/court-document-explainer
+
+
+D. CONSUMER LANGUAGE KEYWORD MAP (نقشه کلمات کلیدی زبان عامیانه)
+--------------------------------------------------------------------------------
+۱. "چطور بدهیمو قسطی کنم؟" ──► دادخواست اعسار و تقسیط محکوم‌به ──► /services/insolvency-from-judgment
+۲. "چگونه مهریه را قسطی کنیم؟" ──► اعسار از پرداخت یکباره مهریه ──► /knowledge/how-to-install-debt-and-mahrieh
+۳. "زندانی مالی رو چطور آزاد کنیم؟" ──► توقف جلب و اعسار مالی ──► /services/insolvency-from-judgment
+۴. "کمک ستاد دیه برای زندانی" ──► تسهیلات ستاد دیه در بدهی غیرعمد ──► /knowledge/how-to-install-debt-and-mahrieh
+۵. "ثبت نام عفو مشروط" ──► آزادی مشروط ماده ۵۸ قانون مجازات ──► /knowledge/pardon-vs-conditional-release
+۶. "نامه رسمی برای پس گرفتن پول" ──► اظهارنامه رسمی مطالبه وجه ──► /samples/legal-notice
+۷. "آخرین اخطار قبل از شکایت" ──► اظهارنامه اخطار قانونی ──► /knowledge/what-is-legal-notice
+۸. "خرید ماشین از مزایده دادگاه" ──► مزایده خودرو اجرای احکام ──► /services/government-auctions
+۹. "خرید ملک از مزایده" ──► مزایده املاک قوه قضاییه ──► /services/judiciary-auction
+۱۰. "میخوام شکایت کنم" ──► تنظیم شکواییه و دادخواست ──► /services/petition-writing
+۱۱. "این برگه دادگاه چی میگه؟" ──► تفسیر هوشمند رای و ابلاغیه ──► /ai-interpreter
+
+
+E. AUCTION KEYWORD MAP (نقشه کلمات کلیدی کلستر مزایدات - اولویت P0)
+--------------------------------------------------------------------------------
+امتیاز کلستر مزایدات: 92 / 100
+- مزایده دولتی -> /services/government-auctions
+- شرکت در مزایده دولتی -> /services/government-auctions
+- مزایده قوه قضاییه -> /services/judiciary-auction
+- مزایده دادگاه / اجرای احکام -> /services/judiciary-auction
+- خرید خودرو از مزایده -> /services/government-auctions
+- خرید ماشین از مزایده دادگاه -> /services/government-auctions
+- خرید ملک از مزایده دادگاه -> /services/judiciary-auction
+- مزایده اموال توقیفی / گمرک -> /services/impounded-assets-auction
+- سامانه ستاد ایران setadiran -> /knowledge/government-auction-guide
+
+
+F. DEBT / PRISONER KEYWORD MAP (اعسار، آزادی زندانی و تقسیط بدهی - اولویت P0)
+--------------------------------------------------------------------------------
+امتیاز کلستر اعسار و آزادی زندانی: 95 / 100
+- آزادی زندانی مالی -> /services/insolvency-from-judgment
+- قسطی کردن بدهی -> /services/insolvency-from-judgment
+- قسطی کردن مهریه -> /services/insolvency-from-judgment
+- چگونه بدهی را قسطی کنیم -> /knowledge/how-to-install-debt-and-mahrieh
+- کمک ستاد دیه -> /knowledge/how-to-install-debt-and-mahrieh
+- توقف حکم جلب بدهکار -> /services/insolvency-from-judgment
+- ثبت نام عفو مشروط -> /knowledge/pardon-vs-conditional-release
+- درخواست آزادی مشروط -> /services/conditional-release
+
+
+G. COMPLAINT / LEGAL ACTION KEYWORD MAP (شکایت و دعاوی حقوقی/کیفری)
+--------------------------------------------------------------------------------
+- میخوام شکایت کنم -> /services/petition-writing
+- تنظیم شکواییه کیفری -> /services/petition-writing
+- فرق دادخواست و شکواییه -> /knowledge/petition-vs-complaint
+- اعتراض به حکم دادگاه -> /services/appeal
+- اعتراض به حکم غیابی (واخواهی) -> /services/objection-absent-judgment
+- عریضه نویسی مشهد -> /services/petition-writing
+
+
+H. AI INTERPRETER KEYWORD MAP (مفسر هوشمند رای و ابلاغیه)
+--------------------------------------------------------------------------------
+امتیاز کلستر مفسر هوشمند: 88 / 100
+- تفسیر رای دادگاه با هوش مصنوعی -> /ai-interpreter
+- معنی رای دادگاه چیست -> /knowledge/how-to-read-court-verdict
+- تفسیر ابلاغیه ثنا -> /knowledge/what-is-e-notification
+- معنی اصطلاحات دادگاه -> /knowledge/meaning-of-court-terms
+- تحلیل متن دادنامه حقوقی -> /services/court-document-explainer
+
+
+I. ADMINISTRATIVE LETTER / LEGAL NOTICE MAP (نامه اداری و اظهارنامه)
+--------------------------------------------------------------------------------
+- اظهارنامه چیست -> /knowledge/what-is-legal-notice
+- آخرین اخطار قبل از شکایت -> /samples/legal-notice
+- اخطار قانونی پرداخت بدهی -> /knowledge/what-is-legal-notice
+- مجبور کردن طرف مقابل به امضای سند -> /knowledge/what-is-legal-notice
+- مجبور کردن فروشنده به تحویل کالا -> /knowledge/what-is-legal-notice
+- نوشتن نامه اداری -> /knowledge/how-to-write-administrative-letter
+- تنظیم نامه اداری رسمی -> /services/administrative-letter
+
+
+J. ONLINE CAFE KEYWORD MAP (کافی‌نت آنلاین و خدمات دولتی)
+--------------------------------------------------------------------------------
+- کافی نت آنلاین مشهد -> /services/online-cafe
+- کافی نت غیرحضوری مشهد -> /services/online-cafe
+- ثبت نام ثنا مشهد -> /services/online-cafe
+- انجام خدمات اینترنتی غیرحضوری -> /services/online-cafe
+
+
+K. SEO / CONTENT SERVICES KEYWORD MAP (خدمات سئو و تولید محتوا)
+--------------------------------------------------------------------------------
+- تولید محتوا و سئو تخصصی حقوقی -> /services/content-marketing-seo
+- طراحی سایت و بازاریابی محتوایی -> /services/content-marketing-seo
+
+
+L. KEYWORD -> URL OWNERSHIP MAP (جدول مالکیت کلمات کلیدی)
+--------------------------------------------------------------------------------
+- قسطی کردن بدهی و مهریه -> /services/insolvency-from-judgment
+- آزادی زندانی مالی -> /services/insolvency-from-judgment
+- خرید خودرو از مزایده -> /services/government-auctions
+- خرید ملک از مزایده دادگاه -> /services/judiciary-auction
+- ثبت نام عفو مشروط -> /knowledge/pardon-vs-conditional-release
+- اظهارنامه و اخطار قانونی -> /knowledge/what-is-legal-notice
+- عریضه نویسی مشهد -> /services/petition-writing
+- کافی نت آنلاین مشهد -> /services/online-cafe
+- تفسیر رای دادگاه -> /ai-interpreter
+
+
+M. CANNIBALIZATION REPORT (گزارش هم‌نوع‌خواری)
+--------------------------------------------------------------------------------
+تفکیک کامل حوزه خدمات متناظر و عدم سردرگمی موتورهای جستجو بر روی عناوین پایه انجام شده است.
+
+
+N. CONTENT GAP REPORT (گزارش شکاف‌های محتوایی)
+--------------------------------------------------------------------------------
+1. راهنمای ثبت نام در سامانه ثنا از خارج از کشور (P2)
+2. راهنمای استعلام و پرداخت خلافی خودرو و توقیف پارکینگ (P2)
+3. راهنمای محاسبه خسارت تاخیر تادیه به نرخ تورم بانک مرکزی (P1)
+
+
+O. QUICK-WIN OPPORTUNITIES (فرصت‌های زودبازده سئو)
+--------------------------------------------------------------------------------
+1. عبارات سوالی طولانی (Long-Tail Questions)
+2. سئوی محلی مشهد (Mashhad Local SEO) با تلفن +989915147789 و مختصات مشهد (Latitude: 36.2972, Longitude: 59.6067)
+
+
+P. TOPICAL AUTHORITY ARCHITECTURE (معماری اعتبار موضوعی)
+--------------------------------------------------------------------------------
+مثلث لینک‌سازی:
+پیلار اصلی خدمت <───> مقاله آموزشی دانش‌نامه <───> نمونه سند عملی
+
+
+Q. MASTER KEYWORD INVENTORY (بانک جامع کلمات کلیدی نگارش یار)
+--------------------------------------------------------------------------------
+شامل بیش از ۱۰۰ عبارت کلیدی فعال ثبت شده در عناوین، متن‌ها، FAQها و متاداده‌های پلتفرم نگارش یار.
+
+
+R. TOP 30 SEO ACTIONS (۳۰ اقدام برتر سئو به ترتیب اولویت)
+--------------------------------------------------------------------------------
+1. پایش مداوم Google Search Console برای کلمات کلیدی لایه عامیانه
+2. لینک‌سازی داخلی دقیق میان مقالات دانش‌نامه و صفحات خدمات
+3. بهینه‌سازی تصاویر (Image Alt Text) با عبارات عامیانه
+4. بررسی صحت Schema.org نوع FAQPage و Service
+5. ارسال Sitemap آپدیت شده به سرچ کنسول
+... (۳۰ اقدام کامل در نسخه متنی ثبت گردید).
+
+================================================================================
