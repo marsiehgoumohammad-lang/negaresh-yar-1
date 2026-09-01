@@ -158,10 +158,16 @@ export const civilVsCriminalCheckData: KnowledgeArticleData = {
 
   relatedServices: [
     {
-      title: 'تنظیم تخصصی دادخواست قضایی',
-      href: '/services/petition-writing',
-      desc: 'تنظیم انواع دادخواست‌های چک، اجراییه ماده ۲۳ و تأمین خواسته توسط کارشناسان نگارش یار.',
-      badge: 'خدمت تخصصی',
+      title: 'تنظیم دادخواست مطالبه وجه چک و اجراییه ماده ۲۳',
+      href: '/services/check-claim',
+      desc: 'نگارش تخصصی تقاضای صدور اجراییه مستقیم ماده ۲۳ و دادخواست حقوقی با تأمین خواسته.',
+      badge: 'خدمت تخصصی چک',
+    },
+    {
+      title: 'تنظیم لایحه دفاعیه تخصصی دادگاه',
+      href: '/services/legal-brief',
+      desc: 'نگارش لوایح دفاعیه حقوقی، کیفری و اثبات تضمینی بودن چک.',
+      badge: 'لایحه دفاعیه',
     },
   ],
 
@@ -210,7 +216,7 @@ export const civilVsCriminalCheckData: KnowledgeArticleData = {
   ctaTitle: 'نیاز به وصول سریع وجه چک برگشتی خود دارید؟',
   ctaDescription: 'کارشناسان نگارش یار بهترین مسیر قانونی (کیفری، ماده ۲۳ یا اجرای ثبت) را بر اساس شرایط چک شما انتخاب و اوراق قضایی لازم را تنظیم می‌کنند.',
   ctaPrimaryBtnText: 'ثبت سفارش تنظیم اوراق وصول چک',
-  ctaPrimaryHref: '/request?service=petition-writing',
+  ctaPrimaryHref: '/services/check-claim',
   messengerMessage: 'سلام، درباره تفاوت چک حقوقی و کیفری و انتخاب بهترین روش وصول چک برگشتی سوال دارم. لطفا راهنمایی بفرمایید.',
 };
 

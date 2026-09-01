@@ -32,31 +32,33 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.85,
   }));
 
-  // Services priority routes (23 routes)
+  // Services priority routes (25 routes)
   const serviceSlugs = [
     'administrative-letter',
     'appeal',
     'bail-reduction',
+    'bail-to-surety',
+    'check-claim',
+    'conditional-release',
     'content-marketing-seo',
     'court-document-explainer',
+    'electronic-tag-request',
     'government-auctions',
+    'impounded-assets-auction',
+    'insolvency-court-fee',
+    'insolvency-from-judgment',
     'insolvency-petition',
+    'judiciary-auction',
     'leader-office-letter',
     'legal-brief',
+    'letter-to-governor',
+    'letter-to-tax-office',
+    'mashhad',
+    'objection-absent-judgment',
+    'objection-non-prosecution-order',
     'online-cafe',
     'petition-writing',
     'president-letter',
-    'objection-non-prosecution-order',
-    'objection-absent-judgment',
-    'conditional-release',
-    'bail-to-surety',
-    'insolvency-from-judgment',
-    'insolvency-court-fee',
-    'letter-to-governor',
-    'letter-to-tax-office',
-    'judiciary-auction',
-    'impounded-assets-auction',
-    'mashhad',
   ];
 
   const serviceRoutes = serviceSlugs.map((slug) => ({

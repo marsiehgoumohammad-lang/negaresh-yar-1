@@ -157,6 +157,12 @@ export const howToAppealCourtDecisionData: KnowledgeArticleData = {
       badge: 'تجدیدنظر',
     },
     {
+      title: 'اعسار از هزینه دادرسی تجدیدنظر',
+      href: '/services/insolvency-court-fee',
+      desc: 'معافیت از پرداخت ۴.۵٪ هزینه دادرسی مرحله تجدیدنظر.',
+      badge: 'هزینه دادرسی',
+    },
+    {
       title: 'تفسیر رای دادگاه با AI',
       href: '/services/court-document-explainer',
       desc: 'تحلیل نقاط ضعف دادنامه جهت نقض رای.',

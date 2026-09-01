@@ -194,7 +194,7 @@ export const whatIsInsolvencyData: KnowledgeArticleData = {
   ctaTitle: 'سفارش تنظیم دادخواست اعسار و تقسیط فوراً قبل از جلب',
   ctaDescription: 'فرصت ۳۰ روزه ماده ۳ را از دست ندهید. دادخواست اعسار خود را با استشهادیه استاندارد ماده ۸ به متخصصان نگارش یار بسپارید.',
   ctaPrimaryBtnText: 'ثبت سفارش دادخواست اعسار',
-  ctaPrimaryHref: '/request?service=petition-writing',
+  ctaPrimaryHref: '/services/insolvency-from-judgment',
 };
 
 export const whatIsInsolvencyMetadata: Metadata = {
