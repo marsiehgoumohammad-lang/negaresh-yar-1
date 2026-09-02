@@ -206,7 +206,7 @@ export const electronicTagRequestData: ServiceLandingData = {
     },
     {
       title: 'نمونه دادخواست اعسار از پرداخت دین',
-      href: '/samples/insolvency-petition',
+      href: '/samples/insolvency',
       desc: 'جهت تعیین تکلیف رد مال شاکی خصوصی برای دریافت پابند.',
       badge: 'نمونه اعسار',
     },

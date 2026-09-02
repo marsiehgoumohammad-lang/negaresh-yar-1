@@ -1002,7 +1002,7 @@ export function ServicesPageClient() {
               </Link>
 
               <Link
-                href="/blog"
+                href="/knowledge"
                 className="p-4 rounded-2xl bg-slate-900/90 border border-slate-800 hover:border-blue-400 text-right space-y-2 group transition-all"
               >
                 <div className="flex items-center justify-between text-blue-400">
@@ -1018,7 +1018,7 @@ export function ServicesPageClient() {
               </Link>
 
               <Link
-                href="/about"
+                href="/contact"
                 className="p-4 rounded-2xl bg-slate-900/90 border border-slate-800 hover:border-emerald-400 text-right space-y-2 group transition-all"
               >
                 <div className="flex items-center justify-between text-emerald-400">

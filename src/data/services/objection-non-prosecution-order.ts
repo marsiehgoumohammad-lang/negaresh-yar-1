@@ -240,7 +240,7 @@ export const objectionNonProsecutionOrderData: ServiceLandingData = {
   relatedSamples: [
     {
       title: 'نمونه لایحه اعتراض به قرار منع تعقیب',
-      href: '/samples/non-prosecution-objection',
+      href: '/samples/objection-non-prosecution-order',
       desc: 'مشاهده و بررسی ساختار حقوقی لایحه نقض قرار منع تعقیب و درخواست جلب به دادرسی.',
       badge: 'نمونه لایحه',
     },
@@ -261,7 +261,7 @@ export const objectionNonProsecutionOrderData: ServiceLandingData = {
   relatedArticles: [
     {
       title: 'شکواییه کیفری چیست و چگونه تنظیم می‌شود؟',
-      href: '/knowledge/what-is-criminal-complaint',
+      href: '/knowledge/how-to-write-complaint',
       desc: 'راهنمای جامع طرح شکایت کیفری در دادسرا و تفاوت آن با دادخواست حقوقی.',
       badge: 'مقاله حقوقی',
     },

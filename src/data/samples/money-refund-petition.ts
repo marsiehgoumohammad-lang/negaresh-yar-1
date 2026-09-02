@@ -79,7 +79,7 @@ export const sampleMoneyRefundPetitionData: SampleLandingData = {
     { title: 'کافی نت آنلاین', href: '/services#online-services', desc: 'ثبت نام ثنا و امور قضایی', badge: 'خدمات' }
   ],
   relatedArticles: [
-    { title: 'راهنمای ثبت نام ثنا', href: '/knowledge/sana-registration', desc: 'چگونه در سامانه ثنا ثبت نام کنیم؟', badge: 'آموزش' }
+    { title: 'راهنمای ثبت نام ثنا', href: '/knowledge/what-is-e-notification', desc: 'چگونه در سامانه ثنا ثبت نام کنیم؟', badge: 'آموزش' }
   ],
   ctaTitle: 'نیاز به تنظیم دادخواست اختصاصی دارید؟',
   ctaDescription: 'وکلای مجرب نگارش یار آماده تنظیم دقیق دادخواست شما هستند.',

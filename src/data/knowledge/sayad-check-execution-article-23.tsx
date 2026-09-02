@@ -631,6 +631,34 @@ export const sayadCheckExecutionArticle23Data: KnowledgeArticleData = {
     },
   ],
 
+  relatedSamples: [
+    {
+      title: 'نمونه دادخواست صدور اجراییه چک',
+      href: '/samples/check-execution-petition',
+      desc: 'الگوی آماده و رسمی جهت درخواست اجراییه مستقیم ماده ۲۳',
+      badge: 'الگوی رسمی',
+    },
+    {
+      title: 'نمونه دادخواست ابطال اجراییه چک',
+      href: '/samples/check-execution-objection',
+      desc: 'الگوی آماده اعتراض و ابطال اجراییه چک صیادی',
+      badge: 'ابطال اجراییه',
+    }
+  ],
+  relatedServices: [
+    {
+      title: 'وصول چک برگشتی (حقوقی و کیفری)',
+      href: '/services/check-claim',
+      desc: 'خدمات حقوقی توسط وکلای متخصص جهت وصول چک و اسناد تجاری.',
+      badge: 'وصول مطالبات',
+    },
+    {
+      title: 'تنظیم لایحه و دفاعیه تخصصی',
+      href: '/services/legal-brief',
+      desc: 'نگارش لایحه مستند به قوانین جهت ارائه به محاکم و دفاع از حقوق شما.',
+      badge: 'تنظیم لایحه',
+    }
+  ],
   relatedArticles: [
     {
       title: 'راهنمای کامل چک برگشتی و روش‌های وصول مطالبات',

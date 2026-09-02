@@ -446,7 +446,7 @@ export const checkBadCreditRemovalData: KnowledgeArticleData = {
   relatedSamples: [
     {
       title: 'نمونه دادخواست استرداد لاشه چک برگشتی',
-      href: '/samples/check-restitution-petition',
+      href: '/samples/check-carcass-restitution',
       desc: 'متن استاندارد دادخواست حقوقی الزام خوانده به استرداد اصل لاشه چک پس از تسویه حساب.',
       badge: 'الگوی آماده',
     },

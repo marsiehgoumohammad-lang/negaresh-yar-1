@@ -14,10 +14,7 @@ import {
   Clock,
   Search,
   AlertCircle,
-  HelpCircle,
   FileText,
-  AlertTriangle,
-  StopCircle,
 } from 'lucide-react';
 
 export function AbsentJudgmentObjectionGuideSection() {

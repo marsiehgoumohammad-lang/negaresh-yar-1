@@ -167,7 +167,7 @@ export const sampleInsultDefamationDefenseData: SampleLandingData = {
     },
     {
       title: 'تنظیم شکواییه و اعلام جرم',
-      href: '/services/complaint-writing',
+      href: '/services/petition-writing',
       badge: 'شکواییه',
       desc: 'نگارش شکواییه‌های کیفری و دفاع از بزه دیده در مراجع قضایی ثنا.',
     },

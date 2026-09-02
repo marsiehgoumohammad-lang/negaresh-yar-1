@@ -65,7 +65,7 @@ export const bojnurdCityData: LawyerCityData = {
     { title: 'دادخواست اعسار و تقسیط', href: '/services/insolvency-petition', badge: 'اعسار', desc: 'تقسیط بدهی دادگاه' },
   ],
   relatedSamples: [
-    { title: 'نمونه دادخواست تقسیم ترکه و فروش ماترک', href: '/samples/inheritance-division-estate-sale', badge: 'ارث', desc: 'تحریر و تقسیم اموال موروثی' },
+    { title: 'نمونه دادخواست تقسیم ترکه و فروش ماترک', href: '/samples/inheritance-certificate-petition', badge: 'ارث', desc: 'تحریر و تقسیم اموال موروثی' },
     { title: 'نمونه لایحه دفاعیه توهین و افترا', href: '/samples/insult-defamation-defense', badge: 'کیفری', desc: 'دفاع مستند در دادسرا' },
   ],
   relatedKnowledge: [

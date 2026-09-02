@@ -174,7 +174,7 @@ export const sampleArticle477RequestData: SampleLandingData = {
     },
     {
       title: 'تنظیم لایحه تجدیدنظرخواهی و فرجام‌خواهی',
-      href: '/services/appeal-writing',
+      href: '/services/appeal',
       badge: 'تجدیدنظرخواهی',
       desc: 'اعتراض تخصصی به آرای محاکم در دادگاه تجدیدنظر استان و دیوان عالی کشور.',
     },

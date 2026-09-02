@@ -1,6 +1,6 @@
 import React from 'react';
 import { Container } from '@/components/ui/container';
-import { FileText, Users, Scale, FileWarning, HelpCircle, CheckCircle2, XCircle, ArrowLeft, TrendingUp } from 'lucide-react';
+import { FileText, Scale, FileWarning, HelpCircle, CheckCircle2, XCircle, ArrowLeft, TrendingUp } from 'lucide-react';
 import Link from 'next/link';
 
 export function CheckClaimGuideSection() {

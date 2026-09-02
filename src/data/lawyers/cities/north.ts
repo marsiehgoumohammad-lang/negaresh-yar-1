@@ -103,7 +103,7 @@ export const gorganCityData: LawyerCityData = {
   ],
   relatedSamples: [
     { title: 'نمونه لایحه اعتراض به کارشناسی', href: '/samples/expert-opinion-objection', badge: 'کارشناسی', desc: 'اعتراض به کارشناس رسمی' },
-    { title: 'نمونه دادخواست تقسیم ترکه', href: '/samples/inheritance-division-estate-sale', badge: 'ارث', desc: 'تقسیم ترکه و فروش ماترک' },
+    { title: 'نمونه دادخواست تقسیم ترکه', href: '/samples/inheritance-certificate-petition', badge: 'ارث', desc: 'تقسیم ترکه و فروش ماترک' },
   ],
   relatedKnowledge: [
     { title: 'اعسار چیست و قوانین آن', href: '/knowledge/what-is-insolvency', badge: 'اعسار', desc: 'نحوه اثبات اعسار' },

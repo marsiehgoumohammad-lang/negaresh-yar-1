@@ -27,8 +27,6 @@ import {
   Layers,
   AlertTriangle,
   ChevronLeft,
-  ArrowLeft,
-  CheckSquare,
 } from 'lucide-react';
 import { ALL_LAWYER_CITIES } from '@/data/lawyers/lawyer-referral-cities';
 import { LawyerMessengerCTA } from './LawyerMessengerCTA';

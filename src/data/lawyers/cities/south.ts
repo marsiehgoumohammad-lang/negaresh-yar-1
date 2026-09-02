@@ -176,7 +176,7 @@ export const yasujCityData: LawyerCityData = {
     { title: 'دادخواست اعسار و تقسیط', href: '/services/insolvency-petition', badge: 'اعسار', desc: 'تقسیط بدهی دادگاه' },
   ],
   relatedSamples: [
-    { title: 'نمونه دادخواست تقسیم ترکه', href: '/samples/inheritance-division-estate-sale', badge: 'ارث', desc: 'تقسیم ترکه و ماترک' },
+    { title: 'نمونه دادخواست تقسیم ترکه', href: '/samples/inheritance-certificate-petition', badge: 'ارث', desc: 'تقسیم ترکه و ماترک' },
     { title: 'نمونه لایحه اعتراض به کارشناسی', href: '/samples/expert-opinion-objection', badge: 'کارشناسی', desc: 'اعتراض به کارشناس' },
   ],
   relatedKnowledge: [
@@ -213,7 +213,7 @@ export const shahrekordCityData: LawyerCityData = {
     { title: 'دادخواست اعسار و تقسیط', href: '/services/insolvency-petition', badge: 'اعسار', desc: 'تقسیط بدهی دادگاه' },
   ],
   relatedSamples: [
-    { title: 'نمونه دادخواست تقسیم ترکه', href: '/samples/inheritance-division-estate-sale', badge: 'ارث', desc: 'تقسیم ترکه و ماترک' },
+    { title: 'نمونه دادخواست تقسیم ترکه', href: '/samples/inheritance-certificate-petition', badge: 'ارث', desc: 'تقسیم ترکه و ماترک' },
     { title: 'نمونه دادخواست استرداد لاشه چک', href: '/samples/check-carcass-restitution', badge: 'چک', desc: 'استرداد چک امانی' },
   ],
   relatedKnowledge: [

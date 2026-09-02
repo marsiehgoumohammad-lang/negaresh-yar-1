@@ -2,33 +2,20 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
-import { motion, AnimatePresence } from 'motion/react';
+import { motion } from 'motion/react';
 import {
   AlertCircle,
   CheckCircle2,
   Clock,
   FileText,
-  Gavel,
-  ShieldCheck,
   Scale,
   ArrowLeft,
   AlertTriangle,
   Zap,
-  Building2,
-  Search,
   Check,
-  HelpCircle,
   Layers,
-  Calculator,
-  RefreshCw,
-  Lock,
   Sparkles,
-  PhoneCall,
-  ChevronLeft,
-  Banknote,
-  Send,
   SlidersHorizontal,
-  FileCheck2,
 } from 'lucide-react';
 
 interface DecisionOption {
@@ -50,7 +37,7 @@ interface DecisionOption {
 export function BouncedCheckGuideSection() {
   const [activeTab, setActiveTab] = useState<'matrix' | 'steps' | 'methods' | 'mistakes' | 'timelines'>('matrix');
   const [filterCheckType, setFilterCheckType] = useState<'all' | 'sayad' | 'old' | 'guarantee'>('all');
-  const [filterTarget, setFilterTarget] = useState<'all' | 'drawer' | 'guarantor'>('all');
+
 
   const decisionMatrix: DecisionOption[] = [
     {

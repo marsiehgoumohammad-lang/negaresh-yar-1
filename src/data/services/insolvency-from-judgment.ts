@@ -239,13 +239,13 @@ export const insolvencyFromJudgmentData: ServiceLandingData = {
     },
     {
       title: 'تنظیم لایحه دفاعیه دادگاه',
-      href: '/services/legal-brief-writing',
+      href: '/services/legal-brief',
       desc: 'نگارش لوایح دفاعیه مستدل و استناد به قوانین در جلسات رسیدگی.',
       badge: 'لایحه دفاعیه',
     },
     {
       title: 'تجدیدنظرخواهی و اعتراض به رأی',
-      href: '/services/appeal-writing',
+      href: '/services/appeal',
       desc: 'تنظیم دادخواست تجدیدنظرخواهی نسبت به آرای دادگاه بدوی.',
       badge: 'تجدیدنظرخواهی',
     },

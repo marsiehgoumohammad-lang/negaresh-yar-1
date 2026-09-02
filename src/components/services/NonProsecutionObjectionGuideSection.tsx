@@ -2,7 +2,6 @@ import React from 'react';
 import Link from 'next/link';
 import { Container } from '@/components/ui/container';
 import {
-  FileText,
   Scale,
   Layers,
   ArrowLeft,
@@ -15,7 +14,6 @@ import {
   Clock,
   Search,
   AlertCircle,
-  HelpCircle,
 } from 'lucide-react';
 
 export function NonProsecutionObjectionGuideSection() {
@@ -451,7 +449,7 @@ export function NonProsecutionObjectionGuideSection() {
               <ArrowLeft className="w-4 h-4" />
             </Link>
             <Link
-              href="/samples/non-prosecution-objection"
+              href="/samples/objection-non-prosecution-order"
               className="w-full sm:w-auto px-6 py-3.5 rounded-xl bg-slate-900 border border-slate-700 text-slate-200 font-bold text-xs sm:text-sm hover:text-white transition-colors"
             >
               مشاهده نمونه لایحه اعتراض

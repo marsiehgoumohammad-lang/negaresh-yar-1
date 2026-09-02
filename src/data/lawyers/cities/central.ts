@@ -103,7 +103,7 @@ export const arakCityData: LawyerCityData = {
   ],
   relatedSamples: [
     { title: 'نمونه شکایت اداره کار مطالبه مزد و بیمه', href: '/samples/labor-board-wage-insurance-complaint', badge: 'اداره کار', desc: 'شکایت سنوات و بیمه' },
-    { title: 'نمونه دادخواست اعسار از محکوم‌به', href: '/samples/insolvency.ts', badge: 'اعسار', desc: 'تقسیط بدهی محکمه' },
+    { title: 'نمونه دادخواست اعسار از محکوم‌به', href: '/samples/insolvency', badge: 'اعسار', desc: 'تقسیط بدهی محکمه' },
   ],
   relatedKnowledge: [
     { title: 'اعسار چیست و نحوه اثبات آن', href: '/knowledge/what-is-insolvency', badge: 'اعسار', desc: 'راهنمای اثبات اعسار' },

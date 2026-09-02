@@ -207,13 +207,13 @@ export const sampleInsolvencyAppealCourtFeeFormData: SampleLandingData = {
   relatedSamples: [
     {
       title: 'نمونه دادخواست اعسار از پرداخت محکوم‌به',
-      href: '/samples/insolvency-petition',
+      href: '/samples/insolvency',
       desc: 'الگوی تقسیط بدهی و جلوگیری از صدور حکم جلب.',
       badge: 'اعسار بدهی',
     },
     {
       title: 'نمونه دادخواست تجدیدنظرخواهی حقوقی',
-      href: '/samples/appeal-petition',
+      href: '/samples/appeal',
       desc: 'فرم آماده اعتراض به دادنامه بدوی حقوقی.',
       badge: 'تجدیدنظر حقوقی',
     },

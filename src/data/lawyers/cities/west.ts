@@ -176,7 +176,7 @@ export const khorramabadCityData: LawyerCityData = {
     { title: 'تجدیدنظر و اعتراض به رای', href: '/services/appeal', badge: 'اعتراض', desc: 'لایحه تجدیدنظر لرستان' },
   ],
   relatedSamples: [
-    { title: 'نمونه دادخواست تقسیم ترکه', href: '/samples/inheritance-division-estate-sale', badge: 'ارث', desc: 'تقسیم ترکه و ماترک' },
+    { title: 'نمونه دادخواست تقسیم ترکه', href: '/samples/inheritance-certificate-petition', badge: 'ارث', desc: 'تقسیم ترکه و ماترک' },
     { title: 'نمونه لایحه دفاعیه توهین و افترا', href: '/samples/insult-defamation-defense', badge: 'کیفری', desc: 'دفاع در دادسرا' },
   ],
   relatedKnowledge: [

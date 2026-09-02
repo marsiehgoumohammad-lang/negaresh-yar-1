@@ -436,7 +436,7 @@ export function LawyerCityTemplate({ cityData }: LawyerCityTemplateProps) {
                         <ChevronLeft className="w-4 h-4 text-slate-400" />
                       </Link>
                       <Link
-                        href="/services/petition"
+                        href="/services/petition-writing"
                         className="flex items-center justify-between p-2.5 rounded-xl bg-slate-800/60 hover:bg-slate-800 text-xs text-slate-200 hover:text-[#E5C158] transition-colors"
                       >
                         <span>تنظیم دادخواست و شکواییه</span>

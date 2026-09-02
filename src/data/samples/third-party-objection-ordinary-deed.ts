@@ -222,13 +222,13 @@ export const sampleThirdPartyObjectionOrdinaryDeedData: SampleLandingData = {
     },
     {
       title: 'نمونه دادخواست اعسار از محکوم‌به',
-      href: '/samples/insolvency-petition',
+      href: '/samples/insolvency',
       desc: 'تقاضای تقسیط بدهی و جلوگیری از جلب در اجرای احکام.',
       badge: 'اعسار و تقسیط',
     },
     {
       title: 'نمونه واخواهی از دادنامه غیابی',
-      href: '/samples/absent-judgment-objection',
+      href: '/samples/objection-absent-judgment',
       desc: 'اعتراض به آرای غیابی و توقف اقدامات اجرایی.',
       badge: 'واخواهی غیابی',
     },
