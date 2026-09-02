@@ -37,6 +37,7 @@ interface DecisionOption {
 export function BouncedCheckGuideSection() {
   const [activeTab, setActiveTab] = useState<'matrix' | 'steps' | 'methods' | 'mistakes' | 'timelines'>('matrix');
   const [filterCheckType, setFilterCheckType] = useState<'all' | 'sayad' | 'old' | 'guarantee'>('all');
+  const [filterTarget, setFilterTarget] = useState<'all' | 'drawer' | 'guarantor'>('all');
 
 
   const decisionMatrix: DecisionOption[] = [
