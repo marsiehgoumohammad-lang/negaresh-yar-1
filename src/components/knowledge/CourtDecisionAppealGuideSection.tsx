@@ -75,7 +75,7 @@ export function CourtDecisionAppealGuideSection() {
       legalArticles: 'مواد ۳۰۵ تا ۳۰۸ قانون آیین دادرسی مدنی و ماده ۴۰۶ قانون آیین دادرسی کیفری',
       suspensiveEffect: 'دادخواست واخواهی اجرای حکم را معلق می‌کند؛ اگر حکم اجرا شده باشد، اجرای قرار توقیف عملیات اجرایی صورت می‌پذیرد.',
       courtFee: 'هزینه دادرسی واخواهی معادل هزینه دادرسی مرحله بدوی است (امکان ثبت دادخواست همزمان اعسار فراهم است).',
-      criticalTip: 'پس از اتمام مهلت واخواهی، تازه مهلت ۲۰ روزه تجدیدنظرخواهی آغاز می‌شود؛ بنابراین اگر واخواهی نکنید حق تجدیدنظرخواهی شما محفوظ است.',
+      criticalTip: 'در صورت عدم ثبت واخواهی، پس از انقضای مهلت واخواهی، مهلت تجدیدنظرخواهی آغاز می‌شود؛ اما چنانچه واخواهی ثبت نمایید، دادگاه بدوی مجدداً رسیدگی ماهوی می‌کند و دادنامه صادره در مرحله واخواهی مجدداً ظرف ۲۰ روز قابل تجدیدنظر خواهد بود.',
       serviceHref: '/services/objection-absent-judgment',
       serviceText: 'تنظیم دادخواست تخصصی واخواهی',
       sampleHref: '/samples/objection-absent-judgment',
@@ -261,7 +261,7 @@ export function CourtDecisionAppealGuideSection() {
           }`}
         >
           <Layers className="w-4 h-4" />
-          <span>راهنمای انتخاب روش اعتراض (۶ روش قانونی)</span>
+          <span>بررسی اولیه مسیرهای احتمالی اعتراض (۶ روش قانونی)</span>
         </button>
 
         <button
@@ -273,7 +273,7 @@ export function CourtDecisionAppealGuideSection() {
           }`}
         >
           <Calculator className="w-4 h-4" />
-          <span>محاسبه‌گر مواعد قانونی و مهلت‌های ثنا</span>
+          <span>محاسبه‌گر تقریبی مواعد و مهلت‌های ثنا</span>
         </button>
 
         <button
@@ -308,10 +308,10 @@ export function CourtDecisionAppealGuideSection() {
         <div className="space-y-6">
           <div className="p-4 rounded-2xl bg-slate-900/80 border border-slate-800">
             <span className="text-xs text-[#E5C158] font-bold block mb-1">
-              انتخاب وضعیت حقوقی پرونده
+              بررسی اولیه وضعیت پرونده بر اساس خوداظهاری
             </span>
             <p className="text-xs text-slate-300 mb-4">
-              شرایط پرونده خود را از گزینه‌های زیر انتخاب نمایید تا روش قانونی دقیق، مهلت، مرجع و خطرات آن نمایش داده شود:
+              شرایط کلی پرونده خود را انتخاب نمایید تا مشخصات مسیر احتمالی، مرجع صالح، مهلت و الزامات قانونی جهت ارزیابی اولیه نمایش داده شود:
             </p>
 
             <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-2">
@@ -344,11 +344,20 @@ export function CourtDecisionAppealGuideSection() {
                   {currentRemedy.badge}
                 </span>
                 <h3 className="text-xl font-black text-white pt-1">
-                  روش قانونی: {currentRemedy.remedyType}
+                  مسیر پیشنهادی اولیه: {currentRemedy.remedyType}
                 </h3>
               </div>
               <span className="text-xs text-slate-400">
                 مستند قانونی: <strong className="text-slate-200">{currentRemedy.legalArticles}</strong>
+              </span>
+            </div>
+
+            {/* Advisory Note */}
+            <div className="p-3.5 rounded-xl bg-slate-950/80 border border-slate-800 text-xs text-slate-400 leading-relaxed flex items-start gap-2">
+              <Info className="w-4 h-4 text-[#E5C158] shrink-0 mt-0.5" />
+              <span>
+                <strong>تذکر رویه‌ای: </strong>
+                این پیشنهاد صرفاً یک ارزیابی اولیه بر اساس خوداظهاری شرایط پرونده است. انطباق قطعی روش دادرسی مستلزم تطبیق با سطر پایانی دادنامه بدوی، نوع ابلاغیه (واقعی یا قانونی در ثنا) و وضعیت قطعیت رای می‌باشد.
               </span>
             </div>
 
@@ -440,10 +449,10 @@ export function CourtDecisionAppealGuideSection() {
             </div>
             <div>
               <h3 className="text-lg md:text-xl font-bold text-white">
-                محاسبه‌گر دقیق مهلت‌های قانونی ابلاغ الکترونیک در ثنا
+                محاسبه‌گر تقریبی و تخمین اولیه مهلت‌های ثنا (ابزار کمکی)
               </h3>
               <p className="text-xs text-slate-400">
-                بر اساس قواعد مواعد مواد ۴۴۲ تا ۴۴۹ قانون آیین دادرسی مدنی
+                برآورد اولیه مهلت قانونی ۲۰ روزه / ۲ ماهه بدون احتساب استثنائات رویه‌ای
               </p>
             </div>
           </div>
@@ -480,6 +489,11 @@ export function CourtDecisionAppealGuideSection() {
                     مقیم خارج از کشور (مهلت ۲ ماهه)
                   </button>
                 </div>
+                {residenceType === 'abroad' && (
+                  <span className="text-[11px] text-slate-400 mt-1 block">
+                    * مهلت اشخاص مقیم خارج ۲ ماه تقویمی است (در اینجا به صورت تخمینی ۶۰ روز لحاظ شده است).
+                  </span>
+                )}
               </div>
 
               <div>
@@ -506,7 +520,7 @@ export function CourtDecisionAppealGuideSection() {
                   فرمول قانونی احتساب مواعد (مواد ۴۴۴ و ۴۴۵)
                 </span>
                 <p className="text-slate-300 leading-relaxed">
-                  ۱. روز ابلاغ (روزی که پیامک آمده یا دادنامه دیده شده) و روز اقدام (روزی که دادخواست ثبت می‌شود) جزو این ۲۰ روز شمرده نمی‌شوند؛ بنابراین شما در عمل ۲۲ روز مهلت دارید.
+                  ۱. طبق ماده ۴۴۵ ق.آ.د.م روز ابلاغ و روز اقدام جزء موعد محسوب نمی‌شوند و شمارش از فردای رویت آغاز می‌گردد؛ با این حال هرگز نباید ثبت اعتراض را به امید روزهای اضافه به تأخیر انداخت.
                 </p>
                 <p className="text-slate-300 leading-relaxed">
                   ۲. اگر روز پایانی موعد مصادف با تعطیل رسمی یا جمعه باشد، نخستین روز کاری پس از تعطیلات، پایان موعد خواهد بود.
@@ -517,32 +531,32 @@ export function CourtDecisionAppealGuideSection() {
             {/* Output Status Card */}
             <div className="p-6 rounded-2xl bg-slate-950 border border-slate-800 flex flex-col justify-between space-y-4">
               <div className="space-y-3">
-                <span className="text-xs text-slate-400 block">وضعیت مهلت قانونی شما:</span>
+                <span className="text-xs text-slate-400 block">ارزیابی اولیه مهلت قانونی شما:</span>
 
                 {!isExpired ? (
                   <div className="space-y-2">
                     <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-bold">
                       <CheckCircle2 className="w-4 h-4" />
-                      درون مهلت قانونی هستید
+                      برآورد اولیه: درون مهلت قانونی هستید
                     </div>
                     <div className="text-3xl font-black text-white">
-                      حدود <span className="text-[#E5C158]">{remainingDays}</span> روز فرصت دارید
+                      حدود <span className="text-[#E5C158]">{remainingDays}</span> روز فرصت تقریبی دارید
                     </div>
                     <p className="text-xs text-slate-300 leading-relaxed">
-                      پرونده شما در وضعیت امن زمانی قرار دارد. پیشنهاد می‌شود بلافاصله لایحه مستدل خود را تنظیم نموده و به روزهای پایانی موکول نکنید تا با قطعی سامانه‌ها مواجه نشوید.
+                      بر مبنای ارقام واردشده، فرصت اولیه شما باقی است. پیشنهاد می‌شود لایحه مستدل خود را بلافاصله نهایی نموده و ثبت آن را به روزهای پایانی موکول نکنید.
                     </p>
                   </div>
                 ) : (
                   <div className="space-y-2">
                     <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-rose-500/10 border border-rose-500/30 text-rose-400 text-xs font-bold">
                       <AlertTriangle className="w-4 h-4" />
-                      مهلت ۲۰ روزه اولیه سپری شده است
+                      مهلت اولیه بر اساس تاریخ اعلامی سپری شده است
                     </div>
                     <div className="text-2xl font-black text-rose-400">
-                      رای در آستانه قطعیت یا قطعی شده است
+                      رای احتمالاً قطعی یا در آستانه قطعیت است
                     </div>
                     <p className="text-xs text-slate-300 leading-relaxed">
-                      اگر عذر موجه قانونی دارید (ماده ۳۰۶ نظیر بیماری مانع حرکت، فوت بستگان درجه یک یا عدم اطلاع از رای غیابی)، می‌توانید همزمان با ثبت اعتراض، دادخواست پذیرش عذر موجه ثبت کنید. در غیر این صورت باید از روش‌های فوق‌العاده نظیر اعاده دادرسی یا ماده ۴۷۷ استفاده نمایید.
+                      اگر عذر موجه قانونی دارید (ماده ۳۰۶ نظیر بستری در بیمارستان، فوت بستگان درجه یک یا عدم اطلاع واقعی از رای غیابی)، می‌توانید همزمان با ثبت اعتراض، تقاضای پذیرش عذر موجه نمایید؛ در غیر این صورت بررسی راه‌های فوق‌العاده نظیر اعاده دادرسی لازم است.
                     </p>
                   </div>
                 )}
@@ -555,6 +569,15 @@ export function CourtDecisionAppealGuideSection() {
                 <span>تنظیم فوری دادخواست و لایحه در مهلت قانونی</span>
                 <ArrowLeft className="w-4 h-4" />
               </Link>
+            </div>
+          </div>
+
+          {/* Calculator Disclaimer Box */}
+          <div className="p-3.5 rounded-xl bg-slate-950/90 border border-amber-500/20 text-xs text-slate-400 leading-relaxed flex items-start gap-2">
+            <AlertTriangle className="w-4 h-4 text-[#E5C158] shrink-0 mt-0.5" />
+            <div>
+              <strong className="text-slate-200">سلب مسئولیت و محدودیت‌های ابزار محاسباتی: </strong>
+              این محاسبه‌گر صرفاً یک ابزار کمکی برای برآورد تقریبی است و نمی‌تواند استثنائات پیچیده رویه‌ای (مانند تعطیلات متوالی رسمی، توالی مهلت‌ها در احکام غیابی، نوع ابلاغ واقعی در برابر قانونی، و پذیرش اعذار موجه) را محاسبه نماید. تعیین موعد قطعی مستلزم رویت برگه ابلاغیه و تایید دفاتر خدمات قضایی یا کارشناس حقوقی است.
             </div>
           </div>
         </div>
@@ -593,13 +616,13 @@ export function CourtDecisionAppealGuideSection() {
                 </tr>
                 <tr>
                   <td className="p-3 font-bold text-slate-200">هزینه دادرسی تجدیدنظر</td>
-                  <td className="p-3">در دعاوی مالی ۴.۵٪ ارزش خواسته (بسیار سنگین در مبالغ بالا، نیازمند اعسار)</td>
+                  <td className="p-3">در دعاوی مالی ۴.۵٪ ارزش خواسته یا محکوم‌به (در دعاوی غیرمالی طبق تعرفه ثابت مقطوع سالیانه)</td>
                   <td className="p-3">تعرفه ثابت و ناچیز قضایی مصوب بودجه (صرف‌نظر از مبلغ یا نوع جرم)</td>
                 </tr>
                 <tr>
                   <td className="p-3 font-bold text-slate-200">قاعده عدم تشدید مجازات</td>
                   <td className="p-3">موضوعیت ندارد؛ دادگاه در چارچوب خواسته طرفین تصمیم می‌گیرد.</td>
-                  <td className="p-3">دادگاه تجدیدنظر نمی‌تواند مجازات متهم را صرفاً با تجدیدنظرخواهی خودش تشدید کند (ماده ۴۵۸ کیفری).</td>
+                  <td className="p-3">ممنوعیت تشدید مجازات صرفاً با اعتراض متهم (ماده ۴۵۸ کیفری)؛ در صورت اعتراض دادستان یا شاکی نیز تشدید فقط تا حداقل قانونی ممکن است.</td>
                 </tr>
                 <tr>
                   <td className="p-3 font-bold text-slate-200">مرجع اعتراض به آرای خاص</td>
@@ -723,8 +746,8 @@ export function CourtDecisionAppealGuideSection() {
                     الف
                   </span>
                   <span>
-                    <strong className="text-white">ادعای عدم اعتبار ادله یا اسناد استنادی: </strong>
-                    گزارش ضابطین، اظهارات شهود یا فیلم و مستندات پرونده دارای خدشه است.
+                    <strong className="text-white">ادعای عدم اعتبار ادله یا اسناد استنادی دادگاه: </strong>
+                    اسناد استنادی مجعول یا فاقد اعتبار بوده، یا گزارش ضابطین و اظهارات شهود دارای خدشه قانونی است.
                   </span>
                 </li>
                 <li className="flex items-start gap-2.5">
@@ -733,34 +756,34 @@ export function CourtDecisionAppealGuideSection() {
                   </span>
                   <span>
                     <strong className="text-white">ادعای مخالفت رای با قانون: </strong>
-                    اشتباه در تفسیر عناصر مادی یا روانی جرم یا نقص در انطباق ماده قانونی.
+                    اشتباه در تفسیر عناصر مادی یا معنوی جرم، نادیده گرفتن علل رافع مسئولیت کیفری یا نقص در انطباق ماده قانونی.
                   </span>
                 </li>
                 <li className="flex items-start gap-2.5">
                   <span className="w-5 h-5 rounded-full bg-blue-500/10 text-blue-400 font-bold text-[10px] flex items-center justify-center shrink-0 mt-0.5">
-                    ج
+                    پ
                   </span>
                   <span>
-                    <strong className="text-white">عدم صلاحیت دادگاه صادرکننده رای: </strong>
-                    رسیدگی به جرایم سنگین در صلاحیت کیفری یک بوده اما در کیفری دو رسیدگی شده است.
+                    <strong className="text-white">عدم صلاحیت دادگاه صادرکننده رای یا وجود یکی از جهات رد دادرس: </strong>
+                    رسیدگی خارج از صلاحیت ذاتی یا محلی شعبه بوده یا قاضی پرونده مشمول جهات رد دادرس (قرابت یا نفع شخصی) بوده است.
                   </span>
                 </li>
                 <li className="flex items-start gap-2.5">
                   <span className="w-5 h-5 rounded-full bg-blue-500/10 text-blue-400 font-bold text-[10px] flex items-center justify-center shrink-0 mt-0.5">
-                    د
+                    ت
                   </span>
                   <span>
-                    <strong className="text-white">عدم توجه دادگاه به ادله ابرازی دفاعی: </strong>
-                    عدم استعلام از مراجع رسمی، نادیده گرفتن کارشناسی یا عدم استماع دفاعیات متهم.
+                    <strong className="text-white">ادعای عدم توجه دادگاه به ادله ابرازی: </strong>
+                    عدم ارجاع به کارشناسی، عدم استعلام از مراجع رسمی یا نادیده گرفتن لوایح و دفاعیات اساسی متهم یا وکیل وی.
                   </span>
                 </li>
                 <li className="flex items-start gap-2.5">
                   <span className="w-5 h-5 rounded-full bg-blue-500/10 text-blue-400 font-bold text-[10px] flex items-center justify-center shrink-0 mt-0.5">
-                    هـ
+                    ث
                   </span>
                   <span>
-                    <strong className="text-white">عدم انطباق با عنوان مجرمانه یا عدم تناسب مجازات: </strong>
-                    عدم رعایت جهات تخفیف، تعلیق یا تشدید مجازات برخلاف ضوابط قانون مجازات اسلامی.
+                    <strong className="text-white">ادعای عدم انطباق یا عدم تناسب مجازات با جرم ارتکابی: </strong>
+                    عدم تناسب کیفر تعیین‌شده با ماهیت رفتار مرتکب یا عدم اعمال نهادهای ارفاقی مقرر در قانون مجازات اسلامی.
                   </span>
                 </li>
               </ul>
