@@ -82,7 +82,8 @@ export function GovernmentAuctionGuideSection() {
   const parsedAmount = parseInt(bidAmountInput.replace(/,/g, ''), 10) || 0;
   const deposit10Percent = Math.round(parsedAmount * 0.1);
   const remaining90Percent = parsedAmount - deposit10Percent;
-  const estimatedCourtFee = Math.round(parsedAmount * 0.05); // حق‌الاجرا نیم‌عشر
+  // هزینه‌های جانبی احتمالی انتقال سند، دفترخانه یا تعویض پلاک (تخمینی ۲ تا ۳ درصد طبق شرایط آگهی)
+  const estimatedTransferFees = Math.round(parsedAmount * 0.025);
 
   const formatNumber = (num: number) => {
     return num.toLocaleString('fa-IR');
@@ -516,36 +517,50 @@ export function GovernmentAuctionGuideSection() {
           {[
             {
               id: 'item1',
+              category: 'الزام قانونی آمره',
+              categoryColor: 'text-amber-400 bg-amber-500/10 border-amber-500/20',
               title: 'بازدید فیزیکی از مال در بازه ۵ روزه قبل از حراج (ماده ۱۲۶ ق.ا.ا.م)',
               desc: 'مشاهده سلامت بدنه، موتور، مدارک، یا وضعیت سازه و مصالح آپارتمان با هماهنگی دادورز.',
             },
             {
               id: 'item2',
+              category: 'مدیریت ریسک عملیاتی',
+              categoryColor: 'text-sky-400 bg-sky-500/10 border-sky-500/20',
               title: 'استعلام وضعیت تخلیه، معارض یا حضور مستاجر در ملک توقیفی',
               desc: 'اطمینان از اینکه خلع ید یا تخلیه بر عهده دادگاه است یا خریدار باید جداگانه دادخواست دهد.',
             },
             {
               id: 'item3',
+              category: 'الزام قانونی و ثبتی',
+              categoryColor: 'text-amber-400 bg-amber-500/10 border-amber-500/20',
               title: 'استعلام سوابق ثبتی، بازداشتی‌های مقدم و در رهن بودن ملک در اداره ثبت',
               desc: 'بررسی عدم توقیف مقدم توسط سایر طلبکاران یا قرار نگرفتن در وثیقه اسناد رسمی.',
             },
             {
               id: 'item4',
+              category: 'شرایط اختصاصی آگهی',
+              categoryColor: 'text-emerald-400 bg-emerald-500/10 border-emerald-500/20',
               title: 'بررسی خلافی سنگین، جرایم انباشته و امکان تعویض پلاک خودرو',
               desc: 'استعلام شماره شاسی در سامانه پلیس راهور برای اطمینان از اصالت فنی و عدم دو تکه بودن.',
             },
             {
               id: 'item5',
+              category: 'شرایط اختصاصی آگهی',
+              categoryColor: 'text-emerald-400 bg-emerald-500/10 border-emerald-500/20',
               title: 'محاسبه بدهی عوارض شهرداری، پایان‌کار، دارایی و مالیات نقل و انتقال',
               desc: 'روشن بودن مسئول پرداخت این هزینه‌ها در مفاد آگهی مزایده.',
             },
             {
               id: 'item6',
-              title: 'تامین ۱۰۰٪ وجه نقد باقیمانده (۹۰ درصد) ظرف حداکثر ۳۰ روز',
-              desc: 'عدم تکیه به فروش اموال دیگر یا وام بانکی نامطمئن که منجر به ضبط ۱۰٪ سپرده شود.',
+              category: 'مدیریت ریسک نقدینگی',
+              categoryColor: 'text-rose-400 bg-rose-500/10 border-rose-500/20',
+              title: 'تامین ۱۰۰٪ وجه نقد باقیمانده (۹۰ درصد) ظرف مهلت مقرر آگهی (حداکثر ۳۰ روز)',
+              desc: 'مهلت طبق آگهی تعیین می‌شود و سقف آن ۱ ماه است؛ تاخیر در وام موجب ضبط ۱۰٪ سپرده طبق ماده ۱۲۹ می‌شود.',
             },
             {
               id: 'item7',
+              category: 'الزام فنی و هویتی',
+              categoryColor: 'text-purple-400 bg-purple-500/10 border-purple-500/20',
               title: 'آماده‌سازی توکن گواهی امضای دیجیتال و حساب ثنا و ستاد به نام خود خریدار',
               desc: 'جلوگیری از رد پیشنهاد به دلیل عدم تطابق امضای الکترونیک یا نقص در اطلاعات بانکی.',
             },
@@ -567,7 +582,12 @@ export function GovernmentAuctionGuideSection() {
                 className="mt-1 w-4 h-4 rounded border-slate-700 text-emerald-600 focus:ring-emerald-500 focus:ring-offset-slate-900 bg-slate-800"
               />
               <div className="space-y-1">
-                <span className="text-xs font-bold block">{item.title}</span>
+                <div className="flex items-center gap-2">
+                  <span className={`text-[10px] font-bold px-2 py-0.5 rounded-md border ${item.categoryColor}`}>
+                    {item.category}
+                  </span>
+                  <span className="text-xs font-bold block">{item.title}</span>
+                </div>
                 <span className="text-[11px] text-slate-400 block leading-relaxed">
                   {item.desc}
                 </span>
@@ -650,17 +670,26 @@ export function GovernmentAuctionGuideSection() {
               <span className="text-[10px] text-slate-400 block">حداکثر ۱ ماه پس از برنده شدن</span>
             </div>
 
-            {/* Box 3: Court fee approx */}
+            {/* Box 3: Transfer & Notary approx */}
             <div className="p-4 rounded-xl bg-slate-900/80 border border-slate-700 space-y-1">
               <span className="text-[11px] text-slate-400 block font-medium">
-                حق‌الاجرا و مالیات تقریبی:
+                هزینه‌های انتقال و دفترخانه:
               </span>
               <span className="text-sm font-black text-slate-200 block">
-                {formatNumber(estimatedCourtFee)} <span className="text-[10px] font-normal">تومان</span>
+                {formatNumber(estimatedTransferFees)} <span className="text-[10px] font-normal">تومان</span>
               </span>
-              <span className="text-[10px] text-slate-400 block">طبق شرایط آگهی</span>
+              <span className="text-[10px] text-slate-400 block">تخمینی طبق آگهی</span>
             </div>
           </div>
+        </div>
+
+        {/* Legal Disclaimer Note on Fees */}
+        <div className="p-3.5 rounded-xl bg-slate-900/40 border border-slate-800 text-[11px] text-slate-400 leading-relaxed flex items-start gap-2.5">
+          <ShieldCheck className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
+          <span>
+            <strong className="text-slate-300">مستند قانونی ماده ۱۵۸ ق.ا.ا.م: </strong>
+            پرداخت نیم‌عشر اجرایی (۵٪ حق‌الاجرای دولت) قانوناً بر عهده محکوم‌علیه (بدهکار) است و از حاصل فروش کسر می‌شود؛ برنده مزایده موظف به پرداخت حق‌الاجرا مازاد بر ثمن پیشنهادی نیست و صرفاً هزینه‌های انتقال سند و دفترخانه را بر اساس شرایط آگهی می‌پردازد.
+          </span>
         </div>
       </div>
     </div>
