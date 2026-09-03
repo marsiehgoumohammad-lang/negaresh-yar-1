@@ -192,6 +192,12 @@ export const howToInstallDebtAndMahriehData: KnowledgeArticleData = {
 
   relatedArticles: [
     {
+      title: 'راهنمای جامع مطالبه مهریه',
+      href: '/knowledge/mahrieh-claim-guide',
+      desc: 'صفر تا صد نحوه اجرا گذاشتن مهریه و توقیف اموال.',
+      category: 'خانواده و ازدواج',
+    },
+    {
       title: 'اعسار چیست؟ شرایط و قوانین اعسار از بدهی و دادرسی',
       href: '/knowledge/what-is-insolvency',
       desc: 'بررسی مفهوم قانونی اعسار و قوانین حقوقی محکومیت‌های مالی.',

@@ -31,6 +31,7 @@ import { sayadCheckRulesData, sayadCheckRulesMetadata } from './sayad-check-rule
 import { checkBadCreditRemovalData, checkBadCreditRemovalMetadata } from './check-bad-credit-removal';
 import { sayadCheckExecutionArticle23Data, sayadCheckExecutionArticle23Metadata } from './sayad-check-execution-article-23';
 import { guaranteeCheckRulesData, guaranteeCheckRulesMetadata } from './guarantee-check-rules';
+import { mahriehClaimGuideData, mahriehClaimGuideMetadata } from './mahrieh-claim-guide';
 
 export * from './types';
 
@@ -134,6 +135,7 @@ export const ALL_KNOWLEDGE_ARTICLES: KnowledgeArticleData[] = [
   checkBadCreditRemovalData,
   sayadCheckExecutionArticle23Data,
   guaranteeCheckRulesData,
+  mahriehClaimGuideData,
 ];
 
 export const KNOWLEDGE_METADATA_MAP = {
@@ -159,6 +161,7 @@ export const KNOWLEDGE_METADATA_MAP = {
   'meaning-of-court-terms': meaningOfCourtTermsMetadata,
   'what-is-final-court-judgment': whatIsFinalCourtJudgmentMetadata,
   'how-to-install-debt-and-mahrieh': howToInstallDebtAndMahriehMetadata,
+  'mahrieh-claim-guide': mahriehClaimGuideMetadata,
   'pardon-vs-conditional-release': pardonVsConditionalReleaseMetadata,
   'what-is-legal-notice': whatIsLegalNoticeMetadata,
   'expert-panel-court': expertPanelCourtMetadata,

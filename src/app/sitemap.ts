@@ -14,6 +14,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     '/samples',
     '/knowledge',
     '/request',
+    '/contact',
     '/ai-interpreter',
     '/lawyer-referral',
     '/lawyer-partnership',
@@ -21,7 +22,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     url: `${baseUrl}${route}`,
     lastModified,
     changeFrequency: 'weekly' as const,
-    priority: route === '' ? 1.0 : route === '/lawyer-referral' ? 0.95 : 0.9,
+    priority: route === '' ? 1.0 : route === '/lawyer-referral' ? 0.95 : route === '/contact' ? 0.8 : 0.9,
   }));
 
   // Lawyer Referral City Landing Pages (31 Provincial Capitals)
@@ -53,6 +54,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     'legal-brief',
     'letter-to-governor',
     'letter-to-tax-office',
+    'mahrieh-claim',
     'mashhad',
     'objection-absent-judgment',
     'objection-non-prosecution-order',

@@ -2,7 +2,7 @@ import { SampleLandingData } from './types';
 
 export const sampleMahriehCourtPetitionData: SampleLandingData = {
   slug: 'mahrieh-court-petition',
-  category: 'undefined',
+  category: 'خانواده و ازدواج',
   title: 'نمونه دادخواست مطالبه مهریه از دادگاه | نگارش یار',
   metaTitle: 'نمونه دادخواست مطالبه مهریه از دادگاه | نگارش یار',
   metaDescription: 'دانلود نمونه دادخواست حقوقی مطالبه مهریه از طریق دادگاه خانواده (پس از مراجعه به اجرای ثبت) به همراه تامین خواسته.',
@@ -67,14 +67,14 @@ export const sampleMahriehCourtPetitionData: SampleLandingData = {
     }
 ],
   relatedServices: [
-    { title: 'ثبت درخواست نگارش لایحه', href: '/request', desc: 'نگارش تخصصی توسط کارشناسان حقوقی', badge: 'ویژه' },
-    { title: 'کافی نت آنلاین', href: '/services#online-services', desc: 'ثبت نام ثنا و امور قضایی', badge: 'خدمات' }
+    { title: 'مطالبه مهریه و توقیف اموال', href: '/services/mahrieh-claim', desc: 'نگارش دادخواست، توقیف اموال و پیگیری پرونده مهریه', badge: 'خدمت تخصصی' },
+    { title: 'کافی نت آنلاین', href: '/services/online-cafe', desc: 'ثبت نام ثنا و امور قضایی', badge: 'خدمات' }
   ],
   relatedArticles: [
-    { title: 'راهنمای ثبت نام ثنا', href: '/knowledge/what-is-e-notification', desc: 'چگونه در سامانه ثنا ثبت نام کنیم؟', badge: 'آموزش' }
+    { title: 'راهنمای جامع مطالبه مهریه', href: '/knowledge/mahrieh-claim-guide', desc: 'صفر تا صد نحوه اجرا گذاشتن مهریه و توقیف اموال.', badge: 'راهنمای کامل' }
   ],
-  ctaTitle: 'نیاز به تنظیم دادخواست اختصاصی دارید؟',
-  ctaDescription: 'وکلای مجرب نگارش یار آماده تنظیم دقیق دادخواست شما هستند.',
-  ctaPrimaryBtnText: 'ثبت سفارش نگارش',
-  ctaPrimaryHref: '/request'
+  ctaTitle: 'نیاز به تنظیم دادخواست اختصاصی یا وکیل مهریه دارید؟',
+  ctaDescription: 'وکلای مجرب نگارش یار آماده تنظیم دقیق دادخواست و پیگیری توقیف اموال شما هستند.',
+  ctaPrimaryBtnText: 'سفارش خدمات مطالبه مهریه',
+  ctaPrimaryHref: '/services/mahrieh-claim'
 };
