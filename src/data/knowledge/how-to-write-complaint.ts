@@ -205,7 +205,7 @@ export const howToWriteComplaintData: KnowledgeArticleData = {
   ],
 
   ctaTitle: 'سفارش تنظیم تخصصی شکواییه کیفری جهت ارسال به دادسرا',
-  ctaDescription: 'تنظیم فوری شکایت‌نامه متقن با استناد به قوانین جزایی و ضمانت ویرایش مجانی.',
+  ctaDescription: 'تنظیم فوری شکایت‌نامه متقن با استناد به قوانین جزایی و پشتیبانی ویرایش تکمیلی.',
   ctaPrimaryBtnText: 'ثبت سفارش شکواییه در پیام‌رسان',
   ctaPrimaryHref: '/request?service=petition-writing',
 };

@@ -12,6 +12,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     '',
     '/services',
     '/samples',
+    '/samples/administrative-letters',
     '/knowledge',
     '/request',
     '/contact',
@@ -22,7 +23,16 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     url: `${baseUrl}${route}`,
     lastModified,
     changeFrequency: 'weekly' as const,
-    priority: route === '' ? 1.0 : route === '/lawyer-referral' ? 0.95 : route === '/contact' ? 0.8 : 0.9,
+    priority:
+      route === ''
+        ? 1.0
+        : route === '/samples/administrative-letters'
+          ? 0.95
+          : route === '/lawyer-referral'
+            ? 0.95
+            : route === '/contact'
+              ? 0.8
+              : 0.9,
   }));
 
   // Lawyer Referral City Landing Pages (31 Provincial Capitals)
@@ -43,6 +53,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     'conditional-release',
     'content-marketing-seo',
     'court-document-explainer',
+    'document-writing',
     'electronic-tag-request',
     'government-auctions',
     'impounded-assets-auction',
@@ -72,21 +83,39 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
   // Dynamic Sample document routes (automatically retrieved from Samples Store)
   const publishedSamples = getPublishedSamples();
-  const sampleRoutes = publishedSamples.map((sample) => ({
-    url: `${baseUrl}/samples/${sample.slug}`,
-    lastModified: sample.updatedAt ? new Date(sample.updatedAt) : lastModified,
-    changeFrequency: 'weekly' as const,
-    priority: 0.85,
-  }));
+  const sampleRoutes = publishedSamples.map((sample) => {
+    let date = lastModified;
+    if (sample.updatedAt) {
+      const parsed = new Date(sample.updatedAt);
+      if (!isNaN(parsed.getTime())) {
+        date = parsed;
+      }
+    }
+    return {
+      url: `${baseUrl}/samples/${sample.slug}`,
+      lastModified: date,
+      changeFrequency: 'weekly' as const,
+      priority: 0.85,
+    };
+  });
 
   // Dynamic Knowledge article routes (only published articles from Single Source of Truth)
   const publishedArticles = await getPublishedArticles();
-  const knowledgeRoutes = publishedArticles.map((art) => ({
-    url: `${baseUrl}/knowledge/${art.slug}`,
-    lastModified: art.updatedAt ? new Date(art.updatedAt) : lastModified,
-    changeFrequency: 'weekly' as const,
-    priority: 0.8,
-  }));
+  const knowledgeRoutes = publishedArticles.map((art) => {
+    let date = lastModified;
+    if (art.updatedAt) {
+      const parsed = new Date(art.updatedAt);
+      if (!isNaN(parsed.getTime())) {
+        date = parsed;
+      }
+    }
+    return {
+      url: `${baseUrl}/knowledge/${art.slug}`,
+      lastModified: date,
+      changeFrequency: 'weekly' as const,
+      priority: 0.8,
+    };
+  });
 
   return [
     ...coreRoutes,

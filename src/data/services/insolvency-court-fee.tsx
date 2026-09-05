@@ -66,7 +66,7 @@ export const insolvencyCourtFeeData: ServiceLandingData = {
     {
       title: 'قبول فوری دادخواست',
       desc: 'تنظیم بدون ایراد شکلی طبق مواد ۵۰۴ تا ۵۱۳ قانون آیین دادرسی مدنی.',
-      metric: '۱۰۰٪ پذیرش اولیه',
+      metric: 'انطباق کامل شکلی',
     },
     {
       title: 'تحویل فوق‌سریع ۴ ساعته',

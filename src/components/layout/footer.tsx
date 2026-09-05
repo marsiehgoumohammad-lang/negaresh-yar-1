@@ -81,10 +81,12 @@ export function Footer() {
               <Link href="/samples" className="hover:underline">بانک نمونه اسناد</Link>
             </h3>
             <ul className="space-y-2 text-xs sm:text-sm text-slate-300">
+              <li><Link href="/samples/administrative-letters" className="hover:text-[#E5C158] transition-colors text-[#E5C158] font-semibold">مرجع نمونه نامه اداری و سازمانی</Link></li>
               <li><Link href="/samples/petition" className="hover:text-[#E5C158] transition-colors">نمونه دادخواست حقوقی</Link></li>
               <li><Link href="/samples/complaint" className="hover:text-[#E5C158] transition-colors">نمونه شکواییه کیفری</Link></li>
               <li><Link href="/samples/legal-brief" className="hover:text-[#E5C158] transition-colors">نمونه لایحه دفاعیه</Link></li>
-              <li><Link href="/samples/administrative-letter" className="hover:text-[#E5C158] transition-colors">نمونه نامه اداری و رسمی</Link></li>
+              <li><Link href="/samples/bank-letter" className="hover:text-[#E5C158] transition-colors">نمونه نامه به بانک (وام و تقسیط)</Link></li>
+              <li><Link href="/samples/municipality-letter" className="hover:text-[#E5C158] transition-colors">نمونه نامه به شهرداری و ماده ۱۰۰</Link></li>
               <li><Link href="/samples/appeal" className="hover:text-[#E5C158] transition-colors">نمونه دادخواست تجدیدنظر</Link></li>
               <li><Link href="/samples/insolvency" className="hover:text-[#E5C158] transition-colors">نمونه دادخواست اعسار</Link></li>
               <li><Link href="/samples" className="hover:text-[#E5C158] transition-colors font-bold text-[#E5C158]">مشاهده تمامی نمونه‌ها ←</Link></li>

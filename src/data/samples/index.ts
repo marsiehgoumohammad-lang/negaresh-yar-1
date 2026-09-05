@@ -19,7 +19,26 @@ import { sampleBreachOfTrustComplaintData } from './breach-of-trust-complaint';
 import { sampleTheftComplaintData } from './theft-complaint';
 import { sampleForgeryComplaintData } from './forgery-complaint';
 
+import { sampleBankLoanRequestData } from './bank-loan-request';
+import { sampleBankDebtInstallmentData } from './bank-debt-installment';
+import { sampleBankPenaltyWaiverData } from './bank-penalty-waiver';
+import { sampleBankMortgageReleaseData } from './bank-mortgage-release';
+import { sampleBankCheckClearingData } from './bank-check-clearing';
+import { sampleBankComplaintData } from './bank-complaint';
+import { sampleRealEstateRegistryLetterData } from './real-estate-registry-letter';
+import { sampleDiscretionaryPunishmentsLetterData } from './discretionary-punishments-letter';
+import { samplePassportOfficeLetterData } from './passport-office-letter';
+import { sampleReliefFoundationLetterData } from './relief-foundation-letter';
+import { sampleEducationOfficeLetterData } from './education-office-letter';
+
 import { sampleAdministrativeLetterData, sampleAdministrativeLetterMetadata } from './administrative-letter';
+import { sampleBankLetterData, sampleBankLetterMetadata } from './bank-letter';
+import { sampleMunicipalityLetterData, sampleMunicipalityLetterMetadata } from './municipality-letter';
+import { sampleSocialSecurityLetterData, sampleSocialSecurityLetterMetadata } from './social-security-letter';
+import { sampleCivilRegistryLetterData, sampleCivilRegistryLetterMetadata } from './civil-registry-letter';
+import { sampleLaborOfficeLetterData, sampleLaborOfficeLetterMetadata } from './labor-office-letter';
+import { sampleUniversityLetterData, sampleUniversityLetterMetadata } from './university-letter';
+import { sampleInspectionOrganizationLetterData, sampleInspectionOrganizationLetterMetadata } from './inspection-organization-letter';
 import { samplePresidentLetterData, samplePresidentLetterMetadata } from './president-letter';
 import { sampleLeaderOfficeLetterData, sampleLeaderOfficeLetterMetadata } from './leader-office-letter';
 import { samplePetitionData, samplePetitionMetadata } from './petition';
@@ -82,6 +101,13 @@ import { sampleInsolvencyAppealCourtFeeFormData, sampleInsolvencyAppealCourtFeeF
 import { sampleCheckCarcassRestitutionData, sampleCheckCarcassRestitutionMetadata } from './check-carcass-restitution';
 import { sampleInsultDefamationDefenseData, sampleInsultDefamationDefenseMetadata } from './insult-defamation-defense';
 import { sampleArticle477RequestData, sampleArticle477RequestMetadata } from './article-477-request';
+import { samplePowerCompanyLetterData } from './power-company-letter';
+import { sampleGasCompanyLetterData } from './gas-company-letter';
+import { sampleWaterCompanyLetterData } from './water-company-letter';
+import { sampleAgriculturalOfficeLetterData } from './agricultural-office-letter';
+import { sampleNaturalResourcesLetterData } from './natural-resources-letter';
+import { sampleGuildUnionLetterData } from './guild-union-letter';
+import { sampleTransportationRoadOfficeLetterData } from './transportation-road-office-letter';
 import { SampleLandingData } from './types';
 
 export const allSamplesList: {
@@ -119,6 +145,168 @@ export const allSamplesList: {
     category: 'نامه‌ها و عریضه‌های اداری',
     href: '/samples/leader-office-letter',
     data: sampleLeaderOfficeLetterData,
+  },
+  {
+    slug: 'bank-letter',
+    title: 'نمونه نامه به بانک | وام، تقسیط و بخشودگی سود',
+    badge: 'بانک و تسهیلات',
+    description: 'الگوی استاندارد مکاتبه با بانک‌ها جهت درخواست وام، تقسیط اقساط، بخشودگی جرایم دیرکرد و فک رهن وثیقه.',
+    category: 'نامه‌ها و عریضه‌های اداری',
+    href: '/samples/bank-letter',
+    data: sampleBankLetterData,
+  },
+  {
+    slug: 'municipality-letter',
+    title: 'نمونه نامه به شهرداری | تقسیط عوارض، پروانه و ماده ۱۰۰',
+    badge: 'شهرداری و ماده ۱۰۰',
+    description: 'متن استاندارد مکاتبه با شهرداری و کمیسیون ماده ۱۰۰ جهت تقسیط عوارض نوسازی، دفاعیه اضافه بنا و پایان‌کار.',
+    category: 'نامه‌ها و عریضه‌های اداری',
+    href: '/samples/municipality-letter',
+    data: sampleMunicipalityLetterData,
+  },
+  {
+    slug: 'social-security-letter',
+    title: 'نمونه نامه به سازمان تامین اجتماعی | بیمه بیکاری و سوابق',
+    badge: 'تامین اجتماعی',
+    description: 'الگوی مکاتبه با شعب تامین اجتماعی جهت برقراری بیمه بیکاری، بخشودگی جرایم کارفرما و احیای سوابق بیمه‌ای.',
+    category: 'نامه‌ها و عریضه‌های اداری',
+    href: '/samples/social-security-letter',
+    data: sampleSocialSecurityLetterData,
+  },
+  {
+    slug: 'civil-registry-letter',
+    title: 'نمونه نامه به ثبت احوال | تغییر نام و حذف پسوند',
+    badge: 'ثبت احوال و شناسنامه',
+    description: 'متن استاندارد درخواست از هیئت حل اختلاف ثبت احوال جهت تغییر نام کوچک، حذف پسوند فامیلی و اصلاح شناسنامه.',
+    category: 'نامه‌ها و عریضه‌های اداری',
+    href: '/samples/civil-registry-letter',
+    data: sampleCivilRegistryLetterData,
+  },
+  {
+    slug: 'labor-office-letter',
+    title: 'نمونه نامه اداری به اداره کار | بازرسی و سوابق بیمه',
+    badge: 'اداره کار و تعاون',
+    description: 'الگوی درخواست رسمی بازرسی کارگاه، الزام کارفرما به واریز بیمه ماده ۱۴۸ و سازش پیش از دادخواست کارگری.',
+    category: 'نامه‌ها و عریضه‌های اداری',
+    href: '/samples/labor-office-letter',
+    data: sampleLaborOfficeLetterData,
+  },
+  {
+    slug: 'university-letter',
+    title: 'نمونه نامه به رئیس دانشگاه | مرخصی، شهریه و حذف ترم',
+    badge: 'دانشگاه و آموزش عالی',
+    description: 'متن رسمی مکاتبه با ریاست و کمیسیون موارد خاص دانشگاه جهت مرخصی بدون سنوات، تقسیط شهریه و حذف ترم.',
+    category: 'نامه‌ها و عریضه‌های اداری',
+    href: '/samples/university-letter',
+    data: sampleUniversityLetterData,
+  },
+  {
+    slug: 'inspection-organization-letter',
+    title: 'نمونه نامه به سازمان بازرسی کل کشور | گزارش تخلفات',
+    badge: 'سازمان بازرسی کل کشور',
+    description: 'الگوی گزارشگری سوء جریان اداری، ترک فعل مسئولین، تبانی در مناقصات دولتی و ارتشاء در سامانه ۱۳۶.',
+    category: 'نامه‌ها و عریضه‌های اداری',
+    href: '/samples/inspection-organization-letter',
+    data: sampleInspectionOrganizationLetterData,
+  },
+  {
+    slug: 'bank-loan-request',
+    title: 'نمونه نامه درخواست وام از بانک | تسهیلات و اعتبار',
+    badge: 'تسهیلات و وام بانکی',
+    description: 'متن رسمی درخواست وام قرض‌الحسنه، خرید دین، مرابحه و سرمایه در گردش به ریاست شعبه با طرح توجیهی.',
+    category: 'نامه‌ها و عریضه‌های اداری',
+    href: '/samples/bank-loan-request',
+    data: sampleBankLoanRequestData,
+  },
+  {
+    slug: 'bank-debt-installment',
+    title: 'نمونه نامه تقسیط بدهی بانکی و استمهال اقساط',
+    badge: 'تقسیط بدهی بانکی',
+    description: 'درخواست تقسیط مجدد اقساط معوقه، اممهال وام و جلوگیری از صدور اجرائیه ثبت اسناد و مسدودی حساب.',
+    category: 'نامه‌ها و عریضه‌های اداری',
+    href: '/samples/bank-debt-installment',
+    data: sampleBankDebtInstallmentData,
+  },
+  {
+    slug: 'bank-penalty-waiver',
+    title: 'نمونه نامه بخشودگی جرایم بانکی | حذف وجه التزام',
+    badge: 'بخشودگی جرایم بانکی',
+    description: 'تقاضای حذف سود دیرکرد و بخشودگی تا ۱۰۰ درصدی خسارت تأخیر تأدیه با تسویه نقدی اصل تسهیلات.',
+    category: 'نامه‌ها و عریضه‌های اداری',
+    href: '/samples/bank-penalty-waiver',
+    data: sampleBankPenaltyWaiverData,
+  },
+  {
+    slug: 'bank-mortgage-release',
+    title: 'نمونه نامه فک رهن سند از بانک | تسویه وام و آزادسازی وثیقه',
+    badge: 'فک رهن سند بانکی',
+    description: 'مکاتبه با ریاست شعبه جهت تسویه نهایی وام و ارسال نامه رسمی فک رهن به دفتر اسناد رسمی.',
+    category: 'نامه‌ها و عریضه‌های اداری',
+    href: '/samples/bank-mortgage-release',
+    data: sampleBankMortgageReleaseData,
+  },
+  {
+    slug: 'bank-check-clearing',
+    title: 'نمونه نامه رفع سوء اثر چک برگشتی | رفع مسدودی حساب صیاد',
+    badge: 'رفع سوء اثر چک',
+    description: 'تقاضای رفع مسدودی حساب‌ها و رفع سوء اثر در سامانه صیاد بانک مرکزی بر مبنای تبصره ۳ ماده ۵ مکرر.',
+    category: 'نامه‌ها و عریضه‌های اداری',
+    href: '/samples/bank-check-clearing',
+    data: sampleBankCheckClearingData,
+  },
+  {
+    slug: 'bank-complaint',
+    title: 'نمونه نامه شکایت از بانک به بازرسی و بانک مرکزی',
+    badge: 'شکایت از تخلفات شعبه',
+    description: 'اعتراض مستند به بلوکه کردن وام، مطالبه ضامنین متعدد، سود مازاد و امتناع از پرداخت وام تکلیفی.',
+    category: 'نامه‌ها و عریضه‌های اداری',
+    href: '/samples/bank-complaint',
+    data: sampleBankComplaintData,
+  },
+  {
+    slug: 'real-estate-registry-letter',
+    title: 'نمونه نامه به اداره ثبت اسناد و املاک | افراز و اجرای ثبت',
+    badge: 'ثبت اسناد و املاک',
+    description: 'تقاضای افراز ملک مشاع، اصلاح سند تک‌برگ کاداستر، رفع بازداشت پلاک ثبتی و پرونده‌های اجرای ثبت.',
+    category: 'نامه‌ها و عریضه‌های اداری',
+    href: '/samples/real-estate-registry-letter',
+    data: sampleRealEstateRegistryLetterData,
+  },
+  {
+    slug: 'discretionary-punishments-letter',
+    title: 'نمونه لایحه به سازمان تعزیرات حکومتی | دفاعیه گران‌فروشی و تقسیط',
+    badge: 'تعزیرات حکومتی',
+    description: 'لایحه دفاعیه شعب بدوی و تجدیدنظر تعزیرات در اتهام گران‌فروشی، تقلب، قاچاق کالا و تقسیط جزای نقدی.',
+    category: 'نامه‌ها و عریضه‌های اداری',
+    href: '/samples/discretionary-punishments-letter',
+    data: sampleDiscretionaryPunishmentsLetterData,
+  },
+  {
+    slug: 'passport-office-letter',
+    title: 'نمونه نامه به اداره گذرنامه | رفع ممنوع‌الخروجی و استعلام',
+    badge: 'پلیس مهاجرت و گذرنامه',
+    description: 'مکاتبه با پلیس گذرنامه جهت رفع ممنوع‌الخروجی مالیاتی، مهریه، استعلام سوابق و صدور گذرنامه اضطراری.',
+    category: 'نامه‌ها و عریضه‌های اداری',
+    href: '/samples/passport-office-letter',
+    data: samplePassportOfficeLetterData,
+  },
+  {
+    slug: 'relief-foundation-letter',
+    title: 'نمونه نامه به کمیته امداد، بهزیستی و بنیاد شهید | استمداد و وام',
+    badge: 'نهادهای حمایتی',
+    description: 'عریضه استمداد جهت مستمری ماهیانه، وام اشتغال خودکفایی، کمک‌هزینه مسکن، درمان و جهیزیه محرومین.',
+    category: 'نامه‌ها و عریضه‌های اداری',
+    href: '/samples/relief-foundation-letter',
+    data: sampleReliefFoundationLetterData,
+  },
+  {
+    slug: 'education-office-letter',
+    title: 'نمونه نامه به اداره آموزش و پرورش | انتقالی و رتبه‌بندی معلمان',
+    badge: 'آموزش و پرورش',
+    description: 'مکاتبه با آموزش و پرورش جهت انتقال اضطراری فرهنگیان، اعتراض به رتبه‌بندی و حل مشکلات ثبت‌نام مدارس.',
+    category: 'نامه‌ها و عریضه‌های اداری',
+    href: '/samples/education-office-letter',
+    data: sampleEducationOfficeLetterData,
   },
   {
     slug: 'petition',
@@ -840,11 +1028,97 @@ export const allSamplesList: {
     href: `/samples/forgery-complaint`,
     data: sampleForgeryComplaintData,
   },
+  {
+    slug: 'bank-letter',
+    title: sampleBankLetterData.title || sampleBankLetterData.h1Title || '',
+    description: sampleBankLetterData.shortDescription || sampleBankLetterData.heroSubtitle || '',
+    category: sampleBankLetterData.category || 'نامه‌ها و درخواست‌های اداری',
+    badge: 'نمونه نامه اداری و بانکی',
+    href: `/samples/bank-letter`,
+    data: sampleBankLetterData,
+  },
+  {
+    slug: 'power-company-letter',
+    title: samplePowerCompanyLetterData.title || '',
+    description: samplePowerCompanyLetterData.shortDescription || samplePowerCompanyLetterData.heroSubtitle || '',
+    category: samplePowerCompanyLetterData.category || 'نامه‌ها و عریضه‌های اداری',
+    badge: 'شرکت توزیع نیروی برق',
+    href: `/samples/power-company-letter`,
+    data: samplePowerCompanyLetterData,
+  },
+  {
+    slug: 'gas-company-letter',
+    title: sampleGasCompanyLetterData.title || '',
+    description: sampleGasCompanyLetterData.shortDescription || sampleGasCompanyLetterData.heroSubtitle || '',
+    category: sampleGasCompanyLetterData.category || 'نامه‌ها و عریضه‌های اداری',
+    badge: 'شرکت ملی گاز',
+    href: `/samples/gas-company-letter`,
+    data: sampleGasCompanyLetterData,
+  },
+  {
+    slug: 'water-company-letter',
+    title: sampleWaterCompanyLetterData.title || '',
+    description: sampleWaterCompanyLetterData.shortDescription || sampleWaterCompanyLetterData.heroSubtitle || '',
+    category: sampleWaterCompanyLetterData.category || 'نامه‌ها و عریضه‌های اداری',
+    badge: 'شرکت آب و فاضلاب',
+    href: `/samples/water-company-letter`,
+    data: sampleWaterCompanyLetterData,
+  },
+  {
+    slug: 'agricultural-office-letter',
+    title: sampleAgriculturalOfficeLetterData.title || '',
+    description: sampleAgriculturalOfficeLetterData.shortDescription || sampleAgriculturalOfficeLetterData.heroSubtitle || '',
+    category: sampleAgriculturalOfficeLetterData.category || 'نامه‌ها و عریضه‌های اداری',
+    badge: 'جهاد کشاورزی و امور اراضی',
+    href: `/samples/agricultural-office-letter`,
+    data: sampleAgriculturalOfficeLetterData,
+  },
+  {
+    slug: 'natural-resources-letter',
+    title: sampleNaturalResourcesLetterData.title || '',
+    description: sampleNaturalResourcesLetterData.shortDescription || sampleNaturalResourcesLetterData.heroSubtitle || '',
+    category: sampleNaturalResourcesLetterData.category || 'نامه‌ها و عریضه‌های اداری',
+    badge: 'منابع طبیعی و آبخیزداری',
+    href: `/samples/natural-resources-letter`,
+    data: sampleNaturalResourcesLetterData,
+  },
+  {
+    slug: 'guild-union-letter',
+    title: sampleGuildUnionLetterData.title || '',
+    description: sampleGuildUnionLetterData.shortDescription || sampleGuildUnionLetterData.heroSubtitle || '',
+    category: sampleGuildUnionLetterData.category || 'نامه‌ها و عریضه‌های اداری',
+    badge: 'اتحادیه صنفی و اصناف',
+    href: `/samples/guild-union-letter`,
+    data: sampleGuildUnionLetterData,
+  },
+  {
+    slug: 'transportation-road-office-letter',
+    title: sampleTransportationRoadOfficeLetterData.title || '',
+    description: sampleTransportationRoadOfficeLetterData.shortDescription || sampleTransportationRoadOfficeLetterData.heroSubtitle || '',
+    category: sampleTransportationRoadOfficeLetterData.category || 'نامه‌ها و عریضه‌های اداری',
+    badge: 'راهداری و حمل‌ونقل جاده‌ای',
+    href: `/samples/transportation-road-office-letter`,
+    data: sampleTransportationRoadOfficeLetterData,
+  },
 ];
 
 export {
   sampleAdministrativeLetterData,
   sampleAdministrativeLetterMetadata,
+  sampleBankLetterData,
+  sampleBankLetterMetadata,
+  sampleMunicipalityLetterData,
+  sampleMunicipalityLetterMetadata,
+  sampleSocialSecurityLetterData,
+  sampleSocialSecurityLetterMetadata,
+  sampleCivilRegistryLetterData,
+  sampleCivilRegistryLetterMetadata,
+  sampleLaborOfficeLetterData,
+  sampleLaborOfficeLetterMetadata,
+  sampleUniversityLetterData,
+  sampleUniversityLetterMetadata,
+  sampleInspectionOrganizationLetterData,
+  sampleInspectionOrganizationLetterMetadata,
   samplePresidentLetterData,
   samplePresidentLetterMetadata,
   sampleLeaderOfficeLetterData,
@@ -989,6 +1263,24 @@ export {
   sampleBreachOfTrustComplaintData,
   sampleTheftComplaintData,
   sampleForgeryComplaintData,
+  sampleBankLoanRequestData,
+  sampleBankDebtInstallmentData,
+  sampleBankPenaltyWaiverData,
+  sampleBankMortgageReleaseData,
+  sampleBankCheckClearingData,
+  sampleBankComplaintData,
+  sampleRealEstateRegistryLetterData,
+  sampleDiscretionaryPunishmentsLetterData,
+  samplePassportOfficeLetterData,
+  sampleReliefFoundationLetterData,
+  sampleEducationOfficeLetterData,
+  samplePowerCompanyLetterData,
+  sampleGasCompanyLetterData,
+  sampleWaterCompanyLetterData,
+  sampleAgriculturalOfficeLetterData,
+  sampleNaturalResourcesLetterData,
+  sampleGuildUnionLetterData,
+  sampleTransportationRoadOfficeLetterData,
 };
 
 

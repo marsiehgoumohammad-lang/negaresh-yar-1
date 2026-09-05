@@ -1,6 +1,13 @@
 import { SampleDocument, SAMPLE_CATEGORIES } from '@/data/samples/types';
 import {
   sampleAdministrativeLetterData,
+  sampleBankLetterData,
+  sampleMunicipalityLetterData,
+  sampleSocialSecurityLetterData,
+  sampleCivilRegistryLetterData,
+  sampleLaborOfficeLetterData,
+  sampleUniversityLetterData,
+  sampleInspectionOrganizationLetterData,
   samplePresidentLetterData,
   sampleLeaderOfficeLetterData,
   samplePetitionData,
@@ -83,6 +90,17 @@ import {
   sampleBreachOfTrustComplaintData,
   sampleTheftComplaintData,
   sampleForgeryComplaintData,
+  sampleBankLoanRequestData,
+  sampleBankDebtInstallmentData,
+  sampleBankPenaltyWaiverData,
+  sampleBankMortgageReleaseData,
+  sampleBankCheckClearingData,
+  sampleBankComplaintData,
+  sampleRealEstateRegistryLetterData,
+  sampleDiscretionaryPunishmentsLetterData,
+  samplePassportOfficeLetterData,
+  sampleReliefFoundationLetterData,
+  sampleEducationOfficeLetterData,
 } from '@/data/samples';
 
 // Helper to normalize and ensure all required fields for a SampleDocument
@@ -203,6 +221,13 @@ const rawSamples: SampleDocument[] = [
   sampleCriminalRehabilitationCertificateData,
   sampleObjectionNonProsecutionOrderData,
   sampleAdministrativeLetterData,
+  sampleBankLetterData,
+  sampleMunicipalityLetterData,
+  sampleSocialSecurityLetterData,
+  sampleCivilRegistryLetterData,
+  sampleLaborOfficeLetterData,
+  sampleUniversityLetterData,
+  sampleInspectionOrganizationLetterData,
   samplePresidentLetterData,
   sampleLeaderOfficeLetterData,
   samplePetitionData,
@@ -270,6 +295,17 @@ const rawSamples: SampleDocument[] = [
   sampleBreachOfTrustComplaintData,
   sampleTheftComplaintData,
   sampleForgeryComplaintData,
+  sampleBankLoanRequestData,
+  sampleBankDebtInstallmentData,
+  sampleBankPenaltyWaiverData,
+  sampleBankMortgageReleaseData,
+  sampleBankCheckClearingData,
+  sampleBankComplaintData,
+  sampleRealEstateRegistryLetterData,
+  sampleDiscretionaryPunishmentsLetterData,
+  samplePassportOfficeLetterData,
+  sampleReliefFoundationLetterData,
+  sampleEducationOfficeLetterData,
 ];
 const normalizedSamples = rawSamples.map(normalizeSample);
 

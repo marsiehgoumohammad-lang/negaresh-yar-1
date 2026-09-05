@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'motion/react';
 import { Container } from '@/components/ui/container';
+import { ThreeServiceDiscovery } from '@/components/common/ThreeServiceDiscovery';
 import {
   FileText,
   Sparkles,
@@ -741,6 +742,18 @@ export function LandingPageTemplate({ data }: { data: ServiceLandingData }) {
               </div>
             )}
           </div>
+        </Container>
+      </section>
+
+      {/* ---------------------------------------------------- */}
+      {/* 9.5. THREE-SERVICE DISCOVERY (WRITING, FAIR LAWYER, ONLINE CAFE) */}
+      {/* ---------------------------------------------------- */}
+      <section className="relative">
+        <Container>
+          <ThreeServiceDiscovery
+            currentService={data.slug === 'online-cafe' ? 'cafe' : 'writing'}
+            contextTitle={data.h1Title}
+          />
         </Container>
       </section>
 

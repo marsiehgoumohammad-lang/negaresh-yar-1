@@ -26,6 +26,7 @@ import {
   Scale,
 } from 'lucide-react';
 import { KnowledgeArticleData } from '@/data/knowledge/types';
+import { ThreeServiceDiscovery } from '@/components/common/ThreeServiceDiscovery';
 
 export function KnowledgeArticleTemplate({ data }: { data: KnowledgeArticleData }) {
   const [openFaq, setOpenFaq] = useState<number | null>(0);
@@ -680,6 +681,13 @@ export function KnowledgeArticleTemplate({ data }: { data: KnowledgeArticleData 
             </div>
           )}
         </aside>
+
+        {/* ---------------------------------------------------- */}
+        {/* 2.5. THREE-SERVICE DISCOVERY (WRITING, FAIR LAWYER, ONLINE CAFE) */}
+        {/* ---------------------------------------------------- */}
+        <div className="lg:col-span-12 mt-6">
+          <ThreeServiceDiscovery currentService="knowledge" contextTitle={data.h1Title} />
+        </div>
       </Container>
 
       {/* ---------------------------------------------------- */}

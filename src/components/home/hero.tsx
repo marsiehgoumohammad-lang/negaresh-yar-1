@@ -126,7 +126,7 @@ export function Hero() {
                 </svg>
               </div>
               <span className="text-xs sm:text-sm font-semibold text-slate-200">
-                تضمین کیفیت
+                کیفیت حرفه‌ای نگارش
               </span>
             </div>
 

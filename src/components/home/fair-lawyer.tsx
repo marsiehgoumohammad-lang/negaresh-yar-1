@@ -71,7 +71,7 @@ export function FairLawyer() {
                   <div className="w-full pt-4 border-t border-slate-800">
                     <div className="flex items-center justify-between text-xs font-bold">
                       <span className="text-slate-400">شفافیت مالی</span>
-                      <span className="text-emerald-400">۱۰۰٪ تایید شده</span>
+                      <span className="text-emerald-400">احراز در سامانه ثنا</span>
                     </div>
                   </div>
                 </div>

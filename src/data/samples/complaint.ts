@@ -339,7 +339,7 @@ export const sampleComplaintData: SampleLandingData = {
     }
   ],
 
-  ctaTitle: 'سفارش تنظیم شکواییه کیفری مستدل با ضمانت پذیرش در ثنا',
+  ctaTitle: 'سفارش تنظیم شکواییه کیفری مستند منطبق بر ضوابط سامانه ثنا',
   ctaDescription: 'با سپردن تنظیم شکواییه به کارشناسان متخصص کیفری نگارش یار، پرونده خود را با محکم‌ترین عناوین اتهامی و ادله در دادسرا به جریان بیندازید.',
   ctaPrimaryBtnText: 'سفارش تنظیم شکواییه اختصاصی',
   ctaPrimaryHref: '/request?service=petition-writing',

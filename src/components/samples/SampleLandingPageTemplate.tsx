@@ -26,9 +26,13 @@ import {
   UserCheck,
   Calendar,
   Layers,
+  ArrowLeft,
+  AlertCircle,
 } from 'lucide-react';
 import { SampleLandingData } from '@/data/samples/types';
 import { SampleMessengerCTA } from './SampleMessengerCTA';
+import { GeneralSampleVsCustomSection } from './GeneralSampleVsCustomSection';
+import { ThreeServiceDiscovery } from '@/components/common/ThreeServiceDiscovery';
 
 export function SampleLandingPageTemplate({ data }: { data: SampleLandingData }) {
   const [openFaq, setOpenFaq] = useState<number | null>(0);
@@ -255,6 +259,28 @@ export function SampleLandingPageTemplate({ data }: { data: SampleLandingData })
         />
 
         {/* ---------------------------------------------------- */}
+        {/* 3.5 ABOVE-FOLD CONVERSION BANNER (رفع چالش تفاوت شرایط پرونده) */}
+        {/* ---------------------------------------------------- */}
+        <section className="p-5 sm:p-6 rounded-2xl bg-gradient-to-r from-amber-950/40 via-slate-900/90 to-amber-950/30 border border-[#E5C158]/35 shadow-lg flex flex-col md:flex-row md:items-center justify-between gap-4">
+          <div className="space-y-1.5">
+            <div className="flex items-center gap-2 text-[#E5C158] font-bold text-sm sm:text-base">
+              <AlertCircle className="w-5 h-5 text-[#E5C158] shrink-0" />
+              <span>اگر شرایط، مبالغ یا موضوع شما با این متن نمونه متفاوت است:</span>
+            </div>
+            <p className="text-xs sm:text-sm text-slate-300 leading-relaxed max-w-2xl">
+              قالب‌های آماده اینترنتی کلی هستند و ریزه‌کاری‌های قانونی پرونده شما را پوشش نمی‌دهند. کارشناسان نگارش یار نامه و عریضه کاملاً اختصاصی، موثر و متناسب با هدف و مدارک شما تنظیم می‌کنند.
+            </p>
+          </div>
+          <Link
+            href={data.ctaPrimaryHref || '/request?service=administrative-letter'}
+            className="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl bg-[#E5C158] hover:bg-[#d4b045] text-[#070B15] text-xs sm:text-sm font-black transition-all shadow-md shrink-0 active:scale-95"
+          >
+            <span>درخواست تنظیم نامه اختصاصی</span>
+            <ArrowLeft className="w-4 h-4" />
+          </Link>
+        </section>
+
+        {/* ---------------------------------------------------- */}
         {/* 4. FULL SAMPLE DOCUMENT TEXT & COPY BUTTON */}
         {/* ---------------------------------------------------- */}
         <section id="sample-template" className="scroll-mt-24 space-y-5">
@@ -340,6 +366,15 @@ export function SampleLandingPageTemplate({ data }: { data: SampleLandingData })
             </div>
           )}
         </section>
+
+        {/* ---------------------------------------------------- */}
+        {/* 4.5. GENERAL SAMPLE VS CUSTOM DOCUMENT CONVERSION SECTION */}
+        {/* ---------------------------------------------------- */}
+        <GeneralSampleVsCustomSection
+          sampleTitle={title}
+          orderHref={data.ctaPrimaryHref || '/request'}
+          customMessage={data.messengerMessage}
+        />
 
         {/* ---------------------------------------------------- */}
         {/* 5. ANALYSIS & LEGAL EXPLANATION */}
@@ -749,32 +784,9 @@ export function SampleLandingPageTemplate({ data }: { data: SampleLandingData })
         )}
 
         {/* ---------------------------------------------------- */}
-        {/* 13. LAWYER REFERRAL CONTEXTUAL BANNER */}
+        {/* 13. THREE-SERVICE DISCOVERY (WRITING, FAIR LAWYER, ONLINE CAFE) */}
         {/* ---------------------------------------------------- */}
-        <section className="rounded-2xl border border-blue-500/30 bg-blue-950/20 p-5 sm:p-7">
-          <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-5">
-            <div className="space-y-1.5">
-              <div className="flex items-center gap-2 text-blue-400 font-bold text-xs sm:text-sm">
-                <Scale className="w-4 h-4" />
-                <span>همراهی وکیل دادگستری در این موضوع حقوقی</span>
-              </div>
-              <h3 className="text-base sm:text-lg font-bold text-white">
-                آیا علاوه بر تنظیم سند، نیازمند وکیل برای پیگیری و حضور در دادگاه هستید؟
-              </h3>
-              <p className="text-xs sm:text-sm text-slate-300 max-w-2xl leading-relaxed">
-                سامانه نگارش یار متناسب با شهر و موضوع پرونده شما، امکان معرفی وکلای منصف و باانصاف پایه یک دادگستری را با قرارداد مالی شفاف و تعرفه عادلانه فراهم می‌نماید.
-              </p>
-            </div>
-            <Link
-              id="sample-bottom-lawyer-referral-btn"
-              href="/lawyer-referral?utm_source=sample_documents&utm_medium=bottom_banner&utm_campaign=fair_lawyers"
-              className="px-5 py-3 rounded-xl bg-blue-600 hover:bg-blue-500 text-white text-xs sm:text-sm font-bold transition-colors shrink-0 inline-flex items-center gap-2 shadow-md shadow-blue-900/30"
-            >
-              <span>معرفی وکیل منصف</span>
-              <ChevronLeft className="w-4 h-4" />
-            </Link>
-          </div>
-        </section>
+        <ThreeServiceDiscovery currentService="sample" contextTitle={title} />
 
         {/* ---------------------------------------------------- */}
         {/* 14. BOTTOM MESSENGER CTA & FINAL SERVICE CTA */}
@@ -796,7 +808,7 @@ export function SampleLandingPageTemplate({ data }: { data: SampleLandingData })
               </h2>
               <p className="text-slate-300 text-xs sm:text-sm leading-relaxed">
                 {data.ctaDescription ||
-                  'اگر پرونده شما دارای پیچیدگی‌های خاصی است، تنظیم متن را با ضمانت ویرایش به کارشناسان نگارش یار بسپارید.'}
+                  'اگر پرونده شما دارای پیچیدگی‌های خاصی است، تنظیم متن را با پشتیبانی و امکان ویرایش تکمیلی به کارشناسان نگارش یار بسپارید.'}
               </p>
               <div className="pt-2 flex flex-col sm:flex-row items-center justify-center gap-3">
                 <Link

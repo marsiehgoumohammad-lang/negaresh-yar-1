@@ -39,7 +39,6 @@ export function BouncedCheckGuideSection() {
   const [filterCheckType, setFilterCheckType] = useState<'all' | 'sayad' | 'old' | 'guarantee'>('all');
   const [filterTarget, setFilterTarget] = useState<'all' | 'drawer' | 'guarantor'>('all');
 
-
   const decisionMatrix: DecisionOption[] = [
     {
       id: 'sayad-drawer-only',
@@ -217,6 +216,39 @@ export function BouncedCheckGuideSection() {
                 }`}
               >
                 چک سنتی / قدیمی
+              </button>
+
+              <span className="text-slate-500 mr-2 ml-1">|</span>
+              <span className="text-slate-400 font-medium">طرف دعوا:</span>
+              <button
+                onClick={() => setFilterTarget('all')}
+                className={`px-3 py-1.5 rounded-lg border transition-colors ${
+                  filterTarget === 'all'
+                    ? 'bg-[#E5C158] text-[#070B15] border-[#E5C158] font-bold'
+                    : 'bg-slate-900 text-slate-300 border-slate-800 hover:border-slate-700'
+                }`}
+              >
+                همه طرف‌ها
+              </button>
+              <button
+                onClick={() => setFilterTarget('drawer')}
+                className={`px-3 py-1.5 rounded-lg border transition-colors ${
+                  filterTarget === 'drawer'
+                    ? 'bg-[#E5C158] text-[#070B15] border-[#E5C158] font-bold'
+                    : 'bg-slate-900 text-slate-300 border-slate-800 hover:border-slate-700'
+                }`}
+              >
+                فقط صادرکننده
+              </button>
+              <button
+                onClick={() => setFilterTarget('guarantor')}
+                className={`px-3 py-1.5 rounded-lg border transition-colors ${
+                  filterTarget === 'guarantor'
+                    ? 'bg-[#E5C158] text-[#070B15] border-[#E5C158] font-bold'
+                    : 'bg-slate-900 text-slate-300 border-slate-800 hover:border-slate-700'
+                }`}
+              >
+                دارای ضامن یا ظهرنویس
               </button>
             </div>
           </div>
