@@ -37,15 +37,17 @@ export async function generateMetadata({
   const rawTitle = sample.title || sample.h1Title || 'نمونه سند';
   const isSamplePrefixed = rawTitle.startsWith('نمونه') || rawTitle.includes('نمونه');
   const titleDisplay = isSamplePrefixed ? rawTitle : `نمونه ${rawTitle}`;
-  const seoTitle = `${titleDisplay} [دانلود رایگان متن + نکات قانونی] | نگارش یار`;
+  const seoTitle = sample.metaTitle || `${titleDisplay} [دانلود رایگان متن + نکات قانونی] | نگارش یار`;
 
   // Persuasive high-CTR meta description with explicit CTA & free value hook
-  const baseDesc = (sample.shortDescription || sample.heroSubtitle || '').trim();
-  let description = '';
-  if (baseDesc && baseDesc.length >= 25 && baseDesc.length <= 95) {
-    description = `دانلود رایگان نمونه متن ${rawTitle}؛ ${baseDesc.replace(/\.$/, '')} + استناد به مواد قانونی و مشاوره تنظیم در نگارش یار.`;
-  } else {
-    description = `دانلود و کپی رایگان نمونه متن ${rawTitle} با فرمت رسمی دادگستری، استناد به مواد قانونی و راهنمای گام‌به‌گام + مشاوره تخصصی تنظیم در نگارش یار.`;
+  let description = sample.metaDescription || '';
+  if (!description) {
+    const baseDesc = (sample.shortDescription || sample.heroSubtitle || '').trim();
+    if (baseDesc && baseDesc.length >= 25 && baseDesc.length <= 95) {
+      description = `دانلود رایگان نمونه متن ${rawTitle}؛ ${baseDesc.replace(/\.$/, '')} + استناد به مواد قانونی و مشاوره تنظیم در نگارش یار.`;
+    } else {
+      description = `دانلود و کپی رایگان نمونه متن ${rawTitle} با فرمت رسمی دادگستری، استناد به مواد قانونی و راهنمای گام‌به‌گام + مشاوره تخصصی تنظیم در نگارش یار.`;
+    }
   }
 
   const canonicalUrl = `https://www.negaresh-yar.ir/samples/${sample.slug}`;
