@@ -30,9 +30,12 @@ import {
   AlertCircle,
 } from 'lucide-react';
 import { SampleLandingData } from '@/data/samples/types';
-import { SampleMessengerCTA } from './SampleMessengerCTA';
-import { GeneralSampleVsCustomSection } from './GeneralSampleVsCustomSection';
-import { ThreeServiceDiscovery } from '@/components/common/ThreeServiceDiscovery';
+import { generateMessengerLinks } from '@/lib/messengers-links';
+import {
+  Phone,
+  MessageCircle,
+  ExternalLink,
+} from 'lucide-react';
 
 export function SampleLandingPageTemplate({ data }: { data: SampleLandingData }) {
   const [openFaq, setOpenFaq] = useState<number | null>(0);
@@ -145,6 +148,11 @@ export function SampleLandingPageTemplate({ data }: { data: SampleLandingData })
   const authorName = data.author?.name || 'تیم حقوقی نگارش یار';
   const authorRole = data.author?.role || 'متخصص تنظیم اوراق قضایی و اداری';
   const reviewerName = data.reviewer?.name || 'بررسی و نظارت حقوقی نگارش یار';
+  const orderHref = data.ctaPrimaryHref || '/request?service=administrative-letter';
+  const customMessengerMessage =
+    data.messengerMessage ||
+    `سلام وقت بخیر. برای تنظیم اختصاصی و فوری ${title} متناسب با پرونده‌ام راهنمایی می‌خواستم. مدارک آماده است.`;
+  const messengers = generateMessengerLinks(customMessengerMessage);
 
   return (
     <div className="space-y-12 sm:space-y-16 py-6 sm:py-10 selection:bg-[#E5C158] selection:text-[#070B15]">
@@ -250,35 +258,28 @@ export function SampleLandingPageTemplate({ data }: { data: SampleLandingData })
         </section>
 
         {/* ---------------------------------------------------- */}
-        {/* 3. TOP MESSENGER CTA (درباره این درخواست سؤال دارید؟) */}
+        {/* CTA 1: SLIM 2-LINE ADVISORY (دقیقاً دو خط قبل از نمونه) */}
         {/* ---------------------------------------------------- */}
-        <SampleMessengerCTA
-          sampleTitle={title}
-          customMessage={data.messengerMessage}
-          variant="top"
-        />
-
-        {/* ---------------------------------------------------- */}
-        {/* 3.5 ABOVE-FOLD CONVERSION BANNER (رفع چالش تفاوت شرایط پرونده) */}
-        {/* ---------------------------------------------------- */}
-        <section className="p-5 sm:p-6 rounded-2xl bg-gradient-to-r from-amber-950/40 via-slate-900/90 to-amber-950/30 border border-[#E5C158]/35 shadow-lg flex flex-col md:flex-row md:items-center justify-between gap-4">
-          <div className="space-y-1.5">
-            <div className="flex items-center gap-2 text-[#E5C158] font-bold text-sm sm:text-base">
-              <AlertCircle className="w-5 h-5 text-[#E5C158] shrink-0" />
-              <span>اگر شرایط، مبالغ یا موضوع شما با این متن نمونه متفاوت است:</span>
-            </div>
-            <p className="text-xs sm:text-sm text-slate-300 leading-relaxed max-w-2xl">
-              قالب‌های آماده اینترنتی کلی هستند و ریزه‌کاری‌های قانونی پرونده شما را پوشش نمی‌دهند. کارشناسان نگارش یار نامه و عریضه کاملاً اختصاصی، موثر و متناسب با هدف و مدارک شما تنظیم می‌کنند.
+        <aside
+          id="pre-sample-slim-cta"
+          aria-label="هشدار انطباق پرونده با نمونه"
+          className="p-3 sm:p-3.5 rounded-xl bg-amber-500/10 border border-amber-500/30 text-slate-200 text-xs sm:text-sm leading-relaxed flex flex-col sm:flex-row sm:items-center justify-between gap-2 shadow-xs"
+        >
+          <div className="flex items-start sm:items-center gap-2">
+            <AlertCircle className="w-4 h-4 text-amber-400 shrink-0 mt-0.5 sm:mt-0" />
+            <p className="text-slate-300">
+              <strong className="text-amber-300 font-bold">توجه اداری/حقوقی:</strong>{' '}
+              این متن یک الگوی عمومی است؛ در صورت تفاوت در مبالغ یا اسناد، ارسال متن خام ممکن است توسط قاضی یا اداره رد شود.
             </p>
           </div>
           <Link
-            href={data.ctaPrimaryHref || '/request?service=administrative-letter'}
-            className="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl bg-[#E5C158] hover:bg-[#d4b045] text-[#070B15] text-xs sm:text-sm font-black transition-all shadow-md shrink-0 active:scale-95"
+            href={orderHref}
+            className="inline-flex items-center gap-1.5 text-xs font-bold text-[#E5C158] hover:text-[#f3d376] hover:underline whitespace-nowrap shrink-0 transition-colors pr-6 sm:pr-0"
           >
-            <span>درخواست تنظیم نامه اختصاصی</span>
-            <ArrowLeft className="w-4 h-4" />
+            <span>سفارش تنظیم متن اختصاصی پرونده شما</span>
+            <ArrowLeft className="w-3.5 h-3.5" />
           </Link>
-        </section>
+        </aside>
 
         {/* ---------------------------------------------------- */}
         {/* 4. FULL SAMPLE DOCUMENT TEXT & COPY BUTTON */}
@@ -367,14 +368,6 @@ export function SampleLandingPageTemplate({ data }: { data: SampleLandingData })
           )}
         </section>
 
-        {/* ---------------------------------------------------- */}
-        {/* 4.5. GENERAL SAMPLE VS CUSTOM DOCUMENT CONVERSION SECTION */}
-        {/* ---------------------------------------------------- */}
-        <GeneralSampleVsCustomSection
-          sampleTitle={title}
-          orderHref={data.ctaPrimaryHref || '/request'}
-          customMessage={data.messengerMessage}
-        />
 
         {/* ---------------------------------------------------- */}
         {/* 5. ANALYSIS & LEGAL EXPLANATION */}
@@ -784,50 +777,162 @@ export function SampleLandingPageTemplate({ data }: { data: SampleLandingData })
         )}
 
         {/* ---------------------------------------------------- */}
-        {/* 13. THREE-SERVICE DISCOVERY (WRITING, FAIR LAWYER, ONLINE CAFE) */}
+        {/* CTA 2: MASTER POST-SAMPLE CONVERSION SECTION (جامع، مستدل و تبدیل‌کننده) */}
         {/* ---------------------------------------------------- */}
-        <ThreeServiceDiscovery currentService="sample" contextTitle={title} />
+        <section
+          id="master-conversion-section"
+          aria-labelledby="master-cta-heading"
+          className="rounded-3xl bg-gradient-to-b from-[#0F172A] via-[#0A101D] to-[#070B15] border-2 border-[#E5C158]/45 p-6 sm:p-9 lg:p-12 relative overflow-hidden shadow-2xl space-y-8"
+        >
+          {/* Ambient background glow */}
+          <div className="absolute top-0 right-1/4 w-96 h-96 bg-[radial-gradient(circle_at_center,rgba(229,193,88,0.08)_0%,transparent_70%)] pointer-events-none blur-3xl" />
 
-        {/* ---------------------------------------------------- */}
-        {/* 14. BOTTOM MESSENGER CTA & FINAL SERVICE CTA */}
-        {/* ---------------------------------------------------- */}
-        <div className="space-y-6 pt-4">
-          <SampleMessengerCTA
-            sampleTitle={title}
-            customMessage={data.messengerMessage}
-            variant="bottom"
-          />
+          {/* Header & The Core Problem */}
+          <div className="max-w-3xl mx-auto text-center space-y-3">
+            <span className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-rose-500/10 border border-rose-500/30 text-rose-300 text-xs font-bold">
+              <ShieldAlert className="w-3.5 h-3.5 text-rose-400" />
+              <span>چرا استفاده از نمونه آماده اینترنتی ریسک رد شدن دارد؟</span>
+            </span>
+            <h2 id="master-cta-heading" className="text-xl sm:text-2xl md:text-3xl font-black text-white leading-snug">
+              تنظیم اختصاصی، مستدل و دقیق {title} متناسب با پرونده شما
+            </h2>
+            <p className="text-xs sm:text-sm text-slate-300 leading-relaxed max-w-2xl mx-auto">
+              قضات دادگاه و مسئولان اداری روزانه ده‌ها نمونه کپی‌شده اینترنتی را بررسی می‌کنند. متنی که مستند به مواد قانونی دقیق، شماره کلاسه، گردش‌کار و تاریخ‌های پرونده شما نباشد، با صدور اخطار رفع نقص یا رد قطعی مواجه شده و فرصت‌ها و مهلت‌های قانونی تکرارناپذیر شما را می‌سوزاند.
+            </p>
+          </div>
 
-          <section className="relative overflow-hidden rounded-3xl p-6 sm:p-10 text-center bg-gradient-to-r from-[#111A2E] via-[#0E1729] to-[#111A2E] border border-[#E5C158]/30 shadow-xl">
-            <div className="relative z-10 max-w-3xl mx-auto space-y-4">
-              <span className="inline-block px-3 py-1 rounded-full bg-[#E5C158]/20 border border-[#E5C158]/40 text-[#E5C158] text-xs font-bold">
-                تنظیم تخصصی و بدون نقص توسط کارشناسان حقوقی
-              </span>
-              <h2 className="text-xl sm:text-3xl font-black text-white leading-tight">
-                {data.ctaTitle || `سفارش تنظیم اختصاصی ${title}`}
-              </h2>
-              <p className="text-slate-300 text-xs sm:text-sm leading-relaxed">
-                {data.ctaDescription ||
-                  'اگر پرونده شما دارای پیچیدگی‌های خاصی است، تنظیم متن را با پشتیبانی و امکان ویرایش تکمیلی به کارشناسان نگارش یار بسپارید.'}
-              </p>
-              <div className="pt-2 flex flex-col sm:flex-row items-center justify-center gap-3">
-                <Link
-                  href={data.ctaPrimaryHref || '/request'}
-                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-gradient-to-r from-[#E5C158] via-[#D4952B] to-[#E5C158] text-[#070B15] font-bold text-sm hover:brightness-110 transition-all shadow-lg shadow-[#E5C158]/20 group"
-                >
-                  <Send className="w-4 h-4 transition-transform group-hover:-translate-x-1" />
-                  <span>{data.ctaPrimaryBtnText || 'درخواست تنظیم متن اختصاصی'}</span>
-                </Link>
-                <Link
-                  href="/contact"
-                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-xl bg-slate-800 hover:bg-slate-700 border border-slate-700 text-xs sm:text-sm text-slate-200 transition-colors"
-                >
-                  <span>دریافت راهنمایی و تماس</span>
-                </Link>
+          {/* 2-Column High-Contrast Comparison (تقابل هوشمند) */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5 lg:gap-6 items-stretch">
+            {/* Box 1: The Generic Risk */}
+            <div className="p-5 sm:p-6 rounded-2xl bg-slate-950/80 border border-rose-900/30 space-y-3 flex flex-col justify-between">
+              <div>
+                <div className="flex items-center gap-2 text-rose-400 font-bold text-sm sm:text-base mb-3 pb-2 border-b border-slate-800/80">
+                  <ShieldAlert className="w-5 h-5 shrink-0" />
+                  <h3>خطرات ارسال نمونه خام اینترنتی</h3>
+                </div>
+                <ul className="space-y-2.5 text-xs sm:text-sm text-slate-300">
+                  <li className="flex items-start gap-2">
+                    <span className="text-rose-400 font-bold">✕</span>
+                    <span>کلی‌گویی و عدم انطباق با واقعیت‌ها، ادله و مدارک خاص پرونده شما</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-rose-400 font-bold">✕</span>
+                    <span>فقدان استناد دقیق به مواد قانون، آرای وحدت رویه و بخشنامه‌های جاری</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-rose-400 font-bold">✕</span>
+                    <span>خطر صدور قرار رد، اخطار رفع نقص و از دست رفتن مهلت‌های قانونی اعتراض</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-rose-400 font-bold">✕</span>
+                    <span>شناخته‌شده بودن متن‌های تکراری برای مدیران و قضات باسابقه</span>
+                  </li>
+                </ul>
+              </div>
+              <div className="pt-2 text-[11px] text-slate-500 text-center border-t border-slate-900">
+                مناسب فقط برای آشنایی اولیه با ساختار، نه ارائه به عنوان سند سرنوشت‌ساز
               </div>
             </div>
-          </section>
-        </div>
+
+            {/* Box 2: The Custom Solution by Negaresh Yar */}
+            <div className="p-5 sm:p-6 rounded-2xl bg-gradient-to-b from-[#16233B] to-[#0D1525] border-2 border-[#E5C158]/60 space-y-3 flex flex-col justify-between shadow-lg shadow-[#E5C158]/5 relative">
+              <span className="absolute -top-3 left-6 px-3 py-0.5 rounded-full bg-[#E5C158] text-[#070B15] text-[11px] font-black shadow-xs">
+                خدمت تخصصی نگارش یار
+              </span>
+              <div>
+                <div className="flex items-center gap-2 text-[#E5C158] font-bold text-sm sm:text-base mb-3 pb-2 border-b border-slate-800/80">
+                  <Sparkles className="w-5 h-5 shrink-0" />
+                  <h3>مزایای تنظیم اختصاصی توسط متخصصان ما</h3>
+                </div>
+                <ul className="space-y-2.5 text-xs sm:text-sm text-slate-200">
+                  <li className="flex items-start gap-2">
+                    <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
+                    <span>بررسی شرح وقایع و تدوین استدلال محکم منطبق بر معاذیر قانونی شما</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
+                    <span>استناد مستقیم به مواد قانونی مصوب، آیین دادرسی و بخشنامه‌های اداری</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
+                    <span>آماده‌سازی با فرمت استاندارد ثبت در سامانه ثنا یا الگوی رسمی دبیرخانه‌ها</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
+                    <span>پشتیبانی، پاسخگویی و اعمال ویرایش تکمیلی تا زمان تایید نهایی شما</span>
+                  </li>
+                </ul>
+              </div>
+              <div className="pt-2 text-[11px] text-[#E5C158] text-center border-t border-slate-800/60 font-medium">
+                تحویل سریع در فرمت‌های Word و PDF در پیام‌رسان یا سامانه
+              </div>
+            </div>
+          </div>
+
+          {/* Fast Conversion Actions */}
+          <div className="p-5 sm:p-7 rounded-2xl bg-slate-950/90 border border-slate-800 space-y-5">
+            <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
+              <div className="space-y-1 text-center md:text-right">
+                <h4 className="text-base sm:text-lg font-bold text-white flex items-center justify-center md:justify-start gap-2">
+                  <PenTool className="w-4 h-4 text-[#E5C158]" />
+                  <span>همین حالا سفارش خود را ثبت کنید یا با ما مشورت نمایید</span>
+                </h4>
+                <p className="text-xs text-slate-400 leading-relaxed">
+                  شرح ماجرا و مدارک خود را بفرستید؛ پیش‌نویس متن اختصاصی در سریع‌ترین زمان برای شما تنظیم می‌شود.
+                </p>
+              </div>
+
+              <div className="flex flex-col sm:flex-row items-center gap-3 shrink-0">
+                <Link
+                  id="master-cta-order-btn"
+                  href={orderHref}
+                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-gradient-to-r from-[#E5C158] via-[#d4af37] to-[#E5C158] text-[#070B15] font-black text-xs sm:text-sm shadow-md hover:brightness-110 transition-all active:scale-95"
+                >
+                  <Send className="w-4 h-4" />
+                  <span>{data.ctaPrimaryBtnText || 'سفارش آنلاین تنظیم متن اختصاصی'}</span>
+                </Link>
+
+                <a
+                  id="master-cta-phone-btn"
+                  href="tel:09915147789"
+                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-4 py-3.5 rounded-xl bg-slate-900 hover:bg-slate-800 border border-slate-700 text-xs sm:text-sm text-slate-200 font-bold transition-colors"
+                >
+                  <Phone className="w-4 h-4 text-emerald-400" />
+                  <span>تماس مستقیم: ۰۹۹۱۵۱۴۷۷۸۹</span>
+                </a>
+              </div>
+            </div>
+
+            {/* Messengers Row with Persuasive Pre-filled Prompt */}
+            <div className="pt-4 border-t border-slate-800/80">
+              <div className="text-xs text-slate-400 mb-3 text-center sm:text-right flex items-center justify-center sm:justify-start gap-2">
+                <MessageCircle className="w-3.5 h-3.5 text-[#E5C158]" />
+                <span>یا برای بررسی مدارک در یکی از پیام‌رسان‌ها پیام دهید (پاسخگویی سریع):</span>
+              </div>
+              <div className="grid grid-cols-2 sm:grid-cols-5 gap-2">
+                {messengers.map((m) => (
+                  <a
+                    key={m.id}
+                    id={`master-messenger-${m.id}`}
+                    href={m.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={m.ariaLabel}
+                    className="flex items-center justify-center gap-2 px-3 py-2.5 rounded-xl text-xs font-bold transition-all border border-slate-800 hover:border-[#E5C158]/50 bg-slate-900/90 hover:bg-slate-850 text-slate-200 hover:text-white shadow-xs group"
+                  >
+                    <span
+                      className="w-2.5 h-2.5 rounded-full flex-shrink-0"
+                      style={{ backgroundColor: m.color }}
+                      aria-hidden="true"
+                    />
+                    <span className="truncate group-hover:text-white transition-colors">{m.name}</span>
+                    <ExternalLink className="w-3 h-3 text-slate-500 group-hover:text-[#E5C158] shrink-0" />
+                  </a>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
       </Container>
     </div>
   );
