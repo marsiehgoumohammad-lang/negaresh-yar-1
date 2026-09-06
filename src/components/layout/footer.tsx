@@ -64,6 +64,7 @@ export function Footer() {
             <ul className="space-y-2 text-xs sm:text-sm text-slate-300">
               <li><Link href="/services/petition-writing" className="hover:text-[#E5C158] transition-colors">تنظیم دادخواست و شکواییه</Link></li>
               <li><Link href="/services/legal-brief" className="hover:text-[#E5C158] transition-colors">تنظیم لایحه دفاعیه دادگاه</Link></li>
+              <li><Link href="/services/false-witness-inquiry" className="hover:text-[#E5C158] transition-colors text-[#E5C158] font-medium">اثبات شهادت دروغ و استعلام شاهد</Link></li>
               <li><Link href="/services/administrative-letter" className="hover:text-[#E5C158] transition-colors">نگارش نامه اداری و عریضه</Link></li>
               <li><Link href="/services/appeal" className="hover:text-[#E5C158] transition-colors">تجدیدنظر و اعتراض به رای</Link></li>
               <li><Link href="/services/insolvency-petition" className="hover:text-[#E5C158] transition-colors">دادخواست اعسار و تقسیط</Link></li>
