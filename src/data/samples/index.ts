@@ -108,6 +108,13 @@ import { sampleAgriculturalOfficeLetterData } from './agricultural-office-letter
 import { sampleNaturalResourcesLetterData } from './natural-resources-letter';
 import { sampleGuildUnionLetterData } from './guild-union-letter';
 import { sampleTransportationRoadOfficeLetterData } from './transportation-road-office-letter';
+import { sampleCaseProceedingsExpediteRequestData, sampleCaseProceedingsExpediteRequestMetadata } from './case-proceedings-expedite-request';
+import { sampleIntoleranceOfPunishmentRequestData, sampleIntoleranceOfPunishmentRequestMetadata } from './intolerance-of-punishment-request';
+import { sampleSentencePronouncementSuspensionRequestData, sampleSentencePronouncementSuspensionRequestMetadata } from './sentence-pronouncement-suspension-request';
+import { sampleWifeResidenceCourtJurisdictionRequestData, sampleWifeResidenceCourtJurisdictionRequestMetadata } from './wife-residence-court-jurisdiction-request';
+import { sampleRepresentativeIntroductionRequestData, sampleRepresentativeIntroductionRequestMetadata } from './representative-introduction-request';
+import { sampleLawyerDismissalNoticeRequestData, sampleLawyerDismissalNoticeRequestMetadata } from './lawyer-dismissal-notice-request';
+import { sampleRemainingFourMonthsImprisonmentPardonRequestData, sampleRemainingFourMonthsImprisonmentPardonRequestMetadata } from './remaining-four-months-imprisonment-pardon-request';
 import { SampleLandingData } from './types';
 
 export const allSamplesList: {
@@ -424,6 +431,69 @@ export const allSamplesList: {
     category: 'اجرای احکام و ارفاق‌های قانونی',
     href: '/samples/sentence-suspension-request',
     data: sampleSentenceSuspensionRequestData,
+  },
+  {
+    slug: 'case-proceedings-expedite-request',
+    title: 'نمونه درخواست تسریع در روند رسیدگی به پرونده و تعیین وقت',
+    badge: 'تسریع دادرسی',
+    description: 'الگوی لایحه تقاضای تسریع در رسیدگی، تعیین وقت نظارت فوری یا ارسال پرونده به شعبه مستند به اصل ۳۴ قانون اساسی.',
+    category: 'درخواست‌های قضایی',
+    href: '/samples/case-proceedings-expedite-request',
+    data: sampleCaseProceedingsExpediteRequestData,
+  },
+  {
+    slug: 'intolerance-of-punishment-request',
+    title: 'نمونه لایحه درخواست عدم تحمل کیفر و حبس به دلیل بیماری',
+    badge: 'عدم تحمل حبس (ماده ۵۰۲)',
+    description: 'الگوی تقاضای توقف اجرای حکم، ارجاع به پزشکی قانونی و تبدیل حبس مستند به ماده ۵۰۲ و ۵۲۲ ق.آ.د.ک.',
+    category: 'اجرای احکام و ارفاق‌های قانونی',
+    href: '/samples/intolerance-of-punishment-request',
+    data: sampleIntoleranceOfPunishmentRequestData,
+  },
+  {
+    slug: 'sentence-pronouncement-suspension-request',
+    title: 'نمونه لایحه درخواست تعویق صدور حکم',
+    badge: 'تعویق صدور حکم (ماده ۴۰)',
+    description: 'الگوی تقاضای تعویق ۶ ماه تا ۲ سال صدور دادنامه در جرایم تعزیری درجه ۶ تا ۸ جهت جلوگیری از ایجاد سوءپیشینه.',
+    category: 'شکواییه و امور کیفری',
+    href: '/samples/sentence-pronouncement-suspension-request',
+    data: sampleSentencePronouncementSuspensionRequestData,
+  },
+  {
+    slug: 'wife-residence-court-jurisdiction-request',
+    title: 'نمونه لایحه استناد به ماده ۱۲ قانون حمایت خانواده (صلاحیت دادگاه محل سکونت زوجه)',
+    badge: 'صلاحیت دادگاه زوجه',
+    description: 'الگوی ایراد عدم صلاحیت محلی یا تقاضای رسیدگی در دادگاه شهر محل سکونت زوجه مستند به ماده ۱۲ و رأی وحدت رویه ۷۵۶.',
+    category: 'درخواست‌های قضایی',
+    href: '/samples/wife-residence-court-jurisdiction-request',
+    data: sampleWifeResidenceCourtJurisdictionRequestData,
+  },
+  {
+    slug: 'representative-introduction-request',
+    title: 'نمونه لایحه و معرفی‌نامه نماینده جهت پیگیری و حضور در پرونده',
+    badge: 'معرفی نماینده',
+    description: 'الگوی معرفی‌نامه رسمی نماینده حقوقی، اداری یا شرکتی جهت مطالعه پرونده، اخذ رونوشت و حضور در مراجع قضایی و اداره کار.',
+    category: 'درخواست‌های قضایی',
+    href: '/samples/representative-introduction-request',
+    data: sampleRepresentativeIntroductionRequestData,
+  },
+  {
+    slug: 'lawyer-dismissal-notice-request',
+    title: 'نمونه لایحه اعلام عزل وکیل دادگستری و سلب اختیارات در دادگاه',
+    badge: 'عزل وکیل (ماده ۳۷)',
+    description: 'الگوی رسمی اعلام عزل وکیل دادگستری به دادگاه و ارسال کلیه ابلاغیه‌ها به شخص موکل مستند به ماده ۳۷ و ۳۸ ق.آ.د.م.',
+    category: 'درخواست‌های قضایی',
+    href: '/samples/lawyer-dismissal-notice-request',
+    data: sampleLawyerDismissalNoticeRequestData,
+  },
+  {
+    slug: 'remaining-four-months-imprisonment-pardon-request',
+    title: 'نمونه درخواست بخشش چهارماه پایانی حبس به رئیس زندان و قاضی ناظر',
+    badge: 'عفو پایان حبس',
+    description: 'الگوی نامه تقاضای عفو موردی، طرح در شورای طبقه‌بندی و اعطای مرخصی متصل به آزادی برای ماه‌های پایانی حبس.',
+    category: 'اجرای احکام و ارفاق‌های قانونی',
+    href: '/samples/remaining-four-months-imprisonment-pardon-request',
+    data: sampleRemainingFourMonthsImprisonmentPardonRequestData,
   },
   {
     slug: 'verdict-surrender-discount',
@@ -1281,6 +1351,20 @@ export {
   sampleNaturalResourcesLetterData,
   sampleGuildUnionLetterData,
   sampleTransportationRoadOfficeLetterData,
+  sampleCaseProceedingsExpediteRequestData,
+  sampleCaseProceedingsExpediteRequestMetadata,
+  sampleIntoleranceOfPunishmentRequestData,
+  sampleIntoleranceOfPunishmentRequestMetadata,
+  sampleSentencePronouncementSuspensionRequestData,
+  sampleSentencePronouncementSuspensionRequestMetadata,
+  sampleWifeResidenceCourtJurisdictionRequestData,
+  sampleWifeResidenceCourtJurisdictionRequestMetadata,
+  sampleRepresentativeIntroductionRequestData,
+  sampleRepresentativeIntroductionRequestMetadata,
+  sampleLawyerDismissalNoticeRequestData,
+  sampleLawyerDismissalNoticeRequestMetadata,
+  sampleRemainingFourMonthsImprisonmentPardonRequestData,
+  sampleRemainingFourMonthsImprisonmentPardonRequestMetadata,
 };
 
 

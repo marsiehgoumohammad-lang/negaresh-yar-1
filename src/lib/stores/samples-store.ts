@@ -108,6 +108,13 @@ import {
   sampleNaturalResourcesLetterData,
   sampleGuildUnionLetterData,
   sampleTransportationRoadOfficeLetterData,
+  sampleCaseProceedingsExpediteRequestData,
+  sampleIntoleranceOfPunishmentRequestData,
+  sampleSentencePronouncementSuspensionRequestData,
+  sampleWifeResidenceCourtJurisdictionRequestData,
+  sampleRepresentativeIntroductionRequestData,
+  sampleLawyerDismissalNoticeRequestData,
+  sampleRemainingFourMonthsImprisonmentPardonRequestData,
 } from '@/data/samples';
 
 // Helper to normalize and ensure all required fields for a SampleDocument
@@ -320,6 +327,13 @@ const rawSamples: SampleDocument[] = [
   sampleNaturalResourcesLetterData,
   sampleGuildUnionLetterData,
   sampleTransportationRoadOfficeLetterData,
+  sampleCaseProceedingsExpediteRequestData,
+  sampleIntoleranceOfPunishmentRequestData,
+  sampleSentencePronouncementSuspensionRequestData,
+  sampleWifeResidenceCourtJurisdictionRequestData,
+  sampleRepresentativeIntroductionRequestData,
+  sampleLawyerDismissalNoticeRequestData,
+  sampleRemainingFourMonthsImprisonmentPardonRequestData,
 ];
 const normalizedSamples = rawSamples.map(normalizeSample);
 
