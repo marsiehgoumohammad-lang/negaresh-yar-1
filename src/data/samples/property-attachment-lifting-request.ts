@@ -25,6 +25,8 @@ export const samplePropertyAttachmentLiftingRequestMetadata = {
 export const samplePropertyAttachmentLiftingRequestData: SampleDocument = {
   id: 'property-attachment-lifting-request',
   slug: 'property-attachment-lifting-request',
+  metaTitle: 'نمونه لایحه رفع توقیف اموال مستثنیات دین [متن آماده] | نگارش یار',
+  metaDescription: 'دانلود و کپی متن لایحه رفع توقیف از منزل مسکونی، خودرو امرار معاش و مسدودی حساب طبق ماده ۲۴ قانون نحوه اجرای محکومیت‌های مالی در نگارش یار.',
   title: 'نمونه درخواست رفع توقیف اموال و حساب‌های جزء مستثنیات دین',
   badge: 'اجرای احکام و مستثنیات دین',
   category: 'اجرای احکام و توقیف اموال',
