@@ -10,6 +10,7 @@ import {
   Zap,
   Sparkles,
   FileCheck2,
+  Phone,
 } from 'lucide-react';
 
 export function RequestPageClient() {
@@ -244,6 +245,20 @@ export function RequestPageClient() {
                 ))}
             </motion.div>
           )}
+
+          {/* Direct Phone Call Alternative */}
+          <div className="mt-6 max-w-xl mx-auto text-center">
+            <a
+              id="request-direct-call-btn"
+              href="tel:09915147789"
+              className="inline-flex items-center justify-center gap-2.5 px-6 py-3 rounded-xl bg-slate-900/90 hover:bg-slate-850 border border-slate-700 hover:border-[#E5C158]/50 text-slate-200 hover:text-white transition-all shadow-md group active:scale-95"
+            >
+              <Phone className="w-4 h-4 text-emerald-400 group-hover:scale-110 transition-transform" />
+              <span className="text-xs sm:text-sm font-bold">
+                ترجیح می‌دهید تلفنی گفتگو کنید؟ تماس مستقیم با کارشناس: <span className="font-mono text-[#E5C158] font-black">۰۹۹۱۵۱۴۷۷۸۹</span>
+              </span>
+            </a>
+          </div>
         </Container>
       </section>
 
