@@ -37,6 +37,19 @@
     --border: var(--color-border);
   }
   
+  html,
+  body {
+    max-width: 100%;
+    overflow-x: clip;
+  }
+
+  @supports not (overflow-x: clip) {
+    html,
+    body {
+      overflow-x: hidden;
+    }
+  }
+
   body {
     background-color: var(--background);
     color: var(--foreground);

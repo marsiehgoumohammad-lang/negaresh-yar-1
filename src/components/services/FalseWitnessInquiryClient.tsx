@@ -7,7 +7,6 @@ import { Container } from '@/components/ui/container';
 import {
   Scale,
   AlertTriangle,
-  MapPin,
   Phone,
   MessageCircle,
   Gavel,
@@ -16,7 +15,6 @@ import {
   FileWarning,
   Sparkles,
   Lock,
-  Search,
   ExternalLink,
   ChevronDown,
   ArrowLeft,
@@ -40,80 +38,80 @@ export function FalseWitnessInquiryClient() {
   };
 
   return (
-    <div className="min-h-screen bg-[#070B15] text-white selection:bg-[#E5C158] selection:text-[#070B15]">
+    <div className="min-h-screen w-full max-w-full overflow-x-clip bg-[#070B15] text-white selection:bg-[#E5C158] selection:text-[#070B15]">
       {/* ----------------- HERO SECTION ----------------- */}
-      <section className="relative pt-10 pb-16 md:pt-16 md:pb-24 overflow-hidden border-b border-slate-800/80">
-        {/* Subtle Ambient Radial Glows */}
-        <div className="absolute -top-24 right-1/4 w-[500px] h-[450px] bg-[radial-gradient(circle_at_center,rgba(229,193,88,0.12)_0%,transparent_70%)] pointer-events-none -z-10" />
-        <div className="absolute top-1/2 left-10 w-[400px] h-[350px] bg-[radial-gradient(circle_at_center,rgba(239,68,68,0.08)_0%,transparent_70%)] pointer-events-none -z-10" />
+      <section className="relative pt-8 pb-14 md:pt-16 md:pb-24 overflow-hidden border-b border-slate-800/80">
+        {/* Subtle Ambient Radial Glows - strictly bounded */}
+        <div className="absolute -top-24 right-0 sm:right-1/4 w-[280px] sm:w-[450px] h-[280px] sm:h-[450px] max-w-full bg-[radial-gradient(circle_at_center,rgba(229,193,88,0.12)_0%,transparent_70%)] pointer-events-none -z-10" />
+        <div className="absolute top-1/2 left-0 sm:left-10 w-[240px] sm:w-[350px] h-[240px] sm:h-[350px] max-w-full bg-[radial-gradient(circle_at_center,rgba(239,68,68,0.08)_0%,transparent_70%)] pointer-events-none -z-10" />
 
         <Container>
           {/* Breadcrumb Navigation */}
           <nav
             aria-label="مسیر راهنما"
-            className="flex items-center gap-2 text-xs text-slate-400 mb-8 overflow-x-auto whitespace-nowrap pb-1"
+            className="flex items-center gap-2 text-xs text-slate-400 mb-6 sm:mb-8 overflow-x-auto whitespace-nowrap pb-1 max-w-full"
           >
-            <Link href="/" className="hover:text-[#E5C158] transition-colors">
+            <Link href="/" className="hover:text-[#E5C158] transition-colors shrink-0">
               صفحه اصلی
             </Link>
-            <span>/</span>
+            <span className="shrink-0">/</span>
             <Link
               href="/services"
-              className="hover:text-[#E5C158] transition-colors"
+              className="hover:text-[#E5C158] transition-colors shrink-0"
             >
               خدمات حقوقی
             </Link>
-            <span>/</span>
-            <span className="text-[#E5C158] font-medium">
+            <span className="shrink-0">/</span>
+            <span className="text-[#E5C158] font-medium truncate">
               اثبات شهادت دروغ و استعلام حضور شاهد
             </span>
           </nav>
 
-          <div className="max-w-4xl mx-auto text-center space-y-6">
+          <div className="max-w-4xl mx-auto text-center space-y-5 sm:space-y-6">
             {/* Urgency Badge */}
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-red-500/10 border border-red-500/30 text-red-400 text-xs sm:text-sm font-bold animate-pulse">
+            <div className="inline-flex max-w-full items-center justify-center text-center gap-2 px-3 sm:px-4 py-1.5 rounded-full bg-red-500/10 border border-red-500/30 text-red-400 text-xs sm:text-sm font-bold animate-pulse">
               <AlertTriangle className="w-4 h-4 text-red-400 shrink-0" />
-              <span>شاهدی علیه شما شهادت دروغ داده و مطمئنید در صحنه حضور نداشته است؟</span>
+              <span className="leading-snug">شاهدی علیه شما شهادت دروغ داده و مطمئنید در صحنه حضور نداشته است؟</span>
             </div>
 
             {/* H1 Headline */}
-            <h1 className="text-2xl sm:text-4xl md:text-5xl font-black text-white leading-tight md:leading-tight">
+            <h1 className="text-2xl sm:text-4xl md:text-5xl font-black text-white leading-tight md:leading-tight break-words">
               اثبات قطعی <span className="text-[#E5C158]">شهادت دروغین</span> با استعلام رسمی قضایی حضور شاهد در صحنه واقعه
             </h1>
 
             {/* Subtitle */}
-            <p className="text-sm sm:text-base md:text-lg text-slate-300 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-xs sm:text-base md:text-lg text-slate-300 max-w-3xl mx-auto leading-relaxed">
               اگر طرف مقابل با معرفی شاهد ساختگی یا اجیرشده قصد دارد جرمی را به شما نسبت دهد یا حقتان را ضایع کند، نگران نباشید! ما راهکاری کاملاً قانونی در اختیارتان می‌گذاریم تا با یک درخواست حقوقی دقیق، بازپرس، دادیار یا قاضی شعبه دستور استعلام رسمی صادر کند و مشخص شود آیا واقعاً شاهد در آن تاریخ و ساعت در محل واقعه حضور داشته یا خیر؛ تا در همان مرحله مقدماتی شهادت کذب از درجه اعتبار ساقط گردد.
             </p>
 
             {/* Trust Points */}
-            <div className="pt-2 flex flex-wrap items-center justify-center gap-3 text-xs sm:text-sm text-slate-300">
-              <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-900/90 border border-slate-800">
-                <FileSearch className="w-4 h-4 text-[#E5C158]" />
-                استعلام رسمی و تخصصی با دستور مقام قضایی
+            <div className="pt-2 flex flex-wrap items-center justify-center gap-2 sm:gap-3 text-xs sm:text-sm text-slate-300">
+              <span className="inline-flex max-w-full items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-900/90 border border-slate-800 text-right">
+                <FileSearch className="w-4 h-4 text-[#E5C158] shrink-0" />
+                <span className="break-words">استعلام رسمی و تخصصی با دستور مقام قضایی</span>
               </span>
-              <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-900/90 border border-slate-800">
-                <Gavel className="w-4 h-4 text-[#E5C158]" />
-                احراز قطعی عدم حضور فیزیکی شاهد در ساعت واقعه
+              <span className="inline-flex max-w-full items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-900/90 border border-slate-800 text-right">
+                <Gavel className="w-4 h-4 text-[#E5C158] shrink-0" />
+                <span className="break-words">احراز قطعی عدم حضور فیزیکی شاهد در ساعت واقعه</span>
               </span>
-              <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-900/90 border border-slate-800">
-                <FileWarning className="w-4 h-4 text-red-400" />
-                تعقیب کیفری شاهد به جرم شهادت کذب (ماده ۶۵۰)
+              <span className="inline-flex max-w-full items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-900/90 border border-slate-800 text-right">
+                <FileWarning className="w-4 h-4 text-red-400 shrink-0" />
+                <span className="break-words">تعقیب کیفری شاهد به جرم شهادت کذب (ماده ۶۵۰)</span>
               </span>
             </div>
 
             {/* Main Action Buttons */}
-            <div className="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
+            <div className="pt-3 sm:pt-4 flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 w-full max-w-md sm:max-w-none mx-auto">
               <a
                 href="#messengers"
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-7 py-3.5 rounded-xl bg-gradient-to-r from-[#D4AF37] via-[#E5C158] to-[#D4AF37] text-[#070B15] font-black text-sm sm:text-base shadow-lg shadow-[#E5C158]/20 hover:brightness-110 active:scale-[0.98] transition-all"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 sm:gap-3 px-5 sm:px-7 py-3.5 rounded-xl bg-gradient-to-r from-[#D4AF37] via-[#E5C158] to-[#D4AF37] text-[#070B15] font-black text-xs sm:text-base shadow-lg shadow-[#E5C158]/20 hover:brightness-110 active:scale-[0.98] transition-all text-center"
               >
                 <MessageCircle className="w-5 h-5 shrink-0" />
                 <span>ارتباط مستقیم در پیام‌رسان‌ها جهت تنظیم لایحه</span>
               </a>
               <a
                 href={`tel:${OFFICIAL_PHONE}`}
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-slate-900 border border-slate-700 text-white font-bold text-sm sm:text-base hover:bg-slate-800 hover:border-[#E5C158]/50 transition-all"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 sm:px-6 py-3.5 rounded-xl bg-slate-900 border border-slate-700 text-white font-bold text-xs sm:text-base hover:bg-slate-800 hover:border-[#E5C158]/50 transition-all text-center"
               >
                 <Phone className="w-4 h-4 text-[#E5C158] shrink-0" />
                 <span>تماس اضطراری: {OFFICIAL_PHONE}</span>
@@ -124,7 +122,7 @@ export function FalseWitnessInquiryClient() {
       </section>
 
       {/* ----------------- THE CRISIS & WARNING SECTION ----------------- */}
-      <section className="py-12 md:py-16 bg-[#090E1D] border-b border-slate-800/80">
+      <section className="py-12 md:py-16 bg-[#090E1D] border-b border-slate-800/80 overflow-hidden">
         <Container>
           <div className="max-w-4xl mx-auto space-y-8">
             <div className="p-6 md:p-8 rounded-2xl bg-gradient-to-br from-red-950/30 via-slate-900/80 to-slate-900/80 border border-red-500/30 shadow-xl">
@@ -183,7 +181,7 @@ export function FalseWitnessInquiryClient() {
       </section>
 
       {/* ----------------- WHY NO FREE SAMPLE SECTION ----------------- */}
-      <section className="py-12 md:py-16 border-b border-slate-800/80 relative">
+      <section className="py-12 md:py-16 border-b border-slate-800/80 relative overflow-hidden">
         <Container>
           <div className="max-w-4xl mx-auto">
             <div className="p-6 sm:p-10 rounded-2xl bg-gradient-to-br from-amber-500/10 via-slate-900 to-slate-900 border border-[#E5C158]/40 shadow-2xl relative overflow-hidden">
@@ -252,7 +250,7 @@ export function FalseWitnessInquiryClient() {
       </section>
 
       {/* ----------------- REAL LIFE SCENARIOS SECTION ----------------- */}
-      <section className="py-12 md:py-16 bg-[#090E1D] border-b border-slate-800/80">
+      <section className="py-12 md:py-16 bg-[#090E1D] border-b border-slate-800/80 overflow-hidden">
         <Container>
           <div className="max-w-4xl mx-auto space-y-8">
             <div className="text-center space-y-3">
@@ -313,7 +311,7 @@ export function FalseWitnessInquiryClient() {
       </section>
 
       {/* ----------------- CONSEQUENCES OF FALSE WITNESS (PENAL CODE) ----------------- */}
-      <section className="py-12 md:py-16 border-b border-slate-800/80">
+      <section className="py-12 md:py-16 border-b border-slate-800/80 overflow-hidden">
         <Container>
           <div className="max-w-4xl mx-auto space-y-8">
             <div className="p-6 md:p-8 rounded-2xl bg-slate-900/90 border border-slate-800 space-y-6">
@@ -349,7 +347,7 @@ export function FalseWitnessInquiryClient() {
       </section>
 
       {/* ----------------- HOW WE WORK (3 STEPS) ----------------- */}
-      <section className="py-12 md:py-16 bg-[#090E1D] border-b border-slate-800/80">
+      <section className="py-12 md:py-16 bg-[#090E1D] border-b border-slate-800/80 overflow-hidden">
         <Container>
           <div className="max-w-4xl mx-auto space-y-8">
             <div className="text-center space-y-3">
@@ -397,9 +395,9 @@ export function FalseWitnessInquiryClient() {
       </section>
 
       {/* ----------------- MESSENGERS CTA SECTION (PRIMARY CONVERSION) ----------------- */}
-      <section id="messengers" className="py-14 md:py-20 border-b border-slate-800/80 relative">
+      <section id="messengers" className="py-14 md:py-20 border-b border-slate-800/80 relative overflow-hidden">
         {/* Glow */}
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[350px] bg-[radial-gradient(circle_at_center,rgba(229,193,88,0.1)_0%,transparent_70%)] pointer-events-none -z-10" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[320px] sm:w-[550px] h-[350px] max-w-full bg-[radial-gradient(circle_at_center,rgba(229,193,88,0.1)_0%,transparent_70%)] pointer-events-none -z-10" />
 
         <Container>
           <div className="max-w-4xl mx-auto space-y-8">
@@ -481,7 +479,7 @@ export function FalseWitnessInquiryClient() {
       </section>
 
       {/* ----------------- FAQS SECTION ----------------- */}
-      <section className="py-12 md:py-16 bg-[#090E1D] border-b border-slate-800/80">
+      <section className="py-12 md:py-16 bg-[#090E1D] border-b border-slate-800/80 overflow-hidden">
         <Container>
           <div className="max-w-4xl mx-auto space-y-8">
             <div className="text-center space-y-3">
@@ -540,7 +538,7 @@ export function FalseWitnessInquiryClient() {
       </section>
 
       {/* ----------------- FINAL PROMISE / CTA ----------------- */}
-      <section className="py-12 md:py-16">
+      <section className="py-12 md:py-16 overflow-hidden">
         <Container>
           <div className="max-w-3xl mx-auto text-center space-y-6">
             <h2 className="text-xl sm:text-2xl md:text-3xl font-black text-white">
