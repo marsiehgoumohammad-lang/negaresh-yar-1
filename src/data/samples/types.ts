@@ -5,6 +5,7 @@ export type SearchIntent = 'informational' | 'transactional' | 'navigational' | 
 export type SampleStatus = 'published' | 'draft';
 
 export const SAMPLE_CATEGORIES = [
+  'قراردادها و توافق‌نامه‌ها',
   'وثیقه و قرارهای تأمین',
   'اعتراض و تجدیدنظر',
   'اعسار و محکومیت مالی',

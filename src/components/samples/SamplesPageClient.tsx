@@ -24,7 +24,7 @@ export function SamplesPageClient() {
   const [selectedCategory, setSelectedCategory] = useState<string>('همه');
   const [openFaq, setOpenFaq] = useState<number | null>(0);
 
-  const categories = ['همه', 'نامه‌ها و عریضه‌های اداری', 'اوراق و دادخواست‌های قضایی'];
+  const categories = ['همه', 'قراردادها و توافق‌نامه‌ها', 'نامه‌ها و عریضه‌های اداری', 'اوراق و دادخواست‌های قضایی'];
 
   const filteredSamples = useMemo(() => {
     return allSamplesList.filter((item) => {
