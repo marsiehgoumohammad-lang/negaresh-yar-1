@@ -16,6 +16,7 @@ import {
   ChevronDown,
   ShieldCheck,
   FileCheck,
+  Building2,
 } from 'lucide-react';
 import { allSamplesList } from '@/data/samples';
 
@@ -24,12 +25,39 @@ export function SamplesPageClient() {
   const [selectedCategory, setSelectedCategory] = useState<string>('همه');
   const [openFaq, setOpenFaq] = useState<number | null>(0);
 
-  const categories = ['همه', 'قراردادها و توافق‌نامه‌ها', 'نامه‌ها و عریضه‌های اداری', 'اوراق و دادخواست‌های قضایی'];
+  const categories = [
+    'همه',
+    'قراردادها و توافق‌نامه‌ها',
+    'نامه‌ها و عریضه‌های اداری',
+    'دادخواست و لوایح قضایی',
+    'شکواییه و امور کیفری',
+  ];
 
   const filteredSamples = useMemo(() => {
     return allSamplesList.filter((item) => {
-      const matchesCategory =
-        selectedCategory === 'همه' || item.category === selectedCategory;
+      let matchesCategory = false;
+      if (selectedCategory === 'همه') {
+        matchesCategory = true;
+      } else if (selectedCategory === 'قراردادها و توافق‌نامه‌ها') {
+        matchesCategory = item.category === 'قراردادها و توافق‌نامه‌ها';
+      } else if (selectedCategory === 'نامه‌ها و عریضه‌های اداری') {
+        matchesCategory =
+          item.category === 'نامه‌ها و عریضه‌های اداری' ||
+          item.category === 'نامه‌ها و درخواست‌های اداری';
+      } else if (selectedCategory === 'دادخواست و لوایح قضایی') {
+        matchesCategory =
+          item.category === 'درخواست‌های قضایی' ||
+          item.category === 'اوراق و دادخواست‌های قضایی' ||
+          item.category === 'وثیقه و قرارهای تأمین' ||
+          item.category === 'اعسار و محکومیت مالی' ||
+          item.category === 'اجرای احکام و مزایده' ||
+          item.category === 'اظهارنامه';
+      } else if (selectedCategory === 'شکواییه و امور کیفری') {
+        matchesCategory = item.category === 'شکواییه و امور کیفری';
+      } else {
+        matchesCategory = item.category === selectedCategory;
+      }
+
       const matchesSearch =
         item.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
         item.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -167,7 +195,64 @@ export function SamplesPageClient() {
 
       <Container className="space-y-16 sm:space-y-24">
         {/* ---------------------------------------------------- */}
-        {/* 2. SAMPLES GRID */}
+        {/* 2. PILLAR HUBS SPOTLIGHT */}
+        {/* ---------------------------------------------------- */}
+        <section className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {/* Contracts Hub Card */}
+          <Link
+            href="/samples/contracts"
+            className="p-6 rounded-3xl bg-gradient-to-br from-[#0C1425] via-slate-900 to-slate-950 border border-[#E5C158]/30 hover:border-[#E5C158] transition-all duration-300 group shadow-xl hover:shadow-[#E5C158]/10 flex flex-col justify-between"
+          >
+            <div className="space-y-3">
+              <div className="flex items-center justify-between">
+                <span className="px-3 py-1 rounded-full bg-[#E5C158]/10 text-[#E5C158] border border-[#E5C158]/20 text-xs font-bold flex items-center gap-1.5">
+                  <ShieldCheck className="w-3.5 h-3.5" />
+                  <span>هاب تخصصی قراردادها</span>
+                </span>
+                <span className="text-xs text-slate-400 font-medium">۲۸ قرارداد رسمی</span>
+              </div>
+              <h3 className="text-lg sm:text-xl font-black text-white group-hover:text-[#E5C158] transition-colors">
+                مرجع تخصصی قراردادها و توافق‌نامه‌ها
+              </h3>
+              <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
+                مجموعه کامل الگوهای آماده قراردادهای ملکی، خودرویی، استخدامی، مشارکت کسب‌وکار، صلح‌نامه‌ها و تعهدات مالی با شروط وجه التزام و نکات طلایی پیشگیری از دعوا.
+              </p>
+            </div>
+            <div className="pt-4 mt-4 border-t border-slate-800/80 flex items-center justify-between text-xs font-bold text-[#E5C158]">
+              <span>مشاهده و دسته‌بندی قراردادها</span>
+              <ArrowLeft className="w-4 h-4 transition-transform group-hover:-translate-x-1" />
+            </div>
+          </Link>
+
+          {/* Administrative Letters Hub Card */}
+          <Link
+            href="/samples/administrative-letters"
+            className="p-6 rounded-3xl bg-gradient-to-br from-[#0C1425] via-slate-900 to-slate-950 border border-blue-500/30 hover:border-blue-400 transition-all duration-300 group shadow-xl hover:shadow-blue-500/10 flex flex-col justify-between"
+          >
+            <div className="space-y-3">
+              <div className="flex items-center justify-between">
+                <span className="px-3 py-1 rounded-full bg-blue-500/10 text-blue-400 border border-blue-500/20 text-xs font-bold flex items-center gap-1.5">
+                  <Building2 className="w-3.5 h-3.5" />
+                  <span>هاب نامه‌نگاری اداری</span>
+                </span>
+                <span className="text-xs text-slate-400 font-medium">مکاتبات سازمانی</span>
+              </div>
+              <h3 className="text-lg sm:text-xl font-black text-white group-hover:text-blue-400 transition-colors">
+                مرجع جامع نامه‌های اداری و رسمی
+              </h3>
+              <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
+                الگوهای استاندارد مکاتبه و عریضه‌نویسی به شهرداری‌ها، بانک‌ها، بیمه، دانشگاه‌ها و سازمان‌های دولتی با رعایت اصول ۶ گانه نگارش رسمی و فرمول طلایی درخواست.
+              </p>
+            </div>
+            <div className="pt-4 mt-4 border-t border-slate-800/80 flex items-center justify-between text-xs font-bold text-blue-400">
+              <span>مشاهده الگوهای نامه‌های اداری</span>
+              <ArrowLeft className="w-4 h-4 transition-transform group-hover:-translate-x-1" />
+            </div>
+          </Link>
+        </section>
+
+        {/* ---------------------------------------------------- */}
+        {/* 3. SAMPLES GRID */}
         {/* ---------------------------------------------------- */}
         <section className="scroll-mt-24 space-y-8">
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">

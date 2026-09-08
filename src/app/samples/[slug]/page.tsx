@@ -117,9 +117,14 @@ export default async function DynamicSamplePage({ params }: SamplePageProps) {
         '@type': 'ListItem',
         position: 3,
         name: sample.category || 'درخواست‌های قضایی',
-        item: `https://www.negaresh-yar.ir/samples?category=${encodeURIComponent(
-          sample.category || ''
-        )}`,
+        item:
+          sample.category === 'قراردادها و توافق‌نامه‌ها'
+            ? 'https://www.negaresh-yar.ir/samples/contracts'
+            : sample.category === 'نامه‌ها و عریضه‌های اداری'
+            ? 'https://www.negaresh-yar.ir/samples/administrative-letters'
+            : `https://www.negaresh-yar.ir/samples?category=${encodeURIComponent(
+                sample.category || ''
+              )}`,
       },
       {
         '@type': 'ListItem',

@@ -152,8 +152,13 @@ import {
 // Helper to normalize and ensure all required fields for a SampleDocument
 function normalizeSample(item: SampleDocument): SampleDocument {
   const slug = item.slug;
-  const title = item.title || item.h1Title || item.categoryName || '';
-  const shortDescription = item.shortDescription || item.heroSubtitle || '';
+  const rawTitle = item.title || item.h1Title || '';
+  const title = (rawTitle && rawTitle !== 'undefined') ? rawTitle : 'نمونه سند رسمی و قضایی';
+  const shortDescription = (item.shortDescription && item.shortDescription !== 'undefined')
+    ? item.shortDescription
+    : (item.heroSubtitle && item.heroSubtitle !== 'undefined')
+    ? item.heroSubtitle
+    : '';
   const content = item.content || item.sampleStructureContent || '';
   const excerpt =
     item.excerpt ||
@@ -214,7 +219,8 @@ function normalizeSample(item: SampleDocument): SampleDocument {
       ? item.faqs.map((f) => ({ question: f.q, answer: f.a }))
       : []);
 
-  const category = item.category || item.categoryName || 'درخواست‌های قضایی';
+  const rawCategory = item.category || item.categoryName;
+  const category = (rawCategory && rawCategory !== 'undefined') ? rawCategory : 'درخواست‌های قضایی';
 
   return {
     ...item,

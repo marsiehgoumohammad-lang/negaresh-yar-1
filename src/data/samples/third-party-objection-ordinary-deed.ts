@@ -215,22 +215,28 @@ export const sampleThirdPartyObjectionOrdinaryDeedData: SampleLandingData = {
 
   relatedSamples: [
     {
-      title: 'نمونه درخواست صدور اجراییه چک (ماده ۲۳)',
-      href: '/samples/check-execution-petition',
-      desc: 'الگوی رسمی صدور اجراییه مستقیم چک صیادی در دادگاه.',
-      badge: 'اجراییه چک',
+      title: 'نمونه دادخواست اعتراض ثالث اجرایی و رفع توقیف مال (مواد ۱۴۶ و ۱۴۷)',
+      href: '/samples/third-party-objection-to-execution',
+      desc: 'دادخواست رسمی اثبات مالکیت شخص ثالث بر ملک، خودرو یا حساب و رفع توقیف فوری.',
+      badge: 'اعتراض ثالث',
     },
     {
-      title: 'نمونه دادخواست اعسار از محکوم‌به',
-      href: '/samples/insolvency',
-      desc: 'تقاضای تقسیط بدهی و جلوگیری از جلب در اجرای احکام.',
-      badge: 'اعسار و تقسیط',
+      title: 'نمونه لایحه رفع توقیف مستثنیات دین',
+      href: '/samples/property-attachment-lifting-request',
+      desc: 'لایحه دفاعیه اعتراض به بازداشت خودروی کار، ودیعه مسکن و اموال ضروری زندگی.',
+      badge: 'مستثنیات دین',
     },
     {
-      title: 'نمونه واخواهی از دادنامه غیابی',
-      href: '/samples/objection-absent-judgment',
-      desc: 'اعتراض به آرای غیابی و توقف اقدامات اجرایی.',
-      badge: 'واخواهی غیابی',
+      title: 'نمونه لایحه اعتراض و ابطال مزایده و توقف عملیات اجرایی',
+      href: '/samples/auction-cancellation-objection',
+      desc: 'اعتراض به تخلفات مزایده، کارشناسی نامتعارف و تقاضای ابطال مزایده اجرای احکام.',
+      badge: 'ابطال مزایده',
+    },
+    {
+      title: 'نمونه دادخواست ابطال اجراییه چک و توقف عملیات اجرایی',
+      href: '/samples/check-execution-objection',
+      desc: 'اعتراض به صدور اجراییه مستقیم و توقف توقیف اموال در اجرای احکام.',
+      badge: 'ابطال اجراییه',
     },
   ],
 

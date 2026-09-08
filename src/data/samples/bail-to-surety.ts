@@ -189,10 +189,22 @@ export const sampleBailToSuretyData: SampleLandingData = {
 
   relatedSamples: [
     {
+      title: 'نمونه درخواست جایگزینی و تعویض وثیقه',
+      href: '/samples/bail-substitution',
+      desc: 'تعویض سند ملکی وثیقه با سند یا مال دیگر در دادسرا.',
+      badge: 'جایگزینی وثیقه'
+    },
+    {
       title: 'نمونه درخواست تخفیف و تبدیل وثیقه',
       href: '/samples/bail-reduction',
       desc: 'کاهش مبلغ قرار یا تبدیل به کفالت.',
       badge: 'تخفیف وثیقه'
+    },
+    {
+      title: 'نمونه درخواست تبدیل بازداشت به وثیقه',
+      href: '/samples/detention-to-bail',
+      desc: 'تقاضای تبدیل قرار بازداشت موقت به وثیقه جهت آزادی.',
+      badge: 'تبدیل بازداشت'
     },
     {
       title: 'نمونه درخواست فک و استرداد وثیقه',

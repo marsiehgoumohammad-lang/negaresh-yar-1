@@ -183,10 +183,22 @@ export const sampleDetentionToBailData: SampleLandingData = {
 
   relatedSamples: [
     {
-      title: 'نمونه درخواست انصراف ضامن و فک فیش حقوقی',
-      href: '/samples/bail-release-surety-request',
-      desc: 'رفع اثر از تعهد کفیل و فیش حقوقی.',
-      badge: 'انصراف ضامن'
+      title: 'نمونه درخواست تبدیل و تعویض وثیقه',
+      href: '/samples/bail-substitution',
+      desc: 'جایگزینی سند ملکی دیگر یا ضمانت‌نامه در شعبه بازپرسی.',
+      badge: 'تعویض وثیقه'
+    },
+    {
+      title: 'نمونه درخواست تخفیف و کاهش مبلغ وثیقه',
+      href: '/samples/bail-reduction',
+      desc: 'کاهش مبلغ سنگین قرار وثیقه صادره در دادسرا.',
+      badge: 'تخفیف وثیقه'
+    },
+    {
+      title: 'نمونه تبدیل قرار وثیقه به فیش حقوقی و کفالت',
+      href: '/samples/bail-to-surety',
+      desc: 'آزادی متهم با ضمانت کارمندی به جای تودیع سند ملک.',
+      badge: 'تبدیل به کفالت'
     },
     {
       title: 'نمونه تقاضای قبولی وثیقه و ارزیابی ملک',
@@ -195,10 +207,10 @@ export const sampleDetentionToBailData: SampleLandingData = {
       badge: 'تودیع وثیقه'
     },
     {
-      title: 'نمونه درخواست تبدیل و تعویض وثیقه',
-      href: '/samples/bail-substitution',
-      desc: 'جایگزینی سند ملکی دیگر یا ضمانت‌نامه.',
-      badge: 'تعویض وثیقه'
+      title: 'نمونه درخواست انصراف ضامن و فک فیش حقوقی',
+      href: '/samples/bail-release-surety-request',
+      desc: 'رفع اثر از تعهد کفیل و فیش حقوقی.',
+      badge: 'انصراف ضامن'
     }
   ],
 

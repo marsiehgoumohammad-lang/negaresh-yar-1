@@ -2,7 +2,8 @@ import { SampleLandingData } from './types';
 
 export const sampleChildCustodyPetitionData: SampleLandingData = {
   slug: 'child-custody-petition',
-  category: 'undefined',
+  category: 'درخواست‌های قضایی',
+  badge: 'حضانت فرزند',
   title: 'نمونه دادخواست حضانت فرزند | نگارش یار',
   metaTitle: 'نمونه دادخواست حضانت فرزند | نگارش یار',
   metaDescription: 'دانلود نمونه دادخواست حضانت فرزند دختر و پسر، سلب حضانت از زوج/زوجه به دلیل عدم صلاحیت و تحویل فرزند.',

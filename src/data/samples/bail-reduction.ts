@@ -196,6 +196,24 @@ export const sampleBailReductionData: SampleLandingData = {
 
   relatedSamples: [
     {
+      title: 'نمونه درخواست جایگزینی و تعویض وثیقه',
+      href: '/samples/bail-substitution',
+      desc: 'تعویض سند ملک توقیفی با سند جدید جهت رفع بازداشت سند قبلی.',
+      badge: 'جایگزینی وثیقه'
+    },
+    {
+      title: 'نمونه تبدیل قرار وثیقه به فیش حقوقی و کفالت',
+      href: '/samples/bail-to-surety',
+      desc: 'آزادسازی سند ملکی با معرفی کارمند ضامن و کسر از حقوق.',
+      badge: 'تبدیل به کفالت'
+    },
+    {
+      title: 'نمونه درخواست تبدیل بازداشت به وثیقه',
+      href: '/samples/detention-to-bail',
+      desc: 'تقاضای خروج از بازداشت با معرفی سند ملک.',
+      badge: 'قبولی وثیقه'
+    },
+    {
       title: 'نمونه درخواست فک و استرداد وثیقه',
       href: '/samples/release-of-bail',
       desc: 'آزادسازی سند ملکی تودیع‌شده در دادسرا.',
@@ -206,12 +224,6 @@ export const sampleBailReductionData: SampleLandingData = {
       href: '/samples/objection-to-criminal-security',
       desc: 'اعتراض به صدور قرار نامتناسب بازپرس.',
       badge: 'اعتراض به قرار'
-    },
-    {
-      title: 'نمونه درخواست تبدیل بازداشت به وثیقه',
-      href: '/samples/detention-to-bail',
-      desc: 'تقاضای خروج از بازداشت با معرفی سند ملک.',
-      badge: 'قبولی وثیقه'
     }
   ],
 

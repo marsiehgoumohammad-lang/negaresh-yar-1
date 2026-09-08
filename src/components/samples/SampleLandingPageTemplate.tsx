@@ -79,9 +79,14 @@ export function SampleLandingPageTemplate({ data }: { data: SampleLandingData })
       })
     : 'مرداد ۱۴۰۵';
 
-  const categoryName = data.category || data.categoryName || 'درخواست‌های قضایی';
-  const title = data.title || data.h1Title || '';
-  const shortDescription = data.shortDescription || data.heroSubtitle || '';
+  const categoryName =
+    data.category && data.category !== 'undefined'
+      ? data.category
+      : data.categoryName && data.categoryName !== 'undefined'
+      ? data.categoryName
+      : 'درخواست‌های قضایی';
+  const title = (data.title && data.title !== 'undefined') ? data.title : (data.h1Title && data.h1Title !== 'undefined') ? data.h1Title : 'نمونه سند حقوقی';
+  const shortDescription = (data.shortDescription && data.shortDescription !== 'undefined') ? data.shortDescription : (data.heroSubtitle && data.heroSubtitle !== 'undefined') ? data.heroSubtitle : '';
   const excerpt =
     data.excerpt ||
     (data.whatIsParagraphs && data.whatIsParagraphs.length > 0
@@ -706,13 +711,15 @@ export function SampleLandingPageTemplate({ data }: { data: SampleLandingData })
                       const smpTitle =
                         typeof smp === 'string'
                           ? `مشاهده نمونه ${smp}`
-                          : smp.title;
+                          : smp.title && smp.title !== 'undefined'
+                          ? smp.title
+                          : 'مشاهده متن و الگوی سند';
                       const smpBadge =
-                        typeof smp === 'object' && smp.badge
+                        typeof smp === 'object' && smp.badge && smp.badge !== 'undefined'
                           ? smp.badge
-                          : 'نمونه سند';
+                          : 'الگوی آماده';
                       const smpDesc =
-                        typeof smp === 'object' && smp.desc
+                        typeof smp === 'object' && smp.desc && smp.desc !== 'undefined'
                           ? smp.desc
                           : 'مشاهده و دانلود قالب استاندارد';
 

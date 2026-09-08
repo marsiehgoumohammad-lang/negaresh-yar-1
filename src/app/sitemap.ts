@@ -12,6 +12,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     '',
     '/services',
     '/samples',
+    '/samples/contracts',
     '/samples/administrative-letters',
     '/knowledge',
     '/request',
@@ -26,7 +27,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority:
       route === ''
         ? 1.0
-        : route === '/samples/administrative-letters'
+        : route === '/samples/contracts' || route === '/samples/administrative-letters'
           ? 0.95
           : route === '/lawyer-referral'
             ? 0.95

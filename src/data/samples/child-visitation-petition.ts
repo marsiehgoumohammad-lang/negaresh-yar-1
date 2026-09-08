@@ -2,7 +2,8 @@ import { SampleLandingData } from './types';
 
 export const sampleChildVisitationPetitionData: SampleLandingData = {
   slug: 'child-visitation-petition',
-  category: 'undefined',
+  category: 'درخواست‌های قضایی',
+  badge: 'ملاقات فرزند',
   title: 'نمونه دادخواست ملاقات با فرزند | نگارش یار',
   metaTitle: 'نمونه دادخواست ملاقات با فرزند | نگارش یار',
   metaDescription: 'دانلود نمونه دادخواست حقوقی ملاقات با فرزند مشترک، تعیین زمان و مکان ملاقات و دستور موقت فوری.',

@@ -184,9 +184,21 @@ export const sampleAuctionCancellationObjectionData: SampleLandingData = {
 
   relatedSamples: [
     {
+      title: 'نمونه دادخواست اعتراض ثالث اجرایی و توقف مزایده',
+      href: '/samples/third-party-objection-to-execution',
+      desc: 'اثبات مالکیت شخص ثالث بر مال در آستانه مزایده و توقف فوری فروش.',
+      badge: 'اعتراض ثالث'
+    },
+    {
+      title: 'نمونه دادخواست اعتراض ثالث با سند عادی',
+      href: '/samples/third-party-objection-ordinary-deed',
+      desc: 'ابطال مزایده و اثبات خرید با قولنامه عادی قبل از توقیف مال.',
+      badge: 'سند عادی'
+    },
+    {
       title: 'نمونه درخواست رفع توقیف مستثنیات دین',
       href: '/samples/property-attachment-lifting-request',
-      desc: 'آزادی منزل مسکونی یا خودروی کسب درآمد.',
+      desc: 'آزادی منزل مسکونی یا خودروی کسب درآمد و خروج از مزایده.',
       badge: 'مستثنیات دین'
     },
     {

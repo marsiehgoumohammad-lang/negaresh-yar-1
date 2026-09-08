@@ -195,6 +195,60 @@ export const samplePropertyAttachmentLiftingRequestData: SampleDocument = {
       desc: 'تنظیم دادخواست‌های اعسار، تعدیل اقساط و رفع مزاحمت اجرایی.',
       badge: 'دادخواست نویسی',
     },
+    {
+      title: 'خدمات مزایده و اجرای احکام',
+      href: '/services/judiciary-auction',
+      desc: 'پیگیری پرونده‌های مزایده دادگاه‌ها و توقیف اموال.',
+      badge: 'مزایده احکام',
+    },
+  ],
+
+  relatedSamples: [
+    {
+      title: 'نمونه دادخواست اعتراض ثالث اجرایی و رفع توقیف مال',
+      href: '/samples/third-party-objection-to-execution',
+      desc: 'اثبات مالکیت شخص ثالث بر مال توقیف‌شده در اجرای احکام مدنی.',
+      badge: 'اعتراض ثالث',
+    },
+    {
+      title: 'نمونه دادخواست اعتراض ثالث با سند عادی',
+      href: '/samples/third-party-objection-ordinary-deed',
+      desc: 'اثبات مالکیت با مبایعه‌نامه عادی و درخواست توقف فوری مزایده.',
+      badge: 'سند عادی',
+    },
+    {
+      title: 'نمونه لایحه اعتراض و ابطال مزایده اجرای احکام',
+      href: '/samples/auction-cancellation-objection',
+      desc: 'درخواست ابطال عملیات اجرایی و مزایده مال توقیفی به علت تخلفات شکلی.',
+      badge: 'ابطال مزایده',
+    },
+    {
+      title: 'متن درخواست اعسار و تقسیط محکوم‌به',
+      href: '/samples/insolvency',
+      desc: 'تقاضای تقسیط بدهی، دیه یا مهریه جهت توقف جلب و رفع بازداشت حساب.',
+      badge: 'اعسار و تقسیط',
+    },
+  ],
+
+  relatedArticles: [
+    {
+      title: 'چگونه بدهی و مهریه را قسطی کنیم؟',
+      href: '/knowledge/how-to-install-debt-and-mahrieh',
+      desc: 'راهنمای کامل دادخواست اعسار، تقسیط و جلوگیری از جلب و بازداشت.',
+      badge: 'راهنمای اعسار',
+    },
+    {
+      title: 'راهنمای جامع مزایده‌های دادگستری و توقیف اموال',
+      href: '/knowledge/government-auction-guide',
+      desc: 'بررسی مراحل توقیف اموال، ارزیابی کارشناس و شرایط مستثنیات دین در مزایده.',
+      badge: 'راهنمای مزایده',
+    },
+    {
+      title: 'معنی اصطلاحات دادگاه و رای اجرای احکام',
+      href: '/knowledge/meaning-of-court-terms',
+      desc: 'بررسی مفهوم مستثنیات دین، مال منقول و غیرمنقول و توقیف پلاک.',
+      badge: 'اصطلاحات حقوقی',
+    },
   ],
 
   ctaTitle: 'نیاز به تنظیم فوری لایحه رفع توقیف مستثنیات دین دارید؟',

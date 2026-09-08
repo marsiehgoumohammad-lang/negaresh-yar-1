@@ -67,6 +67,16 @@ export interface KnowledgeArticleData {
   // Custom Guide Component
   customGuideContent?: React.ReactNode;
   customComponent?: React.ReactNode;
+
+  // Official Government / Judicial Portal Access (Direct Link Section)
+  officialPortalSection?: {
+    title: string;
+    description: string;
+    officialUrl: string;
+    officialName: string;
+    disclaimer: string;
+    quickActions?: { label: string; href: string }[];
+  };
   
   // CTA
   ctaTitle?: string;

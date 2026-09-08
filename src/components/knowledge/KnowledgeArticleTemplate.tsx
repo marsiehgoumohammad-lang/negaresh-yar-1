@@ -24,6 +24,8 @@ import {
   ListOrdered,
   FileCheck2,
   Scale,
+  ExternalLink,
+  ShieldAlert,
 } from 'lucide-react';
 import { KnowledgeArticleData } from '@/data/knowledge/types';
 import { ThreeServiceDiscovery } from '@/components/common/ThreeServiceDiscovery';
@@ -225,6 +227,64 @@ export function KnowledgeArticleTemplate({ data }: { data: KnowledgeArticleData 
       <Container className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
         {/* RIGHT COLUMN (OR MAIN): ARTICLE BODY (8 COLS) */}
         <div className="lg:col-span-8 space-y-10 text-right">
+          {/* OFFICIAL PORTAL ACCESS CARD (ورود به درگاه رسمی) */}
+          {data.officialPortalSection && (
+            <section
+              id="official-portal-access"
+              className="p-6 md:p-8 rounded-2xl bg-gradient-to-br from-[#070B15] via-[#0C1222] to-[#121A2E] border-2 border-emerald-500/40 shadow-2xl relative overflow-hidden"
+            >
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-slate-800 pb-5 mb-5">
+                <div className="flex items-start sm:items-center gap-3.5">
+                  <div className="p-3 rounded-xl bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 shrink-0">
+                    <ExternalLink className="w-6 h-6" />
+                  </div>
+                  <div>
+                    <span className="text-[11px] font-bold px-2.5 py-0.5 rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 inline-block mb-1.5">
+                      درگاه حاکمیتی و رسمی کشور
+                    </span>
+                    <h2 className="text-xl md:text-2xl font-black text-white">
+                      {data.officialPortalSection.title}
+                    </h2>
+                  </div>
+                </div>
+
+                <a
+                  href={data.officialPortalSection.officialUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-sm transition-all shadow-lg shadow-emerald-900/30 shrink-0 group"
+                >
+                  <span>ورود مستقیم به {data.officialPortalSection.officialName}</span>
+                  <ExternalLink className="w-4 h-4 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
+                </a>
+              </div>
+
+              <p className="text-slate-300 text-sm md:text-base leading-relaxed mb-4">
+                {data.officialPortalSection.description}
+              </p>
+
+              {data.officialPortalSection.quickActions && data.officialPortalSection.quickActions.length > 0 && (
+                <div className="flex flex-wrap items-center gap-2 pt-3 border-t border-slate-800/80">
+                  <span className="text-xs text-slate-400 font-semibold ml-1">دسترسی سریع به بخش‌های راهنما:</span>
+                  {data.officialPortalSection.quickActions.map((action, idx) => (
+                    <a
+                      key={idx}
+                      href={action.href}
+                      className="text-xs font-semibold px-3 py-1.5 rounded-lg bg-slate-900/80 hover:bg-slate-800 text-[#E5C158] border border-slate-800 hover:border-[#E5C158]/40 transition-colors"
+                    >
+                      {action.label}
+                    </a>
+                  ))}
+                </div>
+              )}
+
+              <div className="mt-4 p-3.5 rounded-xl bg-slate-950/70 border border-slate-800/90 text-xs text-slate-300 flex items-start gap-2.5 leading-relaxed">
+                <ShieldAlert className="w-4 h-4 text-amber-400 shrink-0 mt-0.5" />
+                <span>{data.officialPortalSection.disclaimer}</span>
+              </div>
+            </section>
+          )}
+
           {/* A. QUICK FEATURED ANSWER BOX (SEO FEATURED SNIPPET) */}
           <section className="p-6 md:p-8 rounded-2xl bg-gradient-to-br from-[#0C1222] to-[#121A2E] border-2 border-[#E5C158]/40 shadow-xl shadow-[#E5C158]/5 relative overflow-hidden">
             <div className="absolute top-0 left-0 w-2 h-full bg-[#E5C158]" />
