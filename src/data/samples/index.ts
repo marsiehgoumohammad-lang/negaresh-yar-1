@@ -147,6 +147,9 @@ import { sampleMutualDivorceSettlementAgreementData, sampleMutualDivorceSettleme
 import { sampleCaseAccessRestrictionRequestData, sampleCaseAccessRestrictionRequestMetadata } from './case-access-restriction-request';
 import { sampleJudicialCommissionRequestData, sampleJudicialCommissionRequestMetadata } from './judicial-commission-request';
 import { sampleArrestWarrantRequestData, sampleArrestWarrantRequestMetadata } from './arrest-warrant-request';
+import { sampleEvidencePreservationData, sampleEvidencePreservationMetadata } from './evidence-preservation';
+import { sampleDiyaInstallmentPetitionData, sampleDiyaInstallmentPetitionMetadata } from './diya-installment-petition';
+import { sampleCriminalRetrialArticle474PetitionData, sampleCriminalRetrialArticle474PetitionMetadata } from './criminal-retrial-article-474-petition';
 import { SampleLandingData } from './types';
 
 export const allSamplesList: {
@@ -1481,6 +1484,33 @@ export const allSamplesList: {
     href: '/samples/arrest-warrant-request',
     data: sampleArrestWarrantRequestData,
   },
+  {
+    slug: 'evidence-preservation',
+    title: sampleEvidencePreservationData.title || sampleEvidencePreservationData.h1Title || 'نمونه دادخواست تأمین دلیل با جلب نظر کارشناس',
+    description: sampleEvidencePreservationData.heroSubtitle || sampleEvidencePreservationData.shortDescription || '',
+    category: 'درخواست‌های قضایی',
+    badge: 'تأمین دلیل و کارشناسی',
+    href: '/samples/evidence-preservation',
+    data: sampleEvidencePreservationData,
+  },
+  {
+    slug: 'diya-installment-petition',
+    title: sampleDiyaInstallmentPetitionData.title || sampleDiyaInstallmentPetitionData.h1Title || 'نمونه دادخواست اعسار از پرداخت دیه و تقسیط',
+    description: sampleDiyaInstallmentPetitionData.heroSubtitle || sampleDiyaInstallmentPetitionData.shortDescription || '',
+    category: 'اعسار و محکومیت مالی',
+    badge: 'تقسیط دیه و آزادی',
+    href: '/samples/diya-installment-petition',
+    data: sampleDiyaInstallmentPetitionData,
+  },
+  {
+    slug: 'criminal-retrial-article-474-petition',
+    title: sampleCriminalRetrialArticle474PetitionData.title || sampleCriminalRetrialArticle474PetitionData.h1Title || 'نمونه لایحه درخواست اعاده دادرسی کیفری (ماده ۴۷۴)',
+    description: sampleCriminalRetrialArticle474PetitionData.heroSubtitle || sampleCriminalRetrialArticle474PetitionData.shortDescription || '',
+    category: 'اعتراض و تجدیدنظر',
+    badge: 'اعاده دادرسی دیوان عالی',
+    href: '/samples/criminal-retrial-article-474-petition',
+    data: sampleCriminalRetrialArticle474PetitionData,
+  },
 ];
 
 export {
@@ -1740,6 +1770,12 @@ export {
   sampleJudicialCommissionRequestMetadata,
   sampleArrestWarrantRequestData,
   sampleArrestWarrantRequestMetadata,
+  sampleEvidencePreservationData,
+  sampleEvidencePreservationMetadata,
+  sampleDiyaInstallmentPetitionData,
+  sampleDiyaInstallmentPetitionMetadata,
+  sampleCriminalRetrialArticle474PetitionData,
+  sampleCriminalRetrialArticle474PetitionMetadata,
 };
 
 

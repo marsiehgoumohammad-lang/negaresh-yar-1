@@ -147,6 +147,9 @@ import {
   sampleCaseAccessRestrictionRequestData,
   sampleJudicialCommissionRequestData,
   sampleArrestWarrantRequestData,
+  sampleEvidencePreservationData,
+  sampleDiyaInstallmentPetitionData,
+  sampleCriminalRetrialArticle474PetitionData,
 } from '@/data/samples';
 
 // Helper to normalize and ensure all required fields for a SampleDocument
@@ -404,6 +407,9 @@ const rawSamples: SampleDocument[] = [
   sampleCaseAccessRestrictionRequestData,
   sampleJudicialCommissionRequestData,
   sampleArrestWarrantRequestData,
+  sampleEvidencePreservationData,
+  sampleDiyaInstallmentPetitionData,
+  sampleCriminalRetrialArticle474PetitionData,
 ];
 const normalizedSamples = rawSamples.map(normalizeSample);
 
