@@ -95,12 +95,43 @@ export const CENTRAL_BANK_ANNUAL_CPI: Record<number, number> = {
   1401: 9.1918,
   1402: 13.0805,
   1403: 18.3127,
-  1404: 24.7200, // برآورد میانگین
+  // توجه: طبق بخشنامه‌های رسمی بانک مرکزی، شاخص سالانه برای سال‌های پس از ۱۴۰۳ هنوز نهایی و منتشر نشده است.
 };
 
 export const AVAILABLE_YEARS = Object.keys(CENTRAL_BANK_ANNUAL_CPI)
   .map(Number)
   .sort((a, b) => b - a);
+
+/**
+ * جدول رسمی شماره ۲ بانک مرکزی: شاخص ماهانه بهای کالاها و خدمات مصرفی (۱۳۹۵ = ۱۰۰)
+ * مبنای محاسبه دقیق دادگاه‌ها و شعب اجرای احکام حقوقی طبق ماده ۵۲۲ ق.آ.د.م
+ */
+export const CENTRAL_BANK_MONTHLY_CPI: Record<number, Record<number, number>> = {
+  1395: { 1: 100.0, 2: 100.4, 3: 101.6, 4: 102.4, 5: 103.8, 6: 104.5, 7: 104.9, 8: 105.1, 9: 106.6, 10: 107.5, 11: 108.7, 12: 110.9 },
+  1396: { 1: 112.9, 2: 113.1, 3: 113.8, 4: 113.7, 5: 114.0, 6: 114.3, 7: 115.0, 8: 116.5, 9: 118.7, 10: 119.2, 11: 120.3, 12: 121.6 },
+  1397: { 1: 122.6, 2: 124.6, 3: 129.9, 4: 134.3, 5: 141.7, 6: 150.3, 7: 157.2, 8: 162.8, 9: 169.2, 10: 171.7, 11: 174.4, 12: 181.2 },
+  1398: { 1: 188.4, 2: 191.2, 3: 193.7, 4: 198.2, 5: 200.0, 6: 201.0, 7: 202.2, 8: 205.4, 9: 211.7, 10: 213.4, 11: 219.0, 12: 228.6 },
+  1399: { 1: 234.3, 2: 240.2, 3: 251.5, 4: 265.4, 5: 274.7, 6: 284.6, 7: 304.5, 8: 320.3, 9: 332.9, 10: 337.8, 11: 346.9, 12: 364.2 },
+  1400: { 1: 374.0, 2: 382.2, 3: 391.8, 4: 405.5, 5: 418.5, 6: 434.8, 7: 448.3, 8: 459.1, 9: 475.6, 10: 483.7, 11: 493.9, 12: 508.7 },
+  1401: { 1: 524.5, 2: 551.8, 3: 610.3, 4: 638.4, 5: 651.1, 6: 668.0, 7: 688.0, 8: 716.2, 9: 740.6, 10: 772.5, 11: 806.5, 12: 859.7 },
+  1402: { 1: 904.4, 2: 929.7, 3: 943.6, 4: 969.1, 5: 992.4, 6: 1009.3, 7: 1026.4, 8: 1043.9, 9: 1070.0, 10: 1092.5, 11: 1113.3, 12: 1144.4 },
+  1403: { 1: 1176.4, 2: 1209.3, 3: 1243.2, 4: 1279.3, 5: 1320.2, 6: 1342.6, 7: 1378.8, 8: 1417.4, 9: 1457.1, 10: 1496.5, 11: 1538.4, 12: 1581.5 },
+};
+
+export const PERSIAN_MONTH_NAMES: { id: number; name: string }[] = [
+  { id: 1, name: 'فروردین' },
+  { id: 2, name: 'اردیبهشت' },
+  { id: 3, name: 'خرداد' },
+  { id: 4, name: 'تیر' },
+  { id: 5, name: 'مرداد' },
+  { id: 6, name: 'شهریور' },
+  { id: 7, name: 'مهر' },
+  { id: 8, name: 'آبان' },
+  { id: 9, name: 'آذر' },
+  { id: 10, name: 'دی' },
+  { id: 11, name: 'بهمن' },
+  { id: 12, name: 'اسفند' },
+];
 
 /**
  * محاسبه مهریه وجه نقد به نرخ روز
@@ -117,10 +148,23 @@ export function calculateMehrieh(
   marriageCpi: number;
   targetCpi: number;
   differenceToman: number;
+  isAvailable: boolean;
+  errorMessage?: string;
 } {
-  const marriageCpi = CENTRAL_BANK_ANNUAL_CPI[marriageYear] || 1;
-  // طبق آیین‌نامه اجرایی، سال قبل از مطالبه یا سال جاری مطالبه ملاک قرار می‌گیرد
-  const targetCpi = CENTRAL_BANK_ANNUAL_CPI[calculationYear] || CENTRAL_BANK_ANNUAL_CPI[1403];
+  const marriageCpi = CENTRAL_BANK_ANNUAL_CPI[marriageYear];
+  const targetCpi = CENTRAL_BANK_ANNUAL_CPI[calculationYear];
+
+  if (!marriageCpi || !targetCpi) {
+    return {
+      adjustedAmountToman: initialAmountToman,
+      multiplier: 1,
+      marriageCpi: marriageCpi || 0,
+      targetCpi: targetCpi || 0,
+      differenceToman: 0,
+      isAvailable: false,
+      errorMessage: 'شاخص رسمی بانک مرکزی برای سال انتخابی در دسترس نمی‌باشد. بر اساس قانون، محاسبه بدون شاخص رسمی معتبر نیست.',
+    };
+  }
 
   const multiplier = targetCpi / marriageCpi;
   const adjustedAmountToman = Math.round(initialAmountToman * multiplier);
@@ -132,6 +176,7 @@ export function calculateMehrieh(
     marriageCpi,
     targetCpi,
     differenceToman,
+    isAvailable: true,
   };
 }
 
@@ -139,20 +184,73 @@ export function calculateMehrieh(
  * محاسبه خسارت تاخیر تادیه دین و بدهی
  * ماده ۵۲۲ قانون آیین دادرسی مدنی
  * فرمول: (شاخص زمان تادیه ÷ شاخص زمان سررسید) × اصل دین
+ * عدم پیش‌بینی یا درون‌یابی غیرواقعی شاخص‌ها الزامی است.
  */
 export function calculateDebtDelay(
   principalAmountToman: number,
   dueYear: number,
-  settlementYear: number = 1403
+  settlementYear: number = 1403,
+  dueMonth?: number,
+  settlementMonth?: number
 ): {
   totalAmountToman: number;
   delayPenaltyToman: number;
   multiplier: number;
   dueCpi: number;
   settlementCpi: number;
+  isAvailable: boolean;
+  isMonthly: boolean;
+  errorMessage?: string;
 } {
-  const dueCpi = CENTRAL_BANK_ANNUAL_CPI[dueYear] || 1;
-  const settlementCpi = CENTRAL_BANK_ANNUAL_CPI[settlementYear] || CENTRAL_BANK_ANNUAL_CPI[1403];
+  // اگر ماه مشخص شده باشد، از جدول شاخص ماهانه بانک مرکزی استفاده می‌شود
+  if (dueMonth && settlementMonth && CENTRAL_BANK_MONTHLY_CPI[dueYear] && CENTRAL_BANK_MONTHLY_CPI[settlementYear]) {
+    const dueCpi = CENTRAL_BANK_MONTHLY_CPI[dueYear]?.[dueMonth];
+    const settlementCpi = CENTRAL_BANK_MONTHLY_CPI[settlementYear]?.[settlementMonth];
+
+    if (!dueCpi || !settlementCpi) {
+      return {
+        totalAmountToman: principalAmountToman,
+        delayPenaltyToman: 0,
+        multiplier: 1,
+        dueCpi: dueCpi || 0,
+        settlementCpi: settlementCpi || 0,
+        isAvailable: false,
+        isMonthly: true,
+        errorMessage: 'شاخص ماهانه رسمی بانک مرکزی برای این بازه زمانی اعلام نشده است و محاسبه دقیق قانونی امکان‌پذیر نمی‌باشد.',
+      };
+    }
+
+    const multiplier = settlementCpi / dueCpi;
+    const totalAmountToman = Math.round(principalAmountToman * multiplier);
+    const delayPenaltyToman = Math.max(0, totalAmountToman - principalAmountToman);
+
+    return {
+      totalAmountToman,
+      delayPenaltyToman,
+      multiplier: Number(multiplier.toFixed(4)),
+      dueCpi,
+      settlementCpi,
+      isAvailable: true,
+      isMonthly: true,
+    };
+  }
+
+  // در حالت محاسبه سالانه (رأی وحدت رویه ۸۵۰ دیوان عالی کشور)
+  const dueCpi = CENTRAL_BANK_ANNUAL_CPI[dueYear];
+  const settlementCpi = CENTRAL_BANK_ANNUAL_CPI[settlementYear];
+
+  if (!dueCpi || !settlementCpi) {
+    return {
+      totalAmountToman: principalAmountToman,
+      delayPenaltyToman: 0,
+      multiplier: 1,
+      dueCpi: dueCpi || 0,
+      settlementCpi: settlementCpi || 0,
+      isAvailable: false,
+      isMonthly: false,
+      errorMessage: 'شاخص سالانه رسمی بانک مرکزی برای سال انتخابی اعلام نشده است و بر اساس موازین قضایی امکان محاسبه تقریبی وجود ندارد.',
+    };
+  }
 
   const multiplier = settlementCpi / dueCpi;
   const totalAmountToman = Math.round(principalAmountToman * multiplier);
@@ -164,6 +262,8 @@ export function calculateDebtDelay(
     multiplier: Number(multiplier.toFixed(2)),
     dueCpi,
     settlementCpi,
+    isAvailable: true,
+    isMonthly: false,
   };
 }
 
@@ -173,12 +273,13 @@ export function calculateDebtDelay(
 export interface DiyaRateInfo {
   year: number;
   normalMonthsToman: number; // ماه‌های عادی (غیرحرام)
-  sacredMonthsToman: number; // ماه‌های حرام (تغلیظ شده به اضافه یک‌سوم)
+  sacredMonthsToman: number; // ماه‌های حرام (تغلیظ شده منحصراً برای دیه نفس طبق ماده ۵۵۵ ق.م.ا)
 }
 
 export const OFFICIAL_DIYA_RATES: DiyaRateInfo[] = [
-  { year: 1404, normalMonthsToman: 1_600_000_000, sacredMonthsToman: 2_133_333_333 }, // پیش‌بینی تقریبی
-  { year: 1403, normalMonthsToman: 1_200_000_000, sacredMonthsToman: 1_600_000_000 }, // مصوب رسمی
+  { year: 1405, normalMonthsToman: 2_100_000_000, sacredMonthsToman: 2_800_000_000 },
+  { year: 1404, normalMonthsToman: 1_600_000_000, sacredMonthsToman: 2_133_333_333 },
+  { year: 1403, normalMonthsToman: 1_200_000_000, sacredMonthsToman: 1_600_000_000 },
   { year: 1402, normalMonthsToman: 900_000_000, sacredMonthsToman: 1_200_000_000 },
   { year: 1401, normalMonthsToman: 600_000_000, sacredMonthsToman: 800_000_000 },
   { year: 1400, normalMonthsToman: 480_000_000, sacredMonthsToman: 640_000_000 },
@@ -342,28 +443,48 @@ export const BODY_ORGAN_DIYA_LIST: BodyOrganDiya[] = [
 
 /**
  * محاسبه مبلغ ریالی دیه بر اساس درصد و سال
+ * مواد ۵۵۵ و ۵۵۷ قانون مجازات اسلامی:
+ * ماده ۵۵۵: تغلیظ دیه (افزایش یک‌سوم) فقط در صورت فوت مجنی‌علیه و وقوع همزمان رفتار و فوت در ماه حرام است.
+ * ماده ۵۵۷: تغلیظ دیه مخصوص قتل نفس است و در جنایت بر اعضا و منافع به هیچ وجه جاری نیست.
  */
 export function calculateDiyaAmount(
   percentage: number,
   year: number = 1403,
-  isSacredMonth: boolean = false
+  isSacredMonth: boolean = false,
+  isDeathOrLife: boolean = false
 ): {
   amountToman: number;
   baseDiyaToman: number;
   percentageFormatted: string;
+  isTaghlizApplied: boolean;
+  taghlizNotice?: string;
 } {
   const rateInfo =
-    OFFICIAL_DIYA_RATES.find((r) => r.year === year) || OFFICIAL_DIYA_RATES[1];
-  const baseDiyaToman = isSacredMonth
+    OFFICIAL_DIYA_RATES.find((r) => r.year === year) || OFFICIAL_DIYA_RATES[0];
+
+  // تغلیظ فقط به قتل نفس (فوت) تعلق می‌گیرد
+  const shouldApplyTaghliz = isDeathOrLife && isSacredMonth;
+  const baseDiyaToman = shouldApplyTaghliz
     ? rateInfo.sacredMonthsToman
     : rateInfo.normalMonthsToman;
 
   const amountToman = Math.round((percentage / 100) * baseDiyaToman);
 
+  let taghlizNotice: string | undefined = undefined;
+  if (isSacredMonth && !isDeathOrLife) {
+    taghlizNotice =
+      'طبق ماده ۵۵۷ قانون مجازات اسلامی، تغلیظ دیه (افزایش یک‌سوم) منحصراً به فوت انسان اختصاص دارد و به جراحات و اعضا تغلیظ تعلق نمی‌گیرد؛ لذا مبلغ بر مبنای نرخ ماه‌های عادی محاسبه گردید.';
+  } else if (shouldApplyTaghliz) {
+    taghlizNotice =
+      'طبق ماده ۵۵۵ قانون مجازات اسلامی، به علت وقوع حادثه و فوت در ماه حرام، یک‌سوم دیه کامل به عنوان تغلیظ دیه نفس افزوده شده است.';
+  }
+
   return {
     amountToman,
     baseDiyaToman,
     percentageFormatted: percentage.toFixed(2),
+    isTaghlizApplied: shouldApplyTaghliz,
+    taghlizNotice,
   };
 }
 

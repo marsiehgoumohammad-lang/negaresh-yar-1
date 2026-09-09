@@ -5,7 +5,8 @@ import Link from 'next/link';
 import {
   calculateDebtDelay,
   AVAILABLE_YEARS,
-  CENTRAL_BANK_ANNUAL_CPI,
+  CENTRAL_BANK_MONTHLY_CPI,
+  PERSIAN_MONTH_NAMES,
   formatToman,
 } from '@/lib/calculators/legal-formulas';
 import {
@@ -14,22 +15,39 @@ import {
   Scale,
   ChevronDown,
   ShieldCheck,
+  Calendar,
+  AlertCircle,
 } from 'lucide-react';
 
 export function DebtDelayCalculatorClient() {
+  const [calculationMode, setCalculationMode] = useState<'monthly' | 'annual'>('monthly');
   const [principalAmount, setPrincipalAmount] = useState<string>('50000000'); // 50 میلیون تومان پیش‌فرض
-  const [dueYear, setDueYear] = useState<number>(1398);
-  const [settlementYear, setSettlementYear] = useState<number>(1403);
   const [currencyUnit, setCurrencyUnit] = useState<'toman' | 'rial'>('toman');
+
+  // سال و ماه سررسید
+  const [dueYear, setDueYear] = useState<number>(1399);
+  const [dueMonth, setDueMonth] = useState<number>(4); // تیر
+
+  // سال و ماه تادیه
+  const [settlementYear, setSettlementYear] = useState<number>(1403);
+  const [settlementMonth, setSettlementMonth] = useState<number>(10); // دی
 
   const principalInputId = useId();
   const dueYearId = useId();
+  const dueMonthId = useId();
   const settlementYearId = useId();
+  const settlementMonthId = useId();
 
   const cleanNumber = parseInt(principalAmount.replace(/[^0-9]/g, ''), 10) || 0;
   const principalToman = currencyUnit === 'rial' ? Math.round(cleanNumber / 10) : cleanNumber;
 
-  const result = calculateDebtDelay(principalToman, dueYear, settlementYear);
+  const result = calculateDebtDelay(
+    principalToman,
+    dueYear,
+    settlementYear,
+    calculationMode === 'monthly' ? dueMonth : undefined,
+    calculationMode === 'monthly' ? settlementMonth : undefined
+  );
 
   const displayTotal =
     currencyUnit === 'rial' ? result.totalAmountToman * 10 : result.totalAmountToman;
@@ -37,6 +55,14 @@ export function DebtDelayCalculatorClient() {
     currencyUnit === 'rial' ? result.delayPenaltyToman * 10 : result.delayPenaltyToman;
   const displayPrincipal = cleanNumber;
   const unitLabel = currencyUnit === 'rial' ? 'ریال' : 'تومان';
+
+  // سال‌های موجود در جدول ماهانه (۱۳۹۵ تا ۱۴۰۳)
+  const monthlyAvailableYears = Object.keys(CENTRAL_BANK_MONTHLY_CPI)
+    .map(Number)
+    .sort((a, b) => b - a);
+
+  const dueMonthName = PERSIAN_MONTH_NAMES.find((m) => m.id === dueMonth)?.name || '';
+  const settlementMonthName = PERSIAN_MONTH_NAMES.find((m) => m.id === settlementMonth)?.name || '';
 
   return (
     <div className="space-y-10">
@@ -52,36 +78,66 @@ export function DebtDelayCalculatorClient() {
                 محاسبه‌گر رسمی خسارت تاخیر تادیه دین و بدهی
               </h2>
               <p className="text-xs text-slate-400">
-                بر اساس ماده ۵۲۲ قانون آیین دادرسی دادگاه‌های عمومی و انقلاب در امور مدنی
+                بر اساس ماده ۵۲۲ قانون آیین دادرسی مدنی و شاخص‌های رسمی بانک مرکزی
               </p>
             </div>
           </div>
 
-          {/* Unit Switcher */}
-          <div className="flex items-center gap-1.5 p-1 rounded-xl bg-slate-950 border border-slate-800 shrink-0">
-            <button
-              type="button"
-              onClick={() => setCurrencyUnit('toman')}
-              className={`px-3 py-1.5 rounded-lg text-xs font-bold transition-all ${
-                currencyUnit === 'toman'
-                  ? 'bg-[#E5C158] text-slate-950 shadow-sm'
-                  : 'text-slate-400 hover:text-white'
-              }`}
-            >
-              تومان
-            </button>
-            <button
-              type="button"
-              onClick={() => setCurrencyUnit('rial')}
-              className={`px-3 py-1.5 rounded-lg text-xs font-bold transition-all ${
-                currencyUnit === 'rial'
-                  ? 'bg-[#E5C158] text-slate-950 shadow-sm'
-                  : 'text-slate-400 hover:text-white'
-              }`}
-            >
-              ریال
-            </button>
+          <div className="flex items-center gap-2">
+            {/* Unit Switcher */}
+            <div className="flex items-center gap-1.5 p-1 rounded-xl bg-slate-950 border border-slate-800 shrink-0">
+              <button
+                type="button"
+                onClick={() => setCurrencyUnit('toman')}
+                className={`px-3 py-1.5 rounded-lg text-xs font-bold transition-all ${
+                  currencyUnit === 'toman'
+                    ? 'bg-[#E5C158] text-slate-950 shadow-sm'
+                    : 'text-slate-400 hover:text-white'
+                }`}
+              >
+                تومان
+              </button>
+              <button
+                type="button"
+                onClick={() => setCurrencyUnit('rial')}
+                className={`px-3 py-1.5 rounded-lg text-xs font-bold transition-all ${
+                  currencyUnit === 'rial'
+                    ? 'bg-[#E5C158] text-slate-950 shadow-sm'
+                    : 'text-slate-400 hover:text-white'
+                }`}
+              >
+                ریال
+              </button>
+            </div>
           </div>
+        </div>
+
+        {/* Calculation Mode Selector */}
+        <div className="flex flex-wrap items-center gap-2 p-1.5 rounded-2xl bg-slate-950 border border-slate-800">
+          <button
+            type="button"
+            onClick={() => setCalculationMode('monthly')}
+            className={`flex-1 py-2.5 px-4 rounded-xl text-xs sm:text-sm font-bold transition-all flex items-center justify-center gap-2 ${
+              calculationMode === 'monthly'
+                ? 'bg-blue-600 text-white shadow-md'
+                : 'text-slate-300 hover:text-white'
+            }`}
+          >
+            <Calendar className="w-4 h-4" />
+            <span>محاسبه ماهانه (جدول شماره ۲ بانک مرکزی - رویه دادگاه‌ها و چک)</span>
+          </button>
+          <button
+            type="button"
+            onClick={() => setCalculationMode('annual')}
+            className={`flex-1 py-2.5 px-4 rounded-xl text-xs sm:text-sm font-bold transition-all flex items-center justify-center gap-2 ${
+              calculationMode === 'annual'
+                ? 'bg-blue-600 text-white shadow-md'
+                : 'text-slate-300 hover:text-white'
+            }`}
+          >
+            <Scale className="w-4 h-4" />
+            <span>محاسبه سالانه (رأی وحدت رویه شماره ۸۵۰ دیوان عالی کشور)</span>
+          </button>
         </div>
 
         {/* Inputs Grid */}
@@ -108,94 +164,149 @@ export function DebtDelayCalculatorClient() {
               </span>
             </div>
             <p className="text-[11px] text-slate-400">
-              مبلغ اصل بدهی بدون احتساب خسارت دیرکرد
+              مبلغ مندرج در چک، سفته یا تعهد مالی
             </p>
           </div>
 
-          {/* Due Year */}
+          {/* Due Date */}
           <div className="space-y-2">
-            <label htmlFor={dueYearId} className="block text-xs sm:text-sm font-bold text-slate-200">
-              سال سررسید یا مطالبه قانونی:
+            <label className="block text-xs sm:text-sm font-bold text-slate-200">
+              تاریخ سررسید یا مطالبه قانونی:
             </label>
-            <div className="relative">
-              <select
-                id={dueYearId}
-                value={dueYear}
-                onChange={(e) => setDueYear(Number(e.target.value))}
-                className="w-full px-4 py-3 rounded-xl bg-slate-950 border border-slate-700 text-white font-bold text-base focus:outline-none focus:border-[#E5C158] transition-all appearance-none cursor-pointer"
-              >
-                {AVAILABLE_YEARS.map((y) => (
-                  <option key={y} value={y} className="bg-slate-900 text-white">
-                    سال {y}
-                  </option>
-                ))}
-              </select>
-              <ChevronDown className="w-4 h-4 text-slate-400 absolute left-3 top-1/2 -translate-y-1/2 pointer-events-none" />
+            <div className="grid grid-cols-2 gap-2">
+              {calculationMode === 'monthly' && (
+                <div className="relative">
+                  <select
+                    id={dueMonthId}
+                    value={dueMonth}
+                    onChange={(e) => setDueMonth(Number(e.target.value))}
+                    className="w-full px-3 py-3 rounded-xl bg-slate-950 border border-slate-700 text-white font-bold text-xs sm:text-sm focus:outline-none focus:border-[#E5C158] transition-all appearance-none cursor-pointer"
+                  >
+                    {PERSIAN_MONTH_NAMES.map((m) => (
+                      <option key={m.id} value={m.id} className="bg-slate-900 text-white">
+                        {m.name}
+                      </option>
+                    ))}
+                  </select>
+                  <ChevronDown className="w-3.5 h-3.5 text-slate-400 absolute left-2.5 top-1/2 -translate-y-1/2 pointer-events-none" />
+                </div>
+              )}
+              <div className={`relative ${calculationMode === 'annual' ? 'col-span-2' : ''}`}>
+                <select
+                  id={dueYearId}
+                  value={dueYear}
+                  onChange={(e) => setDueYear(Number(e.target.value))}
+                  className="w-full px-3 py-3 rounded-xl bg-slate-950 border border-slate-700 text-white font-bold text-xs sm:text-sm focus:outline-none focus:border-[#E5C158] transition-all appearance-none cursor-pointer"
+                >
+                  {(calculationMode === 'monthly' ? monthlyAvailableYears : AVAILABLE_YEARS).map((y) => (
+                    <option key={y} value={y} className="bg-slate-900 text-white">
+                      سال {y}
+                    </option>
+                  ))}
+                </select>
+                <ChevronDown className="w-3.5 h-3.5 text-slate-400 absolute left-2.5 top-1/2 -translate-y-1/2 pointer-events-none" />
+              </div>
             </div>
             <p className="text-[11px] text-slate-400">
-              تاریخ سررسید چک، موعد سند یا ابلاغ اظهارنامه
+              تاریخ گواهی عدم پرداخت چک یا ابلاغ اظهارنامه
             </p>
           </div>
 
-          {/* Settlement Year */}
+          {/* Settlement Date */}
           <div className="space-y-2">
-            <label htmlFor={settlementYearId} className="block text-xs sm:text-sm font-bold text-slate-200">
-              سال وصول / تادیه بدهی:
+            <label className="block text-xs sm:text-sm font-bold text-slate-200">
+              تاریخ تادیه / اجرای حکم:
             </label>
-            <div className="relative">
-              <select
-                id={settlementYearId}
-                value={settlementYear}
-                onChange={(e) => setSettlementYear(Number(e.target.value))}
-                className="w-full px-4 py-3 rounded-xl bg-slate-950 border border-slate-700 text-white font-bold text-base focus:outline-none focus:border-[#E5C158] transition-all appearance-none cursor-pointer"
-              >
-                {AVAILABLE_YEARS.filter((y) => y >= dueYear).map((y) => (
-                  <option key={y} value={y} className="bg-slate-900 text-white">
-                    سال {y} {y === 1403 ? '(سال جاری)' : ''}
-                  </option>
-                ))}
-              </select>
-              <ChevronDown className="w-4 h-4 text-slate-400 absolute left-3 top-1/2 -translate-y-1/2 pointer-events-none" />
+            <div className="grid grid-cols-2 gap-2">
+              {calculationMode === 'monthly' && (
+                <div className="relative">
+                  <select
+                    id={settlementMonthId}
+                    value={settlementMonth}
+                    onChange={(e) => setSettlementMonth(Number(e.target.value))}
+                    className="w-full px-3 py-3 rounded-xl bg-slate-950 border border-slate-700 text-white font-bold text-xs sm:text-sm focus:outline-none focus:border-[#E5C158] transition-all appearance-none cursor-pointer"
+                  >
+                    {PERSIAN_MONTH_NAMES.map((m) => (
+                      <option key={m.id} value={m.id} className="bg-slate-900 text-white">
+                        {m.name}
+                      </option>
+                    ))}
+                  </select>
+                  <ChevronDown className="w-3.5 h-3.5 text-slate-400 absolute left-2.5 top-1/2 -translate-y-1/2 pointer-events-none" />
+                </div>
+              )}
+              <div className={`relative ${calculationMode === 'annual' ? 'col-span-2' : ''}`}>
+                <select
+                  id={settlementYearId}
+                  value={settlementYear}
+                  onChange={(e) => setSettlementYear(Number(e.target.value))}
+                  className="w-full px-3 py-3 rounded-xl bg-slate-950 border border-slate-700 text-white font-bold text-xs sm:text-sm focus:outline-none focus:border-[#E5C158] transition-all appearance-none cursor-pointer"
+                >
+                  {(calculationMode === 'monthly' ? monthlyAvailableYears : AVAILABLE_YEARS)
+                    .filter((y) => y >= dueYear)
+                    .map((y) => (
+                      <option key={y} value={y} className="bg-slate-900 text-white">
+                        سال {y} {y === 1403 ? '(آخرین شاخص رسمی)' : ''}
+                      </option>
+                    ))}
+                </select>
+                <ChevronDown className="w-3.5 h-3.5 text-slate-400 absolute left-2.5 top-1/2 -translate-y-1/2 pointer-events-none" />
+              </div>
             </div>
             <p className="text-[11px] text-slate-400">
-              شاخص بهای سال تادیه: {CENTRAL_BANK_ANNUAL_CPI[settlementYear]}
+              شاخص زمان تادیه: {result.settlementCpi || 'نامشخص'}
             </p>
           </div>
         </div>
 
         {/* Results Screen */}
-        <div className="p-5 sm:p-7 rounded-2xl bg-gradient-to-r from-blue-950/40 via-slate-950 to-blue-950/40 border-2 border-blue-500/50 shadow-xl space-y-4">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 pb-4 border-b border-slate-800">
-            <div>
-              <div className="text-xs text-slate-400">اصل مبلغ دین:</div>
-              <div className="text-base sm:text-lg font-bold text-white">
-                {formatToman(displayPrincipal)} {unitLabel}
+        {result.isAvailable ? (
+          <div className="p-5 sm:p-7 rounded-2xl bg-gradient-to-r from-blue-950/40 via-slate-950 to-blue-950/40 border-2 border-blue-500/50 shadow-xl space-y-4">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 pb-4 border-b border-slate-800">
+              <div>
+                <div className="text-xs text-slate-400">اصل مبلغ دین:</div>
+                <div className="text-base sm:text-lg font-bold text-white">
+                  {formatToman(displayPrincipal)} {unitLabel}
+                </div>
+              </div>
+
+              <div>
+                <div className="text-xs text-amber-400 font-bold">خسارت تاخیر تادیه (دیرکرد قانونی):</div>
+                <div className="text-base sm:text-lg font-black text-amber-400">
+                  + {formatToman(displayPenalty)} {unitLabel}
+                </div>
+              </div>
+
+              <div>
+                <div className="text-xs text-emerald-400 font-bold">مجموع کل قابل مطالبه در دادگاه:</div>
+                <div className="text-xl sm:text-2xl font-black text-emerald-400">
+                  {formatToman(displayTotal)} {unitLabel}
+                </div>
               </div>
             </div>
 
-            <div>
-              <div className="text-xs text-amber-400 font-bold">خسارت تاخیر تادیه (دیرکرد):</div>
-              <div className="text-base sm:text-lg font-black text-amber-400">
-                + {formatToman(displayPenalty)} {unitLabel}
-              </div>
-            </div>
-
-            <div>
-              <div className="text-xs text-emerald-400 font-bold">مجموع کل قابل مطالبه:</div>
-              <div className="text-xl sm:text-2xl font-black text-emerald-400">
-                {formatToman(displayTotal)} {unitLabel}
-              </div>
+            <div className="text-xs text-slate-300 leading-relaxed bg-slate-950/70 p-3 rounded-xl border border-slate-800">
+              <p>
+                <strong className="text-white">فرمول محاسباتی ماده ۵۲۲:</strong>{' '}
+                ({result.settlementCpi} [شاخص {calculationMode === 'monthly' ? `${settlementMonthName} ${settlementYear}` : `سال ${settlementYear}`}]) ÷ ({result.dueCpi} [شاخص {calculationMode === 'monthly' ? `${dueMonthName} ${dueYear}` : `سال ${dueYear}`}]) × {formatToman(displayPrincipal)} ={' '}
+                <strong className="text-emerald-400">{formatToman(displayTotal)} {unitLabel}</strong>
+                <span className="block mt-1 text-slate-400 text-[11px]">
+                  ضریب تغییر شاخص تورم: {result.multiplier} برابر
+                </span>
+              </p>
             </div>
           </div>
-
-          <div className="text-xs text-slate-300 leading-relaxed">
-            <p>
-              <strong className="text-white">فرمول محاسباتی ماده ۵۲۲:</strong>{' '}
-              ({CENTRAL_BANK_ANNUAL_CPI[settlementYear]} [شاخص زمان تادیه]) ÷ ({CENTRAL_BANK_ANNUAL_CPI[dueYear]} [شاخص زمان سررسید]) × {formatToman(displayPrincipal)} ={' '}
-              <strong className="text-emerald-400">{formatToman(displayTotal)} {unitLabel}</strong>
-            </p>
+        ) : (
+          <div className="p-5 rounded-2xl bg-rose-950/30 border border-rose-500/40 text-rose-200 flex items-start gap-3">
+            <AlertCircle className="w-5 h-5 text-rose-400 shrink-0 mt-0.5" />
+            <div className="space-y-1">
+              <div className="font-bold text-sm">شاخص رسمی بانک مرکزی در دسترس نیست</div>
+              <p className="text-xs leading-relaxed text-rose-300">
+                {result.errorMessage || 'شاخص رسمی بانک مرکزی برای این تاریخ هنوز اعلام نشده است. بر اساس الزامات قانونی، محاسبه بدون شاخص رسمی معتبر نیست.'}
+              </p>
+            </div>
           </div>
-        </div>
+        )}
 
         {/* CTA Next Action */}
         <div className="flex flex-col sm:flex-row items-center justify-between gap-4 p-4 sm:p-5 rounded-2xl bg-slate-950 border border-slate-800">
@@ -266,7 +377,7 @@ export function DebtDelayCalculatorClient() {
               <span>شرط چهارم: تغییر فاحش قیمت سالانه (تورم)</span>
             </h4>
             <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
-              تغییر قیمت بر اساس شاخص تورم اعلامی بانک مرکزی اثبات می‌شود که با اعمال شاخص در فرمول دادگستری، خسارت به صورت دقیق و روزشمار یا سال‌شمار در حکم دادگاه قید می‌گردد.
+              تغییر قیمت بر اساس شاخص تورم اعلامی بانک مرکزی اثبات می‌شود که با اعمال شاخص در فرمول دادگستری، خسارت به صورت دقیق و ماهانه یا سالانه در حکم دادگاه قید می‌گردد.
             </p>
           </div>
         </div>

@@ -213,22 +213,22 @@ export default async function DynamicSamplePage({ params }: SamplePageProps) {
   const digitalDocSchema = {
     '@context': 'https://schema.org',
     '@type': 'DigitalDocument',
-    name: `فایل ورد و پی‌دی‌اف ${title}`,
-    description: `دانلود مستقیم فایل خام قابل ویرایش ورد (Word) و PDF فرم رسمی ${title} مطابق استانداردهای مراجع اداری و قضایی`,
-    encodingFormat: ['application/msword', 'application/pdf', 'text/plain'],
+    name: `متن و فرم رسمی ${title}`,
+    description: `متن رسمی و فرم قابل ویرایش ${title} همراه با امکان دریافت فایل اداری Word و نسخه چاپی استاندارد`,
+    encodingFormat: ['application/msword', 'text/plain'],
     url: `https://www.negaresh-yar.ir/samples/${sample.slug}`,
     hasPart: [
       {
         '@type': 'MediaObject',
-        name: `دانلود فایل ورد ${title}`,
+        name: `دریافت فایل سند ورد ${title}`,
         encodingFormat: 'application/msword',
-        contentUrl: `https://www.negaresh-yar.ir/api/samples/download?slug=${sample.slug}&format=docx`,
+        contentUrl: `https://www.negaresh-yar.ir/api/samples/download?slug=${sample.slug}&format=doc`,
       },
       {
         '@type': 'MediaObject',
-        name: `دانلود نسخه PDF ${title}`,
-        encodingFormat: 'application/pdf',
-        contentUrl: `https://www.negaresh-yar.ir/samples/${sample.slug}#sample-template`,
+        name: `دریافت فایل متنی ${title}`,
+        encodingFormat: 'text/plain',
+        contentUrl: `https://www.negaresh-yar.ir/api/samples/download?slug=${sample.slug}&format=txt`,
       },
     ],
   };

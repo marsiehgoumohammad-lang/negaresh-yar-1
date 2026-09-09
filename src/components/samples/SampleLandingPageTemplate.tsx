@@ -76,7 +76,7 @@ export function SampleLandingPageTemplate({ data }: { data: SampleLandingData })
 
   const handleDownloadWord = () => {
     if (typeof window !== 'undefined' && data.slug) {
-      const downloadUrl = `/api/samples/download?slug=${encodeURIComponent(data.slug)}&format=docx`;
+      const downloadUrl = `/api/samples/download?slug=${encodeURIComponent(data.slug)}&format=doc`;
       const link = document.createElement('a');
       link.href = downloadUrl;
       link.setAttribute('download', `${data.slug}-negaresh-yar.doc`);
@@ -385,12 +385,12 @@ export function SampleLandingPageTemplate({ data }: { data: SampleLandingData })
             </div>
 
             <div className="flex flex-wrap items-center gap-2 shrink-0">
-              {/* Word DOCX Download Button */}
+              {/* Word DOC Download Button */}
               <button
                 onClick={handleDownloadWord}
                 className="inline-flex items-center justify-center gap-2 px-3.5 py-2.5 rounded-xl bg-blue-700 hover:bg-blue-600 border border-blue-500 text-xs sm:text-sm text-white font-black transition-all shadow-sm hover:shadow-md"
-                aria-label="دانلود مستقیم فایل ورد Word قابل ویرایش"
-                title="دانلود فایل Word با فرمت استاندارد اداری و قابل ویرایش"
+                aria-label="دانلود مستقیم فایل ورد Word قابل ویرایش با فرمت DOC"
+                title="دانلود فایل Word با فرمت رسمی مایکروسافت ورد DOC و سربرگ اداری"
               >
                 {downloadedWord ? (
                   <>
@@ -400,7 +400,7 @@ export function SampleLandingPageTemplate({ data }: { data: SampleLandingData })
                 ) : (
                   <>
                     <FileText className="w-4 h-4 text-blue-200" />
-                    <span>دانلود فایل Word</span>
+                    <span>دانلود فایل Word (DOC)</span>
                   </>
                 )}
               </button>
@@ -409,18 +409,18 @@ export function SampleLandingPageTemplate({ data }: { data: SampleLandingData })
               <button
                 onClick={handleDownloadPdf}
                 className="inline-flex items-center justify-center gap-2 px-3.5 py-2.5 rounded-xl bg-rose-700 hover:bg-rose-600 border border-rose-500 text-xs sm:text-sm text-white font-black transition-all shadow-sm hover:shadow-md"
-                aria-label="دانلود نسخه PDF یا پرینت رسمی سند"
-                title="دانلود و پرینت فایل PDF با سربرگ استاندارد اداری"
+                aria-label="چاپ مستقیم یا ذخیره به عنوان فایل PDF"
+                title="چاپ یا ذخیره به صورت PDF با سربرگ استاندارد اداری"
               >
                 {downloadedPdf ? (
                   <>
                     <Check className="w-4 h-4 text-emerald-300" />
-                    <span className="text-emerald-200">در حال آماده‌سازی PDF...</span>
+                    <span className="text-emerald-200">در حال آماده‌سازی پرینت...</span>
                   </>
                 ) : (
                   <>
                     <Printer className="w-4 h-4 text-rose-200" />
-                    <span>دانلود نسخه PDF</span>
+                    <span>چاپ و ذخیره PDF</span>
                   </>
                 )}
               </button>
