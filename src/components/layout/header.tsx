@@ -42,6 +42,17 @@ const menuLinks = [
   },
   {
     number: '۰۴',
+    title: 'محاسبه‌گرهای حقوقی (مهریه، دیه، بدهی)',
+    href: '/calculators',
+    icon: (
+      <svg className="w-5 h-5 text-[#E5C158]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.8} d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
+      </svg>
+    ),
+    badge: 'آنلاین و رایگان',
+  },
+  {
+    number: '۰۵',
     title: 'معرفی وکیل منصف',
     href: '/lawyer-referral',
     icon: (
@@ -210,6 +221,10 @@ export function Header() {
             </Link>
             <Link href="/samples" className="text-sm font-bold text-slate-300 hover:text-[#E5C158] transition-colors">
               نمونه اسناد
+            </Link>
+            <Link href="/calculators" className="text-sm font-bold text-slate-300 hover:text-[#E5C158] transition-colors flex items-center gap-1">
+              <span>محاسبه‌گرها</span>
+              <span className="px-1.5 py-0.5 rounded text-[10px] bg-amber-500/20 text-amber-300 border border-amber-500/30 font-extrabold">رایگان</span>
             </Link>
             <Link href="/knowledge" className="text-sm font-bold text-slate-300 hover:text-[#E5C158] transition-colors">
               پایگاه دانش

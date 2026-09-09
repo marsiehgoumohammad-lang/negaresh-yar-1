@@ -58,6 +58,10 @@ export async function generateMetadata({
     keywords: [
       rawTitle,
       `دانلود رایگان ${rawTitle}`,
+      `دانلود فایل ورد ${rawTitle}`,
+      `دانلود فایل word ${rawTitle}`,
+      `دانلود pdf ${rawTitle}`,
+      `دانلود فرم خام ${rawTitle}`,
       `نمونه متن ${rawTitle}`,
       `کپی متن ${rawTitle}`,
       sample.category || sample.categoryName || 'اسناد حقوقی و اداری',
@@ -206,6 +210,29 @@ export default async function DynamicSamplePage({ params }: SamplePageProps) {
         }
       : null;
 
+  const digitalDocSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'DigitalDocument',
+    name: `فایل ورد و پی‌دی‌اف ${title}`,
+    description: `دانلود مستقیم فایل خام قابل ویرایش ورد (Word) و PDF فرم رسمی ${title} مطابق استانداردهای مراجع اداری و قضایی`,
+    encodingFormat: ['application/msword', 'application/pdf', 'text/plain'],
+    url: `https://www.negaresh-yar.ir/samples/${sample.slug}`,
+    hasPart: [
+      {
+        '@type': 'MediaObject',
+        name: `دانلود فایل ورد ${title}`,
+        encodingFormat: 'application/msword',
+        contentUrl: `https://www.negaresh-yar.ir/api/samples/download?slug=${sample.slug}&format=docx`,
+      },
+      {
+        '@type': 'MediaObject',
+        name: `دانلود نسخه PDF ${title}`,
+        encodingFormat: 'application/pdf',
+        contentUrl: `https://www.negaresh-yar.ir/samples/${sample.slug}#sample-template`,
+      },
+    ],
+  };
+
   return (
     <>
       <Script
@@ -217,6 +244,11 @@ export default async function DynamicSamplePage({ params }: SamplePageProps) {
         id={`article-schema-${sample.slug}`}
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+      />
+      <Script
+        id={`digital-doc-schema-${sample.slug}`}
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(digitalDocSchema) }}
       />
       {faqSchema && (
         <Script

@@ -21,6 +21,7 @@ import {
   FileCheck,
   Copy,
   Download,
+  Printer,
   PenTool,
   Scale,
   UserCheck,
@@ -41,6 +42,8 @@ export function SampleLandingPageTemplate({ data }: { data: SampleLandingData })
   const [openFaq, setOpenFaq] = useState<number | null>(0);
   const [copied, setCopied] = useState(false);
   const [downloaded, setDownloaded] = useState(false);
+  const [downloadedWord, setDownloadedWord] = useState(false);
+  const [downloadedPdf, setDownloadedPdf] = useState(false);
 
   const toggleFaq = (idx: number) => {
     setOpenFaq(openFaq === idx ? null : idx);
@@ -68,6 +71,80 @@ export function SampleLandingPageTemplate({ data }: { data: SampleLandingData })
       document.body.removeChild(element);
       setDownloaded(true);
       setTimeout(() => setDownloaded(false), 3000);
+    }
+  };
+
+  const handleDownloadWord = () => {
+    if (typeof window !== 'undefined' && data.slug) {
+      const downloadUrl = `/api/samples/download?slug=${encodeURIComponent(data.slug)}&format=docx`;
+      const link = document.createElement('a');
+      link.href = downloadUrl;
+      link.setAttribute('download', `${data.slug}-negaresh-yar.doc`);
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      setDownloadedWord(true);
+      setTimeout(() => setDownloadedWord(false), 3000);
+    }
+  };
+
+  const handleDownloadPdf = () => {
+    if (typeof window !== 'undefined') {
+      const docTitle = data.title || data.h1Title || 'سند رسمی';
+      const printWindow = window.open('', '_blank');
+      if (printWindow) {
+        printWindow.document.write(`
+          <!DOCTYPE html>
+          <html lang="fa" dir="rtl">
+            <head>
+              <meta charset="utf-8">
+              <title>${docTitle} - نگارش یار</title>
+              <style>
+                @page { size: A4; margin: 20mm; }
+                body {
+                  font-family: 'B Nazanin', 'IRANSans', 'Tahoma', sans-serif;
+                  direction: rtl;
+                  padding: 24px;
+                  color: #0f172a;
+                  line-height: 2;
+                  text-align: justify;
+                }
+                .header {
+                  border-bottom: 2px solid #0f172a;
+                  padding-bottom: 12px;
+                  margin-bottom: 24px;
+                  display: flex;
+                  justify-content: space-between;
+                  font-size: 11pt;
+                }
+                .besm { text-align: center; font-weight: bold; font-size: 15pt; margin-bottom: 20px; }
+                .title { text-align: center; font-weight: bold; font-size: 16pt; margin-bottom: 25px; color: #0f172a; }
+                .content { white-space: pre-wrap; font-size: 13.5pt; margin-bottom: 40px; }
+                .sign { text-align: left; margin-top: 50px; font-weight: bold; padding-left: 50px; font-size: 13pt; }
+                .footer { text-align: center; font-size: 10pt; color: #64748b; border-top: 1px dashed #cbd5e1; padding-top: 14px; margin-top: 40px; }
+              </style>
+            </head>
+            <body>
+              <div class="besm">« به نام خدا »</div>
+              <div class="header">
+                <div>سامانه رسمی نگارش یار (negaresh-yar.ir)</div>
+                <div>سند اداری و قضایی استاندارد</div>
+                <div>تاریخ: ${new Intl.DateTimeFormat('fa-IR').format(new Date())}</div>
+              </div>
+              <div class="title">${docTitle}</div>
+              <div class="content">${sampleContent.replace(/</g, '&lt;').replace(/>/g, '&gt;')}</div>
+              <div class="sign">امضاء و اثر انگشت: ................................</div>
+              <div class="footer">استخراج شده از بانک اسناد رسمی نگارش یار - negaresh-yar.ir</div>
+              <script>
+                window.onload = function() { window.print(); }
+              </script>
+            </body>
+          </html>
+        `);
+        printWindow.document.close();
+      }
+      setDownloadedPdf(true);
+      setTimeout(() => setDownloadedPdf(false), 3000);
     }
   };
 
@@ -307,10 +384,51 @@ export function SampleLandingPageTemplate({ data }: { data: SampleLandingData })
               </h2>
             </div>
 
-            <div className="flex flex-wrap items-center gap-2.5 shrink-0">
+            <div className="flex flex-wrap items-center gap-2 shrink-0">
+              {/* Word DOCX Download Button */}
+              <button
+                onClick={handleDownloadWord}
+                className="inline-flex items-center justify-center gap-2 px-3.5 py-2.5 rounded-xl bg-blue-700 hover:bg-blue-600 border border-blue-500 text-xs sm:text-sm text-white font-black transition-all shadow-sm hover:shadow-md"
+                aria-label="دانلود مستقیم فایل ورد Word قابل ویرایش"
+                title="دانلود فایل Word با فرمت استاندارد اداری و قابل ویرایش"
+              >
+                {downloadedWord ? (
+                  <>
+                    <Check className="w-4 h-4 text-emerald-300" />
+                    <span className="text-emerald-200">فایل Word دانلود شد!</span>
+                  </>
+                ) : (
+                  <>
+                    <FileText className="w-4 h-4 text-blue-200" />
+                    <span>دانلود فایل Word</span>
+                  </>
+                )}
+              </button>
+
+              {/* PDF Print Download Button */}
+              <button
+                onClick={handleDownloadPdf}
+                className="inline-flex items-center justify-center gap-2 px-3.5 py-2.5 rounded-xl bg-rose-700 hover:bg-rose-600 border border-rose-500 text-xs sm:text-sm text-white font-black transition-all shadow-sm hover:shadow-md"
+                aria-label="دانلود نسخه PDF یا پرینت رسمی سند"
+                title="دانلود و پرینت فایل PDF با سربرگ استاندارد اداری"
+              >
+                {downloadedPdf ? (
+                  <>
+                    <Check className="w-4 h-4 text-emerald-300" />
+                    <span className="text-emerald-200">در حال آماده‌سازی PDF...</span>
+                  </>
+                ) : (
+                  <>
+                    <Printer className="w-4 h-4 text-rose-200" />
+                    <span>دانلود نسخه PDF</span>
+                  </>
+                )}
+              </button>
+
+              {/* Copy Text Button */}
               <button
                 onClick={handleCopyText}
-                className="inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-slate-900 hover:bg-slate-800 border border-slate-700 text-xs sm:text-sm text-white font-bold transition-colors shadow-sm"
+                className="inline-flex items-center justify-center gap-2 px-3.5 py-2.5 rounded-xl bg-slate-900 hover:bg-slate-800 border border-slate-700 text-xs sm:text-sm text-white font-bold transition-colors shadow-sm"
                 aria-label="کپی رایگان متن کامل نمونه به حافظه"
               >
                 {copied ? (
@@ -321,28 +439,44 @@ export function SampleLandingPageTemplate({ data }: { data: SampleLandingData })
                 ) : (
                   <>
                     <Copy className="w-4 h-4 text-[#E5C158]" />
-                    <span>کپی رایگان متن</span>
+                    <span>کپی متن</span>
                   </>
                 )}
               </button>
 
+              {/* Download TXT Button */}
               <button
                 onClick={handleDownloadTxt}
-                className="inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-amber-50 hover:bg-amber-100 border border-amber-400 text-xs sm:text-sm text-amber-950 font-bold transition-colors shadow-sm"
-                aria-label="دانلود رایگان فایل متنی نمونه"
+                className="inline-flex items-center justify-center gap-2 px-3 py-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 border border-slate-300 text-xs sm:text-sm text-slate-800 font-medium transition-colors shadow-sm"
+                aria-label="دانلود فایل متنی نمونه"
               >
                 {downloaded ? (
                   <>
                     <Check className="w-4 h-4 text-emerald-600" />
-                    <span className="text-emerald-700 font-bold">فایل دانلود شد!</span>
+                    <span className="text-emerald-700 font-bold">فایل TXT ذخیره شد!</span>
                   </>
                 ) : (
                   <>
-                    <Download className="w-4 h-4 text-amber-700" />
-                    <span>دانلود رایگان فایل (TXT)</span>
+                    <Download className="w-4 h-4 text-slate-600" />
+                    <span>TXT</span>
                   </>
                 )}
               </button>
+            </div>
+          </div>
+
+          {/* Download & File Info Bar for SEO & UX */}
+          <div className="flex flex-wrap items-center justify-between gap-3 p-3.5 rounded-xl bg-blue-50/80 border border-blue-200 text-xs text-blue-950 font-medium">
+            <div className="flex items-center gap-2">
+              <span className="w-2 h-2 rounded-full bg-blue-600 animate-pulse" />
+              <span>
+                <strong>فرمت‌های رایگان آماده:</strong> فایل Word قابل ویرایش (.doc/.docx) | نسخه PDF رسمی با سربرگ | فایل متنی خام (.txt)
+              </span>
+            </div>
+            <div className="flex items-center gap-3 text-[11px] text-blue-800">
+              <span>اندازه فایل: ~۱۵ کیلوبایت</span>
+              <span>•</span>
+              <span>سازگار با کامپیوتر و گوشی</span>
             </div>
           </div>
 

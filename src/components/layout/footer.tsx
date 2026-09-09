@@ -101,6 +101,10 @@ export function Footer() {
               <Link href="/knowledge" className="hover:underline">پایگاه دانش حقوقی</Link>
             </h3>
             <ul className="space-y-2 text-xs sm:text-sm text-slate-300">
+              <li><Link href="/calculators" className="hover:text-[#E5C158] transition-colors text-[#E5C158] font-bold">محاسبه‌گرهای حقوقی آنلاین (رایگان)</Link></li>
+              <li><Link href="/calculators/mehrieh" className="hover:text-[#E5C158] transition-colors">محاسبه مهریه به نرخ روز</Link></li>
+              <li><Link href="/calculators/debt-delay" className="hover:text-[#E5C158] transition-colors">محاسبه تاخیر تادیه بدهی و چک</Link></li>
+              <li><Link href="/calculators/diya" className="hover:text-[#E5C158] transition-colors">محاسبه نرخ دیه سال ۱۴۰۳</Link></li>
               <li><Link href="/knowledge/what-is-petition" className="hover:text-[#E5C158] transition-colors">دادخواست چیست؟</Link></li>
               <li><Link href="/knowledge/petition-vs-complaint" className="hover:text-[#E5C158] transition-colors">تفاوت دادخواست و شکواییه</Link></li>
               <li><Link href="/knowledge/what-is-legal-brief" className="hover:text-[#E5C158] transition-colors">لایحه دفاعیه چیست؟</Link></li>
