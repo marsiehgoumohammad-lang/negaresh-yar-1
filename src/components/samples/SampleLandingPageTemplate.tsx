@@ -263,26 +263,32 @@ export function SampleLandingPageTemplate({ data }: { data: SampleLandingData })
         </section>
 
         {/* ---------------------------------------------------- */}
-        {/* CTA 1: SLIM 2-LINE ADVISORY (دقیقاً دو خط قبل از نمونه) */}
+        {/* CTA 1: SLIM 2-LINE ADVISORY (کادر هشدار پررنگ، شفاف و چشم‌گیر) */}
         {/* ---------------------------------------------------- */}
         <aside
           id="pre-sample-slim-cta"
           aria-label="هشدار انطباق پرونده با نمونه"
-          className="p-3 sm:p-3.5 rounded-xl bg-amber-500/10 border border-amber-500/30 text-slate-200 text-xs sm:text-sm leading-relaxed flex flex-col sm:flex-row sm:items-center justify-between gap-2 shadow-xs"
+          className="p-4 sm:p-5 rounded-2xl bg-amber-100 border-2 border-amber-500 border-r-8 border-r-amber-600 shadow-md text-slate-950 flex flex-col md:flex-row md:items-center justify-between gap-4 transition-all hover:shadow-lg my-3"
         >
-          <div className="flex items-start sm:items-center gap-2">
-            <AlertCircle className="w-4 h-4 text-amber-400 shrink-0 mt-0.5 sm:mt-0" />
-            <p className="text-slate-300">
-              <strong className="text-amber-300 font-bold">توجه اداری/حقوقی:</strong>{' '}
-              این متن یک الگوی عمومی است؛ در صورت تفاوت در مبالغ یا اسناد، ارسال متن خام ممکن است توسط قاضی یا اداره رد شود.
+          <div className="flex items-start sm:items-center gap-3">
+            <div className="p-2 sm:p-2.5 rounded-xl bg-amber-500 text-slate-950 shrink-0 shadow-sm mt-0.5 sm:mt-0 flex items-center justify-center">
+              <AlertCircle className="w-5 h-5 sm:w-6 sm:h-6 stroke-[2.5]" />
+            </div>
+            <p className="text-xs sm:text-sm leading-relaxed text-slate-950">
+              <span className="inline-block px-2.5 py-0.5 rounded-md bg-amber-500 text-slate-950 font-black text-xs sm:text-sm ml-1.5 shadow-xs">
+                توجه اداری / حقوقی:
+              </span>
+              <strong className="font-bold text-slate-950">
+                این متن یک الگوی عمومی است؛ در صورت تفاوت در مبالغ یا اسناد، ارسال متن خام ممکن است توسط قاضی یا اداره رد شود.
+              </strong>
             </p>
           </div>
           <Link
             href={orderHref}
-            className="inline-flex items-center gap-1.5 text-xs font-bold text-[#E5C158] hover:text-[#f3d376] hover:underline whitespace-nowrap shrink-0 transition-colors pr-6 sm:pr-0"
+            className="w-full md:w-auto inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl bg-slate-950 hover:bg-black text-[#E5C158] hover:text-white font-black text-xs sm:text-sm shadow-md hover:shadow-xl transition-all shrink-0 whitespace-nowrap group"
           >
             <span>سفارش تنظیم متن اختصاصی پرونده شما</span>
-            <ArrowLeft className="w-3.5 h-3.5" />
+            <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
           </Link>
         </aside>
 
@@ -292,11 +298,11 @@ export function SampleLandingPageTemplate({ data }: { data: SampleLandingData })
         <section id="sample-template" className="scroll-mt-24 space-y-5">
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
             <div>
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-[#E5C158]/10 text-[#E5C158] text-xs font-semibold mb-2">
-                <BookOpen className="w-3.5 h-3.5" />
+              <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-amber-500/15 border border-amber-500/40 text-amber-950 text-xs font-black mb-2">
+                <BookOpen className="w-3.5 h-3.5 text-amber-700" />
                 <span>متن کامل و آماده نمونه سند</span>
               </div>
-              <h2 className="text-xl sm:text-2xl font-bold text-white">
+              <h2 className="text-xl sm:text-2xl font-black text-slate-950">
                 {data.sampleStructureTitle || `نمونه متن کامل ${title}`}
               </h2>
             </div>
@@ -304,7 +310,7 @@ export function SampleLandingPageTemplate({ data }: { data: SampleLandingData })
             <div className="flex flex-wrap items-center gap-2.5 shrink-0">
               <button
                 onClick={handleCopyText}
-                className="inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 border border-slate-700 text-xs sm:text-sm text-slate-200 transition-colors shadow-sm"
+                className="inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-slate-900 hover:bg-slate-800 border border-slate-700 text-xs sm:text-sm text-white font-bold transition-colors shadow-sm"
                 aria-label="کپی رایگان متن کامل نمونه به حافظه"
               >
                 {copied ? (
@@ -322,17 +328,17 @@ export function SampleLandingPageTemplate({ data }: { data: SampleLandingData })
 
               <button
                 onClick={handleDownloadTxt}
-                className="inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-[#E5C158]/10 hover:bg-[#E5C158]/20 border border-[#E5C158]/30 text-xs sm:text-sm text-[#E5C158] font-medium transition-colors shadow-sm"
+                className="inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-amber-50 hover:bg-amber-100 border border-amber-400 text-xs sm:text-sm text-amber-950 font-bold transition-colors shadow-sm"
                 aria-label="دانلود رایگان فایل متنی نمونه"
               >
                 {downloaded ? (
                   <>
-                    <Check className="w-4 h-4 text-emerald-400" />
-                    <span className="text-emerald-400 font-bold">فایل دانلود شد!</span>
+                    <Check className="w-4 h-4 text-emerald-600" />
+                    <span className="text-emerald-700 font-bold">فایل دانلود شد!</span>
                   </>
                 ) : (
                   <>
-                    <Download className="w-4 h-4" />
+                    <Download className="w-4 h-4 text-amber-700" />
                     <span>دانلود رایگان فایل (TXT)</span>
                   </>
                 )}
@@ -340,7 +346,7 @@ export function SampleLandingPageTemplate({ data }: { data: SampleLandingData })
             </div>
           </div>
 
-          <p className="text-xs sm:text-sm text-slate-400 leading-relaxed">
+          <p className="text-xs sm:text-sm text-slate-700 leading-relaxed font-medium">
             {data.sampleStructureIntro ||
               'شما می‌توانید از قالب متنی زیر برای تنظیم و ثبت در سامانه ثنا یا ارائه به شعبه مربوطه استفاده کنید. جاهای خالی (نقطه‌چین‌ها) را با اطلاعات واقعی پرونده خود تکمیل نمایید:'}
           </p>
