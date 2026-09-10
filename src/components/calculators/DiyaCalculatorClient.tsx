@@ -29,7 +29,7 @@ interface SelectedInjuryItem {
 }
 
 export function DiyaCalculatorClient() {
-  const [selectedYear, setSelectedYear] = useState<number>(1403);
+  const [selectedYear, setSelectedYear] = useState<number>(1405);
   const [deathSacredMonth, setDeathSacredMonth] = useState<boolean>(false);
   const [activeTab, setActiveTab] = useState<
     'death_life' | 'custom_percent' | 'injuries' | 'bones' | 'organs'

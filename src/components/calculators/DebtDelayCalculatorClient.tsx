@@ -61,6 +61,11 @@ export function DebtDelayCalculatorClient() {
     .map(Number)
     .sort((a, b) => b - a);
 
+  // سال‌های قابل انتخاب برای تاریخ تأدیه (شامل سال‌های ۱۴۰۵ و ۱۴۰۴ جهت انتخاب تاریخ واقعی کاربر)
+  const selectableSettlementYears = Array.from(
+    new Set([1405, 1404, ...(calculationMode === 'monthly' ? monthlyAvailableYears : AVAILABLE_YEARS)])
+  ).sort((a, b) => b - a);
+
   const dueMonthName = PERSIAN_MONTH_NAMES.find((m) => m.id === dueMonth)?.name || '';
   const settlementMonthName = PERSIAN_MONTH_NAMES.find((m) => m.id === settlementMonth)?.name || '';
 
@@ -256,18 +261,17 @@ export function DebtDelayCalculatorClient() {
                   onChange={(e) => setSettlementYear(Number(e.target.value))}
                   className="w-full px-3 py-3 rounded-xl bg-slate-950 border border-slate-700 text-white font-bold text-xs sm:text-sm focus:outline-none focus:border-[#E5C158] transition-all appearance-none cursor-pointer"
                 >
-                  {(calculationMode === 'monthly' ? monthlyAvailableYears : AVAILABLE_YEARS)
-                    .map((y) => (
-                      <option key={y} value={y} className="bg-slate-900 text-white">
-                        سال {y} {y === 1403 ? '(آخرین شاخص رسمی بانک مرکزی)' : ''}
-                      </option>
-                    ))}
+                  {selectableSettlementYears.map((y) => (
+                    <option key={y} value={y} className="bg-slate-900 text-white">
+                      سال {y} {y === 1403 ? '(آخرین شاخص رسمی منتشرشده بانک مرکزی)' : ''}
+                    </option>
+                  ))}
                 </select>
                 <ChevronDown className="w-3.5 h-3.5 text-slate-400 absolute left-2.5 top-1/2 -translate-y-1/2 pointer-events-none" />
               </div>
             </div>
             <p className="text-[11px] text-slate-400">
-              شاخص زمان تادیه: {result.isAvailable ? result.settlementCpi : 'عدم انتشار'}
+              شاخص زمان تادیه: {result.isAvailable ? result.settlementCpi : 'عدم انتشار رسمی'}
             </p>
           </div>
         </div>
@@ -315,7 +319,7 @@ export function DebtDelayCalculatorClient() {
             <div className="space-y-1">
               <div className="font-bold text-sm">عدم امکان محاسبه قانونی</div>
               <p className="text-xs leading-relaxed text-rose-300">
-                {result.errorMessage || 'شاخص رسمی بانک مرکزی برای تاریخ انتخابی منتشر نشده است؛ بنابراین محاسبه دقیق قانونی در حال حاضر امکان‌پذیر نیست.'}
+                {result.errorMessage || 'شاخص رسمی بانک مرکزی برای تاریخ انتخابی منتشر نشده است؛ بنابراین محاسبه دقیق قانونی در حال حاضر امکانپذیر نیست.'}
               </p>
             </div>
           </div>

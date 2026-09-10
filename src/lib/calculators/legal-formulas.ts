@@ -189,7 +189,7 @@ export function calculateMehrieh(
 export function calculateDebtDelay(
   principalAmountToman: number,
   dueYear: number,
-  settlementYear: number = 1403,
+  settlementYear: number,
   dueMonth?: number,
   settlementMonth?: number
 ): {
@@ -253,7 +253,7 @@ export function calculateDebtDelay(
         settlementCpi: settlementCpi || 0,
         isAvailable: false,
         isMonthly: true,
-        errorMessage: 'شاخص رسمی بانک مرکزی برای تاریخ انتخابی منتشر نشده است؛ بنابراین محاسبه دقیق قانونی در حال حاضر امکان‌پذیر نیست.',
+        errorMessage: 'شاخص رسمی بانک مرکزی برای تاریخ انتخابی منتشر نشده است؛ بنابراین محاسبه دقیق قانونی در حال حاضر امکانپذیر نیست.',
       };
     }
 
@@ -285,7 +285,7 @@ export function calculateDebtDelay(
       settlementCpi: settlementCpi || 0,
       isAvailable: false,
       isMonthly: false,
-      errorMessage: 'شاخص رسمی بانک مرکزی برای تاریخ انتخابی منتشر نشده است؛ بنابراین محاسبه دقیق قانونی در حال حاضر امکان‌پذیر نیست.',
+      errorMessage: 'شاخص رسمی بانک مرکزی برای تاریخ انتخابی منتشر نشده است؛ بنابراین محاسبه دقیق قانونی در حال حاضر امکانپذیر نیست.',
     };
   }
 
@@ -314,6 +314,8 @@ export interface DiyaRateInfo {
 }
 
 export const OFFICIAL_DIYA_RATES: DiyaRateInfo[] = [
+  // سال ۱۴۰۵: مصوب بخشنامه ابلاغی قوه قضاییه بر اساس ماده ۵۴۹ قانون مجازات اسلامی (۲۱ میلیارد ریال عادی / ۲۸ میلیارد ریال ماه حرام)
+  { year: 1405, normalMonthsToman: 2_100_000_000, sacredMonthsToman: 2_800_000_000 },
   // سال ۱۴۰۴: مصوب بخشنامه ابلاغی رئیس قوه قضاییه بر اساس ماده ۵۴۹ قانون مجازات اسلامی (۱۶ میلیارد ریال عادی / ۲۱.۳۳ میلیارد ریال ماه حرام)
   { year: 1404, normalMonthsToman: 1_600_000_000, sacredMonthsToman: 2_133_333_333 },
   // سال ۱۴۰۳: مصوب بخشنامه ابلاغی رئیس قوه قضاییه (۱۲ میلیارد ریال عادی / ۱۶ میلیارد ریال ماه حرام)
@@ -491,7 +493,7 @@ export const BODY_ORGAN_DIYA_LIST: BodyOrganDiya[] = [
  */
 export function calculateDiyaAmount(
   percentage: number,
-  year: number = 1403,
+  year: number = 1405,
   isSacredMonth: boolean = false,
   isDeathOrLife: boolean = false
 ): {
@@ -516,7 +518,7 @@ export function calculateDiyaAmount(
   let taghlizNotice: string | undefined = undefined;
   if (isSacredMonth && !isDeathOrLife) {
     taghlizNotice =
-      'طبق ماده ۵۵۷ قانون مجازات اسلامی، تغلیظ دیه (افزایش یک‌سوم) منحصراً به فوت انسان اختصاص دارد و به جراحات و اعضا تغلیظ تعلق نمی‌گیرد؛ لذا مبلغ بر مبنای نرخ ماه‌های عادی محاسبه گردید.';
+      'طبق ماده ۵۵۷ قانون مجازات اسلامی، «تغلیظ دیه مخصوص قتل نفس است و در جنایت بر اعضاء و منافع جاری نیست»؛ لذا مبلغ بر مبنای نرخ ماه‌های عادی محاسبه گردید.';
   } else if (shouldApplyTaghliz) {
     taghlizNotice =
       'طبق ماده ۵۵۵ قانون مجازات اسلامی، به علت وقوع حادثه و فوت در ماه حرام، یک‌سوم دیه کامل به عنوان تغلیظ دیه نفس افزوده شده است.';
