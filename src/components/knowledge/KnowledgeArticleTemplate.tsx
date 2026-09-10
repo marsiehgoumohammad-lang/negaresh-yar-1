@@ -29,6 +29,7 @@ import {
 } from 'lucide-react';
 import { KnowledgeArticleData } from '@/data/knowledge/types';
 import { ThreeServiceDiscovery } from '@/components/common/ThreeServiceDiscovery';
+import { PreferredSourceCTA } from '@/components/common/PreferredSourceCTA';
 
 export function KnowledgeArticleTemplate({ data }: { data: KnowledgeArticleData }) {
   const [openFaq, setOpenFaq] = useState<number | null>(0);
@@ -630,6 +631,9 @@ export function KnowledgeArticleTemplate({ data }: { data: KnowledgeArticleData 
               </p>
             </div>
           </div>
+
+          {/* GOOGLE PREFERRED SOURCE CTA */}
+          <PreferredSourceCTA variant="article" />
         </div>
 
         {/* LEFT COLUMN: STICKY SIDEBAR (4 COLS) */}

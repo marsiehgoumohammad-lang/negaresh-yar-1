@@ -32,6 +32,7 @@ import {
 } from 'lucide-react';
 import { SampleLandingData } from '@/data/samples/types';
 import { generateMessengerLinks } from '@/lib/messengers-links';
+import { PreferredSourceCTA } from '@/components/common/PreferredSourceCTA';
 import {
   Phone,
   MessageCircle,
@@ -464,6 +465,9 @@ export function SampleLandingPageTemplate({ data }: { data: SampleLandingData })
                   </>
                 )}
               </button>
+
+              {/* Google Preferred Source CTA */}
+              <PreferredSourceCTA variant="sample" />
             </div>
           </div>
 
