@@ -140,6 +140,20 @@ export function DebtDelayCalculatorClient() {
           </button>
         </div>
 
+        {/* Official Index Transparency Banner */}
+        <div className="p-3.5 rounded-xl bg-blue-500/10 border border-blue-500/25 flex items-center justify-between text-xs text-blue-300">
+          <div className="flex items-center gap-2">
+            <ShieldCheck className="w-4 h-4 text-blue-400 shrink-0" />
+            <span>
+              <strong>شفافیت قانونی:</strong> آخرین شاخص رسمی منتشرشده بانک مرکزی موجود در سامانه{' '}
+              {calculationMode === 'monthly'
+                ? 'اسفند ۱۴۰۳ (شاخص ماهانه ۱۵۸۱.۵)'
+                : 'سال ۱۴۰۳ (شاخص سالانه ۱۸.۳۱۲۷)'}{' '}
+              است. سیستم از هرگونه تولید عدد تخمینی یا فرضی برای بازه‌های فاقد شاخص قطعی خودداری می‌نماید.
+            </span>
+          </div>
+        </div>
+
         {/* Inputs Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
           {/* Principal Amount */}
@@ -243,10 +257,9 @@ export function DebtDelayCalculatorClient() {
                   className="w-full px-3 py-3 rounded-xl bg-slate-950 border border-slate-700 text-white font-bold text-xs sm:text-sm focus:outline-none focus:border-[#E5C158] transition-all appearance-none cursor-pointer"
                 >
                   {(calculationMode === 'monthly' ? monthlyAvailableYears : AVAILABLE_YEARS)
-                    .filter((y) => y >= dueYear)
                     .map((y) => (
                       <option key={y} value={y} className="bg-slate-900 text-white">
-                        سال {y} {y === 1403 ? '(آخرین شاخص رسمی)' : ''}
+                        سال {y} {y === 1403 ? '(آخرین شاخص رسمی بانک مرکزی)' : ''}
                       </option>
                     ))}
                 </select>
@@ -254,7 +267,7 @@ export function DebtDelayCalculatorClient() {
               </div>
             </div>
             <p className="text-[11px] text-slate-400">
-              شاخص زمان تادیه: {result.settlementCpi || 'نامشخص'}
+              شاخص زمان تادیه: {result.isAvailable ? result.settlementCpi : 'عدم انتشار'}
             </p>
           </div>
         </div>
@@ -300,9 +313,9 @@ export function DebtDelayCalculatorClient() {
           <div className="p-5 rounded-2xl bg-rose-950/30 border border-rose-500/40 text-rose-200 flex items-start gap-3">
             <AlertCircle className="w-5 h-5 text-rose-400 shrink-0 mt-0.5" />
             <div className="space-y-1">
-              <div className="font-bold text-sm">شاخص رسمی بانک مرکزی در دسترس نیست</div>
+              <div className="font-bold text-sm">عدم امکان محاسبه قانونی</div>
               <p className="text-xs leading-relaxed text-rose-300">
-                {result.errorMessage || 'شاخص رسمی بانک مرکزی برای این تاریخ هنوز اعلام نشده است. بر اساس الزامات قانونی، محاسبه بدون شاخص رسمی معتبر نیست.'}
+                {result.errorMessage || 'شاخص رسمی بانک مرکزی برای تاریخ انتخابی منتشر نشده است؛ بنابراین محاسبه دقیق قانونی در حال حاضر امکان‌پذیر نیست.'}
               </p>
             </div>
           </div>

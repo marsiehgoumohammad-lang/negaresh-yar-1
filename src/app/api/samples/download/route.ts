@@ -39,7 +39,30 @@ export async function GET(request: NextRequest) {
     });
   }
 
-  // 2. خروجی فایل رسمی مایکروسافت ورد (Word DOC / DOCX)
+  // 2. درخواست غیرمستقیم فرمت PDF
+  if (format === 'pdf') {
+    return new NextResponse(
+      'دریافت مستقیم فایل PDF به دلیل حفظ دقیق فونت‌های بومی فارسی، سربرگ و تنظیمات راست‌چین، از طریق دکمه «چاپ و ذخیره PDF» در صفحه اختصاصی سند در مرورگر انجام می‌شود. لطفاً از دکمه چاپ و ذخیره PDF در صفحه استفاده فرمایید.',
+      {
+        status: 400,
+        headers: {
+          'Content-Type': 'text/plain; charset=utf-8',
+        },
+      }
+    );
+  }
+
+  // 3. اعتبارسنجی فرمت‌های مجاز ورد (doc / docx)
+  if (format !== 'doc' && format !== 'docx') {
+    return new NextResponse('فرمت فایل درخواستی نامعتبر است. فرمت‌های مجاز: doc, docx, txt', {
+      status: 400,
+      headers: {
+        'Content-Type': 'text/plain; charset=utf-8',
+      },
+    });
+  }
+
+  // 4. خروجی فایل رسمی مایکروسافت ورد (Word DOC / DOCX)
   // ساختار استاندارد اداری با جهت راست‌چین، فونت اداری و سربرگ
   const todaySolar = new Intl.DateTimeFormat('fa-IR', {
     year: 'numeric',

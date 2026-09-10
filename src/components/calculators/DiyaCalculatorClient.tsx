@@ -104,7 +104,7 @@ export function DiyaCalculatorClient() {
             >
               {OFFICIAL_DIYA_RATES.map((rate) => (
                 <option key={rate.year} value={rate.year}>
-                  دیه سال {rate.year} {rate.year === 1403 ? '(مصوب سال ۱۴۰۳)' : rate.year === 1404 ? '(مصوب سال ۱۴۰۴)' : ''}
+                  دیه سال {rate.year} (مصوب قوه قضاییه)
                 </option>
               ))}
             </select>
@@ -134,16 +134,19 @@ export function DiyaCalculatorClient() {
           </div>
         </div>
 
-        {/* Legal Advisory regarding Taghliz */}
+        {/* Legal Advisory regarding Taghliz and Case Reality */}
         <div className="p-4 rounded-2xl bg-amber-500/10 border border-amber-500/30 text-amber-200 text-xs leading-relaxed flex items-start gap-2.5">
           <AlertTriangle className="w-4 h-4 text-[#E5C158] shrink-0 mt-0.5" />
-          <div>
-            <strong className="text-white block font-bold mb-1">
-              قاعده قطعی فقهی و قانونی تغلیظ دیه (مواد ۵۵۵ و ۵۵۷ قانون مجازات اسلامی):
+          <div className="space-y-1">
+            <strong className="text-white block font-bold">
+              قاعده قطعی قانونی تغلیظ دیه (مواد ۵۵۵ و ۵۵۷ قانون مجازات اسلامی):
             </strong>
-            <span>
-              تغلیظ دیه (افزودن یک‌سوم به مبلغ دیه) <strong>منحصراً مربوط به قتل و فوت انسان (دیه نفس)</strong> است. طبق ماده ۵۵۷ قانون مجازات اسلامی، در جنایت بر اعضا، جراحات، شکستگی استخوان و منافع به هیچ وجه تغلیظ جاری نیست و مبلغ دیه جراحات در ماه‌های حرام و عادی کاملاً یکسان می‌باشد.
-            </span>
+            <p>
+              تغلیظ دیه (افزودن یک‌سوم به مبلغ دیه) <strong>منحصراً مربوط به قتل و فوت انسان (دیه نفس)</strong> است. طبق ماده ۵۵۷ قانون مجازات اسلامی، در جنایت بر اعضا، جراحات، شکستگی استخوان و منافع به هیچ وجه تغلیظ جاری نیست و مبالغ جراحات بر مبنای دیه ماه غیرحرام محاسبه می‌شود.
+            </p>
+            <p className="text-[11px] text-amber-300 font-medium pt-1 border-t border-amber-500/20">
+              ⚠️ <strong>توجه قضایی:</strong> این محاسبه صرفاً بر اساس درصد/میزان انتخاب‌شده انجام شده و در پرونده واقعی ممکن است احکام تعدد، تداخل، ارش و سایر مقررات قانونی مؤثر باشد.
+            </p>
           </div>
         </div>
       </div>
@@ -294,6 +297,9 @@ export function DiyaCalculatorClient() {
             <p className="text-xs text-slate-300 leading-relaxed">
               {deathCalculation.taghlizNotice}
             </p>
+            <div className="p-2.5 rounded-xl bg-slate-950/80 border border-slate-800 text-[11px] text-slate-400">
+              <strong className="text-amber-400">نکته قضایی:</strong> {deathCalculation.legalDisclaimer}
+            </div>
           </div>
         </div>
       )}
@@ -333,8 +339,13 @@ export function DiyaCalculatorClient() {
             <div className="text-xs text-slate-300 pt-2 border-t border-slate-800">
               بر مبنای نرخ مصوب سال {selectedYear} ({formatToman(normalBaseDiya)} تومان) × {customAmountResult.percentageFormatted}٪
             </div>
-            <div className="p-2.5 rounded-xl bg-slate-950/80 border border-slate-800 text-[11px] text-slate-400">
-              <strong className="text-amber-400">نکته حقوقی:</strong> بر اساس ماده ۵۵۷ قانون مجازات اسلامی، در تعیین ارش و دیه جراحات تغلیظ دیه (افزایش ماه حرام) اعمال نمی‌شود و مبلغ در تمام ماه‌های سال یکسان است.
+            <div className="p-2.5 rounded-xl bg-slate-950/80 border border-slate-800 text-[11px] text-slate-400 space-y-1">
+              <div>
+                <strong className="text-amber-400">نکته حقوقی ماده ۵۵۷:</strong> تغلیظ دیه (افزایش یک‌سوم) اختصاص به قتل نفس دارد و در جنایت بر اعضا و منافع به هیچ وجه جاری نیست؛ بنابراین محاسبه اعضا و جراحات بر مبنای دیه ماه غیرحرام انجام شده است.
+              </div>
+              <div className="text-slate-400 pt-1 border-t border-slate-850">
+                ⚠️ <strong className="text-slate-300">توجه قضایی:</strong> این محاسبه صرفاً بر اساس درصد/میزان انتخاب‌شده انجام شده و در پرونده واقعی ممکن است احکام تعدد، تداخل، ارش و سایر مقررات قانونی مؤثر باشد.
+              </div>
             </div>
           </div>
         </div>
@@ -542,6 +553,10 @@ export function DiyaCalculatorClient() {
                 معادل {formatToman(totalBasketAmount * 10)} ریال
               </div>
             </div>
+          </div>
+
+          <div className="p-3 rounded-xl bg-slate-950/70 border border-slate-800 text-[11px] text-slate-400">
+            ⚠️ <strong className="text-slate-300">توجه قضایی:</strong> این محاسبه صرفاً بر اساس درصد/میزان انتخاب‌شده انجام شده و در پرونده واقعی ممکن است احکام تعدد، تداخل، ارش و سایر مقررات قانونی مؤثر باشد.
           </div>
         </div>
       )}

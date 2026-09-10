@@ -202,12 +202,49 @@ export function calculateDebtDelay(
   isMonthly: boolean;
   errorMessage?: string;
 } {
-  // اگر ماه مشخص شده باشد، از جدول شاخص ماهانه بانک مرکزی استفاده می‌شود
-  if (dueMonth && settlementMonth && CENTRAL_BANK_MONTHLY_CPI[dueYear] && CENTRAL_BANK_MONTHLY_CPI[settlementYear]) {
+  const isMonthlyRequested = Boolean(dueMonth && settlementMonth);
+
+  // ۱. اعتبارسنجی مبلغ ورودی
+  if (isNaN(principalAmountToman) || principalAmountToman < 0) {
+    return {
+      totalAmountToman: 0,
+      delayPenaltyToman: 0,
+      multiplier: 1,
+      dueCpi: 0,
+      settlementCpi: 0,
+      isAvailable: false,
+      isMonthly: isMonthlyRequested,
+      errorMessage: 'مبلغ بدهی نمی‌تواند منفی باشد و باید عددی معتبر باشد.',
+    };
+  }
+
+  // ۲. اعتبارسنجی تقدم و تاخر زمانی تاریخ‌ها
+  const isChronologicallyInvalid =
+    settlementYear < dueYear ||
+    (settlementYear === dueYear &&
+      dueMonth !== undefined &&
+      settlementMonth !== undefined &&
+      settlementMonth < dueMonth);
+
+  if (isChronologicallyInvalid) {
+    return {
+      totalAmountToman: principalAmountToman,
+      delayPenaltyToman: 0,
+      multiplier: 1,
+      dueCpi: 0,
+      settlementCpi: 0,
+      isAvailable: false,
+      isMonthly: isMonthlyRequested,
+      errorMessage: 'تاریخ تأدیه نمی‌تواند قبل از تاریخ سررسید یا مطالبه دین باشد.',
+    };
+  }
+
+  // ۳. محاسبه ماهانه بر اساس جدول شماره ۲ رسمی بانک مرکزی
+  if (dueMonth && settlementMonth) {
     const dueCpi = CENTRAL_BANK_MONTHLY_CPI[dueYear]?.[dueMonth];
     const settlementCpi = CENTRAL_BANK_MONTHLY_CPI[settlementYear]?.[settlementMonth];
 
-    if (!dueCpi || !settlementCpi) {
+    if (!dueCpi || !settlementCpi || dueCpi <= 0 || settlementCpi <= 0) {
       return {
         totalAmountToman: principalAmountToman,
         delayPenaltyToman: 0,
@@ -216,7 +253,7 @@ export function calculateDebtDelay(
         settlementCpi: settlementCpi || 0,
         isAvailable: false,
         isMonthly: true,
-        errorMessage: 'شاخص ماهانه رسمی بانک مرکزی برای این بازه زمانی اعلام نشده است و محاسبه دقیق قانونی امکان‌پذیر نمی‌باشد.',
+        errorMessage: 'شاخص رسمی بانک مرکزی برای تاریخ انتخابی منتشر نشده است؛ بنابراین محاسبه دقیق قانونی در حال حاضر امکان‌پذیر نیست.',
       };
     }
 
@@ -235,11 +272,11 @@ export function calculateDebtDelay(
     };
   }
 
-  // در حالت محاسبه سالانه (رأی وحدت رویه ۸۵۰ دیوان عالی کشور)
+  // ۴. در حالت محاسبه سالانه (رأی وحدت رویه شماره ۸۵۰ هیئت عمومی دیوان عالی کشور)
   const dueCpi = CENTRAL_BANK_ANNUAL_CPI[dueYear];
   const settlementCpi = CENTRAL_BANK_ANNUAL_CPI[settlementYear];
 
-  if (!dueCpi || !settlementCpi) {
+  if (!dueCpi || !settlementCpi || dueCpi <= 0 || settlementCpi <= 0) {
     return {
       totalAmountToman: principalAmountToman,
       delayPenaltyToman: 0,
@@ -248,7 +285,7 @@ export function calculateDebtDelay(
       settlementCpi: settlementCpi || 0,
       isAvailable: false,
       isMonthly: false,
-      errorMessage: 'شاخص سالانه رسمی بانک مرکزی برای سال انتخابی اعلام نشده است و بر اساس موازین قضایی امکان محاسبه تقریبی وجود ندارد.',
+      errorMessage: 'شاخص رسمی بانک مرکزی برای تاریخ انتخابی منتشر نشده است؛ بنابراین محاسبه دقیق قانونی در حال حاضر امکان‌پذیر نیست.',
     };
   }
 
@@ -277,12 +314,17 @@ export interface DiyaRateInfo {
 }
 
 export const OFFICIAL_DIYA_RATES: DiyaRateInfo[] = [
-  { year: 1405, normalMonthsToman: 2_100_000_000, sacredMonthsToman: 2_800_000_000 },
+  // سال ۱۴۰۴: مصوب بخشنامه ابلاغی رئیس قوه قضاییه بر اساس ماده ۵۴۹ قانون مجازات اسلامی (۱۶ میلیارد ریال عادی / ۲۱.۳۳ میلیارد ریال ماه حرام)
   { year: 1404, normalMonthsToman: 1_600_000_000, sacredMonthsToman: 2_133_333_333 },
+  // سال ۱۴۰۳: مصوب بخشنامه ابلاغی رئیس قوه قضاییه (۱۲ میلیارد ریال عادی / ۱۶ میلیارد ریال ماه حرام)
   { year: 1403, normalMonthsToman: 1_200_000_000, sacredMonthsToman: 1_600_000_000 },
+  // سال ۱۴۰۲: مصوب بخشنامه ابلاغی رئیس قوه قضاییه (۹ میلیارد ریال عادی / ۱۲ میلیارد ریال ماه حرام)
   { year: 1402, normalMonthsToman: 900_000_000, sacredMonthsToman: 1_200_000_000 },
+  // سال ۱۴۰۱: مصوب بخشنامه ابلاغی رئیس قوه قضاییه (۶ میلیارد ریال عادی / ۸ میلیارد ریال ماه حرام)
   { year: 1401, normalMonthsToman: 600_000_000, sacredMonthsToman: 800_000_000 },
+  // سال ۱۴۰۰: مصوب بخشنامه ابلاغی رئیس قوه قضاییه (۴.۸ میلیارد ریال عادی / ۶.۴ میلیارد ریال ماه حرام)
   { year: 1400, normalMonthsToman: 480_000_000, sacredMonthsToman: 640_000_000 },
+  // سال ۱۳۹۹: مصوب بخشنامه ابلاغی رئیس قوه قضاییه (۳.۳ میلیارد ریال عادی / ۴.۴ میلیارد ریال ماه حرام)
   { year: 1399, normalMonthsToman: 330_000_000, sacredMonthsToman: 440_000_000 },
 ];
 
@@ -458,6 +500,7 @@ export function calculateDiyaAmount(
   percentageFormatted: string;
   isTaghlizApplied: boolean;
   taghlizNotice?: string;
+  legalDisclaimer: string;
 } {
   const rateInfo =
     OFFICIAL_DIYA_RATES.find((r) => r.year === year) || OFFICIAL_DIYA_RATES[0];
@@ -485,6 +528,8 @@ export function calculateDiyaAmount(
     percentageFormatted: percentage.toFixed(2),
     isTaghlizApplied: shouldApplyTaghliz,
     taghlizNotice,
+    legalDisclaimer:
+      'این محاسبه صرفاً بر اساس درصد/میزان انتخاب‌شده انجام شده و در پرونده واقعی ممکن است احکام تعدد، تداخل، ارش و سایر مقررات قانونی مؤثر باشد.',
   };
 }
 
