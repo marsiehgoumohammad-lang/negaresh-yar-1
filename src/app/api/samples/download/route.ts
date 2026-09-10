@@ -4,7 +4,7 @@ import { getSampleBySlug } from '@/lib/stores/samples-store';
 export async function GET(request: NextRequest) {
   const { searchParams } = new URL(request.url);
   const slug = searchParams.get('slug');
-  const format = (searchParams.get('format') || 'docx').toLowerCase();
+  const format = (searchParams.get('format') || 'doc').toLowerCase();
 
   if (!slug) {
     return new NextResponse('پارامتر slug الزامی است.', { status: 400 });
@@ -52,9 +52,9 @@ export async function GET(request: NextRequest) {
     );
   }
 
-  // 3. اعتبارسنجی فرمت‌های مجاز ورد (doc / docx)
+  // 3. اعتبارسنجی فرمت‌های مجاز ورد (doc)
   if (format !== 'doc' && format !== 'docx') {
-    return new NextResponse('فرمت فایل درخواستی نامعتبر است. فرمت‌های مجاز: doc, docx, txt', {
+    return new NextResponse('فرمت فایل درخواستی نامعتبر است. فرمت‌های مجاز: doc, txt', {
       status: 400,
       headers: {
         'Content-Type': 'text/plain; charset=utf-8',
@@ -62,7 +62,7 @@ export async function GET(request: NextRequest) {
     });
   }
 
-  // 4. خروجی فایل رسمی مایکروسافت ورد (Word DOC / DOCX)
+  // 4. خروجی فایل رسمی مایکروسافت ورد (Word DOC)
   // ساختار استاندارد اداری با جهت راست‌چین، فونت اداری و سربرگ
   const todaySolar = new Intl.DateTimeFormat('fa-IR', {
     year: 'numeric',

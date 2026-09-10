@@ -142,6 +142,8 @@ export function SampleLandingPageTemplate({ data }: { data: SampleLandingData })
           </html>
         `);
         printWindow.document.close();
+      } else {
+        window.print();
       }
       setDownloadedPdf(true);
       setTimeout(() => setDownloadedPdf(false), 3000);
@@ -470,7 +472,7 @@ export function SampleLandingPageTemplate({ data }: { data: SampleLandingData })
             <div className="flex items-center gap-2">
               <span className="w-2 h-2 rounded-full bg-blue-600 animate-pulse" />
               <span>
-                <strong>فرمت‌های رایگان آماده:</strong> فایل Word قابل ویرایش (.doc/.docx) | نسخه PDF رسمی با سربرگ | فایل متنی خام (.txt)
+                <strong>فرمت‌های رایگان آماده:</strong> فایل Word قابل ویرایش (.doc) | نسخه PDF رسمی با چاپ مرورگر | فایل متنی خام (.txt)
               </span>
             </div>
             <div className="flex items-center gap-3 text-[11px] text-blue-800">
