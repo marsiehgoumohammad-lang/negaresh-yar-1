@@ -8,6 +8,9 @@ import {
   CENTRAL_BANK_MONTHLY_CPI,
   PERSIAN_MONTH_NAMES,
   formatToman,
+  toEnglishDigits,
+  formatDigitString,
+  numberToPersianWords,
 } from '@/lib/calculators/legal-formulas';
 import {
   TrendingUp,
@@ -38,7 +41,7 @@ export function DebtDelayCalculatorClient() {
   const settlementYearId = useId();
   const settlementMonthId = useId();
 
-  const cleanNumber = parseInt(principalAmount.replace(/[^0-9]/g, ''), 10) || 0;
+  const cleanNumber = parseInt(toEnglishDigits(principalAmount).replace(/\D/g, ''), 10) || 0;
   const principalToman = currencyUnit === 'rial' ? Math.round(cleanNumber / 10) : cleanNumber;
 
   const result = calculateDebtDelay(
@@ -170,10 +173,11 @@ export function DebtDelayCalculatorClient() {
               <input
                 id={principalInputId}
                 type="text"
-                value={cleanNumber ? cleanNumber.toLocaleString('fa-IR') : ''}
+                inputMode="numeric"
+                value={formatDigitString(principalAmount)}
                 onChange={(e) => {
-                  const val = e.target.value.replace(/[^0-9]/g, '');
-                  setPrincipalAmount(val);
+                  const raw = toEnglishDigits(e.target.value).replace(/\D/g, '');
+                  setPrincipalAmount(raw);
                 }}
                 placeholder="مثلاً ۵۰,۰۰۰,۰۰۰"
                 className="w-full px-4 py-3 rounded-xl bg-slate-950 border border-slate-700 text-white font-bold text-base focus:outline-none focus:border-[#E5C158] transition-all pl-12 text-left dir-ltr"
@@ -182,9 +186,22 @@ export function DebtDelayCalculatorClient() {
                 {unitLabel}
               </span>
             </div>
-            <p className="text-[11px] text-slate-400">
-              مبلغ مندرج در چک، سفته یا تعهد مالی
-            </p>
+            {cleanNumber > 0 ? (
+              <div className="flex flex-wrap items-center justify-between gap-1 text-[11px] text-slate-300 bg-slate-950/80 px-3 py-1.5 rounded-lg border border-slate-800">
+                <span className="flex items-center gap-1">
+                  <span className="text-slate-400">به عدد:</span>
+                  <strong className="text-blue-400 font-mono">{formatToman(cleanNumber)}</strong>
+                  <span>{unitLabel}</span>
+                </span>
+                <span className="text-slate-400 font-medium">
+                  ({numberToPersianWords(cleanNumber)} {unitLabel})
+                </span>
+              </div>
+            ) : (
+              <p className="text-[11px] text-slate-400">
+                مبلغ مندرج در چک، سفته یا تعهد مالی
+              </p>
+            )}
           </div>
 
           {/* Due Date */}

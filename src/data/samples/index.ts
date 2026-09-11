@@ -150,6 +150,28 @@ import { sampleArrestWarrantRequestData, sampleArrestWarrantRequestMetadata } fr
 import { sampleEvidencePreservationData, sampleEvidencePreservationMetadata } from './evidence-preservation';
 import { sampleDiyaInstallmentPetitionData, sampleDiyaInstallmentPetitionMetadata } from './diya-installment-petition';
 import { sampleCriminalRetrialArticle474PetitionData, sampleCriminalRetrialArticle474PetitionMetadata } from './criminal-retrial-article-474-petition';
+
+import { sampleMotherIranianCitizenshipApplicationData, sampleMotherIranianCitizenshipApplicationMetadata } from './mother-iranian-citizenship-application';
+import { sampleCitizenshipFileDefectResolutionRequestData, sampleCitizenshipFileDefectResolutionRequestMetadata } from './citizenship-file-defect-resolution-request';
+import { sampleCitizenshipDocumentAuthenticityObjectionData, sampleCitizenshipDocumentAuthenticityObjectionMetadata } from './citizenship-document-authenticity-objection';
+import { sampleCitizenshipSecurityRejectionObjectionData, sampleCitizenshipSecurityRejectionObjectionMetadata } from './citizenship-security-rejection-objection';
+import { sampleCitizenshipCommissionAppealRequestData, sampleCitizenshipCommissionAppealRequestMetadata } from './citizenship-commission-appeal-request';
+import { sampleForeignFatherResidencePermitRequestData, sampleForeignFatherResidencePermitRequestMetadata } from './foreign-father-residence-permit-request';
+import { sampleMaternalFiliationProofPetitionData, sampleMaternalFiliationProofPetitionMetadata } from './maternal-filiation-proof-petition';
+import { samplePaternalFiliationProofPetitionData, samplePaternalFiliationProofPetitionMetadata } from './paternal-filiation-proof-petition';
+import { sampleFiliationProofBirthCertificatePetitionData, sampleFiliationProofBirthCertificatePetitionMetadata } from './filiation-proof-birth-certificate-petition';
+import { sampleStatelessIranBornParentCitizenshipRequestData, sampleStatelessIranBornParentCitizenshipRequestMetadata } from './stateless-iran-born-parent-citizenship-request';
+import { sampleArticle976Clause4NationalityVerificationRequestData, sampleArticle976Clause4NationalityVerificationRequestMetadata } from './article-976-clause-4-nationality-verification-request';
+import { sampleArticle976Clause4BirthCertificateRequestData, sampleArticle976Clause4BirthCertificateRequestMetadata } from './article-976-clause-4-birth-certificate-request';
+import { sampleCivilRegistryBirthCertificateCompulsionPetitionData, sampleCivilRegistryBirthCertificateCompulsionPetitionMetadata } from './civil-registry-birth-certificate-compulsion-petition';
+import { sampleIranianNationalityProofBirthCertificatePetitionData, sampleIranianNationalityProofBirthCertificatePetitionMetadata } from './iranian-nationality-proof-birth-certificate-petition';
+import { sampleIdentityNationalityProofBirthCertificatePetitionData, sampleIdentityNationalityProofBirthCertificatePetitionMetadata } from './identity-nationality-proof-birth-certificate-petition';
+import { sampleCivilRegistryDisputeBoardObjectionData, sampleCivilRegistryDisputeBoardObjectionMetadata } from './civil-registry-dispute-board-objection';
+import { sampleAnnulDisputeBoardDecisionPetitionData, sampleAnnulDisputeBoardDecisionPetitionMetadata } from './annul-dispute-board-decision-petition';
+import { sampleSuspectedNationalityVerificationRequestData, sampleSuspectedNationalityVerificationRequestMetadata } from './suspected-nationality-verification-request';
+import { sampleSuspectedNationalityDecisionObjectionData, sampleSuspectedNationalityDecisionObjectionMetadata } from './suspected-nationality-decision-objection';
+import { sampleAbroadBornMotherIranianCitizenshipRequestData, sampleAbroadBornMotherIranianCitizenshipRequestMetadata } from './abroad-born-mother-iranian-citizenship-request';
+
 import { SampleLandingData } from './types';
 
 export const allSamplesList: {
@@ -1511,6 +1533,186 @@ export const allSamplesList: {
     href: '/samples/criminal-retrial-article-474-petition',
     data: sampleCriminalRetrialArticle474PetitionData,
   },
+  {
+    slug: 'mother-iranian-citizenship-application',
+    title: sampleMotherIranianCitizenshipApplicationData.title || sampleMotherIranianCitizenshipApplicationData.h1Title || 'درخواست اعلام تابعیت ایرانی فرزند مادر ایرانی و پدر غیرایرانی',
+    description: sampleMotherIranianCitizenshipApplicationData.heroSubtitle || sampleMotherIranianCitizenshipApplicationData.shortDescription || '',
+    category: 'تابعیت، اقامت و امور سجلی',
+    badge: 'تابعیت مادر ایرانی',
+    href: '/samples/mother-iranian-citizenship-application',
+    data: sampleMotherIranianCitizenshipApplicationData,
+  },
+  {
+    slug: 'citizenship-file-defect-resolution-request',
+    title: sampleCitizenshipFileDefectResolutionRequestData.title || sampleCitizenshipFileDefectResolutionRequestData.h1Title || 'درخواست تکمیل پرونده تابعیت پس از رفع نقص',
+    description: sampleCitizenshipFileDefectResolutionRequestData.heroSubtitle || sampleCitizenshipFileDefectResolutionRequestData.shortDescription || '',
+    category: 'تابعیت، اقامت و امور سجلی',
+    badge: 'رفع نقص تابعیت',
+    href: '/samples/citizenship-file-defect-resolution-request',
+    data: sampleCitizenshipFileDefectResolutionRequestData,
+  },
+  {
+    slug: 'citizenship-document-authenticity-objection',
+    title: sampleCitizenshipDocumentAuthenticityObjectionData.title || sampleCitizenshipDocumentAuthenticityObjectionData.h1Title || 'اعتراض به عدم احراز اصالت مدارک تابعیت',
+    description: sampleCitizenshipDocumentAuthenticityObjectionData.heroSubtitle || sampleCitizenshipDocumentAuthenticityObjectionData.shortDescription || '',
+    category: 'تابعیت، اقامت و امور سجلی',
+    badge: 'اصالت اسناد تابعیت',
+    href: '/samples/citizenship-document-authenticity-objection',
+    data: sampleCitizenshipDocumentAuthenticityObjectionData,
+  },
+  {
+    slug: 'citizenship-security-rejection-objection',
+    title: sampleCitizenshipSecurityRejectionObjectionData.title || sampleCitizenshipSecurityRejectionObjectionData.h1Title || 'اعتراض به رد درخواست تابعیت به علت اعلام مشکل امنیتی',
+    description: sampleCitizenshipSecurityRejectionObjectionData.heroSubtitle || sampleCitizenshipSecurityRejectionObjectionData.shortDescription || '',
+    category: 'تابعیت، اقامت و امور سجلی',
+    badge: 'اعتراض استعلام امنیتی',
+    href: '/samples/citizenship-security-rejection-objection',
+    data: sampleCitizenshipSecurityRejectionObjectionData,
+  },
+  {
+    slug: 'citizenship-commission-appeal-request',
+    title: sampleCitizenshipCommissionAppealRequestData.title || sampleCitizenshipCommissionAppealRequestData.h1Title || 'درخواست تجدیدنظر در کمیسیون تابعیت وزارت کشور',
+    description: sampleCitizenshipCommissionAppealRequestData.heroSubtitle || sampleCitizenshipCommissionAppealRequestData.shortDescription || '',
+    category: 'تابعیت، اقامت و امور سجلی',
+    badge: 'کمیسیون تابعیت',
+    href: '/samples/citizenship-commission-appeal-request',
+    data: sampleCitizenshipCommissionAppealRequestData,
+  },
+  {
+    slug: 'foreign-father-residence-permit-request',
+    title: sampleForeignFatherResidencePermitRequestData.title || sampleForeignFatherResidencePermitRequestData.h1Title || 'درخواست صدور پروانه اقامت برای پدر غیرایرانی فرزند ایرانی',
+    description: sampleForeignFatherResidencePermitRequestData.heroSubtitle || sampleForeignFatherResidencePermitRequestData.shortDescription || '',
+    category: 'تابعیت، اقامت و امور سجلی',
+    badge: 'اقامت پدر غیرایرانی',
+    href: '/samples/foreign-father-residence-permit-request',
+    data: sampleForeignFatherResidencePermitRequestData,
+  },
+  {
+    slug: 'maternal-filiation-proof-petition',
+    title: sampleMaternalFiliationProofPetitionData.title || sampleMaternalFiliationProofPetitionData.h1Title || 'دادخواست اثبات نسب مادری',
+    description: sampleMaternalFiliationProofPetitionData.heroSubtitle || sampleMaternalFiliationProofPetitionData.shortDescription || '',
+    category: 'درخواست‌های قضایی',
+    badge: 'اثبات نسب مادری',
+    href: '/samples/maternal-filiation-proof-petition',
+    data: sampleMaternalFiliationProofPetitionData,
+  },
+  {
+    slug: 'paternal-filiation-proof-petition',
+    title: samplePaternalFiliationProofPetitionData.title || samplePaternalFiliationProofPetitionData.h1Title || 'دادخواست اثبات نسب پدری',
+    description: samplePaternalFiliationProofPetitionData.heroSubtitle || samplePaternalFiliationProofPetitionData.shortDescription || '',
+    category: 'درخواست‌های قضایی',
+    badge: 'اثبات نسب پدری',
+    href: '/samples/paternal-filiation-proof-petition',
+    data: samplePaternalFiliationProofPetitionData,
+  },
+  {
+    slug: 'filiation-proof-birth-certificate-petition',
+    title: sampleFiliationProofBirthCertificatePetitionData.title || sampleFiliationProofBirthCertificatePetitionData.h1Title || 'دادخواست اثبات نسب و الزام ثبت احوال به صدور شناسنامه',
+    description: sampleFiliationProofBirthCertificatePetitionData.heroSubtitle || sampleFiliationProofBirthCertificatePetitionData.shortDescription || '',
+    category: 'درخواست‌های قضایی',
+    badge: 'اثبات نسب و شناسنامه',
+    href: '/samples/filiation-proof-birth-certificate-petition',
+    data: sampleFiliationProofBirthCertificatePetitionData,
+  },
+  {
+    slug: 'stateless-iran-born-parent-citizenship-request',
+    title: sampleStatelessIranBornParentCitizenshipRequestData.title || sampleStatelessIranBornParentCitizenshipRequestData.h1Title || 'درخواست اعطای تابعیت ایرانی فرد فاقد تابعیت متولد ایران و دارای والد متولد ایران',
+    description: sampleStatelessIranBornParentCitizenshipRequestData.heroSubtitle || sampleStatelessIranBornParentCitizenshipRequestData.shortDescription || '',
+    category: 'تابعیت، اقامت و امور سجلی',
+    badge: 'فاقدین تابعیت متولد ایران',
+    href: '/samples/stateless-iran-born-parent-citizenship-request',
+    data: sampleStatelessIranBornParentCitizenshipRequestData,
+  },
+  {
+    slug: 'article-976-clause-4-nationality-verification-request',
+    title: sampleArticle976Clause4NationalityVerificationRequestData.title || sampleArticle976Clause4NationalityVerificationRequestData.h1Title || 'درخواست احراز تابعیت به استناد بند ۴ ماده ۹۷۶ قانون مدنی',
+    description: sampleArticle976Clause4NationalityVerificationRequestData.heroSubtitle || sampleArticle976Clause4NationalityVerificationRequestData.shortDescription || '',
+    category: 'تابعیت، اقامت و امور سجلی',
+    badge: 'بند ۴ ماده ۹۷۶',
+    href: '/samples/article-976-clause-4-nationality-verification-request',
+    data: sampleArticle976Clause4NationalityVerificationRequestData,
+  },
+  {
+    slug: 'article-976-clause-4-birth-certificate-request',
+    title: sampleArticle976Clause4BirthCertificateRequestData.title || sampleArticle976Clause4BirthCertificateRequestData.h1Title || 'درخواست صدور شناسنامه پس از احراز تابعیت به استناد بند ۴ ماده ۹۷۶',
+    description: sampleArticle976Clause4BirthCertificateRequestData.heroSubtitle || sampleArticle976Clause4BirthCertificateRequestData.shortDescription || '',
+    category: 'تابعیت، اقامت و امور سجلی',
+    badge: 'صدور شناسنامه بند ۴',
+    href: '/samples/article-976-clause-4-birth-certificate-request',
+    data: sampleArticle976Clause4BirthCertificateRequestData,
+  },
+  {
+    slug: 'civil-registry-birth-certificate-compulsion-petition',
+    title: sampleCivilRegistryBirthCertificateCompulsionPetitionData.title || sampleCivilRegistryBirthCertificateCompulsionPetitionData.h1Title || 'دادخواست الزام اداره ثبت احوال به صدور شناسنامه',
+    description: sampleCivilRegistryBirthCertificateCompulsionPetitionData.heroSubtitle || sampleCivilRegistryBirthCertificateCompulsionPetitionData.shortDescription || '',
+    category: 'درخواست‌های قضایی',
+    badge: 'الزام ثبت احوال',
+    href: '/samples/civil-registry-birth-certificate-compulsion-petition',
+    data: sampleCivilRegistryBirthCertificateCompulsionPetitionData,
+  },
+  {
+    slug: 'iranian-nationality-proof-birth-certificate-petition',
+    title: sampleIranianNationalityProofBirthCertificatePetitionData.title || sampleIranianNationalityProofBirthCertificatePetitionData.h1Title || 'دادخواست اثبات تابعیت ایرانی و الزام ثبت احوال به صدور شناسنامه',
+    description: sampleIranianNationalityProofBirthCertificatePetitionData.heroSubtitle || sampleIranianNationalityProofBirthCertificatePetitionData.shortDescription || '',
+    category: 'درخواست‌های قضایی',
+    badge: 'اثبات تابعیت',
+    href: '/samples/iranian-nationality-proof-birth-certificate-petition',
+    data: sampleIranianNationalityProofBirthCertificatePetitionData,
+  },
+  {
+    slug: 'identity-nationality-proof-birth-certificate-petition',
+    title: sampleIdentityNationalityProofBirthCertificatePetitionData.title || sampleIdentityNationalityProofBirthCertificatePetitionData.h1Title || 'دادخواست اثبات هویت و تابعیت ایرانی و صدور شناسنامه',
+    description: sampleIdentityNationalityProofBirthCertificatePetitionData.heroSubtitle || sampleIdentityNationalityProofBirthCertificatePetitionData.shortDescription || '',
+    category: 'درخواست‌های قضایی',
+    badge: 'اثبات هویت و شناسنامه',
+    href: '/samples/identity-nationality-proof-birth-certificate-petition',
+    data: sampleIdentityNationalityProofBirthCertificatePetitionData,
+  },
+  {
+    slug: 'civil-registry-dispute-board-objection',
+    title: sampleCivilRegistryDisputeBoardObjectionData.title || sampleCivilRegistryDisputeBoardObjectionData.h1Title || 'اعتراض به رأی هیأت حل اختلاف ثبت احوال',
+    description: sampleCivilRegistryDisputeBoardObjectionData.heroSubtitle || sampleCivilRegistryDisputeBoardObjectionData.shortDescription || '',
+    category: 'اعتراض و تجدیدنظر',
+    badge: 'هیأت حل اختلاف ثبت احوال',
+    href: '/samples/civil-registry-dispute-board-objection',
+    data: sampleCivilRegistryDisputeBoardObjectionData,
+  },
+  {
+    slug: 'annul-dispute-board-decision-petition',
+    title: sampleAnnulDisputeBoardDecisionPetitionData.title || sampleAnnulDisputeBoardDecisionPetitionData.h1Title || 'دادخواست ابطال رأی هیأت حل اختلاف و اصلاح/صدور سند سجلی',
+    description: sampleAnnulDisputeBoardDecisionPetitionData.heroSubtitle || sampleAnnulDisputeBoardDecisionPetitionData.shortDescription || '',
+    category: 'درخواست‌های قضایی',
+    badge: 'ابطال رأی هیأت',
+    href: '/samples/annul-dispute-board-decision-petition',
+    data: sampleAnnulDisputeBoardDecisionPetitionData,
+  },
+  {
+    slug: 'suspected-nationality-verification-request',
+    title: sampleSuspectedNationalityVerificationRequestData.title || sampleSuspectedNationalityVerificationRequestData.h1Title || 'درخواست احراز تابعیت ایرانی در پرونده مشکوک‌التابعیت',
+    description: sampleSuspectedNationalityVerificationRequestData.heroSubtitle || sampleSuspectedNationalityVerificationRequestData.shortDescription || '',
+    category: 'تابعیت، اقامت و امور سجلی',
+    badge: 'مشکوک‌التابعیت',
+    href: '/samples/suspected-nationality-verification-request',
+    data: sampleSuspectedNationalityVerificationRequestData,
+  },
+  {
+    slug: 'suspected-nationality-decision-objection',
+    title: sampleSuspectedNationalityDecisionObjectionData.title || sampleSuspectedNationalityDecisionObjectionData.h1Title || 'اعتراض به تصمیم ثبت احوال درباره مشکوک‌التابعیت بودن',
+    description: sampleSuspectedNationalityDecisionObjectionData.heroSubtitle || sampleSuspectedNationalityDecisionObjectionData.shortDescription || '',
+    category: 'اعتراض و تجدیدنظر',
+    badge: 'اعتراض به مشکوک‌التابعیت',
+    href: '/samples/suspected-nationality-decision-objection',
+    data: sampleSuspectedNationalityDecisionObjectionData,
+  },
+  {
+    slug: 'abroad-born-mother-iranian-citizenship-request',
+    title: sampleAbroadBornMotherIranianCitizenshipRequestData.title || sampleAbroadBornMotherIranianCitizenshipRequestData.h1Title || 'درخواست احراز نسب و تکمیل مدارک تابعیت برای فرزند متولد خارج از ایران از مادر ایرانی',
+    description: sampleAbroadBornMotherIranianCitizenshipRequestData.heroSubtitle || sampleAbroadBornMotherIranianCitizenshipRequestData.shortDescription || '',
+    category: 'تابعیت، اقامت و امور سجلی',
+    badge: 'متولد خارج از مادر ایرانی',
+    href: '/samples/abroad-born-mother-iranian-citizenship-request',
+    data: sampleAbroadBornMotherIranianCitizenshipRequestData,
+  },
 ];
 
 export {
@@ -1776,6 +1978,46 @@ export {
   sampleDiyaInstallmentPetitionMetadata,
   sampleCriminalRetrialArticle474PetitionData,
   sampleCriminalRetrialArticle474PetitionMetadata,
+  sampleMotherIranianCitizenshipApplicationData,
+  sampleMotherIranianCitizenshipApplicationMetadata,
+  sampleCitizenshipFileDefectResolutionRequestData,
+  sampleCitizenshipFileDefectResolutionRequestMetadata,
+  sampleCitizenshipDocumentAuthenticityObjectionData,
+  sampleCitizenshipDocumentAuthenticityObjectionMetadata,
+  sampleCitizenshipSecurityRejectionObjectionData,
+  sampleCitizenshipSecurityRejectionObjectionMetadata,
+  sampleCitizenshipCommissionAppealRequestData,
+  sampleCitizenshipCommissionAppealRequestMetadata,
+  sampleForeignFatherResidencePermitRequestData,
+  sampleForeignFatherResidencePermitRequestMetadata,
+  sampleMaternalFiliationProofPetitionData,
+  sampleMaternalFiliationProofPetitionMetadata,
+  samplePaternalFiliationProofPetitionData,
+  samplePaternalFiliationProofPetitionMetadata,
+  sampleFiliationProofBirthCertificatePetitionData,
+  sampleFiliationProofBirthCertificatePetitionMetadata,
+  sampleStatelessIranBornParentCitizenshipRequestData,
+  sampleStatelessIranBornParentCitizenshipRequestMetadata,
+  sampleArticle976Clause4NationalityVerificationRequestData,
+  sampleArticle976Clause4NationalityVerificationRequestMetadata,
+  sampleArticle976Clause4BirthCertificateRequestData,
+  sampleArticle976Clause4BirthCertificateRequestMetadata,
+  sampleCivilRegistryBirthCertificateCompulsionPetitionData,
+  sampleCivilRegistryBirthCertificateCompulsionPetitionMetadata,
+  sampleIranianNationalityProofBirthCertificatePetitionData,
+  sampleIranianNationalityProofBirthCertificatePetitionMetadata,
+  sampleIdentityNationalityProofBirthCertificatePetitionData,
+  sampleIdentityNationalityProofBirthCertificatePetitionMetadata,
+  sampleCivilRegistryDisputeBoardObjectionData,
+  sampleCivilRegistryDisputeBoardObjectionMetadata,
+  sampleAnnulDisputeBoardDecisionPetitionData,
+  sampleAnnulDisputeBoardDecisionPetitionMetadata,
+  sampleSuspectedNationalityVerificationRequestData,
+  sampleSuspectedNationalityVerificationRequestMetadata,
+  sampleSuspectedNationalityDecisionObjectionData,
+  sampleSuspectedNationalityDecisionObjectionMetadata,
+  sampleAbroadBornMotherIranianCitizenshipRequestData,
+  sampleAbroadBornMotherIranianCitizenshipRequestMetadata,
 };
 
 

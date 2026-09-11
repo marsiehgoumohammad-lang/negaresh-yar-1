@@ -85,7 +85,7 @@ export interface SampleDocument {
   heroTrustChips?: string[];
   whatIsTitle?: string;
   whatIsParagraphs?: string[];
-  whatIsHighlights?: { title: string; desc?: string }[];
+  whatIsHighlights?: ({ title: string; desc?: string } | string)[];
   whenToUseTitle?: string;
   whenToUseSubtitle?: string;
   whenToUseList?: { title: string; desc?: string }[];

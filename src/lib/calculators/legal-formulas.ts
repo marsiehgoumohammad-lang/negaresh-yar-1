@@ -542,3 +542,99 @@ export function formatToman(amount: number): string {
   if (isNaN(amount)) return '۰';
   return new Intl.NumberFormat('fa-IR').format(amount);
 }
+
+/**
+ * تبدیل هوشمند ارقام فارسی (۰-۹) و عربی (٠-٩) به ارقام استاندارد انگلیسی (0-9)
+ */
+export function toEnglishDigits(str: string | number | undefined | null): string {
+  if (str === null || str === undefined) return '';
+  return str
+    .toString()
+    .replace(/[۰-۹]/g, (d) => (d.charCodeAt(0) - 1776).toString())
+    .replace(/[٠-٩]/g, (d) => (d.charCodeAt(0) - 1632).toString());
+}
+
+/**
+ * استخراج رشته تمیز ارقام و قالب‌بندی سه‌رقمی استاندارد با کاما
+ */
+export function formatDigitString(str: string | number | undefined | null): string {
+  if (str === null || str === undefined) return '';
+  const clean = toEnglishDigits(str).replace(/\D/g, '');
+  if (!clean) return '';
+  const trimmed = clean.replace(/^0+(?=\d)/, '');
+  return trimmed.replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+}
+
+/**
+ * تبدیل عدد و مبالغ ریالی/تومانی به حروف فارسی جهت وضوح و اطمینان کامل کاربر
+ */
+export function numberToPersianWords(num: number | string): string {
+  const clean =
+    typeof num === 'string'
+      ? parseInt(toEnglishDigits(num).replace(/\D/g, ''), 10)
+      : Math.floor(num);
+  if (isNaN(clean) || clean === 0) return 'صفر';
+  if (clean < 0) return 'منفی ' + numberToPersianWords(Math.abs(clean));
+
+  const ones = ['', 'یک', 'دو', 'سه', 'چهار', 'پنج', 'شش', 'هفت', 'هشت', 'نه'];
+  const teens = [
+    'ده',
+    'یازده',
+    'دوازده',
+    'سیزده',
+    'چهارده',
+    'پانزده',
+    'شانزده',
+    'هفده',
+    'هجده',
+    'نوزده',
+  ];
+  const tens = ['', '', 'بیست', 'سی', 'چهل', 'پنجاه', 'شصت', 'هفتاد', 'هشتاد', 'نود'];
+  const hundreds = [
+    '',
+    'صد',
+    'دویست',
+    'سیصد',
+    'چهارصد',
+    'پانصد',
+    'ششصد',
+    'هفتصد',
+    'هشتصد',
+    'نهصد',
+  ];
+  const scales = ['', 'هزار', 'میلیون', 'میلیارد', 'تریلیون', 'کوادریلیون'];
+
+  function convertThreeDigits(n: number): string {
+    const parts: string[] = [];
+    const h = Math.floor(n / 100);
+    const remainder = n % 100;
+    const t = Math.floor(remainder / 10);
+    const o = remainder % 10;
+
+    if (h > 0) parts.push(hundreds[h]);
+    if (remainder >= 10 && remainder <= 19) {
+      parts.push(teens[remainder - 10]);
+    } else {
+      if (t > 0) parts.push(tens[t]);
+      if (o > 0) parts.push(ones[o]);
+    }
+    return parts.join(' و ');
+  }
+
+  const chunks: string[] = [];
+  let temp = clean;
+  let scaleIdx = 0;
+
+  while (temp > 0) {
+    const chunk = temp % 1000;
+    if (chunk > 0) {
+      const chunkWord = convertThreeDigits(chunk);
+      const scale = scales[scaleIdx];
+      chunks.unshift(scale ? `${chunkWord} ${scale}` : chunkWord);
+    }
+    temp = Math.floor(temp / 1000);
+    scaleIdx++;
+  }
+
+  return chunks.join(' و ');
+}

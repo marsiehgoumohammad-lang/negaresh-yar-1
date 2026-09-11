@@ -9,6 +9,7 @@ import {
   BODY_ORGAN_DIYA_LIST,
   calculateDiyaAmount,
   formatToman,
+  toEnglishDigits,
 } from '@/lib/calculators/legal-formulas';
 import {
   ShieldAlert,
@@ -56,7 +57,8 @@ export function DiyaCalculatorClient() {
   const deathCalculation = calculateDiyaAmount(100, selectedYear, deathSacredMonth, true);
 
   // محاسبه تب درصد دلخواه (پزشکی قانونی و ارش اعضا - ماده ۵۵۷: بدون تغلیظ)
-  const cleanPercent = parseFloat(customPercentage) || 0;
+  const cleanPercent =
+    parseFloat(toEnglishDigits(customPercentage).replace(/[^0-9.]/g, '')) || 0;
   const customAmountResult = calculateDiyaAmount(cleanPercent, selectedYear, false, false);
 
   // محاسبه مجموع اقلام سبد جراحات و اعضا (بر مبنای ماه‌های عادی)
@@ -313,12 +315,15 @@ export function DiyaCalculatorClient() {
             </label>
             <div className="relative">
               <input
-                type="number"
-                step="0.1"
-                min="0"
-                max="500"
+                type="text"
+                inputMode="decimal"
                 value={customPercentage}
-                onChange={(e) => setCustomPercentage(e.target.value)}
+                onChange={(e) => {
+                  const val = toEnglishDigits(e.target.value).replace(/[^0-9.]/g, '');
+                  const parts = val.split('.');
+                  const sanitized = parts.length > 2 ? `${parts[0]}.${parts.slice(1).join('')}` : val;
+                  setCustomPercentage(sanitized);
+                }}
                 placeholder="مثلاً ۵.۵"
                 className="w-full px-4 py-3 rounded-xl bg-slate-950 border border-slate-700 text-white font-bold text-lg focus:outline-none focus:border-[#E5C158] transition-all pl-12 dir-ltr text-left"
               />

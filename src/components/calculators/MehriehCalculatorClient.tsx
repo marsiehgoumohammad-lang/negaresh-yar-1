@@ -7,6 +7,9 @@ import {
   AVAILABLE_YEARS,
   CENTRAL_BANK_ANNUAL_CPI,
   formatToman,
+  toEnglishDigits,
+  formatDigitString,
+  numberToPersianWords,
 } from '@/lib/calculators/legal-formulas';
 import {
   Coins,
@@ -27,8 +30,8 @@ export function MehriehCalculatorClient() {
   const marriageYearId = useId();
   const targetYearId = useId();
 
-  // تبدیل ورودی به عدد صحیح
-  const cleanNumber = parseInt(initialAmount.replace(/[^0-9]/g, ''), 10) || 0;
+  // تبدیل ورودی به عدد صحیح با پشتیبانی کامل از اعداد فارسی و انگلیسی
+  const cleanNumber = parseInt(toEnglishDigits(initialAmount).replace(/\D/g, ''), 10) || 0;
   const initialToman = currencyUnit === 'rial' ? Math.round(cleanNumber / 10) : cleanNumber;
 
   const result = calculateMehrieh(initialToman, marriageYear, targetYear);
@@ -98,10 +101,11 @@ export function MehriehCalculatorClient() {
               <input
                 id={amountInputId}
                 type="text"
-                value={cleanNumber ? cleanNumber.toLocaleString('fa-IR') : ''}
+                inputMode="numeric"
+                value={formatDigitString(initialAmount)}
                 onChange={(e) => {
-                  const val = e.target.value.replace(/[^0-9]/g, '');
-                  setInitialAmount(val);
+                  const raw = toEnglishDigits(e.target.value).replace(/\D/g, '');
+                  setInitialAmount(raw);
                 }}
                 placeholder="مثلاً ۵,۰۰۰,۰۰۰"
                 className="w-full px-4 py-3 rounded-xl bg-slate-950 border border-slate-700 text-white font-bold text-base focus:outline-none focus:border-[#E5C158] transition-all pl-12 text-left dir-ltr"
@@ -110,9 +114,22 @@ export function MehriehCalculatorClient() {
                 {unitLabel}
               </span>
             </div>
-            <p className="text-[11px] text-slate-400">
-              مبلغ وجه نقدی که دقیقاً در سند ازدواج نوشته شده است
-            </p>
+            {cleanNumber > 0 ? (
+              <div className="flex flex-wrap items-center justify-between gap-1 text-[11px] text-slate-300 bg-slate-950/80 px-3 py-1.5 rounded-lg border border-slate-800">
+                <span className="flex items-center gap-1">
+                  <span className="text-slate-400">به عدد:</span>
+                  <strong className="text-amber-400 font-mono">{formatToman(cleanNumber)}</strong>
+                  <span>{unitLabel}</span>
+                </span>
+                <span className="text-slate-400 font-medium">
+                  ({numberToPersianWords(cleanNumber)} {unitLabel})
+                </span>
+              </div>
+            ) : (
+              <p className="text-[11px] text-slate-400">
+                مبلغ وجه نقدی که دقیقاً در سند ازدواج نوشته شده است
+              </p>
+            )}
           </div>
 
           {/* Marriage Year */}

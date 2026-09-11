@@ -544,22 +544,26 @@ export function SampleLandingPageTemplate({ data }: { data: SampleLandingData })
 
               {data.whatIsHighlights && (
                 <div className="lg:col-span-5 grid grid-cols-1 gap-3.5">
-                  {data.whatIsHighlights.map((item, idx) => (
-                    <div
-                      key={idx}
-                      className="p-4 rounded-2xl bg-slate-900/80 border border-slate-800 hover:border-[#E5C158]/40 transition-all"
-                    >
-                      <div className="flex items-start gap-3">
-                        <div className="p-2 rounded-lg bg-[#E5C158]/10 text-[#E5C158] shrink-0 mt-0.5">
-                          <ShieldCheck className="w-4 h-4" />
-                        </div>
-                        <div>
-                          <h3 className="text-sm font-bold text-white mb-1">{item.title}</h3>
-                          <p className="text-xs text-slate-400 leading-relaxed">{item.desc}</p>
+                  {data.whatIsHighlights.map((item, idx) => {
+                    const itemTitle = typeof item === 'string' ? item : item.title;
+                    const itemDesc = typeof item === 'string' ? undefined : item.desc;
+                    return (
+                      <div
+                        key={idx}
+                        className="p-4 rounded-2xl bg-slate-900/80 border border-slate-800 hover:border-[#E5C158]/40 transition-all"
+                      >
+                        <div className="flex items-start gap-3">
+                          <div className="p-2 rounded-lg bg-[#E5C158]/10 text-[#E5C158] shrink-0 mt-0.5">
+                            <ShieldCheck className="w-4 h-4" />
+                          </div>
+                          <div>
+                            <h3 className="text-sm font-bold text-white mb-1">{itemTitle}</h3>
+                            {itemDesc && <p className="text-xs text-slate-400 leading-relaxed">{itemDesc}</p>}
+                          </div>
                         </div>
                       </div>
-                    </div>
-                  ))}
+                    );
+                  })}
                 </div>
               )}
             </div>

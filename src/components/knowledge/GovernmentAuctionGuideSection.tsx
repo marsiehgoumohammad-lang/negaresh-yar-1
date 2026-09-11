@@ -19,6 +19,11 @@ import {
   Gavel,
   RefreshCw,
 } from 'lucide-react';
+import {
+  toEnglishDigits,
+  formatDigitString,
+  numberToPersianWords,
+} from '@/lib/calculators/legal-formulas';
 
 interface DecisionResult {
   title: string;
@@ -79,7 +84,8 @@ export function GovernmentAuctionGuideSection() {
   const readinessPercent = Math.round((totalChecked / 7) * 100);
 
   // Financial calculations
-  const parsedAmount = parseInt(bidAmountInput.replace(/,/g, ''), 10) || 0;
+  const parsedAmount =
+    parseInt(toEnglishDigits(bidAmountInput).replace(/\D/g, ''), 10) || 0;
   const deposit10Percent = Math.round(parsedAmount * 0.1);
   const remaining90Percent = parsedAmount - deposit10Percent;
   // هزینه‌های جانبی احتمالی انتقال سند، دفترخانه یا تعویض پلاک (تخمینی ۲ تا ۳ درصد طبق شرایط آگهی)
@@ -90,7 +96,7 @@ export function GovernmentAuctionGuideSection() {
   };
 
   const handleAmountChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const rawVal = e.target.value.replace(/[^0-9]/g, '');
+    const rawVal = toEnglishDigits(e.target.value).replace(/\D/g, '');
     setBidAmountInput(rawVal);
   };
 
@@ -634,16 +640,24 @@ export function GovernmentAuctionGuideSection() {
               <input
                 id="bid-amount-input"
                 type="text"
-                value={Number(bidAmountInput).toLocaleString('en-US')}
+                inputMode="numeric"
+                value={formatDigitString(bidAmountInput)}
                 onChange={handleAmountChange}
                 placeholder="مثلاً ۵۰۰,۰۰۰,۰۰۰"
                 className="w-full pl-12 pr-4 py-3 bg-slate-900 border border-slate-700 rounded-xl text-white font-bold text-sm focus:border-[#E5C158] focus:outline-none tracking-wider text-left dir-ltr"
               />
               <span className="absolute left-3 top-3 text-xs text-slate-400 font-medium">تومان</span>
             </div>
-            <p className="text-[11px] text-slate-400">
-              معادل حروف: {formatNumber(parsedAmount)} تومان
-            </p>
+            {parsedAmount > 0 ? (
+              <div className="text-[11px] text-slate-300 bg-slate-950/60 px-3 py-1.5 rounded-lg border border-slate-800/80 flex flex-wrap items-center justify-between gap-1">
+                <span>به عدد: <strong className="text-[#E5C158] font-mono">{formatNumber(parsedAmount)}</strong> تومان</span>
+                <span className="text-slate-400 font-medium">({numberToPersianWords(parsedAmount)} تومان)</span>
+              </div>
+            ) : (
+              <p className="text-[11px] text-slate-400">
+                مبلغ را به تومان وارد نمایید
+              </p>
+            )}
           </div>
 
           {/* Results grid (7 cols) */}
