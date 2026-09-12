@@ -12,7 +12,8 @@ import { SmartServices } from '@/components/home/smart-services';
 import { KnowledgeArticles } from '@/components/home/knowledge-articles';
 import { TrustSection } from '@/components/home/trust-section';
 import { LawyerService } from '@/components/home/lawyer-service';
-import { FaqSection, FAQ_ITEMS } from '@/components/home/faq-section';
+import { FaqSection } from '@/components/home/faq-section';
+import { FAQ_ITEMS } from '@/data/faq';
 import { FinalCta } from '@/components/home/final-cta';
 
 export const dynamic = 'force-dynamic';
