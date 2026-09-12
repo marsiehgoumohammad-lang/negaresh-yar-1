@@ -7,32 +7,21 @@ import { usePathname } from 'next/navigation';
 import { motion, AnimatePresence } from 'motion/react';
 import { Container } from '../ui/container';
 
+const desktopNavItems = [
+  { title: 'خدمات', href: '/services' },
+  { title: 'بانک نمونه', href: '/samples' },
+  { title: 'دانشنامه', href: '/knowledge' },
+  { title: 'محاسبه مهریه - دیه - تأخیر بدهی', href: '/calculators' },
+  { title: 'تفسیر رای دادگاه با هوش مصنوعی', href: '/ai-interpreter' },
+  { title: 'معرفی وکیل منصف', href: '/lawyer-referral' },
+  { title: 'درباره ما', href: '/#about' },
+  { title: 'تماس با ما', href: '/contact' },
+];
+
 const menuLinks = [
   {
     number: '۰۱',
-    title: 'صفحه اصلی',
-    href: '/',
-    icon: (
-      <svg className="w-5 h-5 text-[#E5C158]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.8} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 00-1-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 00-1 1m-6 0h6" />
-      </svg>
-    ),
-    badge: null,
-  },
-  {
-    number: '۰۲',
-    title: 'تفسیر هوشمند اوراق قضایی',
-    href: '/ai-interpreter',
-    icon: (
-      <svg className="w-5 h-5 text-[#E5C158]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.8} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-      </svg>
-    ),
-    badge: 'هوش مصنوعی AI',
-  },
-  {
-    number: '۰۳',
-    title: 'خدمات نگارش و عریضه‌نویسی',
+    title: 'خدمات',
     href: '/services',
     icon: (
       <svg className="w-5 h-5 text-[#E5C158]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -42,18 +31,51 @@ const menuLinks = [
     badge: null,
   },
   {
+    number: '۰۲',
+    title: 'بانک نمونه',
+    href: '/samples',
+    icon: (
+      <svg className="w-5 h-5 text-[#E5C158]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.8} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+      </svg>
+    ),
+    badge: null,
+  },
+  {
+    number: '۰۳',
+    title: 'دانشنامه',
+    href: '/knowledge',
+    icon: (
+      <svg className="w-5 h-5 text-[#E5C158]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.8} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+      </svg>
+    ),
+    badge: 'آموزش و قوانین',
+  },
+  {
     number: '۰۴',
-    title: 'محاسبه‌گرهای حقوقی (مهریه، دیه، بدهی)',
+    title: 'محاسبه مهریه - دیه - تأخیر بدهی',
     href: '/calculators',
     icon: (
       <svg className="w-5 h-5 text-[#E5C158]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.8} d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
       </svg>
     ),
-    badge: 'آنلاین و رایگان',
+    badge: 'آنلاین',
   },
   {
     number: '۰۵',
+    title: 'تفسیر رای دادگاه با هوش مصنوعی',
+    href: '/ai-interpreter',
+    icon: (
+      <svg className="w-5 h-5 text-[#E5C158]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.8} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+      </svg>
+    ),
+    badge: 'AI هوشمند',
+  },
+  {
+    number: '۰۶',
     title: 'معرفی وکیل منصف',
     href: '/lawyer-referral',
     icon: (
@@ -64,45 +86,12 @@ const menuLinks = [
     badge: 'سراسر ایران',
   },
   {
-    number: '۰۵',
-    title: 'کافی‌نت آنلاین و خدمات ثنا',
-    href: '/services/online-cafe',
-    icon: (
-      <svg className="w-5 h-5 text-[#E5C158]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.8} d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
-      </svg>
-    ),
-    badge: 'غیرحضوری',
-  },
-  {
-    number: '۰۶',
-    title: 'بانک نمونه اسناد',
-    href: '/samples',
-    icon: (
-      <svg className="w-5 h-5 text-[#E5C158]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.8} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-      </svg>
-    ),
-    badge: null,
-  },
-  {
-    number: '۰۶',
-    title: 'مزایای نگارش یار',
-    href: '/#why-us',
-    icon: (
-      <svg className="w-5 h-5 text-[#E5C158]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.8} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
-      </svg>
-    ),
-    badge: null,
-  },
-  {
     number: '۰۷',
-    title: 'مقالات و راهنمای حقوقی',
-    href: '/#articles',
+    title: 'درباره ما',
+    href: '/#about',
     icon: (
       <svg className="w-5 h-5 text-[#E5C158]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.8} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.8} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
       </svg>
     ),
     badge: null,
@@ -117,17 +106,6 @@ const menuLinks = [
       </svg>
     ),
     badge: null,
-  },
-  {
-    number: '۰۹',
-    title: 'ثبت درخواست خدمات',
-    href: '/request',
-    icon: (
-      <svg className="w-5 h-5 text-[#E5C158]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.8} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-      </svg>
-    ),
-    badge: 'ارتباط ۲۴/۷',
   },
 ];
 
@@ -228,33 +206,23 @@ export function Header() {
           </Link>
 
           {/* Desktop Navigation Links */}
-          <nav className="hidden lg:flex items-center gap-6 xl:gap-8">
-            <Link href="/services" className="text-sm font-bold text-slate-300 hover:text-[#E5C158] transition-colors">
-              خدمات
-            </Link>
-            <Link href="/samples" className="text-sm font-bold text-slate-300 hover:text-[#E5C158] transition-colors">
-              بانک نمونه
-            </Link>
-            <Link href="/knowledge" className="text-sm font-bold text-slate-300 hover:text-[#E5C158] transition-colors">
-              راهنما
-            </Link>
-            <Link href="/#about" className="text-sm font-bold text-slate-300 hover:text-[#E5C158] transition-colors">
-              درباره نگارشیار
-            </Link>
+          <nav className="hidden xl:flex items-center gap-2 2xl:gap-3">
+            {desktopNavItems.map((item) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                className="whitespace-nowrap px-2.5 py-1.5 rounded-lg text-xs 2xl:text-[13px] font-bold text-slate-300 hover:text-[#E5C158] hover:bg-slate-800/40 transition-colors"
+              >
+                {item.title}
+              </Link>
+            ))}
           </nav>
 
-          {/* Desktop CTAs (Secondary: ورود, Primary: ثبت درخواست) + Mobile Hamburger */}
+          {/* Desktop CTA (Primary: ثبت درخواست) + Mobile Hamburger */}
           <div className="flex items-center gap-2.5 sm:gap-3">
             <Link
-              href="/admin"
-              className="hidden md:inline-flex items-center justify-center px-3.5 py-2 rounded-xl text-slate-300 hover:text-white hover:bg-slate-800/60 text-xs font-bold transition-all border border-slate-700/60"
-            >
-              ورود
-            </Link>
-
-            <Link
               href="/request"
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-gradient-to-r from-[#D4AF37] via-[#E5C158] to-[#D4AF37] text-[#070B15] font-black text-xs sm:text-sm shadow-[0_0_15px_rgba(229,193,88,0.25)] hover:brightness-110 transition-all active:scale-95"
+              className="inline-flex items-center gap-2 px-3.5 sm:px-4 py-2 rounded-xl bg-gradient-to-r from-[#D4AF37] via-[#E5C158] to-[#D4AF37] text-[#070B15] font-black text-xs sm:text-sm shadow-[0_0_15px_rgba(229,193,88,0.25)] hover:brightness-110 transition-all active:scale-95 whitespace-nowrap"
             >
               <span>ثبت درخواست</span>
               <span>←</span>
@@ -264,7 +232,7 @@ export function Header() {
             <button
               type="button"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="lg:hidden relative z-50 w-11 h-11 rounded-xl bg-[#0D1424] border border-slate-700/80 hover:border-[#E5C158]/60 text-white flex items-center justify-center focus:outline-none transition-all shadow-md group"
+              className="xl:hidden relative z-50 w-11 h-11 rounded-xl bg-[#0D1424] border border-slate-700/80 hover:border-[#E5C158]/60 text-white flex items-center justify-center focus:outline-none transition-all shadow-md group"
               aria-label="منوی اصلی"
               aria-expanded={mobileMenuOpen}
             >
@@ -294,7 +262,7 @@ export function Header() {
       {/* LUXURY INTERNATIONAL MOTION GRAPHICS MOBILE MENU OVERLAY - FIXED TO LEFT EDGE */}
       <AnimatePresence>
         {mobileMenuOpen && (
-          <div className="fixed inset-0 z-50 lg:hidden">
+          <div className="fixed inset-0 z-50 xl:hidden">
             
             {/* Backdrop Blur Fade In - Touch/Click Backdrop Closes Menu */}
             <motion.div
