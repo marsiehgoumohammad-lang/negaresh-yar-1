@@ -2,7 +2,8 @@
 
 import React from 'react';
 import Link from 'next/link';
-import { ArrowLeft, FileText, CheckCircle2, ShieldCheck, Clock } from 'lucide-react';
+import Image from 'next/image';
+import { ArrowLeft, FileText, ShieldCheck, Clock } from 'lucide-react';
 import { Container } from '../ui/container';
 
 export function Hero() {
@@ -84,76 +85,21 @@ export function Hero() {
 
           </div>
 
-          {/* Column 2: Document Preview Visual (5 cols on lg) */}
-          <div className="lg:col-span-5 w-full">
-            <div className="relative mx-auto max-w-md lg:max-w-none">
-              
+          {/* Column 2: Visual Stage (5 cols on lg) */}
+          <div className="lg:col-span-5 w-full flex items-center justify-center">
+            <div className="relative w-full max-w-lg lg:max-w-none flex items-center justify-center">
               {/* Subtle background glow */}
-              <div className="absolute -inset-1 rounded-2xl bg-gradient-to-b from-[#E5C158]/20 to-transparent blur-xl opacity-50 -z-10" />
+              <div className="absolute inset-0 rounded-3xl bg-gradient-to-b from-[#E5C158]/15 via-transparent to-transparent blur-2xl opacity-60 -z-10 pointer-events-none" />
 
-              {/* Transformation Indicator: Input -> Document */}
-              <div className="mb-3 p-3 rounded-xl bg-[#0D1424]/90 border border-slate-800 text-xs text-slate-300 shadow-sm flex items-center justify-between">
-                <div className="flex items-center gap-2 truncate">
-                  <span className="w-2 h-2 rounded-full bg-[#E5C158] shrink-0" />
-                  <span className="text-slate-400 text-[11px]">گفته شما:</span>
-                  <span className="text-slate-200 text-xs truncate">«وامم عقب افتاده و می‌خوام قسط‌هاش تمدید بشه...»</span>
-                </div>
-                <span className="text-[10px] text-[#E5C158] font-bold shrink-0 bg-[#E5C158]/10 px-2 py-0.5 rounded border border-[#E5C158]/20 mr-2">
-                  تبدیل به متن اداری
-                </span>
-              </div>
-
-              {/* Realistic Formal Document Card */}
-              <div className="rounded-2xl bg-[#FCFBF8] text-slate-900 p-6 sm:p-7 shadow-2xl border border-amber-100/90 relative overflow-hidden text-right font-sans">
-                
-                {/* Paper Header Strip */}
-                <div className="flex items-center justify-between pb-4 mb-4 border-b border-stone-200 text-[11px] text-stone-500 font-medium">
-                  <div className="flex items-center gap-2">
-                    <span className="font-bold text-stone-800 text-xs">نگارشیار</span>
-                    <span className="text-stone-300">|</span>
-                    <span>قالب رسمی مکاتبات</span>
-                  </div>
-                  <div className="flex items-center gap-3 text-[10px] text-stone-400 font-mono dir-rtl">
-                    <span>شماره: ۱۴۰۵/الف</span>
-                    <span>پیوست: دارد</span>
-                  </div>
-                </div>
-
-                {/* Addressee & Subject */}
-                <div className="space-y-1.5 mb-4 text-xs">
-                  <div className="text-stone-600 font-medium">
-                    به: <span className="font-bold text-stone-900">ریاست محترم بانک — شعبه مرکزی</span>
-                  </div>
-                  <div className="text-stone-800 font-extrabold text-sm flex items-center gap-1.5 text-stone-900 pt-0.5">
-                    <span className="text-[#B38A19]">موضوع:</span>
-                    <span>درخواست استمهال و تقسیط مجدد مانده تسهیلات</span>
-                  </div>
-                </div>
-
-                {/* Formal Letter Body Excerpt */}
-                <div className="space-y-2.5 text-xs sm:text-[13px] text-stone-700 leading-relaxed text-justify bg-stone-50/70 p-3.5 rounded-lg border border-stone-200/60">
-                  <p className="font-semibold text-stone-900">
-                    با سلام و احترام؛
-                  </p>
-                  <p>
-                    به استحضار می‌رساند اینجانب، متقاضی تسهیلات شماره [...]، نظر به بروز شرایط نامساعد اقتصادی و خارج از اراده در ماه‌های اخیر، با افت نقدینگی مقطعی مواجه گردیده‌ام.
-                  </p>
-                  <p className="text-stone-600 line-clamp-2">
-                    با عنایت به حسن نیت و سوابق متعهدانه قبلی، بدین‌وسیله تقاضا دارم با استناد به ضوابط حمایتی و اممهال مطالبات، با تقسیط مجدد مانده بدهی و تنفس مقرر موافقت فرمایید...
-                  </p>
-                </div>
-
-                {/* Footer Sign-off */}
-                <div className="mt-4 pt-3 flex items-center justify-between text-xs border-t border-stone-200/80">
-                  <div className="flex items-center gap-1.5 text-[11px] text-emerald-700 font-semibold bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200/60">
-                    <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
-                    <span>منسجم و آماده تقدیم به دبیرخانه</span>
-                  </div>
-                  <span className="text-stone-500 text-[11px] font-medium">با تجدید احترام</span>
-                </div>
-
-              </div>
-
+              <Image
+                src="/images/hero_3d_stage.jpg"
+                alt="صحنه سه‌بعدی خدمات نگارشیار"
+                width={1037}
+                height={921}
+                priority
+                className="w-full h-auto object-contain rounded-2xl drop-shadow-2xl select-none pointer-events-none"
+                referrerPolicy="no-referrer"
+              />
             </div>
           </div>
 
