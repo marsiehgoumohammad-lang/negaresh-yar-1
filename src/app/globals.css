@@ -37,6 +37,10 @@
     --border: var(--color-border);
   }
   
+  html {
+    scrollbar-gutter: stable;
+  }
+
   html,
   body {
     max-width: 100%;

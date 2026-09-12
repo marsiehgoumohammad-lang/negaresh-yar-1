@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { usePathname } from 'next/navigation';
 import { motion, AnimatePresence } from 'motion/react';
 import { Container } from '../ui/container';
 
@@ -140,8 +141,14 @@ const messengers = [
 
 export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const pathname = usePathname();
 
-  // Body scroll locking and Esc key handling
+  // Close menu automatically on route change
+  useEffect(() => {
+    setMobileMenuOpen(false);
+  }, [pathname]);
+
+  // Robust Page Scroll Locking with layout-shift mitigation & touchmove prevention
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === 'Escape') {
@@ -150,16 +157,28 @@ export function Header() {
     };
 
     if (mobileMenuOpen) {
-      document.body.style.overflow = 'hidden';
-      window.addEventListener('keydown', handleKeyDown);
-    } else {
-      document.body.style.overflow = '';
-    }
+      // 1. Calculate scrollbar width to prevent desktop/tablet horizontal layout shift
+      const scrollBarWidth = window.innerWidth - document.documentElement.clientWidth;
+      const prevBodyOverflow = document.body.style.overflow;
+      const prevHtmlOverflow = document.documentElement.style.overflow;
+      const prevPaddingRight = document.body.style.paddingRight;
 
-    return () => {
-      document.body.style.overflow = '';
-      window.removeEventListener('keydown', handleKeyDown);
-    };
+      // 2. Lock body and html scrolling
+      document.body.style.overflow = 'hidden';
+      document.documentElement.style.overflow = 'hidden';
+      if (scrollBarWidth > 0) {
+        document.body.style.paddingRight = `${scrollBarWidth}px`;
+      }
+
+      window.addEventListener('keydown', handleKeyDown);
+
+      return () => {
+        document.body.style.overflow = prevBodyOverflow;
+        document.documentElement.style.overflow = prevHtmlOverflow;
+        document.body.style.paddingRight = prevPaddingRight;
+        window.removeEventListener('keydown', handleKeyDown);
+      };
+    }
   }, [mobileMenuOpen]);
 
   const handleCloseMenu = () => {
@@ -284,7 +303,8 @@ export function Header() {
               exit={{ opacity: 0 }}
               transition={{ duration: 0.25 }}
               onClick={handleCloseMenu}
-              className="fixed inset-0 bg-[#070B15]/80 backdrop-blur-xl cursor-pointer"
+              onTouchMove={(e) => e.preventDefault()}
+              className="fixed inset-0 bg-[#070B15]/80 backdrop-blur-xl cursor-pointer touch-none"
             />
 
             {/* Sliding Curved Drawer Panel - Fixed Physically to Left Edge */}
@@ -296,7 +316,7 @@ export function Header() {
               onTouchStart={handleTouchStart}
               onTouchEnd={handleTouchEnd}
               dir="rtl"
-              className="fixed top-0 left-0 bottom-0 z-10 w-[88%] max-w-[380px] h-[100dvh] bg-[#070B15] border-r border-slate-800 shadow-[0_0_50px_rgba(0,0,0,0.9)] flex flex-col justify-between overflow-y-auto"
+              className="fixed top-0 left-0 bottom-0 z-10 w-[88%] max-w-[380px] h-[100dvh] bg-[#070B15] border-r border-slate-800 shadow-[0_0_50px_rgba(0,0,0,0.9)] flex flex-col justify-between overflow-y-auto overscroll-contain touch-pan-y"
             >
               {/* Radial Lighting Accent inside Menu */}
               <div className="absolute top-0 left-0 w-[250px] h-[250px] bg-[radial-gradient(circle_at_center,rgba(229,193,88,0.12)_0%,transparent_70%)] pointer-events-none" />
