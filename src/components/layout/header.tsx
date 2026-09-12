@@ -209,40 +209,33 @@ export function Header() {
           </Link>
 
           {/* Desktop Navigation Links */}
-          <nav className="hidden lg:flex items-center gap-5 xl:gap-6">
+          <nav className="hidden lg:flex items-center gap-6 xl:gap-8">
             <Link href="/services" className="text-sm font-bold text-slate-300 hover:text-[#E5C158] transition-colors">
-              خدمات نگارش
-            </Link>
-            <Link href="/lawyer-referral" className="text-sm font-bold text-slate-300 hover:text-[#E5C158] transition-colors">
-              وکیل منصف
-            </Link>
-            <Link href="/services/online-cafe" className="text-sm font-bold text-slate-300 hover:text-[#E5C158] transition-colors">
-              کافی‌نت آنلاین
+              خدمات
             </Link>
             <Link href="/samples" className="text-sm font-bold text-slate-300 hover:text-[#E5C158] transition-colors">
-              نمونه اسناد
-            </Link>
-            <Link href="/calculators" className="text-sm font-bold text-slate-300 hover:text-[#E5C158] transition-colors flex items-center gap-1">
-              <span>محاسبه‌گرها</span>
-              <span className="px-1.5 py-0.5 rounded text-[10px] bg-amber-500/20 text-amber-300 border border-amber-500/30 font-extrabold">رایگان</span>
+              بانک نمونه
             </Link>
             <Link href="/knowledge" className="text-sm font-bold text-slate-300 hover:text-[#E5C158] transition-colors">
-              پایگاه دانش
+              راهنما
             </Link>
-            <Link href="/contact" className="text-sm font-bold text-slate-300 hover:text-[#E5C158] transition-colors">
-              تماس با ما
-            </Link>
-            <Link href="/ai-interpreter" className="text-sm font-bold text-slate-300 hover:text-[#E5C158] transition-colors flex items-center gap-1.5">
-              <span className="w-2 h-2 rounded-full bg-[#E5C158] animate-pulse" />
-              <span>تفسیر قضایی با AI</span>
+            <Link href="/#about" className="text-sm font-bold text-slate-300 hover:text-[#E5C158] transition-colors">
+              درباره نگارشیار
             </Link>
           </nav>
 
-          {/* Desktop CTA + Mobile Animated Hamburger Button */}
-          <div className="flex items-center gap-3">
+          {/* Desktop CTAs (Secondary: ورود, Primary: ثبت درخواست) + Mobile Hamburger */}
+          <div className="flex items-center gap-2.5 sm:gap-3">
+            <Link
+              href="/admin"
+              className="hidden md:inline-flex items-center justify-center px-3.5 py-2 rounded-xl text-slate-300 hover:text-white hover:bg-slate-800/60 text-xs font-bold transition-all border border-slate-700/60"
+            >
+              ورود
+            </Link>
+
             <Link
               href="/request"
-              className="hidden sm:inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-gradient-to-r from-[#D4AF37] via-[#E5C158] to-[#D4AF37] text-[#070B15] font-black text-xs shadow-[0_0_15px_rgba(229,193,88,0.25)] hover:brightness-110 transition-all active:scale-95"
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-gradient-to-r from-[#D4AF37] via-[#E5C158] to-[#D4AF37] text-[#070B15] font-black text-xs sm:text-sm shadow-[0_0_15px_rgba(229,193,88,0.25)] hover:brightness-110 transition-all active:scale-95"
             >
               <span>ثبت درخواست</span>
               <span>←</span>

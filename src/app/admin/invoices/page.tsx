@@ -511,9 +511,12 @@ export default function InvoicesManagementPage() {
                       <div className="col-span-2">
                         <label className="text-[10px] text-slate-400 block mb-0.5">تعداد:</label>
                         <input
+                          dir="ltr"
                           type="text"
                           inputMode="numeric"
+                          autoComplete="off"
                           value={item.quantity}
+                          onFocus={(e) => e.target.select()}
                           onChange={(e) => {
                             const clean = toEnglishDigits(e.target.value).replace(/[^0-9]/g, '');
                             handleItemChange(idx, 'quantity', clean);
@@ -526,9 +529,12 @@ export default function InvoicesManagementPage() {
                       <div className="col-span-4">
                         <label className="text-[10px] text-slate-400 block mb-0.5">مبلغ واحد (تومان):</label>
                         <input
+                          dir="ltr"
                           type="text"
                           inputMode="numeric"
+                          autoComplete="off"
                           value={item.unitPrice}
+                          onFocus={(e) => e.target.select()}
                           onChange={(e) => {
                             const clean = toEnglishDigits(e.target.value).replace(/[^0-9]/g, '');
                             handleItemChange(idx, 'unitPrice', clean);
@@ -558,9 +564,12 @@ export default function InvoicesManagementPage() {
                   <div>
                     <label className="block font-bold text-slate-300 mb-1">مبلغ تخفیف (تومان):</label>
                     <input
+                      dir="ltr"
                       type="text"
                       inputMode="numeric"
+                      autoComplete="off"
                       value={discountStr}
+                      onFocus={(e) => e.target.select()}
                       onChange={(e) => {
                         const clean = toEnglishDigits(e.target.value).replace(/[^0-9]/g, '');
                         setDiscountStr(clean);

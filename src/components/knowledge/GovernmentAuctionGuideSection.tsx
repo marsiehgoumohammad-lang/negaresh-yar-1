@@ -18,6 +18,7 @@ import {
   FileText,
   Gavel,
   RefreshCw,
+  X,
 } from 'lucide-react';
 import {
   toEnglishDigits,
@@ -633,21 +634,75 @@ export function GovernmentAuctionGuideSection() {
         <div className="grid grid-cols-1 md:grid-cols-12 gap-6 items-center">
           {/* Input field (5 cols) */}
           <div className="md:col-span-5 space-y-2">
-            <label htmlFor="bid-amount-input" className="block text-xs font-bold text-slate-300">
-              مبلغ پیشنهادی خرید یا پایه کارشناسی (تومان):
-            </label>
+            <div className="flex items-center justify-between">
+              <label htmlFor="bid-amount-input" className="block text-xs font-bold text-slate-300">
+                مبلغ پیشنهادی خرید یا پایه کارشناسی (تومان):
+              </label>
+              {parsedAmount > 0 && (
+                <button
+                  type="button"
+                  onClick={() => setBidAmountInput('')}
+                  className="text-[11px] text-slate-400 hover:text-amber-400 transition-colors flex items-center gap-1 cursor-pointer"
+                  title="پاک کردن"
+                >
+                  <X className="w-3.5 h-3.5" />
+                  <span>پاک کردن</span>
+                </button>
+              )}
+            </div>
             <div className="relative">
               <input
                 id="bid-amount-input"
+                dir="ltr"
                 type="text"
                 inputMode="numeric"
-                value={formatDigitString(bidAmountInput)}
+                autoComplete="off"
+                autoCorrect="off"
+                spellCheck={false}
+                value={bidAmountInput ? formatDigitString(bidAmountInput) : ''}
+                onFocus={(e) => e.target.select()}
                 onChange={handleAmountChange}
                 placeholder="مثلاً ۵۰۰,۰۰۰,۰۰۰"
-                className="w-full pl-12 pr-4 py-3 bg-slate-900 border border-slate-700 rounded-xl text-white font-bold text-sm focus:border-[#E5C158] focus:outline-none tracking-wider text-left dir-ltr"
+                className="w-full pl-16 pr-10 py-3 bg-slate-900 border border-slate-700 rounded-xl text-white font-bold text-sm focus:border-[#E5C158] focus:outline-none tracking-wider text-left font-mono"
               />
-              <span className="absolute left-3 top-3 text-xs text-slate-400 font-medium">تومان</span>
+              <span className="absolute left-3 top-1/2 -translate-y-1/2 text-xs text-slate-400 font-medium pointer-events-none">تومان</span>
+              {parsedAmount > 0 && (
+                <button
+                  type="button"
+                  onClick={() => setBidAmountInput('')}
+                  className="absolute right-3 top-1/2 -translate-y-1/2 p-1 text-slate-500 hover:text-slate-200 transition-colors cursor-pointer"
+                  title="پاک کردن"
+                >
+                  <X className="w-4 h-4" />
+                </button>
+              )}
             </div>
+
+            {/* Quick Presets */}
+            <div className="flex flex-wrap items-center gap-1.5 pt-1">
+              <span className="text-[10px] text-slate-400 font-medium ml-1">مبالغ نمونه:</span>
+              {[
+                { label: '۱۰۰ میلیون', val: '100000000' },
+                { label: '۳۰۰ میلیون', val: '300000000' },
+                { label: '۵۰۰ میلیون', val: '500000000' },
+                { label: '۱ میلیارد', val: '1000000000' },
+                { label: '۲ میلیارد', val: '2000000000' },
+              ].map((p) => (
+                <button
+                  key={p.val}
+                  type="button"
+                  onClick={() => setBidAmountInput(p.val)}
+                  className={`text-[10px] px-2 py-1 rounded-md border transition-all cursor-pointer ${
+                    bidAmountInput === p.val
+                      ? 'bg-amber-500/20 text-amber-300 border-amber-500/50'
+                      : 'bg-slate-950 text-slate-400 border-slate-800 hover:text-white hover:border-slate-700'
+                  }`}
+                >
+                  {p.label}
+                </button>
+              ))}
+            </div>
+
             {parsedAmount > 0 ? (
               <div className="text-[11px] text-slate-300 bg-slate-950/60 px-3 py-1.5 rounded-lg border border-slate-800/80 flex flex-wrap items-center justify-between gap-1">
                 <span>به عدد: <strong className="text-[#E5C158] font-mono">{formatNumber(parsedAmount)}</strong> تومان</span>

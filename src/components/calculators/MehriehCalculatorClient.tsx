@@ -18,6 +18,7 @@ import {
   Scale,
   Sparkles,
   ChevronDown,
+  X,
 } from 'lucide-react';
 
 export function MehriehCalculatorClient() {
@@ -43,6 +44,22 @@ export function MehriehCalculatorClient() {
 
   const displayInitial = cleanNumber;
   const unitLabel = currencyUnit === 'rial' ? 'ریال' : 'تومان';
+
+  // مقادیر سریع پرکاربرد بر حسب واحد انتخابی
+  const quickPresets = currencyUnit === 'toman' ? [
+    { label: '۱ میلیون', value: '1000000' },
+    { label: '۵ میلیون', value: '5000000' },
+    { label: '۱۰ میلیون', value: '10000000' },
+    { label: '۵۰ میلیون', value: '50000000' },
+    { label: '۱۰۰ میلیون', value: '100000000' },
+    { label: '۵۰۰ میلیون', value: '500000000' },
+  ] : [
+    { label: '۱۰ میلیون ریال', value: '10000000' },
+    { label: '۵۰ میلیون ریال', value: '50000000' },
+    { label: '۱۰۰ میلیون ریال', value: '100000000' },
+    { label: '۵۰۰ میلیون ریال', value: '500000000' },
+    { label: '۱ میلیارد ریال', value: '1000000000' },
+  ];
 
   return (
     <div className="space-y-10">
@@ -94,26 +111,74 @@ export function MehriehCalculatorClient() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
           {/* Amount Input */}
           <div className="space-y-2">
-            <label htmlFor={amountInputId} className="block text-xs sm:text-sm font-bold text-slate-200">
-              مبلغ اولیه مهریه مندرج در عقدنامه ({unitLabel}):
-            </label>
+            <div className="flex items-center justify-between">
+              <label htmlFor={amountInputId} className="block text-xs sm:text-sm font-bold text-slate-200">
+                مبلغ اولیه مهریه مندرج در عقدنامه ({unitLabel}):
+              </label>
+              {cleanNumber > 0 && (
+                <button
+                  type="button"
+                  onClick={() => setInitialAmount('')}
+                  className="text-[11px] text-slate-400 hover:text-amber-400 transition-colors flex items-center gap-1 cursor-pointer"
+                  title="پاک کردن مبلغ"
+                >
+                  <X className="w-3.5 h-3.5" />
+                  <span>پاک کردن</span>
+                </button>
+              )}
+            </div>
             <div className="relative">
               <input
                 id={amountInputId}
+                dir="ltr"
                 type="text"
                 inputMode="numeric"
-                value={formatDigitString(initialAmount)}
+                autoComplete="off"
+                autoCorrect="off"
+                spellCheck={false}
+                value={initialAmount ? formatDigitString(initialAmount) : ''}
+                onFocus={(e) => e.target.select()}
                 onChange={(e) => {
                   const raw = toEnglishDigits(e.target.value).replace(/\D/g, '');
                   setInitialAmount(raw);
                 }}
                 placeholder="مثلاً ۵,۰۰۰,۰۰۰"
-                className="w-full px-4 py-3 rounded-xl bg-slate-950 border border-slate-700 text-white font-bold text-base focus:outline-none focus:border-[#E5C158] transition-all pl-12 text-left dir-ltr"
+                className="w-full px-4 py-3 rounded-xl bg-slate-950 border border-slate-700 text-white font-bold text-base focus:outline-none focus:border-[#E5C158] transition-all pl-16 pr-10 text-left font-mono"
               />
               <span className="absolute left-3 top-1/2 -translate-y-1/2 text-xs font-bold text-slate-400 pointer-events-none">
                 {unitLabel}
               </span>
+              {cleanNumber > 0 && (
+                <button
+                  type="button"
+                  onClick={() => setInitialAmount('')}
+                  className="absolute right-3 top-1/2 -translate-y-1/2 p-1 text-slate-500 hover:text-slate-200 transition-colors cursor-pointer"
+                  title="پاک کردن"
+                >
+                  <X className="w-4 h-4" />
+                </button>
+              )}
             </div>
+
+            {/* Quick Amount Presets */}
+            <div className="flex flex-wrap items-center gap-1.5 pt-1">
+              <span className="text-[10px] text-slate-400 font-medium ml-1">مبالغ رایج:</span>
+              {quickPresets.map((p) => (
+                <button
+                  key={p.value}
+                  type="button"
+                  onClick={() => setInitialAmount(p.value)}
+                  className={`text-[10px] px-2 py-1 rounded-md border transition-all cursor-pointer ${
+                    initialAmount === p.value
+                      ? 'bg-amber-500/20 text-amber-300 border-amber-500/50'
+                      : 'bg-slate-950 text-slate-400 border-slate-800 hover:text-white hover:border-slate-700'
+                  }`}
+                >
+                  {p.label}
+                </button>
+              ))}
+            </div>
+
             {cleanNumber > 0 ? (
               <div className="flex flex-wrap items-center justify-between gap-1 text-[11px] text-slate-300 bg-slate-950/80 px-3 py-1.5 rounded-lg border border-slate-800">
                 <span className="flex items-center gap-1">

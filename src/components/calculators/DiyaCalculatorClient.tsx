@@ -21,6 +21,7 @@ import {
   AlertTriangle,
   Scale,
   FileCheck,
+  X,
 } from 'lucide-react';
 
 interface SelectedInjuryItem {
@@ -310,14 +311,32 @@ export function DiyaCalculatorClient() {
       {activeTab === 'custom_percent' && (
         <div className="p-6 sm:p-8 rounded-3xl bg-slate-900/90 border border-slate-800 space-y-6">
           <div className="max-w-xl space-y-3">
-            <label className="block text-sm font-bold text-white">
-              درصد دیه قید شده در نظریه پزشکی قانونی یا دادنامه:
-            </label>
+            <div className="flex items-center justify-between">
+              <label className="block text-sm font-bold text-white">
+                درصد دیه قید شده در نظریه پزشکی قانونی یا دادنامه:
+              </label>
+              {customPercentage && (
+                <button
+                  type="button"
+                  onClick={() => setCustomPercentage('')}
+                  className="text-[11px] text-slate-400 hover:text-amber-400 transition-colors flex items-center gap-1 cursor-pointer"
+                  title="پاک کردن"
+                >
+                  <X className="w-3.5 h-3.5" />
+                  <span>پاک کردن</span>
+                </button>
+              )}
+            </div>
             <div className="relative">
               <input
+                dir="ltr"
                 type="text"
                 inputMode="decimal"
+                autoComplete="off"
+                autoCorrect="off"
+                spellCheck={false}
                 value={customPercentage}
+                onFocus={(e) => e.target.select()}
                 onChange={(e) => {
                   const val = toEnglishDigits(e.target.value).replace(/[^0-9.]/g, '');
                   const parts = val.split('.');
@@ -325,12 +344,52 @@ export function DiyaCalculatorClient() {
                   setCustomPercentage(sanitized);
                 }}
                 placeholder="مثلاً ۵.۵"
-                className="w-full px-4 py-3 rounded-xl bg-slate-950 border border-slate-700 text-white font-bold text-lg focus:outline-none focus:border-[#E5C158] transition-all pl-12 dir-ltr text-left"
+                className="w-full px-4 py-3 rounded-xl bg-slate-950 border border-slate-700 text-white font-bold text-lg focus:outline-none focus:border-[#E5C158] transition-all pl-20 pr-10 text-left font-mono"
               />
               <span className="absolute left-4 top-1/2 -translate-y-1/2 text-sm font-bold text-[#E5C158] pointer-events-none">
                 درصد (%)
               </span>
+              {customPercentage && (
+                <button
+                  type="button"
+                  onClick={() => setCustomPercentage('')}
+                  className="absolute right-3 top-1/2 -translate-y-1/2 p-1 text-slate-500 hover:text-slate-200 transition-colors cursor-pointer"
+                  title="پاک کردن"
+                >
+                  <X className="w-4 h-4" />
+                </button>
+              )}
             </div>
+
+            {/* Quick Percentage Chips */}
+            <div className="flex flex-wrap items-center gap-1.5 pt-1">
+              <span className="text-[10px] text-slate-400 font-medium ml-1">درصدهای رایج:</span>
+              {[
+                { label: '۰.۵٪', val: '0.5' },
+                { label: '۱٪ (حارصه)', val: '1' },
+                { label: '۲٪ (دامیه)', val: '2' },
+                { label: '۳٪ (متلاحمه)', val: '3' },
+                { label: '۵٪', val: '5' },
+                { label: '۱۰٪', val: '10' },
+                { label: '۳۳.۳٪ (جائفه)', val: '33.33' },
+                { label: '۵۰٪', val: '50' },
+                { label: '۱۰۰٪ (کامل)', val: '100' },
+              ].map((chip) => (
+                <button
+                  key={chip.val}
+                  type="button"
+                  onClick={() => setCustomPercentage(chip.val)}
+                  className={`text-[11px] px-2 py-1 rounded-md border transition-all cursor-pointer ${
+                    customPercentage === chip.val
+                      ? 'bg-amber-500/20 text-amber-300 border-amber-500/50'
+                      : 'bg-slate-950 text-slate-400 border-slate-800 hover:text-white hover:border-slate-700'
+                  }`}
+                >
+                  {chip.label}
+                </button>
+              ))}
+            </div>
+
             <p className="text-xs text-slate-400">
               اگر در نامه پزشکی قانونی نوشته شده مثلاً «سه صدم دیه کامل» عدد ۳ و اگر نوشته شده «پنج و نیم درصد» عدد ۵.۵ را وارد کنید.
             </p>

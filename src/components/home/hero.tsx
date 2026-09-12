@@ -1,135 +1,155 @@
 'use client';
 
 import React from 'react';
-import Image from 'next/image';
 import Link from 'next/link';
+import { ArrowLeft, FileText, CheckCircle2, ShieldCheck, Clock } from 'lucide-react';
 import { Container } from '../ui/container';
 
 export function Hero() {
   return (
-    <section className="relative overflow-hidden bg-[#070B15] text-white py-8 sm:py-12 md:py-16 border-b border-secondary-800/40">
-      
-      {/* Background Ambient Radial Glow & Light Rings */}
-      <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[radial-gradient(circle_at_center,rgba(229,193,88,0.15)_0%,transparent_70%)] pointer-events-none -z-10" />
-      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] bg-[radial-gradient(ellipse_at_center,rgba(37,99,235,0.08)_0%,transparent_75%)] pointer-events-none -z-10" />
+    <section className="relative overflow-hidden bg-[#070B15] text-white pt-10 pb-16 md:pt-16 md:pb-24 border-b border-slate-800/80">
+      {/* Background Ambient Radial Glow */}
+      <div className="absolute top-1/4 right-1/4 w-[500px] h-[500px] bg-[radial-gradient(circle_at_center,rgba(229,193,88,0.1)_0%,transparent_70%)] pointer-events-none -z-10" />
+      <div className="absolute bottom-10 left-10 w-[400px] h-[400px] bg-[radial-gradient(ellipse_at_center,rgba(37,99,235,0.06)_0%,transparent_75%)] pointer-events-none -z-10" />
 
-      {/* Subtle Ambient Noise Overlay */}
-      <div 
-        className="absolute inset-0 opacity-[0.03] pointer-events-none -z-10"
+      {/* Subtle Grid Accent */}
+      <div
+        className="absolute inset-0 opacity-[0.025] pointer-events-none -z-10"
         style={{
           backgroundImage: `radial-gradient(circle at 1px 1px, #ffffff 1px, transparent 0)`,
-          backgroundSize: '32px 32px',
+          backgroundSize: '28px 28px',
         }}
       />
 
       <Container>
-        <div className="flex flex-col items-center text-center max-w-4xl mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
           
-          {/* Main Title */}
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-black text-white tracking-tight leading-tight mb-3">
-            نگارش یار
-          </h1>
+          {/* Column 1: Copywriting & Actions (7 cols on lg) */}
+          <div className="lg:col-span-7 text-right flex flex-col items-start">
+            
+            {/* Primary Headline */}
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[2.85rem] font-black text-white tracking-tight leading-[1.3] mb-5">
+              حرفت را بگو؛{' '}
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#F7E7A9] via-[#E5C158] to-[#D4AF37]">
+                نامه‌اش را به نگارشیار بسپار.
+              </span>
+            </h1>
 
-          {/* Subtitle */}
-          <h2 className="text-base sm:text-lg md:text-xl font-bold text-[#E5C158] tracking-wide mb-2">
-            نگارش نامه اداری - عریضه نویسی - کافی نت آنلاین
-          </h2>
-          <h3 className="text-sm sm:text-base md:text-lg font-semibold text-slate-200 mb-1.5">
-            معرفی وکیل مناسب با پرونده و توان مالی شما
-          </h3>
-          <p className="text-xs sm:text-sm md:text-base font-medium text-slate-400 mb-6">
-            کلیه خدمات ما غیر حضوری و قابل استفاده در سراسر ایران است
-          </p>
+            {/* Supporting Text */}
+            <p className="text-base sm:text-lg text-slate-300 leading-relaxed max-w-2xl mb-8">
+              نامه‌های اداری، درخواست‌ها و نوشته‌های رسمی‌ات را متناسب با موضوع و مخاطب، حرفه‌ای و روان آماده کن.
+            </p>
 
-          {/* Central 3D Podium & Laptop Hero Image Asset */}
-          <div className="relative w-full max-w-lg mx-auto my-3 sm:my-6 flex justify-center items-center">
-            <div className="relative z-10 w-full rounded-2xl overflow-hidden border border-[#E5C158]/30 shadow-[0_20px_50px_rgba(0,0,0,0.8),0_0_30px_rgba(229,193,88,0.25)]">
-              <Image
-                src="/images/hero_3d_stage.jpg"
-                alt="نگارش یار - هیرو 3D"
-                width={700}
-                height={525}
-                priority
-                referrerPolicy="no-referrer"
-                className="w-full h-auto object-cover transform hover:scale-[1.02] transition-transform duration-500"
-              />
+            {/* CTAs */}
+            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3.5 w-full sm:w-auto mb-6">
+              <Link
+                href="/request"
+                className="inline-flex items-center justify-center gap-2.5 px-7 py-3.5 rounded-xl bg-gradient-to-r from-[#D4AF37] via-[#E5C158] to-[#D4AF37] text-[#070B15] font-black text-sm sm:text-base shadow-[0_0_20px_rgba(229,193,88,0.3)] hover:brightness-110 active:scale-[0.98] transition-all"
+              >
+                <span>شروع نگارش</span>
+                <ArrowLeft className="w-4 h-4 shrink-0" />
+              </Link>
+
+              <Link
+                href="/samples"
+                className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-[#0D1424] hover:bg-[#121A2D] text-slate-200 hover:text-white font-bold text-sm sm:text-base border border-slate-700/80 hover:border-[#E5C158]/50 transition-all"
+              >
+                <FileText className="w-4 h-4 text-[#E5C158]" />
+                <span>دیدن نمونه نامه‌ها</span>
+              </Link>
             </div>
+
+            {/* Supporting Microcopy */}
+            <div className="flex items-center gap-4 text-xs sm:text-sm text-slate-400 font-medium">
+              <span className="inline-flex items-center gap-1.5 text-slate-300">
+                <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 inline-block" />
+                آنلاین
+              </span>
+              <span className="text-slate-600">·</span>
+              <span className="inline-flex items-center gap-1.5 text-slate-300">
+                <Clock className="w-3.5 h-3.5 text-[#E5C158]" />
+                سریع
+              </span>
+              <span className="text-slate-600">·</span>
+              <span className="inline-flex items-center gap-1.5 text-slate-300">
+                <ShieldCheck className="w-3.5 h-3.5 text-emerald-400" />
+                محرمانه
+              </span>
+            </div>
+
           </div>
 
-          {/* Action Buttons */}
-          <div className="w-full max-w-sm sm:max-w-md mx-auto space-y-3.5 my-4 sm:my-6">
-            
-            {/* Primary Button: Solid Gold Fill with Left Arrow */}
-            <Link
-              href="/request"
-              className="flex items-center justify-center gap-3 w-full py-3.5 px-6 rounded-xl bg-gradient-to-r from-[#D4AF37] via-[#E5C158] to-[#D4AF37] hover:brightness-110 active:scale-[0.985] text-[#070B14] font-extrabold text-base sm:text-lg shadow-[0_6px_25px_-2px_rgba(229,193,88,0.35)] transition-all duration-200"
-            >
-              <svg className="w-5 h-5 stroke-[2.5]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18" />
-              </svg>
-              <span>ثبت درخواست جدید</span>
-            </Link>
+          {/* Column 2: Document Preview Visual (5 cols on lg) */}
+          <div className="lg:col-span-5 w-full">
+            <div className="relative mx-auto max-w-md lg:max-w-none">
+              
+              {/* Subtle background glow */}
+              <div className="absolute -inset-1 rounded-2xl bg-gradient-to-b from-[#E5C158]/20 to-transparent blur-xl opacity-50 -z-10" />
 
-            {/* Secondary Button: Dark Fill with Gold Outline */}
-            <Link
-              href="/services"
-              className="flex items-center justify-center w-full py-3.5 px-6 rounded-xl bg-[#0B101D]/90 hover:bg-[#121A2D] active:scale-[0.985] border border-[#E5C158]/60 text-[#E5C158] font-bold text-base sm:text-lg shadow-sm transition-all duration-200"
-            >
-              <span>مشاهده خدمات</span>
-            </Link>
-          </div>
-
-          {/* Trust Bar Row (4 Key Badges matching reference) */}
-          <div className="w-full max-w-xl mx-auto pt-6 border-t border-white/10 grid grid-cols-4 gap-2 sm:gap-4 text-center mt-4">
-            
-            {/* 1. Full Confidentiality */}
-            <div className="flex flex-col items-center gap-2">
-              <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-white/5 border border-[#E5C158]/30 flex items-center justify-center shrink-0">
-                <svg className="w-5 h-5 text-[#E5C158]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.8} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
-                </svg>
+              {/* Transformation Indicator: Input -> Document */}
+              <div className="mb-3 p-3 rounded-xl bg-[#0D1424]/90 border border-slate-800 text-xs text-slate-300 shadow-sm flex items-center justify-between">
+                <div className="flex items-center gap-2 truncate">
+                  <span className="w-2 h-2 rounded-full bg-[#E5C158] shrink-0" />
+                  <span className="text-slate-400 text-[11px]">گفته شما:</span>
+                  <span className="text-slate-200 text-xs truncate">«وامم عقب افتاده و می‌خوام قسط‌هاش تمدید بشه...»</span>
+                </div>
+                <span className="text-[10px] text-[#E5C158] font-bold shrink-0 bg-[#E5C158]/10 px-2 py-0.5 rounded border border-[#E5C158]/20 mr-2">
+                  تبدیل به متن اداری
+                </span>
               </div>
-              <span className="text-xs sm:text-sm font-semibold text-slate-200">
-                محرمانگی کامل
-              </span>
-            </div>
 
-            {/* 2. Professional Support */}
-            <div className="flex flex-col items-center gap-2">
-              <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-white/5 border border-[#E5C158]/30 flex items-center justify-center shrink-0">
-                <svg className="w-5 h-5 text-[#E5C158]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.8} d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 100-6 3 3 0 000 6z" />
-                </svg>
+              {/* Realistic Formal Document Card */}
+              <div className="rounded-2xl bg-[#FCFBF8] text-slate-900 p-6 sm:p-7 shadow-2xl border border-amber-100/90 relative overflow-hidden text-right font-sans">
+                
+                {/* Paper Header Strip */}
+                <div className="flex items-center justify-between pb-4 mb-4 border-b border-stone-200 text-[11px] text-stone-500 font-medium">
+                  <div className="flex items-center gap-2">
+                    <span className="font-bold text-stone-800 text-xs">نگارشیار</span>
+                    <span className="text-stone-300">|</span>
+                    <span>قالب رسمی مکاتبات</span>
+                  </div>
+                  <div className="flex items-center gap-3 text-[10px] text-stone-400 font-mono dir-rtl">
+                    <span>شماره: ۱۴۰۵/الف</span>
+                    <span>پیوست: دارد</span>
+                  </div>
+                </div>
+
+                {/* Addressee & Subject */}
+                <div className="space-y-1.5 mb-4 text-xs">
+                  <div className="text-stone-600 font-medium">
+                    به: <span className="font-bold text-stone-900">ریاست محترم بانک — شعبه مرکزی</span>
+                  </div>
+                  <div className="text-stone-800 font-extrabold text-sm flex items-center gap-1.5 text-stone-900 pt-0.5">
+                    <span className="text-[#B38A19]">موضوع:</span>
+                    <span>درخواست استمهال و تقسیط مجدد مانده تسهیلات</span>
+                  </div>
+                </div>
+
+                {/* Formal Letter Body Excerpt */}
+                <div className="space-y-2.5 text-xs sm:text-[13px] text-stone-700 leading-relaxed text-justify bg-stone-50/70 p-3.5 rounded-lg border border-stone-200/60">
+                  <p className="font-semibold text-stone-900">
+                    با سلام و احترام؛
+                  </p>
+                  <p>
+                    به استحضار می‌رساند اینجانب، متقاضی تسهیلات شماره [...]، نظر به بروز شرایط نامساعد اقتصادی و خارج از اراده در ماه‌های اخیر، با افت نقدینگی مقطعی مواجه گردیده‌ام.
+                  </p>
+                  <p className="text-stone-600 line-clamp-2">
+                    با عنایت به حسن نیت و سوابق متعهدانه قبلی، بدین‌وسیله تقاضا دارم با استناد به ضوابط حمایتی و اممهال مطالبات، با تقسیط مجدد مانده بدهی و تنفس مقرر موافقت فرمایید...
+                  </p>
+                </div>
+
+                {/* Footer Sign-off */}
+                <div className="mt-4 pt-3 flex items-center justify-between text-xs border-t border-stone-200/80">
+                  <div className="flex items-center gap-1.5 text-[11px] text-emerald-700 font-semibold bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200/60">
+                    <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
+                    <span>منسجم و آماده تقدیم به دبیرخانه</span>
+                  </div>
+                  <span className="text-stone-500 text-[11px] font-medium">با تجدید احترام</span>
+                </div>
+
               </div>
-              <span className="text-xs sm:text-sm font-semibold text-slate-200">
-                پشتیبانی حرفه‌ای
-              </span>
-            </div>
 
-            {/* 3. Fast Delivery */}
-            <div className="flex flex-col items-center gap-2">
-              <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-white/5 border border-[#E5C158]/30 flex items-center justify-center shrink-0">
-                <svg className="w-5 h-5 text-[#E5C158]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.8} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                </svg>
-              </div>
-              <span className="text-xs sm:text-sm font-semibold text-slate-200">
-                تحویل سریع
-              </span>
             </div>
-
-            {/* 4. Quality Guarantee */}
-            <div className="flex flex-col items-center gap-2">
-              <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-white/5 border border-[#E5C158]/30 flex items-center justify-center shrink-0">
-                <svg className="w-5 h-5 text-[#E5C158]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.8} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                </svg>
-              </div>
-              <span className="text-xs sm:text-sm font-semibold text-slate-200">
-                کیفیت حرفه‌ای نگارش
-              </span>
-            </div>
-
           </div>
 
         </div>

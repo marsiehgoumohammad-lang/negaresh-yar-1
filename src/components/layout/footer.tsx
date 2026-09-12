@@ -11,125 +11,164 @@ export function Footer() {
       <div className="absolute bottom-0 right-1/3 w-[500px] h-[300px] bg-[radial-gradient(circle_at_center,rgba(229,193,88,0.04)_0%,transparent_70%)] pointer-events-none -z-10" />
 
       <Container>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12 mb-10">
           
-          {/* Brand Info */}
-          <div className="lg:col-span-2 space-y-4">
+          {/* Column 1: Brand Info */}
+          <div className="space-y-4">
             <Link href="/" className="flex items-center gap-3 group">
               <Image
                 src="/logo.jpg"
                 alt="لوگوی رسمی نگارش یار"
-                width={36}
-                height={36}
+                width={38}
+                height={38}
                 referrerPolicy="no-referrer"
                 className="h-9 w-9 rounded-xl object-contain bg-white p-0.5 border border-[#E5C158]/50 shadow-[0_0_15px_rgba(229,193,88,0.25)] shrink-0"
               />
               <div className="flex flex-col">
-                <span className="font-extrabold text-xl text-white group-hover:text-[#E5C158] transition-colors leading-tight">
-                  نگارش یار
+                <span className="font-black text-xl text-white group-hover:text-[#E5C158] transition-colors leading-tight">
+                  نگارشیار
                 </span>
-                <span className="text-[10px] text-[#E5C158] font-semibold">
-                  سامانه خدمات حقوقی، اداری و عریضه‌نویسی آنلاین
+                <span className="text-[10px] text-[#E5C158] font-bold">
+                  همراه تو برای نوشتن نامه‌ها و متن‌های رسمی
                 </span>
               </div>
             </Link>
-            <p className="text-xs sm:text-sm text-slate-300 leading-relaxed max-w-md">
-              سامانه هوشمند و خدمات غیرحضوری تنظیم تخصصی دادخواست، شکواییه، لایحه دفاعیه، نامه‌های اداری، عریضه‌نویسی، خدمات کافی‌نت آنلاین و تفسیر ابلاغیه ثنا و رای دادگاه با هوش مصنوعی.
+            <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
+              نگارشیار؛ همراه مطمئن شما برای تنظیم تخصصی انواع نامه‌های اداری، استشهادیه‌ها، دادخواست‌ها، شکواییه‌ها، لوایح و متن‌های رسمی در سراسر کشور.
             </p>
-
-            <div className="pt-2 flex flex-wrap items-center gap-2">
-              <Link
-                href="/request"
-                className="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl bg-gradient-to-r from-[#D4AF37] via-[#E5C158] to-[#D4AF37] text-[#070B15] font-black text-xs shadow-md hover:brightness-110 transition-all"
-              >
-                <span>ثبت آنلاین درخواست نگارش</span>
-                <span>←</span>
-              </Link>
-              <Link
-                href="/ai-interpreter"
-                className="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl bg-[#0D1424] border border-[#E5C158]/40 text-[#E5C158] font-bold text-xs hover:bg-[#E5C158]/10 transition-all"
-              >
-                <span>تفسیر رای دادگاه با AI</span>
-                <span className="w-2 h-2 rounded-full bg-[#E5C158] animate-pulse" />
-              </Link>
+            <div className="text-xs text-slate-400 space-y-1.5 pt-2 border-t border-slate-800/80">
+              <p className="flex items-center gap-2">
+                <span className="text-[#E5C158]">📍 نشانی:</span>
+                <span>خراسان رضوی، مشهد</span>
+              </p>
+              <p className="flex items-center gap-2">
+                <span className="text-[#E5C158]">📞 تلفن تماس و پیام‌رسان:</span>
+                <a href="tel:09915147789" className="text-slate-200 hover:text-[#E5C158] font-mono dir-ltr">
+                  ۰۹۹۱۵۱۴۷۷۸۹
+                </a>
+              </p>
             </div>
           </div>
           
-          {/* Main Commercial Services Links */}
+          {/* Column 2: خدمات */}
           <div>
-            <h3 className="font-bold text-sm text-[#E5C158] mb-3.5 flex items-center gap-2">
+            <h3 className="font-bold text-sm text-[#E5C158] mb-4 flex items-center gap-2">
               <span className="w-1.5 h-1.5 rounded-full bg-[#E5C158]" />
-              <Link href="/services" className="hover:underline">خدمات تخصصی حقوقی</Link>
+              <span>خدمات</span>
             </h3>
-            <ul className="space-y-2 text-xs sm:text-sm text-slate-300">
-              <li><Link href="/services/petition-writing" className="hover:text-[#E5C158] transition-colors">تنظیم دادخواست و شکواییه</Link></li>
-              <li><Link href="/services/legal-brief" className="hover:text-[#E5C158] transition-colors">تنظیم لایحه دفاعیه دادگاه</Link></li>
-              <li><Link href="/services/false-witness-inquiry" className="hover:text-[#E5C158] transition-colors text-[#E5C158] font-medium">اثبات شهادت دروغ و استعلام شاهد</Link></li>
-              <li><Link href="/services/administrative-letter" className="hover:text-[#E5C158] transition-colors">نگارش نامه اداری و عریضه</Link></li>
-              <li><Link href="/services/appeal" className="hover:text-[#E5C158] transition-colors">تجدیدنظر و اعتراض به رای</Link></li>
-              <li><Link href="/services/insolvency-petition" className="hover:text-[#E5C158] transition-colors">دادخواست اعسار و تقسیط</Link></li>
-              <li><Link href="/services/court-document-explainer" className="hover:text-[#E5C158] transition-colors">تفسیر هوشمند رای و ابلاغیه</Link></li>
-              <li><Link href="/services/government-auctions" className="hover:text-[#E5C158] transition-colors">ثبت نام مزایدات دولتی</Link></li>
-              <li><Link href="/services/online-cafe" className="hover:text-[#E5C158] transition-colors">کافی نت آنلاین و خدمات غیرحضوری</Link></li>
-              <li><Link href="/services/mashhad" className="hover:text-[#E5C158] transition-colors text-[#E5C158] font-semibold">عریضه‌نویسی و ثنا در مشهد</Link></li>
+            <ul className="space-y-2.5 text-xs sm:text-sm text-slate-300">
+              <li>
+                <Link href="/services/administrative-letter" className="hover:text-[#E5C158] transition-colors">
+                  نامه اداری
+                </Link>
+              </li>
+              <li>
+                <Link href="/services/petition-writing" className="hover:text-[#E5C158] transition-colors">
+                  نوشته‌های قضایی
+                </Link>
+              </li>
+              <li>
+                <Link href="/services/online-cafe" className="hover:text-[#E5C158] transition-colors">
+                  خدمات آنلاین
+                </Link>
+              </li>
+              <li>
+                <Link href="/ai-interpreter" className="hover:text-[#E5C158] transition-colors flex items-center gap-1.5">
+                  <span>تفسیر متن و رأی</span>
+                  <span className="text-[10px] px-1.5 py-0.5 rounded bg-[#E5C158]/20 text-[#E5C158] font-bold">هوشمند</span>
+                </Link>
+              </li>
+              <li>
+                <Link href="/services" className="text-[#E5C158] hover:underline font-semibold text-xs pt-1 inline-block">
+                  مشاهده همه خدمات ←
+                </Link>
+              </li>
             </ul>
           </div>
 
-          {/* Document Samples Links */}
+          {/* Column 3: دسترسی سریع */}
           <div>
-            <h3 className="font-bold text-sm text-[#E5C158] mb-3.5 flex items-center gap-2">
+            <h3 className="font-bold text-sm text-[#E5C158] mb-4 flex items-center gap-2">
               <span className="w-1.5 h-1.5 rounded-full bg-[#E5C158]" />
-              <Link href="/samples" className="hover:underline">بانک نمونه اسناد</Link>
+              <span>دسترسی سریع</span>
             </h3>
-            <ul className="space-y-2 text-xs sm:text-sm text-slate-300">
-              <li><Link href="/samples/administrative-letters" className="hover:text-[#E5C158] transition-colors text-[#E5C158] font-semibold">مرجع نمونه نامه اداری و سازمانی</Link></li>
-              <li><Link href="/samples/petition" className="hover:text-[#E5C158] transition-colors">نمونه دادخواست حقوقی</Link></li>
-              <li><Link href="/samples/complaint" className="hover:text-[#E5C158] transition-colors">نمونه شکواییه کیفری</Link></li>
-              <li><Link href="/samples/legal-brief" className="hover:text-[#E5C158] transition-colors">نمونه لایحه دفاعیه</Link></li>
-              <li><Link href="/samples/bank-letter" className="hover:text-[#E5C158] transition-colors">نمونه نامه به بانک (وام و تقسیط)</Link></li>
-              <li><Link href="/samples/municipality-letter" className="hover:text-[#E5C158] transition-colors">نمونه نامه به شهرداری و ماده ۱۰۰</Link></li>
-              <li><Link href="/samples/appeal" className="hover:text-[#E5C158] transition-colors">نمونه دادخواست تجدیدنظر</Link></li>
-              <li><Link href="/samples/insolvency" className="hover:text-[#E5C158] transition-colors">نمونه دادخواست اعسار</Link></li>
-              <li><Link href="/samples" className="hover:text-[#E5C158] transition-colors font-bold text-[#E5C158]">مشاهده تمامی نمونه‌ها ←</Link></li>
+            <ul className="space-y-2.5 text-xs sm:text-sm text-slate-300">
+              <li>
+                <Link href="/samples" className="hover:text-[#E5C158] transition-colors">
+                  بانک نمونه
+                </Link>
+              </li>
+              <li>
+                <Link href="/knowledge" className="hover:text-[#E5C158] transition-colors">
+                  راهنما و مقالات
+                </Link>
+              </li>
+              <li>
+                <Link href="/#about" className="hover:text-[#E5C158] transition-colors">
+                  درباره ما
+                </Link>
+              </li>
+              <li>
+                <Link href="/contact" className="hover:text-[#E5C158] transition-colors">
+                  تماس با ما
+                </Link>
+              </li>
+              <li>
+                <Link href="/#faq" className="hover:text-[#E5C158] transition-colors">
+                  پرسش‌های متداول
+                </Link>
+              </li>
             </ul>
           </div>
           
-          {/* Knowledge Center Links */}
+          {/* Column 4: قانونی */}
           <div>
-            <h3 className="font-bold text-sm text-[#E5C158] mb-3.5 flex items-center gap-2">
+            <h3 className="font-bold text-sm text-[#E5C158] mb-4 flex items-center gap-2">
               <span className="w-1.5 h-1.5 rounded-full bg-[#E5C158]" />
-              <Link href="/knowledge" className="hover:underline">پایگاه دانش حقوقی</Link>
+              <span>قانونی و تعهدات</span>
             </h3>
-            <ul className="space-y-2 text-xs sm:text-sm text-slate-300">
-              <li><Link href="/calculators" className="hover:text-[#E5C158] transition-colors text-[#E5C158] font-bold">محاسبه‌گرهای حقوقی آنلاین (رایگان)</Link></li>
-              <li><Link href="/calculators/mehrieh" className="hover:text-[#E5C158] transition-colors">محاسبه مهریه به نرخ روز</Link></li>
-              <li><Link href="/calculators/debt-delay" className="hover:text-[#E5C158] transition-colors">محاسبه تاخیر تادیه بدهی و چک</Link></li>
-              <li><Link href="/calculators/diya" className="hover:text-[#E5C158] transition-colors">محاسبه نرخ دیه سال ۱۴۰۳</Link></li>
-              <li><Link href="/knowledge/what-is-petition" className="hover:text-[#E5C158] transition-colors">دادخواست چیست؟</Link></li>
-              <li><Link href="/knowledge/petition-vs-complaint" className="hover:text-[#E5C158] transition-colors">تفاوت دادخواست و شکواییه</Link></li>
-              <li><Link href="/knowledge/what-is-legal-brief" className="hover:text-[#E5C158] transition-colors">لایحه دفاعیه چیست؟</Link></li>
-              <li><Link href="/knowledge/how-to-appeal-court-decision" className="hover:text-[#E5C158] transition-colors">نحوه اعتراض به رای دادگاه</Link></li>
-              <li><Link href="/knowledge/what-is-e-notification" className="hover:text-[#E5C158] transition-colors">ابلاغیه ثنا چیست؟</Link></li>
-              <li><Link href="/knowledge/what-is-insolvency" className="hover:text-[#E5C158] transition-colors">اعسار چیست و چگونه ثابتم می‌شود؟</Link></li>
-              <li><Link href="/knowledge" className="hover:text-[#E5C158] transition-colors font-bold text-[#E5C158]">مشاهده کلیه مقالات ←</Link></li>
+            <ul className="space-y-2.5 text-xs sm:text-sm text-slate-300">
+              <li>
+                <Link href="/contact#terms" className="hover:text-[#E5C158] transition-colors">
+                  قوانین و شرایط استفاده
+                </Link>
+              </li>
+              <li>
+                <Link href="/contact#privacy" className="hover:text-[#E5C158] transition-colors">
+                  حریم خصوصی کاربران
+                </Link>
+              </li>
+              <li>
+                <Link href="/contact#confidentiality" className="hover:text-[#E5C158] transition-colors">
+                  سیاست محرمانگی اطلاعات
+                </Link>
+              </li>
+              <li className="pt-2">
+                <Link
+                  href="/request"
+                  className="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl bg-gradient-to-r from-[#D4AF37] via-[#E5C158] to-[#D4AF37] text-[#070B15] font-black text-xs shadow-md hover:brightness-110 transition-all w-full justify-center"
+                >
+                  <span>شروع درخواست نگارش</span>
+                  <span>←</span>
+                </Link>
+              </li>
             </ul>
           </div>
 
         </div>
         
-        {/* Tight Bottom Divider & Copyright Line */}
+        {/* Bottom Divider & Copyright Line */}
         <div className="pt-6 border-t border-slate-800/80 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-slate-400">
           <p>
-            © {new Date().getFullYear()} نگارش یار. تمامی حقوق مادی و معنوی محفوظ است.
+            © ۱۴۰۵ نگارشیار — همه حقوق محفوظ است.
           </p>
-          <div className="flex items-center gap-4 flex-wrap justify-center sm:justify-end">
+          <div className="flex items-center gap-4 flex-wrap justify-center sm:justify-end text-slate-400">
             <Link href="/services" className="hover:text-[#E5C158] transition-colors">خدمات</Link>
-            <Link href="/samples" className="hover:text-[#E5C158] transition-colors">نمونه اسناد</Link>
-            <Link href="/lawyer-referral" className="hover:text-[#E5C158] transition-colors font-medium text-[#E5C158]">معرفی وکیل منصف</Link>
-            <Link href="/lawyer-partnership" className="hover:text-[#E5C158] transition-colors">همکاری وکلا</Link>
-            <Link href="/knowledge" className="hover:text-[#E5C158] transition-colors">پایگاه دانش</Link>
-            <Link href="/contact" className="hover:text-[#E5C158] transition-colors">تماس با ما</Link>
-            <Link href="/request" className="hover:text-[#E5C158] transition-colors">ثبت درخواست</Link>
+            <Link href="/samples" className="hover:text-[#E5C158] transition-colors">بانک نمونه</Link>
+            <Link href="/knowledge" className="hover:text-[#E5C158] transition-colors">راهنما</Link>
+            <Link href="/lawyer-referral" className="hover:text-[#E5C158] transition-colors">معرفی وکیل</Link>
+            <Link href="/contact" className="hover:text-[#E5C158] transition-colors">تماس</Link>
+            <Link href="/admin" className="hover:text-[#E5C158] transition-colors">ورود مدیریت</Link>
           </div>
         </div>
       </Container>
