@@ -210,23 +210,23 @@ export const sampleCheckExecutionObjectionData: SampleLandingData = {
 
   relatedArticles: [
     {
-      title: 'تفاوت چک حقوقی و چک کیفری در قانون جدید',
-      href: '/knowledge/civil-vs-criminal-check',
-      desc: 'مقایسه ۴ روش وصول چک و مزایای اجراییه ماده ۲۳.',
-      badge: 'مقاله آموزشی'
+      title: 'اجراییه مستقیم چک صیادی ماده ۲۳؛ شرایط، مراحل و نحوه ابطال',
+      href: '/knowledge/sayad-check-execution-article-23',
+      desc: 'راهنمای جامع نحوه ابطال اجراییه مستقیم و تقاضای توقف عملیات اجرایی.',
+      badge: 'راهنمای تخصصی',
     },
     {
-      title: 'اظهارنامه رسمی چیست و چگونه ارسال می‌شود؟',
-      href: '/knowledge/what-is-legal-notice',
-      desc: 'اخطار رسمی و قانونی پیش از طرح دعوای تجاری.',
-      badge: 'مقاله آموزشی'
+      title: 'چک ضمانت و حسن انجام کار؛ شرایط، خطرات، نحوه وصول و استرداد',
+      href: '/knowledge/guarantee-check-rules',
+      desc: 'راهنمای تخصصی اثبات ماهیت امانی چک و دفاع در برابر وصول غیرقانونی.',
+      badge: 'راهنمای تخصصی',
     },
     {
-      title: 'دادخواست چیست و چگونه تنظیم می‌شود؟',
-      href: '/knowledge/what-is-petition',
-      desc: 'راهنمای کامل ثبت دادخواست مالی در دفاتر قضایی.',
-      badge: 'مقاله آموزشی'
-    }
+      title: 'راهنمای کامل چک برگشتی و روش‌های وصول مطالبات',
+      href: '/knowledge/bounced-check-guide',
+      desc: 'مقاله پیلار و مرجع جامع وصول چک و دفاعیات صادرکننده در مراجع قضایی.',
+      badge: 'مقاله مرجع',
+    },
   ],
 
   ctaTitle: 'سفارش تنظیم دادخواست ابطال و توقف فوری اجراییه چک',
