@@ -185,6 +185,33 @@ export const sampleTransportationRoadOfficeLetterData: SampleLandingData = {
     },
   ],
 
+  relatedSamples: [
+    {
+      title: 'مرجع جامع نمونه نامه‌های اداری و رسمی',
+      href: '/samples/administrative-letters',
+      desc: 'بانک الگوهای نامه‌نگاری رسمی به کلیه ارگان‌ها و سازمان‌های کشور.',
+      badge: 'مرجع اصلی',
+    },
+    {
+      title: 'نمونه نامه و لایحه به تعزیرات حکومتی',
+      href: '/samples/discretionary-punishments-letter',
+      desc: 'لایحه دفاعیه تعزیرات بابت قاچاق کالا، تخلفات حمل و تقسیط جریمه.',
+      badge: 'تعزیرات حکومتی',
+    },
+    {
+      title: 'نمونه دادخواست دیوان عدالت اداری',
+      href: '/samples/administrative-court-justice-complaint',
+      desc: 'ابطال آرای کمیسیون‌های حمل‌ونقل و تصمیمات غیرقانونی راهداری.',
+      badge: 'دیوان عدالت',
+    },
+    {
+      title: 'نمونه نامه رسمی به استاندار و فرماندار',
+      href: '/samples/letter-to-governor',
+      desc: 'درخواست رسیدگی به راه‌های مواصلاتی و موانع حمل‌ونقل جاده‌ای.',
+      badge: 'استانداری',
+    },
+  ],
+
   relatedArticles: [
     {
       title: 'نحوه محاسبه سهم تقصیر راهداری و شهرداری در سوانح تصادفات رانندگی',

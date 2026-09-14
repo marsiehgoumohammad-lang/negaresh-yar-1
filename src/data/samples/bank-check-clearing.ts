@@ -220,6 +220,12 @@ export const sampleBankCheckClearingData: SampleLandingData = {
 
   relatedSamples: [
     {
+      title: 'مرجع جامع نمونه نامه‌های اداری و رسمی',
+      href: '/samples/administrative-letters',
+      desc: 'بانک الگوهای نامه‌نگاری رسمی به کلیه ارگان‌ها و سازمان‌های کشور.',
+      badge: 'مرجع اصلی',
+    },
+    {
       title: 'نمونه نامه به بانک (هاب مرکزی)',
       href: '/samples/bank-letter',
       desc: 'مرجع کلیه مکاتبات بانکی، وام و تسهیلات.',
@@ -241,16 +247,16 @@ export const sampleBankCheckClearingData: SampleLandingData = {
 
   relatedArticles: [
     {
-      title: 'رفع سوء اثر چک برگشتی؛ مدارک، مراحل بانکی و تبصره ۳ ماده ۵ مکرر',
-      href: '/knowledge/check-bad-credit-removal',
-      desc: 'راهنمای جامع روش‌های قانونی رفع سوء اثر از چک برگشتی در سامانه یکپارچه بانک مرکزی.',
-      badge: 'راهنمای تخصصی',
+      title: 'اصول و قواعد نگارش نامه‌های اداری استاندارد',
+      href: '/knowledge/how-to-write-administrative-letter',
+      desc: 'اصول پنج‌گانه نامه‌نگاری رسمی و تنظیم درخواست‌های بانکی و اداری.',
+      badge: 'راهنمای مرجع',
     },
     {
-      title: 'راهنمای کامل چک برگشتی و روش‌های وصول مطالبات',
+      title: 'راهنمای جامع چک برگشتی و قوانین صیادی',
       href: '/knowledge/bounced-check-guide',
-      desc: 'مقاله پیلار و مرجع قوانین چک، انسداد حساب‌ها و رفع محدودیت‌های بانکی.',
-      badge: 'مقاله مرجع',
+      desc: 'قوانین و راهنمای اقدامات بانکی، رفع سوء اثر و وصول مطالبات.',
+      badge: 'راهنمای تخصصی',
     },
   ],
 

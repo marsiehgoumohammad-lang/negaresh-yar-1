@@ -290,6 +290,15 @@ export const sampleMunicipalityLetterData: SampleLandingData = {
     },
   ],
 
+  relatedArticles: [
+    {
+      title: 'اصول و قواعد نگارش نامه‌های اداری استاندارد',
+      href: '/knowledge/how-to-write-administrative-letter',
+      desc: 'اصول تنظیم مکاتبات رسمی، اداری و استعلامات شهری.',
+      badge: 'راهنمای مرجع',
+    },
+  ],
+
   ctaTitle: 'نیاز به تنظیم لایحه یا نامه اختصاصی به شهرداری دارید؟',
   ctaDescription:
     'کارشناسان متخصص حقوق شهری نگارش یار، نامه و لایحه دفاعیه شما را بر اساس اسناد ملک، گزارش مهندس ناظر و قوانین شهرسازی تدوین می‌کنند.',

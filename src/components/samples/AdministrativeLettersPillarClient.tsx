@@ -947,6 +947,26 @@ export function AdministrativeLettersPillarClient() {
                 </div>
               ))}
             </div>
+
+            {/* Knowledge Guide Educational Link */}
+            <div className="p-5 sm:p-6 rounded-2xl bg-slate-900/80 border border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-4">
+              <div className="flex items-center gap-3.5 text-right w-full sm:w-auto">
+                <div className="w-10 h-10 rounded-xl bg-[#E5C158]/10 border border-[#E5C158]/30 flex items-center justify-center text-[#E5C158] shrink-0">
+                  <BookOpen className="w-5 h-5" />
+                </div>
+                <div>
+                  <h4 className="text-sm font-bold text-white">راهنمای تخصصی اصول و فنون نگارش نامه اداری</h4>
+                  <p className="text-xs text-slate-400">آموزش گام‌به‌گام اجزا، عبارات محترمانه و نکات ثبت دبیرخانه در پایگاه دانش نگارش یار</p>
+                </div>
+              </div>
+              <Link
+                href="/knowledge/how-to-write-administrative-letter"
+                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-bold border border-slate-700 hover:border-[#E5C158]/50 transition-all shrink-0 w-full sm:w-auto justify-center"
+              >
+                <span>مطالعه راهنمای کامل</span>
+                <ArrowLeft className="w-3.5 h-3.5 text-[#E5C158]" />
+              </Link>
+            </div>
           </div>
         </Container>
       </section>

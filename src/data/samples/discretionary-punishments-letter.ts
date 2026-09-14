@@ -207,6 +207,12 @@ export const sampleDiscretionaryPunishmentsLetterData: SampleLandingData = {
 
   relatedSamples: [
     {
+      title: 'مرجع جامع نمونه نامه‌های اداری و رسمی',
+      href: '/samples/administrative-letters',
+      desc: 'بانک الگوهای نامه‌نگاری رسمی به کلیه ارگان‌ها و سازمان‌های کشور.',
+      badge: 'مرجع اصلی',
+    },
+    {
       title: 'نمونه شکایت در دیوان عدالت اداری',
       href: '/samples/administrative-court-justice-complaint',
       desc: 'ابطال آرای قطعی تعزیرات حکومتی در شعب دیوان عدالت اداری.',
@@ -223,6 +229,15 @@ export const sampleDiscretionaryPunishmentsLetterData: SampleLandingData = {
       href: '/samples/letter-to-tax-office',
       desc: 'اعتراض به مالیات عملکرد و فاکتورهای مشکوک.',
       badge: 'امور مالیاتی',
+    },
+  ],
+
+  relatedArticles: [
+    {
+      title: 'اصول و قواعد نگارش نامه‌های اداری استاندارد',
+      href: '/knowledge/how-to-write-administrative-letter',
+      desc: 'راهنمای جامع تدوین مکاتبات رسمی، اداری و لایحه‌نویسی.',
+      badge: 'راهنمای مرجع',
     },
   ],
 

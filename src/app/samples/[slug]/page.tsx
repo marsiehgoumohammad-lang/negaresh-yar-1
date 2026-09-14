@@ -101,6 +101,29 @@ export default async function DynamicSamplePage({ params }: SamplePageProps) {
   const title = sample.title || sample.h1Title || 'نمونه سند';
   const description = sample.shortDescription || sample.heroSubtitle || '';
 
+  const administrativeCategories = new Set([
+    'نامه‌ها و عریضه‌های اداری',
+    'نمونه نامه‌های اداری و عریضه‌ها',
+    'نمونه نامه‌ها و عریضه‌های اداری',
+    'نمونه نامه‌ها و لوایح اداری و مالیاتی',
+    'نامه‌ها و درخواست‌های اداری',
+    'نامه‌ها و مکاتبات اداری و بانکی',
+    'نامه‌ها و مکاتبات اداری و شهرداری',
+    'نامه‌ها و مکاتبات اداری و ثبت احوال',
+    'نامه‌ها و مکاتبات اداری و اداره کار',
+    'نامه‌ها و مکاتبات اداری و تامین اجتماعی',
+    'نامه‌ها و مکاتبات اداری و تعزیراتی',
+    'نامه‌ها و مکاتبات اداری و انتظامی',
+    'نامه‌ها و مکاتبات اداری و حمایتی',
+    'نامه‌ها و مکاتبات اداری و آموزشی',
+    'نامه‌ها و مکاتبات اداری و دانشگاهی',
+    'نامه‌ها و مکاتبات اداری و ثبتی',
+    'نامه‌ها و مکاتبات اداری و سازمان بازرسی',
+    'نمونه نامه به رئیس جمهور',
+    'نمونه نامه به دفتر مقام معظم رهبری',
+    'دعاوی اداری و دیوان عدالت',
+  ]);
+
   const breadcrumbSchema = {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
@@ -124,7 +147,7 @@ export default async function DynamicSamplePage({ params }: SamplePageProps) {
         item:
           sample.category === 'قراردادها و توافق‌نامه‌ها'
             ? 'https://www.negaresh-yar.ir/samples/contracts'
-            : sample.category === 'نامه‌ها و عریضه‌های اداری'
+            : sample.category && administrativeCategories.has(sample.category)
             ? 'https://www.negaresh-yar.ir/samples/administrative-letters'
             : `https://www.negaresh-yar.ir/samples?category=${encodeURIComponent(
                 sample.category || ''

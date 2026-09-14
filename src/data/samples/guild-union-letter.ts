@@ -185,6 +185,33 @@ export const sampleGuildUnionLetterData: SampleLandingData = {
     },
   ],
 
+  relatedSamples: [
+    {
+      title: 'مرجع جامع نمونه نامه‌های اداری و رسمی',
+      href: '/samples/administrative-letters',
+      desc: 'بانک الگوهای نامه‌نگاری رسمی به کلیه ارگان‌ها و سازمان‌های کشور.',
+      badge: 'مرجع اصلی',
+    },
+    {
+      title: 'نمونه نامه و لایحه به تعزیرات حکومتی',
+      href: '/samples/discretionary-punishments-letter',
+      desc: 'لایحه دفاعیه تعزیرات بابت گران‌فروشی، عدم درج قیمت و تقسیط جریمه.',
+      badge: 'تعزیرات حکومتی',
+    },
+    {
+      title: 'نمونه نامه به سازمان امور مالیاتی',
+      href: '/samples/letter-to-tax-office',
+      desc: 'لایحه اعتراض مالیات مشاغل و توافق ماده ۲۳۸ قانون مالیات مستقیم.',
+      badge: 'امور مالیاتی',
+    },
+    {
+      title: 'نمونه دادخواست دیوان عدالت اداری',
+      href: '/samples/administrative-court-justice-complaint',
+      desc: 'ابطال آرای کمیسیون‌های نظارت اصناف و تصمیمات غیرقانونی اتحادیه.',
+      badge: 'دیوان عدالت',
+    },
+  ],
+
   relatedArticles: [
     {
       title: 'راهنمای گام‌به‌گام دریافت پروانه کسب در درگاه ملی مجوزها',

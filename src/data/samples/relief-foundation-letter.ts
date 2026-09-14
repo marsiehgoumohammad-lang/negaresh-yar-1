@@ -219,6 +219,12 @@ export const sampleReliefFoundationLetterData: SampleLandingData = {
 
   relatedSamples: [
     {
+      title: 'مرجع جامع نمونه نامه‌های اداری و رسمی',
+      href: '/samples/administrative-letters',
+      desc: 'بانک الگوهای نامه‌نگاری رسمی به کلیه ارگان‌ها و سازمان‌های کشور.',
+      badge: 'مرجع اصلی',
+    },
+    {
       title: 'نمونه نامه به رئیس جمهور (سامانه ۱۱۱)',
       href: '/samples/president-letter',
       desc: 'استمداد کشوری و درخواست وام‌های ضروری از نهاد ریاست جمهوری.',
@@ -235,6 +241,15 @@ export const sampleReliefFoundationLetterData: SampleLandingData = {
       href: '/samples/social-security-letter',
       desc: 'پیگیری بیمه ازکارافتادگی، بازنشستگی و بیمه بیکاری.',
       badge: 'تامین اجتماعی',
+    },
+  ],
+
+  relatedArticles: [
+    {
+      title: 'اصول و قواعد نگارش نامه‌های اداری استاندارد',
+      href: '/knowledge/how-to-write-administrative-letter',
+      desc: 'اصول و چارچوب تنظیم نامه‌های اداری رسمی، عریضه‌ها و تقاضانامه‌ها.',
+      badge: 'راهنمای مرجع',
     },
   ],
 

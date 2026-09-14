@@ -211,6 +211,12 @@ export const sampleLetterToTaxOfficeData: SampleLandingData = {
 
   relatedSamples: [
     {
+      title: 'مرجع جامع نمونه نامه‌های اداری و رسمی',
+      href: '/samples/administrative-letters',
+      desc: 'بانک الگوهای نامه‌نگاری رسمی به کلیه ارگان‌ها و سازمان‌های کشور.',
+      badge: 'مرجع اصلی',
+    },
+    {
       title: 'نمونه نامه رسمی به استاندار و فرمانداری',
       href: '/samples/letter-to-governor',
       desc: 'عریضه و نامه اداری جهت پیگیری امور صنفی و تولیدی.',

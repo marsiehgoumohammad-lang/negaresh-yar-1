@@ -212,6 +212,12 @@ export const sampleEducationOfficeLetterData: SampleLandingData = {
 
   relatedSamples: [
     {
+      title: 'مرجع جامع نمونه نامه‌های اداری و رسمی',
+      href: '/samples/administrative-letters',
+      desc: 'بانک الگوهای نامه‌نگاری رسمی به کلیه ارگان‌ها و سازمان‌های کشور.',
+      badge: 'مرجع اصلی',
+    },
+    {
       title: 'نمونه نامه به دانشگاه و وزارت علوم',
       href: '/samples/university-letter',
       desc: 'مکاتبات شهریه، میهمانی، خوابگاه و انصراف از تحصیل دانشگاهی.',
@@ -228,6 +234,15 @@ export const sampleEducationOfficeLetterData: SampleLandingData = {
       href: '/samples/administrative-court-justice-complaint',
       desc: 'اعتراض به احکام کارگزینی، رتبه‌بندی و هیئت تخلفات آموزش و پرورش.',
       badge: 'دیوان عدالت',
+    },
+  ],
+
+  relatedArticles: [
+    {
+      title: 'اصول و قواعد نگارش نامه‌های اداری استاندارد',
+      href: '/knowledge/how-to-write-administrative-letter',
+      desc: 'اصول و روش‌های تنظیم درخواست‌های رسمی و اداری به آموزش و پرورش.',
+      badge: 'راهنمای مرجع',
     },
   ],
 

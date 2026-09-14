@@ -216,6 +216,12 @@ export const sampleBankMortgageReleaseData: SampleLandingData = {
 
   relatedSamples: [
     {
+      title: 'مرجع جامع نمونه نامه‌های اداری و رسمی',
+      href: '/samples/administrative-letters',
+      desc: 'بانک الگوهای نامه‌نگاری رسمی به کلیه ارگان‌ها و سازمان‌های کشور.',
+      badge: 'مرجع اصلی',
+    },
+    {
       title: 'نمونه نامه به بانک (مرجع اصلی)',
       href: '/samples/bank-letter',
       desc: 'هاب کامل مکاتبات اداری و بانکی.',

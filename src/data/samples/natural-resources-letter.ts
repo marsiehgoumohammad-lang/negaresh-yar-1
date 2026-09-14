@@ -185,6 +185,33 @@ export const sampleNaturalResourcesLetterData: SampleLandingData = {
     },
   ],
 
+  relatedSamples: [
+    {
+      title: 'مرجع جامع نمونه نامه‌های اداری و رسمی',
+      href: '/samples/administrative-letters',
+      desc: 'بانک الگوهای نامه‌نگاری رسمی به کلیه ارگان‌ها و سازمان‌های کشور.',
+      badge: 'مرجع اصلی',
+    },
+    {
+      title: 'نمونه نامه به مدیریت جهاد کشاورزی',
+      href: '/samples/agricultural-office-letter',
+      desc: 'لایحه دفاعیه تغییر کاربری، مجوز فنس‌کشی و معافیت‌های باغبانی.',
+      badge: 'جهاد کشاورزی',
+    },
+    {
+      title: 'نمونه نامه به اداره ثبت اسناد و املاک',
+      href: '/samples/real-estate-registry-letter',
+      desc: 'افراز، تفکیک و رفع بازداشت پلاک‌های ثبتی و اسناد مالکیت.',
+      badge: 'ثبت اسناد',
+    },
+    {
+      title: 'نمونه دادخواست دیوان عدالت اداری',
+      href: '/samples/administrative-court-justice-complaint',
+      desc: 'ابطال آرای کمیسیون‌های تجدیدنظر و تصمیمات غیرقانونی اداری.',
+      badge: 'دیوان عدالت',
+    },
+  ],
+
   relatedArticles: [
     {
       title: 'راهنمای جامع اثبات مستثنیات اراضی ملی و اعتراض به ماده ۵۶',

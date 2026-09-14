@@ -296,24 +296,45 @@ export const sampleBankLetterData: SampleLandingData = {
     },
   ],
 
+  relatedSamples: [
+    {
+      title: 'مرجع جامع نمونه نامه‌های اداری و رسمی',
+      href: '/samples/administrative-letters',
+      desc: 'بانک الگوهای نامه‌نگاری رسمی به کلیه ارگان‌ها و سازمان‌های کشور.',
+      badge: 'مرجع اصلی',
+    },
+    {
+      title: 'نمونه درخواست وام و تسهیلات بانکی',
+      href: '/samples/bank-loan-request',
+      desc: 'متن درخواست وام قرض‌الحسنه، خرید مسکن و سرمایه در گردش.',
+      badge: 'تسهیلات',
+    },
+    {
+      title: 'نمونه تقاضای تقسیط و استمهال بدهی بانکی',
+      href: '/samples/bank-debt-installment',
+      desc: 'درخواست مهلت و تقسیط مجدد اقساط معوق وام بانکی.',
+      badge: 'تقسیط',
+    },
+    {
+      title: 'نمونه نامه تقاضای فک رهن سند ملکی',
+      href: '/samples/bank-mortgage-release',
+      desc: 'درخواست آزادسازی وثیقه و سند پس از تسویه کامل بدهی.',
+      badge: 'فک رهن',
+    },
+  ],
+
   relatedArticles: [
     {
-      title: 'راهنمای جامع رفع سوءاثر از چک برگشتی و بدهی معوق بانکی',
-      href: '/knowledge/check-bad-credit-removal',
-      desc: 'روش‌های قانونی حذف نام از لیست سیاه بانک مرکزی و دریافت مجدد دسته چک.',
+      title: 'اصول و قواعد نگارش نامه‌های اداری استاندارد',
+      href: '/knowledge/how-to-write-administrative-letter',
+      desc: 'راهنمای جامع تدوین مکاتبات رسمی، نامه‌های بانکی و الزامات ساختاری.',
+      badge: 'راهنمای مرجع',
+    },
+    {
+      title: 'راهنمای جامع چک برگشتی و قوانین صیادی',
+      href: '/knowledge/bounced-check-guide',
+      desc: 'قوانین و راهنمای اقدامات بانکی، رفع سوء اثر و وصول مطالبات.',
       badge: 'پایگاه دانش',
-    },
-    {
-      title: 'اجراییه فوری چک صیادی بر اساس ماده ۲۳ قانون جدید',
-      href: '/knowledge/sayad-check-execution-article-23',
-      desc: 'فرآیند صدور اجرائیه مستقیم در دادگاه بدون نیاز به دادخواست ماهوی.',
-      badge: 'حقوقی',
-    },
-    {
-      title: 'راهنمای جامع شرکت در مزایدات دولتی و اجرای احکام',
-      href: '/knowledge/government-auction-guide',
-      desc: 'قوانین توقیف وثایق، شرکت در مزایده ستاد ایران و استرداد سپرده شرکت در مزایده.',
-      badge: 'مزایدات',
     },
   ],
 

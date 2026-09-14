@@ -303,6 +303,15 @@ export const sampleSocialSecurityLetterData: SampleLandingData = {
     },
   ],
 
+  relatedArticles: [
+    {
+      title: 'اصول و قواعد نگارش نامه‌های اداری استاندارد',
+      href: '/knowledge/how-to-write-administrative-letter',
+      desc: 'راهنمای جامع مکاتبات رسمی، نامه‌های اداری و تقاضانامه‌های سازمانی.',
+      badge: 'راهنمای مرجع',
+    },
+  ],
+
   ctaTitle: 'نیاز به تنظیم نامه مستدل به شعبه تامین اجتماعی دارید؟',
   ctaDescription:
     'متخصصین روابط کار و بیمه نگارش یار، متن نامه شما را متناسب با آخرین بخشنامه‌های سازمان و مستندات قانونی تدوین می‌کنند.',

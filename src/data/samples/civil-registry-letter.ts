@@ -292,6 +292,15 @@ export const sampleCivilRegistryLetterData: SampleLandingData = {
     },
   ],
 
+  relatedArticles: [
+    {
+      title: 'اصول و قواعد نگارش نامه‌های اداری استاندارد',
+      href: '/knowledge/how-to-write-administrative-letter',
+      desc: 'اصول تنظیم درخواست‌های اداری، استشهادنامه‌ها و مکاتبات سازمانی.',
+      badge: 'راهنمای مرجع',
+    },
+  ],
+
   ctaTitle: 'می‌خواهید نام یا شناسنامه خود را بدون دردسر اصلاح کنید؟',
   ctaDescription:
     'کارشناسان نگارش یار، متن استشهاد و لایحه درخواستی شما به هیئت حل اختلاف ثبت احوال را به گونه‌ای تنظیم می‌کنند که در اولین بررسی به تصویب برسد.',

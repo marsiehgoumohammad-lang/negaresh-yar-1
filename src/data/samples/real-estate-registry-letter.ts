@@ -209,6 +209,12 @@ export const sampleRealEstateRegistryLetterData: SampleLandingData = {
 
   relatedSamples: [
     {
+      title: 'مرجع جامع نمونه نامه‌های اداری و رسمی',
+      href: '/samples/administrative-letters',
+      desc: 'بانک الگوهای نامه‌نگاری رسمی به کلیه ارگان‌ها و سازمان‌های کشور.',
+      badge: 'مرجع اصلی',
+    },
+    {
       title: 'نمونه نامه به شهرداری (ماده ۱۰۰ و پایان‌کار)',
       href: '/samples/municipality-letter',
       desc: 'مکاتبات مربوط به استعلام پروانه ساختمانی و پایان‌کار.',
@@ -225,6 +231,15 @@ export const sampleRealEstateRegistryLetterData: SampleLandingData = {
       href: '/samples/official-deed-compulsion-petition',
       desc: 'الزام قانونی فروشنده به حضور در دفتر اسناد رسمی.',
       badge: 'دادخواست حقوقی',
+    },
+  ],
+
+  relatedArticles: [
+    {
+      title: 'اصول و قواعد نگارش نامه‌های اداری استاندارد',
+      href: '/knowledge/how-to-write-administrative-letter',
+      desc: 'راهنمای جامع تدوین درخواست‌های ثبتی، اداری و مکاتبات سازمانی.',
+      badge: 'راهنمای مرجع',
     },
   ],
 

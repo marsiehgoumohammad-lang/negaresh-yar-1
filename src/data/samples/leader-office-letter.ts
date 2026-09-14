@@ -276,6 +276,12 @@ export const sampleLeaderOfficeLetterData: SampleLandingData = {
 
   relatedSamples: [
     {
+      title: 'مرجع جامع نمونه نامه‌های اداری و رسمی',
+      href: '/samples/administrative-letters',
+      desc: 'بانک الگوهای نامه‌نگاری رسمی به کلیه ارگان‌ها و سازمان‌های کشور.',
+      badge: 'مرجع اصلی',
+    },
+    {
         'title': 'نمونه دادخواست دیوان عدالت اداری',
         'href': '/samples/administrative-court-justice-complaint',
         'desc': 'ابطال رأی کمیسیون ماده ۱۰۰، ماده ۷۷ و آرای اداری.',

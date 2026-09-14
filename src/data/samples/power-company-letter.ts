@@ -183,6 +183,33 @@ export const samplePowerCompanyLetterData: SampleLandingData = {
     },
   ],
 
+  relatedSamples: [
+    {
+      title: 'مرجع جامع نمونه نامه‌های اداری و رسمی',
+      href: '/samples/administrative-letters',
+      desc: 'بانک الگوهای نامه‌نگاری رسمی به کلیه ارگان‌ها و سازمان‌های کشور.',
+      badge: 'مرجع اصلی',
+    },
+    {
+      title: 'نمونه نامه به شرکت ملی گاز',
+      href: '/samples/gas-company-letter',
+      desc: 'درخواست تفکیک کنتور، جابجایی علمک و تقسیط قبوض گاز.',
+      badge: 'شرکت گاز',
+    },
+    {
+      title: 'نمونه نامه به شرکت آب و فاضلاب',
+      href: '/samples/water-company-letter',
+      desc: 'تفکیک کنتور آب، تقسیط حق انشعاب و اعتراض به قبوض آبفا.',
+      badge: 'آب و فاضلاب',
+    },
+    {
+      title: 'نمونه نامه به شهرداری',
+      href: '/samples/municipality-letter',
+      desc: 'مکاتبات پروانه ساختمانی، پایان‌کار و کمیسیون ماده ۱۰۰.',
+      badge: 'شهرداری',
+    },
+  ],
+
   relatedArticles: [
     {
       title: 'اصول نامه‌نگاری اداری رسمی با مراجع دولتی',

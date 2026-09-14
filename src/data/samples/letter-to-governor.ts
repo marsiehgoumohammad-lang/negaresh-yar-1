@@ -208,6 +208,12 @@ export const sampleLetterToGovernorData: SampleLandingData = {
 
   relatedSamples: [
     {
+      title: 'مرجع جامع نمونه نامه‌های اداری و رسمی',
+      href: '/samples/administrative-letters',
+      desc: 'بانک الگوهای نامه‌نگاری رسمی به کلیه ارگان‌ها و سازمان‌های کشور.',
+      badge: 'مرجع اصلی',
+    },
+    {
       title: 'نمونه لایحه اعتراض به برگ تشخیص مالیات',
       href: '/samples/letter-to-tax-office',
       desc: 'لایحه دفاعیه اعتراض مالیاتی و ماده ۲۳۸ قانون مالیات‌های مستقیم.',

@@ -286,6 +286,15 @@ export const sampleUniversityLetterData: SampleLandingData = {
     },
   ],
 
+  relatedArticles: [
+    {
+      title: 'اصول و قواعد نگارش نامه‌های اداری استاندارد',
+      href: '/knowledge/how-to-write-administrative-letter',
+      desc: 'اصول و ساختار نامه‌نگاری رسمی دانشگاهی و سازمانی.',
+      badge: 'راهنمای مرجع',
+    },
+  ],
+
   ctaTitle: 'نیاز به تنظیم نامه موثر به ریاست یا کمیسیون دانشگاه دارید؟',
   ctaDescription:
     'کارشناسان نگارش یار متن عریضه و نامه دانشگاهی شما را با استناد دقیق به مصوبات شورای عالی انقلاب فرهنگی و آیین‌نامه‌های وزارت علوم تدوین می‌کنند.',

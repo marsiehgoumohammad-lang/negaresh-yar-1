@@ -154,6 +154,12 @@ export const howToWriteAdministrativeLetterData: KnowledgeArticleData = {
 
   relatedSamples: [
     {
+      title: 'مرجع جامع نمونه نامه‌های اداری و رسمی',
+      href: '/samples/administrative-letters',
+      desc: 'بانک کامل الگوهای مکاتبات اداری، درخواست‌ها و عریضه‌نویسی به کلیه سازمان‌ها.',
+      badge: 'مرجع اصلی',
+    },
+    {
       title: 'نمونه نامه اداری و درخواست رسمی سازمانی',
       href: '/samples/administrative-letter',
       desc: 'الگوی آماده و تایپ‌شده انواع مکاتبات و نامه‌های اداری استاندارد.',

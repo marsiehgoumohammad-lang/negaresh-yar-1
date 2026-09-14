@@ -222,6 +222,12 @@ export const sampleBankComplaintData: SampleLandingData = {
 
   relatedSamples: [
     {
+      title: 'مرجع جامع نمونه نامه‌های اداری و رسمی',
+      href: '/samples/administrative-letters',
+      desc: 'بانک الگوهای نامه‌نگاری رسمی به کلیه ارگان‌ها و سازمان‌های کشور.',
+      badge: 'مرجع اصلی',
+    },
+    {
       title: 'نمونه نامه به بانک (هاب مرکزی)',
       href: '/samples/bank-letter',
       desc: 'مرجع کلیه مکاتبات و نامه‌های اداری بانکی.',

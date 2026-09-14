@@ -183,6 +183,33 @@ export const sampleAgriculturalOfficeLetterData: SampleLandingData = {
     },
   ],
 
+  relatedSamples: [
+    {
+      title: 'مرجع جامع نمونه نامه‌های اداری و رسمی',
+      href: '/samples/administrative-letters',
+      desc: 'بانک الگوهای نامه‌نگاری رسمی به کلیه ارگان‌ها و سازمان‌های کشور.',
+      badge: 'مرجع اصلی',
+    },
+    {
+      title: 'نمونه نامه به اداره منابع طبیعی و آبخیزداری',
+      href: '/samples/natural-resources-letter',
+      desc: 'اعتراض به اراضی ملی، کمیسیون ماده ۵۶ و رفع تداخلات ثبتی.',
+      badge: 'منابع طبیعی',
+    },
+    {
+      title: 'نمونه نامه به شهرداری',
+      href: '/samples/municipality-letter',
+      desc: 'مکاتبات کمیسیون ماده ۱۰۰، پایان‌کار و مجوزهای ساختمانی.',
+      badge: 'شهرداری',
+    },
+    {
+      title: 'نمونه دادخواست دیوان عدالت اداری',
+      href: '/samples/administrative-court-justice-complaint',
+      desc: 'ابطال آرای کمیسیون‌های تجدیدنظر و تصمیمات غیرقانونی اداری.',
+      badge: 'دیوان عدالت',
+    },
+  ],
+
   relatedArticles: [
     {
       title: 'تفسیر کامل قانون حفظ کاربری اراضی زراعی و باغات و آرای وحدت رویه',

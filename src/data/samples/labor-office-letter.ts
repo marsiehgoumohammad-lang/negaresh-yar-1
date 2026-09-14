@@ -297,6 +297,15 @@ export const sampleLaborOfficeLetterData: SampleLandingData = {
     },
   ],
 
+  relatedArticles: [
+    {
+      title: 'اصول و قواعد نگارش نامه‌های اداری استاندارد',
+      href: '/knowledge/how-to-write-administrative-letter',
+      desc: 'اصول نامه‌نگاری رسمی و تنظیم مستدل نامه‌ها و دادخواست‌های اداری.',
+      badge: 'راهنمای مرجع',
+    },
+  ],
+
   ctaTitle: 'می‌خواهید حقوق و سنوات کاری خود را بدون نقص مطالبه کنید؟',
   ctaDescription:
     'کارشناسان روابط کار نگارش یار با استناد به مواد ۱۴۸ و ۲۴ قانون کار و محاسبات دقیق روزشمار، نامه و لایحه احقاق حق شما را تنظیم می‌کنند.',

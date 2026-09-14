@@ -293,6 +293,15 @@ export const sampleInspectionOrganizationLetterData: SampleLandingData = {
     },
   ],
 
+  relatedArticles: [
+    {
+      title: 'اصول و قواعد نگارش نامه‌های اداری استاندارد',
+      href: '/knowledge/how-to-write-administrative-letter',
+      desc: 'راهنمای جامع تدوین مکاتبات رسمی، نامه‌های اداری و گزارش‌های سازمانی.',
+      badge: 'راهنمای مرجع',
+    },
+  ],
+
   ctaTitle: 'نیاز به تنظیم گزارش نظارتی یا شکایت به سازمان بازرسی دارید؟',
   ctaDescription:
     'متخصصین حقوق عمومی نگارش یار گزارش شما را به صورت مستند، دارای استناد به مواد قانونی ترک فعل و عاری از هرگونه نقص شکلی تنظیم می‌نمایند.',

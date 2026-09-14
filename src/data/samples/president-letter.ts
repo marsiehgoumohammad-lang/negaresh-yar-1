@@ -281,6 +281,12 @@ export const samplePresidentLetterData: SampleLandingData = {
 
   relatedSamples: [
     {
+      title: 'مرجع جامع نمونه نامه‌های اداری و رسمی',
+      href: '/samples/administrative-letters',
+      desc: 'بانک الگوهای نامه‌نگاری رسمی به کلیه ارگان‌ها و سازمان‌های کشور.',
+      badge: 'مرجع اصلی',
+    },
+    {
       title: 'نمونه نامه اداری رسمی',
       href: '/samples/administrative-letter',
       desc: 'الگوی مکاتبات رسمی اداری.',
@@ -297,6 +303,21 @@ export const samplePresidentLetterData: SampleLandingData = {
       href: '/samples/insolvency',
       desc: 'الگوی دادخواست تقسیط محکوم‌به و هزینه دادرسی.',
       badge: 'نمونه حقوقی',
+    },
+  ],
+
+  relatedArticles: [
+    {
+      title: 'چگونه به رئیس جمهور و مسئولان نامه بنویسیم؟',
+      href: '/knowledge/how-to-write-president-letter',
+      desc: 'اصول تنظیم نامه‌های مردمی اثرگذار و پیگیری در سامانه ارتباطات مردمی ۱۱۱ (سامد).',
+      badge: 'راهنمای تخصصی',
+    },
+    {
+      title: 'اصول و قواعد نگارش نامه‌های اداری استاندارد',
+      href: '/knowledge/how-to-write-administrative-letter',
+      desc: 'راهنمای جامع مکاتبات سازمانی، لحن رسمی و ارکان پنج‌گانه نامه اداری.',
+      badge: 'راهنمای مرجع',
     },
   ],
 

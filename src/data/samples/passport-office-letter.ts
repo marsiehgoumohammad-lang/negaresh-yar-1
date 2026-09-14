@@ -208,6 +208,12 @@ export const samplePassportOfficeLetterData: SampleLandingData = {
 
   relatedSamples: [
     {
+      title: 'مرجع جامع نمونه نامه‌های اداری و رسمی',
+      href: '/samples/administrative-letters',
+      desc: 'بانک الگوهای نامه‌نگاری رسمی به کلیه ارگان‌ها و سازمان‌های کشور.',
+      badge: 'مرجع اصلی',
+    },
+    {
       title: 'نمونه نامه به اداره ثبت اسناد و املاک',
       href: '/samples/real-estate-registry-letter',
       desc: 'رفع ممنوع‌الخروجی پرونده‌های مهریه و چک در اجرای ثبت.',
@@ -224,6 +230,15 @@ export const samplePassportOfficeLetterData: SampleLandingData = {
       href: '/samples/administrative-court-justice-complaint',
       desc: 'ابطال ممنوع‌الخروجی‌های غیرقانونی دستگاه‌های دولتی.',
       badge: 'دیوان عدالت',
+    },
+  ],
+
+  relatedArticles: [
+    {
+      title: 'اصول و قواعد نگارش نامه‌های اداری استاندارد',
+      href: '/knowledge/how-to-write-administrative-letter',
+      desc: 'راهنمای جامع تدوین درخواست‌های رسمی، نامه‌های اداری و تقاضانامه‌ها.',
+      badge: 'راهنمای مرجع',
     },
   ],
 

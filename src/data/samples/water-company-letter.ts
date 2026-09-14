@@ -186,6 +186,33 @@ export const sampleWaterCompanyLetterData: SampleLandingData = {
     },
   ],
 
+  relatedSamples: [
+    {
+      title: 'مرجع جامع نمونه نامه‌های اداری و رسمی',
+      href: '/samples/administrative-letters',
+      desc: 'بانک الگوهای نامه‌نگاری رسمی به کلیه ارگان‌ها و سازمان‌های کشور.',
+      badge: 'مرجع اصلی',
+    },
+    {
+      title: 'نمونه نامه به شرکت توزیع نیروی برق',
+      href: '/samples/power-company-letter',
+      desc: 'درخواست انشعاب، جابجایی تیر و جبران خسارت نوسان برق.',
+      badge: 'شرکت برق',
+    },
+    {
+      title: 'نمونه نامه به شرکت ملی گاز',
+      href: '/samples/gas-company-letter',
+      desc: 'درخواست تفکیک کنتور، جابجایی علمک و تقسیط قبوض گاز.',
+      badge: 'شرکت گاز',
+    },
+    {
+      title: 'نمونه نامه به شهرداری',
+      href: '/samples/municipality-letter',
+      desc: 'مکاتبات پروانه ساختمانی، پایان‌کار و کمیسیون ماده ۱۰۰.',
+      badge: 'شهرداری',
+    },
+  ],
+
   relatedArticles: [
     {
       title: 'حقوق و تکالیف مالکان در تفکیک اشتراکات ساختمان طبق قانون تملک آپارتمان‌ها',
