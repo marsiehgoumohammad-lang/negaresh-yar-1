@@ -190,16 +190,16 @@ export const sampleDiyaInstallmentPetitionData: SampleLandingData = {
 
   relatedServices: [
     {
-      title: 'تنظیم دادخواست اعسار و تقسیط دیه',
-      href: '/request?service=diya-installment-petition',
+      title: 'تنظیم دادخواست اعسار از محکوم‌به و دیه',
+      href: '/services/insolvency-from-judgment',
       badge: 'خدمت تخصصی',
-      desc: 'تنظیم فوری دادخواست اعسار از دیه تصادفات و حوادث کار با فرم استشهادیه قانونی.',
+      desc: 'تنظیم فوری دادخواست اعسار از دیه تصادفات و حوادث کار با استشهادیه قانونی.',
     },
     {
-      title: 'تنظیم دادخواست تقسیط جزای نقدی کیفری',
-      href: '/samples/fine-installment-petition',
-      badge: 'اوراق قضایی',
-      desc: 'تقسیط جریمه‌های نقدی دادگاه کیفری برای جلوگیری از حبس بدل از جریمه.',
+      title: 'تنظیم لایحه دفاعیه اجرای احکام',
+      href: '/services/legal-brief',
+      badge: 'لایحه دفاعیه',
+      desc: 'نگارش لوایح اثبات اعسار، عدم تمکن و دفاع در برابر رد تقسیط دیه.',
     },
   ],
 
@@ -226,9 +226,9 @@ export const sampleDiyaInstallmentPetitionData: SampleLandingData = {
 
   relatedArticles: [
     {
-      title: 'نحوه محاسبه و تقسیط دیه در دادگاه کیفری',
-      href: '/knowledge/diya-calculation-and-installment',
-      desc: 'محاسبه دیه به نرخ روز، نقش صندوق تأمین خسارت و مراحل تقسیط.',
+      title: 'چگونه بدهی و محکومیت مالی را قسطی کنیم؟',
+      href: '/knowledge/how-to-install-debt-and-mahrieh',
+      desc: 'راهنمای کاربردی اعسار، تقسیط دیون دادگاه و جلوگیری از صدور برگ جلب.',
       badge: 'مقاله آموزشی'
     },
     {
@@ -238,9 +238,9 @@ export const sampleDiyaInstallmentPetitionData: SampleLandingData = {
       badge: 'مقاله آموزشی'
     },
     {
-      title: 'راهنمای توقف جلب و دستور آزادی محکومان مالی',
-      href: '/knowledge/stopping-arrest-warrant-guide',
-      desc: 'چگونه با ثبت اعسار از ورود به زندان جلوگیری کنیم.',
+      title: 'حکم قطعی دادگاه چیست و چگونه اجرا می‌شود؟',
+      href: '/knowledge/what-is-final-court-judgment',
+      desc: 'مراحل صدور اجراییه، مهلت‌های قانونی و نحوه توقف عملیات اجرایی.',
       badge: 'مقاله آموزشی'
     }
   ],
@@ -248,7 +248,7 @@ export const sampleDiyaInstallmentPetitionData: SampleLandingData = {
   ctaTitle: 'محکوم به پرداخت دیه سنگین شده‌اید و خطر جلب شما را تهدید می‌کند؟',
   ctaDescription: 'با تنظیم استاندارد دادخواست اعسار و تقسیط دیه توسط متخصصان نگارش یار، پرداخت دیه را به اقساط متناسب با درآمد خود تبدیل کرده و مانع از بازداشت شوید.',
   ctaPrimaryBtnText: 'سفارش دادخواست اعسار و تقسیط دیه',
-  ctaPrimaryHref: '/request?service=diya-installment-petition',
+  ctaPrimaryHref: '/request?service=insolvency-from-judgment',
   messengerMessage: 'سلام، در خصوص ثبت دادخواست اعسار و تقسیط دیه راهنمایی می‌خواستم.',
 
   publishedAt: '2026-03-08T08:00:00.000Z',

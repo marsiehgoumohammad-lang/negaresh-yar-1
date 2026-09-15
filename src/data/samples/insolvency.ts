@@ -266,16 +266,16 @@ export const sampleInsolvencyData: SampleLandingData = {
 
   relatedServices: [
     {
-      title: 'دادخواست اعسار و تقسیط',
-      href: '/services/insolvency-petition',
-      desc: 'سفارش تنظیم تخصصی دادخواست اعسار و استشهادیه.',
-      badge: 'اعسار',
+      title: 'تنظیم دادخواست اعسار از محکوم‌به و تقسیط بدهی',
+      href: '/services/insolvency-from-judgment',
+      desc: 'سفارش تنظیم تخصصی دادخواست اعسار، فرم ماده ۸ و استشهادیه شهود جهت توقف جلب.',
+      badge: 'اعسار و تقسیط',
     },
     {
-      title: 'تنظیم دادخواست حقوقی',
-      href: '/services/petition-writing',
-      desc: 'تنظیم دادخواست‌های عمومی ثنا.',
-      badge: 'اوراق قضایی',
+      title: 'تنظیم دادخواست اعسار از هزینه دادرسی',
+      href: '/services/insolvency-court-fee',
+      desc: 'معافیت موقت از پرداخت تمبر دادرسی مرحله بدوی و تجدیدنظر.',
+      badge: 'هزینه دادرسی',
     },
     {
       title: 'تنظیم لایحه دفاعیه',
@@ -293,6 +293,24 @@ export const sampleInsolvencyData: SampleLandingData = {
       badge: 'تقسیط مهریه'
     },
     {
+      title: 'نمونه دادخواست اعسار از هزینه دادرسی بدوی و تجدیدنظر',
+      href: '/samples/court-fee-insolvency',
+      desc: 'الگوی معافیت از پرداخت تمبر دادرسی با استشهادیه شهود.',
+      badge: 'هزینه دادرسی'
+    },
+    {
+      title: 'نمونه دادخواست اعسار از پرداخت دیه و تقسیط',
+      href: '/samples/diya-installment-petition',
+      desc: 'تقسیط دیه تصادف و ضرب و جرح و جلوگیری از حبس.',
+      badge: 'تقسیط دیه'
+    },
+    {
+      title: 'نمونه دادخواست تقسیط جزای نقدی کیفری',
+      href: '/samples/fine-installment-petition',
+      desc: 'تقسیط جریمه‌های نقدی دادگاه کیفری موضوع ماده ۵۲۹.',
+      badge: 'تقسیط جزای نقدی'
+    },
+    {
       title: 'نمونه لایحه رفع توقیف مستثنیات دین',
       href: '/samples/property-attachment-lifting-request',
       desc: 'رفع بازداشت ودیعه مسکن، خودروی امرار معاش و ابزار کار از اجرای احکام.',
@@ -303,18 +321,6 @@ export const sampleInsolvencyData: SampleLandingData = {
       href: '/samples/third-party-objection-to-execution',
       desc: 'رفع توقیف اموال بستگان و اشخاص ثالث در پرونده بدهی یا مهریه.',
       badge: 'اعتراض ثالث'
-    },
-    {
-      title: 'نمونه تقاضای اجرای مهریه از اداره ثبت',
-      href: '/samples/mehrieh-execution-registry-petition',
-      desc: 'توقیف حساب و اموال زوج از طریق اجرای ثبت.',
-      badge: 'اجرای ثبت'
-    },
-    {
-      title: 'نمونه دادخواست مطالبه نفقه معوقه و جاریه',
-      href: '/samples/nafaqah-claim-petition',
-      desc: 'مطالبه نفقه زوجه و فرزندان با نظر کارشناس.',
-      badge: 'مطالبه نفقه'
     }
   ],
 
@@ -342,7 +348,7 @@ export const sampleInsolvencyData: SampleLandingData = {
   ctaTitle: 'تنظیم تخصصی دادخواست اعسار و استشهادیه متناسب با پرونده',
   ctaDescription: 'اگر شرایط پرونده، درآمد یا محکومیت مالی شما با این الگو متفاوت است، می‌توانید درخواست تنظیم دادخواست اعسار و صورت دارایی متناسب با وضعیت خود را ثبت کنید.',
   ctaPrimaryBtnText: 'ثبت سفارش تنظیم اعسار',
-  ctaPrimaryHref: '/request?service=insolvency-petition',
+  ctaPrimaryHref: '/request?service=insolvency-from-judgment',
   messengerMessage: 'سلام، درباره دادخواست اعسار و تقسیط محکوم‌به و مهریه سوال دارم. لطفا راهنمایی بفرمایید.',
 
   publishedAt: '2026-01-15T08:00:00.000Z',

@@ -1,6 +1,7 @@
 import React from 'react';
 import Script from 'next/script';
 import { LandingPageTemplate } from '@/components/services/LandingPageTemplate';
+import { LeaderOfficeLetterGuideSection } from '@/components/services/LeaderOfficeLetterGuideSection';
 import {
   leaderOfficeLetterData,
   leaderOfficeLetterMetadata,
@@ -9,6 +10,11 @@ import {
 export const metadata = leaderOfficeLetterMetadata;
 
 export default function LeaderOfficeLetterPage() {
+  const data = {
+    ...leaderOfficeLetterData,
+    customGuideContent: <LeaderOfficeLetterGuideSection />,
+  };
+
   const breadcrumbSchema = {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
@@ -28,38 +34,54 @@ export default function LeaderOfficeLetterPage() {
       {
         '@type': 'ListItem',
         position: 3,
-        name: leaderOfficeLetterData.h1Title,
-        item: 'https://www.negaresh-yar.ir/services/leader-office-letter',
+        name: data.h1Title,
+        item: `https://www.negaresh-yar.ir/services/${data.slug}`,
       },
     ],
   };
 
   const serviceSchema = {
     '@context': 'https://schema.org',
-    '@type': 'Service',
-    name: leaderOfficeLetterData.h1Title,
-    description: leaderOfficeLetterData.heroSubtitle,
+    '@type': 'LegalService',
+    name: data.h1Title,
+    description: data.heroSubtitle,
     provider: {
       '@type': 'Organization',
       name: 'نگارش یار',
       url: 'https://www.negaresh-yar.ir',
+      telephone: '+989915147789',
+      address: {
+        '@type': 'PostalAddress',
+        addressLocality: 'مشهد',
+        addressRegion: 'خراسان رضوی',
+        addressCountry: 'IR',
+      },
+      geo: {
+        '@type': 'GeoCoordinates',
+        latitude: '36.2972',
+        longitude: '59.6067',
+      },
+      logo: {
+        '@type': 'ImageObject',
+        url: 'https://www.negaresh-yar.ir/logo.jpg',
+      },
     },
     areaServed: {
       '@type': 'Country',
-      name: 'ایران',
+      name: 'Iran',
     },
-    serviceType: 'Supreme Leader Office Letter Drafting',
+    url: `https://www.negaresh-yar.ir/services/${data.slug}`,
   };
 
   const faqSchema = {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
-    mainEntity: leaderOfficeLetterData.faqs.map((faq) => ({
+    mainEntity: data.faqs.map((f) => ({
       '@type': 'Question',
-      name: faq.q,
+      name: f.q,
       acceptedAnswer: {
         '@type': 'Answer',
-        text: faq.a,
+        text: f.a,
       },
     })),
   };
@@ -67,22 +89,22 @@ export default function LeaderOfficeLetterPage() {
   return (
     <>
       <Script
-        id="breadcrumb-schema-leader"
+        id="breadcrumb-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
       <Script
-        id="service-schema-leader"
+        id="service-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
       />
       <Script
-        id="faq-schema-leader"
+        id="faq-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
       <main className="min-h-screen bg-[#070B15]">
-        <LandingPageTemplate data={leaderOfficeLetterData} />
+        <LandingPageTemplate data={data} />
       </main>
     </>
   );

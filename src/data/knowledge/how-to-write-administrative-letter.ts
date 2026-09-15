@@ -30,8 +30,9 @@ export const howToWriteAdministrativeLetterData: KnowledgeArticleData = {
     { id: 'tone-words', title: '۲. کلمات و عبارت‌های کلیدی اداری (لحن استاندارد)' },
     { id: 'types', title: '۳. انواع نامه‌های اداری (درخواست، عریضه، اعتراض، گزارش)' },
     { id: 'tracking-tips', title: '۴. نکات مهم در ثبت دبیرخانه و پیگیری نامه' },
-    { id: 'common-mistakes', title: '۵. اشتباهات رایج در نامه‌نگاری اداری' },
-    { id: 'faq', title: '۶. سوالات متداول' },
+    { id: 'samples-directory', title: '۵. راهنمای نمونه نامه‌ها و عریضه‌ها بر اساس ۳۱ سازمان کشور' },
+    { id: 'common-mistakes', title: '۶. اشتباهات رایج در نامه‌نگاری اداری' },
+    { id: 'faq', title: '۷. سوالات متداول' },
   ],
 
   sections: [
@@ -89,6 +90,25 @@ export const howToWriteAdministrativeLetterData: KnowledgeArticleData = {
         'شماره ثبت دبیرخانه سند قانونی تحویل نامه به سازمان است.',
       ],
     },
+    {
+      id: 'samples-directory',
+      title: '۵. راهنمای نمونه نامه‌ها و عریضه‌ها بر اساس ۳۱ سازمان کشور',
+      paragraphs: [
+        'برای هر سازمان و ارگان رسمی، تشریفات و لحن نامه‌نگاری مختص به همان نهاد وجود دارد. کارشناسان نگارش یار برای ۳۱ نهاد دولتی و قضایی، الگوهای استاندارد و تاییدشده را همراه با فرمت چاپی و فایل آماده گردآوری کرده‌اند. برای مشاهده الگوهای کامل هر بخش می‌توانید از <a href="/samples/administrative-letters">مرجع جامع نمونه نامه‌های اداری نگارش یار</a> یا پیوندهای مستقیم زیر استفاده فرمایید:',
+        '<strong>۱. امور پولی، بانکی و تسهیلات:</strong> برای تقاضای وام قرض‌الحسنه، استمهال دیون و بخشودگی جرایم بانکی به <a href="/samples/bank-letter">نمونه نامه به بانک</a>، <a href="/samples/bank-loan-request">درخواست تسهیلات بانکی</a>، <a href="/samples/bank-debt-installment">تقسیط بدهی و استمهال معوقات</a> و <a href="/samples/bank-penalty-waiver">بخشودگی وجه التزام و جرایم تاخیر بانک</a> مراجعه کنید.',
+        '<strong>۲. نهادهای حاکمیتی و مراجع عالی کشوری:</strong> جهت استمداد و طرح مشکلات با بالاترین مقامات، الگوهای اختصاصی شامل <a href="/samples/president-letter">نمونه عریضه به رئیس جمهور و سامد ۱۱۱</a>، <a href="/samples/leader-office-letter">عریضه به دفتر مقام معظم رهبری</a> و <a href="/samples/letter-to-governor">نامه رسمی به استاندار و فرمانداری</a> تنظیم گردیده است.',
+        '<strong>۳. امور شهری، ساختمانی و شهرداری‌ها:</strong> برای اخذ انشعابات، عوارض نوسازی و دفاعیات کمیسیون‌های شهرداری از <a href="/samples/municipality-letter">نمونه نامه به شهرداری</a> و <a href="/samples/tehran-municipality-letter">نمونه نامه به شهرداری تهران</a> استفاده نمایید.',
+        '<strong>۴. مراجع کار، بیمه، مالیات و اداری:</strong> جهت دفاع در برابر مطالبات بیمه، مالیات و حقوق کارگری، الگوهای <a href="/samples/letter-to-tax-office">لایحه اعتراض به برگ تشخیص مالیات</a>، <a href="/samples/social-security-letter">نامه به سازمان تامین اجتماعی</a>، <a href="/samples/labor-office-letter">نامه و شکایت به اداره کار</a> و دادخواهی در دیوان با <a href="/samples/administrative-court-justice-complaint">دادخواست دیوان عدالت اداری</a> در دسترس است.',
+        '<strong>۵. دانشگاه‌ها، آموزش و پرورش و نظام وظیفه:</strong> نامه‌نگاری‌های تحصیلی و معافیت شامل <a href="/samples/university-president-letter">نامه به رئیس دانشگاه</a>، <a href="/samples/education-office-letter">نامه به اداره آموزش و پرورش</a> و <a href="/samples/military-service-commission-letter">درخواست کمیسیون پزشکی نظام وظیفه</a> می‌باشد.',
+        '<strong>۶. انرژی، آب، برق و گاز:</strong> برای تفکیک کنتور، خسارت نوسان برق و جابجایی علمک، صفحات <a href="/samples/power-company-letter">نامه به شرکت برق</a>، <a href="/samples/gas-company-letter">نامه به شرکت گاز</a> و <a href="/samples/water-company-letter">نامه به شرکت آب و فاضلاب</a> راهنمای گام‌به‌گام ارائه داده‌اند.',
+        '<strong>۷. امور ثبتی، اراضی، بازار و خدمات عمومی:</strong> دسترسی به الگوهای <a href="/samples/real-estate-registry-letter">اداره ثبت اسناد و املاک</a>، <a href="/samples/discretionary-punishments-letter">تعزیرات حکومتی</a>، <a href="/samples/passport-office-letter">اداره گذرنامه و رفع ممنوع‌الخروجی</a>، <a href="/samples/relief-foundation-letter">کمیته امداد و بهزیستی</a>، <a href="/samples/agricultural-office-letter">امور اراضی و جهاد کشاورزی</a>، <a href="/samples/natural-resources-letter">منابع طبیعی ماده ۵۶</a>، <a href="/samples/guild-union-letter">اتحادیه‌های صنفی و اتاق اصناف</a>، <a href="/samples/transportation-road-office-letter">راهداری و حمل‌ونقل جاده‌ای</a> و الگوهای عمومی نظیر <a href="/samples/administrative-letter">نمونه نامه اداری و رسمی</a>، <a href="/samples/company-registration-letter">نامه ثبت شرکت‌ها</a>، <a href="/samples/formal-letter-writing">قواعد نامه‌نگاری رسمی</a> و <a href="/samples/traffic-police-letter">اعتراض به جریمه راهور</a>.',
+      ],
+      calloutBox: {
+        type: 'tip',
+        title: 'تنظیم اختصاصی نامه یا ویرایش نمونه‌ها',
+        text: 'چنانچه پرونده شما دارای جزییات فنی یا پیچیدگی حقوقی است، توصیه می‌شود به جای کپی نمونه‌های آماده، از بخش <a href="/services/administrative-letter">خدمت تنظیم نامه اداری و عریضه رسمی نگارش یار</a> استفاده نمایید تا متن بر اساس مدارک و مستندات شما شخصی‌سازی شود.',
+      },
+    },
   ],
 
   examplesTitle: 'نمونه متن نامه درخواست بخشودگی اداری',
@@ -139,16 +159,34 @@ export const howToWriteAdministrativeLetterData: KnowledgeArticleData = {
 
   relatedServices: [
     {
-      title: 'تنظیم نامه اداری و عریضه',
+      title: 'تنظیم نامه اداری و عریضه رسمی',
       href: '/services/administrative-letter',
-      desc: 'سفارش نگارش نامه‌های اداری و سازمانی.',
-      badge: 'اداری',
+      desc: 'سفارش نگارش نامه‌های اداری، درخواست‌ها و مکاتبات سازمانی.',
+      badge: 'خدمت اصلی',
     },
     {
-      title: 'تنظیم نامه به دفتر رهبری و ریاست جمهوری',
+      title: 'اعتراض به برگ تشخیص و لوایح مالیاتی',
+      href: '/services/letter-to-tax-office',
+      desc: 'دفاعیه مالیاتی ماده ۲۳۸ و تقاضای بخشودگی جرایم اداره مالیات.',
+      badge: 'امور مالیاتی',
+    },
+    {
+      title: 'نگارش نامه به رئیس جمهور و سامد ۱۱۱',
       href: '/services/president-letter',
-      desc: 'نگارش عریضه رسمی سامد ۱۱۱.',
-      badge: 'سازمانی',
+      desc: 'نگارش عریضه رسمی به مرکز ارتباطات مردمی نهاد ریاست جمهوری.',
+      badge: 'ریاست جمهوری',
+    },
+    {
+      title: 'عریضه‌نویسی به دفتر مقام معظم رهبری',
+      href: '/services/leader-office-letter',
+      desc: 'تنظیم عریضه رسمی، تقاضای عفو و استمداد از بیت رهبری.',
+      badge: 'دفتر رهبری',
+    },
+    {
+      title: 'مکاتبه با استاندار و فرمانداری',
+      href: '/services/letter-to-governor',
+      desc: 'پیگیری مطالبات محلی، عمرانی و کارگروه رفع موانع تولید.',
+      badge: 'استانداری',
     },
   ],
 
@@ -203,7 +241,7 @@ export const howToWriteAdministrativeLetterData: KnowledgeArticleData = {
   ctaTitle: 'سفارش نگارش آنلاین نامه اداری و عریضه رسمی',
   ctaDescription: 'با سفارش نگارش نامه اداری به کارشناسان نگارش یار، نامه‌ای کاملاً استاندارد، اثرگذار و با لحن محترمانه تحویل بگیرید.',
   ctaPrimaryBtnText: 'ثبت سفارش نامه اداری',
-  ctaPrimaryHref: '/request?service=administrative-letter-writing',
+  ctaPrimaryHref: '/request?service=administrative-letter',
 };
 
 export const howToWriteAdministrativeLetterMetadata: Metadata = {

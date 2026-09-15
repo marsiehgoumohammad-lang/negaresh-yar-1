@@ -282,6 +282,12 @@ export const presidentLetterData: ServiceLandingData = {
       badge: 'نمونه عریضه',
     },
     {
+      title: 'مرجع جامع نمونه نامه‌های اداری',
+      href: '/samples/administrative-letters',
+      desc: 'بانک کامل الگوهای مکاتبات اداری، سازمانی و عریضه‌نویسی.',
+      badge: 'بانک جامع',
+    },
+    {
       title: 'نمونه نامه اداری و عریضه رسمی',
       href: '/samples/administrative-letter',
       desc: 'مشاهده فرمت استانداردهای درخواست‌های اداری.',

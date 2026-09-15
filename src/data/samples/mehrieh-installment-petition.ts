@@ -193,10 +193,10 @@ export const sampleMehriehInstallmentPetitionData: SampleDocument = {
 
   relatedServices: [
     {
-      title: 'تنظیم تخصصی دادخواست و لوایح خانواده',
-      href: '/services/petition-writing',
-      desc: 'تنظیم دادخواست اعسار مهریه، لایحه دفاعیه تعدیل و استشهادیه استاندارد.',
-      badge: 'خدمت تخصصی',
+      title: 'تنظیم دادخواست اعسار از محکوم‌به و تقسیط مهریه',
+      href: '/services/insolvency-from-judgment',
+      desc: 'تنظیم تخصصی دادخواست اعسار از پرداخت مهریه، تعدیل اقساط سکه، جدول دارایی ماده ۸ و استشهادیه شهود.',
+      badge: 'خدمت تخصصی اعسار',
     },
     {
       title: 'خدمات لایحه دفاعیه حقوقی',
@@ -252,5 +252,5 @@ export const sampleMehriehInstallmentPetitionData: SampleDocument = {
   ctaDescription:
     'متخصصان نگارش یار پرونده شما را بررسی کرده و استانداردترین لایحه اعسار همراه با استشهادیه معتبر قانونی را برای شما آماده می‌کنند.',
   ctaPrimaryBtnText: 'سفارش دادخواست اعسار مهریه',
-  ctaPrimaryHref: '/request?service=mehrieh-installment-petition',
+  ctaPrimaryHref: '/request?service=insolvency-from-judgment',
 };

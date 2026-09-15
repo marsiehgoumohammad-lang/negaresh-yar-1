@@ -185,7 +185,7 @@ export const sampleCourtFeeInsolvencyData: SampleLandingData = {
     },
     {
       title: 'تنظیم دادخواست اعسار و تقسیط محکوم‌به',
-      href: '/services/insolvency-petition',
+      href: '/services/insolvency-from-judgment',
       badge: 'اوراق قضایی',
       desc: 'نگارش انواع دادخواست‌های اعسار، تقسیط مهریه و توقف صدور جلب.',
     },
@@ -193,10 +193,22 @@ export const sampleCourtFeeInsolvencyData: SampleLandingData = {
 
   relatedSamples: [
     {
-      title: 'نمونه دادخواست تقسیط جزای نقدی کیفری',
-      href: '/samples/fine-installment-petition',
-      desc: 'پرداخت قسطی جریمه‌های نقدی دادگاه.',
-      badge: 'تقسیط جزای نقدی'
+      title: 'فرم اعسار از هزینه دادرسی مرحله تجدیدنظر',
+      href: '/samples/insolvency-appeal-court-fee-form',
+      desc: 'فرم آماده استشهادیه و دادخواست معافیت از تمبر تجدیدنظرخواهی.',
+      badge: 'اعسار تجدیدنظر'
+    },
+    {
+      title: 'نمونه دادخواست اعسار از هزینه دادرسی (ماده ۵۰۵)',
+      href: '/samples/litigation-cost-insolvency-petition',
+      desc: 'الگوی تخصصی معافیت از تمبر مرحله بدوی و اقامه دعوای مالی.',
+      badge: 'ماده ۵۰۵ ق.آ.د.م'
+    },
+    {
+      title: 'نمونه دادخواست اعسار و تقسیط محکوم‌به',
+      href: '/samples/insolvency',
+      desc: 'الگوی عمومی اعسار از پرداخت یکباره بدهی و جلب.',
+      badge: 'اعسار و تقسیط'
     },
     {
       title: 'نمونه دادخواست تقسیط مهریه و تعدیل اقساط',
@@ -205,10 +217,10 @@ export const sampleCourtFeeInsolvencyData: SampleLandingData = {
       badge: 'تقسیط مهریه'
     },
     {
-      title: 'نمونه دادخواست اعسار و تقسیط محکوم‌به',
-      href: '/samples/insolvency',
-      desc: 'الگوی عمومی اعسار از پرداخت یکباره بدهی و جلب.',
-      badge: 'اعسار و تقسیط'
+      title: 'نمونه دادخواست تقسیط جزای نقدی کیفری',
+      href: '/samples/fine-installment-petition',
+      desc: 'پرداخت قسطی جریمه‌های نقدی دادگاه.',
+      badge: 'تقسیط جزای نقدی'
     }
   ],
 

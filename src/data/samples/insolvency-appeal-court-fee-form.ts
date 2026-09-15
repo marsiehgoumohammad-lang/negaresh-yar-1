@@ -192,20 +192,32 @@ export const sampleInsolvencyAppealCourtFeeFormData: SampleLandingData = {
       badge: 'تجدیدنظرخواهی',
     },
     {
-      title: 'تنظیم دادخواست اعسار از محکوم‌به و تقسیط',
-      href: '/services/insolvency-petition',
-      desc: 'تقاضای تقسیط بدهی دادنامه در اجرای احکام.',
-      badge: 'اعسار از پرداخت',
-    },
-    {
       title: 'تنظیم دادخواست اعسار از هزینه دادرسی',
       href: '/services/insolvency-court-fee',
       desc: 'درخواست معافیت از پرداخت تمبر در دادگاه بدوی و تجدیدنظر.',
       badge: 'اعسار هزینه دادرسی',
     },
+    {
+      title: 'تنظیم دادخواست اعسار از محکوم‌به و تقسیط',
+      href: '/services/insolvency-from-judgment',
+      desc: 'تقاضای تقسیط بدهی دادنامه در اجرای احکام.',
+      badge: 'اعسار از پرداخت',
+    },
   ],
 
   relatedSamples: [
+    {
+      title: 'نمونه دادخواست اعسار از هزینه دادرسی بدوی و تجدیدنظر',
+      href: '/samples/court-fee-insolvency',
+      desc: 'الگوی جامع معافیت از پرداخت تمبر با استشهادیه محلی.',
+      badge: 'هزینه دادرسی',
+    },
+    {
+      title: 'نمونه دادخواست اعسار از هزینه دادرسی (ماده ۵۰۵)',
+      href: '/samples/litigation-cost-insolvency-petition',
+      desc: 'الگوی تخصصی معافیت از تمبر مرحله بدوی و اقامه دعوای مالی.',
+      badge: 'ماده ۵۰۵ ق.آ.د.م',
+    },
     {
       title: 'نمونه دادخواست اعسار از پرداخت محکوم‌به',
       href: '/samples/insolvency',
@@ -221,6 +233,18 @@ export const sampleInsolvencyAppealCourtFeeFormData: SampleLandingData = {
   ],
 
   relatedArticles: [
+    {
+      title: 'اعسار از هزینه دادرسی و محکوم‌به چیست؟',
+      href: '/knowledge/what-is-insolvency',
+      desc: 'شرایط اثبات عسرت مالی، استشهادیه شهود و ماده ۸.',
+      badge: 'مقاله آموزشی',
+    },
+    {
+      title: 'راهنمای تجدیدنظرخواهی از آرای دادگاه',
+      href: '/knowledge/how-to-appeal-court-decision',
+      desc: 'مهلت‌ها و جهات تجدیدنظرخواهی حقوقی در دادگاه تجدیدنظر استان.',
+      badge: 'تجدیدنظرخواهی',
+    },
     {
       title: 'راهنمای ثبت دادخواست بدون وکیل در عدل ایران',
       href: '/knowledge/legal-self-service-guide',

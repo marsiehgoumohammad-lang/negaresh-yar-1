@@ -167,8 +167,8 @@ export const sampleFineInstallmentPetitionData: SampleLandingData = {
 
   relatedServices: [
     {
-      title: 'تنظیم دادخواست اعسار و تقسیط محکوم‌به',
-      href: '/services/insolvency-petition',
+      title: 'تنظیم دادخواست اعسار از محکوم‌به و تقسیط بدهی',
+      href: '/services/insolvency-from-judgment',
       desc: 'نگارش دادخواست حقوقی اعسار و جدول اقساط متناسب با درآمد.',
       badge: 'دادخواست اعسار',
     },
@@ -186,6 +186,12 @@ export const sampleFineInstallmentPetitionData: SampleLandingData = {
         'href': '/samples/insolvency',
         'desc': 'الگوی عمومی اعسار از پرداخت یکباره بدهی و توقف جلب.',
         'badge': 'اعسار و تقسیط'
+    },
+    {
+        'title': 'نمونه دادخواست اعسار از پرداخت دیه و تقسیط',
+        'href': '/samples/diya-installment-petition',
+        'desc': 'الگوی تقسیط دیه کیفری تصادفات و ضرب و جرح.',
+        'badge': 'تقسیط دیه'
     },
     {
         'title': 'نمونه دادخواست اعسار از هزینه دادرسی',
@@ -225,7 +231,7 @@ export const sampleFineInstallmentPetitionData: SampleLandingData = {
   ctaTitle: 'سفارش تنظیم دادخواست تقسیط جزای نقدی و توقف بازداشت',
   ctaDescription: 'برای تنظیم دادخواست مستدل با پیوست استشهادیه قانونی و جلوگیری فوری از بازداشت، پرونده خود را به وکلای نگارش یار بسپارید.',
   ctaPrimaryBtnText: 'ثبت سفارش دادخواست تقسیط جریمه',
-  ctaPrimaryHref: '/request?service=insolvency-petition',
+  ctaPrimaryHref: '/request?service=insolvency-from-judgment',
   messengerMessage: 'سلام، درباره دادخواست تقسیط جزای نقدی و جلوگیری از حبس بدل از جریمه سوال دارم. لطفا راهنمایی بفرمایید.',
 
   publishedAt: '2026-08-18T11:00:00.000Z',

@@ -177,16 +177,22 @@ export const letterToGovernorData: ServiceLandingData = {
 
   relatedSamples: [
     {
-      title: 'نمونه نامه اداری و عریضه',
-      href: '/samples/administrative-letter',
-      desc: 'مشاهده الگوی نامه‌های رسمی.',
-      badge: 'نمونه اداری',
+      title: 'نمونه نامه رسمی به استاندار و فرمانداری',
+      href: '/samples/letter-to-governor',
+      desc: 'الگوی آماده درخواست رسیدگی به مشکلات شهری و کارگروه رفع موانع تولید.',
+      badge: 'استانداری',
     },
     {
-      title: 'نمونه نامه به رئیس جمهور',
-      href: '/samples/president-letter',
-      desc: 'الگوی عریضه سامد ۱۱۱.',
-      badge: 'نمونه عریضه',
+      title: 'مرجع جامع نمونه نامه‌های اداری',
+      href: '/samples/administrative-letters',
+      desc: 'بانک کامل الگوهای مکاتبات اداری و سازمانی.',
+      badge: 'بانک جامع',
+    },
+    {
+      title: 'نمونه نامه اداری و عریضه رسمی',
+      href: '/samples/administrative-letter',
+      desc: 'مشاهده الگوی نامه‌های رسمی و سازمانی.',
+      badge: 'نمونه اداری',
     },
   ],
 

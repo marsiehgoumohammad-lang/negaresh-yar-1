@@ -168,27 +168,45 @@ export const letterToTaxOfficeData: ServiceLandingData = {
       badge: 'مالیات',
     },
     {
-      title: 'تنظیم نامه‌های اداری',
+      title: 'تنظیم نامه‌های اداری و مکاتبات رسمی',
       href: '/services/administrative-letter',
-      desc: 'نامه‌نگاری سازمان‌ها.',
+      desc: 'نامه‌نگاری سازمان‌ها، ادارات و شرکت‌ها.',
       badge: 'اداری',
+    },
+    {
+      title: 'مکاتبه با استاندار و فرمانداری',
+      href: '/services/letter-to-governor',
+      desc: 'پیگیری مطالبات محلی و کارگروه رفع موانع تولید.',
+      badge: 'استانداری',
     },
   ],
 
   relatedSamples: [
     {
-      title: 'نمونه نامه اداری و عریضه',
+      title: 'نمونه لایحه اعتراض به برگ تشخیص مالیات',
+      href: '/samples/letter-to-tax-office',
+      desc: 'متن آماده دفاعیه مالیاتی ماده ۲۳۸ قانون مالیات‌های مستقیم.',
+      badge: 'امور مالیاتی',
+    },
+    {
+      title: 'مرجع جامع نمونه نامه‌های اداری',
+      href: '/samples/administrative-letters',
+      desc: 'بانک کامل الگوهای مکاتبات اداری و سازمانی.',
+      badge: 'بانک جامع',
+    },
+    {
+      title: 'نمونه نامه اداری و عریضه رسمی',
       href: '/samples/administrative-letter',
-      desc: 'الگوهای نامه‌های اداری.',
+      desc: 'الگوهای استاندارد نامه‌های اداری و درخواست کتبی.',
       badge: 'نمونه اداری',
     },
   ],
 
   relatedArticles: [
     {
-      title: 'چگونه به برگه تشخیص مالیات اعتراض کنیم؟',
+      title: 'اصول و روش نگارش نامه اداری و دفاعیه سازمانی',
       href: '/knowledge/how-to-write-administrative-letter',
-      desc: 'راهنمای لایحه‌نویسی مالیاتی.',
+      desc: 'راهنمای ساختار رسمی، شماره دبیرخانه و لحن اداری.',
       badge: 'مقاله آموزشی',
     },
   ],

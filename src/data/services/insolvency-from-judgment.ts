@@ -271,6 +271,18 @@ export const insolvencyFromJudgmentData: ServiceLandingData = {
       badge: 'نمونه تقسیط مهریه',
     },
     {
+      title: 'نمونه دادخواست اعسار از پرداخت دیه و تقسیط',
+      href: '/samples/diya-installment-petition',
+      desc: 'تقسیط دیه تصادف و ضرب و جرح و جلوگیری از بازداشت.',
+      badge: 'تقسیط دیه',
+    },
+    {
+      title: 'نمونه دادخواست تقسیط جزای نقدی کیفری',
+      href: '/samples/fine-installment-petition',
+      desc: 'تقسیط جریمه‌های نقدی دادگاه کیفری موضوع ماده ۵۲۹.',
+      badge: 'تقسیط جزای نقدی',
+    },
+    {
       title: 'نمونه دادخواست اعسار از هزینه دادرسی',
       href: '/samples/court-fee-insolvency',
       desc: 'متن آماده دادخواست معافیت از هزینه دادرسی به همراه استشهادیه شهود.',

@@ -169,6 +169,24 @@ export const whatIsInsolvencyData: KnowledgeArticleData = {
       badge: 'هزینه دادرسی',
     },
     {
+      title: 'نمونه دادخواست تقسیط مهریه و تعدیل اقساط',
+      href: '/samples/mehrieh-installment-petition',
+      desc: 'درخواست تعدیل و تقسیط سکه‌های مهریه در دادگاه خانواده.',
+      badge: 'تقسیط مهریه',
+    },
+    {
+      title: 'نمونه دادخواست اعسار از پرداخت دیه و تقسیط',
+      href: '/samples/diya-installment-petition',
+      desc: 'الگوی تقسیط دیه تصادفات و حوادث کار با استناد به ماده ۳ و ۴.',
+      badge: 'تقسیط دیه',
+    },
+    {
+      title: 'فرم اعسار از هزینه دادرسی مرحله تجدیدنظر',
+      href: '/samples/insolvency-appeal-court-fee-form',
+      desc: 'فرم آماده استشهادیه و معافیت از تمبر دادرسی تجدیدنظرخواهی.',
+      badge: 'اعسار تجدیدنظر',
+    },
+    {
       title: 'نمونه تقاضای تخفیف و تبدیل قرار وثیقه',
       href: '/samples/bail-reduction',
       desc: 'الگوی تبدیل قرار وثیقه ملکی به کفالت و تقلیل مبلغ در دادسرا.',
@@ -177,6 +195,12 @@ export const whatIsInsolvencyData: KnowledgeArticleData = {
   ],
 
   relatedArticles: [
+    {
+      title: 'چگونه بدهی و مهریه را قسطی کنیم؟',
+      href: '/knowledge/how-to-install-debt-and-mahrieh',
+      desc: 'راهنمای کاربردی تقسیط دیون، مهریه و توقف جلب.',
+      category: 'اعسار، وثیقه و زندانیان',
+    },
     {
       title: 'قرار وثیقه و کفالت چیست؟',
       href: '/knowledge/what-is-bail',

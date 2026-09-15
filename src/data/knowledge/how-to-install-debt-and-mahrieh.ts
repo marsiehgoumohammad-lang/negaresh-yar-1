@@ -183,6 +183,18 @@ export const howToInstallDebtAndMahriehData: KnowledgeArticleData = {
       badge: 'نمونه سند',
     },
     {
+      title: 'نمونه دادخواست تقسیط مهریه و تعدیل اقساط',
+      href: '/samples/mehrieh-installment-petition',
+      desc: 'درخواست تعدیل و تقسیط سکه‌های مهریه در دادگاه خانواده.',
+      badge: 'تقسیط مهریه',
+    },
+    {
+      title: 'نمونه دادخواست اعسار از پرداخت دیه و تقسیط',
+      href: '/samples/diya-installment-petition',
+      desc: 'الگوی تقسیط دیه تصادفات و حوادث کار با استناد به ماده ۳ و ۴.',
+      badge: 'تقسیط دیه',
+    },
+    {
       title: 'نمونه درخواست آزادی با وثیقه و کفالت',
       href: '/samples/bail-to-surety',
       desc: 'نمونه درخواست معرفی وثیقه و کفیل جهت آزادی زندانی.',

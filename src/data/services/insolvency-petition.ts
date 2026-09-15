@@ -261,10 +261,22 @@ export const insolvencyPetitionData: ServiceLandingData = {
 
   relatedSamples: [
     {
-      title: 'نمونه دادخواست اعسار و تقسیط',
+      title: 'نمونه دادخواست اعسار و تقسیط محکوم‌به',
       href: '/samples/insolvency',
       desc: 'مشاهده فرمت استشهادیه ماده ۸ قانون نحوه اجرای محکومیت‌های مالی.',
       badge: 'نمونه اعسار',
+    },
+    {
+      title: 'نمونه دادخواست اعسار از هزینه دادرسی',
+      href: '/samples/court-fee-insolvency',
+      desc: 'متن استشهادیه و معافیت از پرداخت تمبر دادرسی.',
+      badge: 'هزینه دادرسی',
+    },
+    {
+      title: 'نمونه دادخواست تقسیط مهریه و تعدیل اقساط',
+      href: '/samples/mehrieh-installment-petition',
+      desc: 'درخواست تعدیل و تقسیط سکه‌های مهریه در دادگاه خانواده.',
+      badge: 'تقسیط مهریه',
     },
     {
       title: 'نمونه دادخواست حقوقی',
@@ -280,6 +292,12 @@ export const insolvencyPetitionData: ServiceLandingData = {
       href: '/knowledge/what-is-insolvency',
       desc: 'راهنمای جامع تقسیط بدهی، مهریه، استشهادیه شهود و منع جلب.',
       badge: 'مقاله آموزشی',
+    },
+    {
+      title: 'چگونه بدهی و مهریه را قسطی کنیم؟',
+      href: '/knowledge/how-to-install-debt-and-mahrieh',
+      desc: 'راهنمای کامل دادخواست اعسار، تقسیط و آزادی از جلب.',
+      badge: 'راهنمای تقسیط',
     },
     {
       title: 'دادخواست چیست و چگونه تنظیم می‌شود؟',

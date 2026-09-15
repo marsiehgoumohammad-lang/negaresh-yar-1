@@ -208,9 +208,9 @@ export function adaptArticleToKnowledgeData(article: Article): KnowledgeArticleD
       'رعایت مهلت‌های قانونی مقرر در قانون آئین دادرسی مدنی و کیفری الزامی است.',
       'تنظیم صحیح اوراق قضایی تاثیر مستقیم در موفقیت پرونده دارد.',
     ],
-    faqTitle: 'سوالات متداول',
-    faqs,
-    relatedServices: [
+    faqTitle: staticMatch?.faqTitle || 'سوالات متداول',
+    faqs: staticMatch?.faqs ? staticMatch.faqs.map(f => ({ q: f.q || f.question || '', a: f.a || f.answer || '' })) : faqs,
+    relatedServices: staticMatch?.relatedServices || [
       {
         title: 'تنظیم دادخواست تخصصی',
         desc: 'نگارش آنلاین دادخواست‌های حقوقی و خانواده با رعایت تشریفات دادرسی',
@@ -224,7 +224,7 @@ export function adaptArticleToKnowledgeData(article: Article): KnowledgeArticleD
         badge: 'تخصصی',
       },
     ],
-    relatedSamples: [
+    relatedSamples: staticMatch?.relatedSamples || [
       {
         title: 'نمونه دادخواست',
         desc: 'مشاهده فرمت و ساختار استاندارد نمونه دادخواست‌های حقوقی',
@@ -238,15 +238,15 @@ export function adaptArticleToKnowledgeData(article: Article): KnowledgeArticleD
         badge: 'نمونه رایگان',
       },
     ],
-    relatedArticles: ALL_KNOWLEDGE_ARTICLES.slice(0, 3).map((art) => ({
+    relatedArticles: staticMatch?.relatedArticles || ALL_KNOWLEDGE_ARTICLES.slice(0, 3).map((art) => ({
       title: art.h1Title,
       desc: art.heroSubtitle,
       href: `/knowledge/${encodeURIComponent(art.slug.replace(/\//g, ''))}`,
       category: art.category,
     })),
-    ctaTitle: 'نیاز به تنظیم اختصاصی و حرفه‌ای این سند دارید؟',
-    ctaDescription: 'تیم کارشناسان ارشد نگارش یار آماده تنظیم دقیق انواع دادخواست، شکواییه، لایحه و نامه اداری شما هستند.',
-    ctaPrimaryBtnText: 'ثبت سفارش آنلاین',
-    ctaPrimaryHref: '/request',
+    ctaTitle: staticMatch?.ctaTitle || 'نیاز به تنظیم اختصاصی و حرفه‌ای این سند دارید؟',
+    ctaDescription: staticMatch?.ctaDescription || 'تیم کارشناسان ارشد نگارش یار آماده تنظیم دقیق انواع دادخواست، شکواییه، لایحه و نامه اداری شما هستند.',
+    ctaPrimaryBtnText: staticMatch?.ctaPrimaryBtnText || 'ثبت سفارش آنلاین',
+    ctaPrimaryHref: staticMatch?.ctaPrimaryHref || '/request',
   };
 }

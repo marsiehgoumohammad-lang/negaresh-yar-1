@@ -96,13 +96,37 @@ export const sampleLitigationCostInsolvencyPetitionData: SampleLandingData = {
   ],
   "relatedServices": [
     {
-      "title": "تنظیم دادخواست‌های اعسار",
-      "href": "/services/legal-petition",
+      "title": "تنظیم دادخواست اعسار از هزینه دادرسی",
+      "href": "/services/insolvency-court-fee",
       "badge": "اعسار هزینه دادرسی",
-      "desc": "تنظیم تخصصی فرمت صورت اموال و استشهادیه شهود ماده ۵۰۶."
+      "desc": "معافیت موقت از پرداخت تمبر دادرسی با استشهادیه محلی معتبر."
+    },
+    {
+      "title": "تنظیم دادخواست حقوقی ثنا",
+      "href": "/services/petition-writing",
+      "badge": "دادخواست اصلی",
+      "desc": "تنظیم تخصصی دادخواست اصلی مالی همزمان با ادعای اعسار."
     }
   ],
   "relatedSamples": [
+    {
+      "title": "نمونه دادخواست اعسار از هزینه دادرسی بدوی و تجدیدنظر",
+      "href": "/samples/court-fee-insolvency",
+      "badge": "الگوی جامع",
+      "desc": "الگوی جامع معافیت از پرداخت تمبر با استشهادیه محلی."
+    },
+    {
+      "title": "فرم اعسار از هزینه دادرسی مرحله تجدیدنظر",
+      "href": "/samples/insolvency-appeal-court-fee-form",
+      "badge": "اعسار تجدیدنظر",
+      "desc": "فرم آماده معافیت از تمبر دادرسی مرحله تجدیدنظرخواهی."
+    },
+    {
+      "title": "نمونه دادخواست اعسار و تقسیط محکوم‌به",
+      "href": "/samples/insolvency",
+      "badge": "اعسار بدهی",
+      "desc": "الگوی عمومی اعسار از پرداخت یکباره بدهی و توقف جلب."
+    },
     {
       "title": "نمونه لایحه رفع نقص دادخواست (ماده ۵۴)",
       "href": "/samples/petition-defect-rectification-brief",
@@ -110,10 +134,24 @@ export const sampleLitigationCostInsolvencyPetitionData: SampleLandingData = {
       "desc": "رفع نقص هزینه دادرسی در مهلت اخطار."
     }
   ],
+  "relatedArticles": [
+    {
+      "title": "اعسار از هزینه دادرسی و محکوم‌به چیست؟",
+      "href": "/knowledge/what-is-insolvency",
+      "badge": "مقاله آموزشی",
+      "desc": "شرایط اثبات عسرت مالی، استشهادیه شهود و ماده ۸."
+    },
+    {
+      "title": "دادخواست چیست و چگونه تنظیم می‌شود؟",
+      "href": "/knowledge/what-is-petition",
+      "badge": "مقاله آموزشی",
+      "desc": "الزامات ماده ۵۱ قانون آیین دادرسی و شیوه ثبت در دفاتر خدمات قضایی."
+    }
+  ],
   "ctaTitle": "حق قانونی با شماست اما توان مالی پرداخت هزینه سنگین تمبر دادرسی را ندارید؟",
   "ctaDescription": "با تقدیم دادخواست اعسار از هزینه دادرسی مستند به ماده ۵۰۵ ق.آ.د.م، پرونده خود را بدون پرداخت تمبر به جریان بیندازید.",
   "ctaPrimaryBtnText": "سفارش دادخواست اعسار از هزینه دادرسی",
-  "ctaPrimaryHref": "/request?service=legal-petition",
+  "ctaPrimaryHref": "/request?service=insolvency-court-fee",
   "messengerMessage": "سلام، می‌خواهم دادخواست مطالبه طلب بدهم اما هزینه تمبر دادرسی چند ده میلیون تومان است و ندارم. برای اعسار ماده ۵۰۵ راهنمایی می‌خواستم.",
   "publishedAt": "2026-09-11T00:00:00.000Z",
   "updatedAt": "2026-09-11T00:00:00.000Z",

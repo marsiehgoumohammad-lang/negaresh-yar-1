@@ -255,6 +255,12 @@ export const administrativeLetterData: ServiceLandingData = {
 
   relatedServices: [
     {
+      title: 'اعتراض به برگ تشخیص و لوایح مالیاتی',
+      href: '/services/letter-to-tax-office',
+      desc: 'دفاعیه مالیاتی ماده ۲۳۸ و تقاضای بخشودگی جرایم اداره مالیات.',
+      badge: 'امور مالیاتی',
+    },
+    {
       title: 'نگارش نامه به رئیس جمهور',
       href: '/services/president-letter',
       desc: 'تنظیم نامه رسمی به نهاد ریاست جمهوری و مرکز سامد.',
@@ -267,19 +273,31 @@ export const administrativeLetterData: ServiceLandingData = {
       badge: 'عریضه کشوری',
     },
     {
-      title: 'تنظیم دادخواست و شکواییه',
-      href: '/services/petition-writing',
-      desc: 'تنظیم اوراق قضایی و دادخواست‌های دادگستری.',
-      badge: 'حقوقی',
+      title: 'مکاتبه با استاندار و فرمانداری',
+      href: '/services/letter-to-governor',
+      desc: 'پیگیری مطالبات محلی، عمرانی و کارگروه رفع موانع تولید.',
+      badge: 'استانداری',
     },
   ],
 
   relatedSamples: [
     {
+      title: 'مرجع جامع نمونه نامه‌های اداری',
+      href: '/samples/administrative-letters',
+      desc: 'بانک کامل الگوهای مکاتبات اداری، شهرداری، بانک و تامین اجتماعی.',
+      badge: 'بانک جامع',
+    },
+    {
       title: 'نمونه نامه اداری و درخواست رسمی',
       href: '/samples/administrative-letter',
       desc: 'مشاهده فرمت و ساختار استاندارد نامه‌نگاری اداری.',
       badge: 'نمونه اداری',
+    },
+    {
+      title: 'نمونه لایحه اعتراض به برگ تشخیص مالیات',
+      href: '/samples/letter-to-tax-office',
+      desc: 'فرمت استاندارد اعتراض مالیاتی و دفاعیه ماده ۲۳۸.',
+      badge: 'امور مالیاتی',
     },
     {
       title: 'نمونه نامه به ریاست جمهوری',
@@ -307,7 +325,7 @@ export const administrativeLetterData: ServiceLandingData = {
   ctaTitle: 'همین حالا نامه اداری خود را با بالاترین کیفیت سفارش دهید',
   ctaDescription: 'تنظیم تخصصی و فوری نامه اداری با رعایت تمامی اصول دبیرخانه‌ای همراه با پشتیبانی و بازبینی تکمیلی.',
   ctaPrimaryBtnText: 'ثبت سفارش نامه اداری در پیام‌رسان',
-  ctaPrimaryHref: '/request?service=admin-letter',
+  ctaPrimaryHref: '/request?service=administrative-letter',
 };
 
 export const administrativeLetterMetadata: Metadata = {
