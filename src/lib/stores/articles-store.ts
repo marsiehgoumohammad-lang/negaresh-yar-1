@@ -154,7 +154,20 @@ export async function getArticles(): Promise<Article[]> {
       return initial;
     }
 
-    const articles = (data as Record<string, unknown>[]).map(mapRowToArticle);
+    const dbArticles = (data as Record<string, unknown>[]).map(mapRowToArticle);
+    const dbSlugs = new Set(dbArticles.map((a) => a.slug));
+    const initial = getInitialArticles();
+    const missing = initial.filter((a) => !dbSlugs.has(a.slug));
+
+    if (missing.length > 0) {
+      const missingRows = missing.map((art) => mapArticleToRow(art));
+      supabase.from('articles').upsert(missingRows, { onConflict: 'slug' }).then(
+        () => {},
+        (err) => console.error('Error syncing missing initial articles to Supabase:', err)
+      );
+    }
+
+    const articles = [...dbArticles, ...missing];
     migrateAuctionArticleCategory(supabase, articles);
     inMemoryArticles = articles;
     return articles;
@@ -188,7 +201,12 @@ export async function getPublishedArticles(): Promise<Article[]> {
       return all.filter((a) => a.status === 'published');
     }
 
-    return (data as Record<string, unknown>[]).map(mapRowToArticle);
+    const dbArticles = (data as Record<string, unknown>[]).map(mapRowToArticle);
+    const dbSlugs = new Set(dbArticles.map((a) => a.slug));
+    const initial = getInitialArticles().filter((a) => a.status === 'published');
+    const missing = initial.filter((a) => !dbSlugs.has(a.slug));
+
+    return [...dbArticles, ...missing];
   } catch (err) {
     console.warn('Exception in getPublishedArticles() (falling back to initial):', err);
     const all = inMemoryArticles || getInitialArticles();

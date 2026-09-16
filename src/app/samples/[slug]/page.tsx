@@ -1,7 +1,6 @@
 import React from 'react';
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
-import Script from 'next/script';
 import { SampleLandingPageTemplate } from '@/components/samples/SampleLandingPageTemplate';
 import {
   getSampleBySlug,
@@ -258,24 +257,20 @@ export default async function DynamicSamplePage({ params }: SamplePageProps) {
 
   return (
     <>
-      <Script
-        id={`breadcrumb-schema-${sample.slug}`}
+      <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
-      <Script
-        id={`article-schema-${sample.slug}`}
+      <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
       />
-      <Script
-        id={`digital-doc-schema-${sample.slug}`}
+      <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(digitalDocSchema) }}
       />
       {faqSchema && (
-        <Script
-          id={`faq-schema-${sample.slug}`}
+        <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
         />
