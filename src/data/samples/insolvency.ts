@@ -272,6 +272,12 @@ export const sampleInsolvencyData: SampleLandingData = {
       badge: 'اعسار و تقسیط',
     },
     {
+      title: 'تنظیم انواع دادخواست اعسار',
+      href: '/services/insolvency-petition',
+      desc: 'خدمت جامع نگارش دادخواست‌های اعسار، تقسیط مهریه و دیه.',
+      badge: 'خدمت جامع',
+    },
+    {
       title: 'تنظیم دادخواست اعسار از هزینه دادرسی',
       href: '/services/insolvency-court-fee',
       desc: 'معافیت موقت از پرداخت تمبر دادرسی مرحله بدوی و تجدیدنظر.',

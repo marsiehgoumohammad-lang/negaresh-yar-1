@@ -43,6 +43,22 @@ export default function InsolvencyPetitionPage() {
       '@type': 'Organization',
       name: 'نگارش یار',
       url: 'https://www.negaresh-yar.ir',
+      telephone: '+989915147789',
+      address: {
+        '@type': 'PostalAddress',
+        addressLocality: 'مشهد',
+        addressRegion: 'خراسان رضوی',
+        addressCountry: 'IR',
+      },
+      geo: {
+        '@type': 'GeoCoordinates',
+        latitude: '36.2972',
+        longitude: '59.6067',
+      },
+      logo: {
+        '@type': 'ImageObject',
+        url: 'https://www.negaresh-yar.ir/logo.jpg',
+      },
     },
     areaServed: {
       '@type': 'Country',

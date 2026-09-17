@@ -279,6 +279,12 @@ export const insolvencyPetitionData: ServiceLandingData = {
       badge: 'تقسیط مهریه',
     },
     {
+      title: 'نمونه دادخواست اعسار از پرداخت دیه و تقسیط',
+      href: '/samples/diya-installment-petition',
+      desc: 'الگوی تقسیط دیه تصادفات و حوادث کار با استناد به ماده ۳ و ۴.',
+      badge: 'تقسیط دیه',
+    },
+    {
       title: 'نمونه دادخواست حقوقی',
       href: '/samples/petition',
       desc: 'مشاهده فرمت دادخواست‌های مالی و خانوادگی.',
@@ -298,6 +304,12 @@ export const insolvencyPetitionData: ServiceLandingData = {
       href: '/knowledge/how-to-install-debt-and-mahrieh',
       desc: 'راهنمای کامل دادخواست اعسار، تقسیط و آزادی از جلب.',
       badge: 'راهنمای تقسیط',
+    },
+    {
+      title: 'حکم قطعی دادگاه چیست و چگونه اجرا می‌شود؟',
+      href: '/knowledge/what-is-final-court-judgment',
+      desc: 'مراحل صدور اجراییه، مهلت قانونی ۳۰ روزه و جلب محکوم‌علیه.',
+      badge: 'آیین دادرسی',
     },
     {
       title: 'دادخواست چیست و چگونه تنظیم می‌شود؟',

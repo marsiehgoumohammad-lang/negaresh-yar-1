@@ -168,6 +168,12 @@ export const howToInstallDebtAndMahriehData: KnowledgeArticleData = {
       badge: 'خدمت اصلی',
     },
     {
+      title: 'تنظیم انواع دادخواست اعسار',
+      href: '/services/insolvency-petition',
+      desc: 'خدمت جامع نگارش انواع دادخواست‌های اعسار، تقسیط مهریه و دیه.',
+      badge: 'خدمت جامع',
+    },
+    {
       title: 'اعسار از پرداخت هزینه دادرسی',
       href: '/services/insolvency-court-fee',
       desc: 'ثبت اعسار برای افرادی که توانایی پرداخت هزینه سنگین دادرسی دادگاه را ندارند.',

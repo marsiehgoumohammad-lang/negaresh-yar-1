@@ -238,6 +238,18 @@ export const insolvencyFromJudgmentData: ServiceLandingData = {
       badge: 'اوراق قضایی',
     },
     {
+      title: 'اعسار از پرداخت هزینه دادرسی',
+      href: '/services/insolvency-court-fee',
+      desc: 'معافیت از تمبر دادرسی با استشهادیه محلی شهود.',
+      badge: 'هزینه دادرسی',
+    },
+    {
+      title: 'تنظیم انواع دادخواست اعسار و تقسیط',
+      href: '/services/insolvency-petition',
+      desc: 'خدمت جامع نگارش انواع دادخواست‌های اعسار، تقسیط مهریه و دیه.',
+      badge: 'خدمت جامع اعسار',
+    },
+    {
       title: 'تنظیم لایحه دفاعیه دادگاه',
       href: '/services/legal-brief',
       desc: 'نگارش لوایح دفاعیه مستدل و استناد به قوانین در جلسات رسیدگی.',
@@ -302,6 +314,12 @@ export const insolvencyFromJudgmentData: ServiceLandingData = {
       href: '/knowledge/what-is-insolvency',
       desc: 'بررسی جامع قانون نحوه اجرای محکومیت‌های مالی، مواد ۳، ۸ و ۱۱ به زبان ساده.',
       badge: 'مقاله تحلیلی',
+    },
+    {
+      title: 'حکم قطعی دادگاه چیست و چگونه اجرا می‌شود؟',
+      href: '/knowledge/what-is-final-court-judgment',
+      desc: 'مراحل صدور اجراییه، فرجه ۳۰ روزه عدم جلب و توقیف اموال.',
+      badge: 'اجرای احکام',
     },
     {
       title: 'ابلاغیه ثنا و مهلت‌های قانونی اعتراض',

@@ -168,6 +168,12 @@ export const whatIsFinalCourtJudgmentData: KnowledgeArticleData = {
 
   relatedArticles: [
     {
+      title: 'اعسار چیست؟ راهنمای ثبت دادخواست و توقف جلب',
+      href: '/knowledge/what-is-insolvency',
+      desc: 'مهلت ۳۰ روزه ماده ۳، استشهادیه شهود و تقسیط محکوم‌به.',
+      category: 'اعسار و محکومیت‌های مالی',
+    },
+    {
       title: 'معنی محکوم‌له و محکوم‌علیه در رای دادگاه',
       href: '/knowledge/meaning-of-court-terms',
       desc: 'تشخیص برنده و باخته پرونده.',

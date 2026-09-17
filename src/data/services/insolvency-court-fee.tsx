@@ -166,10 +166,16 @@ export const insolvencyCourtFeeData: ServiceLandingData = {
 
   relatedServices: [
     {
-      title: 'اعسار از محکوم‌به',
+      title: 'اعسار از محکوم‌به و تقسیط بدهی',
       href: '/services/insolvency-from-judgment',
       desc: 'تقسیط بدهی و جلوگیری از جلب پس از صدور حکم قطعی.',
       badge: 'اعسار از دین',
+    },
+    {
+      title: 'تنظیم انواع دادخواست اعسار',
+      href: '/services/insolvency-petition',
+      desc: 'خدمت جامع نگارش انواع دادخواست‌های اعسار، تقسیط و استشهادیه.',
+      badge: 'خدمت جامع اعسار',
     },
     {
       title: 'تنظیم دادخواست حقوقی',
@@ -224,6 +230,18 @@ export const insolvencyCourtFeeData: ServiceLandingData = {
       href: '/knowledge/what-is-insolvency',
       desc: 'راهنمای کامل تفاوت اعسار از هزینه دادرسی و اعسار از محکوم‌به.',
       badge: 'مقاله حقوقی',
+    },
+    {
+      title: 'چگونه بدهی و مهریه را قسطی کنیم؟',
+      href: '/knowledge/how-to-install-debt-and-mahrieh',
+      desc: 'راهنمای کاربردی قسطی کردن بدهی دادگاه، مهریه و توقف جلب.',
+      badge: 'راهنمای تقسیط',
+    },
+    {
+      title: 'دادخواست چیست و چگونه ثبت می‌شود؟',
+      href: '/knowledge/what-is-petition',
+      desc: 'شرایط قانونی دادخواست بر اساس ماده ۵۱ قانون آیین دادرسی مدنی.',
+      badge: 'آیین دادرسی',
     },
   ],
 
