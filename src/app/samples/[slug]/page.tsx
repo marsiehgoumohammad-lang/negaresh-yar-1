@@ -123,84 +123,7 @@ export default async function DynamicSamplePage({ params }: SamplePageProps) {
     'دعاوی اداری و دیوان عدالت',
   ]);
 
-  const breadcrumbSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'BreadcrumbList',
-    itemListElement: [
-      {
-        '@type': 'ListItem',
-        position: 1,
-        name: 'صفحه اصلی',
-        item: 'https://www.negaresh-yar.ir',
-      },
-      {
-        '@type': 'ListItem',
-        position: 2,
-        name: 'بانک نمونه اسناد',
-        item: 'https://www.negaresh-yar.ir/samples',
-      },
-      {
-        '@type': 'ListItem',
-        position: 3,
-        name: sample.category || 'درخواست‌های قضایی',
-        item:
-          sample.category === 'قراردادها و توافق‌نامه‌ها'
-            ? 'https://www.negaresh-yar.ir/samples/contracts'
-            : sample.category && administrativeCategories.has(sample.category)
-            ? 'https://www.negaresh-yar.ir/samples/administrative-letters'
-            : `https://www.negaresh-yar.ir/samples?category=${encodeURIComponent(
-                sample.category || ''
-              )}`,
-      },
-      {
-        '@type': 'ListItem',
-        position: 4,
-        name: title,
-        item: `https://www.negaresh-yar.ir/samples/${sample.slug}`,
-      },
-    ],
-  };
-
-  const articleSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'Article',
-    headline: title,
-    description: description,
-    url: `https://www.negaresh-yar.ir/samples/${sample.slug}`,
-    datePublished: sample.publishedAt || '2026-01-15T08:00:00.000Z',
-    dateModified: sample.updatedAt || '2026-08-16T12:00:00.000Z',
-    author: {
-      '@type': 'Organization',
-      name: sample.author?.name || 'تیم حقوقی نگارش یار',
-      url: 'https://www.negaresh-yar.ir',
-    },
-    publisher: {
-      '@type': 'Organization',
-      name: 'نگارش یار',
-      url: 'https://www.negaresh-yar.ir',
-      telephone: '+989915147789',
-      address: {
-        '@type': 'PostalAddress',
-        addressLocality: 'مشهد',
-        addressRegion: 'خراسان رضوی',
-        addressCountry: 'IR',
-      },
-      geo: {
-        '@type': 'GeoCoordinates',
-        latitude: 36.2972,
-        longitude: 59.6067,
-      },
-      logo: {
-        '@type': 'ImageObject',
-        url: 'https://www.negaresh-yar.ir/logo.jpg',
-      },
-    },
-    inLanguage: 'fa-IR',
-    mainEntityOfPage: {
-      '@type': 'WebPage',
-      '@id': `https://www.negaresh-yar.ir/samples/${sample.slug}`,
-    },
-  };
+  const canonicalUrl = `https://www.negaresh-yar.ir/samples/${sample.slug}`;
 
   const faqItems =
     sample.faq && sample.faq.length > 0
@@ -223,58 +146,155 @@ export default async function DynamicSamplePage({ params }: SamplePageProps) {
         }))
       : [];
 
-  const faqSchema =
-    faqItems.length > 0
-      ? {
-          '@context': 'https://schema.org',
-          '@type': 'FAQPage',
-          mainEntity: faqItems,
-        }
-      : null;
+  const graphEntities: Record<string, unknown>[] = [
+    {
+      '@type': 'Organization',
+      '@id': 'https://www.negaresh-yar.ir/#organization',
+      name: 'نگارش یار',
+      url: 'https://www.negaresh-yar.ir',
+      telephone: '+989915147789',
+      address: {
+        '@type': 'PostalAddress',
+        addressLocality: 'مشهد',
+        addressRegion: 'خراسان رضوی',
+        addressCountry: 'IR',
+      },
+      geo: {
+        '@type': 'GeoCoordinates',
+        latitude: '36.2972',
+        longitude: '59.6067',
+      },
+      logo: {
+        '@type': 'ImageObject',
+        '@id': 'https://www.negaresh-yar.ir/#logo',
+        url: 'https://www.negaresh-yar.ir/logo.jpg',
+      },
+    },
+    {
+      '@type': 'WebSite',
+      '@id': 'https://www.negaresh-yar.ir/#website',
+      url: 'https://www.negaresh-yar.ir',
+      name: 'نگارش یار',
+      publisher: {
+        '@id': 'https://www.negaresh-yar.ir/#organization',
+      },
+    },
+    {
+      '@type': 'WebPage',
+      '@id': canonicalUrl,
+      url: canonicalUrl,
+      name: title,
+      isPartOf: {
+        '@id': 'https://www.negaresh-yar.ir/#website',
+      },
+      breadcrumb: {
+        '@id': `${canonicalUrl}#breadcrumb`,
+      },
+    },
+    {
+      '@type': 'BreadcrumbList',
+      '@id': `${canonicalUrl}#breadcrumb`,
+      itemListElement: [
+        {
+          '@type': 'ListItem',
+          position: 1,
+          name: 'صفحه اصلی',
+          item: 'https://www.negaresh-yar.ir',
+        },
+        {
+          '@type': 'ListItem',
+          position: 2,
+          name: 'بانک نمونه اسناد',
+          item: 'https://www.negaresh-yar.ir/samples',
+        },
+        {
+          '@type': 'ListItem',
+          position: 3,
+          name: sample.category || 'درخواست‌های قضایی',
+          item:
+            sample.category === 'قراردادها و توافق‌نامه‌ها'
+              ? 'https://www.negaresh-yar.ir/samples/contracts'
+              : sample.category && administrativeCategories.has(sample.category)
+              ? 'https://www.negaresh-yar.ir/samples/administrative-letters'
+              : `https://www.negaresh-yar.ir/samples?category=${encodeURIComponent(
+                  sample.category || ''
+                )}`,
+        },
+        {
+          '@type': 'ListItem',
+          position: 4,
+          name: title,
+          item: canonicalUrl,
+        },
+      ],
+    },
+    {
+      '@type': 'Article',
+      '@id': `${canonicalUrl}#article`,
+      headline: title,
+      description: description,
+      url: canonicalUrl,
+      datePublished: sample.publishedAt || '2026-01-15T08:00:00.000Z',
+      dateModified: sample.updatedAt || '2026-08-16T12:00:00.000Z',
+      author: {
+        '@type': 'Organization',
+        name: sample.author?.name || 'تیم حقوقی نگارش یار',
+        url: 'https://www.negaresh-yar.ir',
+      },
+      publisher: {
+        '@id': 'https://www.negaresh-yar.ir/#organization',
+      },
+      inLanguage: 'fa-IR',
+      mainEntityOfPage: {
+        '@id': canonicalUrl,
+      },
+    },
+    {
+      '@type': 'DigitalDocument',
+      '@id': `${canonicalUrl}#document`,
+      name: `متن و فرم رسمی ${title}`,
+      description: `متن رسمی و فرم قابل ویرایش ${title} همراه با امکان دریافت فایل اداری Word و نسخه چاپی استاندارد`,
+      encodingFormat: ['application/msword', 'text/plain'],
+      url: canonicalUrl,
+      hasPart: [
+        {
+          '@type': 'MediaObject',
+          name: `دریافت فایل سند ورد ${title}`,
+          encodingFormat: 'application/msword',
+          contentUrl: `https://www.negaresh-yar.ir/api/samples/download?slug=${sample.slug}&format=doc`,
+        },
+        {
+          '@type': 'MediaObject',
+          name: `دریافت فایل متنی ${title}`,
+          encodingFormat: 'text/plain',
+          contentUrl: `https://www.negaresh-yar.ir/api/samples/download?slug=${sample.slug}&format=txt`,
+        },
+      ],
+    },
+  ];
 
-  const digitalDocSchema = {
+  if (faqItems.length > 0) {
+    graphEntities.push({
+      '@type': 'FAQPage',
+      '@id': `${canonicalUrl}#faq`,
+      isPartOf: {
+        '@id': canonicalUrl,
+      },
+      mainEntity: faqItems,
+    });
+  }
+
+  const jsonLdGraph = {
     '@context': 'https://schema.org',
-    '@type': 'DigitalDocument',
-    name: `متن و فرم رسمی ${title}`,
-    description: `متن رسمی و فرم قابل ویرایش ${title} همراه با امکان دریافت فایل اداری Word و نسخه چاپی استاندارد`,
-    encodingFormat: ['application/msword', 'text/plain'],
-    url: `https://www.negaresh-yar.ir/samples/${sample.slug}`,
-    hasPart: [
-      {
-        '@type': 'MediaObject',
-        name: `دریافت فایل سند ورد ${title}`,
-        encodingFormat: 'application/msword',
-        contentUrl: `https://www.negaresh-yar.ir/api/samples/download?slug=${sample.slug}&format=doc`,
-      },
-      {
-        '@type': 'MediaObject',
-        name: `دریافت فایل متنی ${title}`,
-        encodingFormat: 'text/plain',
-        contentUrl: `https://www.negaresh-yar.ir/api/samples/download?slug=${sample.slug}&format=txt`,
-      },
-    ],
+    '@graph': graphEntities,
   };
 
   return (
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdGraph) }}
       />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(digitalDocSchema) }}
-      />
-      {faqSchema && (
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-        />
-      )}
       <SampleLandingPageTemplate data={sample} />
     </>
   );

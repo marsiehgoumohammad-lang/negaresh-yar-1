@@ -47,25 +47,14 @@ export function KnowledgeArticleTemplate({ data }: { data: KnowledgeArticleData 
     }
   };
 
-  // Generate Article Schema JSON-LD
-  const articleSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'Article',
-    headline: data.h1Title,
-    description: data.heroSubtitle,
-    inLanguage: 'fa-IR',
-    mainEntityOfPage: {
-      '@type': 'WebPage',
-      '@id': `https://www.negaresh-yar.ir/knowledge/${data.slug}`,
-    },
-    author: {
+  // Generate Unified Entity Graph Schema JSON-LD
+  const canonicalUrl = `https://www.negaresh-yar.ir/knowledge/${data.slug}`;
+  const graphEntities: Record<string, unknown>[] = [
+    {
       '@type': 'Organization',
-      name: 'پژوهشگاه و کارشناسان حقوقی نگارش یار',
-      url: 'https://www.negaresh-yar.ir',
-    },
-    publisher: {
-      '@type': 'Organization',
+      '@id': 'https://www.negaresh-yar.ir/#organization',
       name: 'نگارش یار',
+      url: 'https://www.negaresh-yar.ir',
       telephone: '+989915147789',
       address: {
         '@type': 'PostalAddress',
@@ -80,51 +69,101 @@ export function KnowledgeArticleTemplate({ data }: { data: KnowledgeArticleData 
       },
       logo: {
         '@type': 'ImageObject',
+        '@id': 'https://www.negaresh-yar.ir/#logo',
         url: 'https://www.negaresh-yar.ir/logo.jpg',
       },
     },
-    datePublished: '2026-05-01',
-    dateModified: '2026-08-01',
-  };
+    {
+      '@type': 'WebSite',
+      '@id': 'https://www.negaresh-yar.ir/#website',
+      url: 'https://www.negaresh-yar.ir',
+      name: 'نگارش یار',
+      publisher: {
+        '@id': 'https://www.negaresh-yar.ir/#organization',
+      },
+    },
+    {
+      '@type': 'WebPage',
+      '@id': canonicalUrl,
+      url: canonicalUrl,
+      name: data.h1Title,
+      isPartOf: {
+        '@id': 'https://www.negaresh-yar.ir/#website',
+      },
+      breadcrumb: {
+        '@id': `${canonicalUrl}#breadcrumb`,
+      },
+    },
+    {
+      '@type': 'Article',
+      '@id': `${canonicalUrl}#article`,
+      isPartOf: {
+        '@id': canonicalUrl,
+      },
+      headline: data.h1Title,
+      description: data.heroSubtitle,
+      inLanguage: 'fa-IR',
+      mainEntityOfPage: {
+        '@id': canonicalUrl,
+      },
+      author: {
+        '@type': 'Organization',
+        name: 'پژوهشگاه و کارشناسان حقوقی نگارش یار',
+        url: 'https://www.negaresh-yar.ir',
+      },
+      publisher: {
+        '@id': 'https://www.negaresh-yar.ir/#organization',
+      },
+      datePublished: '2026-05-01',
+      dateModified: '2026-08-01',
+    },
+    {
+      '@type': 'BreadcrumbList',
+      '@id': `${canonicalUrl}#breadcrumb`,
+      itemListElement: [
+        {
+          '@type': 'ListItem',
+          position: 1,
+          name: 'صفحه اصلی',
+          item: 'https://www.negaresh-yar.ir',
+        },
+        {
+          '@type': 'ListItem',
+          position: 2,
+          name: 'پایگاه دانش حقوقی و اداری',
+          item: 'https://www.negaresh-yar.ir/knowledge',
+        },
+        {
+          '@type': 'ListItem',
+          position: 3,
+          name: data.h1Title,
+          item: canonicalUrl,
+        },
+      ],
+    },
+  ];
 
-  // Generate FAQ Schema JSON-LD
-  const faqSchema = data.faqs && data.faqs.length > 0 ? {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    mainEntity: data.faqs.map((faq) => ({
-      '@type': 'Question',
-      name: faq.q || faq.question || '',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: faq.a || faq.answer || '',
+  if (data.faqs && data.faqs.length > 0) {
+    graphEntities.push({
+      '@type': 'FAQPage',
+      '@id': `${canonicalUrl}#faq`,
+      isPartOf: {
+        '@id': canonicalUrl,
       },
-    })),
-  } : null;
+      mainEntity: data.faqs.map((faq) => ({
+        '@type': 'Question',
+        name: faq.q || faq.question || '',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: faq.a || faq.answer || '',
+        },
+      })),
+    });
+  }
 
-  // Breadcrumb Schema JSON-LD
-  const breadcrumbSchema = {
+  const jsonLdGraph = {
     '@context': 'https://schema.org',
-    '@type': 'BreadcrumbList',
-    itemListElement: [
-      {
-        '@type': 'ListItem',
-        position: 1,
-        name: 'صفحه اصلی',
-        item: 'https://www.negaresh-yar.ir',
-      },
-      {
-        '@type': 'ListItem',
-        position: 2,
-        name: 'پایگاه دانش حقوقی و اداری',
-        item: 'https://www.negaresh-yar.ir/knowledge',
-      },
-      {
-        '@type': 'ListItem',
-        position: 3,
-        name: data.h1Title,
-        item: `https://www.negaresh-yar.ir/knowledge/${data.slug}`,
-      },
-    ],
+    '@graph': graphEntities,
   };
 
   // Prevent nested path concatenation bugs (e.g. /knowledge/how-to-buy-car/ثبت-نام...)
@@ -137,18 +176,10 @@ export function KnowledgeArticleTemplate({ data }: { data: KnowledgeArticleData 
 
   return (
     <div className="space-y-12 sm:space-y-16 py-6 sm:py-10 selection:bg-[#E5C158] selection:text-[#070B15]">
-      {/* Inject Schemas */}
+      {/* Inject Unified Entity Graph Schema */}
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdGraph) }}
       />
 
       {/* ---------------------------------------------------- */}

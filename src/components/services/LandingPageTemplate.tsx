@@ -85,92 +85,121 @@ export function LandingPageTemplate({ data }: { data: ServiceLandingData }) {
     setOpenFaq(openFaq === idx ? null : idx);
   };
 
-  const serviceSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'Service',
-    name: data.h1Title,
-    description: data.heroSubtitle,
-    provider: {
-      '@type': 'Organization',
-      name: 'نگارش یار',
-      url: 'https://www.negaresh-yar.ir',
-      telephone: '+989915147789',
-      address: {
-        '@type': 'PostalAddress',
-        addressLocality: 'مشهد',
-        addressRegion: 'خراسان رضوی',
-        addressCountry: 'IR',
-      },
-      geo: {
-        '@type': 'GeoCoordinates',
-        latitude: '36.2972',
-        longitude: '59.6067',
-      },
-      logo: {
-        '@type': 'ImageObject',
-        url: 'https://www.negaresh-yar.ir/logo.jpg',
-      },
-    },
-    areaServed: {
-      '@type': 'Country',
-      name: 'Iran',
-    },
-    serviceType: data.categoryName,
-    url: `https://www.negaresh-yar.ir/services/${data.slug}`,
-  };
+  const canonicalUrl = `https://www.negaresh-yar.ir/services/${data.slug}`;
 
-  const faqSchema = {
+  const jsonLdGraph = {
     '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    mainEntity: data.faqs.map((faq) => ({
-      '@type': 'Question',
-      name: faq.q,
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: faq.a,
-      },
-    })),
-  };
-
-  const breadcrumbSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'BreadcrumbList',
-    itemListElement: [
+    '@graph': [
       {
-        '@type': 'ListItem',
-        position: 1,
-        name: 'صفحه اصلی',
-        item: 'https://www.negaresh-yar.ir',
-      },
-      {
-        '@type': 'ListItem',
-        position: 2,
-        name: 'خدمات نگارش یار',
-        item: 'https://www.negaresh-yar.ir/services',
+        '@type': 'Organization',
+        '@id': 'https://www.negaresh-yar.ir/#organization',
+        name: 'نگارش یار',
+        url: 'https://www.negaresh-yar.ir',
+        telephone: '+989915147789',
+        address: {
+          '@type': 'PostalAddress',
+          addressLocality: 'مشهد',
+          addressRegion: 'خراسان رضوی',
+          addressCountry: 'IR',
+        },
+        geo: {
+          '@type': 'GeoCoordinates',
+          latitude: '36.2972',
+          longitude: '59.6067',
+        },
+        logo: {
+          '@type': 'ImageObject',
+          '@id': 'https://www.negaresh-yar.ir/#logo',
+          url: 'https://www.negaresh-yar.ir/logo.jpg',
+        },
       },
       {
-        '@type': 'ListItem',
-        position: 3,
+        '@type': 'WebSite',
+        '@id': 'https://www.negaresh-yar.ir/#website',
+        url: 'https://www.negaresh-yar.ir',
+        name: 'نگارش یار',
+        publisher: {
+          '@id': 'https://www.negaresh-yar.ir/#organization',
+        },
+      },
+      {
+        '@type': 'WebPage',
+        '@id': canonicalUrl,
+        url: canonicalUrl,
         name: data.h1Title,
-        item: `https://www.negaresh-yar.ir/services/${data.slug}`,
+        isPartOf: {
+          '@id': 'https://www.negaresh-yar.ir/#website',
+        },
+        breadcrumb: {
+          '@id': `${canonicalUrl}#breadcrumb`,
+        },
+      },
+      {
+        '@type': 'LegalService',
+        '@id': `${canonicalUrl}#service`,
+        name: data.h1Title,
+        description: data.heroSubtitle,
+        url: canonicalUrl,
+        mainEntityOfPage: {
+          '@id': canonicalUrl,
+        },
+        provider: {
+          '@id': 'https://www.negaresh-yar.ir/#organization',
+        },
+        areaServed: {
+          '@type': 'Country',
+          name: 'ایران',
+        },
+        serviceType: data.categoryName,
+      },
+      {
+        '@type': 'BreadcrumbList',
+        '@id': `${canonicalUrl}#breadcrumb`,
+        itemListElement: [
+          {
+            '@type': 'ListItem',
+            position: 1,
+            name: 'صفحه اصلی',
+            item: 'https://www.negaresh-yar.ir',
+          },
+          {
+            '@type': 'ListItem',
+            position: 2,
+            name: 'خدمات نگارش یار',
+            item: 'https://www.negaresh-yar.ir/services',
+          },
+          {
+            '@type': 'ListItem',
+            position: 3,
+            name: data.h1Title,
+            item: canonicalUrl,
+          },
+        ],
+      },
+      {
+        '@type': 'FAQPage',
+        '@id': `${canonicalUrl}#faq`,
+        isPartOf: {
+          '@id': canonicalUrl,
+        },
+        mainEntity: data.faqs.map((faq) => ({
+          '@type': 'Question',
+          name: faq.q,
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: faq.a,
+          },
+        })),
       },
     ],
   };
 
   return (
     <div className="space-y-16 sm:space-y-24 py-6 sm:py-10 selection:bg-[#E5C158] selection:text-[#070B15]">
-      {/* Structured Data Scripts */}
+      {/* Structured Data Graph Script */}
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdGraph) }}
       />
       {/* ---------------------------------------------------- */}
       {/* 1. HERO SECTION & BREADCRUMBS */}
