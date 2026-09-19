@@ -1,6 +1,7 @@
 import React from 'react';
 import Script from 'next/script';
 import { LandingPageTemplate } from '@/components/services/LandingPageTemplate';
+import { JudiciaryAuctionGuideSection } from '@/components/services/JudiciaryAuctionGuideSection';
 import {
   judiciaryAuctionData,
   judiciaryAuctionMetadata,
@@ -9,7 +10,10 @@ import {
 export const metadata = judiciaryAuctionMetadata;
 
 export default function JudiciaryAuctionPage() {
-  const data = judiciaryAuctionData;
+  const data = {
+    ...judiciaryAuctionData,
+    customGuideContent: <JudiciaryAuctionGuideSection />,
+  };
 
   const breadcrumbSchema = {
     '@context': 'https://schema.org',
@@ -45,8 +49,27 @@ export default function JudiciaryAuctionPage() {
       '@type': 'Organization',
       name: 'نگارش یار',
       url: 'https://www.negaresh-yar.ir',
+      telephone: '+989915147789',
+      address: {
+        '@type': 'PostalAddress',
+        addressLocality: 'مشهد',
+        addressRegion: 'خراسان رضوی',
+        addressCountry: 'IR',
+      },
+      geo: {
+        '@type': 'GeoCoordinates',
+        latitude: '36.2972',
+        longitude: '59.6067',
+      },
+      logo: {
+        '@type': 'ImageObject',
+        url: 'https://www.negaresh-yar.ir/logo.jpg',
+      },
     },
-    areaServed: 'IR',
+    areaServed: {
+      '@type': 'Country',
+      name: 'Iran',
+    },
     url: `https://www.negaresh-yar.ir/services/${data.slug}`,
   };
 
@@ -66,21 +89,23 @@ export default function JudiciaryAuctionPage() {
   return (
     <>
       <Script
-        id="breadcrumb-schema"
+        id="breadcrumb-schema-judiciary-auction"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
       <Script
-        id="service-schema"
+        id="service-schema-judiciary-auction"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
       />
       <Script
-        id="faq-schema"
+        id="faq-schema-judiciary-auction"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
-      <LandingPageTemplate data={data} />
+      <main className="min-h-screen bg-[#070B15]">
+        <LandingPageTemplate data={data} />
+      </main>
     </>
   );
 }
