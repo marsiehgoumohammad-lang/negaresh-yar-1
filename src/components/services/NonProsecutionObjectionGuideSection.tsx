@@ -41,16 +41,16 @@ export function NonProsecutionObjectionGuideSection() {
               <Gavel className="w-5 h-5" />
             </div>
             <h3 className="text-xl sm:text-2xl font-black text-white">
-              ۱. قرار منع تعقیب چیست و به چه دلایلی صادر می‌شود؟
+              ۱. قرار منع تعقیب چیست و به چه دلایلی صادر میشود؟
             </h3>
           </div>
 
           <div className="space-y-4 text-slate-300 text-sm sm:text-base leading-relaxed text-justify">
             <p>
-              در پرونده‌های کیفری، پس از طرح شکواییه توسط شاکی و انجام تحقیقات مقدماتی در دادسرا، چنانچه بازپرس یا دادیار به این جمع‌بندی برسد که انتساب جرم به متهم ناممکن است یا رفتار ارتکابی اساساً وصف کیفری ندارد، اقدام به صدور <strong>«قرار منع تعقیب» (Order of Non-Prosecution)</strong> می‌نماید.
+              در پروندههای کیفری، پس از طرح شکواییه توسط شاکی و انجام تحقیقات مقدماتی در دادسرا، چنانچه بازپرس یا دادیار به این جمعبندی برسد که انتساب جرم به متهم ناممکن است یا رفتار ارتکابی اساساً وصف کیفری ندارد، اقدام به صدور <strong>«قرار منع تعقیب» (Order of Non-Prosecution)</strong> مینماید.
             </p>
             <p>
-              قرار منع تعقیب عموماً بر پایه دو محور اصلی صادر می‌شود که درک تفاوت آن‌ها برای تنظیم لایحه اعتراض حیاتی است:
+              قرار منع تعقیب عموماً بر پایه دو محور اصلی صادر میشود که درک تفاوت آنها برای تنظیم لایحه اعتراض حیاتی است:
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pt-2">
@@ -60,7 +60,7 @@ export function NonProsecutionObjectionGuideSection() {
                   <h4>الف) جرم نبودن عمل ارتکابی (فقدان وصف کیفری)</h4>
                 </div>
                 <p className="text-xs sm:text-sm text-slate-400 leading-relaxed">
-                  مقام قضایی تشخیص می‌دهد که موضوع شکایت صرفاً یک اختلاف حقوقی، مدنی، خانوادگی یا قراردادی است و در قوانین جزایی کشور برای آن مجازاتی تعیین نشده است.
+                  مقام قضایی تشخیص میدهد که موضوع شکایت صرفاً یک اختلاف حقوقی، مدنی، خانوادگی یا قراردادی است و در قوانین جزایی کشور برای آن مجازاتی تعیین نشده است.
                 </p>
               </div>
 
@@ -70,13 +70,13 @@ export function NonProsecutionObjectionGuideSection() {
                   <h4>ب) عدم کفایت ادله و مدارک اثباتی</h4>
                 </div>
                 <p className="text-xs sm:text-sm text-slate-400 leading-relaxed">
-                  عمل رخ‌داده جرم است، اما به دلیل نقص در ادله، عدم شهادت شهود، عدم وضوح مدارک یا عدم اقرار، بازپرس مدارک شاکی را برای انتساب اتهام به متهم کافی ندانسته است.
+                  عمل رخداده جرم است، اما به دلیل نقص در ادله، عدم شهادت شهود، عدم وضوح مدارک یا عدم اقرار، بازپرس مدارک شاکی را برای انتساب اتهام به متهم کافی ندانسته است.
                 </p>
               </div>
             </div>
 
             <div className="p-4 rounded-xl bg-[#070B15] border border-amber-500/20 text-amber-200 text-xs sm:text-sm leading-relaxed">
-              <strong>نکته مهم:</strong> صدور قرار منع تعقیب به هیچ وجه به معنای پایان پرونده شما نیست. قانون‌گذار در ماده ۲۷۰ قانون آیین دادرسی کیفری حق اعتراض را برای شاکی به رسمیت شناخته تا دادگاه کیفری بتواند تصمیم دادسرا را با دقت بازبینی و نقض کند.
+              <strong>نکته مهم:</strong> صدور قرار منع تعقیب به هیچ وجه به معنای پایان پرونده شما نیست. قانونگذار در ماده ۲۷۰ قانون آیین دادرسی کیفری حق اعتراض را برای شاکی به رسمیت شناخته تا دادگاه کیفری بتواند تصمیم دادسرا را با دقت بازبینی و نقض کند.
             </div>
           </div>
         </div>
@@ -94,7 +94,7 @@ export function NonProsecutionObjectionGuideSection() {
 
           <div className="space-y-4 text-slate-300 text-sm sm:text-base leading-relaxed text-justify">
             <p>
-              بر اساس ماده ۲۷۰ قانون آیین دادرسی کیفری، اشخاص زیر صلاحیت قانونی جهت ثبت اعتراض به قرار منع تعقیب را دارا می‌باشند:
+              بر اساس ماده ۲۷۰ قانون آیین دادرسی کیفری، اشخاص زیر صلاحیت قانونی جهت ثبت اعتراض به قرار منع تعقیب را دارا میباشند:
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
               <div className="p-4 rounded-2xl bg-[#070B15] border border-slate-800 space-y-2">
@@ -113,7 +113,7 @@ export function NonProsecutionObjectionGuideSection() {
                   <span>۲. وکیل دادگستری شاکی</span>
                 </h4>
                 <p className="text-xs sm:text-sm text-slate-400 leading-relaxed">
-                  وکیل دارای وکالت‌نامه رسمی معتبر که حق اعتراض به قرارها و تجدیدنظرخواهی در آن تصریح شده باشد.
+                  وکیل دارای وکالتنامه رسمی معتبر که حق اعتراض به قرارها و تجدیدنظرخواهی در آن تصریح شده باشد.
                 </p>
               </div>
 
@@ -123,12 +123,12 @@ export function NonProsecutionObjectionGuideSection() {
                   <span>۳. نماینده قانونی یا قیم</span>
                 </h4>
                 <p className="text-xs sm:text-sm text-slate-400 leading-relaxed">
-                  ولی قهری، قیم محجورین، متولیان یا نمایندگان حقوقی شرکت‌ها و اشخاص حقوقی متضرر از جرم.
+                  ولی قهری، قیم محجورین، متولیان یا نمایندگان حقوقی شرکتها و اشخاص حقوقی متضرر از جرم.
                 </p>
               </div>
             </div>
             <p className="text-xs sm:text-sm text-slate-400">
-              <strong>نقش ابلاغ در سامانه ثنا:</strong> مهلت اعتراض دقیقاً از زمانی محاسبه می‌شود که ابلاغیه قرار در کارتابل ثنای شاکی یا وکیل وی مشاهده گردد یا مهلت ابلاغ قانونی آن سپری شود.
+              <strong>نقش ابلاغ در سامانه ثنا:</strong> مهلت اعتراض دقیقاً از زمانی محاسبه میشود که ابلاغیه قرار در کارتابل ثنای شاکی یا وکیل وی مشاهده گردد یا مهلت ابلاغ قانونی آن سپری شود.
             </p>
           </div>
         </div>
@@ -146,7 +146,7 @@ export function NonProsecutionObjectionGuideSection() {
 
           <div className="space-y-4 text-slate-300 text-sm sm:text-base leading-relaxed text-justify">
             <p>
-              بر اساس ماده ۲۷۰ قانون آیین دادرسی کیفری، مهلت‌های اعتراض به قرارهای نهایی دادسرا دقیقاً به شرح زیر است:
+              بر اساس ماده ۲۷۰ قانون آیین دادرسی کیفری، مهلتهای اعتراض به قرارهای نهایی دادسرا دقیقاً به شرح زیر است:
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -156,7 +156,7 @@ export function NonProsecutionObjectionGuideSection() {
                   <span className="text-[#E5C158] font-black">۱۰ روز</span>
                 </h4>
                 <p className="text-xs sm:text-sm text-slate-400 leading-relaxed">
-                  از تاریخ ابلاغ واقعی در سامانه ثنا. روز ابلاغ و روز اقدام محاسبه نمی‌شود، لذا عملاً شاکی ۱۲ روز برای تنظیم و ثبت لایحه مهلت دارد.
+                  از تاریخ ابلاغ واقعی در سامانه ثنا. روز ابلاغ و روز اقدام محاسبه نمیشود، لذا عملاً شاکی ۱۲ روز برای تنظیم و ثبت لایحه مهلت دارد.
                 </p>
               </div>
 
@@ -166,13 +166,13 @@ export function NonProsecutionObjectionGuideSection() {
                   <span className="text-sky-400 font-black">۱ ماه</span>
                 </h4>
                 <p className="text-xs sm:text-sm text-slate-400 leading-relaxed">
-                  از تاریخ ابلاغ رسمی به وکیل یا بستگان مقیم ایران یا ثبت در سامانه‌های کنسولی و ثنا.
+                  از تاریخ ابلاغ رسمی به وکیل یا بستگان مقیم ایران یا ثبت در سامانههای کنسولی و ثنا.
                 </p>
               </div>
             </div>
 
             <div className="p-4 rounded-xl bg-[#070B15] border border-red-500/20 text-red-300 text-xs sm:text-sm leading-relaxed">
-              <strong>هشدار انقضای مهلت:</strong> در صورتی که لایحه اعتراض حتی یک روز پس از مهلت قانونی در سامانه دفاتر خدمات قضایی ثبت گردد، دادگاه بدون بررسی ماهوی پرونده، «قرار رد اعتراض به دلیل انقضای مهلت» صادر می‌کند و قرار منع تعقیب قطعی می‌شود.
+              <strong>هشدار انقضای مهلت:</strong> در صورتی که لایحه اعتراض حتی یک روز پس از مهلت قانونی در سامانه دفاتر خدمات قضایی ثبت گردد، دادگاه بدون بررسی ماهوی پرونده، «قرار رد اعتراض به دلیل انقضای مهلت» صادر میکند و قرار منع تعقیب قطعی میشود.
             </div>
           </div>
         </div>
@@ -184,7 +184,7 @@ export function NonProsecutionObjectionGuideSection() {
               <Building className="w-5 h-5" />
             </div>
             <h3 className="text-xl sm:text-2xl font-black text-white">
-              ۴. مراحل گام‌به‌گام اعتراض به قرار منع تعقیب تا نقض در دادگاه
+              ۴. مراحل گامبهگام اعتراض به قرار منع تعقیب تا نقض در دادگاه
             </h3>
           </div>
 
@@ -196,7 +196,7 @@ export function NonProsecutionObjectionGuideSection() {
               <div className="space-y-1">
                 <h4 className="text-base font-bold text-white">دریافت و بررسی دقیق قرار در سامانه ثنا</h4>
                 <p className="text-xs sm:text-sm text-slate-400 leading-relaxed">
-                  دانلود دادنامه قرار منع تعقیب و مطالعه استدلال‌های دادیار/بازپرس پیرامون علت رد شکایت یا نبود ادله.
+                  دانلود دادنامه قرار منع تعقیب و مطالعه استدلالهای دادیار/بازپرس پیرامون علت رد شکایت یا نبود ادله.
                 </p>
               </div>
             </div>
@@ -208,7 +208,7 @@ export function NonProsecutionObjectionGuideSection() {
               <div className="space-y-1">
                 <h4 className="text-base font-bold text-white">کشف ایرادات و نواقص تحقیقات مقدماتی</h4>
                 <p className="text-xs sm:text-sm text-slate-400 leading-relaxed">
-                  شناسایی شهودی که احضار نشده‌اند، اسناد بانکی یا قراردادهایی که بررسی نگردیده‌اند و خطاهای انطباق رفتار با قانون مجازات.
+                  شناسایی شهودی که احضار نشدهاند، اسناد بانکی یا قراردادهایی که بررسی نگردیدهاند و خطاهای انطباق رفتار با قانون مجازات.
                 </p>
               </div>
             </div>
@@ -244,7 +244,7 @@ export function NonProsecutionObjectionGuideSection() {
               <div className="space-y-1">
                 <h4 className="text-base font-bold text-white">رسیدگی دادگاه کیفری دو و صدور تصمیم نهایی</h4>
                 <p className="text-xs sm:text-sm text-slate-400 leading-relaxed">
-                  قاضی دادگاه پرونده را بررسی کرده و در صورت قبول اعتراض، قرار را نقض و پرونده را جهت تفهیم اتهام و صدور کیفرخواست به دادسرا برمی‌گرداند.
+                  قاضی دادگاه پرونده را بررسی کرده و در صورت قبول اعتراض، قرار را نقض و پرونده را جهت تفهیم اتهام و صدور کیفرخواست به دادسرا برمیگرداند.
                 </p>
               </div>
             </div>
@@ -258,12 +258,12 @@ export function NonProsecutionObjectionGuideSection() {
               <Scale className="w-5 h-5" />
             </div>
             <h3 className="text-xl sm:text-2xl font-black text-white">
-              ۵. مهم‌ترین دلایل قانونی برای نقض قرار منع تعقیب در دادگاه
+              ۵. مهمترین دلایل قانونی برای نقض قرار منع تعقیب در دادگاه
             </h3>
           </div>
 
           <p className="text-slate-300 text-sm sm:text-base leading-relaxed">
-            قضات دادگاه‌های کیفری دو بر اساس ۵ محور کلیدی زیر اقدام به نقض قرار منع تعقیب بازپرس می‌نمایند:
+            قضات دادگاههای کیفری دو بر اساس ۵ محور کلیدی زیر اقدام به نقض قرار منع تعقیب بازپرس مینمایند:
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -273,14 +273,14 @@ export function NonProsecutionObjectionGuideSection() {
                 <h4>۱. نقص در تحقیقات مقدماتی</h4>
               </div>
               <p className="text-xs sm:text-sm text-slate-400 leading-relaxed">
-                عدم استعلام تراکنش‌های بانکی، عدم بازبینی فیلم دوربین‌های مداربسته، عدم جلب نظر کارشناس رسمی یا عدم مواجهه حضوری میان طرفین پرونده.
+                عدم استعلام تراکنشهای بانکی، عدم بازبینی فیلم دوربینهای مداربسته، عدم جلب نظر کارشناس رسمی یا عدم مواجهه حضوری میان طرفین پرونده.
               </p>
             </div>
 
             <div className="p-5 rounded-2xl bg-[#070B15] border border-slate-800 space-y-2">
               <div className="flex items-center gap-2 text-[#E5C158] font-bold text-sm">
                 <CheckCircle2 className="w-4 h-4" />
-                <h4>۲. بی‌توجهی به شهادت شهود و مطلعین</h4>
+                <h4>۲. بیتوجهی به شهادت شهود و مطلعین</h4>
               </div>
               <p className="text-xs sm:text-sm text-slate-400 leading-relaxed">
                 معرفی شهود توسط شاکی در مرحله دادسرا که دادیار بدون احضار آنان یا بدون استماع شهادتشان اقدام به مختومه کردن پرونده نموده است.
@@ -293,17 +293,17 @@ export function NonProsecutionObjectionGuideSection() {
                 <h4>۳. اشتباه در تطبیق رفتار با قانون مجازات</h4>
               </div>
               <p className="text-xs sm:text-sm text-slate-400 leading-relaxed">
-                تلقی اشتباه عمل مجرمانه به عنوان دعوای حقوقی (نظیر پرونده‌های کلاهبرداری، انتقال مال غیر و خیانت در امانت که دادیار آن را اختلاف مالی دانسته).
+                تلقی اشتباه عمل مجرمانه به عنوان دعوای حقوقی (نظیر پروندههای کلاهبرداری، انتقال مال غیر و خیانت در امانت که دادیار آن را اختلاف مالی دانسته).
               </p>
             </div>
 
             <div className="p-5 rounded-2xl bg-[#070B15] border border-slate-800 space-y-2">
               <div className="flex items-center gap-2 text-[#E5C158] font-bold text-sm">
                 <CheckCircle2 className="w-4 h-4" />
-                <h4>۴. نادیده گرفتن اسناد کتبی و پیام‌های الکترونیکی</h4>
+                <h4>۴. نادیده گرفتن اسناد کتبی و پیامهای الکترونیکی</h4>
               </div>
               <p className="text-xs sm:text-sm text-slate-400 leading-relaxed">
-                وجود رسیدهای پرداخت، چت‌های پیام‌رسان‌ها، اقرارنامه‌ها و پیامک‌هایی که ارتکاب جرم توسط متهم را به وضوح اثبات می‌کنند.
+                وجود رسیدهای پرداخت، چتهای پیامرسانها، اقرارنامهها و پیامکهایی که ارتکاب جرم توسط متهم را به وضوح اثبات میکنند.
               </p>
             </div>
           </div>
@@ -355,7 +355,7 @@ export function NonProsecutionObjectionGuideSection() {
                   <td className="p-3">فقط دادگاه کیفری (بدوی یا تجدیدنظر)</td>
                   <td className="p-3">محاکمه ماهوی متهم و عدم احراز گناهکاری پس از صدور کیفرخواست</td>
                   <td className="p-3 text-emerald-400 font-bold">دارد (تجدیدنظرخواهی ظرف ۲۰ روز)</td>
-                  <td className="p-3 text-slate-300">اعلام بی‌گناهی رسمی متهم با اثر قطعی و منع محاکمه مجدد</td>
+                  <td className="p-3 text-slate-300">اعلام بیگناهی رسمی متهم با اثر قطعی و منع محاکمه مجدد</td>
                 </tr>
               </tbody>
             </table>
@@ -377,14 +377,14 @@ export function NonProsecutionObjectionGuideSection() {
             <div className="p-4 rounded-2xl bg-[#070B15] border border-red-500/20 space-y-2">
               <h4 className="font-bold text-red-400">۱. تکرار صرف متن شکایت اولیه</h4>
               <p className="text-slate-400 leading-relaxed">
-                بسیاری از شاکیان عین متن شکواییه را دوباره کپی می‌کنند، در حالی که لایحه اعتراض باید دقیقاً استدلال‌های بازپرس را نقد کرده و دلایل رد آن‌ها را اثبات کند.
+                بسیاری از شاکیان عین متن شکواییه را دوباره کپی میکنند، در حالی که لایحه اعتراض باید دقیقاً استدلالهای بازپرس را نقد کرده و دلایل رد آنها را اثبات کند.
               </p>
             </div>
 
             <div className="p-4 rounded-2xl bg-[#070B15] border border-amber-500/20 space-y-2">
               <h4 className="font-bold text-amber-400">۲. بیان مطالب احساسی و غیرحقوقی</h4>
               <p className="text-slate-400 leading-relaxed">
-                توسل به مظلوم‌نمایی به جای ارائه مدارک محکمه‌پسند و استناد به مواد قانونی موجب رد فوری اعتراض در دادگاه می‌شود.
+                توسل به مظلومنمایی به جای ارائه مدارک محکمهپسند و استناد به مواد قانونی موجب رد فوری اعتراض در دادگاه میشود.
               </p>
             </div>
 
@@ -398,7 +398,7 @@ export function NonProsecutionObjectionGuideSection() {
             <div className="p-4 rounded-2xl bg-[#070B15] border border-purple-500/20 space-y-2">
               <h4 className="font-bold text-purple-400">۴. از دست دادن مهلت ۱۰ روزه ثنا</h4>
               <p className="text-slate-400 leading-relaxed">
-                تعلل در آماده‌سازی لایحه باعث ثبت آن پس از انقضای مهلت و رد قطعی اعتراض بدون بررسی محتوایی پرونده می‌گردد.
+                تعلل در آمادهسازی لایحه باعث ثبت آن پس از انقضای مهلت و رد قطعی اعتراض بدون بررسی محتوایی پرونده میگردد.
               </p>
             </div>
           </div>
@@ -408,7 +408,7 @@ export function NonProsecutionObjectionGuideSection() {
         <div className="p-6 rounded-3xl bg-gradient-to-r from-[#0C1222] via-[#0F172A] to-[#0C1222] border border-[#E5C158]/30 space-y-4">
           <div className="flex items-center gap-2 text-[#E5C158] font-bold text-sm">
             <CheckCircle2 className="w-5 h-5" />
-            <span>تفکیک شفاف گزینه‌ها و خدمات نگارش یار در اعتراض به قرار دادسرا</span>
+            <span>تفکیک شفاف گزینهها و خدمات نگارش یار در اعتراض به قرار دادسرا</span>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs sm:text-sm text-slate-300">
             <div className="p-4 rounded-xl bg-[#070B15] border border-slate-800 space-y-1">
@@ -426,7 +426,7 @@ export function NonProsecutionObjectionGuideSection() {
             <div className="p-4 rounded-xl bg-[#070B15] border border-slate-800 space-y-1">
               <h4 className="font-bold text-sky-400">۳. معرفی وکیل منصف</h4>
               <p className="text-slate-400">
-                برای پرونده‌های کیفری سنگین، پیچیده یا مواردی که نیاز به حضور وکیل در جلسه رسیدگی دادگاه دارند، از بخش <Link href="/lawyer-referral" className="text-[#E5C158] underline font-bold">معرفی وکیل منصف</Link> اقدام کنید.
+                برای پروندههای کیفری سنگین، پیچیده یا مواردی که نیاز به حضور وکیل در جلسه رسیدگی دادگاه دارند، از بخش <Link href="/lawyer-referral" className="text-[#E5C158] underline font-bold">معرفی وکیل منصف</Link> اقدام کنید.
               </p>
             </div>
           </div>
@@ -438,7 +438,7 @@ export function NonProsecutionObjectionGuideSection() {
             قصد اعتراض به قرار منع تعقیب و جلب به دادرسی متهم را دارید؟
           </h3>
           <p className="text-slate-300 text-xs sm:text-sm max-w-2xl mx-auto leading-relaxed">
-            مهلت ۱۰ روزه شما در حال سپری شدن است. با تنظیم لایحه‌ای مستدل و تخصصی توسط کارشناسان ارشد نگارش یار، زمینه نقض قرار دادسرا و احقاق حق خود را فراهم آورید.
+            مهلت ۱۰ روزه شما در حال سپری شدن است. با تنظیم لایحهای مستدل و تخصصی توسط کارشناسان ارشد نگارش یار، زمینه نقض قرار دادسرا و احقاق حق خود را فراهم آورید.
           </p>
           <div className="pt-2 flex flex-col sm:flex-row items-center justify-center gap-3">
             <Link
