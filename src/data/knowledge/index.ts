@@ -32,6 +32,7 @@ import { checkBadCreditRemovalData, checkBadCreditRemovalMetadata } from './chec
 import { sayadCheckExecutionArticle23Data, sayadCheckExecutionArticle23Metadata } from './sayad-check-execution-article-23';
 import { guaranteeCheckRulesData, guaranteeCheckRulesMetadata } from './guarantee-check-rules';
 import { mahriehClaimGuideData, mahriehClaimGuideMetadata } from './mahrieh-claim-guide';
+import { judgmentEnforcementGuideData, judgmentEnforcementGuideMetadata } from './judgment-enforcement-guide';
 
 export * from './types';
 
@@ -136,6 +137,7 @@ export const ALL_KNOWLEDGE_ARTICLES: KnowledgeArticleData[] = [
   sayadCheckExecutionArticle23Data,
   guaranteeCheckRulesData,
   mahriehClaimGuideData,
+  judgmentEnforcementGuideData,
 ];
 
 export const KNOWLEDGE_METADATA_MAP = {
@@ -172,6 +174,7 @@ export const KNOWLEDGE_METADATA_MAP = {
   'check-bad-credit-removal': checkBadCreditRemovalMetadata,
   'sayad-check-execution-article-23': sayadCheckExecutionArticle23Metadata,
   'guarantee-check-rules': guaranteeCheckRulesMetadata,
+  'judgment-enforcement-guide': judgmentEnforcementGuideMetadata,
 };
 
 export function getKnowledgeArticleBySlug(slug: string): KnowledgeArticleData | undefined {

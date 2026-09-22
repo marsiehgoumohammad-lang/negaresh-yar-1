@@ -62,6 +62,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     'insolvency-court-fee',
     'insolvency-from-judgment',
     'insolvency-petition',
+    'judgment-enforcement',
     'judiciary-auction',
     'leader-office-letter',
     'legal-brief',
