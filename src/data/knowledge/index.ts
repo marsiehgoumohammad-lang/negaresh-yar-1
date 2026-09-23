@@ -33,6 +33,7 @@ import { sayadCheckExecutionArticle23Data, sayadCheckExecutionArticle23Metadata 
 import { guaranteeCheckRulesData, guaranteeCheckRulesMetadata } from './guarantee-check-rules';
 import { mahriehClaimGuideData, mahriehClaimGuideMetadata } from './mahrieh-claim-guide';
 import { judgmentEnforcementGuideData, judgmentEnforcementGuideMetadata } from './judgment-enforcement-guide';
+import { falseTestimonyAndWitnessChallengeData, falseTestimonyAndWitnessChallengeMetadata } from './false-testimony-and-witness-challenge';
 
 export * from './types';
 
@@ -138,6 +139,7 @@ export const ALL_KNOWLEDGE_ARTICLES: KnowledgeArticleData[] = [
   guaranteeCheckRulesData,
   mahriehClaimGuideData,
   judgmentEnforcementGuideData,
+  falseTestimonyAndWitnessChallengeData,
 ];
 
 export const KNOWLEDGE_METADATA_MAP = {
@@ -175,6 +177,7 @@ export const KNOWLEDGE_METADATA_MAP = {
   'sayad-check-execution-article-23': sayadCheckExecutionArticle23Metadata,
   'guarantee-check-rules': guaranteeCheckRulesMetadata,
   'judgment-enforcement-guide': judgmentEnforcementGuideMetadata,
+  'false-testimony-and-witness-challenge': falseTestimonyAndWitnessChallengeMetadata,
 };
 
 export function getKnowledgeArticleBySlug(slug: string): KnowledgeArticleData | undefined {
