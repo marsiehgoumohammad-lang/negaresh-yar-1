@@ -100,18 +100,38 @@ export const sampleEvidencePreservationPetitionData: SampleLandingData = {
   ],
   "relatedServices": [
     {
-      "title": "تنظیم دادخواست‌های تأمین دلیل",
-      "href": "/services/legal-petition",
-      "badge": "تأمین دلیل",
-      "desc": "تنظیم تخصصی دادخواست‌های کارشناسی و تأمین دلیل شورا."
+      "title": "تنظیم دادخواست های حقوقی",
+      "href": "/services/petition-writing",
+      "badge": "دادخواست تخصصی",
+      "desc": "تنظیم انواع دادخواست های تأمین دلیل، صورت برداری و مطالبه خسارات در شورا و دادگاه."
+    },
+    {
+      "title": "تنظیم لایحه اعتراض به نظریه کارشناسی",
+      "href": "/services/expert-opinion-objection",
+      "badge": "امور کارشناسی",
+      "desc": "نگارش فنی لایحه اعتراض به ارزیابی غیرواقعی کارشناس در پرونده های خسارت."
     }
   ],
   "relatedSamples": [
     {
-      "title": "نمونه لایحه اعتراض به نظریه کارشناسی (ماده ۲۶۰)",
-      "href": "/samples/expert-opinion-objection-brief",
+      "title": "نمونه دادخواست تأمین دلیل با جلب نظر کارشناس",
+      "href": "/samples/evidence-preservation",
+      "badge": "تأمین دلیل",
+      "desc": "الگوی کامل دادخواست تأمین دلیل خودرو، ملک و تحویل کلید به شورا."
+    },
+    {
+      "title": "نمونه لایحه اعتراض به نظریه کارشناسی رسمی",
+      "href": "/samples/expert-opinion-objection",
       "badge": "ماده ۲۶۰ ق.آ.د.م",
-      "desc": "اعتراض به گزارش کارشناس تأمین دلیل یا دادگاه."
+      "desc": "اعتراض به گزارش کارشناس در مهلت قانونی یک هفته ای."
+    }
+  ],
+  "relatedArticles": [
+    {
+      "title": "راهنمای جامع کارشناسی سه نفره و پنج نفره دادگاه",
+      "href": "/knowledge/expert-panel-court",
+      "badge": "مقاله تخصصی",
+      "desc": "قواعد حاکم بر کارشناسی رسمی دادگستری، مهلت های اعتراض و رویه های قضایی."
     }
   ],
   "ctaTitle": "ملک، خودرو یا کارگاه شما خسارت دیده و قبل از تعمیر باید آن را ثبت رسمی کنید؟",

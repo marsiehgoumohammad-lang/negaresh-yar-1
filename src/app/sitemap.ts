@@ -56,6 +56,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     'court-document-explainer',
     'document-writing',
     'electronic-tag-request',
+    'expert-opinion-objection',
     'false-witness-inquiry',
     'government-auctions',
     'impounded-assets-auction',

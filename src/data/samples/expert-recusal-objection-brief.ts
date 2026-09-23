@@ -92,18 +92,32 @@ export const sampleExpertRecusalObjectionBriefData: SampleLandingData = {
   ],
   "relatedServices": [
     {
-      "title": "لوایح تخصصی امور کارشناسی",
-      "href": "/services/legal-brief",
-      "badge": "رد کارشناس",
-      "desc": "تنظیم لوایح رد کارشناس و دفاع در برابر نظرات غیربی‌طرفانه."
+      "title": "تنظیم لایحه اعتراض به نظریه کارشناسی",
+      "href": "/services/expert-opinion-objection",
+      "badge": "امور کارشناسی",
+      "desc": "نگارش فنی و مستدل لوایح اعتراض و ایرادات شکلی به کارشناسی رسمی دادگستری."
     }
   ],
   "relatedSamples": [
     {
-      "title": "نمونه لایحه اعتراض به نظریه کارشناسی (ماده ۲۶۰)",
-      "href": "/samples/expert-opinion-objection-brief",
+      "title": "نمونه لایحه اعتراض به نظریه کارشناسی رسمی",
+      "href": "/samples/expert-opinion-objection",
       "badge": "ماده ۲۶۰ ق.آ.د.م",
-      "desc": "اعتراض ماهوی به نظریه کارشناس رسمی."
+      "desc": "متن رسمی اعتراض به گزارش کارشناس و درخواست ارجاع به هیئت کارشناسی."
+    },
+    {
+      "title": "نمونه لایحه تودیع دستمزد کارشناس (ماده ۲۵۹)",
+      "href": "/samples/expert-deposit-payment-brief",
+      "badge": "ماده ۲۵۹ ق.آ.د.م",
+      "desc": "واریز دستمزد کارشناسی دادگاه در مهلت مقرر قانونی."
+    }
+  ],
+  "relatedArticles": [
+    {
+      "title": "راهنمای جامع کارشناسی سه نفره و پنج نفره دادگاه",
+      "href": "/knowledge/expert-panel-court",
+      "badge": "مقاله تخصصی",
+      "desc": "مقررات انتخاب کارشناس رسمی، رد کارشناس و سلسله مراتب هیئت ها."
     }
   ],
   "ctaTitle": "کارشناس انتخاب‌شده دادگاه فامیل یا همکار طرف مقابل است؟",

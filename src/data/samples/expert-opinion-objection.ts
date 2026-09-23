@@ -171,37 +171,37 @@ export const sampleExpertOpinionObjectionData: SampleLandingData = {
 
   relatedServices: [
     {
-      title: 'تنظیم لایحه تخصصی اعتراض به کارشناسی',
-      href: '/services/legal-brief',
+      title: 'تنظیم لایحه اعتراض به نظریه کارشناسی',
+      href: '/services/expert-opinion-objection',
       badge: 'خدمت تخصصی',
-      desc: 'تنظیم لایحه مستدل ایراد به نظریه کارشناس توسط کارشناسان حقوقی و مهندسی.',
+      desc: 'نگارش فنی و مستدل لایحه اعتراض به نظریه کارشناس و تقاضای ارجاع به هیئت سه نفره.',
     },
     {
-      title: 'تنظیم دادخواست تجدیدنظرخواهی',
-      href: '/services/appeal',
+      title: 'تنظیم لایحه دفاعیه دادگاه',
+      href: '/services/legal-brief',
       badge: 'اوراق قضایی',
-      desc: 'نگارش تخصصی لوایح و دادخواست‌های تجدیدنظرخواهی محاکم استان.',
+      desc: 'تنظیم تخصصی انواع لوایح حقوقی و کیفری جهت ارائه در جلسات دادرسی.',
     },
   ],
 
   relatedSamples: [
     {
-      title: 'نمونه اعتراض شخص ثالث به توقیف اموال',
-      href: '/samples/third-party-objection-to-execution',
-      desc: 'درخواست رفع توقیف مال متعلق به غیر در اجرای احکام.',
-      badge: 'اعتراض ثالث'
+      title: 'نمونه لایحه اعتراض به کارشناسی ظرف یک هفته',
+      href: '/samples/expert-opinion-objection-brief',
+      desc: 'لایحه سریع رعایت مواعد قانونی و تقاضای ارجاع به هیئت کارشناسی.',
+      badge: 'مهلت یک هفته'
     },
     {
-      title: 'نمونه درخواست ابطال مزایده اجرای احکام',
-      href: '/samples/auction-cancellation-objection',
-      desc: 'اعتراض به تخلفات شکلی و قانونی حراج دادگاه.',
-      badge: 'ابطال مزایده'
+      title: 'نمونه لایحه تودیع دستمزد کارشناس (ماده ۲۵۹)',
+      href: '/samples/expert-deposit-payment-brief',
+      desc: 'واریز و اعلام پرداخت حق الزحمه کارشناس در فرجه قانونی دادگاه.',
+      badge: 'تودیع دستمزد'
     },
     {
-      title: 'نمونه درخواست رفع توقیف مستثنیات دین',
-      href: '/samples/property-attachment-lifting-request',
-      desc: 'آزادی منزل مسکونی یا خودروی کسب درآمد.',
-      badge: 'مستثنیات دین'
+      title: 'نمونه دادخواست تأمین دلیل با جلب نظر کارشناس',
+      href: '/samples/evidence-preservation',
+      desc: 'ثبت و صورت برداری خسارات با کارشناس رسمی قبل از شروع دعوای ماهوی.',
+      badge: 'تأمین دلیل'
     }
   ],
 

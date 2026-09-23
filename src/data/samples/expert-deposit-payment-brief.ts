@@ -92,18 +92,32 @@ export const sampleExpertDepositPaymentBriefData: SampleLandingData = {
   ],
   "relatedServices": [
     {
-      "title": "تنظیم لوایح امور کارشناسی",
-      "href": "/services/legal-brief",
-      "badge": "ماده ۲۵۹",
-      "desc": "پیگیری قرارهای کارشناسی و ثبت فیش‌های سپرده دادگاه."
+      "title": "تنظیم لایحه اعتراض به نظریه کارشناسی",
+      "href": "/services/expert-opinion-objection",
+      "badge": "خدمت کارشناسی",
+      "desc": "تنظیم تخصصی لایحه اعتراض به نظر کارشناس و لایحه تودیع دستمزد هیئت کارشناسان."
     }
   ],
   "relatedSamples": [
     {
-      "title": "نمونه لایحه اعتراض به نظریه کارشناسی (ماده ۲۶۰)",
-      "href": "/samples/expert-opinion-objection-brief",
+      "title": "نمونه لایحه اعتراض به نظریه کارشناسی رسمی",
+      "href": "/samples/expert-opinion-objection",
       "badge": "ماده ۲۶۰ ق.آ.د.م",
-      "desc": "اعتراض به گزارش کارشناس ظرف مهلت یک هفته."
+      "desc": "متن استاندارد ایراد فنی به گزارش کارشناس دادگاه."
+    },
+    {
+      "title": "نمونه لایحه اعتراض به کارشناسی ظرف یک هفته",
+      "href": "/samples/expert-opinion-objection-brief",
+      "badge": "مهلت یک هفته",
+      "desc": "لایحه فوری رعایت مهلت یک هفته ای ماده ۲۶۰ قانون آیین دادرسی مدنی."
+    }
+  ],
+  "relatedArticles": [
+    {
+      "title": "راهنمای جامع کارشناسی سه نفره و پنج نفره دادگاه",
+      "href": "/knowledge/expert-panel-court",
+      "badge": "مقاله تخصصی",
+      "desc": "قواعد تودیع دستمزد کارشناس موضوع ماده ۲۵۹ و عواقب عدم پرداخت در موعد مقرر."
     }
   ],
   "ctaTitle": "پیامک واریز دستمزد کارشناس آمده و فقط ۷ روز برای اعلام فیش فرصت دارید؟",

@@ -190,16 +190,16 @@ export const sampleEvidencePreservationData: SampleLandingData = {
 
   relatedServices: [
     {
-      title: 'تنظیم دادخواست تأمین دلیل و خسارت',
-      href: '/request?service=evidence-preservation',
+      title: 'تنظیم لایحه اعتراض به نظریه کارشناسی',
+      href: '/services/expert-opinion-objection',
       badge: 'خدمت تخصصی',
-      desc: 'تنظیم فوری دادخواست تأمین دلیل افت قیمت، تحویل کلید و خسارت ساختمان.',
+      desc: 'نگارش استدلالی لایحه اعتراض به ارزیابی کارشناس رسمی دادگستری و شورا.',
     },
     {
-      title: 'تنظیم دادخواست مطالبه خسارت و وجه التزام',
-      href: '/samples/damages-claim-petition',
+      title: 'تنظیم دادخواست حقوقی و اداری',
+      href: '/services/petition-writing',
       badge: 'اوراق قضایی',
-      desc: 'مطالبه خسارت ناشی از تصادفات، افت قیمت و تخلفات قراردادی در دادگاه.',
+      desc: 'تنظیم انواع دادخواست های تأمین دلیل، مطالبه خسارت و مطالبات مالی در محاکم.',
     },
   ],
 
@@ -238,10 +238,10 @@ export const sampleEvidencePreservationData: SampleLandingData = {
       badge: 'مقاله آموزشی'
     },
     {
-      title: 'مراحل تحویل کلید و تخلیه ملک در صورت امتناع موجر',
-      href: '/knowledge/tenant-key-handover-procedure',
-      desc: 'چگونه بدون پرداخت جریمه، کلید خانه را به شورا تحویل داده و پول پیش را بگیریم.',
-      badge: 'مقاله آموزشی'
+      title: 'راهنمای کارشناسی سه نفره و پنج نفره دادگاه',
+      href: '/knowledge/expert-panel-court',
+      desc: 'قواعد ارجاع امر به کارشناس رسمی، هزینه ها و نحوه استناد به گزارش تأمین دلیل.',
+      badge: 'مقاله تخصصی'
     }
   ],
 
