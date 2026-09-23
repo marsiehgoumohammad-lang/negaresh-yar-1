@@ -42,73 +42,72 @@ export function LawyerCityTemplate({ cityData }: LawyerCityTemplateProps) {
   const baseUrl = 'https://www.negaresh-yar.ir';
   const pageUrl = `${baseUrl}/lawyer-referral/${cityData.slug}`;
 
-  // Structured Data Schemas (Strictly WebPage, BreadcrumbList, FAQPage - NO Lawyer directory schema)
-  const breadcrumbSchema = {
+  // Structured Data Schema Graph (WebPage, BreadcrumbList, FAQPage)
+  const jsonLdGraph = {
     '@context': 'https://schema.org',
-    '@type': 'BreadcrumbList',
-    itemListElement: [
+    '@graph': [
       {
-        '@type': 'ListItem',
-        position: 1,
-        name: 'صفحه اصلی',
-        item: baseUrl,
+        '@type': 'WebPage',
+        '@id': `${pageUrl}#webpage`,
+        url: pageUrl,
+        name: cityData.seoTitle,
+        description: cityData.seoDescription,
+        inLanguage: 'fa-IR',
+        isPartOf: {
+          '@type': 'WebSite',
+          '@id': `${baseUrl}#website`,
+          name: 'نگارش یار',
+          url: baseUrl,
+        },
+        breadcrumb: {
+          '@id': `${pageUrl}#breadcrumb`,
+        },
       },
       {
-        '@type': 'ListItem',
-        position: 2,
-        name: 'معرفی وکیل منصف',
-        item: `${baseUrl}/lawyer-referral`,
+        '@type': 'BreadcrumbList',
+        '@id': `${pageUrl}#breadcrumb`,
+        itemListElement: [
+          {
+            '@type': 'ListItem',
+            position: 1,
+            name: 'صفحه اصلی',
+            item: baseUrl,
+          },
+          {
+            '@type': 'ListItem',
+            position: 2,
+            name: 'معرفی وکیل منصف',
+            item: `${baseUrl}/lawyer-referral`,
+          },
+          {
+            '@type': 'ListItem',
+            position: 3,
+            name: `وکیل منصف در ${cityData.city}`,
+            item: pageUrl,
+          },
+        ],
       },
       {
-        '@type': 'ListItem',
-        position: 3,
-        name: `وکیل منصف در ${cityData.city}`,
-        item: pageUrl,
+        '@type': 'FAQPage',
+        '@id': `${pageUrl}#faq`,
+        mainEntity: cityData.faqs.map((faq) => ({
+          '@type': 'Question',
+          name: faq.q,
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: faq.a,
+          },
+        })),
       },
     ],
   };
 
-  const faqSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    mainEntity: cityData.faqs.map((faq) => ({
-      '@type': 'Question',
-      name: faq.q,
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: faq.a,
-      },
-    })),
-  };
-
-  const webPageSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'WebPage',
-    name: cityData.seoTitle,
-    description: cityData.seoDescription,
-    url: pageUrl,
-    inLanguage: 'fa-IR',
-    isPartOf: {
-      '@type': 'WebSite',
-      name: 'نگارش یار',
-      url: baseUrl,
-    },
-  };
-
   return (
     <div className="min-h-screen bg-[#070B15] text-slate-100 selection:bg-[#E5C158]/30 selection:text-white pb-20 md:pb-0" dir="rtl">
-      {/* Schema Injection */}
+      {/* Unified Schema Graph */}
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdGraph) }}
       />
 
       {/* Hero Header Section */}
@@ -241,7 +240,7 @@ export function LawyerCityTemplate({ cityData }: LawyerCityTemplateProps) {
                     <Briefcase className="w-4 h-4" />
                   </div>
                   <h2 className="text-xl sm:text-2xl font-bold text-white">
-                    مهم‌ترین زمینه‌های دعاوی قضایی در {cityData.city}
+                    مهم ترین زمینه های دعاوی قضایی در {cityData.city}
                   </h2>
                 </div>
 
@@ -287,7 +286,7 @@ export function LawyerCityTemplate({ cityData }: LawyerCityTemplateProps) {
                       <div className="w-7 h-7 rounded-lg bg-[#E5C158]/20 text-[#E5C158] font-bold text-xs flex items-center justify-center">
                         گام ۱
                       </div>
-                      <h3 className="text-base font-bold text-white">پیام اولیه در پیام‌رسان</h3>
+                      <h3 className="text-base font-bold text-white">پیام اولیه در پیام رسان</h3>
                       <p className="text-xs text-slate-300 leading-relaxed">
                         از طریق ایتا، روبیکا، بله یا تلگرام با کارشناسان نگارش یار ارتباط برقرار کنید.
                       </p>
@@ -319,7 +318,7 @@ export function LawyerCityTemplate({ cityData }: LawyerCityTemplateProps) {
                       </div>
                       <h3 className="text-base font-bold text-white">بررسی و هدایت مناسب</h3>
                       <p className="text-xs text-slate-300 leading-relaxed">
-                        ارزیابی انجام شده و در صورت نیاز به وکیل، با توجه به حوزه تخصصی و تعهد منصفانه ارتباط برقرار می‌شود.
+                        ارزیابی انجام شده و در صورت نیاز به وکیل، با توجه به حوزه تخصصی و تعهد منصفانه ارتباط برقرار می شود.
                       </p>
                     </div>
                   </div>
@@ -335,7 +334,7 @@ export function LawyerCityTemplate({ cityData }: LawyerCityTemplateProps) {
                       نکته حقوقی مهم در رابطه با ادعاهای تضمین نتیجه
                     </h3>
                     <p className="text-slate-300">
-                      طبق مقررات وکالت در ایران، هیچ وکیلی مجاز به «تضمین ۱۰۰٪ نتیجه رای دادگاه» نیست، زیرا تصمیم نهایی با قاضی صادرکننده رای است. تعهد وکیل، تعهد به وسیله، به‌کارگیری بالاترین دانش حقوقی، دفاع مستند و پیگیری دلسوزانه است.
+                      طبق مقررات وکالت در ایران، هیچ وکیلی مجاز به «تضمین ۱۰۰٪ نتیجه رای دادگاه» نیست، زیرا تصمیم نهایی با قاضی صادرکننده رای است. تعهد وکیل، تعهد به وسیله، به کارگیری بالاترین دانش حقوقی، دفاع مستند و پیگیری دلسوزانه است.
                     </p>
                   </div>
                 </div>
@@ -348,7 +347,7 @@ export function LawyerCityTemplate({ cityData }: LawyerCityTemplateProps) {
                     <HelpCircle className="w-4 h-4" />
                   </div>
                   <h2 className="text-xl sm:text-2xl font-bold text-white">
-                    پرسش‌های پرتکرار درباره وکیل در {cityData.city}
+                    پرسش های پرتکرار درباره وکیل در {cityData.city}
                   </h2>
                 </div>
 
@@ -412,7 +411,7 @@ export function LawyerCityTemplate({ cityData }: LawyerCityTemplateProps) {
                   <span>خدمات نگارش لایحه و دادخواست</span>
                 </div>
                 <p className="text-xs text-slate-300 leading-relaxed">
-                  اگر مایل هستید بدون تحمیل هزینه‌های سنگین دادرسی، لوایح و دادخواست‌های خود را به‌صورت تخصصی تنظیم کنید:
+                  اگر مایل هستید بدون تحمیل هزینه های سنگین دادرسی، لوایح و دادخواست های خود را به صورت تخصصی تنظیم کنید:
                 </p>
                 <div className="space-y-2 pt-1">
                   {cityData.relatedServices && cityData.relatedServices.length > 0 ? (
@@ -493,7 +492,7 @@ export function LawyerCityTemplate({ cityData }: LawyerCityTemplateProps) {
               <div className="rounded-2xl bg-slate-900/60 border border-slate-800 p-5 space-y-4">
                 <div className="flex items-center gap-2 text-white font-bold text-base border-b border-slate-800 pb-3">
                   <MapPin className="w-4 h-4 text-[#E5C158]" />
-                  <span>راهنمای وکیل در سایر استان‌ها</span>
+                  <span>راهنمای وکیل در سایر استان ها</span>
                 </div>
                 <div className="grid grid-cols-2 gap-2 text-xs">
                   {otherCities.map((city) => (
@@ -521,7 +520,7 @@ export function LawyerCityTemplate({ cityData }: LawyerCityTemplateProps) {
                   <span>همکار وکیل هستید؟</span>
                 </div>
                 <p className="text-xs text-slate-300 leading-relaxed">
-                  اگر وکیل پایه‌یک دادگستری با پایبندی به تعرفه منصفانه هستید، جهت همکاری با سامانه نگارش یار اقدام فرمایید.
+                  اگر وکیل پایه یک دادگستری با پایبندی به تعرفه منصفانه هستید، جهت همکاری با سامانه نگارش یار اقدام فرمایید.
                 </p>
                 <Link
                   href="/lawyer-partnership"

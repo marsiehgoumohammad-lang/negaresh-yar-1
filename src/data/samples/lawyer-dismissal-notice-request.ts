@@ -172,6 +172,12 @@ export const sampleLawyerDismissalNoticeRequestData: SampleLandingData = {
 
   relatedServices: [
     {
+      title: "معرفی وکیل منصف و انتخاب وکیل جدید",
+      href: "/lawyer-referral",
+      badge: "معرفی وکیل",
+      desc: "راهنمای انتخاب وکیل دادگستری با دستمزد عادلانه و متناسب با شرایط مالی موکل.",
+    },
+    {
       title: 'تنظیم لایحه قضایی تخصصی',
       href: '/services/legal-brief',
       badge: 'خدمت تخصصی',

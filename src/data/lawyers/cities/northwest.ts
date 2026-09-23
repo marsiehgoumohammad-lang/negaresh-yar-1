@@ -28,8 +28,10 @@ export const tabrizCityData: LawyerCityData = {
     { title: 'تفسیر هوشمند ابلاغیه و رای', href: '/services/court-document-explainer', badge: 'AI', desc: 'تحلیل ریسک دادنامه و ابلاغیه' },
   ],
   relatedSamples: [
-    { title: 'نمونه دادخواست اعتراض ثالث به توقیف ملک', href: '/samples/third-party-objection-ordinary-deed', badge: 'ملکی', desc: 'اثبات مالکیت با مبایعه‌نامه عادی' },
-    { title: 'نمونه دادخواست اعسار از محکوم‌به', href: '/samples/court-fee-insolvency', badge: 'اعسار', desc: 'تقسیط بدهی دادگاه' },
+    { title: 'نمونه دادخواست تعدیل اجاره بها و سرقفلی بازار', href: '/samples/rent-adjustment-petition', badge: 'سرقفلی بازار', desc: 'تعدیل اجاره قانون ۵۶' },
+    { title: 'نمونه لایحه اعلام عزل وکیل دادگستری و سلب اختیارات', href: '/samples/lawyer-dismissal-notice-request', badge: 'عزل وکیل', desc: 'انتقال ابلاغیه به موکل' },
+    { title: 'نمونه دادخواست اعتراض ثالث به توقیف ملک', href: '/samples/third-party-objection-ordinary-deed', badge: 'ملکی', desc: 'اثبات مالکیت با مبایعه نامه عادی' },
+    { title: 'نمونه دادخواست اعسار از پرداخت محکوم به', href: '/samples/court-fee-insolvency', badge: 'اعسار', desc: 'دادخواست اعسار' },
   ],
   relatedKnowledge: [
     { title: 'تفاوت دادخواست و شکواییه در دادگاه', href: '/knowledge/petition-vs-complaint', badge: 'حقوقی', desc: 'اصول انتخاب مرجع صالح دادرسی' },

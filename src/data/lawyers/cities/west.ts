@@ -28,7 +28,9 @@ export const kermanshahCityData: LawyerCityData = {
     { title: 'دادخواست اعسار و تقسیط', href: '/services/insolvency-petition', badge: 'اعسار', desc: 'تقسیط بدهی دادگاه' },
   ],
   relatedSamples: [
-    { title: 'نمونه دادخواست اعسار از پرداخت محکوم‌به', href: '/samples/court-fee-insolvency', badge: 'اعسار', desc: 'دادخواست اعسار' },
+    { title: 'نمونه دادخواست تقسیط دیه ناشی از تصادف و حادثه', href: '/samples/diya-installment-petition', badge: 'دیه و سوانح', desc: 'تقسیط دیه تصادفات' },
+    { title: 'نمونه لایحه اعلام عزل وکیل دادگستری و سلب اختیارات', href: '/samples/lawyer-dismissal-notice-request', badge: 'عزل وکیل', desc: 'انتقال ابلاغیه به موکل' },
+    { title: 'نمونه دادخواست اعسار از پرداخت محکوم به', href: '/samples/court-fee-insolvency', badge: 'اعسار', desc: 'دادخواست اعسار' },
     { title: 'نمونه لایحه اعتراض به نظریه کارشناسی', href: '/samples/expert-opinion-objection', badge: 'کارشناسی', desc: 'اعتراض به کارشناس' },
   ],
   relatedKnowledge: [
