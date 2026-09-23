@@ -15,90 +15,128 @@ export default function CourtDocumentExplainerPage() {
     customGuideContent: <CourtDocumentExplainerGuideSection />,
   };
 
-  const breadcrumbSchema = {
+  const canonicalUrl = `https://www.negaresh-yar.ir/services/${data.slug}`;
+
+  const graphSchema = {
     '@context': 'https://schema.org',
-    '@type': 'BreadcrumbList',
-    itemListElement: [
+    '@graph': [
       {
-        '@type': 'ListItem',
-        position: 1,
-        name: 'صفحه اصلی',
-        item: 'https://www.negaresh-yar.ir',
+        '@type': 'Organization',
+        '@id': 'https://www.negaresh-yar.ir/#organization',
+        name: 'نگارش یار',
+        url: 'https://www.negaresh-yar.ir',
+        telephone: '+989915147789',
+        address: {
+          '@type': 'PostalAddress',
+          addressLocality: 'مشهد',
+          addressRegion: 'خراسان رضوی',
+          addressCountry: 'IR',
+        },
+        geo: {
+          '@type': 'GeoCoordinates',
+          latitude: '36.2972',
+          longitude: '59.6067',
+        },
+        logo: {
+          '@type': 'ImageObject',
+          '@id': 'https://www.negaresh-yar.ir/#logo',
+          url: 'https://www.negaresh-yar.ir/logo.jpg',
+        },
       },
       {
-        '@type': 'ListItem',
-        position: 2,
-        name: 'خدمات نگارش یار',
-        item: 'https://www.negaresh-yar.ir/services',
+        '@type': 'WebSite',
+        '@id': 'https://www.negaresh-yar.ir/#website',
+        url: 'https://www.negaresh-yar.ir',
+        name: 'نگارش یار',
+        publisher: {
+          '@id': 'https://www.negaresh-yar.ir/#organization',
+        },
       },
       {
-        '@type': 'ListItem',
-        position: 3,
+        '@type': 'WebPage',
+        '@id': `${canonicalUrl}#webpage`,
+        url: canonicalUrl,
         name: data.h1Title,
-        item: `https://www.negaresh-yar.ir/services/${data.slug}`,
+        description: data.heroSubtitle,
+        isPartOf: {
+          '@id': 'https://www.negaresh-yar.ir/#website',
+        },
+        breadcrumb: {
+          '@id': `${canonicalUrl}#breadcrumb`,
+        },
+        mainEntity: {
+          '@id': `${canonicalUrl}#service`,
+        },
       },
+      {
+        '@type': 'LegalService',
+        '@id': `${canonicalUrl}#service`,
+        name: data.h1Title,
+        description: data.heroSubtitle,
+        url: canonicalUrl,
+        provider: {
+          '@id': 'https://www.negaresh-yar.ir/#organization',
+        },
+        areaServed: {
+          '@type': 'Country',
+          name: 'Iran',
+        },
+        mainEntityOfPage: {
+          '@id': `${canonicalUrl}#webpage`,
+        },
+      },
+      {
+        '@type': 'BreadcrumbList',
+        '@id': `${canonicalUrl}#breadcrumb`,
+        itemListElement: [
+          {
+            '@type': 'ListItem',
+            position: 1,
+            name: 'صفحه اصلی',
+            item: 'https://www.negaresh-yar.ir',
+          },
+          {
+            '@type': 'ListItem',
+            position: 2,
+            name: 'خدمات نگارش یار',
+            item: 'https://www.negaresh-yar.ir/services',
+          },
+          {
+            '@type': 'ListItem',
+            position: 3,
+            name: data.h1Title,
+            item: canonicalUrl,
+          },
+        ],
+      },
+      ...(data.faqs && data.faqs.length > 0
+        ? [
+            {
+              '@type': 'FAQPage',
+              '@id': `${canonicalUrl}#faq`,
+              isPartOf: {
+                '@id': `${canonicalUrl}#webpage`,
+              },
+              mainEntity: data.faqs.map((f) => ({
+                '@type': 'Question',
+                name: f.q,
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: f.a,
+                },
+              })),
+            },
+          ]
+        : []),
     ],
-  };
-
-  const serviceSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'LegalService',
-    name: data.h1Title,
-    description: data.heroSubtitle,
-    url: `https://www.negaresh-yar.ir/services/${data.slug}`,
-    telephone: '+989915147789',
-    address: {
-      '@type': 'PostalAddress',
-      addressLocality: 'مشهد',
-      addressRegion: 'خراسان رضوی',
-      addressCountry: 'IR',
-    },
-    geo: {
-      '@type': 'GeoCoordinates',
-      latitude: '36.2972',
-      longitude: '59.6067',
-    },
-    provider: {
-      '@type': 'Organization',
-      name: 'نگارش یار',
-      url: 'https://www.negaresh-yar.ir',
-    },
-    areaServed: {
-      '@type': 'Country',
-      name: 'Iran',
-    },
-    serviceType: 'AI Court Document Analysis and Explanation',
-  };
-
-  const faqSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    mainEntity: data.faqs.map((f) => ({
-      '@type': 'Question',
-      name: f.q,
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: f.a,
-      },
-    })),
   };
 
   return (
     <>
       <Script
-        id="breadcrumb-schema-explainer"
+        id="court-document-explainer-schema-graph"
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
-      />
-      <Script
-        id="service-schema-explainer"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
-      />
-      <Script
-        id="faq-schema-explainer"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(graphSchema) }}
       />
       <main className="min-h-screen bg-[#070B15]">
         <LandingPageTemplate data={data} />
