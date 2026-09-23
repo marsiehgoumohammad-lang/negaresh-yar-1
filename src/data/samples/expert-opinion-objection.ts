@@ -174,7 +174,7 @@ export const sampleExpertOpinionObjectionData: SampleLandingData = {
       title: 'تنظیم لایحه اعتراض به نظریه کارشناسی',
       href: '/services/expert-opinion-objection',
       badge: 'خدمت تخصصی',
-      desc: 'نگارش فنی و مستدل لایحه اعتراض به نظریه کارشناس و تقاضای ارجاع به هیئت سه نفره.',
+      desc: 'نگارش فنی و مستدل لایحه اعتراض به نظریه کارشناس و تقاضای ارجاع به هیئت کارشناسی.',
     },
     {
       title: 'تنظیم لایحه دفاعیه دادگاه',
