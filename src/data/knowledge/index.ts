@@ -1,3 +1,7 @@
+import {
+  propertyRentEvictionGuideData,
+  propertyRentEvictionGuideMetadata,
+} from './property-rent-eviction-guide';
 import { KnowledgeArticleData } from './types';
 import { whatIsPetitionData, whatIsPetitionMetadata } from './what-is-petition';
 import { petitionVsComplaintData, petitionVsComplaintMetadata } from './petition-vs-complaint';
@@ -140,6 +144,7 @@ export const ALL_KNOWLEDGE_ARTICLES: KnowledgeArticleData[] = [
   mahriehClaimGuideData,
   judgmentEnforcementGuideData,
   falseTestimonyAndWitnessChallengeData,
+  propertyRentEvictionGuideData,
 ];
 
 export const KNOWLEDGE_METADATA_MAP = {
@@ -178,6 +183,7 @@ export const KNOWLEDGE_METADATA_MAP = {
   'guarantee-check-rules': guaranteeCheckRulesMetadata,
   'judgment-enforcement-guide': judgmentEnforcementGuideMetadata,
   'false-testimony-and-witness-challenge': falseTestimonyAndWitnessChallengeMetadata,
+  'property-rent-eviction-guide': propertyRentEvictionGuideMetadata,
 };
 
 export function getKnowledgeArticleBySlug(slug: string): KnowledgeArticleData | undefined {

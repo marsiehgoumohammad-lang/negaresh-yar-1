@@ -76,6 +76,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     'online-cafe',
     'petition-writing',
     'president-letter',
+    'property-lease-eviction',
   ];
 
   const serviceRoutes = serviceSlugs.map((slug) => ({

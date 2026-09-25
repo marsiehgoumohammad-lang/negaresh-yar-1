@@ -161,67 +161,79 @@ export const sampleEvictionExpiredLeaseData: SampleLandingData = {
     },
   ],
 
-  relatedServices: [
+    relatedServices: [
     {
-      title: 'تنظیم دادخواست و دستور تخلیه ملک',
-      href: '/services/petition-writing',
-      badge: 'دعاوی ملکی',
-      desc: 'تنظیم فوری دادخواست و درخواست دستور تخلیه شورای حل اختلاف توسط نگارش یار.',
+      title: 'تنظیم دادخواست و لوایح دعاوی ملکی، اجاره و تخلیه',
+      href: '/services/property-lease-eviction',
+      badge: 'خدمت تخصصی',
+      desc: 'تنظیم تخصصی دادخواست دستور تخلیه شورا، حکم تخلیه و خلع ید توسط کارشناسان حقوقی.',
     },
     {
-      title: 'تنظیم اظهارنامه تحویل و تخلیه ملک',
+      title: 'تنظیم دادخواست حقوقی در سامانه ثنا',
       href: '/services/petition-writing',
-      badge: 'اظهارنامه رسمی',
-      desc: 'ارسال اخطار رسمی تخلیه به مستاجر قبل از اقدام به طرح دعوا.',
+      badge: 'اوراق قضایی',
+      desc: 'نگارش کلیه اوراق قضایی و دادخواست های عمومی دادگستری.',
     },
   ],
 
-  relatedSamples: [
+    relatedSamples: [
     {
-        'title': 'نمونه دادخواست الزام به تنظیم سند رسمی ملک',
-        'href': '/samples/official-deed-compulsion-petition',
-        'desc': 'دعوای الزام فروشنده به انتقال رسمی سند و اخذ پایان‌کار.',
-        'badge': 'الزام به سند'
+      title: 'نمونه دادخواست تخلیه ملک به دلیل عدم پرداخت اجاره بها',
+      href: '/samples/eviction-nonpayment-rent',
+      desc: 'الگوی دادخواست فسخ و تخلیه به علت معوق ماندن مال الاجاره.',
+      badge: 'اجور معوقه',
     },
     {
-        'title': 'نمونه دادخواست فسخ و ابطال قرارداد با اظهارنامه',
-        'href': '/samples/contract-cancellation-notice-petition',
-        'desc': 'اعلام رسمی فسخ مبایعه‌نامه به علت غبن یا تخلف شرط.',
-        'badge': 'فسخ معامله'
+      title: 'نمونه دادخواست استرداد ودیعه قرض الحسنه مسکن',
+      href: '/samples/rent-deposit-claim',
+      desc: 'مطالبه پول پیش اجاره از موجر پس از تحویل کلید به مراجع قضایی.',
+      badge: 'استرداد ودیعه',
     },
     {
-        'title': 'نمونه دادخواست استرداد ودیعه قرض‌الحسنه مسکن',
-        'href': '/samples/rent-deposit-claim',
-        'desc': 'مطالبه پول پیش اجاره از موجر پس از تحویل کلید.',
-        'badge': 'استرداد ودیعه'
-    }
-],
+      title: 'نمونه دادخواست مطالبه اجرت المثل ایام تصرف',
+      href: '/samples/rent-equivalent-claim',
+      desc: 'درخواست کارشناسی و مطالبه خسارت تصرف غیرمجاز پس از پایان اجاره.',
+      badge: 'اجرت المثل',
+    },
+    {
+      title: 'نمونه دادخواست خلع ید از ملک دارای سند رسمی',
+      href: '/samples/property-eviction-removal-claim',
+      desc: 'اخراج متصرف غاصب از اراضی و املاک دارای سند ثبتی.',
+      badge: 'خلع ید',
+    },
+    {
+      title: 'نمونه دادخواست الزام به تنظیم سند رسمی ملک',
+      href: '/samples/official-deed-compulsion-petition',
+      desc: 'دعوای الزام فروشنده به انتقال رسمی سند و اخذ پایان کار.',
+      badge: 'الزام به سند',
+    },
+  ],
 
-  relatedArticles: [
+    relatedArticles: [
     {
-        'title': 'اظهارنامه رسمی چیست و چگونه ارسال می‌شود؟',
-        'href': '/knowledge/what-is-legal-notice',
-        'desc': 'ضرورت ارسال اظهارنامه پیش از ثبت دادخواست ملکی.',
-        'badge': 'مقاله آموزشی'
+      title: 'راهنمای جامع دعاوی اجاره، تخلیه ملک، ودیعه و اجرت المثل',
+      href: '/knowledge/property-rent-eviction-guide',
+      desc: 'مرجع کامل حقوقی بررسی قوانین روابط موجر و مستاجر و تشریفات دستور تخلیه فوری.',
+      badge: 'پیلار دانشی',
     },
     {
-        'title': 'دادخواست چیست و مراحل ثبت آن در دادگاه',
-        'href': '/knowledge/what-is-petition',
-        'desc': 'راهنمای تنظیم دادخواست‌های ملکی و قراردادی.',
-        'badge': 'مقاله آموزشی'
+      title: 'اظهارنامه رسمی چیست و چگونه ارسال می شود؟',
+      href: '/knowledge/what-is-legal-notice',
+      desc: 'ضرورت ارسال اظهارنامه پیش از ثبت دادخواست ملکی.',
+      badge: 'مقاله آموزشی',
     },
     {
-        'title': 'لایحه دفاعیه چیست و چگونه نوشته می‌شود؟',
-        'href': '/knowledge/what-is-legal-brief',
-        'desc': 'اصول تنظیم لوایح دفاعیه در محاکم عمومی حقوقی.',
-        'badge': 'مقاله آموزشی'
-    }
-],
+      title: 'دادخواست چیست و مراحل ثبت آن در دادگاه',
+      href: '/knowledge/what-is-petition',
+      desc: 'راهنمای تنظیم دادخواست های ملکی و قراردادی.',
+      badge: 'مقاله آموزشی',
+    },
+  ],
 
   ctaTitle: 'آیا مهلت اجاره تمام شده و مستاجر از تحویل خانه خودداری می‌کند؟',
   ctaDescription: 'با تنظیم استاندارد فرم درخواست دستور تخلیه فوری توسط کارشناسان نگارش یار، در سریع‌ترین زمان ممکن و با رعایت قانون سال ۷۶ ملک خود را پس بگیرید.',
   ctaPrimaryBtnText: 'ثبت سفارش درخواست دستور تخلیه',
-  ctaPrimaryHref: '/request?service=petition-writing',
+  ctaPrimaryHref: '/request?service=property-lease-eviction',
   messengerMessage: 'سلام، درباره درخواست دستور تخلیه فوری ملک پس از پایان مدت اجاره سوال دارم. لطفا راهنمایی بفرمایید.',
 
   publishedAt: '2026-03-01T08:00:00.000Z',

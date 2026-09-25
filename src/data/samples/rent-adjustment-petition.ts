@@ -63,15 +63,21 @@ export const sampleRentAdjustmentPetitionData: SampleLandingData = {
         "a": "خیر، قراردادهایی که بعد از سال ۱۳۷۶ بسته شده‌اند تابع توافق طرفین هستند و دادخواست تعدیل اجاره فقط برای قراردادهای تجاری تابع قانون ۵۶ است."
     }
 ],
-  relatedServices: [
-    { title: 'ثبت درخواست نگارش لایحه', href: '/request', desc: 'نگارش تخصصی توسط کارشناسان حقوقی', badge: 'ویژه' },
-    { title: 'کافی نت آنلاین', href: '/services#online-services', desc: 'ثبت نام ثنا و امور قضایی', badge: 'خدمات' }
+    relatedServices: [
+    { title: 'تنظیم دادخواست و لوایح دعاوی ملکی، اجاره و تخلیه', href: '/services/property-lease-eviction', desc: 'سفارش تنظیم تخصصی دادخواست تعدیل اجاره بها و دعاوی تجاری.', badge: 'خدمت تخصصی' },
+    { title: 'تنظیم دادخواست حقوقی در سامانه ثنا', href: '/services/petition-writing', desc: 'نگارش تخصصی دادخواست های حقوقی دادگستری.', badge: 'اوراق قضایی' }
   ],
   relatedArticles: [
-    { title: 'راهنمای ثبت نام ثنا', href: '/knowledge/what-is-e-notification', desc: 'چگونه در سامانه ثنا ثبت نام کنیم؟', badge: 'آموزش' }
+    { title: 'راهنمای جامع دعاوی اجاره، تخلیه ملک، ودیعه و اجرت المثل', href: '/knowledge/property-rent-eviction-guide', desc: 'تشریح حقوق مستاجران و موجران در قانون روابط موجر و مستاجر ۱۳۵۶ و ۱۳۷۶.', badge: 'پیلار دانشی' },
+    { title: 'دادخواست چیست و چگونه در سامانه ثنا ثبت می شود؟', href: '/knowledge/what-is-petition', desc: 'آشنایی با شرایط شکلی و محتوایی دادخواست های حقوقی دادگستری.', badge: 'آموزش' }
+  ],
+  relatedSamples: [
+    { title: 'نمونه دادخواست دستور تخلیه فوری ملک (پایان مدت اجاره)', href: '/samples/eviction-expired-lease', desc: 'الگوی کامل درخواست دستور تخلیه شورای حل اختلاف مستند به قانون ۷۶.', badge: 'دستور تخلیه' },
+    { title: 'نمونه دادخواست تخلیه ملک به دلیل عدم پرداخت اجاره بها', href: '/samples/eviction-nonpayment-rent', desc: 'الگوی دادخواست فسخ و تخلیه به علت معوق ماندن مال الاجاره.', badge: 'اجور معوقه' },
+    { title: 'نمونه دادخواست مطالبه اجرت المثل ایام تصرف', href: '/samples/rent-equivalent-claim', desc: 'درخواست کارشناسی و مطالبه خسارت تصرف غیرمجاز پس از پایان اجاره.', badge: 'اجرت المثل' }
   ],
   ctaTitle: 'نیاز به تنظیم دادخواست اختصاصی دارید؟',
-  ctaDescription: 'وکلای مجرب نگارش یار آماده تنظیم دقیق دادخواست شما هستند.',
+  ctaDescription: 'کارشناسان مجرب نگارش یار آماده تنظیم دقیق دادخواست تعدیل اجاره بهای ملک تجاری شما هستند.',
   ctaPrimaryBtnText: 'ثبت سفارش نگارش',
-  ctaPrimaryHref: '/request'
+  ctaPrimaryHref: '/request?service=property-lease-eviction'
 };

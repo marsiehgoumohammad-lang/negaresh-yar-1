@@ -76,15 +76,22 @@ export const sampleRentEquivalentClaimData: SampleLandingData = {
         "a": "دادگاه پس از بررسی، پرونده را به کارشناس رسمی ارجاع می‌دهد تا بر اساس نرخ روز و عرف منطقه، مبلغ را محاسبه کند."
     }
 ],
-  relatedServices: [
-    { title: 'ثبت درخواست نگارش لایحه', href: '/request', desc: 'نگارش تخصصی توسط کارشناسان حقوقی', badge: 'ویژه' },
-    { title: 'کافی نت آنلاین', href: '/services#online-services', desc: 'ثبت نام ثنا و امور قضایی', badge: 'خدمات' }
+    relatedServices: [
+    { title: 'تنظیم دادخواست و لوایح دعاوی ملکی، اجاره و تخلیه', href: '/services/property-lease-eviction', desc: 'سفارش تنظیم تخصصی دادخواست اجرت المثل، تخلیه و خلع ید.', badge: 'خدمت تخصصی' },
+    { title: 'تنظیم دادخواست حقوقی در سامانه ثنا', href: '/services/petition-writing', desc: 'نگارش کلیه اوراق قضایی توسط کارشناسان حقوقی.', badge: 'اوراق قضایی' }
   ],
   relatedArticles: [
-    { title: 'راهنمای ثبت نام ثنا', href: '/knowledge/what-is-e-notification', desc: 'چگونه در سامانه ثنا ثبت نام کنیم؟', badge: 'آموزش' }
+    { title: 'راهنمای جامع دعاوی اجاره، تخلیه ملک، ودیعه و اجرت المثل', href: '/knowledge/property-rent-eviction-guide', desc: 'بررسی مبانی قانونی مطالبه اجرت المثل ایام تصرف مستند به مواد ۳۰۸ و ۳۲۰ مدنی.', badge: 'پیلار دانشی' },
+    { title: 'دادخواست چیست و چگونه در سامانه ثنا ثبت می شود؟', href: '/knowledge/what-is-petition', desc: 'آشنایی با شرایط شکلی و محتوایی دادخواست های حقوقی دادگستری.', badge: 'آموزش' }
+  ],
+  relatedSamples: [
+    { title: 'نمونه دادخواست دستور تخلیه فوری ملک (پایان مدت اجاره)', href: '/samples/eviction-expired-lease', desc: 'الگوی کامل درخواست دستور تخلیه شورای حل اختلاف مستند به قانون ۷۶.', badge: 'دستور تخلیه' },
+    { title: 'نمونه دادخواست خلع ید از ملک دارای سند رسمی', href: '/samples/property-eviction-removal-claim', desc: 'اخراج متصرف غاصب از اراضی و املاک دارای سند ثبتی.', badge: 'خلع ید' },
+    { title: 'نمونه دادخواست استرداد ودیعه قرض الحسنه مسکن', href: '/samples/rent-deposit-claim', desc: 'الگوی مطالبه ودیعه مسکن و پول پیش پس از تحویل کلید.', badge: 'استرداد ودیعه' },
+    { title: 'نمونه دادخواست تخلیه ملک به دلیل عدم پرداخت اجاره بها', href: '/samples/eviction-nonpayment-rent', desc: 'الگوی دادخواست فسخ و تخلیه به علت معوق ماندن مال الاجاره.', badge: 'اجور معوقه' }
   ],
   ctaTitle: 'نیاز به تنظیم دادخواست اختصاصی دارید؟',
-  ctaDescription: 'وکلای مجرب نگارش یار آماده تنظیم دقیق دادخواست شما هستند.',
+  ctaDescription: 'کارشناسان مجرب نگارش یار آماده تنظیم دقیق دادخواست مطالبه اجرت المثل و تخلیه شما هستند.',
   ctaPrimaryBtnText: 'ثبت سفارش نگارش',
-  ctaPrimaryHref: '/request'
+  ctaPrimaryHref: '/request?service=property-lease-eviction'
 };

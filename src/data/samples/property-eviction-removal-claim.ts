@@ -80,15 +80,22 @@ export const samplePropertyEvictionRemovalClaimData: SampleLandingData = {
         "a": "تخلیه ید زمانی است که بین طرفین قرارداد (مثل اجاره) وجود داشته، اما خلع ید زمانی است که هیچ قراردادی نبوده و تصرف از ابتدا غاصبانه است."
     }
 ],
-  relatedServices: [
-    { title: 'ثبت درخواست نگارش لایحه', href: '/request', desc: 'نگارش تخصصی توسط کارشناسان حقوقی', badge: 'ویژه' },
-    { title: 'کافی نت آنلاین', href: '/services#online-services', desc: 'ثبت نام ثنا و امور قضایی', badge: 'خدمات' }
+    relatedServices: [
+    { title: 'تنظیم دادخواست و لوایح دعاوی ملکی، اجاره و تخلیه', href: '/services/property-lease-eviction', desc: 'سفارش تنظیم تخصصی دادخواست خلع ید، تصرف عدوانی و تخلیه.', badge: 'خدمت تخصصی' },
+    { title: 'تنظیم دادخواست حقوقی در سامانه ثنا', href: '/services/petition-writing', desc: 'نگارش کلیه اوراق قضایی توسط کارشناسان حقوقی.', badge: 'اوراق قضایی' }
   ],
   relatedArticles: [
-    { title: 'راهنمای ثبت نام ثنا', href: '/knowledge/what-is-e-notification', desc: 'چگونه در سامانه ثنا ثبت نام کنیم؟', badge: 'آموزش' }
+    { title: 'راهنمای جامع دعاوی اجاره، تخلیه ملک، ودیعه و اجرت المثل', href: '/knowledge/property-rent-eviction-guide', desc: 'تفکیک دقیق دعوای خلع ید با تخلیه ید و تصرف عدوانی در رویه قضایی.', badge: 'پیلار دانشی' },
+    { title: 'دادخواست چیست و چگونه در سامانه ثنا ثبت می شود؟', href: '/knowledge/what-is-petition', desc: 'آشنایی با شرایط شکلی و محتوایی دادخواست های حقوقی دادگستری.', badge: 'آموزش' }
+  ],
+  relatedSamples: [
+    { title: 'نمونه دادخواست دستور تخلیه فوری ملک (پایان مدت اجاره)', href: '/samples/eviction-expired-lease', desc: 'الگوی کامل درخواست دستور تخلیه شورای حل اختلاف مستند به قانون ۷۶.', badge: 'دستور تخلیه' },
+    { title: 'نمونه دادخواست دعوای تصرف عدوانی', href: '/samples/property-possession-claim', desc: 'اعاده تصرفات قبلی خواهان در املاک تصرف شده بدون مجوز قانونی.', badge: 'تصرف عدوانی' },
+    { title: 'نمونه دادخواست مطالبه اجرت المثل ایام تصرف', href: '/samples/rent-equivalent-claim', desc: 'درخواست کارشناسی و مطالبه خسارت تصرف غیرمجاز پس از پایان اجاره.', badge: 'اجرت المثل' },
+    { title: 'نمونه دادخواست الزام به تنظیم سند رسمی ملک', href: '/samples/official-deed-compulsion-petition', desc: 'دعوای الزام متعهد به حضور در دفترخانه و انتقال سند قطعی غیرمنقول.', badge: 'الزام به سند' }
   ],
   ctaTitle: 'نیاز به تنظیم دادخواست اختصاصی دارید؟',
-  ctaDescription: 'وکلای مجرب نگارش یار آماده تنظیم دقیق دادخواست شما هستند.',
+  ctaDescription: 'کارشناسان مجرب نگارش یار آماده تنظیم دقیق دادخواست خلع ید و رفع تصرف غاصبانه شما هستند.',
   ctaPrimaryBtnText: 'ثبت سفارش نگارش',
-  ctaPrimaryHref: '/request'
+  ctaPrimaryHref: '/request?service=property-lease-eviction'
 };
