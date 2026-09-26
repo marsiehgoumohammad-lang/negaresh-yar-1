@@ -53,6 +53,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     'check-claim',
     'conditional-release',
     'content-marketing-seo',
+    'contract-drafting',
     'court-document-explainer',
     'document-writing',
     'electronic-tag-request',
