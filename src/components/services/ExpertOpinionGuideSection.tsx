@@ -9,6 +9,8 @@ import {
   CheckCircle2,
   Sparkles,
   Gavel,
+  Scale,
+  FileCheck2,
 } from 'lucide-react';
 
 export function ExpertOpinionGuideSection() {
@@ -21,7 +23,7 @@ export function ExpertOpinionGuideSection() {
     {
       num: '۲',
       title: 'بررسی تطبیقی گزارش با قرار دادگاه',
-      desc: 'بررسی دقیق این موضوع که آیا کارشناس به تمام سؤالات مندرج در قرار دادگاه پاسخ داده یا از حیطه صلاحیت فنی خود خارج شده است.',
+      desc: 'بررسی دقیق این موضوع که آیا کارشناس به تمام سوالات مندرج در قرار دادگاه پاسخ داده یا از حیطه صلاحیت فنی خود خارج شده است.',
     },
     {
       num: '۳',
@@ -54,6 +56,31 @@ export function ExpertOpinionGuideSection() {
       cost: 'تودیع توسط متقاضی یا به دستور ویژه دادگاه',
       scope: 'حل تعارضات بنیادین میان گزارش های متناقض قبلی',
     },
+    {
+      title: 'قرار تامین دلیل (شورای حل اختلاف)',
+      authority: 'صلاحیت شورا طبق ماده ۹ قانون شورا و ماده ۱۴۹ ق.آ.د.م',
+      cost: 'دعاوی غیرمالی همراه با تودیع دستمزد کارشناس منتخب شورا',
+      scope: 'صرفا ملاحظه، صورت برداری و حفظ وضعیت خسارت یا اوضاع ملک و خودرو',
+    },
+  ];
+
+  const checklistItems = [
+    {
+      title: 'تصویر کامل گزارش کارشناسی بدوی و ضمائم',
+      desc: 'بررسی تمامی صفحات، کروکی ها، جداول ارزیابی ریالی و تطبیق با قرار دادگاه.',
+    },
+    {
+      title: 'تاریخ دقیق ابلاغ در سامانه ثنا',
+      desc: 'محاسبه تاریخ ابلاغ واقعی یا قانونی جهت اثبات ثبت لایحه در موعد قانونی ۷ روزه ماده ۲۶۰.',
+    },
+    {
+      title: 'اسناد، قبوض و فاکتورهای نادیده گرفته شده',
+      desc: 'ارائه مدارک پرداخت، استعلام قیمت های روز منطقه، قراردادهای ساختمانی و صورتجلسات.',
+    },
+    {
+      title: 'فیش تودیع دستمزد کارشناسی (ماده ۲۵۹)',
+      desc: 'واریز سریع دستمزد هیئت کارشناسان به حساب سپرده دادگستری ظرف یک هفته از اخطاریه.',
+    },
   ];
 
   const clusterSamples = [
@@ -82,10 +109,16 @@ export function ExpertOpinionGuideSection() {
       badge: 'تودیع دستمزد',
     },
     {
-      title: 'نمونه دادخواست تأمین دلیل با جلب نظر کارشناس',
+      title: 'نمونه دادخواست تامین دلیل با جلب نظر کارشناس',
       href: '/samples/evidence-preservation',
       desc: 'صورت برداری و ثبت رسمی خسارات خودرو، ملک یا تخلفات ساختمانی قبل از طرح دعوا.',
-      badge: 'تأمین دلیل',
+      badge: 'تامین دلیل شورا',
+    },
+    {
+      title: 'نمونه دادخواست تامین دلیل خسارت ملک و ساختمان',
+      href: '/samples/evidence-preservation-petition',
+      desc: 'الگوی تفصیلی دادخواست تامین دلیل موضوع ماده ۱۴۹ ق.آ.د.م برای شورای حل اختلاف.',
+      badge: 'تامین دلیل ملک',
     },
   ];
 
@@ -106,6 +139,28 @@ export function ExpertOpinionGuideSection() {
           </p>
         </div>
 
+        {/* Legal Basis Blockquotes */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+          <div className="rounded-2xl border border-slate-800 bg-[#0D1424] p-6 space-y-3">
+            <div className="flex items-center gap-2 text-[#E5C158] font-bold text-sm">
+              <Scale className="w-4 h-4" />
+              <span>ماده ۲۶۰ و ۲۶۵ قانون آیین دادرسی مدنی</span>
+            </div>
+            <blockquote className="border-r-2 border-[#E5C158] pr-3 text-xs sm:text-sm text-slate-300 leading-relaxed text-justify">
+              پس از وصول نظر کارشناس به دفتر دادگاه، مراتب به طرفین دعوا ابلاغ می شود. طرفین می توانند ظرف یک هفته از تاریخ ابلاغ به آن اعتراض نمایند. در صورتی که نظر کارشناس با اوضاع و احوال محقق و معلوم مورد کارشناسی مطابقت نداشته باشد، دادگاه به آن ترتیب اثر نخواهد داد.
+            </blockquote>
+          </div>
+          <div className="rounded-2xl border border-slate-800 bg-[#0D1424] p-6 space-y-3">
+            <div className="flex items-center gap-2 text-[#E5C158] font-bold text-sm">
+              <Scale className="w-4 h-4" />
+              <span>ماده ۱۴۹ قانون آیین دادرسی مدنی (تامین دلیل)</span>
+            </div>
+            <blockquote className="border-r-2 border-[#E5C158] pr-3 text-xs sm:text-sm text-slate-300 leading-relaxed text-justify">
+              در مواردی که اشخاص ذی نفع احتمال دهند که در آینده استفاده از دلایل و مدارک دعوای انان متعذر یا متعسر خواهد شد، می توانند از شورا یا دادگاه درخواست تامین انها را بنمایند. مقصود از تامین در این موارد فقط ملاحظه و صورت برداری از این گونه دلایل است.
+            </blockquote>
+          </div>
+        </div>
+
         {/* 4 Step Process Cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
           {steps.map((step, idx) => (
@@ -124,13 +179,42 @@ export function ExpertOpinionGuideSection() {
           ))}
         </div>
 
+        {/* Required Documents Checklist */}
+        <div className="rounded-2xl border border-slate-800 bg-[#0D1424] p-6 sm:p-8 space-y-6 mb-12">
+          <div className="flex items-center gap-3 border-b border-slate-800 pb-4">
+            <FileCheck2 className="w-6 h-6 text-[#E5C158]" />
+            <div>
+              <h3 className="text-lg font-bold text-white">
+                چک لیست مدارک و ضمائم ضروری برای ثبت لایحه اعتراض
+              </h3>
+              <p className="text-xs text-slate-400">
+                اقلام و اطلاعاتی که برای اقناع دادگاه و ارجاع پرونده به هیئت کارشناسی الزامی است
+              </p>
+            </div>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {checklistItems.map((item, idx) => (
+              <div
+                key={idx}
+                className="flex items-start gap-3.5 p-4 rounded-xl bg-slate-900/50 border border-slate-800/80"
+              >
+                <CheckCircle2 className="w-5 h-5 text-[#E5C158] shrink-0 mt-0.5" />
+                <div className="space-y-1">
+                  <h4 className="text-sm font-bold text-white">{item.title}</h4>
+                  <p className="text-xs text-slate-400 leading-relaxed">{item.desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
         {/* Comparison Table */}
         <div className="rounded-2xl border border-slate-800 bg-[#0D1424] p-6 sm:p-8 space-y-6 mb-12">
           <div className="flex items-center gap-3 border-b border-slate-800 pb-4">
             <Gavel className="w-6 h-6 text-[#E5C158]" />
             <div>
               <h3 className="text-lg font-bold text-white">
-                تفاوت و سلسله مراتب مراحل کارشناسی در دادگاه
+                تفاوت و سلسله مراتب مراحل کارشناسی در دادگاه و شورا
               </h3>
               <p className="text-xs text-slate-400">
                 بررسی اختیارات قانونی، نحوه تعیین و قواعد تودیع دستمزد در مراحل گوناگون
@@ -138,7 +222,7 @@ export function ExpertOpinionGuideSection() {
             </div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {comparison.map((item, idx) => (
               <div
                 key={idx}
@@ -171,14 +255,14 @@ export function ExpertOpinionGuideSection() {
         <div className="rounded-2xl border border-amber-500/30 bg-amber-950/20 p-6 sm:p-7 space-y-4 mb-12">
           <div className="flex items-center gap-2 text-amber-400 font-bold text-sm sm:text-base">
             <AlertTriangle className="w-5 h-5 shrink-0" />
-            <span>نکات حیاتی حقوقی پیرامون کارشناسی و تأمین دلیل</span>
+            <span>نکات حیاتی حقوقی پیرامون کارشناسی و تامین دلیل</span>
           </div>
           <ul className="text-xs sm:text-sm text-slate-300 space-y-2.5 list-disc list-inside leading-relaxed text-justify">
             <li>
               <strong>عدم ارجاع خودکار به هیئت کارشناسان:</strong> ارجاع به هیئت کارشناسان امری خودکار یا الزام قانونی دادگاه نیست؛ دادگاه در صورت موجه دانستن اعتراض و ضرورت امر، می تواند موضوع را به کارشناسان متعدد با تعداد فرد ارجاع دهد.
             </li>
             <li>
-              <strong>تأمین دلیل به منزله اثبات تقصیر یا محکومیت نیست:</strong> طبق ماده ۱۴۹ و ۱۵۰ قانون آیین دادرسی مدنی، قرار تأمین دلیل صرفاً جهت صورت برداری و حفظ ادله است و تشخیص درجه ارزش آن در زمان دادرسی دعوای ماهوی با دادگاه رسیدگی کننده خواهد بود.
+              <strong>تامین دلیل به منزله اثبات تقصیر یا محکومیت نیست:</strong> طبق ماده ۱۴۹ و ۱۵۰ قانون آیین دادرسی مدنی، قرار تامین دلیل صرفا جهت صورت برداری و حفظ ادله است و تشخیص درجه ارزش ان در زمان دادرسی دعوای ماهوی با دادگاه رسیدگی کننده خواهد بود.
             </li>
             <li>
               <strong>ضمانت اجرای عدم ایداع دستمزد (ماده ۲۵۹):</strong> چنانچه دستمزد کارشناسی در مهلت قانونی تودیع نشود، کارشناسی حسب مورد از عداد دلایل متقاضی خارج می گردد و دادگاه بر مبنای سایر ادله پرونده رسیدگی خواهد کرد.
@@ -197,7 +281,7 @@ export function ExpertOpinionGuideSection() {
               مطالعه مقاله جامع کارشناسی سه نفره و پنج نفره دادگاه
             </h3>
             <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
-              جهت آشنایی تفصیلی با قواعد انتخاب کارشناسان، فرمول مواعد ثنا و رویه قضایی شعب حقوقی و کیفری، مقاله پایگاه دانش را مطالعه فرمایید.
+              جهت اشنایی تفصیلی با قواعد انتخاب کارشناسان، فرمول مواعد ثنا و رویه قضایی شعب حقوقی و کیفری، مقاله پایگاه دانش را مطالعه فرمایید.
             </p>
           </div>
           <Link

@@ -177,10 +177,28 @@ export const expertOpinionObjectionData: ServiceLandingData = {
       badge: 'مهلت یک هفته',
     },
     {
+      title: 'نمونه لایحه رد کارشناس رسمی دادگستری (ماده ۲۶۱)',
+      href: '/samples/expert-recusal-objection-brief',
+      desc: 'اعلام رد کارشناس به جهات قرابت، نفع شخصی یا خصومت قبلی طبق ماده ۹۱ و ۲۶۱ ق.آ.د.م.',
+      badge: 'رد کارشناس',
+    },
+    {
       title: 'نمونه لایحه تودیع دستمزد کارشناس (ماده ۲۵۹)',
       href: '/samples/expert-deposit-payment-brief',
       desc: 'اعلام پرداخت سپرده دستمزد کارشناسی و پیوست فیش بانکی در مهلت قانونی.',
       badge: 'تودیع دستمزد',
+    },
+    {
+      title: 'نمونه دادخواست تامین دلیل با جلب نظر کارشناس',
+      href: '/samples/evidence-preservation',
+      desc: 'ثبت و صورت برداری رسمی خسارات خودرو، ملک یا تخلفات ساختمانی قبل از طرح دعوا.',
+      badge: 'تامین دلیل',
+    },
+    {
+      title: 'نمونه دادخواست تامین دلیل خسارت ملک و ساختمان',
+      href: '/samples/evidence-preservation-petition',
+      desc: 'الگوی تفصیلی دادخواست تامین دلیل ماده ۱۴۹ ق.آ.د.م برای شورای حل اختلاف.',
+      badge: 'دادخواست تامین دلیل',
     },
   ],
   relatedArticles: [
@@ -188,6 +206,12 @@ export const expertOpinionObjectionData: ServiceLandingData = {
       title: 'راهنمای جامع کارشناسی سه نفره و پنج نفره دادگاه',
       href: '/knowledge/expert-panel-court',
       desc: 'آموزش گام به گام مراحل اعتراض به کارشناس، انتخاب هیئت ۳ و ۵ نفره و مواعد ثنا.',
+      badge: 'پایگاه دانش',
+    },
+    {
+      title: 'چگونه دادنامه و تصمیمات دادگاه را بخوانیم؟',
+      href: '/knowledge/how-to-read-court-verdict',
+      desc: 'اشنایی با ساختار تصمیمات قضایی، قرارهای کارشناسی و مفاد اخطاریه های محاکم.',
       badge: 'پایگاه دانش',
     },
   ],
