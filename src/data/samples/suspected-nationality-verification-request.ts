@@ -137,10 +137,25 @@ export const sampleSuspectedNationalityVerificationRequestData: SampleLandingDat
 
   relatedServices: [
     {
-      title: 'تنظیم درخواست‌های اداری فرمانداری و شورای تأمین',
+      title: 'تنظیم اسناد تابعیت و ثبت احوال',
+      href: '/services/citizenship-and-civil-registration',
+      badge: 'خدمت تخصصی',
+      desc: 'تنظیم تخصصی مکاتبات با شورای تامین و پرونده های ماده ۴۵ ثبت احوال.',
+    },
+    {
+      title: 'تنظیم درخواست های اداری فرمانداری و شورای تامین',
       href: '/services/administrative-letter',
       badge: 'درخواست اداری',
-      desc: 'تنظیم تخصصی مکاتبات با شورای تأمین و کمیسیون‌های ماده ۴۵ ثبت احوال.',
+      desc: 'تنظیم مکاتبات رسمی با دستگاه های اجرایی و فرمانداری.',
+    },
+  ],
+
+  relatedArticles: [
+    {
+      title: 'راهنمای جامع تابعیت، شناسنامه و دعاوی ثبت احوال',
+      href: '/knowledge/citizenship-and-civil-registration-guide',
+      badge: 'پایگاه دانش',
+      desc: 'بررسی وضعیت حقوقی افراد مشکوک التابعیت و ماده ۴۵ قانون ثبت احوال.',
     },
   ],
 

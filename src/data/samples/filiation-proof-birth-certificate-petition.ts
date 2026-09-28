@@ -142,10 +142,25 @@ export const sampleFiliationProofBirthCertificatePetitionData: SampleLandingData
 
   relatedServices: [
     {
-      title: 'تنظیم دادخواست‌های حقوقی و ثنا',
+      title: 'تنظیم اسناد تابعیت و ثبت احوال',
+      href: '/services/citizenship-and-civil-registration',
+      badge: 'خدمت تخصصی',
+      desc: 'تنظیم دادخواست های اثبات هویت، نسب و الزام ثبت احوال به صدور شناسنامه.',
+    },
+    {
+      title: 'تنظیم دادخواست های حقوقی و ثنا',
       href: '/services/petition-writing',
       badge: 'دادخواست تخصصی',
-      desc: 'تنظیم دادخواست‌های اثبات هویت، نسب و الزام ثبت احوال به صدور شناسنامه.',
+      desc: 'تنظیم انواع دادخواست های مراجع قضایی و خانواده.',
+    },
+  ],
+
+  relatedArticles: [
+    {
+      title: 'راهنمای جامع تابعیت، شناسنامه و دعاوی ثبت احوال',
+      href: '/knowledge/citizenship-and-civil-registration-guide',
+      badge: 'پایگاه دانش',
+      desc: 'تحلیل رای وحدت رویه ۷۴۸ و صلاحیت دادگاه ها در اثبات نسب و صدور شناسنامه.',
     },
   ],
 

@@ -154,16 +154,25 @@ export const sampleMotherIranianCitizenshipApplicationData: SampleLandingData = 
 
   relatedServices: [
     {
-      title: 'تنظیم درخواست‌های اداری و عریضه‌نویسی',
-      href: '/services/administrative-letter',
-      badge: 'درخواست اداری',
-      desc: 'تنظیم دقیق نامه‌های اداری استاندارد به استانداری و امور اتباع.',
+      title: 'تنظیم اسناد تابعیت و ثبت احوال',
+      href: '/services/citizenship-and-civil-registration',
+      badge: 'خدمت تخصصی',
+      desc: 'نگارش رسمی درخواست تابعیت فرزند مادر ایرانی و پیگیری پرونده های استانداری.',
     },
     {
       title: 'تنظیم دادخواست اثبات نسب و زوجیت',
       href: '/services/petition-writing',
       badge: 'دادخواست قضایی',
       desc: 'تنظیم دادخواست در دادگاه خانواده جهت اثبات شرعی بودن ازدواج یا نسب.',
+    },
+  ],
+
+  relatedArticles: [
+    {
+      title: 'راهنمای جامع تابعیت، شناسنامه و دعاوی ثبت احوال',
+      href: '/knowledge/citizenship-and-civil-registration-guide',
+      badge: 'پایگاه دانش',
+      desc: 'بررسی قوانین تابعیت ایران، ماده ۹۷۶ و شرایط فرزندان مادر ایرانی.',
     },
   ],
 

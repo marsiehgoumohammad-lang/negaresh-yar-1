@@ -38,6 +38,10 @@ import { guaranteeCheckRulesData, guaranteeCheckRulesMetadata } from './guarante
 import { mahriehClaimGuideData, mahriehClaimGuideMetadata } from './mahrieh-claim-guide';
 import { judgmentEnforcementGuideData, judgmentEnforcementGuideMetadata } from './judgment-enforcement-guide';
 import { falseTestimonyAndWitnessChallengeData, falseTestimonyAndWitnessChallengeMetadata } from './false-testimony-and-witness-challenge';
+import {
+  citizenshipAndCivilRegistrationGuideData,
+  citizenshipAndCivilRegistrationGuideMetadata,
+} from './citizenship-and-civil-registration-guide';
 
 export * from './types';
 
@@ -145,6 +149,7 @@ export const ALL_KNOWLEDGE_ARTICLES: KnowledgeArticleData[] = [
   judgmentEnforcementGuideData,
   falseTestimonyAndWitnessChallengeData,
   propertyRentEvictionGuideData,
+  citizenshipAndCivilRegistrationGuideData,
 ];
 
 export const KNOWLEDGE_METADATA_MAP = {
@@ -184,6 +189,7 @@ export const KNOWLEDGE_METADATA_MAP = {
   'judgment-enforcement-guide': judgmentEnforcementGuideMetadata,
   'false-testimony-and-witness-challenge': falseTestimonyAndWitnessChallengeMetadata,
   'property-rent-eviction-guide': propertyRentEvictionGuideMetadata,
+  'citizenship-and-civil-registration-guide': citizenshipAndCivilRegistrationGuideMetadata,
 };
 
 export function getKnowledgeArticleBySlug(slug: string): KnowledgeArticleData | undefined {

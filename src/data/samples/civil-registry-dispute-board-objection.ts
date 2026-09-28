@@ -134,10 +134,25 @@ export const sampleCivilRegistryDisputeBoardObjectionData: SampleLandingData = {
 
   relatedServices: [
     {
-      title: 'تنظیم دادخواست‌های حقوقی',
+      title: 'تنظیم اسناد تابعیت و ثبت احوال',
+      href: '/services/citizenship-and-civil-registration',
+      badge: 'خدمت تخصصی',
+      desc: 'تنظیم دادخواست نقض تصمیمات هیات حل اختلاف ثبت احوال در مهلت ۱۰ روزه ماده ۴.',
+    },
+    {
+      title: 'تنظیم دادخواست های حقوقی',
       href: '/services/petition-writing',
       badge: 'دادخواست تخصصی',
-      desc: 'تنظیم دادخواست‌های نقض آرای هیأت‌های شبه‌قضایی در دادگاه عمومی حقوقی.',
+      desc: 'تنظیم دادخواست های نقض آرای هیات های شبه قضایی در دادگاه عمومی حقوقی.',
+    },
+  ],
+
+  relatedArticles: [
+    {
+      title: 'راهنمای جامع تابعیت، شناسنامه و دعاوی ثبت احوال',
+      href: '/knowledge/citizenship-and-civil-registration-guide',
+      badge: 'پایگاه دانش',
+      desc: 'بررسی وظایف هیات حل اختلاف ثبت احوال و نحوه اعتراض به تصمیمات آن طبق ماده ۴.',
     },
   ],
 

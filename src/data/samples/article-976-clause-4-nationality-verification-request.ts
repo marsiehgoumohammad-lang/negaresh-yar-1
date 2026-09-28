@@ -138,10 +138,25 @@ export const sampleArticle976Clause4NationalityVerificationRequestData: SampleLa
 
   relatedServices: [
     {
-      title: 'تنظیم درخواست‌های اداری و عریضه‌نویسی',
+      title: 'تنظیم اسناد تابعیت و ثبت احوال',
+      href: '/services/citizenship-and-civil-registration',
+      badge: 'خدمت تخصصی',
+      desc: 'تنظیم تقاضانامه های احراز تابعیت بند ۴ ماده ۹۷۶ برای اداره اتباع و استانداری.',
+    },
+    {
+      title: 'تنظیم درخواست های اداری',
       href: '/services/administrative-letter',
       badge: 'درخواست اداری',
-      desc: 'تنظیم تخصصی تقاضاهای احراز تابعیت برای استانداری و ثبت احوال.',
+      desc: 'تنظیم تخصصی مکاتبات رسمی با استانداری و دستگاه های اجرایی.',
+    },
+  ],
+
+  relatedArticles: [
+    {
+      title: 'راهنمای جامع تابعیت، شناسنامه و دعاوی ثبت احوال',
+      href: '/knowledge/citizenship-and-civil-registration-guide',
+      badge: 'پایگاه دانش',
+      desc: 'بررسی بندهای هفتگانه ماده ۹۷۶ قانون مدنی و سیستم خاک مضاعف.',
     },
   ],
 

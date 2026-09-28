@@ -51,6 +51,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     'bail-reduction',
     'bail-to-surety',
     'check-claim',
+    'citizenship-and-civil-registration',
     'conditional-release',
     'content-marketing-seo',
     'contract-drafting',
