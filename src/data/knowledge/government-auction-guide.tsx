@@ -313,6 +313,12 @@ export const governmentAuctionGuideData: KnowledgeArticleData = {
       desc: 'مشاوره حقوقی و پیگیری پرونده های مزایده اموال در اجرای احکام مدنی و کیفری.',
       badge: 'مزایده قضایی',
     },
+    {
+      title: 'مزایده های سازمان اموال تملیکی',
+      href: '/services/impounded-assets-auction',
+      desc: 'ثبت نام در حراج الکترونیکی خودروهای خارجی، کالاها و ماشین آلات گمرکی و تملیکی.',
+      badge: 'اموال تملیکی',
+    },
   ],
 
   relatedSamples: [
@@ -362,10 +368,10 @@ export const governmentAuctionGuideData: KnowledgeArticleData = {
       category: 'خدمات قضایی',
     },
     {
-      title: 'صدور اجراییه مستقیم چک طبق ماده ۲۳ قانون صدور چک',
-      href: '/knowledge/sayad-check-execution-article-23',
-      desc: 'نحوه توقیف اموال، خودرو و حساب های بدهکار بدون نیاز به رسیدگی طولانی.',
-      category: 'اسناد تجاری و چک',
+      title: 'راهنمای جامع کارشناسی سه نفره و پنج نفره دادگاه',
+      href: '/knowledge/expert-panel-court',
+      desc: 'شرایط، مهلت یک هفته ای و نحوه اعتراض به ارزیابی کارشناس رسمی در قیمت پایه مزایده.',
+      category: 'کارشناسی دادگاه',
     },
   ],
 

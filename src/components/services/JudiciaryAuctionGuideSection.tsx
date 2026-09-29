@@ -111,7 +111,7 @@ export function JudiciaryAuctionGuideSection() {
               <div className="p-4 rounded-2xl bg-[#070B15] border border-slate-800 space-y-2">
                 <span className="text-xs font-bold text-[#E5C158] block">ماده ۱۴۲ و ۱۴۳ ق.ا.ا.م (شکایت و دستور انتقال)</span>
                 <p className="text-xs sm:text-sm text-slate-400 leading-relaxed">
-                  شکایت از تنظیم صورت ملک، ارزیابی، تخلف از مقررات مزایده و سایر اقدامات دادورز ظرف یک هفته از تاریخ وقوع به دادگاهی که دادورز در آنجا ماموریت دارد داده می‌شود و قبل از رسیدگی و اتخاذ تصمیم دادگاه، سند انتقال داده نمی‌شود. دادگاه پیش از صدور دستور انتقال، صحت کل فرآیند را بررسی می‌نماید.
+                  شکایت از تنظیم صورت ملک، ارزیابی، تخلف از مقررات مزایده و سایر اقدامات دادورز ظرف یک هفته از تاریخ وقوع به دادگاهی که دادورز در آنجا ماموریت دارد داده می شود و قبل از رسیدگی و اتخاذ تصمیم دادگاه، سند انتقال داده نمی شود. دادگاه پیش از صدور دستور انتقال، صحت کل فرآیند را بررسی می نماید.
                 </p>
               </div>
             </div>
@@ -287,7 +287,7 @@ export function JudiciaryAuctionGuideSection() {
               <div className="space-y-1">
                 <h4 className="text-base font-bold text-white">بازگشایی پاکت ها، تعیین برنده و استرداد سپرده غیربرندگان</h4>
                 <p className="text-xs sm:text-sm text-slate-400 leading-relaxed">
-                  اعلام بالاترین پیشنهاد در سامانه، تنظیم صورتمجلس حراج و عودت ۱۰ درصد ودیعه به حساب شبای سایر شرکت کنندگان پس از پایان جلسه مزایده و طی مراحل اداری و بانکی.
+                  اعلام بالاترین پیشنهاد در سامانه، تنظیم صورتمجلس حراج و عودت ۱۰ درصد ودیعه به حساب شبای سایر شرکت کنندگان پس از پایان جلسه مزایده و طی مراحل اداری و بانکی. در صورت بروز تاخیر، می توانید با ارائه <Link href="/samples/auction-deposit-refund-request" className="text-[#E5C158] underline font-bold">نمونه درخواست استرداد ۱۰ درصد سپرده مزایده</Link> پیگیری فرمایید.
                 </p>
               </div>
             </div>
@@ -311,7 +311,7 @@ export function JudiciaryAuctionGuideSection() {
               <div className="space-y-1">
                 <h4 className="text-base font-bold text-white">احراز صحت، صدور دستور انتقال سند رسمی و تخلیه (ماده ۱۴۳ و ۱۴۴)</h4>
                 <p className="text-xs sm:text-sm text-slate-400 leading-relaxed">
-                  قاضی اجرای احکام پس از انقضای مهلت یک هفته ای اعتراض، دستور معرفی به دفترخانه را صادر کرده و در صورت استنکاف مالک، نماینده دادگاه سند را امضا و ملک را تخلیه می نماید.
+                  قاضی اجرای احکام پس از انقضای مهلت یک هفته ای اعتراض، دستور معرفی به دفترخانه را صادر کرده و در صورت استنکاف مالک، نماینده دادگاه سند را امضا و ملک را تخلیه می نماید (مشاهده <Link href="/samples/auction-deed-transfer-request" className="text-[#E5C158] underline font-bold">نمونه درخواست انتقال سند رسمی مزایده</Link>).
                 </p>
               </div>
             </div>
@@ -367,7 +367,11 @@ export function JudiciaryAuctionGuideSection() {
                   <td className="p-3 text-sky-300 font-bold">صدور سند انتقال اجرایی ثبتی</td>
                 </tr>
                 <tr>
-                  <td className="p-3 font-bold text-rose-400">مزایده سازمان اموال تملیکی</td>
+                  <td className="p-3 font-bold text-rose-400">
+                    <Link href="/services/impounded-assets-auction" className="hover:underline">
+                      مزایده سازمان اموال تملیکی
+                    </Link>
+                  </td>
                   <td className="p-3">سازمان جمع آوری و فروش اموال تملیکی</td>
                   <td className="p-3">سامانه ستاد ایران (بخش حراج تملیکی)</td>
                   <td className="p-3 text-amber-300 font-bold">۵ تا ۱۵ درصد بر اساس نوع مال</td>
@@ -449,7 +453,7 @@ export function JudiciaryAuctionGuideSection() {
             <div className="p-4 rounded-xl bg-[#070B15] border border-slate-800 space-y-1">
               <h4 className="font-bold text-white">۱. آموزش حقوقی رایگان</h4>
               <p className="text-slate-400">
-                مطالعه راهنماها و مقالات پایگاه دانش نگارش یار پیرامون مواد ۱۱۴ تا ۱۴۷، کارشناسی دادگاه و نحوه کار سامانه ستاد به صورت کاملا رایگان.
+                مطالعه راهنماها و مقالات تخصصی پیرامون مواد ۱۱۴ تا ۱۴۷، کارشناسی دادگاه و نحوه کار سامانه ستاد در <Link href="/knowledge/government-auction-guide" className="text-[#E5C158] underline font-bold">راهنمای جامع مزایده دادگستری و سامانه ستاد</Link>.
               </p>
             </div>
             <div className="p-4 rounded-xl bg-[#070B15] border border-slate-800 space-y-1">

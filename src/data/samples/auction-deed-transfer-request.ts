@@ -215,6 +215,12 @@ export const sampleAuctionDeedTransferRequestData: SampleLandingData = {
       badge: 'مزایده قضایی',
     },
     {
+      title: 'مزایده های دولتی و سامانه ستاد',
+      href: '/services/government-auctions',
+      desc: 'ثبت نام و پیگیری فرآیند حراج در سامانه ستاد ایران.',
+      badge: 'ستاد ایران',
+    },
+    {
       title: 'تنظیم دادخواست و لوایح اجرای احکام مدنی',
       href: '/services/legal-brief',
       desc: 'نگارش لوایح ماده ۱۴۳ و پیگیری انتقال رسمی املاک.',

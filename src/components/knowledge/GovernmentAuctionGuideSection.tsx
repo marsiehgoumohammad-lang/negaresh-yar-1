@@ -109,7 +109,7 @@ export function GovernmentAuctionGuideSection() {
           badge: 'خرید خودرو توقیفی',
           badgeColor: 'bg-amber-500/10 text-[#E5C158] border-[#E5C158]/30',
           statusSummary:
-            'خودروهای توقیفی ناشی از پرونده های مهریه، چک برگشتی یا تصادفات در پارکینگ نگهداری می شوند. تمامی مزایدات از طریق درگاه ستاد ایران (setadiran.ir) برگزار می شود.',
+            'خودروهای توقیفی ناشی از پرونده های مهریه، چک برگشتی یا تصادفات در پارکینگ نگهداری می شوند. تمامی مزایدات از طریق درگاه ستاد ایران (setadiran.ir) برگزار می شود. برای خرید خودروهای خارجی و متروکه گمرکی نیز می توان در مزایده های سازمان اموال تملیکی شرکت نمود.',
           legalArticle: 'مواد ۱۱۴ الی ۱۲۹ قانون اجرای احکام مدنی',
           deadlineNotice: 'مهلت ۵ روزه قبل از مزایده برای بازدید حضوری خودرو در پارکینگ',
           immediateAction:
@@ -158,9 +158,9 @@ export function GovernmentAuctionGuideSection() {
           criticalWarning:
             'در صورت مسکونی بودن و حضور متصرف، اگر در آگهی تصریح به تخلیه نشده باشد، تحویل کلید و خلع ید به عهده برنده است که ممکن است چند ماه زمان ببرد.',
           serviceLink: {
-            title: 'مشاوره و همراهی وکیل در مزایده املاک دادگاه',
-            href: '/lawyer-referral',
-            badge: 'وکیل متخصص ملکی',
+            title: 'خدمات شرکت در مزایده املاک دادگستری',
+            href: '/services/judiciary-auction',
+            badge: 'مزایده قضایی',
           },
           sampleLink: {
             title: 'نمونه لایحه درخواست انتقال سند رسمی ملک مزایده ای',
@@ -196,9 +196,9 @@ export function GovernmentAuctionGuideSection() {
             badge: 'تنظیم لایحه رسمی',
           },
           sampleLink: {
-            title: 'نمونه درخواست مهلت قانونی جهت پرداخت مابقی ثمن',
-            href: '/samples/judgment-enforcement-grace-period',
-            badge: 'درخواست مهلت',
+            title: 'نمونه درخواست صدور دستور انتقال سند رسمی به نام برنده',
+            href: '/samples/auction-deed-transfer-request',
+            badge: 'انتقال سند رسمی',
           },
         };
 
