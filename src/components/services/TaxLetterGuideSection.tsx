@@ -23,10 +23,10 @@ export function TaxLetterGuideSection() {
             <span>راهنمای تخصصی اعتراض به برگ تشخیص، لوایح مالیاتی و توافق ماده ۲۳۸</span>
           </div>
           <h2 className="text-2xl sm:text-4xl font-black text-white">
-            راهنمای دفاع مالیاتی، اعتراض به برگ تشخیص و هیئت‌های حل اختلاف مالیاتی
+            راهنمای دفاع مالیاتی، اعتراض به برگ تشخیص و هیئت های حل اختلاف مالیاتی
           </h2>
           <p className="text-slate-400 text-sm sm:text-base max-w-3xl mx-auto leading-relaxed">
-            بررسی مواد ۲۱۶، ۲۳۸، ۲۴۴، ۲۴۷ و ۲۵۱ مکرر قانون مالیات‌های مستقیم، نحوه تنظیم لایحه دفاعیه مالیاتی، مهلت‌های قانونی اعتراض و مدارک اثبات دفاتر و هزینه‌ها.
+            بررسی مواد ۲۱۶، ۲۳۸، ۲۴۴، ۲۴۷ و ۲۵۱ مکرر قانون مالیات های مستقیم، نحوه تنظیم لایحه دفاعیه مالیاتی، مهلت های قانونی اعتراض و مدارک اثبات دفاتر و هزینه ها.
           </p>
         </div>
 
@@ -37,19 +37,19 @@ export function TaxLetterGuideSection() {
               <Calculator className="w-5 h-5" />
             </div>
             <h3 className="text-xl sm:text-2xl font-black text-white">
-              ۱. برگ تشخیص مالیات چیست و چرا دفاع مکتوب سرنوشت‌ساز است؟
+              ۱. برگ تشخیص مالیات چیست و چرا دفاع مکتوب سرنوشت ساز است؟
             </h3>
           </div>
 
           <div className="space-y-4 text-slate-300 text-sm sm:text-base leading-relaxed text-justify">
             <p>
-              پس از رسیدگی ممیزان سازمان امور مالیاتی به اظهارنامه یا پرونده مؤدی، سندی تحت عنوان <strong>«برگ تشخیص مالیات»</strong> صادر و ابلاغ می‌شود. در صورتی که مؤدی مالیات تعیین‌شده را غیرواقعی یا بدون احتساب معافیت‌ها و هزینه‌های قابل قبول بداند، موظف است ظرف مهلت قانونی اعتراض کتبی و مستند خود را تسلیم نماید.
+              پس از رسیدگی ممیزان سازمان امور مالیاتی به اظهارنامه یا پرونده مؤدی، سندی تحت عنوان <strong>«برگ تشخیص مالیات»</strong> صادر و ابلاغ می شود. در صورتی که مؤدی مالیات تعیین شده را غیرواقعی یا بدون احتساب معافیت ها و هزینه های قابل قبول بداند، موظف است ظرف مهلت قانونی اعتراض کتبی و مستند خود را تسلیم نماید.
             </p>
             <p>
-              تفاوت بنیادین مکاتبات مالیاتی با نامه‌های عادی اداری در این است که نامه‌های مالیاتی در حکم <strong>«لایحه دفاعیه شبه‌قضایی»</strong> هستند. عدم استناد دقیق به اسناد مثبته حسابداری، فاکتورهای رسمی سامانه مؤدیان و مواد قانون مالیات‌های مستقیم، منجر به قطعی شدن مالیات و صدور برگ قطعی و صدور اجراییه ماده ۲۱۶ خواهد شد.
+              تفاوت بنیادین مکاتبات مالیاتی با نامه های عادی اداری در این است که نامه های مالیاتی در حکم <strong>«لایحه دفاعیه شبه قضایی»</strong> هستند. عدم استناد دقیق به اسناد مثبته حسابداری، فاکتورهای رسمی سامانه مؤدیان و مواد قانون مالیات های مستقیم، منجر به قطعی شدن مالیات و صدور برگ قطعی و صدور اجراییه ماده ۲۱۶ خواهد شد.
             </p>
             <div className="p-4 rounded-xl bg-[#070B15] border border-amber-500/20 text-amber-200 text-xs sm:text-sm leading-relaxed">
-              <strong>مهلت قطعی ۳۰ روزه اعتراض:</strong> به موجب ماده ۲۳۸ قانون مالیات‌های مستقیم، مؤدی از تاریخ ابلاغ برگ تشخیص دقیقاً ۳۰ روز تقویمی فرصت دارد تا اعتراض کتبی خود را ثبت کند. انقضای این مهلت بدون اقدام کتبی، موجب قطعیت رقم مالیات و سلب حق اعتراض در مراجع بعدی خواهد شد.
+              <strong>مهلت قطعی ۳۰ روزه اعتراض:</strong> به موجب ماده ۲۳۸ قانون مالیات های مستقیم، مؤدی از تاریخ ابلاغ برگ تشخیص دقیقاً ۳۰ روز تقویمی فرصت دارد تا اعتراض کتبی خود را ثبت کند. انقضای این مهلت بدون اقدام کتبی، موجب قطعیت رقم مالیات و سلب حق اعتراض در مراجع بعدی خواهد شد.
             </div>
           </div>
         </div>
@@ -61,12 +61,12 @@ export function TaxLetterGuideSection() {
               <Scale className="w-5 h-5" />
             </div>
             <h3 className="text-xl sm:text-2xl font-black text-white">
-              ۲. مراحل چهارگانه حل اختلاف مالیاتی در قانون مالیات‌های مستقیم
+              ۲. مراحل چهارگانه حل اختلاف مالیاتی در قانون مالیات های مستقیم
             </h3>
           </div>
 
           <p className="text-slate-400 text-xs sm:text-sm leading-relaxed">
-            قانون‌گذار مسیر پلکانی زیر را برای رسیدگی به اعتراضات مالیاتی پیش‌بینی کرده است:
+            قانون گذار مسیر پلکانی زیر را برای رسیدگی به اعتراضات مالیاتی پیش بینی کرده است:
           </p>
 
           <div className="overflow-x-auto">
@@ -89,7 +89,7 @@ export function TaxLetterGuideSection() {
                 <tr>
                   <td className="p-3 font-bold text-sky-400">مرحله ۲: هیئت حل اختلاف بدوی</td>
                   <td className="p-3">ماده ۲۴۴ ق.م.م</td>
-                  <td className="p-3">هیئت سه‌نفره (قاضی دادگستری، نماینده مالیات، نماینده صنف یا اتاق)</td>
+                  <td className="p-3">هیئت سه نفره (قاضی دادگستری، نماینده مالیات، نماینده صنف یا اتاق)</td>
                   <td className="p-3 text-sky-400">در صورت عدم توافق در مرحله ماده ۲۳۸</td>
                 </tr>
                 <tr>
@@ -101,7 +101,7 @@ export function TaxLetterGuideSection() {
                 <tr>
                   <td className="p-3 font-bold text-purple-400">مرحله ۴: شورای عالی مالیاتی / هیئت ۲۵۱ مکرر</td>
                   <td className="p-3">مواد ۲۵۱ و ۲۵۱ مکرر</td>
-                  <td className="p-3">رسیدگی شکلی و ماهوی عالی در صورت ادعای بی‌عدالتی غیرقابل تجدیدنظر</td>
+                  <td className="p-3">رسیدگی شکلی و ماهوی عالی در صورت ادعای بی عدالتی غیرقابل تجدیدنظر</td>
                   <td className="p-3 text-purple-400">مقررات خاص وزارت اقتصاد</td>
                 </tr>
               </tbody>
@@ -127,37 +127,37 @@ export function TaxLetterGuideSection() {
                 <span>برگ تشخیص و گزارش مبنای ارزیابی (گزارش رسیدگی)</span>
               </h4>
               <p className="text-slate-400 leading-relaxed">
-                اخذ و تحلیل ریز گزارش رسیدگی ممیز، مشخص کردن این‌که کدام بخش از درآمدها یا ضرایب سود علی‌الرأس مورد اعتراض است.
+                اخذ و تحلیل ریز گزارش رسیدگی ممیز، مشخص کردن این که کدام بخش از درآمدها یا ضرایب سود علی الرأس مورد اعتراض است.
               </p>
             </div>
 
             <div className="p-4 rounded-2xl bg-[#070B15] border border-slate-800 space-y-2">
               <h4 className="font-bold text-[#E5C158] flex items-center gap-2">
                 <span className="w-6 h-6 rounded-full bg-[#E5C158]/20 flex items-center justify-center text-xs">۲</span>
-                <span>فاکتورها و صورتحساب‌های رسمی و الکترونیک</span>
+                <span>فاکتورها و صورتحساب های رسمی و الکترونیک</span>
               </h4>
               <p className="text-slate-400 leading-relaxed">
-                ارائه فاکتورهای خرید، رسیدهای پرداخت بانکی متصل به سامانه مؤدیان و اثبات بهای تمام‌شده کالای فروش‌رفته.
+                ارائه فاکتورهای خرید، رسیدهای پرداخت بانکی متصل به سامانه مؤدیان و اثبات بهای تمام شده کالای فروش رفته.
               </p>
             </div>
 
             <div className="p-4 rounded-2xl bg-[#070B15] border border-slate-800 space-y-2">
               <h4 className="font-bold text-[#E5C158] flex items-center gap-2">
                 <span className="w-6 h-6 rounded-full bg-[#E5C158]/20 flex items-center justify-center text-xs">۳</span>
-                <span>مدارک هزینه‌های قابل قبول مالیاتی (مواد ۱۴۷ و ۱۴۸)</span>
+                <span>مدارک هزینه های قابل قبول مالیاتی (مواد ۱۴۷ و ۱۴۸)</span>
               </h4>
               <p className="text-slate-400 leading-relaxed">
-                اسناد بیمه کارکنان، اجاره‌نامه، قبوض تأسیسات و استهلاک تجهیزات که اثبات‌کننده هزینه‌های واقعی کسب‌وکار هستند.
+                اسناد بیمه کارکنان، اجاره نامه، قبوض تأسیسات و استهلاک تجهیزات که اثبات کننده هزینه های واقعی کسب وکار هستند.
               </p>
             </div>
 
             <div className="p-4 rounded-2xl bg-[#070B15] border border-slate-800 space-y-2">
               <h4 className="font-bold text-[#E5C158] flex items-center gap-2">
                 <span className="w-6 h-6 rounded-full bg-[#E5C158]/20 flex items-center justify-center text-xs">۴</span>
-                <span>لایحه مدون دفاعیه با استناد به بخشنامه‌های سازمان</span>
+                <span>لایحه مدون دفاعیه با استناد به بخشنامه های سازمان</span>
               </h4>
               <p className="text-slate-400 leading-relaxed">
-                نگارش متن فنی با جداول مقایسه‌ای مالی و استناد به بخشنامه‌های تسهیل‌کننده و آرای وحدت رویه شورای عالی مالیاتی.
+                نگارش متن فنی با جداول مقایسه ای مالی و استناد به بخشنامه های تسهیل کننده و آرای وحدت رویه شورای عالی مالیاتی.
               </p>
             </div>
           </div>
@@ -170,7 +170,7 @@ export function TaxLetterGuideSection() {
               <Building className="w-5 h-5" />
             </div>
             <h3 className="text-xl sm:text-2xl font-black text-white">
-              ۴. مراحل گام‌به‌گام ثبت اعتراض و دفاع در اداره امور مالیاتی
+              ۴. مراحل گام به گام ثبت اعتراض و دفاع در اداره امور مالیاتی
             </h3>
           </div>
 
@@ -194,7 +194,7 @@ export function TaxLetterGuideSection() {
               <div className="space-y-1">
                 <h4 className="text-base font-bold text-white">جلسه مذاکره ماده ۲۳۸ و ارائه لایحه دفاعیه</h4>
                 <p className="text-xs sm:text-sm text-slate-400 leading-relaxed">
-                  حضور نزد مسئول امور مالیاتی ذی‌صلاح همراه با لایحه تدوین‌شده توسط متخصصان نگارش یار جهت تعدیل درآمد مشمول مالیات.
+                  حضور نزد مسئول امور مالیاتی ذی صلاح همراه با لایحه تدوین شده توسط متخصصان نگارش یار جهت تعدیل درآمد مشمول مالیات.
                 </p>
               </div>
             </div>
@@ -206,7 +206,7 @@ export function TaxLetterGuideSection() {
               <div className="space-y-1">
                 <h4 className="text-base font-bold text-white">ارجاع پرونده به هیئت حل اختلاف در صورت عدم توافق</h4>
                 <p className="text-xs sm:text-sm text-slate-400 leading-relaxed">
-                  اگر تعدیل مورد نظر حاصل نشود، پرونده به هیئت ماده ۲۴۴ ارجاع می‌شود و موعد رسیدگی با پیامک ابلاغ می‌گردد.
+                  اگر تعدیل مورد نظر حاصل نشود، پرونده به هیئت ماده ۲۴۴ ارجاع می شود و موعد رسیدگی با پیامک ابلاغ می گردد.
                 </p>
               </div>
             </div>
@@ -220,7 +220,7 @@ export function TaxLetterGuideSection() {
               <AlertCircle className="w-5 h-5" />
             </div>
             <h3 className="text-xl sm:text-2xl font-black text-white">
-              ۵. اشتباهات رایج مؤدیان که منجر به جریمه و قطعیت مالیات می‌شود
+              ۵. اشتباهات رایج مؤدیان که منجر به جریمه و قطعیت مالیات می شود
             </h3>
           </div>
 
@@ -228,7 +228,7 @@ export function TaxLetterGuideSection() {
             <div className="p-4 rounded-2xl bg-[#070B15] border border-red-500/20 space-y-2">
               <h4 className="font-bold text-red-400">۱. از دست دادن مهلت ۳۰ روزه</h4>
               <p className="text-slate-400 leading-relaxed">
-                مذاکرات شفاهی بدون ثبت مکتوب اعتراض در سیستم، باعث گذشت ۳۰ روز و قطعی شدن تمام مبالغ ناعادلانه می‌گردد.
+                مذاکرات شفاهی بدون ثبت مکتوب اعتراض در سیستم، باعث گذشت ۳۰ روز و قطعی شدن تمام مبالغ ناعادلانه می گردد.
               </p>
             </div>
 
@@ -242,7 +242,7 @@ export function TaxLetterGuideSection() {
             <div className="p-4 rounded-2xl bg-[#070B15] border border-blue-500/20 space-y-2">
               <h4 className="font-bold text-sky-400">۳. عدم درخواست بخشودگی جرایم ماده ۱۹۱</h4>
               <p className="text-slate-400 leading-relaxed">
-                غفلت از درج بند تقاضای بخشودگی جرایم قابل بخشش در لایحه که می‌تواند تا ۱۰۰٪ جرایم را کاهش دهد.
+                غفلت از درج بند تقاضای بخشودگی جرایم قابل بخشش در لایحه که می تواند تا ۱۰۰٪ جرایم را کاهش دهد.
               </p>
             </div>
           </div>
@@ -255,7 +255,7 @@ export function TaxLetterGuideSection() {
               <CheckCircle2 className="w-5 h-5" />
             </div>
             <h3 className="text-xl sm:text-2xl font-black text-white">
-              ۶. چک‌لیست نهایی قبل از تسلیم لایحه اعتراض مالیاتی
+              ۶. چک لیست نهایی قبل از تسلیم لایحه اعتراض مالیاتی
             </h3>
           </div>
 
@@ -270,7 +270,7 @@ export function TaxLetterGuideSection() {
             </div>
             <div className="flex items-center gap-2 p-3 rounded-xl bg-[#070B15] border border-slate-800">
               <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0" />
-              <span>مدارک هزینه‌های قابل قبول مواد ۱۴۷ و ۱۴۸ ضمیمه شده است.</span>
+              <span>مدارک هزینه های قابل قبول مواد ۱۴۷ و ۱۴۸ ضمیمه شده است.</span>
             </div>
             <div className="flex items-center gap-2 p-3 rounded-xl bg-[#070B15] border border-slate-800">
               <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0" />
@@ -283,23 +283,32 @@ export function TaxLetterGuideSection() {
         <div className="p-6 rounded-3xl bg-gradient-to-r from-[#0C1222] via-[#0F172A] to-[#0C1222] border border-[#E5C158]/30 space-y-4">
           <div className="flex items-center gap-2 text-[#E5C158] font-bold text-sm">
             <Sparkles className="w-5 h-5" />
-            <span>مسیرهای سه‌گانه حل اختلاف مالیاتی در نگارش یار</span>
+            <span>مسیرهای سه گانه حل اختلاف مالیاتی در نگارش یار</span>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs sm:text-sm text-slate-300">
             <div className="p-4 rounded-xl bg-[#070B15] border border-slate-800 space-y-2 flex flex-col justify-between">
               <div className="space-y-1">
-                <h4 className="font-bold text-white">۱. مطالعه الگوها و قوانین</h4>
+                <h4 className="font-bold text-white">۱. مطالعه الگوها و آموزش</h4>
                 <p className="text-slate-400 leading-relaxed">
-                  مشاهده نمونه متون لایحه اعتراض به برگ تشخیص و آشنایی با مواد قانون مالیات‌های مستقیم.
+                  مشاهده نمونه متون لایحه اعتراض به برگ تشخیص و آشنایی با اصول نگارش اداری و مقررات مالیاتی.
                 </p>
               </div>
-              <Link
-                href="/samples/letter-to-tax-office"
-                className="inline-flex items-center gap-1 text-[#E5C158] font-bold hover:underline pt-2 text-xs"
-              >
-                <span>مشاهده نمونه لایحه مالیاتی</span>
-                <ArrowLeft className="w-3.5 h-3.5" />
-              </Link>
+              <div className="space-y-1 pt-2">
+                <Link
+                  href="/samples/letter-to-tax-office"
+                  className="inline-flex items-center gap-1 text-[#E5C158] font-bold hover:underline text-xs block"
+                >
+                  <span>نمونه لایحه اعتراض مالیاتی</span>
+                  <ArrowLeft className="w-3.5 h-3.5 inline" />
+                </Link>
+                <Link
+                  href="/knowledge/how-to-write-administrative-letter"
+                  className="inline-flex items-center gap-1 text-slate-400 hover:text-white text-xs block"
+                >
+                  <span>راهنمای اصول نگارش اداری</span>
+                  <ArrowLeft className="w-3.5 h-3.5 inline" />
+                </Link>
+              </div>
             </div>
 
             <div className="p-4 rounded-xl bg-[#070B15] border border-[#E5C158]/40 space-y-2 flex flex-col justify-between">
@@ -322,7 +331,7 @@ export function TaxLetterGuideSection() {
               <div className="space-y-1">
                 <h4 className="font-bold text-white">۳. ارجاع به وکیل و مشاور مالیاتی</h4>
                 <p className="text-slate-400 leading-relaxed">
-                  برای پرونده‌های سنگین شرکتی، تراکنش‌های بانکی مشکوک و هیئت‌های حل اختلاف تجدیدنظر و ۲۵۱ مکرر.
+                  برای پرونده های سنگین شرکتی، تراکنش های بانکی مشکوک و هیئت های حل اختلاف تجدیدنظر و ۲۵۱ مکرر.
                 </p>
               </div>
               <Link

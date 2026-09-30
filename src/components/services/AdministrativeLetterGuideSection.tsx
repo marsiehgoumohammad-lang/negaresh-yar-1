@@ -20,13 +20,13 @@ export function AdministrativeLetterGuideSection() {
         <div className="text-center space-y-3 mb-10">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#E5C158]/10 border border-[#E5C158]/30 text-[#E5C158] text-xs font-bold">
             <Sparkles className="w-4 h-4" />
-            <span>راهنمای جامع تدوین، ثبت و پیگیری مکاتبات اداری و عریضه‌نویسی سازمانی</span>
+            <span>راهنمای جامع تدوین، ثبت و پیگیری مکاتبات اداری و عریضه نویسی سازمانی</span>
           </div>
           <h2 className="text-2xl sm:text-4xl font-black text-white">
-            راهنمای کامل نگارش نامه اداری، ثبت دبیرخانه و پیگیری رسمی در دستگاه‌های اجرایی
+            راهنمای کامل نگارش نامه اداری، ثبت دبیرخانه و پیگیری رسمی در دستگاه های اجرایی
           </h2>
           <p className="text-slate-400 text-sm sm:text-base max-w-3xl mx-auto leading-relaxed">
-            بررسی ارکان ۵‌گانه نامه رسمی، استانداردهای اتوماسیون اداری کشور، نحوه اخذ شماره ثبت و اندیکاتور، پیگیری قانونی خواسته و تفکیک نامه اداری از دعاوی قضایی.
+            بررسی ارکان ۵ گانه نامه رسمی، استانداردهای اتوماسیون اداری کشور، نحوه اخذ شماره ثبت و اندیکاتور، پیگیری قانونی خواسته و تفکیک نامه اداری از دعاوی قضایی.
           </p>
         </div>
 
@@ -37,19 +37,19 @@ export function AdministrativeLetterGuideSection() {
               <FileText className="w-5 h-5" />
             </div>
             <h3 className="text-xl sm:text-2xl font-black text-white">
-              ۱. نامه اداری چیست و چه جایگاهی در روابط شهروندان با سازمان‌ها دارد؟
+              ۱. نامه اداری چیست و چه جایگاهی در روابط شهروندان با سازمان ها دارد؟
             </h3>
           </div>
 
           <div className="space-y-4 text-slate-300 text-sm sm:text-base leading-relaxed text-justify">
             <p>
-              در نظام اداری و اجرایی کشور، هرگونه مطالبه، تقاضا، گزارش، دفاعیه یا اعلام نظر از سوی اشخاص حقیقی یا حقوقی خطاب به وزارتخانه‌ها، سازمان‌های دولتی، نهادهای عمومی غیردولتی (نظیر شهرداری‌ها و تأمین اجتماعی)، بانک‌ها و شرکت‌ها باید در قالب <strong>«نامه اداری رسمی» (Formal Administrative Letter)</strong> یا <strong>«عریضه اداری»</strong> مکتوب و ثبت شود.
+              در نظام اداری و اجرایی کشور، هرگونه مطالبه، تقاضا، گزارش، دفاعیه یا اعلام نظر از سوی اشخاص حقیقی یا حقوقی خطاب به وزارتخانه ها، سازمان های دولتی، نهادهای عمومی غیردولتی (نظیر شهرداری ها و تأمین اجتماعی)، بانک ها و شرکت ها باید در قالب <strong>«نامه اداری رسمی» (Formal Administrative Letter)</strong> یا <strong>«عریضه اداری»</strong> مکتوب و ثبت شود.
             </p>
             <p>
-              درخواست‌های شفاهی در مراجع اداری معمولاً فاقد اثر اجرایی و ضمانت پیگیری هستند. به موجب قوانین اداری، سندی که در دبیرخانه اداره ثبت شده و دارای <strong>«شماره اندیکاتور»</strong> و <strong>«تاریخ ورود»</strong> باشد، مبدأ قانونی ایجاد تکلیف برای واحد مربوطه جهت رسیدگی، بررسی کارشناسی و ارائه پاسخ مکتوب است.
+              درخواست های شفاهی در مراجع اداری معمولاً فاقد اثر اجرایی و ضمانت پیگیری هستند. به موجب قوانین اداری، سندی که در دبیرخانه اداره ثبت شده و دارای <strong>«شماره اندیکاتور»</strong> و <strong>«تاریخ ورود»</strong> باشد، مبدأ قانونی ایجاد تکلیف برای واحد مربوطه جهت رسیدگی، بررسی کارشناسی و ارائه پاسخ مکتوب است.
             </p>
             <div className="p-4 rounded-xl bg-[#070B15] border border-amber-500/20 text-amber-200 text-xs sm:text-sm leading-relaxed">
-              <strong>حق قانونی شهروندان در پاسخگویی اداری:</strong> بر اساس اصل ۳۴ قانون اساسی و مواد فصل سوم قانون مدیریت خدمات کشوری و همچنین ماده ۳ قانون ارتقای سلامت نظام اداری، مراجع اداری و دستگاه‌های اجرایی مکلف به پاسخگویی شفاف و ثبت مطالبات کتبی مردم در سامانه‌های اداری و اتوماسیون مراجع مربوطه هستند.
+              <strong>حق قانونی شهروندان در پاسخگویی اداری:</strong> بر اساس اصل ۳۴ قانون اساسی و مواد فصل سوم قانون مدیریت خدمات کشوری و همچنین ماده ۳ قانون ارتقای سلامت نظام اداری، مراجع اداری و دستگاه های اجرایی مکلف به پاسخگویی شفاف و ثبت مطالبات کتبی مردم در سامانه های اداری و اتوماسیون مراجع مربوطه هستند.
             </div>
           </div>
         </div>
@@ -66,7 +66,7 @@ export function AdministrativeLetterGuideSection() {
           </div>
 
           <p className="text-slate-400 text-xs sm:text-sm leading-relaxed">
-            یکی از رایج‌ترین خطاهای اداری، اشتباه گرفتن مراجع قضایی با مراجع اجرایی است. جدول زیر مرز دقیق کارکرد هر سند را مشخص می‌کند:
+            یکی از رایج ترین خطاهای اداری، اشتباه گرفتن مراجع قضایی با مراجع اجرایی است. جدول زیر مرز دقیق کارکرد هر سند را مشخص می کند:
           </p>
 
           <div className="overflow-x-auto">
@@ -82,15 +82,15 @@ export function AdministrativeLetterGuideSection() {
               <tbody className="divide-y divide-slate-800 text-slate-300">
                 <tr>
                   <td className="p-3 font-bold text-yellow-300">نامه اداری و عریضه</td>
-                  <td className="p-3">ادارات، شهرداری‌ها، بانک‌ها، استانداری، نهادهای اجرایی</td>
+                  <td className="p-3">ادارات، شهرداری ها، بانک ها، استانداری، نهادهای اجرایی</td>
                   <td className="p-3">ادبیات محترمانه رسمی، تقاضا، پیشنهاد یا اعتراض اداری</td>
                   <td className="p-3 text-emerald-400">بررسی کارشناسی، هامش مدیر و تصمیم سازمانی</td>
                 </tr>
                 <tr>
                   <td className="p-3 font-bold text-sky-400">دادخواست حقوقی</td>
-                  <td className="p-3">دادگاه‌های عمومی حقوقی و دیوان عدالت اداری</td>
+                  <td className="p-3">دادگاه های عمومی حقوقی و دیوان عدالت اداری</td>
                   <td className="p-3">فرم چاپی مخصوص، تعیین خواسته و دلایل بر مبنای قانون آیین دادرسی مدنی</td>
-                  <td className="p-3 text-sky-400">تشکیل پرونده قضایی و صدور رأی یا دادنامه لازم‌الاجرا</td>
+                  <td className="p-3 text-sky-400">تشکیل پرونده قضایی و صدور رأی یا دادنامه لازم الاجرا</td>
                 </tr>
                 <tr>
                   <td className="p-3 font-bold text-amber-400">شکواییه کیفری</td>
@@ -100,7 +100,7 @@ export function AdministrativeLetterGuideSection() {
                 </tr>
                 <tr>
                   <td className="p-3 font-bold text-purple-400">لایحه دفاعیه</td>
-                  <td className="p-3">شعب دادگاه، شورای حل اختلاف، هیئت‌های حل اختلاف مالیاتی و کار</td>
+                  <td className="p-3">شعب دادگاه، شورای حل اختلاف، هیئت های حل اختلاف مالیاتی و کار</td>
                   <td className="p-3">مستدل به مواد قانونی، رد ادعای طرف مقابل و تحلیل حقوقی</td>
                   <td className="p-3 text-purple-400">تأثیرگذاری در انشای رأی قاضی یا اعضای هیئت رسیدگی</td>
                 </tr>
@@ -116,7 +116,7 @@ export function AdministrativeLetterGuideSection() {
               <FileCheck className="w-5 h-5" />
             </div>
             <h3 className="text-xl sm:text-2xl font-black text-white">
-              ۳. ارکان پنج‌گانه ساختار رسمی یک نامه اداری استاندارد
+              ۳. ارکان پنج گانه ساختار رسمی یک نامه اداری استاندارد
             </h3>
           </div>
 
@@ -147,7 +147,7 @@ export function AdministrativeLetterGuideSection() {
                 <span>مقدمه و ادای احترام (Salutation & Intro)</span>
               </h4>
               <p className="text-slate-400 leading-relaxed">
-                شروع با «با سلام و احترام» و بیان عباراتی نظیر «به استحضار می‌رساند» جهت آماده‌سازی ذهن مخاطب برای ورود به اصل مطلب.
+                شروع با «با سلام و احترام» و بیان عباراتی نظیر «به استحضار می رساند» جهت آماده سازی ذهن مخاطب برای ورود به اصل مطلب.
               </p>
             </div>
 
@@ -157,14 +157,14 @@ export function AdministrativeLetterGuideSection() {
                 <span>متن اصلی خواسته، سوابق و استدلال</span>
               </h4>
               <p className="text-slate-400 leading-relaxed">
-                تشریح شفاف خواسته، ذکر شماره مکاتبات قبلی در صورت وجود سابقه، استناد به بخشنامه‌ها و ارائه راه‌حل یا تقاضای مشخص.
+                تشریح شفاف خواسته، ذکر شماره مکاتبات قبلی در صورت وجود سابقه، استناد به بخشنامه ها و ارائه راه حل یا تقاضای مشخص.
               </p>
             </div>
 
             <div className="p-4 rounded-2xl bg-[#070B15] border border-slate-800 space-y-2 md:col-span-2">
               <h4 className="font-bold text-[#E5C158] flex items-center gap-2">
                 <span className="w-6 h-6 rounded-full bg-[#E5C158]/20 flex items-center justify-center text-xs">۵</span>
-                <span>پایان‌بندی محترمانه، مشخصات متقاضی و امضا</span>
+                <span>پایان بندی محترمانه، مشخصات متقاضی و امضا</span>
               </h4>
               <p className="text-slate-400 leading-relaxed">
                 استفاده از عباراتی نظیر «پیشاپیش از بذل توجه و مساعدت جنابعالی کمال امتنان را دارم» همراه با درج نام، کدملی، شماره همراه و امضای شفاف فرستنده.
@@ -204,7 +204,7 @@ export function AdministrativeLetterGuideSection() {
               <div className="space-y-1">
                 <h4 className="text-base font-bold text-white">اخذ شماره اندیکاتور و تاریخ دقیق ثبت</h4>
                 <p className="text-xs sm:text-sm text-slate-400 leading-relaxed">
-                  مسئول دبیرخانه مکلف است مشخصات نامه و پیوست‌های آن را در سیستم اتوماسیون اداری اسکن کرده و برچسب یا مهر شماره ثبت و بارکد پیگیری را روی نسخه ثانی شما درج کند.
+                  مسئول دبیرخانه مکلف است مشخصات نامه و پیوست های آن را در سیستم اتوماسیون اداری اسکن کرده و برچسب یا مهر شماره ثبت و بارکد پیگیری را روی نسخه ثانی شما درج کند.
                 </p>
               </div>
             </div>
@@ -216,7 +216,7 @@ export function AdministrativeLetterGuideSection() {
               <div className="space-y-1">
                 <h4 className="text-base font-bold text-white">پیگیری ارجاع، هامش مدیریتی و پاسخ کارشناسی</h4>
                 <p className="text-xs sm:text-sm text-slate-400 leading-relaxed">
-                  با در دست داشتن شماره ثبت می‌توانید از طریق باجه پیگیری مراجعان یا پورتال اینترنتی سازمان، نام کارشناس ارجاع‌شونده و دستورات صادره را دنبال نمایید.
+                  با در دست داشتن شماره ثبت می توانید از طریق باجه پیگیری مراجعان یا پورتال اینترنتی سازمان، نام کارشناس ارجاع شونده و دستورات صادره را دنبال نمایید.
                 </p>
               </div>
             </div>
@@ -230,29 +230,29 @@ export function AdministrativeLetterGuideSection() {
               <AlertCircle className="w-5 h-5" />
             </div>
             <h3 className="text-xl sm:text-2xl font-black text-white">
-              ۵. اشتباهات مهلک در نگارش نامه اداری که مانع رسیدگی می‌شود
+              ۵. اشتباهات مهلک در نگارش نامه اداری که مانع رسیدگی می شود
             </h3>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs sm:text-sm text-slate-300">
             <div className="p-4 rounded-2xl bg-[#070B15] border border-red-500/20 space-y-2">
-              <h4 className="font-bold text-red-400">۱. کلی‌گویی و ابهام در خواسته</h4>
+              <h4 className="font-bold text-red-400">۱. کلی گویی و ابهام در خواسته</h4>
               <p className="text-slate-400 leading-relaxed">
-                طولانی‌نویسی، بیان درددل‌های شخصی و ذکر نکردن تقاضای مشخص در پایان نامه که منجر به ارجاعات بیهوده و بایگانی نامه می‌شود.
+                طولانی نویسی، بیان درددل های شخصی و ذکر نکردن تقاضای مشخص در پایان نامه که منجر به ارجاعات بیهوده و بایگانی نامه می شود.
               </p>
             </div>
 
             <div className="p-4 rounded-2xl bg-[#070B15] border border-amber-500/20 space-y-2">
               <h4 className="font-bold text-amber-400">۲. لحن تند یا ادبیات نامناسب</h4>
               <p className="text-slate-400 leading-relaxed">
-                استفاده از لحن تهاجمی، کنایه‌آمیز یا تهدید کارمندان که مقاومت روانی ایجاد کرده و انگیزه کارشناسی را از بین می‌برد.
+                استفاده از لحن تهاجمی، کنایه آمیز یا تهدید کارمندان که مقاومت روانی ایجاد کرده و انگیزه کارشناسی را از بین می برد.
               </p>
             </div>
 
             <div className="p-4 rounded-2xl bg-[#070B15] border border-blue-500/20 space-y-2">
               <h4 className="font-bold text-sky-400">۳. ارسال به مرجع غیرصالح</h4>
               <p className="text-slate-400 leading-relaxed">
-                خطاب قرار دادن مقامی که اختیار قانونی در موضوع ندارد؛ نامه‌ها باید خطاب به بالاترین مقام اجرایی ذی‌ربط با ذکر سمت دقیق ارسال گردند.
+                خطاب قرار دادن مقامی که اختیار قانونی در موضوع ندارد؛ نامه ها باید خطاب به بالاترین مقام اجرایی ذی ربط با ذکر سمت دقیق ارسال گردند.
               </p>
             </div>
           </div>
@@ -265,7 +265,7 @@ export function AdministrativeLetterGuideSection() {
               <CheckCircle2 className="w-5 h-5" />
             </div>
             <h3 className="text-xl sm:text-2xl font-black text-white">
-              ۶. چک‌لیست نهایی قبل از امضا و تحویل نامه اداری به دبیرخانه
+              ۶. چک لیست نهایی قبل از امضا و تحویل نامه اداری به دبیرخانه
             </h3>
           </div>
 
@@ -292,7 +292,7 @@ export function AdministrativeLetterGuideSection() {
             </div>
             <div className="flex items-center gap-2 p-3 rounded-xl bg-[#070B15] border border-slate-800">
               <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0" />
-              <span>لحن اداری متناسب با سلسله‌مراتب رعایت شده است.</span>
+              <span>لحن اداری متناسب با سلسله مراتب رعایت شده است.</span>
             </div>
           </div>
         </div>
@@ -301,14 +301,14 @@ export function AdministrativeLetterGuideSection() {
         <div className="p-6 rounded-3xl bg-gradient-to-r from-[#0C1222] via-[#0F172A] to-[#0C1222] border border-[#E5C158]/30 space-y-4">
           <div className="flex items-center gap-2 text-[#E5C158] font-bold text-sm">
             <Sparkles className="w-5 h-5" />
-            <span>مسیرهای سه‌گانه دسترسی و خدمات نگارش یار در حوزه مکاتبات اداری</span>
+            <span>مسیرهای سه گانه دسترسی و خدمات نگارش یار در حوزه مکاتبات اداری</span>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs sm:text-sm text-slate-300">
             <div className="p-4 rounded-xl bg-[#070B15] border border-slate-800 space-y-2 flex flex-col justify-between">
               <div className="space-y-1">
                 <h4 className="font-bold text-white">۱. آموزش و مقالات راهنما</h4>
                 <p className="text-slate-400 leading-relaxed">
-                  مطالعه اصول نامه‌نگاری رسمی، مقررات دبیرخانه و آیین نگارش اسناد دولتی در پایگاه دانش.
+                  مطالعه اصول نامه نگاری رسمی، مقررات دبیرخانه و آیین نگارش اسناد دولتی در پایگاه دانش.
                 </p>
               </div>
               <Link
@@ -324,14 +324,14 @@ export function AdministrativeLetterGuideSection() {
               <div className="space-y-1">
                 <h4 className="font-bold text-white">۲. بانک ۳۱ نمونه آماده</h4>
                 <p className="text-slate-400 leading-relaxed">
-                  مشاهده و کپی رایگان ۳۱ الگوی استاندارد مکاتبه با ادارات، بانک‌ها، شهرداری و شرکت‌ها.
+                  مشاهده و کپی رایگان ۳۱ الگوی استاندارد مکاتبه با ادارات، بانک ها، شهرداری و شرکت ها.
                 </p>
               </div>
               <Link
                 href="/samples/administrative-letters"
                 className="inline-flex items-center gap-1 text-[#E5C158] font-bold hover:underline pt-2 text-xs"
               >
-                <span>مشاهده بانک نمونه نامه‌ها</span>
+                <span>مشاهده بانک نمونه نامه ها</span>
                 <ArrowLeft className="w-3.5 h-3.5" />
               </Link>
             </div>

@@ -21,10 +21,10 @@ export function LeaderOfficeLetterGuideSection() {
             <span>راهنمای نگارش عریضه رسمی به دفتر مقام معظم رهبری و پیگیری در بخش ارتباطات مردمی</span>
           </div>
           <h2 className="text-2xl sm:text-4xl font-black text-white">
-            راهنمای عریضه‌نویسی به دفتر رهبری، شرایط پذیرش درخواست‌های حمایتی، عفو و گزارش‌ها
+            راهنمای عریضه نویسی به دفتر رهبری، شرایط پذیرش درخواست های حمایتی، عفو و گزارش ها
           </h2>
           <p className="text-slate-400 text-sm sm:text-base max-w-3xl mx-auto leading-relaxed">
-            بررسی اختیارات قانونی ولایت فقیه، سازوکار مکاتبات دفتر ارتباطات مردمی، کمیسیون عفو و بخشودگی (بند ۱۱ اصل ۱۱۰)، استفتائات و کمک‌های اضطراری بیت رهبری.
+            بررسی اختیارات قانونی ولایت فقیه، سازوکار مکاتبات دفتر ارتباطات مردمی، کمیسیون عفو و بخشودگی (بند ۱۱ اصل ۱۱۰)، استفتائات و کمک های اضطراری بیت رهبری.
           </p>
         </div>
 
@@ -35,19 +35,19 @@ export function LeaderOfficeLetterGuideSection() {
               <Compass className="w-5 h-5" />
             </div>
             <h3 className="text-xl sm:text-2xl font-black text-white">
-              ۱. عریضه به دفتر مقام معظم رهبری چیست و چه موضوعاتی را پوشش می‌دهد؟
+              ۱. عریضه به دفتر مقام معظم رهبری چیست و چه موضوعاتی را پوشش می دهد؟
             </h3>
           </div>
 
           <div className="space-y-4 text-slate-300 text-sm sm:text-base leading-relaxed text-justify">
             <p>
-              دفتر مقام معظم رهبری به عنوان عالی‌ترین مرجع حاکمیتی کشور، دارای بخشی ویژه تحت عنوان <strong>«معاونت ارتباطات مردمی»</strong> است که وظیفه دریافت، دسته‌بندی و پیگیری گزارش‌ها، شکایات مردمی از عملکرد دستگاه‌های حاکمیتی، تقاضای عفو و تخفیف مجازات، استمدادهای معیشتی و سوالات شرعی را بر عهده دارد.
+              دفتر مقام معظم رهبری به عنوان عالی ترین مرجع حاکمیتی کشور، دارای بخشی ویژه تحت عنوان <strong>«معاونت ارتباطات مردمی»</strong> است که وظیفه دریافت، دسته بندی و پیگیری گزارش ها، شکایات مردمی از عملکرد دستگاه های حاکمیتی، تقاضای عفو و تخفیف مجازات، استمدادهای معیشتی و سوالات شرعی را بر عهده دارد.
             </p>
             <p>
-              نامه‌های ارسالی پس از کدگذاری، حسب موضوع به یکی از بخش‌های تخصصی (از قبیل کمیسیون عفو و بخشودگی قوه قضاییه، نهادهای حمایتی مانند بنیاد برکت، بنیاد مستضعفان، کمیته امداد، ستاد کل نیروهای مسلح یا دفتر بازرسی رهبری) ارجاع و پیگیری می‌شوند.
+              نامه های ارسالی پس از کدگذاری، حسب موضوع به یکی از بخش های تخصصی (از قبیل کمیسیون عفو و بخشودگی قوه قضاییه، نهادهای حمایتی مانند بنیاد برکت، بنیاد مستضعفان، کمیته امداد، ستاد کل نیروهای مسلح یا دفتر بازرسی رهبری) ارجاع و پیگیری می شوند.
             </p>
             <div className="p-4 rounded-xl bg-[#070B15] border border-amber-500/20 text-amber-200 text-xs sm:text-sm leading-relaxed">
-              <strong>تقاضای عفو محکومان (بند ۱۱ اصل ۱۱۰ قانون اساسی):</strong> یکی از مهم‌ترین صلاحیت‌های خاص رهبری، عفو یا تخفیف مجازات محکومان در حدود موازین اسلامی پس از پیشنهاد رئیس قوه قضاییه است. عریضه‌های مربوط به عفو زندانیان دارای شرایط خاص شکلی و سوابق رفتاری در زندان هستند که باید با استناد دقیق تدوین شوند.
+              <strong>تقاضای عفو محکومان (بند ۱۱ اصل ۱۱۰ قانون اساسی):</strong> یکی از مهم ترین صلاحیت های خاص رهبری، عفو یا تخفیف مجازات محکومان در حدود موازین اسلامی پس از پیشنهاد رئیس قوه قضاییه است. عریضه های مربوط به عفو زندانیان دارای شرایط خاص شکلی و سوابق رفتاری در زندان هستند که باید با استناد دقیق تدوین شوند.
             </div>
           </div>
         </div>
@@ -59,7 +59,7 @@ export function LeaderOfficeLetterGuideSection() {
               <FileCheck className="w-5 h-5" />
             </div>
             <h3 className="text-xl sm:text-2xl font-black text-white">
-              ۲. کانال‌های رسمی ارسال نامه به دفتر مقام معظم رهبری
+              ۲. کانال های رسمی ارسال نامه به دفتر مقام معظم رهبری
             </h3>
           </div>
 
@@ -70,7 +70,7 @@ export function LeaderOfficeLetterGuideSection() {
                 <span>پورتال رسمی leader.ir</span>
               </h4>
               <p className="text-slate-400 leading-relaxed">
-                ارسال درخواست از بخش ارتباطات مردمی پایگاه اطلاع‌رسانی دفتر مقام معظم رهبری با دریافت کد پیگیری اختصاصی.
+                ارسال درخواست از بخش ارتباطات مردمی پایگاه اطلاع رسانی دفتر مقام معظم رهبری با دریافت کد پیگیری اختصاصی.
               </p>
             </div>
 
@@ -87,10 +87,10 @@ export function LeaderOfficeLetterGuideSection() {
             <div className="p-4 rounded-2xl bg-[#070B15] border border-slate-800 space-y-2">
               <h4 className="font-bold text-[#E5C158] flex items-center gap-2">
                 <span className="w-6 h-6 rounded-full bg-[#E5C158]/20 flex items-center justify-center text-xs">۳</span>
-                <span>دفاتر نمایندگی ولی فقیه و ائمه جمعه در استان‌ها</span>
+                <span>دفاتر نمایندگی ولی فقیه و ائمه جمعه در استان ها</span>
               </h4>
               <p className="text-slate-400 leading-relaxed">
-                تحویل حضوری عریضه به دبیرخانه دفتر نماینده ولی فقیه در مراکز استان‌ها جهت ارجاع مستقیم به دفتر مرکزی.
+                تحویل حضوری عریضه به دبیرخانه دفتر نماینده ولی فقیه در مراکز استان ها جهت ارجاع مستقیم به دفتر مرکزی.
               </p>
             </div>
           </div>
@@ -111,14 +111,14 @@ export function LeaderOfficeLetterGuideSection() {
             <div className="p-4 rounded-2xl bg-[#070B15] border border-slate-800 space-y-2">
               <h4 className="font-bold text-[#E5C158]">رعایت القاب رسمی و لحن تواضع و احترام</h4>
               <p className="text-slate-400 leading-relaxed">
-                استفاده از عباراتی نظیر «محضر مبارک رهبر معظم انقلاب اسلامی، حضرت آیت‌الله العظمی خامنه‌ای (مدظله‌العالی)» در صدر نامه.
+                استفاده از عباراتی نظیر «محضر مبارک رهبر معظم انقلاب اسلامی، حضرت آیت الله العظمی خامنه ای (مدظله العالی)» در صدر نامه.
               </p>
             </div>
 
             <div className="p-4 rounded-2xl bg-[#070B15] border border-slate-800 space-y-2">
               <h4 className="font-bold text-[#E5C158]">مستندات پرونده کیفری (در تقاضای عفو و بخشودگی)</h4>
               <p className="text-slate-400 leading-relaxed">
-                تصویر دادنامه قطعی، گواهی حسن رفتار از زندان، سابقه حبس تحمل‌شده و اعلام رضایت شاکی خصوصی (در صورت وجود).
+                تصویر دادنامه قطعی، گواهی حسن رفتار از زندان، سابقه حبس تحمل شده و اعلام رضایت شاکی خصوصی (در صورت وجود).
               </p>
             </div>
 
@@ -145,7 +145,7 @@ export function LeaderOfficeLetterGuideSection() {
               <AlertCircle className="w-5 h-5" />
             </div>
             <h3 className="text-xl sm:text-2xl font-black text-white">
-              ۴. اشتباهات رایج در نامه‌نگاری با دفتر رهبری
+              ۴. اشتباهات رایج در نامه نگاری با دفتر رهبری
             </h3>
           </div>
 
@@ -153,54 +153,79 @@ export function LeaderOfficeLetterGuideSection() {
             <div className="p-4 rounded-2xl bg-[#070B15] border border-red-500/20 space-y-2">
               <h4 className="font-bold text-red-400">۱. تقاضای عفو قبل از قطعیت حکم</h4>
               <p className="text-slate-400 leading-relaxed">
-                کمیسیون عفو تنها به احکام قطعی دادگاه‌ها رسیدگی می‌کند؛ ارسال درخواست حین تحقیقات مقدماتی یا مرحله تجدیدنظر بی‌اثر است.
+                کمیسیون عفو تنها به احکام قطعی دادگاه ها رسیدگی می کند؛ ارسال درخواست حین تحقیقات مقدماتی یا مرحله تجدیدنظر بی اثر است.
               </p>
             </div>
 
             <div className="p-4 rounded-2xl bg-[#070B15] border border-amber-500/20 space-y-2">
               <h4 className="font-bold text-amber-400">۲. فقدان آدرس یا مشخصات هویتی</h4>
               <p className="text-slate-400 leading-relaxed">
-                نامه‌های ناشناس یا فاقد کدملی و شماره تماس معتبر به هیچ وجه مورد بررسی و ارجاع قرار نخواهند گرفت.
+                نامه های ناشناس یا فاقد کدملی و شماره تماس معتبر به هیچ وجه مورد بررسی و ارجاع قرار نخواهند گرفت.
               </p>
             </div>
 
             <div className="p-4 rounded-2xl bg-[#070B15] border border-blue-500/20 space-y-2">
               <h4 className="font-bold text-sky-400">۳. تقاضای تغییر قوانین مصوب مجلس</h4>
               <p className="text-slate-400 leading-relaxed">
-                درخواست اصلاح قوانین عمومی کشور باید از طریق نمایندگان مجلس یا لوایح دولت پیگیری شود نه عریضه‌های فردی.
+                درخواست اصلاح قوانین عمومی کشور باید از طریق نمایندگان مجلس یا لوایح دولت پیگیری شود نه عریضه های فردی.
               </p>
             </div>
           </div>
         </div>
 
-        {/* Section 5: Conversion Modules */}
+        {/* Section 5: Conversion Modules (3-Tier Funnel) */}
         <div className="p-6 rounded-3xl bg-gradient-to-r from-[#0C1222] via-[#0F172A] to-[#0C1222] border border-[#E5C158]/30 space-y-4">
           <div className="flex items-center gap-2 text-[#E5C158] font-bold text-sm">
             <Sparkles className="w-5 h-5" />
-            <span>خدمات و الگوهای عریضه‌نویسی به دفتر مقام معظم رهبری در نگارش یار</span>
+            <span>مسیرهای سه گانه مکاتبه با دفتر مقام معظم رهبری در نگارش یار</span>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs sm:text-sm text-slate-300">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs sm:text-sm text-slate-300">
             <div className="p-4 rounded-xl bg-[#070B15] border border-slate-800 space-y-2 flex flex-col justify-between">
               <div className="space-y-1">
-                <h4 className="font-bold text-white">مشاهده و کپی رایگان نمونه عریضه</h4>
+                <h4 className="font-bold text-white">۱. آموزش نگارش رسمی</h4>
                 <p className="text-slate-400 leading-relaxed">
-                  الگوی آماده و متن استاندارد درخواست استمداد، کمک‌هزینه و عریضه به دفتر رهبری.
+                  آموزش اصول نامه نگاری اداری، رعایت تشریفات و القاب رسمی در پایگاه دانش نگارش یار.
                 </p>
               </div>
               <Link
-                href="/samples/leader-office-letter"
+                href="/knowledge/how-to-write-administrative-letter"
                 className="inline-flex items-center gap-1 text-[#E5C158] font-bold hover:underline pt-2 text-xs"
               >
-                <span>مشاهده نمونه نامه به دفتر رهبری</span>
+                <span>راهنمای اصول نامه نگاری</span>
                 <ArrowLeft className="w-3.5 h-3.5" />
               </Link>
             </div>
 
+            <div className="p-4 rounded-xl bg-[#070B15] border border-slate-800 space-y-2 flex flex-col justify-between">
+              <div className="space-y-1">
+                <h4 className="font-bold text-white">۲. نمونه عریضه و الگوها</h4>
+                <p className="text-slate-400 leading-relaxed">
+                  مشاهده و کپی رایگان الگوی آماده استمداد و دسترسی به بانک ۳۱ سازمان.
+                </p>
+              </div>
+              <div className="space-y-1 pt-2">
+                <Link
+                  href="/samples/leader-office-letter"
+                  className="inline-flex items-center gap-1 text-[#E5C158] font-bold hover:underline text-xs block"
+                >
+                  <span>نمونه نامه به دفتر رهبری</span>
+                  <ArrowLeft className="w-3.5 h-3.5 inline" />
+                </Link>
+                <Link
+                  href="/samples/administrative-letters"
+                  className="inline-flex items-center gap-1 text-slate-400 hover:text-white text-xs block"
+                >
+                  <span>بانک جامع نمونه نامه ها</span>
+                  <ArrowLeft className="w-3.5 h-3.5 inline" />
+                </Link>
+              </div>
+            </div>
+
             <div className="p-4 rounded-xl bg-[#070B15] border border-[#E5C158]/40 space-y-2 flex flex-col justify-between">
               <div className="space-y-1">
-                <h4 className="font-bold text-[#E5C158]">تنظیم تخصصی عریضه توسط کارشناس</h4>
+                <h4 className="font-bold text-[#E5C158]">۳. تنظیم تخصصی عریضه</h4>
                 <p className="text-slate-400 leading-relaxed">
-                  تدوین ساختاریافته عریضه شما با رعایت پروتکل‌های تشریفاتی و ادبیات فاخر مکتوب در فایل Word و PDF.
+                  تدوین ساختاریافته عریضه شما با رعایت پروتکل های تشریفاتی و ادبیات فاخر مکتوب در فایل Word و PDF.
                 </p>
               </div>
               <Link

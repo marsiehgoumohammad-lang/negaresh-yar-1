@@ -21,10 +21,10 @@ export function GovernorLetterGuideSection() {
             <span>راهنمای نگارش مکاتبات رسمی، عریضه و استشهادیه به استانداری، فرمانداری و بخشداری</span>
           </div>
           <h2 className="text-2xl sm:text-4xl font-black text-white">
-            راهنمای مکاتبه با استاندار و فرماندار، پیگیری مطالبات محلی، عمرانی و کارگروه‌های استانی
+            راهنمای مکاتبه با استاندار و فرماندار، پیگیری مطالبات محلی، عمرانی و کارگروه های استانی
           </h2>
           <p className="text-slate-400 text-sm sm:text-base max-w-3xl mx-auto leading-relaxed">
-            بررسی جایگاه استاندار به عنوان نماینده عالی دولت، کارگروه تسهیل و رفع موانع تولید، شورای تأمین استان، نظارت بر شهرداری‌ها و دهیاری‌ها و استشهادیه‌های اهالی.
+            بررسی جایگاه استاندار به عنوان نماینده عالی دولت، کارگروه تسهیل و رفع موانع تولید، شورای تأمین استان، نظارت بر شهرداری ها و دهیاری ها و استشهادیه های اهالی.
           </p>
         </div>
 
@@ -35,19 +35,19 @@ export function GovernorLetterGuideSection() {
               <Building2 className="w-5 h-5" />
             </div>
             <h3 className="text-xl sm:text-2xl font-black text-white">
-              ۱. استاندار و فرماندار چه اختیاراتی دارند و چه موضوعاتی به آن‌ها ارجاع می‌شود؟
+              ۱. استاندار و فرماندار چه اختیاراتی دارند و چه موضوعاتی به آن ها ارجاع می شود؟
             </h3>
           </div>
 
           <div className="space-y-4 text-slate-300 text-sm sm:text-base leading-relaxed text-justify">
             <p>
-              بر اساس مصوبه شورای عالی اداری در خصوص وظایف و اختیارات استانداران و فرمانداران، استاندار بالاترین مقام اجرایی و نماینده عالی دولت در استان است که بر تمامی ادارات کل، سازمان‌های دولتی، نهادهای عمومی و شرکت‌های دولتی در سطح استان نظارت و هماهنگی دارد. فرمانداران و بخشداران نیز در حوزه شهرستان و بخش همین مسئولیت حاکمیتی را دارا هستند.
+              بر اساس مصوبه شورای عالی اداری در خصوص وظایف و اختیارات استانداران و فرمانداران، استاندار بالاترین مقام اجرایی و نماینده عالی دولت در استان است که بر تمامی ادارات کل، سازمان های دولتی، نهادهای عمومی و شرکت های دولتی در سطح استان نظارت و هماهنگی دارد. فرمانداران و بخشداران نیز در حوزه شهرستان و بخش همین مسئولیت حاکمیتی را دارا هستند.
             </p>
             <p>
-              استانداری مرجع عالی رسیدگی به مطالبات جمعی اهالی (آسفالت، گازرسانی، آب شرب، بهداشت روستایی)، شکایات از عملکرد شهرداری‌ها و شوراها، رفع موانع تولید و اشتغال و حل تعارضات اداری بین دستگاه‌هاست.
+              استانداری مرجع عالی رسیدگی به مطالبات جمعی اهالی (آسفالت، گازرسانی، آب شرب، بهداشت روستایی)، شکایات از عملکرد شهرداری ها و شوراها، رفع موانع تولید و اشتغال و حل تعارضات اداری بین دستگاه هاست.
             </p>
             <div className="p-4 rounded-xl bg-[#070B15] border border-amber-500/20 text-amber-200 text-xs sm:text-sm leading-relaxed">
-              <strong>کارگروه تسهیل و رفع موانع تولید استان:</strong> یکی از نیرومندترین اهرم‌های استاندار، ریاست این کارگروه است. مصوبات این کارگروه برای تمامی بانک‌های استان، ادارات امور مالیاتی و تأمین اجتماعی جهت استمهال تسهیلات و جلوگیری از پلمب واحدهای تولیدی لازم‌الاجراست.
+              <strong>کارگروه تسهیل و رفع موانع تولید استان:</strong> یکی از نیرومندترین اهرم های استاندار، ریاست این کارگروه است. مصوبات این کارگروه برای تمامی بانک های استان، ادارات امور مالیاتی و تأمین اجتماعی جهت استمهال تسهیلات و جلوگیری از پلمب واحدهای تولیدی لازم الاجراست.
             </div>
           </div>
         </div>
@@ -59,7 +59,7 @@ export function GovernorLetterGuideSection() {
               <Layers className="w-5 h-5" />
             </div>
             <h3 className="text-xl sm:text-2xl font-black text-white">
-              ۲. سلسله‌مراتب مراجع تابعه وزارت کشور جهت ارسال نامه
+              ۲. سلسله مراتب مراجع تابعه وزارت کشور جهت ارسال نامه
             </h3>
           </div>
 
@@ -70,7 +70,7 @@ export function GovernorLetterGuideSection() {
                 <span>استانداری (استاندار و معاونین)</span>
               </h4>
               <p className="text-slate-400 leading-relaxed">
-                موضوعات کلان استانی، پروژه‌های ملی، کارگروه تسهیل، تعارض بین‌دستگاهی، نظارت عالی بر شهرداری‌ها و عریضه‌های عمومی گسترده.
+                موضوعات کلان استانی، پروژه های ملی، کارگروه تسهیل، تعارض بین دستگاهی، نظارت عالی بر شهرداری ها و عریضه های عمومی گسترده.
               </p>
             </div>
 
@@ -90,7 +90,7 @@ export function GovernorLetterGuideSection() {
                 <span>بخشداری و دهیاری</span>
               </h4>
               <p className="text-slate-400 leading-relaxed">
-                امور روستایی، طرح هادی، مسائل کشاورزی و انهار، نظارت بر شوراهای اسلامی روستا و دهیاری‌ها و استشهادیه‌های محلی.
+                امور روستایی، طرح هادی، مسائل کشاورزی و انهار، نظارت بر شوراهای اسلامی روستا و دهیاری ها و استشهادیه های محلی.
               </p>
             </div>
           </div>
@@ -103,13 +103,13 @@ export function GovernorLetterGuideSection() {
               <FileCheck className="w-5 h-5" />
             </div>
             <h3 className="text-xl sm:text-2xl font-black text-white">
-              ۳. ساختار استاندارد نامه‌های جمعی و استشهادیه اهالی به استانداری
+              ۳. ساختار استاندارد نامه های جمعی و استشهادیه اهالی به استانداری
             </h3>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs sm:text-sm text-slate-300">
             <div className="p-4 rounded-2xl bg-[#070B15] border border-slate-800 space-y-2">
-              <h4 className="font-bold text-[#E5C158]">عنوان خطاب به مقام رسمی ذی‌ربط</h4>
+              <h4 className="font-bold text-[#E5C158]">عنوان خطاب به مقام رسمی ذی ربط</h4>
               <p className="text-slate-400 leading-relaxed">
                 مانند «جناب آقای ... استاندار محترم استان ...» یا «فرماندار محترم شهرستان ...» با قید دقیق نام استان و شهرستان.
               </p>
@@ -118,7 +118,7 @@ export function GovernorLetterGuideSection() {
             <div className="p-4 rounded-2xl bg-[#070B15] border border-slate-800 space-y-2">
               <h4 className="font-bold text-[#E5C158]">جدول امضا و کدملی اهالی و معتمدین محله</h4>
               <p className="text-slate-400 leading-relaxed">
-                درخواست‌های جمعی باید همراه با نام، نام خانوادگی، شماره کدملی، شماره تماس و امضای اهالی محل یا امضای شورای محل باشد.
+                درخواست های جمعی باید همراه با نام، نام خانوادگی، شماره کدملی، شماره تماس و امضای اهالی محل یا امضای شورای محل باشد.
               </p>
             </div>
 
@@ -145,22 +145,22 @@ export function GovernorLetterGuideSection() {
               <AlertCircle className="w-5 h-5" />
             </div>
             <h3 className="text-xl sm:text-2xl font-black text-white">
-              ۴. اشتباهات رایج در نامه‌نگاری با استانداری و فرمانداری
+              ۴. اشتباهات رایج در نامه نگاری با استانداری و فرمانداری
             </h3>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs sm:text-sm text-slate-300">
             <div className="p-4 rounded-2xl bg-[#070B15] border border-red-500/20 space-y-2">
-              <h4 className="font-bold text-red-400">۱. دور زدن سلسله‌مراتب اداری</h4>
+              <h4 className="font-bold text-red-400">۱. دور زدن سلسله مراتب اداری</h4>
               <p className="text-slate-400 leading-relaxed">
-                ارسال نامه به استاندار در موضوعاتی که بدون هیچ سابقه‌ای مستقیماً باید در بخشداری یا اداره شهرستان مطرح می‌شد.
+                ارسال نامه به استاندار در موضوعاتی که بدون هیچ سابقه ای مستقیماً باید در بخشداری یا اداره شهرستان مطرح می شد.
               </p>
             </div>
 
             <div className="p-4 rounded-2xl bg-[#070B15] border border-amber-500/20 space-y-2">
               <h4 className="font-bold text-amber-400">۲. استشهادیه بدون مشخصات معتبر</h4>
               <p className="text-slate-400 leading-relaxed">
-                جمع‌آوری امضا بدون درج کدملی یا با خط‌های یکدست که ارزش اداری استشهادیه را نزد حراست و بازرسی مخدوش می‌کند.
+                جمع آوری امضا بدون درج کدملی یا با خط های یکدست که ارزش اداری استشهادیه را نزد حراست و بازرسی مخدوش می کند.
               </p>
             </div>
 
@@ -173,34 +173,59 @@ export function GovernorLetterGuideSection() {
           </div>
         </div>
 
-        {/* Section 5: Conversion Modules */}
+        {/* Section 5: Conversion Modules (3-Tier Funnel) */}
         <div className="p-6 rounded-3xl bg-gradient-to-r from-[#0C1222] via-[#0F172A] to-[#0C1222] border border-[#E5C158]/30 space-y-4">
           <div className="flex items-center gap-2 text-[#E5C158] font-bold text-sm">
             <Sparkles className="w-5 h-5" />
-            <span>خدمات و الگوهای عریضه‌نویسی به استانداری در نگارش یار</span>
+            <span>مسیرهای سه گانه مکاتبه با استانداری و فرمانداری در نگارش یار</span>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs sm:text-sm text-slate-300">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs sm:text-sm text-slate-300">
             <div className="p-4 rounded-xl bg-[#070B15] border border-slate-800 space-y-2 flex flex-col justify-between">
               <div className="space-y-1">
-                <h4 className="font-bold text-white">مشاهده و کپی رایگان نمونه نامه</h4>
+                <h4 className="font-bold text-white">۱. آموزش و راهنمای نگارش</h4>
                 <p className="text-slate-400 leading-relaxed">
-                  الگوی آماده و متن استاندارد درخواست رسیدگی به مشکلات شهری، عمرانی و کارگروه رفع موانع تولید.
+                  مطالعه اصول نامه نگاری، ارکان نامه رسمی و مقررات ثبت دبیرخانه در پایگاه دانش نگارش یار.
                 </p>
               </div>
               <Link
-                href="/samples/letter-to-governor"
+                href="/knowledge/how-to-write-administrative-letter"
                 className="inline-flex items-center gap-1 text-[#E5C158] font-bold hover:underline pt-2 text-xs"
               >
-                <span>مشاهده نمونه نامه به استاندار</span>
+                <span>راهنمای اصول نگارش</span>
                 <ArrowLeft className="w-3.5 h-3.5" />
               </Link>
             </div>
 
+            <div className="p-4 rounded-xl bg-[#070B15] border border-slate-800 space-y-2 flex flex-col justify-between">
+              <div className="space-y-1">
+                <h4 className="font-bold text-white">۲. نمونه نامه و استشهادیه</h4>
+                <p className="text-slate-400 leading-relaxed">
+                  مشاهده و کپی رایگان الگوی آماده نامه به استاندار و فرماندار و مرجع نمونه نامه ها.
+                </p>
+              </div>
+              <div className="space-y-1 pt-2">
+                <Link
+                  href="/samples/letter-to-governor"
+                  className="inline-flex items-center gap-1 text-[#E5C158] font-bold hover:underline text-xs block"
+                >
+                  <span>نمونه نامه به استاندار</span>
+                  <ArrowLeft className="w-3.5 h-3.5 inline" />
+                </Link>
+                <Link
+                  href="/samples/administrative-letters"
+                  className="inline-flex items-center gap-1 text-slate-400 hover:text-white text-xs block"
+                >
+                  <span>بانک جامع نمونه نامه ها</span>
+                  <ArrowLeft className="w-3.5 h-3.5 inline" />
+                </Link>
+              </div>
+            </div>
+
             <div className="p-4 rounded-xl bg-[#070B15] border border-[#E5C158]/40 space-y-2 flex flex-col justify-between">
               <div className="space-y-1">
-                <h4 className="font-bold text-[#E5C158]">تنظیم تخصصی عریضه و استشهادیه</h4>
+                <h4 className="font-bold text-[#E5C158]">۳. تنظیم تخصصی با کارشناس</h4>
                 <p className="text-slate-400 leading-relaxed">
-                  تدوین ساختاریافته عریضه جمعی یا نامه اختصاصی توسط کارشناسان امور اداری با استناد به اختیارات استانداری.
+                  تدوین ساختاریافته عریضه جمعی یا نامه اختصاصی شما با استناد به اختیارات استانداری.
                 </p>
               </div>
               <Link

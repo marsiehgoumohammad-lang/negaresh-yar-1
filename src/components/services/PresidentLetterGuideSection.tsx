@@ -24,7 +24,7 @@ export function PresidentLetterGuideSection() {
             راهنمای کامل نگارش نامه به رئیس جمهور، مرکز ارتباطات مردمی و پیگیری مصوبات
           </h2>
           <p className="text-slate-400 text-sm sm:text-base max-w-3xl mx-auto leading-relaxed">
-            بررسی اختیارات قانونی قوه مجریه، سازوکار سامانه الکترونیکی سامد (۱۱۱)، تفکیک صلاحیت‌های اجرایی از قضایی و شرایط دریافت تسهیلات، درمان و اشتغال.
+            بررسی اختیارات قانونی قوه مجریه، سازوکار سامانه الکترونیکی سامد (۱۱۱)، تفکیک صلاحیت های اجرایی از قضایی و شرایط دریافت تسهیلات، درمان و اشتغال.
           </p>
         </div>
 
@@ -41,13 +41,13 @@ export function PresidentLetterGuideSection() {
 
           <div className="space-y-4 text-slate-300 text-sm sm:text-base leading-relaxed text-justify">
             <p>
-              بر اساس اصول ۱۱۳ و ۱۲۶ قانون اساسی جمهوری اسلامی ایران، رئیس جمهور پس از مقام رهبری عالی‌ترین مقام رسمی کشور و مسئول اجرای قانون اساسی و ریاست قوه مجریه (به جز مواردی که مستقیماً به رهبری مربوط می‌شود) است. شهروندان در سراسر کشور می‌توانند مطالبات عمومی، گزارش‌های کلان فساد و ناکارآمدی، درخواست‌های معیشتی خاص و مشکلات ناشی از تصمیمات وزارتخانه‌ها را از طریق <strong>«مرکز ارتباطات مردمی ریاست جمهوری»</strong> و درگاه الکترونیکی سامد پیگیری کنند.
+              بر اساس اصول ۱۱۳ و ۱۲۶ قانون اساسی جمهوری اسلامی ایران، رئیس جمهور پس از مقام رهبری عالی ترین مقام رسمی کشور و مسئول اجرای قانون اساسی و ریاست قوه مجریه (به جز مواردی که مستقیماً به رهبری مربوط می شود) است. شهروندان در سراسر کشور می توانند مطالبات عمومی، گزارش های کلان فساد و ناکارآمدی، درخواست های معیشتی خاص و مشکلات ناشی از تصمیمات وزارتخانه ها را از طریق <strong>«مرکز ارتباطات مردمی ریاست جمهوری»</strong> و درگاه الکترونیکی سامد پیگیری کنند.
             </p>
             <p>
-              نامه‌های ارسالی به ریاست جمهوری توسط کارشناسان مرکز ارتباطات مردمی بررسی شده و حسب موضوع با دستور و هامش رسمی به وزارتخانه‌ها، استانداری‌ها، سازمان بهزیستی، کمیته امداد یا بانک مرکزی ارجاع داده می‌شوند تا دستگاه مکلف به اقدام یا پاسخ کارشناسی گردد.
+              نامه های ارسالی به ریاست جمهوری توسط کارشناسان مرکز ارتباطات مردمی بررسی شده و حسب موضوع با دستور و هامش رسمی به وزارتخانه ها، استانداری ها، سازمان بهزیستی، کمیته امداد یا بانک مرکزی ارجاع داده می شوند تا دستگاه مکلف به اقدام یا پاسخ کارشناسی گردد.
             </p>
             <div className="p-4 rounded-xl bg-[#070B15] border border-amber-500/20 text-amber-200 text-xs sm:text-sm leading-relaxed">
-              <strong>اصل استقلال قوا و عدم دخالت در احکام دادگاه‌ها:</strong> بر اساس اصل ۵۷ قانون اساسی، قوای حاکم مستقل از یکدیگرند. نهاد ریاست جمهوری صلاحیت نقض، تغییر، تعلیق یا بازنگری در احکام قطعی دادگاه‌ها و شعب دادگستری را ندارد. بنابراین عریضه به رئیس جمهور نباید شامل تقاضای ابطال رأی دادگاه باشد، بلکه صرفاً به امور اجرایی و حمایتی دستگاه‌های دولتی اختصاص دارد.
+              <strong>اصل استقلال قوا و عدم دخالت در احکام دادگاه ها:</strong> بر اساس اصل ۵۷ قانون اساسی، قوای حاکم مستقل از یکدیگرند. نهاد ریاست جمهوری صلاحیت نقض، تغییر، تعلیق یا بازنگری در احکام قطعی دادگاه ها و شعب دادگستری را ندارد. بنابراین عریضه به رئیس جمهور نباید شامل تقاضای ابطال رأی دادگاه باشد، بلکه صرفاً به امور اجرایی و حمایتی دستگاه های دولتی اختصاص دارد.
             </div>
           </div>
         </div>
@@ -59,7 +59,7 @@ export function PresidentLetterGuideSection() {
               <PhoneCall className="w-5 h-5" />
             </div>
             <h3 className="text-xl sm:text-2xl font-black text-white">
-              ۲. روش‌های سه‌گانه ارسال نامه به نهاد ریاست جمهوری
+              ۲. روش های سه گانه ارسال نامه به نهاد ریاست جمهوری
             </h3>
           </div>
 
@@ -70,7 +70,7 @@ export function PresidentLetterGuideSection() {
                 <span>سامانه اینترنتی سامد (111.ir)</span>
               </h4>
               <p className="text-slate-400 leading-relaxed">
-                سریع‌ترین و رسمی‌ترین روش الکترونیکی ثبت درخواست همراه با بارگذاری تصویر مدارک و دریافت کد رهگیری ۱۲ رقمی جهت استعلام آنلاین.
+                سریع ترین و رسمی ترین روش الکترونیکی ثبت درخواست همراه با بارگذاری تصویر مدارک و دریافت کد رهگیری ۱۲ رقمی جهت استعلام آنلاین.
               </p>
             </div>
 
@@ -80,7 +80,7 @@ export function PresidentLetterGuideSection() {
                 <span>میزهای ارتباطات مردمی در سفرهای استانی</span>
               </h4>
               <p className="text-slate-400 leading-relaxed">
-                تحویل مستقیم نامه کتبی به نمایندگان تام‌الاختیار وزرا و رئیس جمهور مستقر در مراکز ادارات کل استان همزمان با سفرهای استانی دولت.
+                تحویل مستقیم نامه کتبی به نمایندگان تام الاختیار وزرا و رئیس جمهور مستقر در مراکز ادارات کل استان همزمان با سفرهای استانی دولت.
               </p>
             </div>
 
@@ -90,7 +90,7 @@ export function PresidentLetterGuideSection() {
                 <span>ارسال پستی به نهاد ریاست جمهوری</span>
               </h4>
               <p className="text-slate-400 leading-relaxed">
-                ارسال پستی به نشانی تهران، میدان پاستور، نهاد ریاست جمهوری، مرکز ارتباطات مردمی؛ این نامه‌ها نیز پس از وصول در سامد اسکن و کدگذاری می‌شوند.
+                ارسال پستی به نشانی تهران، میدان پاستور، نهاد ریاست جمهوری، مرکز ارتباطات مردمی؛ این نامه ها نیز پس از وصول در سامد اسکن و کدگذاری می شوند.
               </p>
             </div>
           </div>
@@ -111,28 +111,28 @@ export function PresidentLetterGuideSection() {
             <div className="p-4 rounded-2xl bg-[#070B15] border border-slate-800 space-y-2">
               <h4 className="font-bold text-[#E5C158]">مشخصات هویتی و کدملی سرپرست</h4>
               <p className="text-slate-400 leading-relaxed">
-                نام، نام خانوادگی، شماره کدملی، شماره همراه روشن و ثبت‌شده به نام شخص متقاضی و آدرس پستی دقیق جهت ارسال پیامک رهگیری.
+                نام، نام خانوادگی، شماره کدملی، شماره همراه روشن و ثبت شده به نام شخص متقاضی و آدرس پستی دقیق جهت ارسال پیامک رهگیری.
               </p>
             </div>
 
             <div className="p-4 rounded-2xl bg-[#070B15] border border-slate-800 space-y-2">
               <h4 className="font-bold text-[#E5C158]">مدارک اثبات ادعا و سوابق پیگیری قبلی</h4>
               <p className="text-slate-400 leading-relaxed">
-                ذکر شماره نامه‌ها و مکاتباتی که قبلاً با اداره محلی یا استان صورت گرفته و پاسخی دریافت نشده یا با بن‌بست مواجه شده است.
+                ذکر شماره نامه ها و مکاتباتی که قبلاً با اداره محلی یا استان صورت گرفته و پاسخی دریافت نشده یا با بن بست مواجه شده است.
               </p>
             </div>
 
             <div className="p-4 rounded-2xl bg-[#070B15] border border-slate-800 space-y-2">
-              <h4 className="font-bold text-[#E5C158]">مدارک پزشکی، استعلام کمیته امداد یا بهزیستی (درخواست‌های حمایتی)</h4>
+              <h4 className="font-bold text-[#E5C158]">مدارک پزشکی، استعلام کمیته امداد یا بهزیستی (درخواست های حمایتی)</h4>
               <p className="text-slate-400 leading-relaxed">
-                در تقاضای کمک‌هزینه درمان، پیوند اعضا یا بیماری‌های خاص، پیوست مدارک بیمارستانی و تاییدیه پزشک معتمد الزامی است.
+                در تقاضای کمک هزینه درمان، پیوند اعضا یا بیماری های خاص، پیوست مدارک بیمارستانی و تاییدیه پزشک معتمد الزامی است.
               </p>
             </div>
 
             <div className="p-4 rounded-2xl bg-[#070B15] border border-slate-800 space-y-2">
               <h4 className="font-bold text-[#E5C158]">تعیین دقیق خواسته و سازمان اجرایی مخاطب</h4>
               <p className="text-slate-400 leading-relaxed">
-                پرهیز از درخواست‌های ناممکن؛ مشخص نمایید که خواسته شما مربوط به کدام وزارتخانه، بانک یا سازمان است.
+                پرهیز از درخواست های ناممکن؛ مشخص نمایید که خواسته شما مربوط به کدام وزارتخانه، بانک یا سازمان است.
               </p>
             </div>
           </div>
@@ -145,60 +145,94 @@ export function PresidentLetterGuideSection() {
               <AlertCircle className="w-5 h-5" />
             </div>
             <h3 className="text-xl sm:text-2xl font-black text-white">
-              ۴. اشتباهات رایج در نامه‌نگاری با ریاست جمهوری
+              ۴. اشتباهات رایج در نامه نگاری با ریاست جمهوری
             </h3>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs sm:text-sm text-slate-300">
             <div className="p-4 rounded-2xl bg-[#070B15] border border-red-500/20 space-y-2">
-              <h4 className="font-bold text-red-400">۱. تقاضای دخالت در پرونده‌های دادگاه</h4>
+              <h4 className="font-bold text-red-400">۱. تقاضای دخالت در پرونده های دادگاه</h4>
               <p className="text-slate-400 leading-relaxed">
-                درخواست لغو حکم طلاق، توقف اجرای احکام یا تغییر احکام کیفری که بلافاصله به دلیل عدم صلاحیت قوه مجریه بایگانی می‌شود.
+                درخواست لغو حکم طلاق، توقف اجرای احکام یا تغییر احکام کیفری که بلافاصله به دلیل عدم صلاحیت قوه مجریه بایگانی می شود.
               </p>
             </div>
 
             <div className="p-4 rounded-2xl bg-[#070B15] border border-amber-500/20 space-y-2">
-              <h4 className="font-bold text-amber-400">۲. نامه‌های طولانی و درهم</h4>
+              <h4 className="font-bold text-amber-400">۲. نامه های طولانی و درهم</h4>
               <p className="text-slate-400 leading-relaxed">
-                نگارش چندین صفحه داستان‌سرایی خانوادگی؛ کارشناسان مرکز روزانه هزاران نامه را بررسی می‌کنند و متن باید موجز، مستند و شفاف باشد.
+                نگارش چندین صفحه داستان سرایی خانوادگی؛ کارشناسان مرکز روزانه هزاران نامه را بررسی می کنند و متن باید موجز، مستند و شفاف باشد.
               </p>
             </div>
 
             <div className="p-4 rounded-2xl bg-[#070B15] border border-blue-500/20 space-y-2">
               <h4 className="font-bold text-sky-400">۳. شماره تماس خاموش یا اشتباه</h4>
               <p className="text-slate-400 leading-relaxed">
-                کلیه اطلاع‌رسانی‌ها و کدهای رهگیری از طریق پیامک ارسال می‌شود؛ ثبت شماره تماس اشتباه باعث بی‌اطلاعی از نتیجه خواهد شد.
+                کلیه اطلاع رسانی ها و کدهای رهگیری از طریق پیامک ارسال می شود؛ ثبت شماره تماس اشتباه باعث بی اطلاعی از نتیجه خواهد شد.
               </p>
             </div>
           </div>
         </div>
 
-        {/* Section 5: Conversion Modules */}
+        {/* Section 5: Conversion Modules (3-Tier Funnel) */}
         <div className="p-6 rounded-3xl bg-gradient-to-r from-[#0C1222] via-[#0F172A] to-[#0C1222] border border-[#E5C158]/30 space-y-4">
           <div className="flex items-center gap-2 text-[#E5C158] font-bold text-sm">
             <Sparkles className="w-5 h-5" />
-            <span>خدمات و الگوهای عریضه‌نویسی به ریاست جمهوری در نگارش یار</span>
+            <span>مسیرهای سه گانه عریضه نویسی به نهاد ریاست جمهوری در نگارش یار</span>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs sm:text-sm text-slate-300">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs sm:text-sm text-slate-300">
             <div className="p-4 rounded-xl bg-[#070B15] border border-slate-800 space-y-2 flex flex-col justify-between">
               <div className="space-y-1">
-                <h4 className="font-bold text-white">مشاهده و کپی رایگان نمونه عریضه</h4>
+                <h4 className="font-bold text-white">۱. آموزش ثبت سامد ۱۱۱</h4>
                 <p className="text-slate-400 leading-relaxed">
-                  الگوی آماده و متن استاندارد درخواست وام ضروری، کمک‌هزینه درمان و گزارش‌های اداری به سامد.
+                  آموزش گام به گام ثبت درخواست در سامانه ۱۱۱ و پیگیری پیامکی کد رهگیری در پایگاه دانش.
                 </p>
               </div>
-              <Link
-                href="/samples/president-letter"
-                className="inline-flex items-center gap-1 text-[#E5C158] font-bold hover:underline pt-2 text-xs"
-              >
-                <span>مشاهده نمونه نامه به رئیس جمهور</span>
-                <ArrowLeft className="w-3.5 h-3.5" />
-              </Link>
+              <div className="space-y-1 pt-2">
+                <Link
+                  href="/knowledge/how-to-write-president-letter"
+                  className="inline-flex items-center gap-1 text-[#E5C158] font-bold hover:underline text-xs block"
+                >
+                  <span>راهنمای سامد ۱۱۱</span>
+                  <ArrowLeft className="w-3.5 h-3.5 inline" />
+                </Link>
+                <Link
+                  href="/knowledge/how-to-write-administrative-letter"
+                  className="inline-flex items-center gap-1 text-slate-400 hover:text-white text-xs block"
+                >
+                  <span>اصول نامه نگاری اداری</span>
+                  <ArrowLeft className="w-3.5 h-3.5 inline" />
+                </Link>
+              </div>
+            </div>
+
+            <div className="p-4 rounded-xl bg-[#070B15] border border-slate-800 space-y-2 flex flex-col justify-between">
+              <div className="space-y-1">
+                <h4 className="font-bold text-white">۲. نمونه عریضه و الگوها</h4>
+                <p className="text-slate-400 leading-relaxed">
+                  مشاهده و کپی رایگان الگوی آماده عریضه به رئیس جمهور و دسترسی به بانک ۳۱ سازمان.
+                </p>
+              </div>
+              <div className="space-y-1 pt-2">
+                <Link
+                  href="/samples/president-letter"
+                  className="inline-flex items-center gap-1 text-[#E5C158] font-bold hover:underline text-xs block"
+                >
+                  <span>نمونه نامه به رئیس جمهور</span>
+                  <ArrowLeft className="w-3.5 h-3.5 inline" />
+                </Link>
+                <Link
+                  href="/samples/administrative-letters"
+                  className="inline-flex items-center gap-1 text-slate-400 hover:text-white text-xs block"
+                >
+                  <span>بانک جامع نمونه نامه ها</span>
+                  <ArrowLeft className="w-3.5 h-3.5 inline" />
+                </Link>
+              </div>
             </div>
 
             <div className="p-4 rounded-xl bg-[#070B15] border border-[#E5C158]/40 space-y-2 flex flex-col justify-between">
               <div className="space-y-1">
-                <h4 className="font-bold text-[#E5C158]">تنظیم تخصصی عریضه توسط کارشناسان</h4>
+                <h4 className="font-bold text-[#E5C158]">۳. تنظیم تخصصی عریضه</h4>
                 <p className="text-slate-400 leading-relaxed">
                   تدوین دقیق عریضه شما متناسب با ضوابط سامد ۱۱۱ با ادبیات رسمی و تاثیرگذار در کمترین زمان.
                 </p>
