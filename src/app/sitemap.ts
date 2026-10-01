@@ -69,6 +69,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     'judiciary-auction',
     'leader-office-letter',
     'legal-brief',
+    'legal-notice',
     'letter-to-governor',
     'letter-to-tax-office',
     'mahrieh-claim',
