@@ -172,6 +172,12 @@ export const sampleRentDepositClaimData: SampleLandingData = {
 
   relatedServices: [
     {
+      title: 'محاسبه خسارت تاخیر تادیه ودیعه',
+      href: '/calculators/debt-delay',
+      badge: 'ابزار محاسباتی',
+      desc: 'محاسبه آنلاین خسارت تاخیر تادیه استرداد ودیعه بر اساس شاخص بانک مرکزی.',
+    },
+    {
       title: 'تنظیم دادخواست استرداد ودیعه مسکن',
       href: '/services/petition-writing',
       badge: 'دعاوی ملکی',

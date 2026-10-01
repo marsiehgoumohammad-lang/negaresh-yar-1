@@ -190,6 +190,12 @@ export const sampleDiyaInstallmentPetitionData: SampleLandingData = {
 
   relatedServices: [
     {
+      title: 'محاسبه آنلاین نرخ دیه و اعضای بدن',
+      href: '/calculators/diya',
+      badge: 'ابزار محاسباتی',
+      desc: 'محاسبه ارزش ریالی دیه سال و درصدهای جراحات برای درج در دادخواست تقسیط.',
+    },
+    {
       title: 'تنظیم دادخواست اعسار از محکوم‌به و دیه',
       href: '/services/insolvency-from-judgment',
       badge: 'خدمت تخصصی',

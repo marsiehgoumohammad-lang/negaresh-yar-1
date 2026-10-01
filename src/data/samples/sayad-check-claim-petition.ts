@@ -171,6 +171,12 @@ export const sampleSayadCheckClaimPetitionData: SampleLandingData = {
 
   relatedServices: [
     {
+      title: 'محاسبه خسارت تاخیر تادیه چک',
+      href: '/calculators/debt-delay',
+      desc: 'محاسبه آنلاین خسارت دیرکرد چک از تاریخ سررسید بر اساس شاخص بانک مرکزی.',
+      badge: 'ابزار محاسباتی',
+    },
+    {
       title: 'تنظیم دادخواست مطالبه وجه چک و وصول طلب',
       href: '/services/petition-writing',
       desc: 'نگارش دادخواست تخصصی اسناد تجاری و تأمین خواسته فوری.',

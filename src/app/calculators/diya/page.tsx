@@ -3,7 +3,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { Container } from '@/components/ui/container';
 import { DiyaCalculatorClient } from '@/components/calculators/DiyaCalculatorClient';
-import { ChevronLeft, Calculator } from 'lucide-react';
+import { ChevronLeft, Calculator, ArrowLeft } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: 'محاسبه آنلاین دیه سال ۱۴۰۳ و اعضای بدن (جدول جراحات) - نگارش یار',
@@ -94,6 +94,113 @@ export default function DiyaCalculatorPage() {
         </div>
 
         <DiyaCalculatorClient />
+
+        {/* Related Cluster Resources */}
+        <section className="mt-16 pt-12 border-t border-slate-800 space-y-6">
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+            <div>
+              <h2 className="text-xl sm:text-2xl font-black text-white">
+                راهنماها و خدمات مرتبط با اعسار و تقسیط دیه
+              </h2>
+              <p className="text-xs sm:text-sm text-slate-400 mt-1">
+                دسترسی مستقیم به الگوهای تقسیط دیه تصادفات، قوانین اعسار ماده ۳ و خدمات نگارش دادخواست
+              </p>
+            </div>
+            <Link
+              href="/samples"
+              className="inline-flex items-center gap-1.5 text-xs font-bold text-[#E5C158] hover:text-amber-300 transition-colors whitespace-nowrap self-start sm:self-auto"
+            >
+              <span>مشاهده همه نمونه اسناد</span>
+              <ArrowLeft className="w-3.5 h-3.5" />
+            </Link>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+            <Link
+              href="/samples/diya-installment-petition"
+              className="p-5 rounded-2xl bg-slate-900/60 border border-slate-800 hover:border-[#E5C158]/50 transition-all flex flex-col justify-between group"
+            >
+              <div className="space-y-2">
+                <span className="text-[11px] font-semibold px-2 py-0.5 rounded bg-rose-500/10 text-rose-400 inline-block">
+                  تقسیط دیه
+                </span>
+                <h3 className="text-sm font-bold text-white group-hover:text-[#E5C158] transition-colors">
+                  دادخواست اعسار و تقسیط دیه
+                </h3>
+                <p className="text-xs text-slate-400 leading-relaxed">
+                  الگوی استاندارد تقسیط دیه تصادفات و حوادث کار با استناد به ماده ۳ و ۴ قانون محکومیت ها.
+                </p>
+              </div>
+              <div className="pt-4 flex items-center text-xs font-bold text-slate-300 group-hover:text-[#E5C158] transition-colors">
+                <span>مشاهده نمونه سند</span>
+                <ArrowLeft className="w-3 h-3 mr-1 group-hover:-translate-x-1 transition-transform" />
+              </div>
+            </Link>
+
+            <Link
+              href="/knowledge/how-to-install-debt-and-mahrieh"
+              className="p-5 rounded-2xl bg-slate-900/60 border border-slate-800 hover:border-[#E5C158]/50 transition-all flex flex-col justify-between group"
+            >
+              <div className="space-y-2">
+                <span className="text-[11px] font-semibold px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-400 inline-block">
+                  راهنمای حقوقی
+                </span>
+                <h3 className="text-sm font-bold text-white group-hover:text-[#E5C158] transition-colors">
+                  تقسیط بدهی و آزادی زندانی
+                </h3>
+                <p className="text-xs text-slate-400 leading-relaxed">
+                  راهکارهای آزادی زندانیان مالی و دیه، اعسار از داخل زندان و تسهیلات ستاد دیه.
+                </p>
+              </div>
+              <div className="pt-4 flex items-center text-xs font-bold text-slate-300 group-hover:text-[#E5C158] transition-colors">
+                <span>مطالعه راهنما</span>
+                <ArrowLeft className="w-3 h-3 mr-1 group-hover:-translate-x-1 transition-transform" />
+              </div>
+            </Link>
+
+            <Link
+              href="/knowledge/what-is-insolvency"
+              className="p-5 rounded-2xl bg-slate-900/60 border border-slate-800 hover:border-[#E5C158]/50 transition-all flex flex-col justify-between group"
+            >
+              <div className="space-y-2">
+                <span className="text-[11px] font-semibold px-2 py-0.5 rounded bg-blue-500/10 text-blue-400 inline-block">
+                  پایگاه دانش
+                </span>
+                <h3 className="text-sm font-bold text-white group-hover:text-[#E5C158] transition-colors">
+                  اعسار چیست و چگونه ثبت می شود؟
+                </h3>
+                <p className="text-xs text-slate-400 leading-relaxed">
+                  قوانین مهلت ۳۰ روزه اجرای احکام، توقف حکم جلب، فرم دارایی ماده ۸ و استشهادیه شهود.
+                </p>
+              </div>
+              <div className="pt-4 flex items-center text-xs font-bold text-slate-300 group-hover:text-[#E5C158] transition-colors">
+                <span>مطالعه مقاله</span>
+                <ArrowLeft className="w-3 h-3 mr-1 group-hover:-translate-x-1 transition-transform" />
+              </div>
+            </Link>
+
+            <Link
+              href="/services/insolvency-from-judgment"
+              className="p-5 rounded-2xl bg-slate-900/60 border border-slate-800 hover:border-[#E5C158]/50 transition-all flex flex-col justify-between group"
+            >
+              <div className="space-y-2">
+                <span className="text-[11px] font-semibold px-2 py-0.5 rounded bg-[#E5C158]/10 text-[#E5C158] inline-block">
+                  خدمت نگارش تخصصی
+                </span>
+                <h3 className="text-sm font-bold text-white group-hover:text-[#E5C158] transition-colors">
+                  سفارش تنظیم دادخواست اعسار
+                </h3>
+                <p className="text-xs text-slate-400 leading-relaxed">
+                  تنظیم فوری دادخواست اعسار، فرم اموال ماده ۸ و استشهادیه معتبر جهت توقف دستور جلب.
+                </p>
+              </div>
+              <div className="pt-4 flex items-center text-xs font-bold text-[#E5C158] group-hover:text-amber-300 transition-colors">
+                <span>ثبت سفارش آنلاین</span>
+                <ArrowLeft className="w-3 h-3 mr-1 group-hover:-translate-x-1 transition-transform" />
+              </div>
+            </Link>
+          </div>
+        </section>
       </Container>
     </main>
   );

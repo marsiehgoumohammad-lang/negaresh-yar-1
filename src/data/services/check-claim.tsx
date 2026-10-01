@@ -177,6 +177,12 @@ export const checkClaimData: ServiceLandingData = {
 
   relatedServices: [
     {
+      title: 'محاسبه خسارت تاخیر تادیه چک',
+      href: '/calculators/debt-delay',
+      desc: 'محاسبه آنلاین خسارت دیرکرد چک از تاریخ سررسید بر اساس شاخص بانک مرکزی.',
+      badge: 'ابزار محاسباتی',
+    },
+    {
       title: 'شکواییه چک بلامحل',
       href: '/services/petition-writing',
       desc: 'ثبت شکایت کیفری در دادسرا برای چک‌های دارای شرایط کیفری.',

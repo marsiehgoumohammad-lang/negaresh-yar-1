@@ -36,14 +36,25 @@ export function LegalNoticeGuideSection() {
             <span>چهار گروه از پرکاربردترین اظهارنامه های قضایی</span>
           </h4>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-            <div className="p-5 rounded-2xl bg-[#0C1222] border border-slate-800 space-y-3">
-              <div className="w-10 h-10 rounded-xl bg-amber-500/10 flex items-center justify-center text-[#E5C158]">
-                <Coins className="w-5 h-5" />
+            <div className="p-5 rounded-2xl bg-[#0C1222] border border-slate-800 space-y-3 flex flex-col justify-between">
+              <div className="space-y-3">
+                <div className="w-10 h-10 rounded-xl bg-amber-500/10 flex items-center justify-center text-[#E5C158]">
+                  <Coins className="w-5 h-5" />
+                </div>
+                <h5 className="font-bold text-white text-sm">مطالبه وجه و طلب مالی</h5>
+                <p className="text-xs text-slate-400 leading-relaxed">
+                  اخطار رسمی تسویه بدهی های فاقد موعد صریح جهت ثبت تاریخ مطالبه برای محاسبه خسارت تاخیر تادیه طبق ماده ۵۲۲ قانون آیین دادرسی مدنی.
+                </p>
               </div>
-              <h5 className="font-bold text-white text-sm">مطالبه وجه و طلب مالی</h5>
-              <p className="text-xs text-slate-400 leading-relaxed">
-                اخطار رسمی تسویه بدهی های فاقد موعد صریح جهت ثبت تاریخ مطالبه برای محاسبه خسارت تاخیر تادیه طبق ماده ۵۲۲ قانون آیین دادرسی مدنی.
-              </p>
+              <div className="pt-2">
+                <Link
+                  href="/calculators/debt-delay"
+                  className="text-xs font-semibold text-[#E5C158] hover:text-amber-300 inline-flex items-center gap-1 transition-colors"
+                >
+                  <span>محاسبه آنلاین دیرکرد بدهی</span>
+                  <ArrowLeft className="w-3 h-3" />
+                </Link>
+              </div>
             </div>
 
             <div className="p-5 rounded-2xl bg-[#0C1222] border border-slate-800 space-y-3">

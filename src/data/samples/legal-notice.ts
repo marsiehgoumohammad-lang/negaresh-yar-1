@@ -230,6 +230,12 @@ export const sampleLegalNoticeData: SampleLandingData = {
 
   relatedServices: [
     {
+      title: 'محاسبه خسارت تاخیر تادیه ماده ۵۲۲',
+      href: '/calculators/debt-delay',
+      desc: 'محاسبه آنلاین میزان دیرکرد قانونی مطالبات مالی بر مبنای شاخص سالانه بانک مرکزی.',
+      badge: 'ابزار محاسباتی',
+    },
+    {
       title: 'تنظیم تخصصی اظهارنامه رسمی',
       href: '/services/legal-notice',
       desc: 'سفارش نگارش متن اختصاصی اظهارنامه متناسب با مدارک و شروط قرارداد شما.',

@@ -220,6 +220,18 @@ export const insolvencyFromJudgmentData: ServiceLandingData = {
   showLawyerReferral: true,
   relatedServices: [
     {
+      title: 'محاسبه آنلاین نرخ دیه و اعضای بدن',
+      href: '/calculators/diya',
+      desc: 'محاسبه مبلغ ریالی دیه سال و درصدهای جراحات برای درج در دادخواست تقسیط.',
+      badge: 'ابزار محاسباتی',
+    },
+    {
+      title: 'محاسبه آنلاین مهریه به نرخ روز',
+      href: '/calculators/mehrieh',
+      desc: 'محاسبه ارزش روز ریالی مهریه با شاخص بانک مرکزی جهت تعیین اقساط.',
+      badge: 'ابزار محاسباتی',
+    },
+    {
       title: 'راهنمای کلی دادخواست اعسار',
       href: '/services/insolvency-petition',
       desc: 'خدمات جامع تنظیم انواع دادخواست‌های اعسار، تقسیط و استشهادیه.',

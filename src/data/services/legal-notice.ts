@@ -214,6 +214,12 @@ export const legalNoticeData: ServiceLandingData = {
 
   relatedServices: [
     {
+      title: 'محاسبه خسارت تاخیر تادیه ماده ۵۲۲',
+      href: '/calculators/debt-delay',
+      desc: 'محاسبه آنلاین میزان دیرکرد بر اساس شاخص تورم رسمی بانک مرکزی.',
+      badge: 'ابزار محاسباتی',
+    },
+    {
       title: 'تنظیم دادخواست حقوقی',
       href: '/services/petition-writing',
       desc: 'ثبت دادخواست در مراجع دادگستری در صورت عدم اقدام متعهد پس از ابلاغ اظهارنامه.',

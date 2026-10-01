@@ -642,7 +642,7 @@ export function DiyaCalculatorClient() {
             <ArrowLeft className="w-3.5 h-3.5" />
           </Link>
           <Link
-            href="/services/diya-claim"
+            href="/services/insolvency-from-judgment"
             className="w-full sm:w-auto inline-flex items-center justify-center gap-1.5 px-4 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-white font-bold text-xs transition-colors whitespace-nowrap"
           >
             <span>سفارش تنظیم لایحه</span>
