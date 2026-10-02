@@ -5,7 +5,7 @@ export const sampleCheckExecutionObjectionData: SampleLandingData = {
   slug: 'check-execution-objection',
   categoryName: 'دعاوی اسناد تجاری و وصول مطالبات',
   badge: 'الگوی ابطال اجراییه ماده ۲۳',
-  metaTitle: 'نمونه دادخواست توقف عملیات اجرایی و ابطال اجراییه چک صیادی [ماده ۲۳] | نگارش یار',
+  metaTitle: 'نمونه دادخواست توقف عملیات اجرایی و ابطال اجراییه چک [رایگان، دانلود فایل Word و PDF] | نگارش یار',
   metaDescription: 'دانلود و کپی نمونه دادخواست توقف عملیات اجرایی و ابطال اجراییه چک صیادی ماده ۲۳ با تقاضای دستور موقت توقف اجرای دادگاه و رفع مسدودی حساب‌های بانکی.',
   h1Title: 'نمونه دادخواست توقف عملیات اجرایی و ابطال اجراییه چک صیادی (ماده ۲۳)',
   heroSubtitle: 'دانلود و مشاهده الگوی دادخواست حقوقی ابطال اجراییه مستقیم چک و تقاضای دستور موقت توقف عملیات اجرایی و رفع مسدودی حساب‌ها به دلیل مشروط بودن چک، تضمینی بودن یا پرداخت قبلی وجه مستند به قانون صدور چک.',
@@ -243,7 +243,7 @@ export const sampleCheckExecutionObjectionData: SampleLandingData = {
 };
 
 export const sampleCheckExecutionObjectionMetadata: Metadata = {
-  title: 'نمونه دادخواست توقف عملیات اجرایی و ابطال اجراییه چک صیادی [ماده ۲۳] | نگارش یار',
+  title: 'نمونه دادخواست توقف عملیات اجرایی و ابطال اجراییه چک [رایگان، دانلود فایل Word و PDF] | نگارش یار',
   description: 'دانلود و کپی نمونه دادخواست توقف عملیات اجرایی و ابطال اجراییه چک صیادی ماده ۲۳ با تقاضای دستور موقت توقف اجرای دادگاه و رفع مسدودی حساب‌های بانکی.',
   keywords: [
     'نمونه دادخواست توقف عملیات اجرایی و ابطال اجراییه چک',
@@ -264,7 +264,7 @@ export const sampleCheckExecutionObjectionMetadata: Metadata = {
     canonical: 'https://www.negaresh-yar.ir/samples/check-execution-objection',
   },
   openGraph: {
-    title: 'نمونه دادخواست توقف عملیات اجرایی و ابطال اجراییه چک صیادی [ماده ۲۳] | نگارش یار',
+    title: 'نمونه دادخواست توقف عملیات اجرایی و ابطال اجراییه چک [رایگان، دانلود فایل Word و PDF] | نگارش یار',
     description: 'الگوی حقوقی دادخواست توقف عملیات اجرایی و ابطال اجراییه چک صیادی و رفع مسدودی حساب‌ها در نگارش یار.',
     url: 'https://www.negaresh-yar.ir/samples/check-execution-objection',
     siteName: 'نگارش یار',
