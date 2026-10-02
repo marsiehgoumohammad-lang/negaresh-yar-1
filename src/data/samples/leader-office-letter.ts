@@ -346,7 +346,7 @@ export const sampleLeaderOfficeLetterData: SampleLandingData = {
 };
 
 export const sampleLeaderOfficeLetterMetadata: Metadata = {
-  title: 'نمونه متن نامه به دفتر مقام معظم رهبری و leader.ir | نگارش یار',
+  title: 'نمونه متن نامه به دفتر مقام معظم رهبری رایگان [کپی، دانلود فایل Word و PDF] | نگارش یار',
   description: 'دانلود و مشاهده الگوی متن عریضه به دفتر مقام معظم رهبری، درخواست عفو، کمک درمانی و مالی، ثبت در leader.ir و نکات جلب موافقت دفتر ارتباطات مردمی.',
   keywords: [
     'نمونه نامه به دفتر رهبری',
