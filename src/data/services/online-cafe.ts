@@ -398,6 +398,7 @@ export const onlineCafeCategories: ServiceCategoryItem[] = [
 ];
 
 export const popularServicesList = [
+  { name: 'راهنمای جامع کافی نت و ثبت نام', link: '/knowledge/online-cafe-registration-guide', desc: 'راهنمای کامل انواع ثبت نام سامانه ها' },
   { name: 'ثبت نام ثنا', link: '/services/online-cafe#judicial', desc: 'احراز هویت ثنا و دریافت کد' },
   { name: 'مشاهده ابلاغیه', link: '/services/online-cafe#judicial', desc: 'درایفت نسخه PDF ابلاغیه قضایی' },
   { name: 'سامانه سخا', link: '/services/online-cafe#judicial', desc: 'ثبت نام و خدمات انتظامی سخا' },
@@ -421,6 +422,7 @@ export const popularServicesList = [
 
 export const onlineCafeData: ServiceLandingData = {
   slug: 'online-cafe',
+  schemaServiceType: 'Service',
   categoryName: 'کافی نت آنلاین و خدمات غیرحضوری سراسر کشور',
   badge: '۱۰۰٪ آنلاین و بدون نیاز به مراجعه حضوری',
   h1Title: 'کافی نت آنلاین | انجام کلیه خدمات اینترنتی و ثبت نام سامانه‌های دولتی',
@@ -696,22 +698,15 @@ export const onlineCafeData: ServiceLandingData = {
     },
   ],
 
-  relatedSamples: [
-    {
-      title: 'نمونه نامه اداری به رئیس اداره',
-      href: '/samples/leader-office-letter',
-      desc: 'نمونه فرمت نگارش نامه رسمی درخواست و عریضه اداری.',
-      badge: 'نمونه سند',
-    },
-    {
-      title: 'نمونه درخواست اعسار و تقسیط',
-      href: '/samples/insolvency',
-      desc: 'نمونه دادخواست و عریضه اعسار از پرداخت هزینه دادرسی.',
-      badge: 'نمونه حقوقی',
-    },
-  ],
+  relatedSamples: [],
 
   relatedArticles: [
+    {
+      title: 'راهنمای جامع خدمات کافی نت آنلاین و ثبت نام سامانه های دولتی',
+      href: '/knowledge/online-cafe-registration-guide',
+      desc: 'راهنمای کامل ثبت نام های دولتی، خودرو، لاستیک، اسقاط و خدمات اینترنتی.',
+      badge: 'پیلار اصلی',
+    },
     {
       title: 'خودکاربری افراد دارای دانش حقوقی در عدل ایران',
       href: '/knowledge/legal-self-service-guide',

@@ -68,6 +68,7 @@ export interface ServiceLandingData {
   relatedServices: { title: string; href: string; desc: string; badge: string }[];
   relatedSamples?: { title: string; href: string; desc: string; badge: string }[];
   showLawyerReferral?: boolean;
+  schemaServiceType?: string;
   relatedArticles?: { title: string; href: string; desc: string; badge: string }[];
   customGuideContent?: React.ReactNode;
 
@@ -135,7 +136,7 @@ export function LandingPageTemplate({ data }: { data: ServiceLandingData }) {
         },
       },
       {
-        '@type': 'LegalService',
+        '@type': data.schemaServiceType || 'LegalService',
         '@id': `${canonicalUrl}#service`,
         name: data.h1Title,
         description: data.heroSubtitle,

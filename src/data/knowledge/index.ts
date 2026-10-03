@@ -42,6 +42,14 @@ import {
   citizenshipAndCivilRegistrationGuideData,
   citizenshipAndCivilRegistrationGuideMetadata,
 } from './citizenship-and-civil-registration-guide';
+import {
+  onlineCafeRegistrationGuideData,
+  onlineCafeRegistrationGuideMetadata,
+} from './online-cafe-registration-guide';
+import {
+  contentWritingAndProductionGuideData,
+  contentWritingAndProductionGuideMetadata,
+} from './content-writing-and-production-guide';
 
 export * from './types';
 
@@ -101,7 +109,7 @@ export const KNOWLEDGE_CATEGORIES: KnowledgeCategoryInfo[] = [
     name: 'سامانه‌های دولتی و کافی نت آنلاین',
     description: 'آموزش ابلاغیه ثنا، عدل ایران، ساجد و سامانه‌های استعلام الکترونیکی',
     iconName: 'Laptop',
-    articleCount: 1,
+    articleCount: 5,
   },
   {
     id: 'tax-commercial',
@@ -150,6 +158,8 @@ export const ALL_KNOWLEDGE_ARTICLES: KnowledgeArticleData[] = [
   falseTestimonyAndWitnessChallengeData,
   propertyRentEvictionGuideData,
   citizenshipAndCivilRegistrationGuideData,
+  onlineCafeRegistrationGuideData,
+  contentWritingAndProductionGuideData,
 ];
 
 export const KNOWLEDGE_METADATA_MAP = {
@@ -190,6 +200,8 @@ export const KNOWLEDGE_METADATA_MAP = {
   'false-testimony-and-witness-challenge': falseTestimonyAndWitnessChallengeMetadata,
   'property-rent-eviction-guide': propertyRentEvictionGuideMetadata,
   'citizenship-and-civil-registration-guide': citizenshipAndCivilRegistrationGuideMetadata,
+  'online-cafe-registration-guide': onlineCafeRegistrationGuideMetadata,
+  'content-writing-and-production-guide': contentWritingAndProductionGuideMetadata,
 };
 
 export function getKnowledgeArticleBySlug(slug: string): KnowledgeArticleData | undefined {

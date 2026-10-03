@@ -197,6 +197,12 @@ export const carRegistrationGuideData: KnowledgeArticleData = {
 
   relatedArticles: [
     {
+      title: 'راهنمای جامع کافی نت آنلاین و ثبت نام سامانه های دولتی',
+      href: '/knowledge/online-cafe-registration-guide',
+      desc: 'راهنمای انواع ثبت نام های اینترنتی، خودرو، لاستیک، اسقاط و خدمات غیرحضوری.',
+      category: 'پیلار کافی نت',
+    },
+    {
       title: 'ثبت نام اسقاط خودرو فرسوده',
       href: '/knowledge/scrapped-car-registration-guide',
       desc: 'راهنمای ثبت نام طرح جایگزینی خودروهای فرسوده.',

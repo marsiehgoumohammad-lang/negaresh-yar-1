@@ -67,8 +67,11 @@ export function KnowledgeHubClient({ initialArticles }: KnowledgeHubClientProps)
       art.excerpt.includes(searchTerm) ||
       art.category.includes(searchTerm);
 
+    const normalizeCategory = (cat: string) => cat.replace(/\u200c/g, ' ').replace(/\s+/g, ' ').trim();
     const matchesCategory =
-      selectedCategory === 'all' || art.category === selectedCategory;
+      selectedCategory === 'all' ||
+      art.category === selectedCategory ||
+      normalizeCategory(art.category) === normalizeCategory(selectedCategory);
 
     return matchesSearch && matchesCategory;
   });

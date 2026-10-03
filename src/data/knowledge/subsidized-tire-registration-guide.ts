@@ -184,6 +184,12 @@ export const subsidizedTireRegistrationGuideData: KnowledgeArticleData = {
 
   relatedArticles: [
     {
+      title: 'راهنمای جامع کافی نت آنلاین و ثبت نام سامانه های دولتی',
+      href: '/knowledge/online-cafe-registration-guide',
+      desc: 'راهنمای انواع ثبت نام های اینترنتی، خودرو، لاستیک، اسقاط و خدمات غیرحضوری.',
+      category: 'پیلار کافی نت',
+    },
+    {
       title: 'ثبت نام اینترنتی ایران خودرو و سایپا',
       href: '/knowledge/car-registration-guide',
       desc: 'راهنمای ثبت نام در سامانه یکپارچه خودروهای داخلی و وارداتی.',

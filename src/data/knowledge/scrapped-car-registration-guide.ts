@@ -186,6 +186,12 @@ export const scrappedCarRegistrationGuideData: KnowledgeArticleData = {
 
   relatedArticles: [
     {
+      title: 'راهنمای جامع کافی نت آنلاین و ثبت نام سامانه های دولتی',
+      href: '/knowledge/online-cafe-registration-guide',
+      desc: 'راهنمای انواع ثبت نام های اینترنتی، خودرو، لاستیک، اسقاط و خدمات غیرحضوری.',
+      category: 'پیلار کافی نت',
+    },
+    {
       title: 'ثبت نام لاستیک دولتی خودرو',
       href: '/knowledge/subsidized-tire-registration-guide',
       desc: 'راهنمای دریافت سهمیه لاستیک دولتی آنلاین.',
