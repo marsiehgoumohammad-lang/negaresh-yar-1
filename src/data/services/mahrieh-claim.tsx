@@ -139,6 +139,12 @@ export const mahriehClaimData: ServiceLandingData = {
   
   relatedServices: [
     {
+      title: 'راهنمای انتخاب وکیل خانواده و طلاق',
+      href: '/services/family-lawyer',
+      desc: 'راهنمای انتخاب وکیل متخصص در دعاوی مهریه، طلاق، حضانت و نفقه.',
+      badge: 'وکیل خانواده',
+    },
+    {
       title: 'دادخواست اعسار و تقسیط محکوم به',
       href: '/services/insolvency-from-judgment',
       desc: 'خدمت تخصصی دادخواست اعسار، تقسیط سکه و تعدیل اقساط مهریه.',

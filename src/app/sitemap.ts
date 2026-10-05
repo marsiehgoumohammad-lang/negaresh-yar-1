@@ -60,6 +60,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     'electronic-tag-request',
     'expert-opinion-objection',
     'false-witness-inquiry',
+    'family-lawyer',
     'government-auctions',
     'impounded-assets-auction',
     'insolvency-court-fee',
@@ -80,6 +81,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     'petition-writing',
     'president-letter',
     'property-lease-eviction',
+    'real-estate-lawyer',
   ];
 
   const serviceRoutes = serviceSlugs.map((slug) => ({

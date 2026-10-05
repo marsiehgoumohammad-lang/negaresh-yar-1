@@ -196,6 +196,12 @@ export const propertyLeaseEvictionData: ServiceLandingData = {
 
   relatedServices: [
     {
+      title: 'راهنمای انتخاب وکیل ملکی و دعاوی املاک',
+      href: '/services/real-estate-lawyer',
+      desc: 'راهنمای انتخاب وکیل متخصص در دعاوی الزام به سند، سرقفلی و خلع ید.',
+      badge: 'وکیل ملکی',
+    },
+    {
       title: 'تنظیم دادخواست های حقوقی در سامانه ثنا',
       href: '/services/petition-writing',
       desc: 'سفارش نگارش انواع دادخواست های مالی، ملکی و قراردادی.',

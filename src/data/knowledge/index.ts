@@ -50,6 +50,10 @@ import {
   contentWritingAndProductionGuideData,
   contentWritingAndProductionGuideMetadata,
 } from './content-writing-and-production-guide';
+import {
+  lawyerInGishaTehranCourtsGuideData,
+  lawyerInGishaTehranCourtsGuideMetadata,
+} from './lawyer-in-gisha-tehran-courts-guide';
 
 export * from './types';
 
@@ -160,6 +164,7 @@ export const ALL_KNOWLEDGE_ARTICLES: KnowledgeArticleData[] = [
   citizenshipAndCivilRegistrationGuideData,
   onlineCafeRegistrationGuideData,
   contentWritingAndProductionGuideData,
+  lawyerInGishaTehranCourtsGuideData,
 ];
 
 export const KNOWLEDGE_METADATA_MAP = {
@@ -202,6 +207,7 @@ export const KNOWLEDGE_METADATA_MAP = {
   'citizenship-and-civil-registration-guide': citizenshipAndCivilRegistrationGuideMetadata,
   'online-cafe-registration-guide': onlineCafeRegistrationGuideMetadata,
   'content-writing-and-production-guide': contentWritingAndProductionGuideMetadata,
+  'lawyer-in-gisha-tehran-courts-guide': lawyerInGishaTehranCourtsGuideMetadata,
 };
 
 export function getKnowledgeArticleBySlug(slug: string): KnowledgeArticleData | undefined {

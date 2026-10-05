@@ -24,6 +24,7 @@ import { LawyerCityData } from '@/data/lawyers/types';
 import { ALL_LAWYER_CITIES } from '@/data/lawyers/lawyer-referral-cities';
 import { LawyerMessengerCTA } from './LawyerMessengerCTA';
 import { LawyerStickyMobileCTA } from './LawyerStickyMobileCTA';
+import { TehranLawyerGuideSection } from './TehranLawyerGuideSection';
 
 interface LawyerCityTemplateProps {
   cityData: LawyerCityData;
@@ -82,7 +83,7 @@ export function LawyerCityTemplate({ cityData }: LawyerCityTemplateProps) {
           {
             '@type': 'ListItem',
             position: 3,
-            name: `وکیل منصف در ${cityData.city}`,
+            name: cityData.slug === 'tehran' ? 'بهترین وکیل در تهران' : `وکیل منصف در ${cityData.city}`,
             item: pageUrl,
           },
         ],
@@ -99,6 +100,41 @@ export function LawyerCityTemplate({ cityData }: LawyerCityTemplateProps) {
           },
         })),
       },
+      ...(cityData.slug === 'tehran'
+        ? [
+            {
+              '@type': 'LegalService',
+              '@id': `${pageUrl}#legalservice`,
+              name: 'معرفی بهترین وکیل در تهران و وکیل منصف - نگارش یار',
+              description: 'خدمات آنلاین نگارش اوراق قضایی و راهنمای تسهیل ارتباط با وکلای دادگستری در تهران',
+              url: pageUrl,
+              telephone: '+989915147789',
+              priceRange: '$$',
+              address: {
+                '@type': 'PostalAddress',
+                addressLocality: 'مشهد',
+                addressRegion: 'خراسان رضوی',
+                addressCountry: 'IR',
+              },
+              geo: {
+                '@type': 'GeoCoordinates',
+                latitude: '36.2972',
+                longitude: '59.6067',
+              },
+              areaServed: {
+                '@type': 'AdministrativeArea',
+                name: 'تهران',
+              },
+              serviceType: [
+                'بهترین وکیل در تهران',
+                'بهترین وکیل ملکی در تهران',
+                'بهترین وکیل خانواده و طلاق در تهران',
+                'بهترین وکیل قرارداد و شرکت ها در تهران',
+                'معرفی وکیل منصف در تهران',
+              ],
+            },
+          ]
+        : []),
     ],
   };
 
@@ -133,7 +169,7 @@ export function LawyerCityTemplate({ cityData }: LawyerCityTemplateProps) {
               </li>
               <li aria-hidden="true" className="text-slate-600">/</li>
               <li className="text-[#E5C158] font-medium" aria-current="page">
-                {cityData.city} ({cityData.province})
+                {cityData.slug === 'tehran' ? 'بهترین وکیل در تهران' : `${cityData.city} (${cityData.province})`}
               </li>
             </ol>
           </nav>
@@ -265,6 +301,9 @@ export function LawyerCityTemplate({ cityData }: LawyerCityTemplateProps) {
                   ))}
                 </div>
               </section>
+
+              {/* Tehran Specific Specialized Guide Section */}
+              {cityData.slug === 'tehran' && <TehranLawyerGuideSection />}
 
               {/* Section 3: 3-Step Process */}
               <section id="referral-process" className="space-y-6">

@@ -211,6 +211,12 @@ export const contractDraftingData: ServiceLandingData = {
 
   relatedServices: [
     {
+      title: 'معرفی بهترین وکیل در تهران و وکیل منصف',
+      href: '/lawyer-referral/tehran',
+      desc: 'راهنمای ارتباط با وکیل متخصص دعاوی قراردادی، اسناد تجاری و شرکتی.',
+      badge: 'پیلار وکیل',
+    },
+    {
       title: 'تنظیم دادخواست و لوایح دعاوی ملکی و تخلیه',
       href: '/services/property-lease-eviction',
       desc: 'نگارش تخصصی دادخواست های دستور تخلیه، خلع ید و مطالبه ودیعه.',
