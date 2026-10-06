@@ -3,8 +3,8 @@ import { SampleLandingData } from './types';
 export const sampleBreachOfTrustComplaintData: SampleLandingData = {
   slug: 'breach-of-trust-complaint',
   category: 'اوراق و دادخواست‌های قضایی',
-  title: 'نمونه شکواییه خیانت در امانت | نگارش یار',
-  metaTitle: 'نمونه شکواییه خیانت در امانت | نگارش یار',
+  title: 'نمونه شکواییه خیانت در امانت [رایگان، دانلود فایل Word و PDF] | نگارش یار',
+  metaTitle: 'نمونه شکواییه خیانت در امانت [رایگان، دانلود فایل Word و PDF] | نگارش یار',
   metaDescription: 'دانلود نمونه شکواییه کیفری خیانت در امانت نسبت به چک، سفته، طلا، خودرو یا سایر اموال امانی.',
   keywords: ['نمونه شکواییه خیانت در امانت', 'نمونه دادخواست', 'نمونه شکواییه', 'نگارش یار', 'دانلود'],
   h1Title: 'نمونه شکواییه خیانت در امانت',

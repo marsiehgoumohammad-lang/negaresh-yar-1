@@ -205,7 +205,7 @@ export const sampleCaseProceedingsExpediteRequestData: SampleLandingData = {
 };
 
 export const sampleCaseProceedingsExpediteRequestMetadata: Metadata = {
-  title: 'نمونه درخواست تسریع در روند رسیدگی به پرونده و تعیین وقت | نگارش یار',
+  title: 'نمونه درخواست تسریع در رسیدگی به پرونده [رایگان، دانلود فایل Word و PDF] | نگارش یار',
   description: 'متن استاندارد لایحه تقاضای تسریع در رسیدگی، تعیین وقت نظارت فوری یا ارسال پرونده به شعبه مستند به اصل ۳۴ قانون اساسی و آیین دادرسی در نگارش یار.',
   keywords: [
     'نمونه لایحه تسریع در رسیدگی',
@@ -220,7 +220,7 @@ export const sampleCaseProceedingsExpediteRequestMetadata: Metadata = {
     canonical: 'https://www.negaresh-yar.ir/samples/case-proceedings-expedite-request',
   },
   openGraph: {
-    title: 'نمونه درخواست تسریع در روند رسیدگی به پرونده و تعیین وقت | نگارش یار',
+    title: 'نمونه درخواست تسریع در رسیدگی به پرونده [رایگان، دانلود فایل Word و PDF] | نگارش یار',
     description: 'متن استاندارد لایحه تقاضای تسریع در رسیدگی و تعیین وقت فوری مستند به قوانین دادرسی.',
     url: 'https://www.negaresh-yar.ir/samples/case-proceedings-expedite-request',
     siteName: 'نگارش یار',
