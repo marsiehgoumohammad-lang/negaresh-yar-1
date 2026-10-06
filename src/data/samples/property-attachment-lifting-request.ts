@@ -238,7 +238,7 @@ export const samplePropertyAttachmentLiftingRequestData: SampleDocument = {
       badge: 'راهنمای اعسار',
     },
     {
-      title: 'راهنمای جامع مزایده‌های دادگستری و توقیف اموال',
+      title: 'نمونه لایحه رفع توقیف اموال از مستثنیات دین [رایگان، دانلود فایل Word و PDF] | نگارش یار',
       href: '/knowledge/government-auction-guide',
       desc: 'بررسی مراحل توقیف اموال، ارزیابی کارشناس و شرایط مستثنیات دین در مزایده.',
       badge: 'راهنمای مزایده',

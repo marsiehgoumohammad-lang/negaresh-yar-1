@@ -346,7 +346,7 @@ export const samplePetitionData: SampleLandingData = {
 };
 
 export const samplePetitionMetadata: Metadata = {
-  title: 'نمونه دادخواست حقوقی ثنا، مطالبه وجه، چک و ملک | نگارش یار',
+  title: 'نمونه دادخواست حقوقی [رایگان، دانلود فایل Word و PDF] | نگارش یار',
   description: 'دانلود و مشاهده کامل‌ترین نمونه دادخواست‌های حقوقی ثنا، نحوه تکمیل ستون خواسته، خسارات تاخیر تادیه، تامین خواسته و اصول آیین دادرسی مدنی.',
   keywords: [
     'نمونه دادخواست حقوقی',
@@ -361,7 +361,7 @@ export const samplePetitionMetadata: Metadata = {
     canonical: 'https://www.negaresh-yar.ir/samples/petition',
   },
   openGraph: {
-    title: 'نمونه دادخواست حقوقی ثنا، مطالبه وجه، چک و ملک | نگارش یار',
+    title: 'نمونه دادخواست حقوقی [رایگان، دانلود فایل Word و PDF] | نگارش یار',
   description: 'الگوی استاندارد و کامل دادخواست حقوقی جهت ثبت در دفاتر خدمات قضایی.',
     url: 'https://www.negaresh-yar.ir/samples/petition',
     siteName: 'نگارش یار',

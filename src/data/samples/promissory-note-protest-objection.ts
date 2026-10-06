@@ -219,7 +219,7 @@ export const samplePromissoryNoteProtestObjectionData: SampleLandingData = {
 };
 
 export const samplePromissoryNoteProtestObjectionMetadata: Metadata = {
-  title: 'نمونه دادخواست مطالبه وجه سفته واخواست شده با خسارت تأخیر | نگارش یار',
+  title: 'نمونه واخواست سفته [رایگان، دانلود فایل Word و PDF] | نگارش یار',
   description: 'دانلود و مشاهده الگوی رسمی دادخواست مطالبه وجه سفته واخواست‌شده، قرار تأمین خواسته بدون خسارت احتمالی، خسارت تأخیر تأدیه و مسئولیت تضامنی ضامنان.',
   keywords: [
     'دادخواست مطالبه وجه سفته واخواست شده',
@@ -235,7 +235,7 @@ export const samplePromissoryNoteProtestObjectionMetadata: Metadata = {
     canonical: 'https://www.negaresh-yar.ir/samples/promissory-note-protest-objection',
   },
   openGraph: {
-    title: 'نمونه دادخواست مطالبه وجه سفته واخواست شده با خسارت تأخیر | نگارش یار',
+    title: 'نمونه واخواست سفته [رایگان، دانلود فایل Word و PDF] | نگارش یار',
   description: 'الگوی کاربردی و مستند دادخواست مطالبه سفته واخواست‌شده و توقیف فوری اموال بدهکار.',
     url: 'https://www.negaresh-yar.ir/samples/promissory-note-protest-objection',
     siteName: 'نگارش یار',

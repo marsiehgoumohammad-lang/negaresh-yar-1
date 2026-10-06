@@ -244,7 +244,7 @@ export const samplePropertyPossessionClaimData: SampleLandingData = {
 };
 
 export const samplePropertyPossessionClaimMetadata: Metadata = {
-  title: 'نمونه دادخواست رفع تصرف عدوانی و دستور موقت | نگارش یار',
+  title: 'نمونه دادخواست رفع تصرف عدوانی [رایگان، دانلود فایل Word و PDF] | نگارش یار',
   description: 'متن آماده دادخواست حقوقی رفع تصرف عدوانی ملک غیرمنقول با دستور موقت فوری و اعاده وضع به حال سابق مستند به ماده ۱۵۸ قانون آیین دادرسی مدنی در ثنا.',
   keywords: [
     'نمونه دادخواست رفع تصرف عدوانی',
@@ -258,7 +258,7 @@ export const samplePropertyPossessionClaimMetadata: Metadata = {
     canonical: 'https://www.negaresh-yar.ir/samples/property-possession-claim',
   },
   openGraph: {
-    title: 'نمونه دادخواست رفع تصرف عدوانی و دستور موقت | نگارش یار',
+    title: 'نمونه دادخواست رفع تصرف عدوانی [رایگان، دانلود فایل Word و PDF] | نگارش یار',
   description: 'متن آماده دادخواست حقوقی رفع تصرف عدوانی ملک غیرمنقول با دستور موقت فوری در ثنا.',
     url: 'https://www.negaresh-yar.ir/samples/property-possession-claim',
     siteName: 'نگارش یار',

@@ -212,7 +212,7 @@ export const samplePowerCompanyLetterData: SampleLandingData = {
 
   relatedArticles: [
     {
-      title: 'اصول نامه‌نگاری اداری رسمی با مراجع دولتی',
+      title: 'نمونه نامه به شرکت برق [رایگان، دانلود فایل Word و PDF] | نگارش یار',
       href: '/knowledge/how-to-write-administrative-letter',
       badge: 'آموزش نگارش',
       desc: 'نحوه بیان خواسته، ادای احترام رسمی و استناد صحیح به آیین‌نامه‌های سازمانی.',

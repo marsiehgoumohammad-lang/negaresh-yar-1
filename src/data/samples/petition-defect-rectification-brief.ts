@@ -133,14 +133,14 @@ export const samplePetitionDefectRectificationBriefData: SampleLandingData = {
 };
 
 export const samplePetitionDefectRectificationBriefMetadata: Metadata = {
-  title: "نمونه لایحه رفع نقص دادخواست بدوی (ماده ۵۴) | نگارش یار",
+  title: "نمونه لایحه رفع نقص دادخواست بدوی [رایگان، دانلود فایل Word و PDF] | نگارش یار",
   description: "دانلود رایگان نمونه متن رسمی لایحه رفع نقص دادخواست بدوی در مهلت ۱۰ روزه اخطاریه مدیر دفتر مستند به ماده ۵۴ قانون آیین دادرسی مدنی با رعایت کامل فرمت قضایی.",
   keywords: ["لایحه رفع نقص دادخواست", "ماده ۵۴ قانون آیین دادرسی مدنی", "اخطاریه رفع نقص مدیر دفتر", "هزینه دادرسی تمبر دادخواست", "نگارش یار"],
   alternates: {
     canonical: 'https://www.negaresh-yar.ir/samples/petition-defect-rectification-brief',
   },
   openGraph: {
-    title: "نمونه لایحه رفع نقص دادخواست بدوی (ماده ۵۴) | نگارش یار",
+    title: "نمونه لایحه رفع نقص دادخواست بدوی [رایگان، دانلود فایل Word و PDF] | نگارش یار",
     description: "دانلود رایگان نمونه متن رسمی لایحه رفع نقص دادخواست بدوی در مهلت ۱۰ روزه اخطاریه مدیر دفتر مستند به ماده ۵۴ قانون آیین دادرسی مدنی با رعایت کامل فرمت قضایی.",
     url: 'https://www.negaresh-yar.ir/samples/petition-defect-rectification-brief',
     siteName: 'نگارش یار',
