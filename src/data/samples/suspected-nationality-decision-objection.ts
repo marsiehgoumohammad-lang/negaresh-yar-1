@@ -174,7 +174,7 @@ export const sampleSuspectedNationalityDecisionObjectionData: SampleLandingData 
 };
 
 export const sampleSuspectedNationalityDecisionObjectionMetadata: Metadata = {
-  title: 'نمونه اعتراض به تصمیم ثبت احوال درباره مشکوک‌التابعیت بودن | نگارش یار',
+  title: 'نمونه اعتراض به تصمیم ثبت احوال درباره مشکوک التابعیت بودن [رایگان، دانلود فایل Word و PDF] | نگارش یار',
   description: 'متن لایحه و دادخواست رسمی اعتراض به اقدام اداره ثبت احوال در انسداد شناسنامه و مشکوک‌التابعیت دانستن دارنده شناسنامه مستند به ماده ۱۲۸۷ قانون مدنی.',
   keywords: [
     'اعتراض به مشکوک التابعیت بودن شناسنامه',
@@ -187,7 +187,7 @@ export const sampleSuspectedNationalityDecisionObjectionMetadata: Metadata = {
     canonical: 'https://www.negaresh-yar.ir/samples/suspected-nationality-decision-objection',
   },
   openGraph: {
-    title: 'نمونه اعتراض به تصمیم ثبت احوال درباره مشکوک‌التابعیت بودن | نگارش یار',
+    title: 'نمونه اعتراض به تصمیم ثبت احوال درباره مشکوک التابعیت بودن [رایگان، دانلود فایل Word و PDF] | نگارش یار',
     description: 'متن حقوقی اعتراض به مسدودسازی شناسنامه و اقدامات سلیقه‌ای ثبت احوال در پرونده‌های مشکوک‌التابعیت.',
     url: 'https://www.negaresh-yar.ir/samples/suspected-nationality-decision-objection',
     siteName: 'نگارش یار',

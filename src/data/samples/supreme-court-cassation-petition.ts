@@ -129,14 +129,14 @@ export const sampleSupremeCourtCassationPetitionData: SampleLandingData = {
 };
 
 export const sampleSupremeCourtCassationPetitionMetadata: Metadata = {
-  title: "نمونه دادخواست فرجام‌خواهی در دیوان عالی کشور (ماده ۳۷۹) | نگارش یار",
+  title: "نمونه دادخواست فرجام خواهی در دیوان عالی کشور [رایگان، دانلود فایل Word و PDF] | نگارش یار",
   description: "دانلود نمونه متن رسمی دادخواست فرجام‌خواهی حقوقی در دیوان عالی کشور مستند به مواد ۳۶۸ و ۳۷۱ قانون آیین دادرسی مدنی جهت نقض رأی تجدیدنظر.",
   keywords: ["دادخواست فرجام‌خواهی دیوان عالی کشور", "ماده ۳۷۱ قانون آیین دادرسی مدنی", "نقض رأی در دیوان عالی", "مهلت فرجام‌خواهی مدنی", "نگارش یار"],
   alternates: {
     canonical: 'https://www.negaresh-yar.ir/samples/supreme-court-cassation-petition',
   },
   openGraph: {
-    title: "نمونه دادخواست فرجام‌خواهی در دیوان عالی کشور (ماده ۳۷۹) | نگارش یار",
+    title: "نمونه دادخواست فرجام خواهی در دیوان عالی کشور [رایگان، دانلود فایل Word و PDF] | نگارش یار",
     description: "دانلود نمونه متن رسمی دادخواست فرجام‌خواهی حقوقی در دیوان عالی کشور مستند به مواد ۳۶۸ و ۳۷۱ قانون آیین دادرسی مدنی جهت نقض رأی تجدیدنظر.",
     url: 'https://www.negaresh-yar.ir/samples/supreme-court-cassation-petition',
     siteName: 'نگارش یار',
