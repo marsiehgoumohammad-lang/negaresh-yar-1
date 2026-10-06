@@ -129,14 +129,14 @@ export const sampleRetrialPetitionData: SampleLandingData = {
 };
 
 export const sampleRetrialPetitionMetadata: Metadata = {
-  title: "نمونه دادخواست اعاده دادرسی اصلی (ماده ۴۲۶) | نگارش یار",
+  title: "نمونه دادخواست اعاده دادرسی [رایگان، دانلود فایل Word و PDF] | نگارش یار",
   description: "دانلود نمونه متن رسمی دادخواست اعاده دادرسی اصلی نسبت به حکم قطعی دادگاه مستند به جهات ماده ۴۲۶ قانون آیین دادرسی مدنی در مهلت ۲۰ روزه.",
   keywords: ["دادخواست اعاده دادرسی اصلی", "ماده ۴۲۶ قانون آیین دادرسی مدنی", "سند مکتوم در اعاده دادرسی", "نقض حکم قطعی دادگاه", "نگارش یار"],
   alternates: {
     canonical: 'https://www.negaresh-yar.ir/samples/retrial-petition',
   },
   openGraph: {
-    title: "نمونه دادخواست اعاده دادرسی اصلی (ماده ۴۲۶) | نگارش یار",
+    title: "نمونه دادخواست اعاده دادرسی [رایگان، دانلود فایل Word و PDF] | نگارش یار",
     description: "دانلود نمونه متن رسمی دادخواست اعاده دادرسی اصلی نسبت به حکم قطعی دادگاه مستند به جهات ماده ۴۲۶ قانون آیین دادرسی مدنی در مهلت ۲۰ روزه.",
     url: 'https://www.negaresh-yar.ir/samples/retrial-petition',
     siteName: 'نگارش یار',

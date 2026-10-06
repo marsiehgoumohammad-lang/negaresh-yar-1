@@ -217,7 +217,7 @@ export const sampleRepresentativeIntroductionRequestData: SampleLandingData = {
 };
 
 export const sampleRepresentativeIntroductionRequestMetadata: Metadata = {
-  title: 'نمونه لایحه و معرفی‌نامه نماینده جهت پیگیری و حضور در پرونده | نگارش یار',
+  title: 'نمونه لایحه معرفی نماینده برای پیگیری پرونده [رایگان، دانلود فایل Word و PDF] | نگارش یار',
   description: 'متن استاندارد معرفی‌نامه رسمی نماینده حقوقی یا اداری جهت مطالعه پرونده، اخذ رونوشت و حضور در مراجع قضایی و اداره کار در نگارش یار.',
   keywords: [
     'نمونه معرفی نامه نماینده',
@@ -231,7 +231,7 @@ export const sampleRepresentativeIntroductionRequestMetadata: Metadata = {
     canonical: 'https://www.negaresh-yar.ir/samples/representative-introduction-request',
   },
   openGraph: {
-    title: 'نمونه لایحه و معرفی‌نامه نماینده جهت پیگیری و حضور در پرونده | نگارش یار',
+    title: 'نمونه لایحه معرفی نماینده برای پیگیری پرونده [رایگان، دانلود فایل Word و PDF] | نگارش یار',
     description: 'متن استاندارد معرفی‌نامه نماینده رسمی جهت حضور و پیگیری پرونده در مراجع قضایی و اداری.',
     url: 'https://www.negaresh-yar.ir/samples/representative-introduction-request',
     siteName: 'نگارش یار',

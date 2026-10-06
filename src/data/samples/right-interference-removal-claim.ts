@@ -3,8 +3,8 @@ import { SampleLandingData } from './types';
 export const sampleRightInterferenceRemovalClaimData: SampleLandingData = {
   slug: 'right-interference-removal-claim',
   category: 'اوراق و دادخواست‌های قضایی',
-  title: 'نمونه دادخواست رفع ممانعت از حق | نگارش یار',
-  metaTitle: 'نمونه دادخواست رفع ممانعت از حق | نگارش یار',
+  title: 'نمونه دادخواست رفع ممانعت از حق [رایگان، دانلود فایل Word و PDF] | نگارش یار',
+  metaTitle: 'نمونه دادخواست رفع ممانعت از حق [رایگان، دانلود فایل Word و PDF] | نگارش یار',
   metaDescription: 'دانلود نمونه دادخواست حقوقی رفع ممانعت از حق عبور، حق مجرا یا استفاده از مشاعات آپارتمان.',
   keywords: ['نمونه دادخواست رفع ممانعت از حق', 'نمونه دادخواست', 'نگارش یار', 'دانلود'],
   h1Title: 'نمونه دادخواست رفع ممانعت از حق',
