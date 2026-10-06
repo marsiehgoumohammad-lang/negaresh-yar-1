@@ -214,7 +214,7 @@ export const sampleNaturalResourcesLetterData: SampleLandingData = {
 
   relatedArticles: [
     {
-      title: 'راهنمای جامع اثبات مستثنیات اراضی ملی و اعتراض به ماده ۵۶',
+      title: 'نمونه نامه اعتراض به ملی شدن اراضی و اثبات مستثنیات [رایگان، دانلود فایل Word و PDF] | نگارش یار',
       href: '/knowledge/how-to-write-administrative-letter',
       badge: 'منابع طبیعی',
       desc: 'تحلیل تفسیر عکس‌های هوایی سال ۱۳۴۱ و تفاوت مراتع غیرمشجر با اراضی زراعی احیاشده.',

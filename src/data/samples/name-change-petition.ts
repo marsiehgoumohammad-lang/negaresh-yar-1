@@ -3,8 +3,8 @@ import { SampleLandingData } from './types';
 export const sampleNameChangePetitionData: SampleLandingData = {
   slug: 'name-change-petition',
   category: 'اوراق و دادخواست‌های قضایی',
-  title: 'نمونه دادخواست تغییر نام | نگارش یار',
-  metaTitle: 'نمونه دادخواست تغییر نام | نگارش یار',
+  title: 'نمونه دادخواست تغییر نام [رایگان، دانلود فایل Word و PDF] | نگارش یار',
+  metaTitle: 'نمونه دادخواست تغییر نام [رایگان، دانلود فایل Word و PDF] | نگارش یار',
   metaDescription: 'دانلود نمونه دادخواست تغییر نام کوچک و نام خانوادگی در دادگاه و اداره ثبت احوال.',
   keywords: ['نمونه دادخواست تغییر نام (مراجعه به دادگاه)', 'نمونه دادخواست', 'نگارش یار', 'دانلود'],
   h1Title: 'نمونه دادخواست تغییر نام (مراجعه به دادگاه)',

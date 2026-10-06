@@ -206,7 +206,7 @@ export const sampleMehriehExecutionRegistryPetitionData: SampleDocument = {
 
   relatedSamples: [
     {
-      title: 'مطالبه مهریه از دادگاه',
+      title: 'نمونه درخواست صدور اجراییه مهریه [رایگان، دانلود فایل Word و PDF] | نگارش یار',
       href: '/samples/mahrieh-court-petition',
       desc: 'دعوای مطالبه مهریه در دادگاه خانواده',
       badge: 'خانواده',

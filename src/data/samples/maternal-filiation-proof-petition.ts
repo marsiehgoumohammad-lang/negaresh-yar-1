@@ -172,7 +172,7 @@ export const sampleMaternalFiliationProofPetitionData: SampleLandingData = {
 };
 
 export const sampleMaternalFiliationProofPetitionMetadata: Metadata = {
-  title: 'نمونه دادخواست اثبات نسب مادری در دادگاه خانواده | نگارش یار',
+  title: 'نمونه دادخواست اثبات نسب مادری [رایگان، دانلود فایل Word و PDF] | نگارش یار',
   description: 'متن کامل دادخواست حقوقی اثبات رابطه نسب مادری در سامانه ثنا با تقاضای آزمایش ژنتیک DNA در پزشکی قانونی، استناد به بند ۱ ماده ۴ قانون حمایت خانواده و قواعد نسب مدنی.',
   keywords: [
     'دادخواست اثبات نسب مادری',
@@ -185,7 +185,7 @@ export const sampleMaternalFiliationProofPetitionMetadata: Metadata = {
     canonical: 'https://www.negaresh-yar.ir/samples/maternal-filiation-proof-petition',
   },
   openGraph: {
-    title: 'نمونه دادخواست اثبات نسب مادری در دادگاه خانواده | نگارش یار',
+    title: 'نمونه دادخواست اثبات نسب مادری [رایگان، دانلود فایل Word و PDF] | نگارش یار',
     description: 'متن فرم استاندارد قضایی دادخواست اثبات نسب مادری با تقاضای کارشناسی ژنتیکی پزشکی قانونی در دادگاه خانواده.',
     url: 'https://www.negaresh-yar.ir/samples/maternal-filiation-proof-petition',
     siteName: 'نگارش یار',
