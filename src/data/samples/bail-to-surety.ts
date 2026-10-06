@@ -255,7 +255,7 @@ export const sampleBailToSuretyData: SampleLandingData = {
 };
 
 export const sampleBailToSuretyMetadata: Metadata = {
-  title: 'نمونه درخواست تبدیل وثیقه به کفالت و فیش حقوقی در دادسرا | نگارش یار',
+  title: 'نمونه درخواست تبدیل وثیقه به کفالت [رایگان، دانلود فایل Word و PDF] | نگارش یار',
   description: 'دانلود و مشاهده الگوی رسمی لایحه درخواست تبدیل قرار وثیقه ملکی به قرار کفالت (فیش حقوقی کارمندی / جواز کسب معتبر) و آزادسازی سند ملک مستند به ماده ۲۴۳ آیین دادرسی کیفری.',
   keywords: [
     'نمونه درخواست تبدیل وثیقه به کفالت',
@@ -272,7 +272,7 @@ export const sampleBailToSuretyMetadata: Metadata = {
     canonical: 'https://www.negaresh-yar.ir/samples/bail-to-surety',
   },
   openGraph: {
-    title: 'نمونه درخواست تبدیل وثیقه به کفالت و فیش حقوقی در دادسرا | نگارش یار',
+    title: 'نمونه درخواست تبدیل وثیقه به کفالت [رایگان، دانلود فایل Word و PDF] | نگارش یار',
   description: 'الگوی حقوقی و استاندارد تبدیل قرار وثیقه ملک به قرار کفالت و فیش حقوقی در دادسرا.',
     url: 'https://www.negaresh-yar.ir/samples/bail-to-surety',
     siteName: 'نگارش یار',

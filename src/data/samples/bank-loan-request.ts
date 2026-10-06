@@ -269,7 +269,7 @@ export const sampleBankLoanRequestData: SampleLandingData = {
       badge: 'تقسیط اقساط',
     },
     {
-      title: 'نامه بخشودگی جرایم بانکی',
+      title: 'نمونه نامه درخواست وام بانکی [رایگان، دانلود فایل Word و PDF] | نگارش یار',
       href: '/samples/bank-penalty-waiver',
       desc: 'درخواست بخشش ۶ تا ۱۲ درصد وجه التزام و سود تأخیر.',
       badge: 'بخشودگی سود',

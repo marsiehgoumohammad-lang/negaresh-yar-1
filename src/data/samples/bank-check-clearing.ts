@@ -247,7 +247,7 @@ export const sampleBankCheckClearingData: SampleLandingData = {
 
   relatedArticles: [
     {
-      title: 'اصول و قواعد نگارش نامه‌های اداری استاندارد',
+      title: 'نمونه نامه بانکی [رایگان، دانلود فایل Word و PDF] | نگارش یار',
       href: '/knowledge/how-to-write-administrative-letter',
       desc: 'اصول پنج‌گانه نامه‌نگاری رسمی و تنظیم درخواست‌های بانکی و اداری.',
       badge: 'راهنمای مرجع',

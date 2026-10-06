@@ -235,7 +235,7 @@ export const sampleBailAcceptanceRequestData: SampleLandingData = {
 };
 
 export const sampleBailAcceptanceRequestMetadata: Metadata = {
-  title: 'نمونه درخواست تسریع در ارزیابی، قبولی وثیقه و جلوگیری از بازداشت | نگارش یار',
+  title: 'نمونه درخواست تودیع وثیقه ملکی [رایگان، دانلود فایل Word و PDF] | نگارش یار',
   description: 'متن آماده درخواست تسریع در معرفی کارشناس ارزیاب، تودیع سند ملکی و صدور قرار قبولی وثیقه جهت جلوگیری از اعزام متهم به زندان مستند به ماده ۲۲۶ ق.آ.د.ک.',
   keywords: [
     'نمونه درخواست قبولی وثیقه',
@@ -249,7 +249,7 @@ export const sampleBailAcceptanceRequestMetadata: Metadata = {
     canonical: 'https://www.negaresh-yar.ir/samples/bail-acceptance-request',
   },
   openGraph: {
-    title: 'نمونه درخواست تسریع در ارزیابی، قبولی وثیقه و جلوگیری از بازداشت | نگارش یار',
+    title: 'نمونه درخواست تودیع وثیقه ملکی [رایگان، دانلود فایل Word و PDF] | نگارش یار',
   description: 'متن آماده درخواست تسریع در معرفی کارشناس ارزیاب و صدور قرار قبولی وثیقه.',
     url: 'https://www.negaresh-yar.ir/samples/bail-acceptance-request',
     siteName: 'نگارش یار',

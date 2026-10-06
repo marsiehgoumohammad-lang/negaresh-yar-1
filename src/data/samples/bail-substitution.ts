@@ -247,7 +247,7 @@ export const sampleBailSubstitutionData: SampleLandingData = {
 };
 
 export const sampleBailSubstitutionMetadata: Metadata = {
-  title: 'نمونه درخواست جایگزینی و تعویض وثیقه ملکی در دادسرا | نگارش یار',
+  title: 'نمونه درخواست جایگزینی وثیقه [رایگان، دانلود فایل Word و PDF] | نگارش یار',
   description: 'متن آماده و فرمت رسمی درخواست تعویض و جایگزینی وثیقه ملکی، فک سند سابق و استناد به مواد ۲۲۸ و ۲۲۹ قانون آیین دادرسی کیفری.',
   keywords: [
     'نمونه درخواست جایگزینی وثیقه',
@@ -261,7 +261,7 @@ export const sampleBailSubstitutionMetadata: Metadata = {
     canonical: 'https://www.negaresh-yar.ir/samples/bail-substitution',
   },
   openGraph: {
-    title: 'نمونه درخواست جایگزینی و تعویض وثیقه ملکی در دادسرا | نگارش یار',
+    title: 'نمونه درخواست جایگزینی وثیقه [رایگان، دانلود فایل Word و PDF] | نگارش یار',
   description: 'متن آماده و فرمت رسمی درخواست تعویض و جایگزینی وثیقه ملکی، فک سند سابق در دادسرا.',
     url: 'https://www.negaresh-yar.ir/samples/bail-substitution',
     siteName: 'نگارش یار',

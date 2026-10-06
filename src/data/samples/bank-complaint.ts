@@ -234,7 +234,7 @@ export const sampleBankComplaintData: SampleLandingData = {
       badge: 'هاب اصلی',
     },
     {
-      title: 'نامه درخواست وام و تسهیلات',
+      title: 'نمونه نامه شکایت از بانک [رایگان، دانلود فایل Word و PDF] | نگارش یار',
       href: '/samples/bank-loan-request',
       desc: 'فرمت استاندارد تقاضای وام بر مبنای ضوابط اعتباری.',
       badge: 'درخواست وام',

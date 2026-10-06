@@ -257,7 +257,7 @@ export const sampleBankDebtInstallmentData: SampleLandingData = {
       badge: 'بخشودگی سود',
     },
     {
-      title: 'نامه فک رهن سند از بانک',
+      title: 'نمونه درخواست تقسیط بدهی بانکی [رایگان، دانلود فایل Word و PDF] | نگارش یار',
       href: '/samples/bank-mortgage-release',
       desc: 'آزادسازی وثیقه ترهینی پس از تقسیط یا تسویه کامل.',
       badge: 'فک رهن',
