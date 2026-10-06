@@ -133,14 +133,14 @@ export const sampleDocumentForgeryClaimBriefData: SampleLandingData = {
 };
 
 export const sampleDocumentForgeryClaimBriefMetadata: Metadata = {
-  title: "نمونه لایحه ادعای جعل سند (ماده ۲۱۹) | نگارش یار",
+  title: "نمونه لایحه ادعای جعل سند [رایگان، دانلود فایل Word و PDF] | نگارش یار",
   description: "دانلود نمونه متن رسمی لایحه ادعای جعل سند با ذکر جهات و دلایل جعلیت مستند به مواد ۲۱۹ و ۲۲۰ قانون آیین دادرسی مدنی و تقاضای کارشناسی خط.",
   keywords: ["ادعای جعل سند در دادگاه", "ماده ۲۱۹ قانون آیین دادرسی مدنی", "جهات جعل مادی سند", "کارشناسی اصالت خط و امضا", "نگارش یار"],
   alternates: {
     canonical: 'https://www.negaresh-yar.ir/samples/document-forgery-claim-brief',
   },
   openGraph: {
-    title: "نمونه لایحه ادعای جعل سند (ماده ۲۱۹) | نگارش یار",
+    title: "نمونه لایحه ادعای جعل سند [رایگان، دانلود فایل Word و PDF] | نگارش یار",
     description: "دانلود نمونه متن رسمی لایحه ادعای جعل سند با ذکر جهات و دلایل جعلیت مستند به مواد ۲۱۹ و ۲۲۰ قانون آیین دادرسی مدنی و تقاضای کارشناسی خط.",
     url: 'https://www.negaresh-yar.ir/samples/document-forgery-claim-brief',
     siteName: 'نگارش یار',

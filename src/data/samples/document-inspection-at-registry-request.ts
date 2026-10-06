@@ -125,14 +125,14 @@ export const sampleDocumentInspectionAtRegistryRequestData: SampleLandingData = 
 };
 
 export const sampleDocumentInspectionAtRegistryRequestMetadata: Metadata = {
-  title: "نمونه درخواست استعلام اسناد دولتی (ماده ۲۱۲) | نگارش یار",
+  title: "نمونه درخواست استعلام اسناد دولتی [رایگان، دانلود فایل Word و PDF] | نگارش یار",
   description: "دانلود نمونه متن رسمی درخواست مطالبه و استعلام پرونده و اسناد از ادارات دولتی، شهرداری و بانک‌ها مستند به ماده ۲۱۲ قانون آیین دادرسی مدنی.",
   keywords: ["مطالبه سند از اداره دولتی", "ماده ۲۱۲ قانون آیین دادرسی مدنی", "استعلام ثبتی در دادگاه", "گواهی ماده ۲۱۲ ق.آ.د.م", "نگارش یار"],
   alternates: {
     canonical: 'https://www.negaresh-yar.ir/samples/document-inspection-at-registry-request',
   },
   openGraph: {
-    title: "نمونه درخواست استعلام اسناد دولتی (ماده ۲۱۲) | نگارش یار",
+    title: "نمونه درخواست استعلام اسناد دولتی [رایگان، دانلود فایل Word و PDF] | نگارش یار",
     description: "دانلود نمونه متن رسمی درخواست مطالبه و استعلام پرونده و اسناد از ادارات دولتی، شهرداری و بانک‌ها مستند به ماده ۲۱۲ قانون آیین دادرسی مدنی.",
     url: 'https://www.negaresh-yar.ir/samples/document-inspection-at-registry-request',
     siteName: 'نگارش یار',
