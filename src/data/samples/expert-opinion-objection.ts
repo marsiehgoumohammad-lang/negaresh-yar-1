@@ -241,7 +241,7 @@ export const sampleExpertOpinionObjectionData: SampleLandingData = {
 };
 
 export const sampleExpertOpinionObjectionMetadata: Metadata = {
-  title: 'نمونه لایحه اعتراض به نظریه کارشناس دادگستری و ارجاع به هیئت ۳ نفره | نگارش یار',
+  title: 'نمونه لایحه اعتراض به نظریه کارشناس دادگستری و ارجاع به هیئت سه نفره [رایگان، دانلود فایل Word و PDF] | نگارش یار',
   description: 'متن آماده لایحه اعتراض به نظریه کارشناس رسمی دادگستری در مهلت قانونی ۷ روزه، مستند به ماده ۲۶۰ قانون آیین دادرسی مدنی جهت ارجاع به هیئت کارشناسی.',
   keywords: [
     'نمونه لایحه اعتراض به نظریه کارشناسی',
@@ -255,7 +255,7 @@ export const sampleExpertOpinionObjectionMetadata: Metadata = {
     canonical: 'https://www.negaresh-yar.ir/samples/expert-opinion-objection',
   },
   openGraph: {
-    title: 'نمونه لایحه اعتراض به نظریه کارشناس دادگستری و ارجاع به هیئت ۳ نفره | نگارش یار',
+    title: 'نمونه لایحه اعتراض به نظریه کارشناس دادگستری و ارجاع به هیئت سه نفره [رایگان، دانلود فایل Word و PDF] | نگارش یار',
   description: 'متن آماده لایحه اعتراض به نظریه کارشناس رسمی دادگستری در مهلت قانونی ۷ روزه و تقاضای ارجاع به هیئت کارشناسی.',
     url: 'https://www.negaresh-yar.ir/samples/expert-opinion-objection',
     siteName: 'نگارش یار',

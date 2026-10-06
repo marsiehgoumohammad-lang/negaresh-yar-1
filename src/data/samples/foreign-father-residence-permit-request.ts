@@ -179,7 +179,7 @@ export const sampleForeignFatherResidencePermitRequestData: SampleLandingData = 
 };
 
 export const sampleForeignFatherResidencePermitRequestMetadata: Metadata = {
-  title: 'نمونه درخواست صدور پروانه اقامت برای پدر غیرایرانی | نگارش یار',
+  title: 'نمونه درخواست صدور پروانه اقامت برای پدر غیرایرانی [رایگان، دانلود فایل Word و PDF] | نگارش یار',
   description: 'متن رسمی تقاضای صدور پروانه اقامت معتبر در پلیس مهاجرت فراجا برای پدر خارجی دارای همسر و فرزند ایرانی مستند به قانون تعیین تکلیف تابعیت ۱۳۹۸.',
   keywords: [
     'اقامت پدر غیرایرانی فرزند ایرانی',
@@ -192,7 +192,7 @@ export const sampleForeignFatherResidencePermitRequestMetadata: Metadata = {
     canonical: 'https://www.negaresh-yar.ir/samples/foreign-father-residence-permit-request',
   },
   openGraph: {
-    title: 'نمونه درخواست صدور پروانه اقامت برای پدر غیرایرانی | نگارش یار',
+    title: 'نمونه درخواست صدور پروانه اقامت برای پدر غیرایرانی [رایگان، دانلود فایل Word و PDF] | نگارش یار',
     description: 'متن اداری تقاضای اعطای پروانه اقامت قانونی در ایران به پدر غیرایرانی فرزندان دارای شناسنامه ایرانی.',
     url: 'https://www.negaresh-yar.ir/samples/foreign-father-residence-permit-request',
     siteName: 'نگارش یار',

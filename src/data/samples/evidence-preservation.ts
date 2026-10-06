@@ -5,7 +5,7 @@ export const sampleEvidencePreservationData: SampleLandingData = {
   slug: 'evidence-preservation',
   categoryName: 'درخواست های قضایی',
   badge: 'الگوی تأمین دلیل شورای حل اختلاف',
-  metaTitle: 'نمونه دادخواست تأمین دلیل با کارشناسی [خودرو، ملک و تخلیه] | نگارش یار',
+  metaTitle: 'نمونه دادخواست تامین دلیل با جلب نظر کارشناس [رایگان، دانلود فایل Word و PDF] | نگارش یار',
   metaDescription: 'دانلود و کپی رایگان نمونه دادخواست تأمین دلیل با جلب نظر کارشناس رسمی دادگستری برای افت قیمت خودرو، نم ساختمان و تحویل کلید مستند به ماده ۱۴۹ ق.آ.د.م.',
   h1Title: 'نمونه دادخواست تأمین دلیل با جلب نظر کارشناس رسمی دادگستری',
   heroSubtitle: 'دانلود و مشاهده کامل ترین الگوی دادخواست تأمین دلیل جهت ملاحظه و برآورد خسارت، افت قیمت خودرو، سرایت رطوبت و نم ساختمان یا تحویل کلید مستأجر به شورای حل اختلاف مستند به مواد ۱۴۹ تا ۱۵۵ قانون آیین دادرسی مدنی.',
@@ -271,7 +271,7 @@ export const sampleEvidencePreservationData: SampleLandingData = {
 };
 
 export const sampleEvidencePreservationMetadata: Metadata = {
-  title: 'نمونه دادخواست تأمین دلیل با کارشناسی [خودرو، ملک و تخلیه] | نگارش یار',
+  title: 'نمونه دادخواست تامین دلیل با جلب نظر کارشناس [رایگان، دانلود فایل Word و PDF] | نگارش یار',
   description: 'دانلود و کپی رایگان نمونه دادخواست تأمین دلیل با جلب نظر کارشناس رسمی دادگستری برای افت قیمت خودرو، نم ساختمان و تحویل کلید مستند به ماده ۱۴۹ ق.آ.د.م.',
   keywords: [
     'نمونه دادخواست تامین دلیل',
@@ -287,7 +287,7 @@ export const sampleEvidencePreservationMetadata: Metadata = {
     canonical: 'https://www.negaresh-yar.ir/samples/evidence-preservation',
   },
   openGraph: {
-    title: 'نمونه دادخواست تأمین دلیل با کارشناسی [خودرو، ملک و تخلیه] | نگارش یار',
+    title: 'نمونه دادخواست تامین دلیل با جلب نظر کارشناس [رایگان، دانلود فایل Word و PDF] | نگارش یار',
     description: 'دانلود و کپی رایگان نمونه دادخواست تأمین دلیل با جلب نظر کارشناس رسمی دادگستری در نگارش یار.',
     url: 'https://www.negaresh-yar.ir/samples/evidence-preservation',
     siteName: 'نگارش یار',
