@@ -166,7 +166,7 @@ export const sampleCitizenshipCommissionAppealRequestData: SampleLandingData = {
 };
 
 export const sampleCitizenshipCommissionAppealRequestMetadata: Metadata = {
-  title: 'نمونه درخواست تجدیدنظر در کمیسیون تابعیت وزارت کشور | نگارش یار',
+  title: 'نمونه درخواست تجدیدنظر در کمیسیون تابعیت وزارت کشور [رایگان، دانلود فایل Word و PDF] | نگارش یار',
   description: 'متن لایحه تجدیدنظرخواهی در کمیسیون تابعیت وزارت کشور در اعتراض به رد پرونده تابعیت فرزندان مادر ایرانی در استانداری مستند به قوانین و شیوه‌نامه‌های اجرایی.',
   keywords: [
     'تجدیدنظر در کمیسیون تابعیت وزارت کشور',
@@ -179,7 +179,7 @@ export const sampleCitizenshipCommissionAppealRequestMetadata: Metadata = {
     canonical: 'https://www.negaresh-yar.ir/samples/citizenship-commission-appeal-request',
   },
   openGraph: {
-    title: 'نمونه درخواست تجدیدنظر در کمیسیون تابعیت وزارت کشور | نگارش یار',
+    title: 'نمونه درخواست تجدیدنظر در کمیسیون تابعیت وزارت کشور [رایگان، دانلود فایل Word و PDF] | نگارش یار',
     description: 'متن لایحه تجدیدنظرخواهی اداری در وزارت کشور جهت نقض تصمیم رد تابعیت استانداری.',
     url: 'https://www.negaresh-yar.ir/samples/citizenship-commission-appeal-request',
     siteName: 'نگارش یار',

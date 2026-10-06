@@ -165,7 +165,7 @@ export const sampleCitizenshipDocumentAuthenticityObjectionData: SampleLandingDa
 };
 
 export const sampleCitizenshipDocumentAuthenticityObjectionMetadata: Metadata = {
-  title: 'نمونه اعتراض به عدم احراز اصالت مدارک تابعیت | نگارش یار',
+  title: 'نمونه اعتراض به عدم احراز اصالت مدارک تابعیت [رایگان، دانلود فایل Word و PDF] | نگارش یار',
   description: 'متن لایحه رسمی اعتراض به رد مدارک ولادت یا ازدواج در اداره اتباع استانداری و تقاضای استعلام از مرجع صادرکننده بر اساس قوانین مدنی و تابعیت.',
   keywords: [
     'اعتراض به عدم احراز اصالت مدارک تابعیت',
@@ -178,7 +178,7 @@ export const sampleCitizenshipDocumentAuthenticityObjectionMetadata: Metadata = 
     canonical: 'https://www.negaresh-yar.ir/samples/citizenship-document-authenticity-objection',
   },
   openGraph: {
-    title: 'نمونه اعتراض به عدم احراز اصالت مدارک تابعیت | نگارش یار',
+    title: 'نمونه اعتراض به عدم احراز اصالت مدارک تابعیت [رایگان، دانلود فایل Word و PDF] | نگارش یار',
     description: 'متن دفاعیه اداری جهت ابطال نظریه عدم احراز اصالت مدارک در کمیسیون تابعیت استانداری.',
     url: 'https://www.negaresh-yar.ir/samples/citizenship-document-authenticity-objection',
     siteName: 'نگارش یار',

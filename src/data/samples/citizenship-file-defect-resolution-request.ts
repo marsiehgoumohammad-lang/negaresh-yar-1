@@ -174,7 +174,7 @@ export const sampleCitizenshipFileDefectResolutionRequestData: SampleLandingData
 };
 
 export const sampleCitizenshipFileDefectResolutionRequestMetadata: Metadata = {
-  title: 'نمونه درخواست تکمیل پرونده تابعیت پس از رفع نقص | نگارش یار',
+  title: 'نمونه درخواست تکمیل پرونده تابعیت پس از رفع نقص [رایگان، دانلود فایل Word و PDF] | نگارش یار',
   description: 'متن اداری رسمی تقاضای تکمیل و ادامه رسیدگی به پرونده تابعیت فرزند مادر ایرانی در اداره امور اتباع استانداری پس از رفع نواقص و ارائه مدارک اصلاحی.',
   keywords: [
     'رفع نقص پرونده تابعیت',
@@ -187,7 +187,7 @@ export const sampleCitizenshipFileDefectResolutionRequestMetadata: Metadata = {
     canonical: 'https://www.negaresh-yar.ir/samples/citizenship-file-defect-resolution-request',
   },
   openGraph: {
-    title: 'نمونه درخواست تکمیل پرونده تابعیت پس از رفع نقص | نگارش یار',
+    title: 'نمونه درخواست تکمیل پرونده تابعیت پس از رفع نقص [رایگان، دانلود فایل Word و PDF] | نگارش یار',
     description: 'متن اداری جهت اعلام رفع نواقص پرونده تابعیت و تقاضای ارسال به استعلامات امنیتی در استانداری.',
     url: 'https://www.negaresh-yar.ir/samples/citizenship-file-defect-resolution-request',
     siteName: 'نگارش یار',
