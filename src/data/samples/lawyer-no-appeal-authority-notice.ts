@@ -129,14 +129,14 @@ export const sampleLawyerNoAppealAuthorityNoticeData: SampleLandingData = {
 };
 
 export const sampleLawyerNoAppealAuthorityNoticeMetadata: Metadata = {
-  title: "نمونه لایحه اعلام عدم اختیار وکیل در تجدیدنظر (ماده ۴۴ و ۴۷) | نگارش یار",
+  title: "نمونه لایحه اعلام عدم اختیار وکیل در تجدیدنظر [رایگان، دانلود فایل Word و PDF] | نگارش یار",
   description: "دانلود رایگان نمونه لایحه اعلام فقدان اختیار وکیل در تجدیدنظرخواهی و درخواست ابلاغ دادنامه به موکل مستند به مواد ۴۴ و ۴۷ قانون آیین دادرسی مدنی.",
   keywords: ["اعلام عدم اختیار وکیل", "ماده ۴۴ قانون آیین دادرسی مدنی", "ماده ۴۷ قانون آیین دادرسی مدنی", "ابلاغ دادنامه به موکل", "نگارش یار"],
   alternates: {
     canonical: 'https://www.negaresh-yar.ir/samples/lawyer-no-appeal-authority-notice',
   },
   openGraph: {
-    title: "نمونه لایحه اعلام عدم اختیار وکیل در تجدیدنظر (ماده ۴۴ و ۴۷) | نگارش یار",
+    title: "نمونه لایحه اعلام عدم اختیار وکیل در تجدیدنظر [رایگان، دانلود فایل Word و PDF] | نگارش یار",
     description: "دانلود رایگان نمونه لایحه اعلام فقدان اختیار وکیل در تجدیدنظرخواهی و درخواست ابلاغ دادنامه به موکل مستند به مواد ۴۴ و ۴۷ قانون آیین دادرسی مدنی.",
     url: 'https://www.negaresh-yar.ir/samples/lawyer-no-appeal-authority-notice',
     siteName: 'نگارش یار',

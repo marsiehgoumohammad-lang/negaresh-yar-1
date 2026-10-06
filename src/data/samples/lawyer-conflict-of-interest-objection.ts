@@ -129,14 +129,14 @@ export const sampleLawyerConflictOfInterestObjectionData: SampleLandingData = {
 };
 
 export const sampleLawyerConflictOfInterestObjectionMetadata: Metadata = {
-  title: "نمونه لایحه ایراد به وکالت وکیل طرف مقابل (ماده ۴۵) | نگارش یار",
+  title: "نمونه لایحه ایراد به وکالت وکیل طرف مقابل [رایگان، دانلود فایل Word و PDF] | نگارش یار",
   description: "دانلود نمونه لایحه ایراد به پذیرش وکالت وکیل طرف مقابل به علت سابقه وکالت در همان دعوا مستند به ماده ۴۵ قانون آیین دادرسی مدنی با رعایت کامل ضوابط.",
   keywords: ["ایراد به وکالت وکیل طرف مقابل", "ماده ۴۵ قانون آیین دادرسی مدنی", "تعارض منافع وکیل دادگستری", "وکالت علیه موکل سابق", "نگارش یار"],
   alternates: {
     canonical: 'https://www.negaresh-yar.ir/samples/lawyer-conflict-of-interest-objection',
   },
   openGraph: {
-    title: "نمونه لایحه ایراد به وکالت وکیل طرف مقابل (ماده ۴۵) | نگارش یار",
+    title: "نمونه لایحه ایراد به وکالت وکیل طرف مقابل [رایگان، دانلود فایل Word و PDF] | نگارش یار",
     description: "دانلود نمونه لایحه ایراد به پذیرش وکالت وکیل طرف مقابل به علت سابقه وکالت در همان دعوا مستند به ماده ۴۵ قانون آیین دادرسی مدنی با رعایت کامل ضوابط.",
     url: 'https://www.negaresh-yar.ir/samples/lawyer-conflict-of-interest-objection',
     siteName: 'نگارش یار',

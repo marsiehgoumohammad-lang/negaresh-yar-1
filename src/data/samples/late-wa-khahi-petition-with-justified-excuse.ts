@@ -153,14 +153,14 @@ export const sampleLateWaKhahiPetitionWithJustifiedExcuseData: SampleLandingData
 };
 
 export const sampleLateWaKhahiPetitionWithJustifiedExcuseMetadata: Metadata = {
- title: "نمونه دادخواست واخواهی خارج از مهلت با عذر موجه (ماده ۳۰۶) | نگارش یار",
+ title: "نمونه دادخواست واخواهی خارج از مهلت با عذر موجه [رایگان، دانلود فایل Word و PDF] | نگارش یار",
  description: "دانلود نمونه متن رسمی دادخواست واخواهی خارج از مهلت با اثبات عذر موجه بیماری، حبس یا عدم ابلاغ واقعی مستند به ماده ۳۰۶ قانون آیین دادرسی مدنی.",
  keywords: ["واخواهی خارج از مهلت", "ماده ۳۰۶ قانون آیین دادرسی مدنی", "عذر موجه در واخواهی", "بیماری مانع حرکت ماده ۳۰۶", "نگارش یار"],
  alternates: {
  canonical: 'https://www.negaresh-yar.ir/samples/late-wa-khahi-petition-with-justified-excuse',
  },
  openGraph: {
- title: "نمونه دادخواست واخواهی خارج از مهلت با عذر موجه (ماده ۳۰۶) | نگارش یار",
+ title: "نمونه دادخواست واخواهی خارج از مهلت با عذر موجه [رایگان، دانلود فایل Word و PDF] | نگارش یار",
  description: "دانلود نمونه متن رسمی دادخواست واخواهی خارج از مهلت با اثبات عذر موجه بیماری، حبس یا عدم ابلاغ واقعی مستند به ماده ۳۰۶ قانون آیین دادرسی مدنی.",
  url: 'https://www.negaresh-yar.ir/samples/late-wa-khahi-petition-with-justified-excuse',
  siteName: 'نگارش یار',

@@ -129,14 +129,14 @@ export const sampleLawyerJustifiedAbsenceRequestData: SampleLandingData = {
 };
 
 export const sampleLawyerJustifiedAbsenceRequestMetadata: Metadata = {
-  title: "نمونه لایحه اعلام عذر موجه وکیل و تجدید جلسه (ماده ۴۱) | نگارش یار",
+  title: "نمونه لایحه اعلام عذر موجه وکیل و درخواست تجدید جلسه [رایگان، دانلود فایل Word و PDF] | نگارش یار",
   description: "دانلود نمونه متن رسمی لایحه اعلام عذر موجه وکیل و درخواست تجدید جلسه دادرسی مستند به ماده ۴۱ قانون آیین دادرسی مدنی با نکات کاربردی.",
   keywords: ["عذر موجه وکیل", "ماده ۴۱ قانون آیین دادرسی مدنی", "تجدید جلسه دادرسی به دلیل عذر وکیل", "همزمانی وقت دادگاه", "نگارش یار"],
   alternates: {
     canonical: 'https://www.negaresh-yar.ir/samples/lawyer-justified-absence-request',
   },
   openGraph: {
-    title: "نمونه لایحه اعلام عذر موجه وکیل و تجدید جلسه (ماده ۴۱) | نگارش یار",
+    title: "نمونه لایحه اعلام عذر موجه وکیل و درخواست تجدید جلسه [رایگان، دانلود فایل Word و PDF] | نگارش یار",
     description: "دانلود نمونه متن رسمی لایحه اعلام عذر موجه وکیل و درخواست تجدید جلسه دادرسی مستند به ماده ۴۱ قانون آیین دادرسی مدنی با نکات کاربردی.",
     url: 'https://www.negaresh-yar.ir/samples/lawyer-justified-absence-request',
     siteName: 'نگارش یار',

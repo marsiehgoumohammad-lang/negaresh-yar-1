@@ -316,7 +316,7 @@ export const sampleLaborOfficeLetterData: SampleLandingData = {
 };
 
 export const sampleLaborOfficeLetterMetadata: Metadata = {
-  title: 'نمونه نامه اداری به اداره کار | بازرسی کارگاه، بیمه و سنوات | نگارش یار',
+  title: 'نمونه نامه اداری به اداره کار [رایگان، دانلود فایل Word و PDF] | نگارش یار',
   description:
     'دانلود ۴ نمونه متن آماده نامه اداری به اداره کار: تقاضای بازرسی کارگاه، الزام کارفرما به بیمه ماده ۱۴۸، سازش و محاسبه سنوات همراه با مشاوره کارشناسی.',
   keywords: [

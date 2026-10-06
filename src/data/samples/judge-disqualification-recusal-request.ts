@@ -129,14 +129,14 @@ export const sampleJudgeDisqualificationRecusalRequestData: SampleLandingData = 
 };
 
 export const sampleJudgeDisqualificationRecusalRequestMetadata: Metadata = {
-  title: "نمونه لایحه اعلام رد دادرس (ماده ۹۱ و ۹۲) | نگارش یار",
+  title: "نمونه لایحه اعلام رد دادرس [رایگان، دانلود فایل Word و PDF] | نگارش یار",
   description: "دانلود رایگان نمونه متن رسمی لایحه اعلام جهات رد دادرس و تقاضای قرار امتناع از رسیدگی مستند به مواد ۹۱ و ۹۲ قانون آیین دادرسی مدنی با نکات حقوقی کاربردی.",
   keywords: ["رد دادرس در آیین دادرسی مدنی", "ماده ۹۱ قانون آیین دادرسی مدنی", "قرار امتناع از رسیدگی", "جهات رد قاضی", "نگارش یار"],
   alternates: {
     canonical: 'https://www.negaresh-yar.ir/samples/judge-disqualification-recusal-request',
   },
   openGraph: {
-    title: "نمونه لایحه اعلام رد دادرس (ماده ۹۱ و ۹۲) | نگارش یار",
+    title: "نمونه لایحه اعلام رد دادرس [رایگان، دانلود فایل Word و PDF] | نگارش یار",
     description: "دانلود رایگان نمونه متن رسمی لایحه اعلام جهات رد دادرس و تقاضای قرار امتناع از رسیدگی مستند به مواد ۹۱ و ۹۲ قانون آیین دادرسی مدنی با نکات حقوقی کاربردی.",
     url: 'https://www.negaresh-yar.ir/samples/judge-disqualification-recusal-request',
     siteName: 'نگارش یار',

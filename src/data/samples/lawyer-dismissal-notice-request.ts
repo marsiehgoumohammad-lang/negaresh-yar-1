@@ -220,7 +220,7 @@ export const sampleLawyerDismissalNoticeRequestData: SampleLandingData = {
 };
 
 export const sampleLawyerDismissalNoticeRequestMetadata: Metadata = {
-  title: 'نمونه لایحه اعلام عزل وکیل دادگستری و سلب اختیارات در دادگاه | نگارش یار',
+  title: 'نمونه لایحه عزل وکیل دادگستری توسط موکل [رایگان، دانلود فایل Word و PDF] | نگارش یار',
   description: 'متن استاندارد لایحه اعلام عزل وکیل دادگستری به دادگاه و درخواست هدایت کلیه ابلاغیه‌ها به شخص موکل مستند به ماده ۳۷ و ۳۸ آیین دادرسی مدنی در نگارش یار.',
   keywords: [
     'نمونه لایحه عزل وکیل',
@@ -235,7 +235,7 @@ export const sampleLawyerDismissalNoticeRequestMetadata: Metadata = {
     canonical: 'https://www.negaresh-yar.ir/samples/lawyer-dismissal-notice-request',
   },
   openGraph: {
-    title: 'نمونه لایحه اعلام عزل وکیل دادگستری و سلب اختیارات در دادگاه | نگارش یار',
+    title: 'نمونه لایحه عزل وکیل دادگستری توسط موکل [رایگان، دانلود فایل Word و PDF] | نگارش یار',
     description: 'متن لایحه رسمی اعلام عزل وکیل دادگستری به شعبه دادگاه و انتقال ابلاغیه‌ها به سامانه ثنای موکل.',
     url: 'https://www.negaresh-yar.ir/samples/lawyer-dismissal-notice-request',
     siteName: 'نگارش یار',

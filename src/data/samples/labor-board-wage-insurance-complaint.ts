@@ -193,7 +193,7 @@ export const sampleLaborBoardWageInsuranceComplaintData: SampleDocument = {
 
   relatedServices: [
     {
-      title: 'تنظیم دادخواست‌های تخصصی اداره کار',
+      title: 'نمونه دادخواست الزام تامین اجتماعی به اجرای رای اداره کار [رایگان، دانلود فایل Word و PDF] | نگارش یار',
       href: '/services/petition-writing',
       desc: 'تنظیم دادخواست در سامانه روابط کار، محاسبه دقیق سنوات و لایحه اعتراضی.',
       badge: 'خدمت تخصصی',
