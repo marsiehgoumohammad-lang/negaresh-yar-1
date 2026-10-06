@@ -186,7 +186,7 @@ export const sampleProvisionalAttachmentPetitionData: SampleDocument = {
 
   relatedServices: [
     {
-      title: 'تنظیم دادخواست‌های حقوقی و مالی',
+      title: 'نمونه درخواست تامین خواسته و توقیف اموال [رایگان، دانلود فایل Word و PDF] | نگارش یار',
       href: '/services/petition-writing',
       desc: 'تنظیم دادخواست‌های تأمین خواسته فوری، دستور موقت و مطالبه وجه قراردادها.',
       badge: 'خدمت تخصصی',

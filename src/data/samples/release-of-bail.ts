@@ -228,7 +228,7 @@ export const sampleReleaseOfBailData: SampleLandingData = {
 };
 
 export const sampleReleaseOfBailMetadata: Metadata = {
-  title: 'نمونه درخواست فک وثیقه و رفع توقیف سند ملکی در اجرای احکام | نگارش یار',
+  title: 'نمونه درخواست فک وثیقه و رفع بازداشت سند [رایگان، دانلود فایل Word و PDF] | نگارش یار',
   description: 'متن آماده لایحه تقاضای فک قرار وثیقه، رفع توقیف ثبتی سند ملک و استرداد وثیقه پس از صدور رأی برائت، منع تعقیب یا اجرای حکم مستند به مواد ۲۵۱ و ۵۳۸ ق.آ.د.ک.',
   keywords: [
     'نمونه درخواست فک وثیقه',
@@ -242,7 +242,7 @@ export const sampleReleaseOfBailMetadata: Metadata = {
     canonical: 'https://www.negaresh-yar.ir/samples/release-of-bail',
   },
   openGraph: {
-    title: 'نمونه درخواست فک وثیقه و رفع توقیف سند ملکی در اجرای احکام | نگارش یار',
+    title: 'نمونه درخواست فک وثیقه و رفع بازداشت سند [رایگان، دانلود فایل Word و PDF] | نگارش یار',
   description: 'متن آماده لایحه تقاضای فک قرار وثیقه و رفع توقیف ثبتی سند ملک در اجرای احکام.',
     url: 'https://www.negaresh-yar.ir/samples/release-of-bail',
     siteName: 'نگارش یار',

@@ -237,7 +237,7 @@ export const sampleReliefFoundationLetterData: SampleLandingData = {
       badge: 'دفتر رهبری',
     },
     {
-      title: 'نامه به سازمان تامین اجتماعی',
+      title: 'نمونه نامه درخواست تحت پوشش قرار گرفتن کمیته امداد [رایگان، دانلود فایل Word و PDF] | نگارش یار',
       href: '/samples/social-security-letter',
       desc: 'پیگیری بیمه ازکارافتادگی، بازنشستگی و بیمه بیکاری.',
       badge: 'تامین اجتماعی',

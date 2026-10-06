@@ -129,14 +129,14 @@ export const sampleProvisionalAttachmentCancellationRequestData: SampleLandingDa
 };
 
 export const sampleProvisionalAttachmentCancellationRequestMetadata: Metadata = {
-  title: "نمونه لایحه تقاضای لغو تأمین خواسته (ماده ۱۱۲) | نگارش یار",
+  title: "نمونه لایحه درخواست لغو تامین خواسته [رایگان، دانلود فایل Word و PDF] | نگارش یار",
   description: "دانلود رایگان نمونه متن رسمی لایحه تقاضای لغو و بطلان قرار تأمین خواسته به علت عدم اقامه اصل دعوا در مهلت ۱۰ روز مستند به ماده ۱۱۲ ق.آ.د.م.",
   keywords: ["لغو قرار تأمین خواسته", "ماده ۱۱۲ قانون آیین دادرسی مدنی", "رفع توقیف اموال در تأمین خواسته", "مهلت ۱۰ روزه اقامه دعوا بعد از تأمین", "نگارش یار"],
   alternates: {
     canonical: 'https://www.negaresh-yar.ir/samples/provisional-attachment-cancellation-request',
   },
   openGraph: {
-    title: "نمونه لایحه تقاضای لغو تأمین خواسته (ماده ۱۱۲) | نگارش یار",
+    title: "نمونه لایحه درخواست لغو تامین خواسته [رایگان، دانلود فایل Word و PDF] | نگارش یار",
     description: "دانلود رایگان نمونه متن رسمی لایحه تقاضای لغو و بطلان قرار تأمین خواسته به علت عدم اقامه اصل دعوا در مهلت ۱۰ روز مستند به ماده ۱۱۲ ق.آ.د.م.",
     url: 'https://www.negaresh-yar.ir/samples/provisional-attachment-cancellation-request',
     siteName: 'نگارش یار',

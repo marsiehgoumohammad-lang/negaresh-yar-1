@@ -121,14 +121,14 @@ export const sampleProvisionalAttachmentExecutionBeforeServiceRequestData: Sampl
 };
 
 export const sampleProvisionalAttachmentExecutionBeforeServiceRequestMetadata: Metadata = {
-  title: "نمونه درخواست اجرای تأمین خواسته قبل از ابلاغ (ماده ۱۱۷) | نگارش یار",
+  title: "نمونه درخواست اجرای تامین خواسته قبل از ابلاغ [رایگان، دانلود فایل Word و PDF] | نگارش یار",
   description: "دانلود نمونه متن رسمی درخواست اجرای قرار تأمین خواسته قبل از ابلاغ به خوانده به علت بیم تفریط اموال مستند به ماده ۱۱۷ قانون آیین دادرسی مدنی.",
   keywords: ["اجرای قرار تأمین خواسته قبل از ابلاغ", "ماده ۱۱۷ قانون آیین دادرسی مدنی", "توقیف حساب قبل از ابلاغ به بدهکار", "بیم تضییع و تفریط مال", "نگارش یار"],
   alternates: {
     canonical: 'https://www.negaresh-yar.ir/samples/provisional-attachment-execution-before-service-request',
   },
   openGraph: {
-    title: "نمونه درخواست اجرای تأمین خواسته قبل از ابلاغ (ماده ۱۱۷) | نگارش یار",
+    title: "نمونه درخواست اجرای تامین خواسته قبل از ابلاغ [رایگان، دانلود فایل Word و PDF] | نگارش یار",
     description: "دانلود نمونه متن رسمی درخواست اجرای قرار تأمین خواسته قبل از ابلاغ به خوانده به علت بیم تفریط اموال مستند به ماده ۱۱۷ قانون آیین دادرسی مدنی.",
     url: 'https://www.negaresh-yar.ir/samples/provisional-attachment-execution-before-service-request',
     siteName: 'نگارش یار',
