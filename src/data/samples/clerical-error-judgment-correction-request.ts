@@ -129,14 +129,14 @@ export const sampleClericalErrorJudgmentCorrectionRequestData: SampleLandingData
 };
 
 export const sampleClericalErrorJudgmentCorrectionRequestMetadata: Metadata = {
-  title: "نمونه درخواست تصحیح رأی دادگاه (ماده ۳۰۹) | نگارش یار",
+  title: "نمونه درخواست تصحیح رای دادگاه [رایگان، دانلود فایل Word و PDF] | نگارش یار",
   description: "دانلود نمونه متن رسمی درخواست تصحیح رأی به سبب سهو قلم، اشتباه تایپی در نام، کدملی یا محاسبه مستند به ماده ۳۰۹ قانون آیین دادرسی مدنی.",
   keywords: ["تصحیح رأی دادگاه", "ماده ۳۰۹ قانون آیین دادرسی مدنی", "رأی اصلاحی سهو قلم", "اشتباه در پلاک ثبتی دادنامه", "نگارش یار"],
   alternates: {
     canonical: 'https://www.negaresh-yar.ir/samples/clerical-error-judgment-correction-request',
   },
   openGraph: {
-    title: "نمونه درخواست تصحیح رأی دادگاه (ماده ۳۰۹) | نگارش یار",
+    title: "نمونه درخواست تصحیح رای دادگاه [رایگان، دانلود فایل Word و PDF] | نگارش یار",
     description: "دانلود نمونه متن رسمی درخواست تصحیح رأی به سبب سهو قلم، اشتباه تایپی در نام، کدملی یا محاسبه مستند به ماده ۳۰۹ قانون آیین دادرسی مدنی.",
     url: 'https://www.negaresh-yar.ir/samples/clerical-error-judgment-correction-request',
     siteName: 'نگارش یار',

@@ -129,14 +129,14 @@ export const sampleCourtClerkAppealRejectionObjectionData: SampleLandingData = {
 };
 
 export const sampleCourtClerkAppealRejectionObjectionMetadata: Metadata = {
-  title: "نمونه اعتراض به قرار رد دادخواست تجدیدنظر مدیر دفتر (ماده ۳۳۹) | نگارش یار",
+  title: "نمونه اعتراض به قرار رد دادخواست تجدیدنظر مدیر دفتر [رایگان، دانلود فایل Word و PDF] | نگارش یار",
   description: "دانلود نمونه متن رسمی اعتراض به قرار رد دادخواست تجدیدنظر یا فرجام صادره از مدیر دفتر مستند به تبصره ۲ ماده ۳۳۹ و ماده ۳۸۳ قانون آیین دادرسی مدنی.",
   keywords: ["اعتراض به قرار رد مدیر دفتر", "ماده ۳۳۹ تبصره ۲ قانون آیین دادرسی مدنی", "ماده ۳۸۳ ق.آ.د.م رد فرجام‌خواهی", "محاسبه مهلت تجدیدنظر و روز تعطیل", "نگارش یار"],
   alternates: {
     canonical: 'https://www.negaresh-yar.ir/samples/court-clerk-appeal-rejection-objection',
   },
   openGraph: {
-    title: "نمونه اعتراض به قرار رد دادخواست تجدیدنظر مدیر دفتر (ماده ۳۳۹) | نگارش یار",
+    title: "نمونه اعتراض به قرار رد دادخواست تجدیدنظر مدیر دفتر [رایگان، دانلود فایل Word و PDF] | نگارش یار",
     description: "دانلود نمونه متن رسمی اعتراض به قرار رد دادخواست تجدیدنظر یا فرجام صادره از مدیر دفتر مستند به تبصره ۲ ماده ۳۳۹ و ماده ۳۸۳ قانون آیین دادرسی مدنی.",
     url: 'https://www.negaresh-yar.ir/samples/court-clerk-appeal-rejection-objection',
     siteName: 'نگارش یار',

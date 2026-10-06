@@ -296,7 +296,7 @@ export const sampleConditionalReleaseData: SampleLandingData = {
 };
 
 export const sampleConditionalReleaseMetadata: Metadata = {
-  title: 'نمونه درخواست آزادی مشروط زندانی (ماده ۵۸ قانون مجازات) | نگارش یار',
+  title: 'نمونه درخواست آزادی مشروط زندانی [رایگان، دانلود فایل Word و PDF] | نگارش یار',
   description: 'دانلود و مشاهده کامل‌ترین نمونه متن لایحه تقاضای آزادی مشروط زندانی بر مبنای ماده ۵۸ قانون مجازات اسلامی پس از تحمل یک‌سوم یا نصف حبس با فرمت استاندارد اجرای احکام.',
   keywords: [
     'نمونه درخواست آزادی مشروط',
@@ -311,7 +311,7 @@ export const sampleConditionalReleaseMetadata: Metadata = {
     canonical: 'https://www.negaresh-yar.ir/samples/conditional-release',
   },
   openGraph: {
-    title: 'نمونه درخواست آزادی مشروط زندانی (ماده ۵۸ قانون مجازات) | نگارش یار',
+    title: 'نمونه درخواست آزادی مشروط زندانی [رایگان، دانلود فایل Word و PDF] | نگارش یار',
   description: 'الگوی متنی استاندارد و قانونی درخواست آزادی مشروط جهت ارائه به دادیار ناظر، شورای طبقه‌بندی زندان و قاضی اجرای احکام.',
     url: 'https://www.negaresh-yar.ir/samples/conditional-release',
     siteName: 'نگارش یار',

@@ -125,14 +125,14 @@ export const sampleConsolidatedProceedingsRequestData: SampleLandingData = {
 };
 
 export const sampleConsolidatedProceedingsRequestMetadata: Metadata = {
-  title: "نمونه لایحه تقاضای رسیدگی توأم (ماده ۱۰۳) | نگارش یار",
+  title: "نمونه لایحه تقاضای رسیدگی توام [رایگان، دانلود فایل Word و PDF] | نگارش یار",
   description: "دانلود نمونه متن رسمی لایحه تقاضای رسیدگی توأم به پرونده‌های مرتبط در یک حوزه قضایی مستند به ماده ۱۰۳ قانون آیین دادرسی مدنی جهت ارسال به شعبه مقدم.",
   keywords: ["رسیدگی توأم پرونده های مرتبط", "ماده ۱۰۳ قانون آیین دادرسی مدنی", "ارسال پرونده به شعبه مقدم", "ارتباط کامل دعاوی", "نگارش یار"],
   alternates: {
     canonical: 'https://www.negaresh-yar.ir/samples/consolidated-proceedings-request',
   },
   openGraph: {
-    title: "نمونه لایحه تقاضای رسیدگی توأم (ماده ۱۰۳) | نگارش یار",
+    title: "نمونه لایحه تقاضای رسیدگی توام [رایگان، دانلود فایل Word و PDF] | نگارش یار",
     description: "دانلود نمونه متن رسمی لایحه تقاضای رسیدگی توأم به پرونده‌های مرتبط در یک حوزه قضایی مستند به ماده ۱۰۳ قانون آیین دادرسی مدنی جهت ارسال به شعبه مقدم.",
     url: 'https://www.negaresh-yar.ir/samples/consolidated-proceedings-request',
     siteName: 'نگارش یار',
