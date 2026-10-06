@@ -212,7 +212,7 @@ export const sampleAgriculturalOfficeLetterData: SampleLandingData = {
 
   relatedArticles: [
     {
-      title: 'تفسیر کامل قانون حفظ کاربری اراضی زراعی و باغات و آرای وحدت رویه',
+      title: 'نمونه نامه به اداره کشاورزی [رایگان، دانلود فایل Word و PDF] | نگارش یار',
       href: '/knowledge/how-to-write-administrative-letter',
       badge: 'حقوق اراضی',
       desc: 'بررسی مصادیق مجاز ساخت‌وساز کشاورزی، آرای دیوان عالی کشور و راه‌های دفاع در دادسرا.',

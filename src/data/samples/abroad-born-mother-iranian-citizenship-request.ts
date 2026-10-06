@@ -178,7 +178,7 @@ export const sampleAbroadBornMotherIranianCitizenshipRequestData: SampleLandingD
 };
 
 export const sampleAbroadBornMotherIranianCitizenshipRequestMetadata: Metadata = {
-  title: 'نمونه درخواست تابعیت فرزند متولد خارج از مادر ایرانی | نگارش یار',
+  title: 'نمونه درخواست تابعیت فرزند متولد خارج از کشور از مادر ایرانی [رایگان، دانلود فایل Word و PDF] | نگارش یار',
   description: 'متن اداری رسمی تقاضای احراز نسب و تابعیت فرزندان متولد خارج از ایران از مادر ایرانی در سفارتخانه‌ها و کنسولگری‌های جمهوری اسلامی ایران مستند به قانون ۱۳۹۸.',
   keywords: [
     'تابعیت فرزند مادر ایرانی متولد خارج',
@@ -191,7 +191,7 @@ export const sampleAbroadBornMotherIranianCitizenshipRequestMetadata: Metadata =
     canonical: 'https://www.negaresh-yar.ir/samples/abroad-born-mother-iranian-citizenship-request',
   },
   openGraph: {
-    title: 'نمونه درخواست تابعیت فرزند متولد خارج از مادر ایرانی | نگارش یار',
+    title: 'نمونه درخواست تابعیت فرزند متولد خارج از کشور از مادر ایرانی [رایگان، دانلود فایل Word و PDF] | نگارش یار',
     description: 'متن استاندارد تقاضای کنسولی احراز نسب و تابعیت برای فرزندان متولد خارج از کشور از مادر ایرانی.',
     url: 'https://www.negaresh-yar.ir/samples/abroad-born-mother-iranian-citizenship-request',
     siteName: 'نگارش یار',

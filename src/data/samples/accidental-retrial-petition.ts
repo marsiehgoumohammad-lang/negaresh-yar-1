@@ -125,14 +125,14 @@ export const sampleAccidentalRetrialPetitionData: SampleLandingData = {
 };
 
 export const sampleAccidentalRetrialPetitionMetadata: Metadata = {
-  title: "نمونه دادخواست اعاده دادرسی طاری (ماده ۴۳۲) | نگارش یار",
+  title: "نمونه دادخواست اعاده دادرسی طاری [رایگان، دانلود فایل Word و PDF] | نگارش یار",
   description: "دانلود نمونه متن رسمی دادخواست اعاده دادرسی طاری مستند به بند ۲ ماده ۴۳۲ و ماده ۴۳۴ قانون آیین دادرسی مدنی در مهلت ۳ روزه از ابراز دلیل.",
   keywords: ["اعاده دادرسی طاری", "ماده ۴۳۲ بند ۲ قانون آیین دادرسی مدنی", "ماده ۴۳۴ ق.آ.د.م مهلت ۳ روزه", "توقف دادرسی با اعاده دادرسی طاری", "نگارش یار"],
   alternates: {
     canonical: 'https://www.negaresh-yar.ir/samples/accidental-retrial-petition',
   },
   openGraph: {
-    title: "نمونه دادخواست اعاده دادرسی طاری (ماده ۴۳۲) | نگارش یار",
+    title: "نمونه دادخواست اعاده دادرسی طاری [رایگان، دانلود فایل Word و PDF] | نگارش یار",
     description: "دانلود نمونه متن رسمی دادخواست اعاده دادرسی طاری مستند به بند ۲ ماده ۴۳۲ و ماده ۴۳۴ قانون آیین دادرسی مدنی در مهلت ۳ روزه از ابراز دلیل.",
     url: 'https://www.negaresh-yar.ir/samples/accidental-retrial-petition',
     siteName: 'نگارش یار',

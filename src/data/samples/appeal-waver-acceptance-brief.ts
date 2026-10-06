@@ -125,14 +125,14 @@ export const sampleAppealWaverAcceptanceBriefData: SampleLandingData = {
 };
 
 export const sampleAppealWaverAcceptanceBriefMetadata: Metadata = {
-  title: "نمونه لایحه اسقاط حق تجدیدنظرخواهی (ماده ۳۳۳) | نگارش یار",
+  title: "نمونه لایحه اسقاط حق تجدیدنظرخواهی [رایگان، دانلود فایل Word و PDF] | نگارش یار",
   description: "دانلود نمونه متن رسمی لایحه اسقاط حق تجدیدنظرخواهی و فرجام‌خواهی مستند به ماده ۳۳۳ قانون آیین دادرسی مدنی جهت صدور فوری گواهی قطعیت دادنامه.",
   keywords: ["اسقاط حق تجدیدنظرخواهی", "ماده ۳۳۳ قانون آیین دادرسی مدنی", "قطعیت فوری رأی دادگاه", "اسقاط فرجام‌خواهی طلاق توافقی", "نگارش یار"],
   alternates: {
     canonical: 'https://www.negaresh-yar.ir/samples/appeal-waver-acceptance-brief',
   },
   openGraph: {
-    title: "نمونه لایحه اسقاط حق تجدیدنظرخواهی (ماده ۳۳۳) | نگارش یار",
+    title: "نمونه لایحه اسقاط حق تجدیدنظرخواهی [رایگان، دانلود فایل Word و PDF] | نگارش یار",
     description: "دانلود نمونه متن رسمی لایحه اسقاط حق تجدیدنظرخواهی و فرجام‌خواهی مستند به ماده ۳۳۳ قانون آیین دادرسی مدنی جهت صدور فوری گواهی قطعیت دادنامه.",
     url: 'https://www.negaresh-yar.ir/samples/appeal-waver-acceptance-brief',
     siteName: 'نگارش یار',

@@ -143,14 +143,14 @@ export const sampleAddressChangeNotificationBriefData: SampleLandingData = {
 };
 
 export const sampleAddressChangeNotificationBriefMetadata: Metadata = {
- title: "نمونه لایحه اعلام تغییر نشانی به دادگاه (ماده ۷۸ و ۷۹) | نگارش یار",
+ title: "نمونه لایحه اعلام تغییر نشانی به دادگاه [رایگان، دانلود فایل Word و PDF] | نگارش یار",
  description: "دانلود نمونه متن رسمی لایحه اعلام تغییر نشانی و اقامتگاه قانونی اصحاب دعوا به دفتر دادگاه مستند به مواد ۷۸ و ۷۹ قانون آیین دادرسی مدنی جهت ثبت رسمی.",
  keywords: ["اعلام تغییر نشانی به دادگاه", "ماده ۷۹ قانون آیین دادرسی مدنی", "لایحه تغییر آدرس اقامتگاه", "ابلاغ قانونی ماده ۷۹", "نگارش یار"],
  alternates: {
  canonical: 'https://www.negaresh-yar.ir/samples/address-change-notification-brief',
  },
  openGraph: {
- title: "نمونه لایحه اعلام تغییر نشانی به دادگاه (ماده ۷۸ و ۷۹) | نگارش یار",
+ title: "نمونه لایحه اعلام تغییر نشانی به دادگاه [رایگان، دانلود فایل Word و PDF] | نگارش یار",
  description: "دانلود نمونه متن رسمی لایحه اعلام تغییر نشانی و اقامتگاه قانونی اصحاب دعوا به دفتر دادگاه مستند به مواد ۷۸ و ۷۹ قانون آیین دادرسی مدنی جهت ثبت رسمی.",
  url: 'https://www.negaresh-yar.ir/samples/address-change-notification-brief',
  siteName: 'نگارش یار',

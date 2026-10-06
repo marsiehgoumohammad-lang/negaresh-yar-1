@@ -349,7 +349,7 @@ export const sampleAdministrativeLetterData: SampleLandingData = {
 };
 
 export const sampleAdministrativeLetterMetadata: Metadata = {
-  title: 'نمونه نامه اداری رسمی و عریضه به ادارات | نگارش یار',
+  title: 'نمونه نامه اداری رسمی [رایگان، دانلود فایل Word و PDF] | نگارش یار',
   description: 'دانلود و مشاهده کامل ترین الگوی متن نامه اداری رسمی، اصطلاحات استاندارد دبیرخانه ای، اصول لحن محترمانه و نکات کلیدی جلب موافقت مدیران.',
   keywords: [
     'نمونه نامه اداری',
@@ -364,7 +364,7 @@ export const sampleAdministrativeLetterMetadata: Metadata = {
     canonical: 'https://www.negaresh-yar.ir/samples/administrative-letter',
   },
   openGraph: {
-    title: 'نمونه نامه اداری رسمی و عریضه به ادارات | نگارش یار',
+    title: 'نمونه نامه اداری رسمی [رایگان، دانلود فایل Word و PDF] | نگارش یار',
     description: 'الگوی استاندارد نگارش نامه های اداری و درخواست های رسمی به ادارات و سازمان ها.',
     url: 'https://www.negaresh-yar.ir/samples/administrative-letter',
     siteName: 'نگارش یار',

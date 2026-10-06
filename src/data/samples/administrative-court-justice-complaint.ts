@@ -250,7 +250,7 @@ export const sampleAdministrativeCourtJusticeComplaintData: SampleDocument = {
       badge: 'مقاله آموزشی'
     },
     {
-      title: 'چگونه به رئیس جمهور و مسئولان نامه بنویسیم؟',
+      title: 'نمونه دادخواست به دیوان عدالت اداری [رایگان، دانلود فایل Word و PDF] | نگارش یار',
       href: '/knowledge/how-to-write-president-letter',
       desc: 'اصول تنظیم نامه‌های مردمی اثرگذار و پیگیری در سامد.',
       badge: 'مقاله آموزشی'
