@@ -338,7 +338,7 @@ export const sampleInsolvencyData: SampleLandingData = {
 };
 
 export const sampleInsolvencyMetadata: Metadata = {
-  title: 'متن و نمونه دادخواست اعسار و تقسیط محکوم‌به (بدهی، سفته، مهریه و دیه) | نگارش یار',
+  title: 'نمونه درخواست اعسار و تقسیط محکوم به [رایگان، دانلود فایل Word و PDF] | نگارش یار',
   description: 'متن آماده و فرم دادخواست اعسار و تقسیط محکوم‌به برای بدهی، سفته، مهریه و دیه؛ همراه با استشهادیه ۲ نفره شهود و فرم صورت اموال ماده ۸ قانون نحوه اجرای محکومیت‌های مالی.',
   keywords: [
     'متن درخواست اعسار و تقسیط',
@@ -356,7 +356,7 @@ export const sampleInsolvencyMetadata: Metadata = {
     canonical: 'https://www.negaresh-yar.ir/samples/insolvency',
   },
   openGraph: {
-    title: 'متن و نمونه دادخواست اعسار و تقسیط محکوم‌به (بدهی، سفته، مهریه و دیه) | نگارش یار',
+    title: 'نمونه درخواست اعسار و تقسیط محکوم به [رایگان، دانلود فایل Word و PDF] | نگارش یار',
   description: 'الگوی رسمی دادخواست اعسار از پرداخت محکوم‌به و تقسیط بدهی جهت ارائه به دادگاه و اجرای احکام.',
     url: 'https://www.negaresh-yar.ir/samples/insolvency',
     siteName: 'نگارش یار',

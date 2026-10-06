@@ -5,7 +5,7 @@ export const sampleInsolvencyAppealCourtFeeFormData: SampleLandingData = {
   slug: 'insolvency-appeal-court-fee-form',
   categoryName: 'اعسار و تقسیط',
   badge: 'ماده ۵۰۵ و ۵۰۶ قانون آیین دادرسی مدنی',
-  metaTitle: 'فرم اعسار از هزینه دادرسی مرحله تجدید نظر [دادخواست + استشهادیه ۲ شاهد] | نگارش یار',
+  metaTitle: 'نمونه فرم اعسار از هزینه دادرسی مرحله تجدید نظر [رایگان، دانلود فایل Word و PDF] | نگارش یار',
   h1Title: 'فرم اعسار از هزینه دادرسی مرحله تجدید نظر',
   heroSubtitle: 'دانلود و مشاهده الگوی رسمی دادخواست و فرم استشهادیه اعسار از پرداخت هزینه دادرسی مرحله تجدیدنظر به همراه صورت اموال و دارایی‌ها مستند به مواد ۵۰۵ و ۵۰۶ قانون آیین دادرسی مدنی.',
   heroTrustChips: [
@@ -273,7 +273,7 @@ export const sampleInsolvencyAppealCourtFeeFormData: SampleLandingData = {
 };
 
 export const sampleInsolvencyAppealCourtFeeFormMetadata: Metadata = {
-  title: 'فرم اعسار از هزینه دادرسی مرحله تجدید نظر [دادخواست + استشهادیه ۲ شاهد] | نگارش یار',
+  title: 'نمونه فرم اعسار از هزینه دادرسی مرحله تجدید نظر [رایگان، دانلود فایل Word و PDF] | نگارش یار',
   description: 'دانلود و کپی رایگان فرم اعسار از هزینه دادرسی مرحله تجدید نظر به همراه متن استشهادیه دو شاهد و صورت اموال مستند به مواد ۵۰۵ و ۵۰۶ قانون آیین دادرسی مدنی.',
   keywords: [
     'فرم اعسار از هزینه دادرسی مرحله تجدید نظر',

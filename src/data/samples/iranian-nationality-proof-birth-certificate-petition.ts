@@ -173,7 +173,7 @@ export const sampleIranianNationalityProofBirthCertificatePetitionData: SampleLa
 };
 
 export const sampleIranianNationalityProofBirthCertificatePetitionMetadata: Metadata = {
-  title: 'نمونه دادخواست اثبات تابعیت ایرانی و صدور شناسنامه | نگارش یار',
+  title: 'نمونه دادخواست اثبات تابعیت ایرانی و صدور شناسنامه [رایگان، دانلود فایل Word و PDF] | نگارش یار',
   description: 'متن استاندارد دادخواست حقوقی اثبات تابعیت ایرانی در دادگاه عمومی حقوقی و الزام اداره ثبت احوال به صدور شناسنامه مستند به ماده ۹۷۶ قانون مدنی و رأی وحدت رویه ۷۴۸.',
   keywords: [
     'دادخواست اثبات تابعیت ایرانی',
@@ -186,7 +186,7 @@ export const sampleIranianNationalityProofBirthCertificatePetitionMetadata: Meta
     canonical: 'https://www.negaresh-yar.ir/samples/iranian-nationality-proof-birth-certificate-petition',
   },
   openGraph: {
-    title: 'نمونه دادخواست اثبات تابعیت ایرانی و صدور شناسنامه | نگارش یار',
+    title: 'نمونه دادخواست اثبات تابعیت ایرانی و صدور شناسنامه [رایگان، دانلود فایل Word و PDF] | نگارش یار',
     description: 'متن فرم استاندارد قضایی دادخواست اثبات تابعیت ایرانی و الزام ثبت احوال به صدور شناسنامه در سامانه ثنا.',
     url: 'https://www.negaresh-yar.ir/samples/iranian-nationality-proof-birth-certificate-petition',
     siteName: 'نگارش یار',

@@ -214,7 +214,7 @@ export const sampleGuildUnionLetterData: SampleLandingData = {
 
   relatedArticles: [
     {
-      title: 'راهنمای گام‌به‌گام دریافت پروانه کسب در درگاه ملی مجوزها',
+      title: 'نمونه نامه به اتحادیه صنفی [رایگان، دانلود فایل Word و PDF] | نگارش یار',
       href: '/knowledge/how-to-write-administrative-letter',
       badge: 'راهنمای اصناف',
       desc: 'شرایط، استعلامات بهداشت و اماکن، مدارک لازم و مراحل اخذ پروانه کسب آنلاین.',

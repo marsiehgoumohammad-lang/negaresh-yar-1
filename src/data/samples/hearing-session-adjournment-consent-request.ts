@@ -125,14 +125,14 @@ export const sampleHearingSessionAdjournmentConsentRequestData: SampleLandingDat
 };
 
 export const sampleHearingSessionAdjournmentConsentRequestMetadata: Metadata = {
-  title: "نمونه لایحه تجدید جلسه با توافق طرفین (ماده ۹۹) | نگارش یار",
+  title: "نمونه لایحه تجدید جلسه با توافق طرفین [رایگان، دانلود فایل Word و PDF] | نگارش یار",
   description: "دانلود رایگان نمونه متن رسمی لایحه تقاضای تجدید جلسه دادرسی با تراضی و توافق طرفین برای یک بار مستند به ماده ۹۹ قانون آیین دادرسی مدنی.",
   keywords: ["تجدید جلسه دادرسی با تراضی", "ماده ۹۹ قانون آیین دادرسی مدنی", "لایحه توافق طرفین برای تجدید وقت دادگاه", "مهلت سازش در دادگاه", "نگارش یار"],
   alternates: {
     canonical: 'https://www.negaresh-yar.ir/samples/hearing-session-adjournment-consent-request',
   },
   openGraph: {
-    title: "نمونه لایحه تجدید جلسه با توافق طرفین (ماده ۹۹) | نگارش یار",
+    title: "نمونه لایحه تجدید جلسه با توافق طرفین [رایگان، دانلود فایل Word و PDF] | نگارش یار",
     description: "دانلود رایگان نمونه متن رسمی لایحه تقاضای تجدید جلسه دادرسی با تراضی و توافق طرفین برای یک بار مستند به ماده ۹۹ قانون آیین دادرسی مدنی.",
     url: 'https://www.negaresh-yar.ir/samples/hearing-session-adjournment-consent-request',
     siteName: 'نگارش یار',
