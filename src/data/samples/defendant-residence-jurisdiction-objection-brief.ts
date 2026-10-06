@@ -137,14 +137,14 @@ export const sampleDefendantResidenceJurisdictionObjectionBriefData: SampleLandi
 };
 
 export const sampleDefendantResidenceJurisdictionObjectionBriefMetadata: Metadata = {
-  title: "نمونه لایحه ایراد عدم صلاحیت محلی دادگاه (ماده ۱۱) | نگارش یار",
+  title: "نمونه لایحه ایراد عدم صلاحیت محلی دادگاه [رایگان، دانلود فایل Word و PDF] | نگارش یار",
   description: "دانلود رایگان نمونه لایحه رسمی ایراد عدم صلاحیت محلی دادگاه تا پایان اولین جلسه دادرسی مستند به ماده ۱۱ و بند ۱ ماده ۸۴ قانون آیین دادرسی مدنی.",
   keywords: ["لایحه ایراد عدم صلاحیت محلی", "ماده ۱۱ قانون آیین دادرسی مدنی", "قرار عدم صلاحیت دادگاه حقوقی", "ایراد صلاحیت اقامتگاه خوانده", "نگارش یار"],
   alternates: {
     canonical: 'https://www.negaresh-yar.ir/samples/defendant-residence-jurisdiction-objection-brief',
   },
   openGraph: {
-    title: "نمونه لایحه ایراد عدم صلاحیت محلی دادگاه (ماده ۱۱) | نگارش یار",
+    title: "نمونه لایحه ایراد عدم صلاحیت محلی دادگاه [رایگان، دانلود فایل Word و PDF] | نگارش یار",
     description: "دانلود رایگان نمونه لایحه رسمی ایراد عدم صلاحیت محلی دادگاه تا پایان اولین جلسه دادرسی مستند به ماده ۱۱ و بند ۱ ماده ۸۴ قانون آیین دادرسی مدنی.",
     url: 'https://www.negaresh-yar.ir/samples/defendant-residence-jurisdiction-objection-brief',
     siteName: 'نگارش یار',

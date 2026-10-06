@@ -5,7 +5,7 @@ export const sampleDetentionToBailData: SampleLandingData = {
   slug: 'detention-to-bail',
   categoryName: 'وثیقه و قرارهای تأمین',
   badge: 'الگوی فک بازداشت موقت در دادسرا',
-  metaTitle: 'درخواست تبدیل قرار بازداشت موقت به وثیقه [دانلود لایحه فک بازداشت] | نگارش یار',
+  metaTitle: 'نمونه لایحه تبدیل قرار بازداشت موقت به وثیقه [رایگان، دانلود فایل Word و PDF] | نگارش یار',
   h1Title: 'درخواست تبدیل قرار بازداشت موقت به وثیقه و آزادی متهم',
   heroSubtitle: 'دانلود و مشاهده الگوی رسمی و حقوقی نمونه لایحه درخواست تبدیل قرار بازداشت موقت به وثیقه یا کفالت، مستند به مواد ۲۴۱، ۲۴۲ و ۲۴۴ قانون آیین دادرسی کیفری جهت فک بازداشت در دادسرا.',
   heroTrustChips: [
@@ -250,7 +250,7 @@ export const sampleDetentionToBailData: SampleLandingData = {
 };
 
 export const sampleDetentionToBailMetadata: Metadata = {
-  title: 'درخواست تبدیل قرار بازداشت موقت به وثیقه [دانلود لایحه فک بازداشت] | نگارش یار',
+  title: 'نمونه لایحه تبدیل قرار بازداشت موقت به وثیقه [رایگان، دانلود فایل Word و PDF] | نگارش یار',
   description: 'دانلود و کپی متن درخواست تبدیل قرار بازداشت موقت به وثیقه یا کفالت مستند به مواد ۲۴۱، ۲۴۲ و ۲۴۴ قانون آیین دادرسی کیفری جهت فک بازداشت در دادسرا.',
   keywords: [
     'درخواست تبدیل قرار بازداشت موقت به وثیقه',
@@ -269,7 +269,7 @@ export const sampleDetentionToBailMetadata: Metadata = {
     canonical: 'https://www.negaresh-yar.ir/samples/detention-to-bail',
   },
   openGraph: {
-    title: 'درخواست تبدیل قرار بازداشت موقت به وثیقه [دانلود لایحه فک بازداشت] | نگارش یار',
+    title: 'نمونه لایحه تبدیل قرار بازداشت موقت به وثیقه [رایگان، دانلود فایل Word و PDF] | نگارش یار',
     description: 'دانلود و کپی متن درخواست تبدیل قرار بازداشت موقت به وثیقه یا کفالت مستند به مواد ۲۴۱، ۲۴۲ و ۲۴۴ ق.آ.د.ک در دادسرا.',
     url: 'https://www.negaresh-yar.ir/samples/detention-to-bail',
     siteName: 'نگارش یار',

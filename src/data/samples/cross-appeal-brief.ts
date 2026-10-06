@@ -125,14 +125,14 @@ export const sampleCrossAppealBriefData: SampleLandingData = {
 };
 
 export const sampleCrossAppealBriefMetadata: Metadata = {
-  title: "نمونه لایحه پاسخ به تجدیدنظرخواهی (ماده ۳۴۶) | نگارش یار",
+  title: "نمونه لایحه پاسخ به تجدیدنظرخواهی [رایگان، دانلود فایل Word و PDF] | نگارش یار",
   description: "دانلود نمونه متن رسمی لایحه پاسخ به تجدیدنظرخواهی در مرحله تبادل لوایح دادگاه تجدیدنظر مستند به مواد ۳۴۱ و ۳۴۶ قانون آیین دادرسی مدنی جهت ابرام رأی.",
   keywords: ["لایحه تبادل لوایح تجدیدنظر", "ماده ۳۴۶ قانون آیین دادرسی مدنی", "پاسخ به تجدیدنظرخواهی طرف مقابل", "ابرام و تأیید دادنامه بدوی", "نگارش یار"],
   alternates: {
     canonical: 'https://www.negaresh-yar.ir/samples/cross-appeal-brief',
   },
   openGraph: {
-    title: "نمونه لایحه پاسخ به تجدیدنظرخواهی (ماده ۳۴۶) | نگارش یار",
+    title: "نمونه لایحه پاسخ به تجدیدنظرخواهی [رایگان، دانلود فایل Word و PDF] | نگارش یار",
     description: "دانلود نمونه متن رسمی لایحه پاسخ به تجدیدنظرخواهی در مرحله تبادل لوایح دادگاه تجدیدنظر مستند به مواد ۳۴۱ و ۳۴۶ قانون آیین دادرسی مدنی جهت ابرام رأی.",
     url: 'https://www.negaresh-yar.ir/samples/cross-appeal-brief',
     siteName: 'نگارش یار',

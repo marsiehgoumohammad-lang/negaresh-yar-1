@@ -125,14 +125,14 @@ export const sampleDefaultJudgmentSecurityDemandRequestData: SampleLandingData =
 };
 
 export const sampleDefaultJudgmentSecurityDemandRequestMetadata: Metadata = {
-  title: "نمونه تقاضای اخذ تأمین از محکوم‌له (ماده ۳۰۶) | نگارش یار",
+  title: "نمونه تقاضای اخذ تامین از محکوم له [رایگان، دانلود فایل Word و PDF] | نگارش یار",
   description: "دانلود نمونه متن رسمی درخواست الزام به معرفی ضامن یا اخذ تأمین از محکوم‌له پیش از اجرای حکم غیابی مستند به تبصره ۲ ماده ۳۰۶ قانون آیین دادرسی مدنی.",
   keywords: ["اخذ تأمین در اجرای حکم غیابی", "ماده ۳۰۶ تبصره ۲ قانون آیین دادرسی مدنی", "معرفی ضامن معتبر محکوم‌له", "اجرای احکام مدنی حکم غیابی", "نگارش یار"],
   alternates: {
     canonical: 'https://www.negaresh-yar.ir/samples/default-judgment-security-demand-request',
   },
   openGraph: {
-    title: "نمونه تقاضای اخذ تأمین از محکوم‌له (ماده ۳۰۶) | نگارش یار",
+    title: "نمونه تقاضای اخذ تامین از محکوم له [رایگان، دانلود فایل Word و PDF] | نگارش یار",
     description: "دانلود نمونه متن رسمی درخواست الزام به معرفی ضامن یا اخذ تأمین از محکوم‌له پیش از اجرای حکم غیابی مستند به تبصره ۲ ماده ۳۰۶ قانون آیین دادرسی مدنی.",
     url: 'https://www.negaresh-yar.ir/samples/default-judgment-security-demand-request',
     siteName: 'نگارش یار',
