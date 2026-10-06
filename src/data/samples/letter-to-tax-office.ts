@@ -277,7 +277,7 @@ export const sampleLetterToTaxOfficeData: SampleLandingData = {
 };
 
 export const sampleLetterToTaxOfficeMetadata: Metadata = {
-  title: 'نمونه نامه و لایحه اعتراض به برگ تشخیص مالیات | نگارش یار',
+  title: 'نمونه نامه و لایحه اعتراض به برگ تشخیص مالیات [رایگان، دانلود فایل Word و PDF] | نگارش یار',
   description: 'دانلود و مشاهده الگوی کامل متن لایحه اعتراض به برگ تشخیص مالیات عملکرد، ارزش افزوده و تراکنش بانکی بر اساس ماده ۲۳۸ و ۲۴۴ قانون مالیات های مستقیم.',
   keywords: [
     'نمونه لایحه اعتراض مالیاتی',
@@ -292,7 +292,7 @@ export const sampleLetterToTaxOfficeMetadata: Metadata = {
     canonical: 'https://www.negaresh-yar.ir/samples/letter-to-tax-office',
   },
   openGraph: {
-    title: 'نمونه نامه و لایحه اعتراض به برگ تشخیص مالیات | نگارش یار',
+    title: 'نمونه نامه و لایحه اعتراض به برگ تشخیص مالیات [رایگان، دانلود فایل Word و PDF] | نگارش یار',
   description: 'الگوی استاندارد دفاعیه مالیاتی جهت ارائه به ممیز کل و هیات حل اختلاف مالیاتی.',
     url: 'https://www.negaresh-yar.ir/samples/letter-to-tax-office',
     siteName: 'نگارش یار',

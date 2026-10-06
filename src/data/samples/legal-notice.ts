@@ -318,7 +318,7 @@ export const sampleLegalNoticeData: SampleLandingData = {
 };
 
 export const sampleLegalNoticeMetadata: Metadata = {
-  title: 'نمونه متن اظهارنامه رسمی ماده ۱۵۶، اخطار قانونی و مطالبه طلب | نگارش یار',
+  title: 'نمونه اظهارنامه رسمی [رایگان، دانلود فایل Word و PDF] | نگارش یار',
   description:
     'دانلود و کپی رایگان نمونه متن اظهارنامه رسمی دادگستری ماده ۱۵۶ جهت مطالبه وجه، ایفای تعهدات قراردادی و ثبت در سامانه ثنا و دفاتر خدمات الکترونیک قضایی.',
   keywords: [

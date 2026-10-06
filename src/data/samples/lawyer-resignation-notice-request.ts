@@ -133,14 +133,14 @@ export const sampleLawyerResignationNoticeRequestData: SampleLandingData = {
 };
 
 export const sampleLawyerResignationNoticeRequestMetadata: Metadata = {
-  title: "نمونه اعلام کتبی استعفای وکیل به دادگاه (ماده ۳۹ و ۴۲) | نگارش یار",
+  title: "نمونه اعلام کتبی استعفای وکیل به دادگاه [رایگان، دانلود فایل Word و PDF] | نگارش یار",
   description: "دانلود نمونه متن استاندارد لایحه اعلام استعفای وکیل دادگستری به دادگاه و ارسال اخطار به موکل مستند به مواد ۳۹ و ۴۲ قانون آیین دادرسی مدنی.",
   keywords: ["استعفای وکیل دادگستری", "ماده ۳۹ قانون آیین دادرسی مدنی", "ماده ۴۲ ق.آ.د.م", "لایحه استعفای وکیل", "نگارش یار"],
   alternates: {
     canonical: 'https://www.negaresh-yar.ir/samples/lawyer-resignation-notice-request',
   },
   openGraph: {
-    title: "نمونه اعلام کتبی استعفای وکیل به دادگاه (ماده ۳۹ و ۴۲) | نگارش یار",
+    title: "نمونه اعلام کتبی استعفای وکیل به دادگاه [رایگان، دانلود فایل Word و PDF] | نگارش یار",
     description: "دانلود نمونه متن استاندارد لایحه اعلام استعفای وکیل دادگستری به دادگاه و ارسال اخطار به موکل مستند به مواد ۳۹ و ۴۲ قانون آیین دادرسی مدنی.",
     url: 'https://www.negaresh-yar.ir/samples/lawyer-resignation-notice-request',
     siteName: 'نگارش یار',

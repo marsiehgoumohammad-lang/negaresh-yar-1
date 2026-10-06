@@ -167,14 +167,14 @@ export const sampleLitigationCostInsolvencyPetitionData: SampleLandingData = {
 };
 
 export const sampleLitigationCostInsolvencyPetitionMetadata: Metadata = {
-  title: "نمونه دادخواست اعسار از هزینه دادرسی (ماده ۵۰۵) | نگارش یار",
+  title: "نمونه دادخواست اعسار از هزینه دادرسی [رایگان، دانلود فایل Word و PDF] | نگارش یار",
   description: "دانلود نمونه متن رسمی دادخواست اعسار از پرداخت هزینه دادرسی بدوی یا تجدیدنظر مستند به مواد ۵۰۴، ۵۰۵ و ۵۰۶ قانون آیین دادرسی مدنی همراه با صورت اموال.",
   keywords: ["اعسار از هزینه دادرسی", "ماده ۵۰۵ قانون آیین دادرسی مدنی", "ماده ۵۰۶ ق.آ.د.م شهادت شهود اعسار", "معافیت از تمبر دادرسی دادگاه", "نگارش یار"],
   alternates: {
     canonical: 'https://www.negaresh-yar.ir/samples/litigation-cost-insolvency-petition',
   },
   openGraph: {
-    title: "نمونه دادخواست اعسار از هزینه دادرسی (ماده ۵۰۵) | نگارش یار",
+    title: "نمونه دادخواست اعسار از هزینه دادرسی [رایگان، دانلود فایل Word و PDF] | نگارش یار",
     description: "دانلود نمونه متن رسمی دادخواست اعسار از پرداخت هزینه دادرسی بدوی یا تجدیدنظر مستند به مواد ۵۰۴، ۵۰۵ و ۵۰۶ قانون آیین دادرسی مدنی همراه با صورت اموال.",
     url: 'https://www.negaresh-yar.ir/samples/litigation-cost-insolvency-petition',
     siteName: 'نگارش یار',
