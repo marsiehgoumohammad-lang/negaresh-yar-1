@@ -202,7 +202,7 @@ export const sampleObjectionNonProsecutionOrderData: SampleLandingData = {
 };
 
 export const sampleObjectionNonProsecutionOrderMetadata: Metadata = {
-  title: 'نمونه لایحه اعتراض به قرار منع تعقیب دادسرا | نگارش یار',
+  title: 'نمونه لایحه اعتراض به قرار منع تعقیب [رایگان، دانلود فایل Word و PDF] | نگارش یار',
   description: 'دانلود و مشاهده الگوی متن لایحه اعتراض به قرار منع تعقیب و موقوفی تعقیب دادسرا، جلب به دادرسی متهم و نقض قرار در دادگاه کیفری دو.',
   keywords: [
     'نمونه لایحه اعتراض به قرار منع تعقیب',
@@ -214,7 +214,7 @@ export const sampleObjectionNonProsecutionOrderMetadata: Metadata = {
     canonical: 'https://www.negaresh-yar.ir/samples/objection-non-prosecution-order',
   },
   openGraph: {
-    title: 'نمونه لایحه اعتراض به قرار منع تعقیب دادسرا | نگارش یار',
+    title: 'نمونه لایحه اعتراض به قرار منع تعقیب [رایگان، دانلود فایل Word و PDF] | نگارش یار',
   description: 'الگوی استاندارد لایحه اعتراض به قرار منع تعقیب دادسرا.',
     url: 'https://www.negaresh-yar.ir/samples/objection-non-prosecution-order',
     siteName: 'نگارش یار',

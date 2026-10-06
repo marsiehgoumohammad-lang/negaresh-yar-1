@@ -129,14 +129,14 @@ export const sampleOathTakingRequestBriefData: SampleLandingData = {
 };
 
 export const sampleOathTakingRequestBriefMetadata: Metadata = {
-  title: "نمونه لایحه تقاضای اتیان سوگند (ماده ۲۷۱) | نگارش یار",
+  title: "نمونه لایحه تقاضای اتیان سوگند [رایگان، دانلود فایل Word و PDF] | نگارش یار",
   description: "دانلود نمونه متن رسمی لایحه تقاضای اتیان سوگند قاطع دعوا و صدور قرار سوگند شرعی مستند به مواد ۲۷۱، ۲۷۲ و ۲۷۳ قانون آیین دادرسی مدنی.",
   keywords: ["تقاضای سوگند در دادگاه", "ماده ۲۷۱ قانون آیین دادرسی مدنی", "قرار اتیان سوگند شرعی", "نکول از سوگند و رد یمین", "نگارش یار"],
   alternates: {
     canonical: 'https://www.negaresh-yar.ir/samples/oath-taking-request-brief',
   },
   openGraph: {
-    title: "نمونه لایحه تقاضای اتیان سوگند (ماده ۲۷۱) | نگارش یار",
+    title: "نمونه لایحه تقاضای اتیان سوگند [رایگان، دانلود فایل Word و PDF] | نگارش یار",
     description: "دانلود نمونه متن رسمی لایحه تقاضای اتیان سوگند قاطع دعوا و صدور قرار سوگند شرعی مستند به مواد ۲۷۱، ۲۷۲ و ۲۷۳ قانون آیین دادرسی مدنی.",
     url: 'https://www.negaresh-yar.ir/samples/oath-taking-request-brief',
     siteName: 'نگارش یار',

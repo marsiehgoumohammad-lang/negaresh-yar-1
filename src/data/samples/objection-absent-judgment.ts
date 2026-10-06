@@ -226,7 +226,7 @@ export const sampleObjectionAbsentJudgmentData: SampleLandingData = {
 };
 
 export const sampleObjectionAbsentJudgmentMetadata: Metadata = {
-  title: 'نمونه دادخواست و لایحه واخواهی از حکم غیابی | نگارش یار',
+  title: 'نمونه دادخواست واخواهی از حکم غیابی [رایگان، دانلود فایل Word و PDF] | نگارش یار',
   description: 'دانلود و مشاهده الگوی متن دادخواست واخواهی از رای غیابی دادگاه حقوقی و کیفری، استناد به ماده ۳۰۵ آیین دادرسی مدنی و توقف حکم جلب.',
   keywords: [
     'نمونه دادخواست واخواهی',
@@ -240,7 +240,7 @@ export const sampleObjectionAbsentJudgmentMetadata: Metadata = {
     canonical: 'https://www.negaresh-yar.ir/samples/objection-absent-judgment',
   },
   openGraph: {
-    title: 'نمونه دادخواست و لایحه واخواهی از حکم غیابی | نگارش یار',
+    title: 'نمونه دادخواست واخواهی از حکم غیابی [رایگان، دانلود فایل Word و PDF] | نگارش یار',
   description: 'الگوی استاندارد دادخواست واخواهی از حکم غیابی دادگاه و توقف عملیات اجرایی.',
     url: 'https://www.negaresh-yar.ir/samples/objection-absent-judgment',
     siteName: 'نگارش یار',

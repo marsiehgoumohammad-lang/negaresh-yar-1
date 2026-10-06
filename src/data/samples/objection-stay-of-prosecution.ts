@@ -220,7 +220,7 @@ export const sampleObjectionStayOfProsecutionData: SampleLandingData = {
 };
 
 export const sampleObjectionStayOfProsecutionMetadata: Metadata = {
-  title: 'نمونه لایحه اعتراض به قرار موقوفی تعقیب دادسرا | نگارش یار',
+  title: 'نمونه اعتراض به قرار موقوفی تعقیب [رایگان، دانلود فایل Word و PDF] | نگارش یار',
   description: 'متن آماده لایحه اعتراض به قرار موقوفی تعقیب دادسرا به جهات مرور زمان، گذشت یا فوت، مستند به مواد ۱۳ و ۲۷۰ قانون آیین دادرسی کیفری جهت نقض در دادگاه.',
   keywords: [
     'نمونه اعتراض به قرار موقوفی تعقیب',
@@ -234,7 +234,7 @@ export const sampleObjectionStayOfProsecutionMetadata: Metadata = {
     canonical: 'https://www.negaresh-yar.ir/samples/objection-stay-of-prosecution',
   },
   openGraph: {
-    title: 'نمونه لایحه اعتراض به قرار موقوفی تعقیب دادسرا | نگارش یار',
+    title: 'نمونه اعتراض به قرار موقوفی تعقیب [رایگان، دانلود فایل Word و PDF] | نگارش یار',
   description: 'متن آماده لایحه اعتراض به قرار موقوفی تعقیب دادسرا و تقاضای نقض در دادگاه کیفری دو.',
     url: 'https://www.negaresh-yar.ir/samples/objection-stay-of-prosecution',
     siteName: 'نگارش یار',

@@ -125,14 +125,14 @@ export const sampleOriginalDocumentsPresentationDemandBriefData: SampleLandingDa
 };
 
 export const sampleOriginalDocumentsPresentationDemandBriefMetadata: Metadata = {
-  title: "نمونه لایحه مطالبه ارائه اصل اسناد (ماده ۹۶) | نگارش یار",
+  title: "نمونه لایحه مطالبه ارائه اصل اسناد [رایگان، دانلود فایل Word و PDF] | نگارش یار",
   description: "دانلود رایگان نمونه متن رسمی لایحه مطالبه ارائه اصل اسناد در جلسه اول دادرسی و تقاضای خروج سند از دلایل مستند به ماده ۹۶ قانون آیین دادرسی مدنی.",
   keywords: ["مطالبه اصل سند در دادگاه", "ماده ۹۶ قانون آیین دادرسی مدنی", "خروج سند از عداد دلایل", "ابطال دادخواست به دلیل عدم ارائه اصل سند", "نگارش یار"],
   alternates: {
     canonical: 'https://www.negaresh-yar.ir/samples/original-documents-presentation-demand-brief',
   },
   openGraph: {
-    title: "نمونه لایحه مطالبه ارائه اصل اسناد (ماده ۹۶) | نگارش یار",
+    title: "نمونه لایحه مطالبه ارائه اصل اسناد [رایگان، دانلود فایل Word و PDF] | نگارش یار",
     description: "دانلود رایگان نمونه متن رسمی لایحه مطالبه ارائه اصل اسناد در جلسه اول دادرسی و تقاضای خروج سند از دلایل مستند به ماده ۹۶ قانون آیین دادرسی مدنی.",
     url: 'https://www.negaresh-yar.ir/samples/original-documents-presentation-demand-brief',
     siteName: 'نگارش یار',

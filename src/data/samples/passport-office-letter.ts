@@ -226,7 +226,7 @@ export const samplePassportOfficeLetterData: SampleLandingData = {
       badge: 'امور مالیاتی',
     },
     {
-      title: 'شکایت در دیوان عدالت اداری',
+      title: 'نمونه نامه به اداره گذرنامه [رایگان، دانلود فایل Word و PDF] | نگارش یار',
       href: '/samples/administrative-court-justice-complaint',
       desc: 'ابطال ممنوع‌الخروجی‌های غیرقانونی دستگاه‌های دولتی.',
       badge: 'دیوان عدالت',

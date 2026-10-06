@@ -233,7 +233,7 @@ export const sampleOfficialDeedCompulsionPetitionData: SampleDocument = {
       badge: 'مقاله آموزشی',
     },
     {
-      title: 'اظهارنامه رسمی چیست و چگونه ارسال می‌شود؟',
+      title: 'نمونه دادخواست الزام به تفکیک و تنظیم سند رسمی [رایگان، دانلود فایل Word و PDF] | نگارش یار',
       href: '/knowledge/what-is-legal-notice',
       desc: 'ضرورت ارسال اظهارنامه حضور در دفترخانه پیش از دادخواست الزام به سند.',
       badge: 'مقاله آموزشی',
