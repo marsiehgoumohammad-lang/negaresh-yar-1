@@ -305,7 +305,7 @@ export const sampleUniversityLetterData: SampleLandingData = {
 };
 
 export const sampleUniversityLetterMetadata: Metadata = {
-  title: 'نمونه نامه به رئیس دانشگاه | مرخصی تحصیلی، تخفیف شهریه و حذف ترم | نگارش یار',
+  title: 'نمونه نامه به رئیس دانشگاه [رایگان، دانلود فایل Word و PDF] | نگارش یار',
   description:
     'دانلود ۴ نمونه متن آماده نامه به ریاست و کمیسیون موارد خاص دانشگاه: مرخصی بدون سنوات، تقسیط شهریه، حذف ترم پزشکی و صدور دانشنامه همراه با مشاوره.',
   keywords: [

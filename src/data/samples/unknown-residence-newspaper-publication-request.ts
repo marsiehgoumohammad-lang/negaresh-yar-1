@@ -143,14 +143,14 @@ export const sampleUnknownResidenceNewspaperPublicationRequestData: SampleLandin
 };
 
 export const sampleUnknownResidenceNewspaperPublicationRequestMetadata: Metadata = {
- title: "نمونه درخواست ابلاغ از طریق نشر آگهی (ماده ۷۳) | نگارش یار",
+ title: "نمونه درخواست ابلاغ از طریق نشر آگهی [رایگان، دانلود فایل Word و PDF] | نگارش یار",
  description: "دانلود رایگان نمونه متن رسمی درخواست ابلاغ وقت رسیدگی و دادخواست از طریق یک نوبت نشر آگهی در روزنامه کثیرالانتشار به علت مجهول المکان بودن خوانده مستند به ماده ۷۳ ق.آ.د.م.",
  keywords: ["ابلاغ از طریق نشر آگهی", "ماده ۷۳ قانون آیین دادرسی مدنی", "خوانده مجهول المکان", "آگهی روزنامه کثیرالانتشار دادگاه", "نگارش یار"],
  alternates: {
  canonical: 'https://www.negaresh-yar.ir/samples/unknown-residence-newspaper-publication-request',
  },
  openGraph: {
- title: "نمونه درخواست ابلاغ از طریق نشر آگهی (ماده ۷۳) | نگارش یار",
+ title: "نمونه درخواست ابلاغ از طریق نشر آگهی [رایگان، دانلود فایل Word و PDF] | نگارش یار",
  description: "دانلود رایگان نمونه متن رسمی درخواست ابلاغ وقت رسیدگی و دادخواست از طریق یک نوبت نشر آگهی در روزنامه کثیرالانتشار به علت مجهول المکان بودن خوانده مستند به ماده ۷۳ ق.آ.د.م.",
  url: 'https://www.negaresh-yar.ir/samples/unknown-residence-newspaper-publication-request',
  siteName: 'نگارش یار',

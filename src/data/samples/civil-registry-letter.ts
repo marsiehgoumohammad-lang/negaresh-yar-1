@@ -311,7 +311,7 @@ export const sampleCivilRegistryLetterData: SampleLandingData = {
 };
 
 export const sampleCivilRegistryLetterMetadata: Metadata = {
-  title: 'نمونه نامه به ثبت احوال | تغییر نام، اصلاح شناسنامه و حذف پسوند | نگارش یار',
+  title: 'نمونه نامه به ثبت احوال برای تغییر نام و اصلاح شناسنامه [رایگان، دانلود فایل Word و PDF] | نگارش یار',
   description:
     'دانلود ۴ نمونه متن آماده نامه به اداره ثبت احوال: تقاضای تغییر نام کوچک، حذف پسوند نام خانوادگی، اصلاح تاریخ تولد و شناسنامه جدید همراه با راهنمای قانونی و مشاوره.',
   keywords: [

@@ -172,7 +172,7 @@ export const sampleCivilRegistryBirthCertificateCompulsionPetitionData: SampleLa
 };
 
 export const sampleCivilRegistryBirthCertificateCompulsionPetitionMetadata: Metadata = {
-  title: 'نمونه دادخواست الزام ثبت احوال به صدور شناسنامه | نگارش یار',
+  title: 'نمونه دادخواست الزام ثبت احوال به صدور شناسنامه [رایگان، دانلود فایل Word و PDF] | نگارش یار',
   description: 'متن استاندارد دادخواست حقوقی الزام اداره ثبت احوال به تنظیم سند سجلی و صدور شناسنامه در دادگاه عمومی حقوقی بر مبنای رأی وحدت رویه شماره ۷۴۸ دیوان عالی کشور.',
   keywords: [
     'دادخواست الزام ثبت احوال به صدور شناسنامه',
@@ -185,7 +185,7 @@ export const sampleCivilRegistryBirthCertificateCompulsionPetitionMetadata: Meta
     canonical: 'https://www.negaresh-yar.ir/samples/civil-registry-birth-certificate-compulsion-petition',
   },
   openGraph: {
-    title: 'نمونه دادخواست الزام ثبت احوال به صدور شناسنامه | نگارش یار',
+    title: 'نمونه دادخواست الزام ثبت احوال به صدور شناسنامه [رایگان، دانلود فایل Word و PDF] | نگارش یار',
     description: 'متن فرم استاندارد قضایی دادخواست الزام اداره ثبت احوال به صدور شناسنامه در سامانه ثنا.',
     url: 'https://www.negaresh-yar.ir/samples/civil-registry-birth-certificate-compulsion-petition',
     siteName: 'نگارش یار',

@@ -185,7 +185,7 @@ export const sampleCivilRegistryDisputeBoardObjectionData: SampleLandingData = {
 };
 
 export const sampleCivilRegistryDisputeBoardObjectionMetadata: Metadata = {
-  title: 'نمونه اعتراض به رأی هیأت حل اختلاف ثبت احوال | نگارش یار',
+  title: 'نمونه اعتراض به رای هیات حل اختلاف ثبت احوال [رایگان، دانلود فایل Word و PDF] | نگارش یار',
   description: 'متن استاندارد دادخواست حقوقی اعتراض به رأی هیأت حل اختلاف اداره ثبت احوال در دادگاه عمومی حقوقی مستند به ماده ۴ قانون ثبت احوال در مهلت ۱۰ روزه قانونی.',
   keywords: [
     'اعتراض به رای هیات حل اختلاف ثبت احوال',
@@ -198,7 +198,7 @@ export const sampleCivilRegistryDisputeBoardObjectionMetadata: Metadata = {
     canonical: 'https://www.negaresh-yar.ir/samples/civil-registry-dispute-board-objection',
   },
   openGraph: {
-    title: 'نمونه اعتراض به رأی هیأت حل اختلاف ثبت احوال | نگارش یار',
+    title: 'نمونه اعتراض به رای هیات حل اختلاف ثبت احوال [رایگان، دانلود فایل Word و PDF] | نگارش یار',
     description: 'متن فرم استاندارد قضایی اعتراض به تصمیمات هیأت حل اختلاف ثبت احوال در محاکم عمومی حقوقی.',
     url: 'https://www.negaresh-yar.ir/samples/civil-registry-dispute-board-objection',
     siteName: 'نگارش یار',

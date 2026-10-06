@@ -215,7 +215,7 @@ export const sampleWaterCompanyLetterData: SampleLandingData = {
 
   relatedArticles: [
     {
-      title: 'حقوق و تکالیف مالکان در تفکیک اشتراکات ساختمان طبق قانون تملک آپارتمان‌ها',
+      title: 'نمونه نامه به شرکت آب برای تفکیک اشتراکات ساختمان [رایگان، دانلود فایل Word و PDF] | نگارش یار',
       href: '/knowledge/how-to-write-administrative-letter',
       badge: 'قوانین آپارتمان',
       desc: 'بررسی مصوبات مجمع عمومی و هزینه‌های تاسیسات عمومی و انشعابات مجزا.',
