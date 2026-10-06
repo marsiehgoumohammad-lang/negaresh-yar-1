@@ -129,14 +129,14 @@ export const sampleAttachmentOrderObjectionBriefData: SampleLandingData = {
 };
 
 export const sampleAttachmentOrderObjectionBriefMetadata: Metadata = {
-  title: "نمونه لایحه اعتراض به قرار تأمین خواسته (ماده ۱۱۶) | نگارش یار",
+  title: "نمونه لایحه اعتراض به قرار تامین خواسته [رایگان، دانلود فایل Word و PDF] | نگارش یار",
   description: "دانلود رایگان نمونه متن رسمی لایحه اعتراض به صدور قرار تأمین خواسته در مهلت ۱۰ روزه مستند به ماده ۱۱۶ قانون آیین دادرسی مدنی با نکات تخصصی.",
   keywords: ["اعتراض به قرار تأمین خواسته", "ماده ۱۱۶ قانون آیین دادرسی مدنی", "مهلت ۱۰ روزه اعتراض به تأمین", "فسخ قرار تأمین خواسته", "نگارش یار"],
   alternates: {
     canonical: 'https://www.negaresh-yar.ir/samples/attachment-order-objection-brief',
   },
   openGraph: {
-    title: "نمونه لایحه اعتراض به قرار تأمین خواسته (ماده ۱۱۶) | نگارش یار",
+    title: "نمونه لایحه اعتراض به قرار تامین خواسته [رایگان، دانلود فایل Word و PDF] | نگارش یار",
     description: "دانلود رایگان نمونه متن رسمی لایحه اعتراض به صدور قرار تأمین خواسته در مهلت ۱۰ روزه مستند به ماده ۱۱۶ قانون آیین دادرسی مدنی با نکات تخصصی.",
     url: 'https://www.negaresh-yar.ir/samples/attachment-order-objection-brief',
     siteName: 'نگارش یار',

@@ -5,7 +5,7 @@ export const sampleAuctionCancellationObjectionData: SampleLandingData = {
   slug: 'auction-cancellation-objection',
   categoryName: 'مزایده های دادگستری و ستاد ایران',
   badge: 'الگوی ابطال مزایده دادگاه',
-  metaTitle: 'نمونه لایحه ابطال مزایده و اعتراض به نحوه برگزاری [مواد ۱۳۶ و ۱۴۲] | نگارش یار',
+  metaTitle: 'نمونه دادخواست ابطال مزایده اجرای احکام [رایگان، دانلود فایل Word و PDF] | نگارش یار',
   metaDescription: 'دانلود و کپی نمونه لایحه ابطال مزایده اجرای احکام دادگستری و اعتراض به نحوه برگزاری و صحت مزایده به علت عدم نشر آگهی یا ارزیابی نامعتبر مستند به مواد ۱۳۶ و ۱۴۲ ق.ا.ا.م و رأی وحدت رویه ۸۴۵.',
   h1Title: 'نمونه لایحه ابطال مزایده و اعتراض به نحوه برگزاری مزایده اجرای احکام',
   heroSubtitle: 'دانلود و مشاهده الگوی استاندارد لایحه اعتراض به صحت و جریان برگزاری مزایده و تقاضای ابطال صورت جلسه مزایده به دلیل عدم ابلاغ آگهی، ارزیابی غیرواقعی، تبانی یا تخلفات مامورین مستند به مواد ۱۳۶ و ۱۴۲ قانون اجرای احکام مدنی و رأی وحدت رویه ۸۴۵ دیوان عالی کشور.',
@@ -299,7 +299,7 @@ export const sampleAuctionCancellationObjectionData: SampleLandingData = {
 };
 
 export const sampleAuctionCancellationObjectionMetadata: Metadata = {
-  title: 'نمونه لایحه ابطال مزایده و اعتراض به نحوه برگزاری [مواد ۱۳۶ و ۱۴۲] | نگارش یار',
+  title: 'نمونه دادخواست ابطال مزایده اجرای احکام [رایگان، دانلود فایل Word و PDF] | نگارش یار',
   description: 'دانلود و کپی نمونه لایحه ابطال مزایده اجرای احکام دادگستری و اعتراض به نحوه برگزاری و صحت مزایده به علت عدم نشر آگهی یا ارزیابی نامعتبر مستند به مواد ۱۳۶ و ۱۴۲ ق.ا.ا.م و رأی وحدت رویه ۸۴۵.',
   keywords: [
     'نمونه لایحه ابطال مزایده',
@@ -320,7 +320,7 @@ export const sampleAuctionCancellationObjectionMetadata: Metadata = {
     canonical: 'https://www.negaresh-yar.ir/samples/auction-cancellation-objection',
   },
   openGraph: {
-    title: 'نمونه لایحه ابطال مزایده و اعتراض به نحوه برگزاری [مواد ۱۳۶ و ۱۴۲] | نگارش یار',
+    title: 'نمونه دادخواست ابطال مزایده اجرای احکام [رایگان، دانلود فایل Word و PDF] | نگارش یار',
     description: 'الگوی حقوقی اعتراض به تخلفات مزایده دادگستری و توقف انتقال سند رسمی در نگارش یار.',
     url: 'https://www.negaresh-yar.ir/samples/auction-cancellation-objection',
     siteName: 'نگارش یار',
