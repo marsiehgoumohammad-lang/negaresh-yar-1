@@ -275,7 +275,7 @@ export const sampleThirdPartyObjectionOrdinaryDeedData: SampleLandingData = {
 };
 
 export const sampleThirdPartyObjectionOrdinaryDeedMetadata: Metadata = {
-  title: 'نمونه دادخواست اعتراض ثالث اجرایی با سند عادی | متن آماده و مستندات قانونی | نگارش یار',
+  title: 'نمونه دادخواست اعتراض ثالث اجرایی با سند عادی [رایگان، دانلود فایل Word و PDF] | نگارش یار',
   description: 'دانلود و مشاهده نمونه دادخواست اعتراض ثالث اجرایی با سند عادی (قولنامه) مستند به مواد ۱۴۶ و ۱۴۷ قانون اجرای احکام مدنی جهت درخواست رفع توقیف مال و تقاضای توقف عملیات اجرایی.',
   keywords: [
     'نمونه دادخواست اعتراض ثالث اجرایی با سند عادی',

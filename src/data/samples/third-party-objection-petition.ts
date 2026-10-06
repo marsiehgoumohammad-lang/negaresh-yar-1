@@ -129,14 +129,14 @@ export const sampleThirdPartyObjectionPetitionData: SampleLandingData = {
 };
 
 export const sampleThirdPartyObjectionPetitionMetadata: Metadata = {
-  title: "نمونه دادخواست اعتراض شخص ثالث اصلی (ماده ۴۱۷) | نگارش یار",
+  title: "نمونه دادخواست اعتراض شخص ثالث اصلی [رایگان، دانلود فایل Word و PDF] | نگارش یار",
   description: "دانلود نمونه متن رسمی دادخواست اعتراض شخص ثالث اصلی به دادنامه قطعی دادگاه مستند به مواد ۴۱۷، ۴۱۸ و ۴۲۰ قانون آیین دادرسی مدنی به طرفیت طرفین دعوا.",
   keywords: ["دادخواست اعتراض شخص ثالث اصلی", "ماده ۴۱۷ قانون آیین دادرسی مدنی", "ماده ۴۲۰ ق.آ.د.م دادخواست اعتراض ثالث", "تأخیر اجرای حکم ماده ۴۲۴", "نگارش یار"],
   alternates: {
     canonical: 'https://www.negaresh-yar.ir/samples/third-party-objection-petition',
   },
   openGraph: {
-    title: "نمونه دادخواست اعتراض شخص ثالث اصلی (ماده ۴۱۷) | نگارش یار",
+    title: "نمونه دادخواست اعتراض شخص ثالث اصلی [رایگان، دانلود فایل Word و PDF] | نگارش یار",
     description: "دانلود نمونه متن رسمی دادخواست اعتراض شخص ثالث اصلی به دادنامه قطعی دادگاه مستند به مواد ۴۱۷، ۴۱۸ و ۴۲۰ قانون آیین دادرسی مدنی به طرفیت طرفین دعوا.",
     url: 'https://www.negaresh-yar.ir/samples/third-party-objection-petition',
     siteName: 'نگارش یار',

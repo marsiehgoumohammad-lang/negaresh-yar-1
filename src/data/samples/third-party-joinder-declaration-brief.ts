@@ -125,14 +125,14 @@ export const sampleThirdPartyJoinderDeclarationBriefData: SampleLandingData = {
 };
 
 export const sampleThirdPartyJoinderDeclarationBriefMetadata: Metadata = {
-  title: "نمونه لایحه اعلام قصد جلب شخص ثالث (ماده ۱۳۵) | نگارش یار",
+  title: "نمونه لایحه اعلام قصد جلب شخص ثالث [رایگان، دانلود فایل Word و PDF] | نگارش یار",
   description: "دانلود نمونه متن رسمی لایحه اعلام قصد جلب شخص ثالث تا پایان اولین جلسه دادرسی مستند به ماده ۱۳۵ قانون آیین دادرسی مدنی جهت اخذ مهلت ۳ روزه دادخواست.",
   keywords: ["اعلام جلب شخص ثالث", "ماده ۱۳۵ قانون آیین دادرسی مدنی", "جلب ثالث در جلسه اول دادگاه", "مهلت ۳ روزه دادخواست جلب ثالث", "نگارش یار"],
   alternates: {
     canonical: 'https://www.negaresh-yar.ir/samples/third-party-joinder-declaration-brief',
   },
   openGraph: {
-    title: "نمونه لایحه اعلام قصد جلب شخص ثالث (ماده ۱۳۵) | نگارش یار",
+    title: "نمونه لایحه اعلام قصد جلب شخص ثالث [رایگان، دانلود فایل Word و PDF] | نگارش یار",
     description: "دانلود نمونه متن رسمی لایحه اعلام قصد جلب شخص ثالث تا پایان اولین جلسه دادرسی مستند به ماده ۱۳۵ قانون آیین دادرسی مدنی جهت اخذ مهلت ۳ روزه دادخواست.",
     url: 'https://www.negaresh-yar.ir/samples/third-party-joinder-declaration-brief',
     siteName: 'نگارش یار',

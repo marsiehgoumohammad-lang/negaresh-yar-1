@@ -214,7 +214,7 @@ export const sampleTransportationRoadOfficeLetterData: SampleLandingData = {
 
   relatedArticles: [
     {
-      title: 'نحوه محاسبه سهم تقصیر راهداری و شهرداری در سوانح تصادفات رانندگی',
+      title: 'نمونه نامه به اداره راهداری [رایگان، دانلود فایل Word و PDF] | نگارش یار',
       href: '/knowledge/how-to-write-complaint',
       badge: 'خسارت تصادفات',
       desc: 'مبانی مسئولیت مدنی مراجع دولتی در عدم خط‌کشی و بهسازی معابر شهری و برون‌شهری.',

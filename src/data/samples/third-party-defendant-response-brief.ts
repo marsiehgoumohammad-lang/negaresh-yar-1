@@ -125,14 +125,14 @@ export const sampleThirdPartyDefendantResponseBriefData: SampleLandingData = {
 };
 
 export const sampleThirdPartyDefendantResponseBriefMetadata: Metadata = {
-  title: "نمونه لایحه پاسخ شخص ثالث مجلوب (ماده ۱۳۹) | نگارش یار",
+  title: "نمونه لایحه پاسخ شخص ثالث مجلوب [رایگان، دانلود فایل Word و PDF] | نگارش یار",
   description: "دانلود نمونه متن رسمی لایحه دفاعیه شخص ثالث مجلوب و تقاضای رد دعوای جلب ثالث مستند به ماده ۱۳۹ قانون آیین دادرسی مدنی به علت عدم توجه دعوا.",
   keywords: ["دفاع شخص ثالث مجلوب", "ماده ۱۳۹ قانون آیین دادرسی مدنی", "رد دعوای جلب ثالث", "تفکیک دعوای جلب ثالث", "نگارش یار"],
   alternates: {
     canonical: 'https://www.negaresh-yar.ir/samples/third-party-defendant-response-brief',
   },
   openGraph: {
-    title: "نمونه لایحه پاسخ شخص ثالث مجلوب (ماده ۱۳۹) | نگارش یار",
+    title: "نمونه لایحه پاسخ شخص ثالث مجلوب [رایگان، دانلود فایل Word و PDF] | نگارش یار",
     description: "دانلود نمونه متن رسمی لایحه دفاعیه شخص ثالث مجلوب و تقاضای رد دعوای جلب ثالث مستند به ماده ۱۳۹ قانون آیین دادرسی مدنی به علت عدم توجه دعوا.",
     url: 'https://www.negaresh-yar.ir/samples/third-party-defendant-response-brief',
     siteName: 'نگارش یار',
