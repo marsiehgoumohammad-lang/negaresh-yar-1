@@ -61,6 +61,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     'expert-opinion-objection',
     'false-witness-inquiry',
     'family-lawyer',
+    'free-legal-consultation',
     'government-auctions',
     'impounded-assets-auction',
     'insolvency-court-fee',

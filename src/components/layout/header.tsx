@@ -9,6 +9,7 @@ import { Container } from '../ui/container';
 
 const desktopNavItems = [
   { title: 'خدمات', href: '/services' },
+  { title: 'مشاوره حقوقی رایگان', href: '/services/free-legal-consultation' },
   { title: 'بانک نمونه', href: '/samples' },
   { title: 'دانشنامه', href: '/knowledge' },
   { title: 'محاسبه مهریه - دیه - تأخیر بدهی', href: '/calculators' },
@@ -32,6 +33,17 @@ const menuLinks = [
   },
   {
     number: '۰۲',
+    title: 'مشاوره حقوقی رایگان',
+    href: '/services/free-legal-consultation',
+    icon: (
+      <svg className="w-5 h-5 text-[#E5C158]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.8} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+      </svg>
+    ),
+    badge: 'بررسی در پیام‌رسان',
+  },
+  {
+    number: '۰۳',
     title: 'بانک نمونه',
     href: '/samples',
     icon: (
@@ -42,7 +54,7 @@ const menuLinks = [
     badge: null,
   },
   {
-    number: '۰۳',
+    number: '۰۴',
     title: 'دانشنامه',
     href: '/knowledge',
     icon: (
@@ -53,7 +65,7 @@ const menuLinks = [
     badge: 'آموزش و قوانین',
   },
   {
-    number: '۰۴',
+    number: '۰۵',
     title: 'محاسبه مهریه - دیه - تأخیر بدهی',
     href: '/calculators',
     icon: (
@@ -64,7 +76,7 @@ const menuLinks = [
     badge: 'آنلاین',
   },
   {
-    number: '۰۵',
+    number: '۰۶',
     title: 'تفسیر رای دادگاه با هوش مصنوعی',
     href: '/ai-interpreter',
     icon: (
@@ -75,7 +87,7 @@ const menuLinks = [
     badge: 'AI هوشمند',
   },
   {
-    number: '۰۶',
+    number: '۰۷',
     title: 'معرفی وکیل منصف',
     href: '/lawyer-referral',
     icon: (
@@ -86,7 +98,7 @@ const menuLinks = [
     badge: 'سراسر ایران',
   },
   {
-    number: '۰۷',
+    number: '۰۸',
     title: 'درباره ما',
     href: '/#about',
     icon: (
@@ -97,7 +109,7 @@ const menuLinks = [
     badge: null,
   },
   {
-    number: '۰۸',
+    number: '۰۹',
     title: 'تماس با ما',
     href: '/contact',
     icon: (
