@@ -4,6 +4,17 @@ const nextConfig = {
   async redirects() {
     return [
       {
+        source: '/:path*',
+        has: [
+          {
+            type: 'host',
+            value: 'negaresh-yar.ir',
+          },
+        ],
+        destination: 'https://www.negaresh-yar.ir/:path*',
+        statusCode: 301,
+      },
+      {
         source: '/legal-ai',
         destination: '/ai-interpreter',
         statusCode: 301,

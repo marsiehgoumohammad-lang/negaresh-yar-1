@@ -175,7 +175,7 @@ export const sampleAnnulDisputeBoardDecisionPetitionData: SampleLandingData = {
 };
 
 export const sampleAnnulDisputeBoardDecisionPetitionMetadata: Metadata = {
-  title: 'نمونه دادخواست ابطال رای هیات حل اختلاف ثبت [رایگان، دانلود فایل Word و PDF] | نگارش یار',
+  title: 'نمونه دادخواست ابطال رأی هیأت حل اختلاف و اصلاح سند سجلی | نگارش یار',
   description: 'متن استاندارد دادخواست حقوقی ابطال رأی هیأت حل اختلاف اداره ثبت احوال در دادگاه عمومی حقوقی و الزام به اصلاح یا صدور سند سجلی و شناسنامه مستند به ماده ۴ قانون ثبت احوال.',
   keywords: [
     'دادخواست ابطال رای هیات حل اختلاف ثبت احوال',
@@ -188,7 +188,7 @@ export const sampleAnnulDisputeBoardDecisionPetitionMetadata: Metadata = {
     canonical: 'https://www.negaresh-yar.ir/samples/annul-dispute-board-decision-petition',
   },
   openGraph: {
-    title: 'نمونه دادخواست ابطال رای هیات حل اختلاف ثبت [رایگان، دانلود فایل Word و PDF] | نگارش یار',
+    title: 'نمونه دادخواست ابطال رأی هیأت حل اختلاف و اصلاح سند سجلی | نگارش یار',
     description: 'متن فرم استاندارد قضایی ابطال رأی هیأت حل اختلاف ثبت احوال و اصلاح سند سجلی در محاکم دادگستری.',
     url: 'https://www.negaresh-yar.ir/samples/annul-dispute-board-decision-petition',
     siteName: 'نگارش یار',

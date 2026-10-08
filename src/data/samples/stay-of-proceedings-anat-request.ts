@@ -129,14 +129,14 @@ export const sampleStayOfProceedingsAnatRequestData: SampleLandingData = {
 };
 
 export const sampleStayOfProceedingsAnatRequestMetadata: Metadata = {
-  title: "نمونه لایحه درخواست صدور قرار اناطه [رایگان، دانلود فایل Word و PDF] | نگارش یار",
+  title: "نمونه لایحه تقاضای صدور قرار اناطه (ماده ۱۹ و ۱۰۴) | نگارش یار",
   description: "دانلود نمونه متن رسمی لایحه تقاضای صدور قرار اناطه حقوقی مستند به مواد ۱۹ و ۱۰۴ قانون آیین دادرسی مدنی به علت توقف ادعا در مرجع صالح دیگر.",
   keywords: ["قرار اناطه حقوقی", "ماده ۱۹ قانون آیین دادرسی مدنی", "ماده ۱۰۴ ق.آ.د.م", "توقف دادرسی با قرار اناطه", "نگارش یار"],
   alternates: {
     canonical: 'https://www.negaresh-yar.ir/samples/stay-of-proceedings-anat-request',
   },
   openGraph: {
-    title: "نمونه لایحه درخواست صدور قرار اناطه [رایگان، دانلود فایل Word و PDF] | نگارش یار",
+    title: "نمونه لایحه تقاضای صدور قرار اناطه (ماده ۱۹ و ۱۰۴) | نگارش یار",
     description: "دانلود نمونه متن رسمی لایحه تقاضای صدور قرار اناطه حقوقی مستند به مواد ۱۹ و ۱۰۴ قانون آیین دادرسی مدنی به علت توقف ادعا در مرجع صالح دیگر.",
     url: 'https://www.negaresh-yar.ir/samples/stay-of-proceedings-anat-request',
     siteName: 'نگارش یار',

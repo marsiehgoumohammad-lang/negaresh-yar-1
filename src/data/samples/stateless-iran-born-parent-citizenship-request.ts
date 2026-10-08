@@ -183,7 +183,7 @@ export const sampleStatelessIranBornParentCitizenshipRequestData: SampleLandingD
 };
 
 export const sampleStatelessIranBornParentCitizenshipRequestMetadata: Metadata = {
-  title: 'نمونه درخواست تابعیت برای فرد فاقد تابعیت متولد ایران با والد متولد ایران [رایگان، دانلود فایل Word و PDF] | نگارش یار',
+  title: 'نمونه درخواست تابعیت فاقد تابعیت متولد ایران با والد متولد ایران | نگارش یار',
   description: 'متن استاندارد تقاضای اعطای تابعیت ایران به افراد فاقد تابعیت متولد ایران که پدر یا مادرشان نیز متولد ایران است بر مبنای تبصره ۲ ماده واحده مصوب ۱۳۹۸.',
   keywords: [
     'تابعیت افراد فاقد تابعیت متولد ایران',
@@ -196,7 +196,7 @@ export const sampleStatelessIranBornParentCitizenshipRequestMetadata: Metadata =
     canonical: 'https://www.negaresh-yar.ir/samples/stateless-iran-born-parent-citizenship-request',
   },
   openGraph: {
-    title: 'نمونه درخواست تابعیت برای فرد فاقد تابعیت متولد ایران با والد متولد ایران [رایگان، دانلود فایل Word و PDF] | نگارش یار',
+    title: 'نمونه درخواست تابعیت فاقد تابعیت متولد ایران با والد متولد ایران | نگارش یار',
     description: 'متن اداری رسمی تقاضای اعطای تابعیت به افراد بی‌تابعیت متولد ایران با والد متولد ایران در استانداری.',
     url: 'https://www.negaresh-yar.ir/samples/stateless-iran-born-parent-citizenship-request',
     siteName: 'نگارش یار',

@@ -121,14 +121,14 @@ export const sampleTemporaryInjunctionLiftingBySecurityRequestData: SampleLandin
 };
 
 export const sampleTemporaryInjunctionLiftingBySecurityRequestMetadata: Metadata = {
-  title: "نمونه درخواست رفع دستور موقت با تامین [رایگان، دانلود فایل Word و PDF] | نگارش یار",
+  title: "نمونه درخواست رفع دستور موقت با تأمین (ماده ۳۲۱) | نگارش یار",
   description: "دانلود نمونه متن رسمی درخواست رفع دستور موقت با تودیع تأمین متناسب توسط خوانده مستند به ماده ۳۲۱ قانون آیین دادرسی مدنی.",
   keywords: ["رفع دستور موقت با تودیع تأمین", "ماده ۳۲۱ قانون آیین دادرسی مدنی", "لغو دستور موقت توقف ساخت و ساز با وثیقه", "رفع اثر از دستور موقت با ضمانت بانکی", "نگارش یار"],
   alternates: {
     canonical: 'https://www.negaresh-yar.ir/samples/temporary-injunction-lifting-by-security-request',
   },
   openGraph: {
-    title: "نمونه درخواست رفع دستور موقت با تامین [رایگان، دانلود فایل Word و PDF] | نگارش یار",
+    title: "نمونه درخواست رفع دستور موقت با تأمین (ماده ۳۲۱) | نگارش یار",
     description: "دانلود نمونه متن رسمی درخواست رفع دستور موقت با تودیع تأمین متناسب توسط خوانده مستند به ماده ۳۲۱ قانون آیین دادرسی مدنی.",
     url: 'https://www.negaresh-yar.ir/samples/temporary-injunction-lifting-by-security-request',
     siteName: 'نگارش یار',

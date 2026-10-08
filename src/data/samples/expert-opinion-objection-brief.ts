@@ -155,14 +155,14 @@ export const sampleExpertOpinionObjectionBriefData: SampleLandingData = {
 };
 
 export const sampleExpertOpinionObjectionBriefMetadata: Metadata = {
-  title: "نمونه لایحه اعتراض به نظریه کارشناسی [رایگان، دانلود فایل Word و PDF] | نگارش یار",
+  title: "نمونه لایحه اعتراض به نظریه کارشناسی (ماده ۲۶۰) | نگارش یار",
   description: "دانلود نمونه متن رسمی لایحه اعتراض به نظریه کارشناس رسمی دادگستری ظرف مهلت یک هفته مستند به مواد ۲۶۰ و ۲۶۵ قانون آیین دادرسی مدنی.",
   keywords: ["اعتراض به نظریه کارشناسی دادگاه", "ماده ۲۶۰ قانون آیین دادرسی مدنی", "مهلت یک هفته اعتراض به کارشناس", "ارجاع به هیئت سه نفره کارشناسان", "نگارش یار"],
   alternates: {
     canonical: 'https://www.negaresh-yar.ir/samples/expert-opinion-objection-brief',
   },
   openGraph: {
-    title: "نمونه لایحه اعتراض به نظریه کارشناسی [رایگان، دانلود فایل Word و PDF] | نگارش یار",
+    title: "نمونه لایحه اعتراض به نظریه کارشناسی (ماده ۲۶۰) | نگارش یار",
     description: "دانلود نمونه متن رسمی لایحه اعتراض به نظریه کارشناس رسمی دادگستری ظرف مهلت یک هفته مستند به مواد ۲۶۰ و ۲۶۵ قانون آیین دادرسی مدنی.",
     url: 'https://www.negaresh-yar.ir/samples/expert-opinion-objection-brief',
     siteName: 'نگارش یار',

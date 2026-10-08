@@ -177,7 +177,7 @@ export const sampleIdentityNationalityProofBirthCertificatePetitionData: SampleL
 };
 
 export const sampleIdentityNationalityProofBirthCertificatePetitionMetadata: Metadata = {
-  title: 'نمونه دادخواست اثبات هویت و تابعیت ایرانی و صدور شناسنامه [رایگان، دانلود فایل Word و PDF] | نگارش یار',
+  title: 'نمونه دادخواست اثبات هویت و تابعیت ایرانی و صدور شناسنامه | نگارش یار',
   description: 'متن استاندارد دادخواست حقوقی اثبات هویت، تعیین سن در پزشکی قانونی، اثبات تابعیت ایرانی و صدور شناسنامه در دادگاه عمومی حقوقی بر مبنای رأی وحدت رویه ۷۴۸.',
   keywords: [
     'دادخواست اثبات هویت و تابعیت',
@@ -190,7 +190,7 @@ export const sampleIdentityNationalityProofBirthCertificatePetitionMetadata: Met
     canonical: 'https://www.negaresh-yar.ir/samples/identity-nationality-proof-birth-certificate-petition',
   },
   openGraph: {
-    title: 'نمونه دادخواست اثبات هویت و تابعیت ایرانی و صدور شناسنامه [رایگان، دانلود فایل Word و PDF] | نگارش یار',
+    title: 'نمونه دادخواست اثبات هویت و تابعیت ایرانی و صدور شناسنامه | نگارش یار',
     description: 'متن فرم استاندارد قضایی دادخواست اثبات هویت و تابعیت ایرانی برای افراد فاقد ورقه هویتی در سامانه ثنا.',
     url: 'https://www.negaresh-yar.ir/samples/identity-nationality-proof-birth-certificate-petition',
     siteName: 'نگارش یار',

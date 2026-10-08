@@ -129,14 +129,14 @@ export const sampleTemporaryInjunctionRequestData: SampleLandingData = {
 };
 
 export const sampleTemporaryInjunctionRequestMetadata: Metadata = {
-  title: "نمونه درخواست صدور دستور موقت [رایگان، دانلود فایل Word و PDF] | نگارش یار",
+  title: "نمونه درخواست صدور دستور موقت فوری (ماده ۳۱۰) | نگارش یار",
   description: "دانلود نمونه متن رسمی دادخواست و درخواست صدور دستور موقت فوری قبل از اقامه دعوای اصلی مستند به مواد ۳۱۰، ۳۱۱ و ۳۱۵ قانون آیین دادرسی مدنی.",
   keywords: ["دستور موقت فوری", "ماده ۳۱۰ قانون آیین دادرسی مدنی", "توقف ساخت و ساز با دستور موقت", "منع نقل و انتقال ملک دستور موقت", "نگارش یار"],
   alternates: {
     canonical: 'https://www.negaresh-yar.ir/samples/temporary-injunction-request',
   },
   openGraph: {
-    title: "نمونه درخواست صدور دستور موقت [رایگان، دانلود فایل Word و PDF] | نگارش یار",
+    title: "نمونه درخواست صدور دستور موقت فوری (ماده ۳۱۰) | نگارش یار",
     description: "دانلود نمونه متن رسمی دادخواست و درخواست صدور دستور موقت فوری قبل از اقامه دعوای اصلی مستند به مواد ۳۱۰، ۳۱۱ و ۳۱۵ قانون آیین دادرسی مدنی.",
     url: 'https://www.negaresh-yar.ir/samples/temporary-injunction-request',
     siteName: 'نگارش یار',

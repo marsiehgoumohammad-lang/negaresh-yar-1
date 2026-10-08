@@ -238,7 +238,7 @@ export const sampleContractCancellationNoticePetitionData: SampleDocument = {
       badge: 'مقاله آموزشی'
     },
     {
-      title: 'نمونه دادخواست تایید فسخ قرارداد و استرداد ثمن [رایگان، دانلود فایل Word و PDF] | نگارش یار',
+      title: 'دادخواست چیست و مراحل ثبت آن در دادگاه',
       href: '/knowledge/what-is-petition',
       desc: 'راهنمای تنظیم دادخواست‌های ملکی و قراردادی.',
       badge: 'مقاله آموزشی'

@@ -246,7 +246,7 @@ export const sampleSayadCheckClaimPetitionData: SampleLandingData = {
 };
 
 export const sampleSayadCheckClaimPetitionMetadata: Metadata = {
-  title: 'نمونه دادخواست مطالبه وجه چک صیادی و خسارت تاخیر تادیه [رایگان، دانلود فایل Word و PDF] | نگارش یار',
+  title: 'نمونه دادخواست مطالبه وجه چک صیادی بنفش با خسارت تأخیر | نگارش یار',
   description: 'دانلود و مشاهده الگوی رسمی دادخواست مطالبه وجه چک صیادی، مطالبه خسارت تأخیر تأدیه از سررسید، تأمین خواسته و مسئولیت تضامنی ظهرنویسان طبق قانون جدید چک.',
   keywords: [
     'دادخواست مطالبه وجه چک صیادی',
@@ -262,7 +262,7 @@ export const sampleSayadCheckClaimPetitionMetadata: Metadata = {
     canonical: 'https://www.negaresh-yar.ir/samples/sayad-check-claim-petition',
   },
   openGraph: {
-    title: 'نمونه دادخواست مطالبه وجه چک صیادی و خسارت تاخیر تادیه [رایگان، دانلود فایل Word و PDF] | نگارش یار',
+    title: 'نمونه دادخواست مطالبه وجه چک صیادی بنفش با خسارت تأخیر | نگارش یار',
   description: 'الگوی کاربردی و حقوقی مطالبه وجه چک صیادی و توقیف اموال بدهکار با خسارت تأخیر تأدیه.',
     url: 'https://www.negaresh-yar.ir/samples/sayad-check-claim-petition',
     siteName: 'نگارش یار',

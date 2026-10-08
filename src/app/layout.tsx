@@ -12,12 +12,12 @@ export const metadata: Metadata = {
   },
   description: "دانلود رایگان نمونه متن دادخواست، لایحه، شکواییه و نامه اداری + تنظیم فوری اوراق قضایی ثنا، کافی‌نت آنلاین و مشاوره تخصصی در سامانه نگارش یار.",
   alternates: {
-    canonical: 'https://www.negaresh-yar.ir',
+    canonical: 'https://www.negaresh-yar.ir/',
   },
   openGraph: {
     title: "نگارش یار | سامانه تنظیم دادخواست، لایحه و نامه اداری [دانلود رایگان + مشاوره]",
     description: "دانلود رایگان ۵۸ نمونه سند قضایی و اداری، تنظیم تخصصی دادخواست، شکواییه، لایحه دفاعیه، نامه‌های اداری و مشاوره آنلاین در نگارش یار.",
-    url: 'https://www.negaresh-yar.ir',
+    url: 'https://www.negaresh-yar.ir/',
     siteName: 'نگارش یار',
     locale: 'fa_IR',
     type: 'website',

@@ -129,14 +129,14 @@ export const sampleClaimPetitionWithdrawalBriefData: SampleLandingData = {
 };
 
 export const sampleClaimPetitionWithdrawalBriefMetadata: Metadata = {
-  title: "نمونه لایحه استرداد دادخواست و دعوا [رایگان، دانلود فایل Word و PDF] | نگارش یار",
+  title: "نمونه لایحه استرداد دادخواست و استرداد دعوا (ماده ۱۰۷) | نگارش یار",
   description: "دانلود رایگان نمونه متن رسمی لایحه استرداد دادخواست، استرداد دعوا و انصراف کلی مستند به بندهای سه‌گانه ماده ۱۰۷ قانون آیین دادرسی مدنی.",
   keywords: ["استرداد دادخواست", "استرداد دعوا در دادگاه", "ماده ۱۰۷ قانون آیین دادرسی مدنی", "قرار ابطال دادخواست ماده ۱۰۷", "نگارش یار"],
   alternates: {
     canonical: 'https://www.negaresh-yar.ir/samples/claim-petition-withdrawal-brief',
   },
   openGraph: {
-    title: "نمونه لایحه استرداد دادخواست و دعوا [رایگان، دانلود فایل Word و PDF] | نگارش یار",
+    title: "نمونه لایحه استرداد دادخواست و استرداد دعوا (ماده ۱۰۷) | نگارش یار",
     description: "دانلود رایگان نمونه متن رسمی لایحه استرداد دادخواست، استرداد دعوا و انصراف کلی مستند به بندهای سه‌گانه ماده ۱۰۷ قانون آیین دادرسی مدنی.",
     url: 'https://www.negaresh-yar.ir/samples/claim-petition-withdrawal-brief',
     siteName: 'نگارش یار',

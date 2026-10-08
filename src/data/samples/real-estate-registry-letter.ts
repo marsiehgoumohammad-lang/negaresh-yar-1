@@ -227,7 +227,7 @@ export const sampleRealEstateRegistryLetterData: SampleLandingData = {
       badge: 'فک رهن',
     },
     {
-      title: 'نمونه دادخواست الزام به تنظیم سند رسمی [رایگان، دانلود فایل Word و PDF] | نگارش یار',
+      title: 'دادخواست الزام به تنظیم سند رسمی',
       href: '/samples/official-deed-compulsion-petition',
       desc: 'الزام قانونی فروشنده به حضور در دفتر اسناد رسمی.',
       badge: 'دادخواست حقوقی',

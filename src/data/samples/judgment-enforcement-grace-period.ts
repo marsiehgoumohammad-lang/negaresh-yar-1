@@ -236,7 +236,7 @@ export const sampleJudgmentEnforcementGracePeriodData: SampleLandingData = {
 };
 
 export const sampleJudgmentEnforcementGracePeriodMetadata: Metadata = {
-  title: 'نمونه لایحه اعطای مهلت به محکوم علیه [رایگان، دانلود فایل Word و PDF] | نگارش یار',
+  title: 'نمونه درخواست مهلت برای پرداخت محکوم‌به در اجرای احکام | نگارش یار',
   description: 'متن آماده لایحه تقاضای اعطای مهلت عادلانه جهت پرداخت بدهی و توقف عملیات اجرایی، مستند به ماده ۳۴ قانون اجرای احکام مدنی و ماده ۲۷۷ قانون مدنی.',
   keywords: [
     'نمونه درخواست مهلت اجرای احکام',
@@ -250,7 +250,7 @@ export const sampleJudgmentEnforcementGracePeriodMetadata: Metadata = {
     canonical: 'https://www.negaresh-yar.ir/samples/judgment-enforcement-grace-period',
   },
   openGraph: {
-    title: 'نمونه لایحه اعطای مهلت به محکوم علیه [رایگان، دانلود فایل Word و PDF] | نگارش یار',
+    title: 'نمونه درخواست مهلت برای پرداخت محکوم‌به در اجرای احکام | نگارش یار',
   description: 'متن آماده لایحه تقاضای اعطای مهلت عادلانه جهت پرداخت بدهی و توقف عملیات اجرایی.',
     url: 'https://www.negaresh-yar.ir/samples/judgment-enforcement-grace-period',
     siteName: 'نگارش یار',

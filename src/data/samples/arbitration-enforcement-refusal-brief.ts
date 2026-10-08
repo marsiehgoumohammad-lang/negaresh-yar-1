@@ -129,14 +129,14 @@ export const sampleArbitrationEnforcementRefusalBriefData: SampleLandingData = {
 };
 
 export const sampleArbitrationEnforcementRefusalBriefMetadata: Metadata = {
-  title: "نمونه دادخواست ابطال رای داوری [رایگان، دانلود فایل Word و PDF] | نگارش یار",
+  title: "نمونه دادخواست ابطال رأی داوری (ماده ۴۸۹) | نگارش یار",
   description: "دانلود نمونه متن رسمی دادخواست ابطال رأی داوری و توقف عملیات اجرایی مستند به مواد ۴۸۹، ۴۹۰ و ۴۹۳ قانون آیین دادرسی مدنی ظرف ۲۰ روز.",
   keywords: ["ابطال رأی داوری", "ماده ۴۸۹ قانون آیین دادرسی مدنی", "مهلت ۲۰ روزه اعتراض به رأی داور", "توقف اجرای رأی داور ماده ۴۹۳", "نگارش یار"],
   alternates: {
     canonical: 'https://www.negaresh-yar.ir/samples/arbitration-enforcement-refusal-brief',
   },
   openGraph: {
-    title: "نمونه دادخواست ابطال رای داوری [رایگان، دانلود فایل Word و PDF] | نگارش یار",
+    title: "نمونه دادخواست ابطال رأی داوری (ماده ۴۸۹) | نگارش یار",
     description: "دانلود نمونه متن رسمی دادخواست ابطال رأی داوری و توقف عملیات اجرایی مستند به مواد ۴۸۹، ۴۹۰ و ۴۹۳ قانون آیین دادرسی مدنی ظرف ۲۰ روز.",
     url: 'https://www.negaresh-yar.ir/samples/arbitration-enforcement-refusal-brief',
     siteName: 'نگارش یار',

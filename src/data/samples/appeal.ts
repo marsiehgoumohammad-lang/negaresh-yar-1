@@ -336,7 +336,7 @@ export const sampleAppealData: SampleLandingData = {
 };
 
 export const sampleAppealMetadata: Metadata = {
-  title: 'نمونه لایحه تجدیدنظرخواهی حقوقی و کیفری [رایگان، دانلود فایل Word و PDF] | نگارش یار',
+  title: 'نمونه لایحه تجدیدنظرخواهی حقوقی و کیفری ثنا | نگارش یار',
   description: 'دانلود و مشاهده الگوی متن لایحه تجدیدنظرخواهی، استناد به جهات ماده ۳۴۸ مدنی و ۴۳۴ کیفری، اعتراض به رای بدوی و نقض دادنامه در دادگاه استان.',
   keywords: [
     'نمونه لایحه تجدیدنظرخواهی',
@@ -351,7 +351,7 @@ export const sampleAppealMetadata: Metadata = {
     canonical: 'https://www.negaresh-yar.ir/samples/appeal',
   },
   openGraph: {
-    title: 'نمونه لایحه تجدیدنظرخواهی حقوقی و کیفری [رایگان، دانلود فایل Word و PDF] | نگارش یار',
+    title: 'نمونه لایحه تجدیدنظرخواهی حقوقی و کیفری ثنا | نگارش یار',
   description: 'الگوی استاندارد و کامل لایحه اعتراض تجدیدنظرخواهی به دادگاه تجدیدنظر استان.',
     url: 'https://www.negaresh-yar.ir/samples/appeal',
     siteName: 'نگارش یار',

@@ -246,7 +246,7 @@ export const sampleCheckCarcassRestitutionData: SampleLandingData = {
 };
 
 export const sampleCheckCarcassRestitutionMetadata: Metadata = {
-  title: 'نمونه دادخواست استرداد لاشه چک [رایگان، دانلود فایل Word و PDF] | نگارش یار',
+  title: 'نمونه دادخواست استرداد لاشه چک و اسناد تجاری امانی | نگارش یار',
   description: 'متن آماده دادخواست استرداد لاشه چک تضمین حسن انجام کار و تخلیه ملک مستند به ماده ۱۹۸ قانون آیین دادرسی مدنی و دستور موقت منع پرداخت.',
   keywords: [
     'نمونه دادخواست استرداد لاشه چک',
@@ -260,7 +260,7 @@ export const sampleCheckCarcassRestitutionMetadata: Metadata = {
     canonical: 'https://www.negaresh-yar.ir/samples/check-carcass-restitution',
   },
   openGraph: {
-    title: 'نمونه دادخواست استرداد لاشه چک [رایگان، دانلود فایل Word و PDF] | نگارش یار',
+    title: 'نمونه دادخواست استرداد لاشه چک و اسناد تجاری امانی | نگارش یار',
   description: 'دانلود رایگان و کپی متن استاندارد دادخواست حقوقی استرداد لاشه چک تضمینی.',
     url: 'https://www.negaresh-yar.ir/samples/check-carcass-restitution',
     siteName: 'نگارش یار',

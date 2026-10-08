@@ -230,7 +230,7 @@ export const sampleEducationOfficeLetterData: SampleLandingData = {
       badge: 'تامین اجتماعی',
     },
     {
-      title: 'نمونه شکایت در دیوان عدالت اداری [رایگان، دانلود فایل Word و PDF] | نگارش یار',
+      title: 'شکایت در دیوان عدالت اداری',
       href: '/samples/administrative-court-justice-complaint',
       desc: 'اعتراض به احکام کارگزینی، رتبه‌بندی و هیئت تخلفات آموزش و پرورش.',
       badge: 'دیوان عدالت',

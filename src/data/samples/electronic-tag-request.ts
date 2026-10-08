@@ -218,7 +218,7 @@ export const sampleElectronicTagRequestData: SampleLandingData = {
       badge: 'تسلیم به رأی'
     },
     {
-      title: 'نمونه درخواست پابند الکترونیکی از اجرای احکام [رایگان، دانلود فایل Word و PDF] | نگارش یار',
+      title: 'نمونه درخواست مرخصی زندانی با وثیقه',
       href: '/samples/prisoner-furlough-request',
       desc: 'تقاضای اعطای مرخصی از دادیار ناظر زندان.',
       badge: 'مرخصی زندانی'

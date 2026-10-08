@@ -133,14 +133,14 @@ export const sampleThirdPartyInterventionPetitionData: SampleLandingData = {
 };
 
 export const sampleThirdPartyInterventionPetitionMetadata: Metadata = {
-  title: "نمونه دادخواست ورود شخص ثالث [رایگان، دانلود فایل Word و PDF] | نگارش یار",
+  title: "نمونه دادخواست ورود شخص ثالث (ماده ۱۳۰) | نگارش یار",
   description: "دانلود نمونه متن رسمی دادخواست ورود شخص ثالث در مرحله نخستین یا تجدیدنظر مستند به مواد ۱۳۰ و ۱۳۱ قانون آیین دادرسی مدنی با رعایت تشریفات قانونی.",
   keywords: ["دادخواست ورود شخص ثالث", "ماده ۱۳۰ قانون آیین دادرسی مدنی", "ورود ثالث در مرحله تجدیدنظر", "ورود شخص ثالث مستقل و تبعی", "نگارش یار"],
   alternates: {
     canonical: 'https://www.negaresh-yar.ir/samples/third-party-intervention-petition',
   },
   openGraph: {
-    title: "نمونه دادخواست ورود شخص ثالث [رایگان، دانلود فایل Word و PDF] | نگارش یار",
+    title: "نمونه دادخواست ورود شخص ثالث (ماده ۱۳۰) | نگارش یار",
     description: "دانلود نمونه متن رسمی دادخواست ورود شخص ثالث در مرحله نخستین یا تجدیدنظر مستند به مواد ۱۳۰ و ۱۳۱ قانون آیین دادرسی مدنی با رعایت تشریفات قانونی.",
     url: 'https://www.negaresh-yar.ir/samples/third-party-intervention-petition',
     siteName: 'نگارش یار',

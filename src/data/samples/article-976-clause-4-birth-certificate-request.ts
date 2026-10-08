@@ -170,7 +170,7 @@ export const sampleArticle976Clause4BirthCertificateRequestData: SampleLandingDa
 };
 
 export const sampleArticle976Clause4BirthCertificateRequestMetadata: Metadata = {
-  title: 'نمونه درخواست صدور شناسنامه بند ۴ ماده ۹۷۶ قانون مدنی [رایگان، دانلود فایل Word و PDF] | نگارش یار',
+  title: 'نمونه درخواست صدور شناسنامه بند ۴ ماده ۹۷۶ قانون مدنی | نگارش یار',
   description: 'متن رسمی تقاضای ثبت ولادت و صدور شناسنامه در اداره ثبت احوال پس از احراز تابعیت ایرانی مستند به بند ۴ ماده ۹۷۶ قانون مدنی و قوانین ثبت احوال.',
   keywords: [
     'درخواست صدور شناسنامه بند ۴ ماده ۹۷۶',
@@ -183,7 +183,7 @@ export const sampleArticle976Clause4BirthCertificateRequestMetadata: Metadata = 
     canonical: 'https://www.negaresh-yar.ir/samples/article-976-clause-4-birth-certificate-request',
   },
   openGraph: {
-    title: 'نمونه درخواست صدور شناسنامه بند ۴ ماده ۹۷۶ قانون مدنی [رایگان، دانلود فایل Word و PDF] | نگارش یار',
+    title: 'نمونه درخواست صدور شناسنامه بند ۴ ماده ۹۷۶ قانون مدنی | نگارش یار',
     description: 'متن اداری جهت ثبت ولادت و دریافت شناسنامه ایرانی در اداره ثبت احوال پس از تایید تابعیت قانونی.',
     url: 'https://www.negaresh-yar.ir/samples/article-976-clause-4-birth-certificate-request',
     siteName: 'نگارش یار',

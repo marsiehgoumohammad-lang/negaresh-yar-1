@@ -98,7 +98,7 @@ export function LegalInterpreterClient() {
       const data = await res.json();
 
       if (!res.ok) {
-        throw new Error(data.error || 'خطا در برقراری ارتباط با سیستم هوش مصنوعی');
+        throw new Error(data.error || 'تفسیر رای امکان پذیر نبود، لطفا بعدا مجددا تلاش کنید.');
       }
 
       setResult(data);
@@ -109,7 +109,9 @@ export function LegalInterpreterClient() {
     } catch (err: unknown) {
       console.error(err);
       const errorMessage =
-        err instanceof Error ? err.message : 'خطا در تحلیل سند. لطفاً مجدداً امتحان کنید.';
+        err instanceof Error && err.message
+          ? err.message
+          : 'تفسیر رای امکان پذیر نبود، لطفا بعدا مجددا تلاش کنید.';
       setError(errorMessage);
     } finally {
       setLoading(false);
@@ -131,13 +133,20 @@ export function LegalInterpreterClient() {
             {!file ? (
               <Uploader onFileSelected={processFile} error={error} />
             ) : (
-              <SelectedFileCard
-                file={file}
-                filePreview={filePreview}
-                onRemove={handleRemoveFile}
-                onAnalyze={handleAnalyze}
-                loading={loading}
-              />
+              <div className="space-y-3">
+                <SelectedFileCard
+                  file={file}
+                  filePreview={filePreview}
+                  onRemove={handleRemoveFile}
+                  onAnalyze={handleAnalyze}
+                  loading={loading}
+                />
+                {error && (
+                  <div className="p-3.5 rounded-xl bg-red-500/10 border border-red-500/30 text-red-400 text-xs text-right font-medium leading-relaxed">
+                    {error}
+                  </div>
+                )}
+              </div>
             )}
           </section>
 

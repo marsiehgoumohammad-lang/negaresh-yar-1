@@ -285,7 +285,7 @@ export const sampleThirdPartyObjectionToExecutionData: SampleDocument = {
       badge: 'راهنمای مزایده',
     },
     {
-      title: 'نمونه دادخواست اعتراض ثالث اجرایی نسبت به توقیف ملک [رایگان، دانلود فایل Word و PDF] | نگارش یار',
+      title: 'هیئت کارشناسی دادگاه و نحوه اعتراض به ارزیابی ملک',
       href: '/knowledge/expert-panel-court',
       desc: 'چگونه به ارزیابی اشتباه کارشناس رسمی دادگستری اعتراض کنیم؟',
       badge: 'کارشناسی دادگاه',

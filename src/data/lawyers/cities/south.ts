@@ -328,6 +328,8 @@ export const karajCityData: LawyerCityData = {
     { title: 'نمونه دادخواست الزام به تنظیم سند رسمی', href: '/samples/official-deed-compulsion-petition', badge: 'ملکی', desc: 'الزام به سند رسمی' },
   ],
   relatedKnowledge: [
+    { title: 'راهنمای جستجوی وکیل کانون و مرکز وکلا', href: '/knowledge/how-to-search-and-verify-lawyer-guide', badge: 'استعلام وکیل', desc: 'استعلام پروانه وکالت و مراجع رسمی' },
+    { title: 'راهنمای دریافت وکیل رایگان و معاضدت قضایی', href: '/knowledge/free-lawyer-and-legal-aid-guide', badge: 'معاضدت', desc: 'شرایط وکیل معاضدتی و شماره های مشاوره رایگان' },
     { title: 'لایحه دفاعیه چیست و چگونه تنظیم می‌شود', href: '/knowledge/what-is-legal-brief', badge: 'آموزش', desc: 'اصول دفاع در دادگاه' },
     { title: 'اعسار چیست و نحوه اثبات آن در دادگاه', href: '/knowledge/what-is-insolvency', badge: 'اعسار', desc: 'قوانین اثبات اعسار' },
   ],

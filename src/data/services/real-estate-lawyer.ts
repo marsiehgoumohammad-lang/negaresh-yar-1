@@ -251,6 +251,12 @@ export const realEstateLawyerData: ServiceLandingData = {
 
   relatedArticles: [
     {
+      title: 'راهنمای جستجوی وکیل ملکی در کانون وکلا و مرکز وکلا',
+      href: '/knowledge/how-to-search-and-verify-lawyer-guide',
+      badge: 'استعلام پروانه',
+      desc: 'استعلام سوابق و پایه وکالت پیش از امضای قرارداد وکالت در ثنا.',
+    },
+    {
       title: 'راهنمای جامع دعاوی اجاره، تخلیه ملک، ودیعه و اجرت المثل',
       href: '/knowledge/property-rent-eviction-guide',
       badge: 'پیلار دانشی',
@@ -284,6 +290,7 @@ export const realEstateLawyerMetadata: Metadata = {
   keywords: [
     'وکیل ملکی',
     'بهترین وکیل ملکی',
+    'بهترین وکیل ملکی تهران',
     'انتخاب وکیل ملکی',
     'وکیل املاک',
     'هزینه وکیل ملکی',

@@ -232,7 +232,7 @@ export const sampleRentDepositClaimData: SampleLandingData = {
 };
 
 export const sampleRentDepositClaimMetadata: Metadata = {
-  title: 'نمونه دادخواست مطالبه ودیعه اجاره [رایگان، دانلود فایل Word و PDF] | نگارش یار',
+  title: 'نمونه دادخواست مطالبه ودیعه مسکن (استرداد پول پیش) | نگارش یار',
   description: 'متن آماده دادخواست حقوقی استرداد ودیعه و قرض‌الحسنه اجاره به انضمام تامین خواسته، خسارت تاخیر تادیه و تامین دلیل تحویل کلید مستند به قانون ۷۶ در ثنا.',
   keywords: [
     'نمونه دادخواست مطالبه ودیعه مسکن',
@@ -246,7 +246,7 @@ export const sampleRentDepositClaimMetadata: Metadata = {
     canonical: 'https://www.negaresh-yar.ir/samples/rent-deposit-claim',
   },
   openGraph: {
-    title: 'نمونه دادخواست مطالبه ودیعه اجاره [رایگان، دانلود فایل Word و PDF] | نگارش یار',
+    title: 'نمونه دادخواست مطالبه ودیعه مسکن (استرداد پول پیش) | نگارش یار',
   description: 'متن آماده دادخواست حقوقی استرداد ودیعه و قرض‌الحسنه اجاره به انضمام تامین خواسته در ثنا.',
     url: 'https://www.negaresh-yar.ir/samples/rent-deposit-claim',
     siteName: 'نگارش یار',

@@ -228,7 +228,7 @@ export const sampleCheckBouncedComplaintData: SampleLandingData = {
 };
 
 export const sampleCheckBouncedComplaintMetadata: Metadata = {
-  title: 'نمونه شکواییه صدور چک بلامحل [رایگان، دانلود فایل Word و PDF] | نگارش یار',
+  title: 'نمونه شکواییه صدور چک بلامحل | شکایت کیفری چک برگشتی | نگارش یار',
   description: 'متن آماده و استاندارد شکواییه کیفری صدور چک بلامحل در دادسرا با استناد به ماده ۳ و ۷ قانون صدور چک و آموزش رعایت مواعد ۶ ماهه برگشت و شکایت در ثنا.',
   keywords: [
     'نمونه شکواییه چک بلامحل',
@@ -242,7 +242,7 @@ export const sampleCheckBouncedComplaintMetadata: Metadata = {
     canonical: 'https://www.negaresh-yar.ir/samples/check-bounced-complaint',
   },
   openGraph: {
-    title: 'نمونه شکواییه صدور چک بلامحل [رایگان، دانلود فایل Word و PDF] | نگارش یار',
+    title: 'نمونه شکواییه صدور چک بلامحل | شکایت کیفری چک برگشتی | نگارش یار',
   description: 'متن آماده و استاندارد شکواییه کیفری صدور چک بلامحل در دادسرا با رعایت کامل مواعد قانونی.',
     url: 'https://www.negaresh-yar.ir/samples/check-bounced-complaint',
     siteName: 'نگارش یار',

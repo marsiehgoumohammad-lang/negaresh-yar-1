@@ -125,14 +125,14 @@ export const sampleSupremeCourtCassationResponseBriefData: SampleLandingData = {
 };
 
 export const sampleSupremeCourtCassationResponseBriefMetadata: Metadata = {
-  title: "نمونه لایحه پاسخ به فرجام خواهی در دیوان عالی کشور [رایگان، دانلود فایل Word و PDF] | نگارش یار",
+  title: "نمونه لایحه پاسخ به فرجام‌خواهی در دیوان عالی کشور (ماده ۳۸۵) | نگارش یار",
   description: "دانلود نمونه متن رسمی لایحه پاسخ فرجام‌خوانده در مرحله تبادل لوایح دیوان عالی کشور مستند به ماده ۳۸۵ قانون آیین دادرسی مدنی جهت ابرام رأی.",
   keywords: ["لایحه پاسخ فرجام‌خواهی دیوان عالی کشور", "ماده ۳۸۵ قانون آیین دادرسی مدنی", "تبادل لوایح فرجام‌خواهی", "ابرام رأی در دیوان عالی", "نگارش یار"],
   alternates: {
     canonical: 'https://www.negaresh-yar.ir/samples/supreme-court-cassation-response-brief',
   },
   openGraph: {
-    title: "نمونه لایحه پاسخ به فرجام خواهی در دیوان عالی کشور [رایگان، دانلود فایل Word و PDF] | نگارش یار",
+    title: "نمونه لایحه پاسخ به فرجام‌خواهی در دیوان عالی کشور (ماده ۳۸۵) | نگارش یار",
     description: "دانلود نمونه متن رسمی لایحه پاسخ فرجام‌خوانده در مرحله تبادل لوایح دیوان عالی کشور مستند به ماده ۳۸۵ قانون آیین دادرسی مدنی جهت ابرام رأی.",
     url: 'https://www.negaresh-yar.ir/samples/supreme-court-cassation-response-brief',
     siteName: 'نگارش یار',

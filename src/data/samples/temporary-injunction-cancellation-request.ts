@@ -125,14 +125,14 @@ export const sampleTemporaryInjunctionCancellationRequestData: SampleLandingData
 };
 
 export const sampleTemporaryInjunctionCancellationRequestMetadata: Metadata = {
-  title: "نمونه لایحه درخواست لغو دستور موقت [رایگان، دانلود فایل Word و PDF] | نگارش یار",
+  title: "نمونه لایحه تقاضای لغو دستور موقت (ماده ۳۱۸) | نگارش یار",
   description: "دانلود نمونه متن رسمی لایحه تقاضای لغو و رفع اثر از دستور موقت به دلیل عدم اقامه دعوا در مهلت ۲۰ روز مستند به ماده ۳۱۸ قانون آیین دادرسی مدنی.",
   keywords: ["لغو دستور موقت", "ماده ۳۱۸ قانون آیین دادرسی مدنی", "رفع اثر از دستور موقت مهلت ۲۰ روز", "رفع توقف عملیات ساختمانی", "نگارش یار"],
   alternates: {
     canonical: 'https://www.negaresh-yar.ir/samples/temporary-injunction-cancellation-request',
   },
   openGraph: {
-    title: "نمونه لایحه درخواست لغو دستور موقت [رایگان، دانلود فایل Word و PDF] | نگارش یار",
+    title: "نمونه لایحه تقاضای لغو دستور موقت (ماده ۳۱۸) | نگارش یار",
     description: "دانلود نمونه متن رسمی لایحه تقاضای لغو و رفع اثر از دستور موقت به دلیل عدم اقامه دعوا در مهلت ۲۰ روز مستند به ماده ۳۱۸ قانون آیین دادرسی مدنی.",
     url: 'https://www.negaresh-yar.ir/samples/temporary-injunction-cancellation-request',
     siteName: 'نگارش یار',

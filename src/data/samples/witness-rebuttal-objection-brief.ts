@@ -153,14 +153,14 @@ export const sampleWitnessRebuttalObjectionBriefData: SampleLandingData = {
 };
 
 export const sampleWitnessRebuttalObjectionBriefMetadata: Metadata = {
-  title: "نمونه لایحه جرح شاهد [رایگان، دانلود فایل Word و PDF] | نگارش یار",
+  title: "نمونه لایحه جرح شاهد (ماده ۲۳۴) | نگارش یار",
   description: "دانلود نمونه متن رسمی لایحه جرح شاهد و اثبات عدم اهلیت شهادت مستند به ماده ۲۳۴ قانون آیین دادرسی مدنی و ماده ۱۳۱۳ قانون مدنی با نکات حقوقی.",
   keywords: ["جرح شاهد در دادگاه", "ماده ۲۳۴ قانون آیین دادرسی مدنی", "ماده ۱۳۱۳ قانون مدنی شرایط شاهد", "رد شهادت شاهد دروغین", "نگارش یار"],
   alternates: {
     canonical: 'https://www.negaresh-yar.ir/samples/witness-rebuttal-objection-brief',
   },
   openGraph: {
-    title: "نمونه لایحه جرح شاهد [رایگان، دانلود فایل Word و PDF] | نگارش یار",
+    title: "نمونه لایحه جرح شاهد (ماده ۲۳۴) | نگارش یار",
     description: "دانلود نمونه متن رسمی لایحه جرح شاهد و اثبات عدم اهلیت شهادت مستند به ماده ۲۳۴ قانون آیین دادرسی مدنی و ماده ۱۳۱۳ قانون مدنی با نکات حقوقی.",
     url: 'https://www.negaresh-yar.ir/samples/witness-rebuttal-objection-brief',
     siteName: 'نگارش یار',

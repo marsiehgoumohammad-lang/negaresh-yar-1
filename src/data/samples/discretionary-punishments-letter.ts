@@ -225,7 +225,7 @@ export const sampleDiscretionaryPunishmentsLetterData: SampleLandingData = {
       badge: 'بازرسی کل کشور',
     },
     {
-      title: 'نمونه نامه به اداره امور مالیاتی [رایگان، دانلود فایل Word و PDF] | نگارش یار',
+      title: 'نامه به اداره امور مالیاتی',
       href: '/samples/letter-to-tax-office',
       desc: 'اعتراض به مالیات عملکرد و فاکتورهای مشکوک.',
       badge: 'امور مالیاتی',

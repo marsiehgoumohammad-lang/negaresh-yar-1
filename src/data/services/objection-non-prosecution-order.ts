@@ -260,6 +260,12 @@ export const objectionNonProsecutionOrderData: ServiceLandingData = {
 
   relatedArticles: [
     {
+      title: 'دادگاه کیفری چیست؟ صلاحیت و مراحل رسیدگی دادگاه کیفری دو',
+      href: '/knowledge/criminal-court-jurisdiction-guide',
+      desc: 'راهنمای مرجع رسیدگی به اعتراض قرار منع تعقیب و صلاحیت دادگاه های کیفری.',
+      badge: 'دادگاه کیفری',
+    },
+    {
       title: 'شکواییه کیفری چیست و چگونه تنظیم میشود؟',
       href: '/knowledge/how-to-write-complaint',
       desc: 'راهنمای جامع طرح شکایت کیفری در دادسرا و تفاوت آن با دادخواست حقوقی.',

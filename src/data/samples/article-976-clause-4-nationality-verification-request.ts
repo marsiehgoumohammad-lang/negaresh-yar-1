@@ -189,7 +189,7 @@ export const sampleArticle976Clause4NationalityVerificationRequestData: SampleLa
 };
 
 export const sampleArticle976Clause4NationalityVerificationRequestMetadata: Metadata = {
-  title: 'نمونه درخواست احراز تابعیت بند ۴ ماده ۹۷۶ قانون مدنی [رایگان، دانلود فایل Word و PDF] | نگارش یار',
+  title: 'نمونه درخواست احراز تابعیت بند ۴ ماده ۹۷۶ قانون مدنی | نگارش یار',
   description: 'متن رسمی تقاضای احراز تابعیت ایرانی افراد متولد ایران که یکی از والدین خارجی آنها نیز در ایران متولد شده است مستند به بند ۴ ماده ۹۷۶ قانون مدنی.',
   keywords: [
     'احراز تابعیت بند ۴ ماده ۹۷۶ قانون مدنی',
@@ -202,7 +202,7 @@ export const sampleArticle976Clause4NationalityVerificationRequestMetadata: Meta
     canonical: 'https://www.negaresh-yar.ir/samples/article-976-clause-4-nationality-verification-request',
   },
   openGraph: {
-    title: 'نمونه درخواست احراز تابعیت بند ۴ ماده ۹۷۶ قانون مدنی [رایگان، دانلود فایل Word و PDF] | نگارش یار',
+    title: 'نمونه درخواست احراز تابعیت بند ۴ ماده ۹۷۶ قانون مدنی | نگارش یار',
     description: 'متن اداری جهت احراز تابعیت ایرانی متولدین ایران از والدین خارجی با سابقه تولد نسلی در ایران.',
     url: 'https://www.negaresh-yar.ir/samples/article-976-clause-4-nationality-verification-request',
     siteName: 'نگارش یار',

@@ -133,14 +133,14 @@ export const sampleCivilFormalObjectionsArticle84BriefData: SampleLandingData = 
 };
 
 export const sampleCivilFormalObjectionsArticle84BriefMetadata: Metadata = {
-  title: "نمونه لایحه ایرادات شکلی دعوا [رایگان، دانلود فایل Word و PDF] | نگارش یار",
+  title: "نمونه لایحه جامع ایرادات شکلی دعوا (ماده ۸۴) | نگارش یار",
   description: "دانلود نمونه لایحه جامع ایرادات شکلی اولیه دعوا تا پایان اولین جلسه دادرسی مستند به ماده ۸۴ و ۸۷ قانون آیین دادرسی مدنی با رعایت فنون دفاع حقوقی.",
   keywords: ["ایرادات ماده ۸۴ قانون آیین دادرسی مدنی", "ایراد عدم توجه دعوا", "ایراد اعتبار امر مختوم", "لایحه جلسه اول دادگاه", "نگارش یار"],
   alternates: {
     canonical: 'https://www.negaresh-yar.ir/samples/civil-formal-objections-article-84-brief',
   },
   openGraph: {
-    title: "نمونه لایحه ایرادات شکلی دعوا [رایگان، دانلود فایل Word و PDF] | نگارش یار",
+    title: "نمونه لایحه جامع ایرادات شکلی دعوا (ماده ۸۴) | نگارش یار",
     description: "دانلود نمونه لایحه جامع ایرادات شکلی اولیه دعوا تا پایان اولین جلسه دادرسی مستند به ماده ۸۴ و ۸۷ قانون آیین دادرسی مدنی با رعایت فنون دفاع حقوقی.",
     url: 'https://www.negaresh-yar.ir/samples/civil-formal-objections-article-84-brief',
     siteName: 'نگارش یار',

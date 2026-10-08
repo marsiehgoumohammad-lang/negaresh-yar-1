@@ -188,7 +188,7 @@ export const sampleSuspectedNationalityVerificationRequestData: SampleLandingDat
 };
 
 export const sampleSuspectedNationalityVerificationRequestMetadata: Metadata = {
-  title: 'نمونه درخواست احراز تابعیت در پرونده مشکوک التابعیت [رایگان، دانلود فایل Word و PDF] | نگارش یار',
+  title: 'نمونه درخواست احراز تابعیت در پرونده مشکوک‌التابعیت | نگارش یار',
   description: 'متن اداری رسمی تقاضای رسیدگی، احراز تابعیت ایرانی و رفع مسدودی شناسنامه در شورای تأمین و اداره ثبت احوال بر اساس ماده ۴۵ قانون ثبت احوال.',
   keywords: [
     'درخواست پرونده مشکوک التابعیت',
@@ -201,7 +201,7 @@ export const sampleSuspectedNationalityVerificationRequestMetadata: Metadata = {
     canonical: 'https://www.negaresh-yar.ir/samples/suspected-nationality-verification-request',
   },
   openGraph: {
-    title: 'نمونه درخواست احراز تابعیت در پرونده مشکوک التابعیت [رایگان، دانلود فایل Word و PDF] | نگارش یار',
+    title: 'نمونه درخواست احراز تابعیت در پرونده مشکوک‌التابعیت | نگارش یار',
     description: 'متن استاندارد اداری جهت طرح در شورای تأمین و ثبت احوال برای حل پرونده‌های مشکوک‌التابعیت.',
     url: 'https://www.negaresh-yar.ir/samples/suspected-nationality-verification-request',
     siteName: 'نگارش یار',

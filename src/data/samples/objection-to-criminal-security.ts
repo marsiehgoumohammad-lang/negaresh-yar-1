@@ -214,7 +214,7 @@ export const sampleObjectionToCriminalSecurityData: SampleLandingData = {
 };
 
 export const sampleObjectionToCriminalSecurityMetadata: Metadata = {
-  title: 'نمونه لایحه اعتراض به قرار وثیقه [رایگان، دانلود فایل Word و PDF] | نگارش یار',
+  title: 'نمونه لایحه اعتراض به قرار تأمین کیفری و وثیقه سنگین در دادسرا | نگارش یار',
   description: 'دانلود و مشاهده کامل‌ترین نمونه لایحه اعتراض به قرار تأمین کیفری نامتناسب و بازداشت متهم مستند به مواد ۲۲۶ و ۲۴۳ قانون آیین دادرسی کیفری جهت ارجاع به دادگاه.',
   keywords: [
     'اعتراض به قرار تامین کیفری',
@@ -230,7 +230,7 @@ export const sampleObjectionToCriminalSecurityMetadata: Metadata = {
     canonical: 'https://www.negaresh-yar.ir/samples/objection-to-criminal-security',
   },
   openGraph: {
-    title: 'نمونه لایحه اعتراض به قرار وثیقه [رایگان، دانلود فایل Word و PDF] | نگارش یار',
+    title: 'نمونه لایحه اعتراض به قرار تأمین کیفری و وثیقه سنگین در دادسرا | نگارش یار',
   description: 'الگوی قانونی و کاربردی اعتراض به قرارهای تأمین منتهی به بازداشت جهت آزادی سریع متهم.',
     url: 'https://www.negaresh-yar.ir/samples/objection-to-criminal-security',
     siteName: 'نگارش یار',

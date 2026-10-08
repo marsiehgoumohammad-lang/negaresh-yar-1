@@ -125,14 +125,14 @@ export const sampleGroundlessClaimSecurityRequestData: SampleLandingData = {
 };
 
 export const sampleGroundlessClaimSecurityRequestMetadata: Metadata = {
-  title: "نمونه لایحه تقاضای اخذ تامین دعوای واهی [رایگان، دانلود فایل Word و PDF] | نگارش یار",
+  title: "نمونه لایحه تقاضای اخذ تأمین دعوای واهی (ماده ۱۰۹) | نگارش یار",
   description: "دانلود نمونه متن رسمی لایحه تقاضای اخذ تأمین دعوای واهی از خواهان تا پایان اولین جلسه دادرسی مستند به ماده ۱۰۹ قانون آیین دادرسی مدنی.",
   keywords: ["تأمین دعوای واهی", "ماده ۱۰۹ قانون آیین دادرسی مدنی", "قرار تأمین خسارات دادرسی", "رد دادخواست به علت عدم تودیع تأمین", "نگارش یار"],
   alternates: {
     canonical: 'https://www.negaresh-yar.ir/samples/groundless-claim-security-request',
   },
   openGraph: {
-    title: "نمونه لایحه تقاضای اخذ تامین دعوای واهی [رایگان، دانلود فایل Word و PDF] | نگارش یار",
+    title: "نمونه لایحه تقاضای اخذ تأمین دعوای واهی (ماده ۱۰۹) | نگارش یار",
     description: "دانلود نمونه متن رسمی لایحه تقاضای اخذ تأمین دعوای واهی از خواهان تا پایان اولین جلسه دادرسی مستند به ماده ۱۰۹ قانون آیین دادرسی مدنی.",
     url: 'https://www.negaresh-yar.ir/samples/groundless-claim-security-request',
     siteName: 'نگارش یار',

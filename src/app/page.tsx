@@ -38,12 +38,12 @@ export const metadata: Metadata = {
     'هزینه وکیل',
   ],
   alternates: {
-    canonical: 'https://www.negaresh-yar.ir',
+    canonical: 'https://www.negaresh-yar.ir/',
   },
   openGraph: {
     title: 'نگارش یار | نگارش نامه اداری، عریضه‌نویسی و خدمات متنی آنلاین',
     description: 'حرفت را بگو؛ نامه‌اش را به نگارشیار بسپار. نامه‌های اداری، درخواست‌ها و نوشته‌های رسمی‌ات را حرفه‌ای و روان آماده کن.',
-    url: 'https://www.negaresh-yar.ir',
+    url: 'https://www.negaresh-yar.ir/',
     siteName: 'نگارش یار',
     locale: 'fa_IR',
     type: 'website',
@@ -56,120 +56,99 @@ export const metadata: Metadata = {
 };
 
 export default function Home() {
-  const organizationSchema = {
+  const homepageGraph = {
     '@context': 'https://schema.org',
-    '@type': 'Organization',
-    name: 'نگارش یار',
-    alternateName: 'Negaresh Yar',
-    url: 'https://www.negaresh-yar.ir',
-    logo: {
-      '@type': 'ImageObject',
-      url: 'https://www.negaresh-yar.ir/logo.jpg',
-    },
-    image: 'https://www.negaresh-yar.ir/logo.jpg',
-    description: 'مرکز جامع تخصصی تنظیم دادخواست حقوقی، شکواییه، لایحه دفاعیه، نامه‌های اداری و تفسیر هوشمند اوراق قضایی.',
-    contactPoint: {
-      '@type': 'ContactPoint',
-      telephone: '+989915147789',
-      contactType: 'customer service',
-      areaServed: 'IR',
-      availableLanguage: ['Persian'],
-    },
-    address: {
-      '@type': 'PostalAddress',
-      addressLocality: 'مشهد',
-      addressRegion: 'خراسان رضوی',
-      addressCountry: 'IR',
-    },
-    geo: {
-      '@type': 'GeoCoordinates',
-      latitude: '36.2972',
-      longitude: '59.6067',
-    },
-  };
-
-  const websiteSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'WebSite',
-    name: 'نگارش یار',
-    url: 'https://www.negaresh-yar.ir',
-    potentialAction: {
-      '@type': 'SearchAction',
-      target: {
-        '@type': 'EntryPoint',
-        urlTemplate: 'https://www.negaresh-yar.ir/services?q={search_term_string}',
+    '@graph': [
+      {
+        '@type': 'Organization',
+        '@id': 'https://www.negaresh-yar.ir/#organization',
+        name: 'نگارش یار',
+        alternateName: 'Negaresh Yar',
+        url: 'https://www.negaresh-yar.ir/',
+        logo: {
+          '@type': 'ImageObject',
+          '@id': 'https://www.negaresh-yar.ir/#logo',
+          url: 'https://www.negaresh-yar.ir/logo.jpg',
+        },
+        image: 'https://www.negaresh-yar.ir/logo.jpg',
+        description:
+          'مرکز جامع تخصصی تنظیم دادخواست حقوقی، شکواییه، لایحه دفاعیه، نامه‌های اداری و تفسیر هوشمند اوراق قضایی.',
+        telephone: '+989915147789',
+        contactPoint: {
+          '@type': 'ContactPoint',
+          telephone: '+989915147789',
+          contactType: 'customer service',
+          areaServed: 'IR',
+          availableLanguage: ['Persian'],
+        },
+        address: {
+          '@type': 'PostalAddress',
+          addressLocality: 'مشهد',
+          addressRegion: 'خراسان رضوی',
+          addressCountry: 'IR',
+        },
+        geo: {
+          '@type': 'GeoCoordinates',
+          latitude: '36.2972',
+          longitude: '59.6067',
+        },
       },
-      'query-input': 'required name=search_term_string',
-    },
-  };
-
-  const legalServiceSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'LegalService',
-    name: 'نگارش یار - مرکز نگارش و خدمات آنلاین حقوقی و اداری',
-    image: 'https://www.negaresh-yar.ir/logo.jpg',
-    '@id': 'https://www.negaresh-yar.ir/#legalservice',
-    url: 'https://www.negaresh-yar.ir',
-    telephone: '+989915147789',
-    priceRange: '$$',
-    address: {
-      '@type': 'PostalAddress',
-      addressLocality: 'مشهد',
-      addressRegion: 'خراسان رضوی',
-      addressCountry: 'IR',
-    },
-    geo: {
-      '@type': 'GeoCoordinates',
-      latitude: '36.2972',
-      longitude: '59.6067',
-    },
-    openingHoursSpecification: {
-      '@type': 'OpeningHoursSpecification',
-      dayOfWeek: [
-        'Monday',
-        'Tuesday',
-        'Wednesday',
-        'Thursday',
-        'Friday',
-        'Saturday',
-        'Sunday',
-      ],
-      opens: '08:00',
-      closes: '22:00',
-    },
-  };
-
-  const faqSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    mainEntity: FAQ_ITEMS.map((item) => ({
-      '@type': 'Question',
-      name: item.q,
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: item.a,
+      {
+        '@type': 'WebSite',
+        '@id': 'https://www.negaresh-yar.ir/#website',
+        name: 'نگارش یار',
+        url: 'https://www.negaresh-yar.ir/',
+        publisher: {
+          '@id': 'https://www.negaresh-yar.ir/#organization',
+        },
+        potentialAction: {
+          '@type': 'SearchAction',
+          target: {
+            '@type': 'EntryPoint',
+            urlTemplate: 'https://www.negaresh-yar.ir/services?q={search_term_string}',
+          },
+          'query-input': 'required name=search_term_string',
+        },
       },
-    })),
+      {
+        '@type': 'WebPage',
+        '@id': 'https://www.negaresh-yar.ir/',
+        url: 'https://www.negaresh-yar.ir/',
+        name: 'نگارش یار | نگارش نامه اداری، عریضه‌نویسی و خدمات متنی آنلاین',
+        description:
+          'حرفت را بگو؛ نامه‌اش را به نگارشیار بسپار. نگارش تخصصی نامه‌های اداری، بانکی، شهرداری، دادخواست و شکواییه با الگوهای استاندارد و رسمی.',
+        inLanguage: 'fa-IR',
+        isPartOf: {
+          '@id': 'https://www.negaresh-yar.ir/#website',
+        },
+        about: {
+          '@id': 'https://www.negaresh-yar.ir/#organization',
+        },
+      },
+      {
+        '@type': 'FAQPage',
+        '@id': 'https://www.negaresh-yar.ir/#faq',
+        isPartOf: {
+          '@id': 'https://www.negaresh-yar.ir/',
+        },
+        mainEntity: FAQ_ITEMS.map((item) => ({
+          '@type': 'Question',
+          name: item.q,
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: item.a,
+          },
+        })),
+      },
+    ],
   };
 
   return (
     <div className="flex min-h-screen flex-col bg-background text-foreground">
-      {/* JSON-LD Schemas */}
+      {/* Unified Standard Entity Graph JSON-LD Schema */}
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(legalServiceSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(homepageGraph) }}
       />
 
       <main className="flex-1">

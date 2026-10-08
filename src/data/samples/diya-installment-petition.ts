@@ -5,7 +5,7 @@ export const sampleDiyaInstallmentPetitionData: SampleLandingData = {
   slug: 'diya-installment-petition',
   categoryName: 'اعسار و محکومیت مالی',
   badge: 'الگوی تقسیط دیه و آزادی محکوم',
-  metaTitle: 'نمونه دادخواست اعسار از پرداخت دیه و تقسیط آن [رایگان، دانلود فایل Word و PDF] | نگارش یار',
+  metaTitle: 'نمونه دادخواست اعسار از پرداخت دیه و تقسیط [تصادف و ضرب و جرح] | نگارش یار',
   metaDescription: 'دانلود و کپی متن نمونه دادخواست اعسار از پرداخت دیه و تقسیط آن، جلوگیری از حبس و جلب با استناد به ماده ۳ و ۴ قانون محکومیت‌های مالی و فرم استشهادیه در نگارش یار.',
   h1Title: 'نمونه دادخواست اعسار از پرداخت دیه و تقسیط محکوم‌به کیفری',
   heroSubtitle: 'دانلود و مشاهده الگوی رسمی دادخواست اعسار و تقسیط پرداخت دیه ناشی از تصادفات رانندگی فاقد بیمه، حوادث ناشی از کار، صدمات و ضرب و جرح، همراه با فرم استشهادیه و صورت اموال مستند به مواد ۳، ۴ و ۸ قانون نحوه اجرای محکومیت‌های مالی.',
@@ -265,7 +265,7 @@ export const sampleDiyaInstallmentPetitionData: SampleLandingData = {
 };
 
 export const sampleDiyaInstallmentPetitionMetadata: Metadata = {
-  title: 'نمونه دادخواست اعسار از پرداخت دیه و تقسیط آن [رایگان، دانلود فایل Word و PDF] | نگارش یار',
+  title: 'نمونه دادخواست اعسار از پرداخت دیه و تقسیط [تصادف و ضرب و جرح] | نگارش یار',
   description: 'دانلود و کپی متن نمونه دادخواست اعسار از پرداخت دیه و تقسیط آن، جلوگیری از حبس و جلب با استناد به ماده ۳ و ۴ قانون محکومیت‌های مالی و فرم استشهادیه در نگارش یار.',
   keywords: [
     'نمونه دادخواست اعسار از پرداخت دیه',
@@ -281,7 +281,7 @@ export const sampleDiyaInstallmentPetitionMetadata: Metadata = {
     canonical: 'https://www.negaresh-yar.ir/samples/diya-installment-petition',
   },
   openGraph: {
-    title: 'نمونه دادخواست اعسار از پرداخت دیه و تقسیط آن [رایگان، دانلود فایل Word و PDF] | نگارش یار',
+    title: 'نمونه دادخواست اعسار از پرداخت دیه و تقسیط [تصادف و ضرب و جرح] | نگارش یار',
     description: 'دانلود و کپی متن نمونه دادخواست اعسار از پرداخت دیه و تقسیط آن در نگارش یار.',
     url: 'https://www.negaresh-yar.ir/samples/diya-installment-petition',
     siteName: 'نگارش یار',

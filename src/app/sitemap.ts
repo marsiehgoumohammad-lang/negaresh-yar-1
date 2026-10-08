@@ -21,7 +21,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     '/lawyer-referral',
     '/lawyer-partnership',
   ].map((route) => ({
-    url: `${baseUrl}${route}`,
+    url: route === '' ? `${baseUrl}/` : `${baseUrl}${route}`,
     lastModified,
     changeFrequency: 'weekly' as const,
     priority:

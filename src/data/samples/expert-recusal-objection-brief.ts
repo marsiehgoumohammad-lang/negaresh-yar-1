@@ -151,14 +151,14 @@ export const sampleExpertRecusalObjectionBriefData: SampleLandingData = {
 };
 
 export const sampleExpertRecusalObjectionBriefMetadata: Metadata = {
-  title: "نمونه لایحه رد کارشناس رسمی دادگستری [رایگان، دانلود فایل Word و PDF] | نگارش یار",
+  title: "نمونه لایحه رد کارشناس رسمی دادگستری (ماده ۲۶۱) | نگارش یار",
   description: "دانلود نمونه متن رسمی لایحه رد کارشناس رسمی دادگستری به جهات قرابت یا نفع شخصی مستند به ماده ۲۶۱ و ماده ۹۱ قانون آیین دادرسی مدنی.",
   keywords: ["رد کارشناس رسمی دادگستری", "ماده ۲۶۱ قانون آیین دادرسی مدنی", "موارد رد کارشناس ماده ۹۱", "قرابت کارشناس با اصحاب دعوا", "نگارش یار"],
   alternates: {
     canonical: 'https://www.negaresh-yar.ir/samples/expert-recusal-objection-brief',
   },
   openGraph: {
-    title: "نمونه لایحه رد کارشناس رسمی دادگستری [رایگان، دانلود فایل Word و PDF] | نگارش یار",
+    title: "نمونه لایحه رد کارشناس رسمی دادگستری (ماده ۲۶۱) | نگارش یار",
     description: "دانلود نمونه متن رسمی لایحه رد کارشناس رسمی دادگستری به جهات قرابت یا نفع شخصی مستند به ماده ۲۶۱ و ماده ۹۱ قانون آیین دادرسی مدنی.",
     url: 'https://www.negaresh-yar.ir/samples/expert-recusal-objection-brief',
     siteName: 'نگارش یار',

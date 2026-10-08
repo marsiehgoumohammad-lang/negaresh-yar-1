@@ -172,7 +172,7 @@ export const sampleCaseAccessRestrictionRequestData: SampleLandingData = {
 };
 
 export const sampleCaseAccessRestrictionRequestMetadata: Metadata = {
-  title: 'نمونه درخواست عدم دسترسی به پرونده [رایگان، دانلود فایل Word و PDF] | نگارش یار',
+  title: 'نمونه درخواست عدم دسترسی به پرونده و سلب دسترسی ثنا | نگارش یار',
   description: 'متن استاندارد لایحه تقاضای عدم دسترسی به پرونده قضایی، محرمانه ماندن تحقیقات و مخفی ماندن آدرس مستند به تبصره ماده ۱۹۱ و ماده ۲۱۴ ق.آ.د.ک در نگارش یار.',
   keywords: [
     'نمونه درخواست عدم دسترسی به پرونده',
@@ -188,7 +188,7 @@ export const sampleCaseAccessRestrictionRequestMetadata: Metadata = {
     canonical: 'https://www.negaresh-yar.ir/samples/case-access-restriction-request',
   },
   openGraph: {
-    title: 'نمونه درخواست عدم دسترسی به پرونده [رایگان، دانلود فایل Word و PDF] | نگارش یار',
+    title: 'نمونه درخواست عدم دسترسی به پرونده و سلب دسترسی ثنا | نگارش یار',
     description: 'دانلود رایگان متن لایحه درخواست عدم دسترسی به پرونده قضایی جهت حفظ امنیت جانی و محرمانگی تحقیقات.',
     url: 'https://www.negaresh-yar.ir/samples/case-access-restriction-request',
     siteName: 'نگارش یار',

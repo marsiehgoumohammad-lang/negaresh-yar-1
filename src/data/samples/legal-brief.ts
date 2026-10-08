@@ -333,7 +333,7 @@ export const sampleLegalBriefData: SampleLandingData = {
 };
 
 export const sampleLegalBriefMetadata: Metadata = {
-  title: 'نمونه لایحه دفاعیه حقوقی [رایگان، دانلود فایل Word و PDF] | نگارش یار',
+  title: 'نمونه لایحه دفاعیه حقوقی و کیفری ثنا | نگارش یار',
   description: 'دانلود و مشاهده الگوی لایحه دفاعیه تخصصی دادگاه، پاسخ به دادخواست، استناد به مواد قانون و آرای وحدت رویه دیوان عالی کشور و ارسال در ثنا.',
   keywords: [
     'نمونه لایحه دفاعیه',
@@ -348,7 +348,7 @@ export const sampleLegalBriefMetadata: Metadata = {
     canonical: 'https://www.negaresh-yar.ir/samples/legal-brief',
   },
   openGraph: {
-    title: 'نمونه لایحه دفاعیه حقوقی [رایگان، دانلود فایل Word و PDF] | نگارش یار',
+    title: 'نمونه لایحه دفاعیه حقوقی و کیفری ثنا | نگارش یار',
   description: 'الگوی استاندارد و مستدل لایحه دفاعیه جهت ارائه به دادگاه و ثنا.',
     url: 'https://www.negaresh-yar.ir/samples/legal-brief',
     siteName: 'نگارش یار',

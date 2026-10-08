@@ -225,7 +225,7 @@ export const sampleSentenceSuspensionRequestData: SampleLandingData = {
 };
 
 export const sampleSentenceSuspensionRequestMetadata: Metadata = {
-  title: 'نمونه درخواست تعلیق اجرای مجازات [رایگان، دانلود فایل Word و PDF] | نگارش یار',
+  title: 'نمونه درخواست تعلیق اجرای مجازات حبس در دادگاه | نگارش یار',
   description: 'متن آماده لایحه تقاضای تعلیق اجرای باقی‌مانده مجازات حبس تعزیری، مستند به ماده ۴۶ قانون مجازات اسلامی و ماده ۵۵۳ قانون آیین دادرسی کیفری.',
   keywords: [
     'نمونه درخواست تعلیق اجرای مجازات',
@@ -239,7 +239,7 @@ export const sampleSentenceSuspensionRequestMetadata: Metadata = {
     canonical: 'https://www.negaresh-yar.ir/samples/sentence-suspension-request',
   },
   openGraph: {
-    title: 'نمونه درخواست تعلیق اجرای مجازات [رایگان، دانلود فایل Word و PDF] | نگارش یار',
+    title: 'نمونه درخواست تعلیق اجرای مجازات حبس در دادگاه | نگارش یار',
   description: 'متن آماده لایحه تقاضای تعلیق اجرای باقی‌مانده مجازات حبس تعزیری در دادگاه.',
     url: 'https://www.negaresh-yar.ir/samples/sentence-suspension-request',
     siteName: 'نگارش یار',

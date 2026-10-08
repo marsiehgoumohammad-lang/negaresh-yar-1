@@ -322,7 +322,7 @@ export const sampleSocialSecurityLetterData: SampleLandingData = {
 };
 
 export const sampleSocialSecurityLetterMetadata: Metadata = {
-  title: 'نمونه نامه به تامین اجتماعی [رایگان، دانلود فایل Word و PDF] | نگارش یار',
+  title: 'نمونه نامه به تامین اجتماعی | بیمه بیکاری، سوابق و جرایم | نگارش یار',
   description:
     'دانلود ۴ نمونه متن آماده نامه به سازمان تامین اجتماعی: تقاضای بیمه بیکاری، بخشودگی و تقسیط جرایم کارفرما، اعتراض به سوابق و کمیسیون پزشکی همراه با نکات و مشاوره.',
   keywords: [

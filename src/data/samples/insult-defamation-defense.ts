@@ -208,7 +208,7 @@ export const sampleInsultDefamationDefenseData: SampleLandingData = {
 };
 
 export const sampleInsultDefamationDefenseMetadata: Metadata = {
-  title: 'نمونه لایحه دفاع از اتهام توهین [رایگان، دانلود فایل Word و PDF] | نگارش یار',
+  title: 'نمونه لایحه دفاعیه اتهام توهین و فحاشی در دادسرا | نگارش یار',
   description: 'متن آماده لایحه دفاعیه متهم در برابر اتهام توهین و فحاشی مستند به ماده ۶۰۸ قانون مجازات اسلامی، جرح شهود و اصل ۳۷ قانون اساسی.',
   keywords: [
     'نمونه لایحه دفاعیه توهین',
@@ -222,7 +222,7 @@ export const sampleInsultDefamationDefenseMetadata: Metadata = {
     canonical: 'https://www.negaresh-yar.ir/samples/insult-defamation-defense',
   },
   openGraph: {
-    title: 'نمونه لایحه دفاع از اتهام توهین [رایگان، دانلود فایل Word و PDF] | نگارش یار',
+    title: 'نمونه لایحه دفاعیه اتهام توهین و فحاشی در دادسرا | نگارش یار',
   description: 'دانلود رایگان و کپی الگوی لایحه دفاعیه اتهام توهین و سب و اهانت در دادسرا و دادگاه کیفری.',
     url: 'https://www.negaresh-yar.ir/samples/insult-defamation-defense',
     siteName: 'نگارش یار',

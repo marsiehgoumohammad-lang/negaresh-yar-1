@@ -190,7 +190,7 @@ export const sampleNafaqahClaimPetitionData: SampleDocument = {
 
   relatedServices: [
     {
-      title: 'نمونه دادخواست مطالبه نفقه زوجه و فرزند [رایگان، دانلود فایل Word و PDF] | نگارش یار',
+      title: 'تنظیم دادخواست و لوایح خانواده',
       href: '/services/petition-writing',
       desc: 'تنظیم تخصصی دادخواست نفقه، تمکین، مهریه و تقاضای مسکن مستقل.',
       badge: 'خدمت تخصصی',

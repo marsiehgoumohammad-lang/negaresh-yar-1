@@ -232,7 +232,7 @@ export const sampleBailReleaseSuretyRequestData: SampleLandingData = {
 };
 
 export const sampleBailReleaseSuretyRequestMetadata: Metadata = {
-  title: 'نمونه درخواست ضمانت با فیش حقوقی [رایگان، دانلود فایل Word و PDF] | نگارش یار',
+  title: 'نمونه درخواست انصراف ضامن و فک فیش حقوقی یا سند ملک | نگارش یار',
   description: 'دانلود و مشاهده الگوی رسمی درخواست انصراف کفیل و وثیقه‌گذار از ضمانت متهم در دادسرا و تقاضای رفع اثر از فیش حقوقی و سند ملک مستند به ماده ۲۲۸ آیین دادرسی کیفری.',
   keywords: [
     'درخواست انصراف ضامن از ضمانت',
@@ -248,7 +248,7 @@ export const sampleBailReleaseSuretyRequestMetadata: Metadata = {
     canonical: 'https://www.negaresh-yar.ir/samples/bail-release-surety-request',
   },
   openGraph: {
-    title: 'نمونه درخواست ضمانت با فیش حقوقی [رایگان، دانلود فایل Word و PDF] | نگارش یار',
+    title: 'نمونه درخواست انصراف ضامن و فک فیش حقوقی یا سند ملک | نگارش یار',
   description: 'الگوی قانونی انصراف کفیل و وثیقه‌گذار جهت آزادسازی سریع فیش حقوقی یا سند ملک.',
     url: 'https://www.negaresh-yar.ir/samples/bail-release-surety-request',
     siteName: 'نگارش یار',

@@ -215,7 +215,7 @@ export const sampleArticle477RequestData: SampleLandingData = {
 };
 
 export const sampleArticle477RequestMetadata: Metadata = {
-  title: 'نمونه درخواست اعمال ماده ۴۷۷ [رایگان، دانلود فایل Word و PDF] | نگارش یار',
+  title: 'نمونه درخواست اعمال ماده ۴۷۷ قانون آیین دادرسی کیفری | نگارش یار',
   description: 'متن آماده لایحه تقاضای اعمال ماده ۴۷۷ و تجویز اعاده دادرسی ویژه به جهت خلاف بیّن شرع بودن رأی قطعی دادگاه، به همراه استناد به مبانی فقهی و قانونی.',
   keywords: [
     'نمونه درخواست اعمال ماده ۴۷۷',
@@ -229,7 +229,7 @@ export const sampleArticle477RequestMetadata: Metadata = {
     canonical: 'https://www.negaresh-yar.ir/samples/article-477-request',
   },
   openGraph: {
-    title: 'نمونه درخواست اعمال ماده ۴۷۷ [رایگان، دانلود فایل Word و PDF] | نگارش یار',
+    title: 'نمونه درخواست اعمال ماده ۴۷۷ قانون آیین دادرسی کیفری | نگارش یار',
   description: 'دانلود رایگان و کپی متن درخواست اعمال ماده ۴۷۷ و اعاده دادرسی خلاف بیّن شرع.',
     url: 'https://www.negaresh-yar.ir/samples/article-477-request',
     siteName: 'نگارش یار',

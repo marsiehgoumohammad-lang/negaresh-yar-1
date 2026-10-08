@@ -125,14 +125,14 @@ export const sampleAccidentalThirdPartyObjectionPetitionData: SampleLandingData 
 };
 
 export const sampleAccidentalThirdPartyObjectionPetitionMetadata: Metadata = {
-  title: "نمونه اعتراض شخص ثالث طاری [رایگان، دانلود فایل Word و PDF] | نگارش یار",
+  title: "نمونه اعتراض شخص ثالث طاری (ماده ۴۲۱) | نگارش یار",
   description: "دانلود نمونه متن رسمی اعتراض شخص ثالث طاری نسبت به دادنامه استنادی طرف مقابل در پرونده جاری مستند به ماده ۴۲۱ و ۴۲۳ قانون آیین دادرسی مدنی.",
   keywords: ["اعتراض شخص ثالث طاری", "ماده ۴۲۱ قانون آیین دادرسی مدنی", "ماده ۴۲۳ ق.آ.د.م اعتراض طاری", "ابطال رأی استنادی طرف دعوا", "نگارش یار"],
   alternates: {
     canonical: 'https://www.negaresh-yar.ir/samples/accidental-third-party-objection-petition',
   },
   openGraph: {
-    title: "نمونه اعتراض شخص ثالث طاری [رایگان، دانلود فایل Word و PDF] | نگارش یار",
+    title: "نمونه اعتراض شخص ثالث طاری (ماده ۴۲۱) | نگارش یار",
     description: "دانلود نمونه متن رسمی اعتراض شخص ثالث طاری نسبت به دادنامه استنادی طرف مقابل در پرونده جاری مستند به ماده ۴۲۱ و ۴۲۳ قانون آیین دادرسی مدنی.",
     url: 'https://www.negaresh-yar.ir/samples/accidental-third-party-objection-petition',
     siteName: 'نگارش یار',

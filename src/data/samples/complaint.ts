@@ -353,7 +353,7 @@ export const sampleComplaintData: SampleLandingData = {
 };
 
 export const sampleComplaintMetadata: Metadata = {
-  title: 'نمونه شکواییه کیفری کلاهبرداری و خیانت در امانت [رایگان، دانلود فایل Word و PDF] | نگارش یار',
+  title: 'نمونه شکواییه کیفری کلاهبرداری، خیانت در امانت و ثنا | نگارش یار',
   description: 'دانلود و مشاهده کامل‌ترین الگوی متن شکواییه کیفری کلاهبرداری، سرقت، خیانت در امانت، فحاشی، نحوه تعیین دادسرای صالح و ثبت در ثنا.',
   keywords: [
     'نمونه شکواییه کیفری',
@@ -368,7 +368,7 @@ export const sampleComplaintMetadata: Metadata = {
     canonical: 'https://www.negaresh-yar.ir/samples/complaint',
   },
   openGraph: {
-    title: 'نمونه شکواییه کیفری کلاهبرداری و خیانت در امانت [رایگان، دانلود فایل Word و PDF] | نگارش یار',
+    title: 'نمونه شکواییه کیفری کلاهبرداری، خیانت در امانت و ثنا | نگارش یار',
   description: 'الگوی استاندارد و کامل شکایت کیفری جهت ارائه به دادسرا و دفاتر خدمات قضایی.',
     url: 'https://www.negaresh-yar.ir/samples/complaint',
     siteName: 'نگارش یار',

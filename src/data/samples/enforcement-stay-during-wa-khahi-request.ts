@@ -139,14 +139,14 @@ export const sampleEnforcementStayDuringWaKhahiRequestData: SampleLandingData = 
 };
 
 export const sampleEnforcementStayDuringWaKhahiRequestMetadata: Metadata = {
- title: "نمونه تقاضای توقف عملیات اجرایی حکم غیابی [رایگان، دانلود فایل Word و PDF] | نگارش یار",
+ title: "نمونه تقاضای توقف عملیات اجرایی حکم غیابی (ماده ۳۰۶) | نگارش یار",
  description: "دانلود نمونه متن رسمی درخواست توقف عملیات اجرایی حکم غیابی به سبب تقدیم دادخواست واخواهی مستند به تبصره ۲ ماده ۳۰۶ قانون آیین دادرسی مدنی.",
  keywords: ["توقف اجرای حکم غیابی", "ماده ۳۰۶ تبصره ۲ قانون آیین دادرسی مدنی", "توقف مزایده اجرای احکام مدنی", "رفع توقیف اموال در واخواهی", "نگارش یار"],
  alternates: {
  canonical: 'https://www.negaresh-yar.ir/samples/enforcement-stay-during-wa-khahi-request',
  },
  openGraph: {
- title: "نمونه تقاضای توقف عملیات اجرایی حکم غیابی [رایگان، دانلود فایل Word و PDF] | نگارش یار",
+ title: "نمونه تقاضای توقف عملیات اجرایی حکم غیابی (ماده ۳۰۶) | نگارش یار",
  description: "دانلود نمونه متن رسمی درخواست توقف عملیات اجرایی حکم غیابی به سبب تقدیم دادخواست واخواهی مستند به تبصره ۲ ماده ۳۰۶ قانون آیین دادرسی مدنی.",
  url: 'https://www.negaresh-yar.ir/samples/enforcement-stay-during-wa-khahi-request',
  siteName: 'نگارش یار',

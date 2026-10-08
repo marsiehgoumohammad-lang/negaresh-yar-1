@@ -242,7 +242,7 @@ export const sampleFineInstallmentPetitionData: SampleLandingData = {
 };
 
 export const sampleFineInstallmentPetitionMetadata: Metadata = {
-  title: 'نمونه دادخواست اعسار از پرداخت و تقسیط جزای نقدی [رایگان، دانلود فایل Word و PDF] | نگارش یار',
+  title: 'نمونه دادخواست تقسیط جزای نقدی و اعسار از جریمه دادگاه | نگارش یار',
   description: 'دانلود و مشاهده الگوی رسمی دادخواست تقسیط جزای نقدی و اعسار از پرداخت جریمه کیفری جهت جلوگیری از حبس بدل از جریمه مستند به مواد ۵۲۹ و ۵۳۹ ق.آ.د.ک.',
   keywords: [
     'دادخواست تقسیط جزای نقدی',
@@ -258,7 +258,7 @@ export const sampleFineInstallmentPetitionMetadata: Metadata = {
     canonical: 'https://www.negaresh-yar.ir/samples/fine-installment-petition',
   },
   openGraph: {
-    title: 'نمونه دادخواست اعسار از پرداخت و تقسیط جزای نقدی [رایگان، دانلود فایل Word و PDF] | نگارش یار',
+    title: 'نمونه دادخواست تقسیط جزای نقدی و اعسار از جریمه دادگاه | نگارش یار',
   description: 'الگوی قانونی و استاندارد دادخواست تقسیط جریمه کیفری و ممانعت از بازداشت بدل از جزای نقدی.',
     url: 'https://www.negaresh-yar.ir/samples/fine-installment-petition',
     siteName: 'نگارش یار',

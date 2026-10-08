@@ -121,14 +121,14 @@ export const sampleClaimIncreaseModificationBriefData: SampleLandingData = {
 };
 
 export const sampleClaimIncreaseModificationBriefMetadata: Metadata = {
-  title: "نمونه لایحه افزایش خواسته دعوا [رایگان، دانلود فایل Word و PDF] | نگارش یار",
+  title: "نمونه لایحه افزایش خواسته دعوا (ماده ۹۸) | نگارش یار",
   description: "دانلود نمونه متن رسمی لایحه افزایش خواسته یا تغییر نحوه دعوا تا پایان اولین جلسه دادرسی مستند به ماده ۹۸ قانون آیین دادرسی مدنی با فرمت قضایی.",
   keywords: ["افزایش خواسته در دادگاه", "ماده ۹۸ قانون آیین دادرسی مدنی", "تغییر نحوه دعوا", "وحدت منشأ افزایش خواسته", "نگارش یار"],
   alternates: {
     canonical: 'https://www.negaresh-yar.ir/samples/claim-increase-modification-brief',
   },
   openGraph: {
-    title: "نمونه لایحه افزایش خواسته دعوا [رایگان، دانلود فایل Word و PDF] | نگارش یار",
+    title: "نمونه لایحه افزایش خواسته دعوا (ماده ۹۸) | نگارش یار",
     description: "دانلود نمونه متن رسمی لایحه افزایش خواسته یا تغییر نحوه دعوا تا پایان اولین جلسه دادرسی مستند به ماده ۹۸ قانون آیین دادرسی مدنی با فرمت قضایی.",
     url: 'https://www.negaresh-yar.ir/samples/claim-increase-modification-brief',
     siteName: 'نگارش یار',

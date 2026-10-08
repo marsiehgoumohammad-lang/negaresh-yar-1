@@ -251,6 +251,12 @@ export const familyLawyerData: ServiceLandingData = {
 
   relatedArticles: [
     {
+      title: 'راهنمای دریافت وکیل رایگان و معاضدت قضایی در دادگاه خانواده',
+      href: '/knowledge/free-lawyer-and-legal-aid-guide',
+      badge: 'وکیل معاضدتی',
+      desc: 'شرایط بهره مندی از وکیل رایگان معاضدتی در دعاوی مهریه، طلاق و نفقه.',
+    },
+    {
       title: 'راهنمای جامع مطالبه مهریه از اداره ثبت و دادگاه',
       href: '/knowledge/mahrieh-claim-guide',
       badge: 'پیلار دانشی',

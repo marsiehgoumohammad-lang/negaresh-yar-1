@@ -284,7 +284,7 @@ export const sampleAuctionDeedTransferRequestData: SampleLandingData = {
 };
 
 export const sampleAuctionDeedTransferRequestMetadata: Metadata = {
-  title: 'نمونه درخواست انتقال سند رسمی ملک مزایده ای [رایگان، دانلود فایل Word و PDF] | نگارش یار',
+  title: 'نمونه درخواست انتقال سند رسمی ملک مزایده ای (ماده ۱۴۳) | نگارش یار',
   description: 'دانلود و مشاهده الگوی رسمی درخواست انتقال سند رسمی ملک و خودروی مزایده ای، معرفی نامه به دفترخانه اسناد رسمی و دستور تخلیه مستند به ماده ۱۴۳ و ۱۴۴ ق.ا.ا.م.',
   keywords: [
     'درخواست انتقال سند مزایده',
@@ -300,7 +300,7 @@ export const sampleAuctionDeedTransferRequestMetadata: Metadata = {
     canonical: 'https://www.negaresh-yar.ir/samples/auction-deed-transfer-request',
   },
   openGraph: {
-    title: 'نمونه درخواست انتقال سند رسمی ملک مزایده ای [رایگان، دانلود فایل Word و PDF] | نگارش یار',
+    title: 'نمونه درخواست انتقال سند رسمی ملک مزایده ای (ماده ۱۴۳) | نگارش یار',
     description: 'الگوی حقوقی تقاضای انتقال سند رسمی و معرفی نامه به دفترخانه برای برنده مزایده دادگاه.',
     url: 'https://www.negaresh-yar.ir/samples/auction-deed-transfer-request',
     siteName: 'نگارش یار',

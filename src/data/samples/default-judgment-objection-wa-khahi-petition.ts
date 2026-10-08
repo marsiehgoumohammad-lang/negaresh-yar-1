@@ -149,14 +149,14 @@ export const sampleDefaultJudgmentObjectionWaKhahiPetitionData: SampleLandingDat
 };
 
 export const sampleDefaultJudgmentObjectionWaKhahiPetitionMetadata: Metadata = {
- title: "نمونه دادخواست واخواهی از حکم غیابی [رایگان، دانلود فایل Word و PDF] | نگارش یار",
+ title: "نمونه دادخواست واخواهی از حکم غیابی (ماده ۳۰۵) | نگارش یار",
  description: "دانلود نمونه متن رسمی دادخواست واخواهی از حکم غیابی دادگاه در مهلت ۲۰ روزه مستند به مواد ۳۰۵ و ۳۰۶ قانون آیین دادرسی مدنی و توقف اجرای حکم.",
  keywords: ["دادخواست واخواهی حکم غیابی", "ماده ۳۰۵ قانون آیین دادرسی مدنی", "مهلت ۲۰ روزه واخواهی", "توقف اجرای حکم غیابی", "نگارش یار"],
  alternates: {
  canonical: 'https://www.negaresh-yar.ir/samples/default-judgment-objection-wa-khahi-petition',
  },
  openGraph: {
- title: "نمونه دادخواست واخواهی از حکم غیابی [رایگان، دانلود فایل Word و PDF] | نگارش یار",
+ title: "نمونه دادخواست واخواهی از حکم غیابی (ماده ۳۰۵) | نگارش یار",
  description: "دانلود نمونه متن رسمی دادخواست واخواهی از حکم غیابی دادگاه در مهلت ۲۰ روزه مستند به مواد ۳۰۵ و ۳۰۶ قانون آیین دادرسی مدنی و توقف اجرای حکم.",
  url: 'https://www.negaresh-yar.ir/samples/default-judgment-objection-wa-khahi-petition',
  siteName: 'نگارش یار',

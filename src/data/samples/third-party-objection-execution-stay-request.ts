@@ -125,14 +125,14 @@ export const sampleThirdPartyObjectionExecutionStayRequestData: SampleLandingDat
 };
 
 export const sampleThirdPartyObjectionExecutionStayRequestMetadata: Metadata = {
-  title: "نمونه درخواست تاخیر اجرای حکم در اعتراض ثالث [رایگان، دانلود فایل Word و PDF] | نگارش یار",
+  title: "نمونه تقاضای تأخیر اجرای حکم در اعتراض ثالث (ماده ۴۲۴) | نگارش یار",
   description: "دانلود نمونه متن رسمی درخواست صدور قرار تأخیر اجرای حکم به علت اعتراض شخص ثالث مستند به ماده ۴۲۴ قانون آیین دادرسی مدنی با تودیع تأمین.",
   keywords: ["تأخیر اجرای حکم اعتراض ثالث", "ماده ۴۲۴ قانون آیین دادرسی مدنی", "تأمین خسارت احتمالی اعتراض ثالث", "توقف مزایده ملک متعلق به ثالث", "نگارش یار"],
   alternates: {
     canonical: 'https://www.negaresh-yar.ir/samples/third-party-objection-execution-stay-request',
   },
   openGraph: {
-    title: "نمونه درخواست تاخیر اجرای حکم در اعتراض ثالث [رایگان، دانلود فایل Word و PDF] | نگارش یار",
+    title: "نمونه تقاضای تأخیر اجرای حکم در اعتراض ثالث (ماده ۴۲۴) | نگارش یار",
     description: "دانلود نمونه متن رسمی درخواست صدور قرار تأخیر اجرای حکم به علت اعتراض شخص ثالث مستند به ماده ۴۲۴ قانون آیین دادرسی مدنی با تودیع تأمین.",
     url: 'https://www.negaresh-yar.ir/samples/third-party-objection-execution-stay-request',
     siteName: 'نگارش یار',

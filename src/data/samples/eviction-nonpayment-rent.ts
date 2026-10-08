@@ -240,7 +240,7 @@ export const sampleEvictionNonpaymentRentData: SampleLandingData = {
 };
 
 export const sampleEvictionNonpaymentRentMetadata: Metadata = {
-  title: 'نمونه دادخواست تخلیه و مطالبه اجور معوقه [رایگان، دانلود فایل Word و PDF] | نگارش یار',
+  title: 'نمونه دادخواست تخلیه به علت عدم پرداخت اجاره‌بها و اجور معوقه | نگارش یار',
   description: 'متن آماده دادخواست حقوقی صدور حکم تخلیه عین مستاجره به دلیل امتناع از پرداخت اجاره‌بها به انضمام مطالبه اجور معوقه و تامین خواسته از محل ودیعه در ثنا.',
   keywords: [
     'نمونه دادخواست تخلیه عدم پرداخت اجاره',
@@ -254,7 +254,7 @@ export const sampleEvictionNonpaymentRentMetadata: Metadata = {
     canonical: 'https://www.negaresh-yar.ir/samples/eviction-nonpayment-rent',
   },
   openGraph: {
-    title: 'نمونه دادخواست تخلیه و مطالبه اجور معوقه [رایگان، دانلود فایل Word و PDF] | نگارش یار',
+    title: 'نمونه دادخواست تخلیه به علت عدم پرداخت اجاره‌بها و اجور معوقه | نگارش یار',
   description: 'متن آماده دادخواست حقوقی صدور حکم تخلیه عین مستاجره به دلیل امتناع از پرداخت اجاره‌بها در ثنا.',
     url: 'https://www.negaresh-yar.ir/samples/eviction-nonpayment-rent',
     siteName: 'نگارش یار',

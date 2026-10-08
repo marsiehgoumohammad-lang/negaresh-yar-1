@@ -145,14 +145,14 @@ export const sampleExpertDepositPaymentBriefData: SampleLandingData = {
 };
 
 export const sampleExpertDepositPaymentBriefMetadata: Metadata = {
-  title: "نمونه لایحه تودیع دستمزد کارشناس [رایگان، دانلود فایل Word و PDF] | نگارش یار",
+  title: "نمونه لایحه تودیع دستمزد کارشناس (ماده ۲۵۹) | نگارش یار",
   description: "دانلود نمونه متن رسمی لایحه اعلام تودیع و پیوست فیش پرداخت دستمزد کارشناس رسمی دادگستری ظرف ۷ روز مستند به ماده ۲۵۹ قانون آیین دادرسی مدنی.",
   keywords: ["تودیع دستمزد کارشناس دادگاه", "ماده ۲۵۹ قانون آیین دادرسی مدنی", "مهلت یک هفته واریز کارشناسی", "ابطال دادخواست به علت عدم پرداخت دستمزد", "نگارش یار"],
   alternates: {
     canonical: 'https://www.negaresh-yar.ir/samples/expert-deposit-payment-brief',
   },
   openGraph: {
-    title: "نمونه لایحه تودیع دستمزد کارشناس [رایگان، دانلود فایل Word و PDF] | نگارش یار",
+    title: "نمونه لایحه تودیع دستمزد کارشناس (ماده ۲۵۹) | نگارش یار",
     description: "دانلود نمونه متن رسمی لایحه اعلام تودیع و پیوست فیش پرداخت دستمزد کارشناس رسمی دادگستری ظرف ۷ روز مستند به ماده ۲۵۹ قانون آیین دادرسی مدنی.",
     url: 'https://www.negaresh-yar.ir/samples/expert-deposit-payment-brief',
     siteName: 'نگارش یار',

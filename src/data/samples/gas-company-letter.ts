@@ -214,7 +214,7 @@ export const sampleGasCompanyLetterData: SampleLandingData = {
 
   relatedArticles: [
     {
-      title: 'نمونه راهنمای اخذ انشعابات موقت آب، برق و گاز [رایگان، دانلود فایل Word و PDF] | نگارش یار',
+      title: 'راهنمای اخذ انشعابات موقت آب، برق و گاز طبق قانون ۹۶',
       href: '/knowledge/how-to-write-administrative-letter',
       badge: 'حقوق شهری',
       desc: 'شرایط برقراری انشعاب قانونی برای ساختمان‌های فاقد پایان‌کار و اراضی قولنامه‌ای.',

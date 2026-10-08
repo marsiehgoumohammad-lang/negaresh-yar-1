@@ -129,14 +129,14 @@ export const sampleOfficeManagerPetitionRejectionObjectionData: SampleLandingDat
 };
 
 export const sampleOfficeManagerPetitionRejectionObjectionMetadata: Metadata = {
-  title: "نمونه اعتراض به قرار رد دادخواست مدیر دفتر [رایگان، دانلود فایل Word و PDF] | نگارش یار",
+  title: "نمونه اعتراض به قرار رد دادخواست مدیر دفتر (ماده ۵۵) | نگارش یار",
   description: "دانلود نمونه شکایت و اعتراض به قرار رد دادخواست صادره توسط مدیر دفتر دادگاه در مهلت ۱۰ روز مستند به ماده ۵۴ و ۵۵ قانون آیین دادرسی مدنی با فرمت رسمی.",
   keywords: ["اعتراض به قرار رد دادخواست", "ماده ۵۵ قانون آیین دادرسی مدنی", "شکایت از مدیر دفتر دادگاه", "نقض قرار رد دادخواست دفتر", "نگارش یار"],
   alternates: {
     canonical: 'https://www.negaresh-yar.ir/samples/office-manager-petition-rejection-objection',
   },
   openGraph: {
-    title: "نمونه اعتراض به قرار رد دادخواست مدیر دفتر [رایگان، دانلود فایل Word و PDF] | نگارش یار",
+    title: "نمونه اعتراض به قرار رد دادخواست مدیر دفتر (ماده ۵۵) | نگارش یار",
     description: "دانلود نمونه شکایت و اعتراض به قرار رد دادخواست صادره توسط مدیر دفتر دادگاه در مهلت ۱۰ روز مستند به ماده ۵۴ و ۵۵ قانون آیین دادرسی مدنی با فرمت رسمی.",
     url: 'https://www.negaresh-yar.ir/samples/office-manager-petition-rejection-objection',
     siteName: 'نگارش یار',

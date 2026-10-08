@@ -5,7 +5,7 @@ export const sampleCriminalRetrialArticle474PetitionData: SampleLandingData = {
   slug: 'criminal-retrial-article-474-petition',
   categoryName: 'اعتراض و تجدیدنظر',
   badge: 'الگوی اعاده دادرسی دیوان عالی کشور',
-  metaTitle: 'نمونه درخواست اعاده دادرسی کیفری ماده ۴۷۴ [رایگان، دانلود فایل Word و PDF] | نگارش یار',
+  metaTitle: 'نمونه لایحه درخواست اعاده دادرسی کیفری (ماده ۴۷۴) | نگارش یار',
   metaDescription: 'دانلود و کپی متن نمونه درخواست اعاده دادرسی کیفری در دیوان عالی کشور مستند به بندهای ۷ گانه ماده ۴۷۴ ق.آ.د.ک به همراه تقاضای توقف اجرای حکم ماده ۴۷۸ در نگارش یار.',
   h1Title: 'نمونه درخواست اعاده دادرسی کیفری در دیوان عالی کشور (ماده ۴۷۴)',
   heroSubtitle: 'دانلود و مشاهده الگوی مستدل و حقوقی درخواست اعاده دادرسی نسبت به احکام قطعی دادگاه‌های کیفری به استناد بندهای «چ» و سایر بندهای ماده ۴۷۴ قانون آیین دادرسی کیفری، همراه با تقاضای دستور توقف فوری اجرای حکم مستند به ماده ۴۷۸.',
@@ -259,7 +259,7 @@ export const sampleCriminalRetrialArticle474PetitionData: SampleLandingData = {
 };
 
 export const sampleCriminalRetrialArticle474PetitionMetadata: Metadata = {
-  title: 'نمونه درخواست اعاده دادرسی کیفری ماده ۴۷۴ [رایگان، دانلود فایل Word و PDF] | نگارش یار',
+  title: 'نمونه لایحه درخواست اعاده دادرسی کیفری (ماده ۴۷۴) | نگارش یار',
   description: 'دانلود و کپی متن نمونه درخواست اعاده دادرسی کیفری در دیوان عالی کشور مستند به بندهای ۷ گانه ماده ۴۷۴ ق.آ.د.ک به همراه تقاضای توقف اجرای حکم ماده ۴۷۸ در نگارش یار.',
   keywords: [
     'نمونه درخواست اعاده دادرسی کیفری',
@@ -274,7 +274,7 @@ export const sampleCriminalRetrialArticle474PetitionMetadata: Metadata = {
     canonical: 'https://www.negaresh-yar.ir/samples/criminal-retrial-article-474-petition',
   },
   openGraph: {
-    title: 'نمونه درخواست اعاده دادرسی کیفری ماده ۴۷۴ [رایگان، دانلود فایل Word و PDF] | نگارش یار',
+    title: 'نمونه لایحه درخواست اعاده دادرسی کیفری (ماده ۴۷۴) | نگارش یار',
     description: 'دانلود و کپی متن نمونه درخواست اعاده دادرسی کیفری در دیوان عالی کشور در نگارش یار.',
     url: 'https://www.negaresh-yar.ir/samples/criminal-retrial-article-474-petition',
     siteName: 'نگارش یار',

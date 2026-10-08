@@ -210,7 +210,7 @@ export const sampleWifeResidenceCourtJurisdictionRequestData: SampleLandingData 
 };
 
 export const sampleWifeResidenceCourtJurisdictionRequestMetadata: Metadata = {
-  title: 'نمونه لایحه صلاحیت دادگاه محل سکونت زوجه [رایگان، دانلود فایل Word و PDF] | نگارش یار',
+  title: 'نمونه لایحه استناد به ماده ۱۲ قانون حمایت خانواده (صلاحیت دادگاه محل سکونت زوجه) | نگارش یار',
   description: 'متن استاندارد لایحه ایراد عدم صلاحیت محلی یا تثبیت رسیدگی در دادگاه شهر محل زندگی زوجه مستند به ماده ۱۲ قانون حمایت خانواده و رای وحدت رویه ۷۵۶.',
   keywords: [
     'نمونه لایحه ماده ۱۲ قانون حمایت خانواده',
@@ -225,7 +225,7 @@ export const sampleWifeResidenceCourtJurisdictionRequestMetadata: Metadata = {
     canonical: 'https://www.negaresh-yar.ir/samples/wife-residence-court-jurisdiction-request',
   },
   openGraph: {
-    title: 'نمونه لایحه صلاحیت دادگاه محل سکونت زوجه [رایگان، دانلود فایل Word و PDF] | نگارش یار',
+    title: 'نمونه لایحه استناد به ماده ۱۲ قانون حمایت خانواده (صلاحیت دادگاه محل سکونت زوجه) | نگارش یار',
     description: 'متن استاندارد لایحه صلاحیت محلی دادگاه خانواده در شهر محل سکونت زوجه.',
     url: 'https://www.negaresh-yar.ir/samples/wife-residence-court-jurisdiction-request',
     siteName: 'نگارش یار',

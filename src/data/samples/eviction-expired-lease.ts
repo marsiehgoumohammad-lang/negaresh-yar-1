@@ -244,7 +244,7 @@ export const sampleEvictionExpiredLeaseData: SampleLandingData = {
 };
 
 export const sampleEvictionExpiredLeaseMetadata: Metadata = {
-  title: 'نمونه دادخواست دستور تخلیه به دلیل انقضای مدت اجاره [رایگان، دانلود فایل Word و PDF] | نگارش یار',
+  title: 'نمونه درخواست و دادخواست دستور تخلیه فوری ملک (پایان مدت اجاره) | نگارش یار',
   description: 'متن آماده درخواست صدور دستور تخلیه فوری و حکم تخلیه شورای حل اختلاف به علت اتمام مدت قرارداد اجاره مستند به قانون روابط موجر و مستاجر ۱۳۷۶ در سامانه ثنا.',
   keywords: [
     'نمونه دستور تخلیه فوری',
@@ -258,7 +258,7 @@ export const sampleEvictionExpiredLeaseMetadata: Metadata = {
     canonical: 'https://www.negaresh-yar.ir/samples/eviction-expired-lease',
   },
   openGraph: {
-    title: 'نمونه دادخواست دستور تخلیه به دلیل انقضای مدت اجاره [رایگان، دانلود فایل Word و PDF] | نگارش یار',
+    title: 'نمونه درخواست و دادخواست دستور تخلیه فوری ملک (پایان مدت اجاره) | نگارش یار',
   description: 'متن آماده درخواست صدور دستور تخلیه فوری ملک به علت اتمام مدت قرارداد اجاره در ثنا.',
     url: 'https://www.negaresh-yar.ir/samples/eviction-expired-lease',
     siteName: 'نگارش یار',

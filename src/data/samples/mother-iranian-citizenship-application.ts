@@ -205,7 +205,7 @@ export const sampleMotherIranianCitizenshipApplicationData: SampleLandingData = 
 };
 
 export const sampleMotherIranianCitizenshipApplicationMetadata: Metadata = {
-  title: 'نمونه درخواست اعلام تابعیت ایرانی فرزند مادر ایرانی [رایگان، دانلود فایل Word و PDF] | نگارش یار',
+  title: 'نمونه درخواست اعلام تابعیت ایرانی فرزند مادر ایرانی | نگارش یار',
   description: 'متن رسمی درخواست اعطای تابعیت ایران به فرزندان مادر ایرانی و پدر غیرایرانی مستند به قانون مصوب ۱۳۹۸ و آیین‌نامه ۱۳۹۹ همراه با مدارک، مهلت‌ها و مستندات قانونی.',
   keywords: [
     'درخواست اعلام تابعیت فرزند مادر ایرانی',
@@ -219,7 +219,7 @@ export const sampleMotherIranianCitizenshipApplicationMetadata: Metadata = {
     canonical: 'https://www.negaresh-yar.ir/samples/mother-iranian-citizenship-application',
   },
   openGraph: {
-    title: 'نمونه درخواست اعلام تابعیت ایرانی فرزند مادر ایرانی [رایگان، دانلود فایل Word و PDF] | نگارش یار',
+    title: 'نمونه درخواست اعلام تابعیت ایرانی فرزند مادر ایرانی | نگارش یار',
     description: 'متن استاندارد تقاضای اعطای شناسنامه و تابعیت ایران به فرزندان حاصل از ازدواج زنان ایرانی با اتباع خارجی.',
     url: 'https://www.negaresh-yar.ir/samples/mother-iranian-citizenship-application',
     siteName: 'نگارش یار',

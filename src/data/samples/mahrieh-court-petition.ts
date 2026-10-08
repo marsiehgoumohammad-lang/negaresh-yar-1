@@ -356,7 +356,7 @@ export const sampleMahriehCourtPetitionData: SampleDocument = {
       badge: 'دانشنامه'
     },
     {
-      title: 'نمونه دادخواست مطالبه مهریه و تامین خواسته [رایگان، دانلود فایل Word و PDF] | نگارش یار',
+      title: 'اعسار چیست؟ شرایط و قوانین اعسار و تقسیط',
       href: '/knowledge/how-to-install-debt-and-mahrieh',
       desc: 'راهنمای قسطی کردن مهریه در دادگاه و توقف حکم جلب.',
       badge: 'مقاله'

@@ -125,14 +125,14 @@ export const sampleAttachedPropertySubstitutionRequestData: SampleLandingData = 
 };
 
 export const sampleAttachedPropertySubstitutionRequestMetadata: Metadata = {
-  title: "نمونه درخواست تبدیل مال توقیف شده [رایگان، دانلود فایل Word و PDF] | نگارش یار",
+  title: "نمونه درخواست تبدیل مال توقیف‌شده (ماده ۱۲۴) | نگارش یار",
   description: "دانلود نمونه متن رسمی درخواست تبدیل مال توقیف‌شده در تأمین خواسته به وجه نقد یا مال هم‌ارز مستند به مواد ۱۲۴ و ۱۲۵ قانون آیین دادرسی مدنی.",
   keywords: ["تبدیل مال توقیف شده در تأمین خواسته", "ماده ۱۲۴ قانون آیین دادرسی مدنی", "ماده ۱۲۵ ق.آ.د.م", "آزادسازی ملک بازداشتی با تودیع نقد", "نگارش یار"],
   alternates: {
     canonical: 'https://www.negaresh-yar.ir/samples/attached-property-substitution-request',
   },
   openGraph: {
-    title: "نمونه درخواست تبدیل مال توقیف شده [رایگان، دانلود فایل Word و PDF] | نگارش یار",
+    title: "نمونه درخواست تبدیل مال توقیف‌شده (ماده ۱۲۴) | نگارش یار",
     description: "دانلود نمونه متن رسمی درخواست تبدیل مال توقیف‌شده در تأمین خواسته به وجه نقد یا مال هم‌ارز مستند به مواد ۱۲۴ و ۱۲۵ قانون آیین دادرسی مدنی.",
     url: 'https://www.negaresh-yar.ir/samples/attached-property-substitution-request',
     siteName: 'نگارش یار',

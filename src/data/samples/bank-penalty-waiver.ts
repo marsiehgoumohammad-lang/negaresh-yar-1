@@ -224,7 +224,7 @@ export const sampleBankPenaltyWaiverData: SampleLandingData = {
       badge: 'هاب اصلی',
     },
     {
-      title: 'نمونه نامه درخواست بخشودگی جرایم بانکی [رایگان، دانلود فایل Word و PDF] | نگارش یار',
+      title: 'نامه تقسیط بدهی بانکی و استمهال',
       href: '/samples/bank-debt-installment',
       desc: 'تقاضای مهلت و پرداخت اقساطی در صورت عدم توان تسویه یکجا.',
       badge: 'تقسیط بدهی',

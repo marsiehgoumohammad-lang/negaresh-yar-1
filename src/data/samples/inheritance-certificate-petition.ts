@@ -3,8 +3,8 @@ import { SampleLandingData } from './types';
 export const sampleInheritanceCertificatePetitionData: SampleLandingData = {
   slug: 'inheritance-certificate-petition',
   category: 'اوراق و دادخواست‌های قضایی',
-  title: 'نمونه دادخواست انحصار وراثت [رایگان، دانلود فایل Word و PDF] | نگارش یار',
-  metaTitle: 'نمونه دادخواست انحصار وراثت [رایگان، دانلود فایل Word و PDF] | نگارش یار',
+  title: 'درخواست گواهی انحصار وراثت | نگارش یار',
+  metaTitle: 'درخواست گواهی انحصار وراثت | نگارش یار',
   metaDescription: 'دانلود نمونه درخواست صدور گواهی حصر وراثت (محدود و نامحدود) ویژه شورای حل اختلاف.',
   keywords: ['نمونه درخواست صدور گواهی انحصار وراثت', 'نمونه دادخواست', 'نگارش یار', 'دانلود'],
   h1Title: 'نمونه درخواست صدور گواهی انحصار وراثت',

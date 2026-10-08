@@ -167,7 +167,7 @@ export const sampleCitizenshipSecurityRejectionObjectionData: SampleLandingData 
 };
 
 export const sampleCitizenshipSecurityRejectionObjectionMetadata: Metadata = {
-  title: 'نمونه اعتراض به رد تابعیت به علت مشکل امنیتی [رایگان، دانلود فایل Word و PDF] | نگارش یار',
+  title: 'نمونه اعتراض به رد تابعیت به علت مشکل امنیتی | نگارش یار',
   description: 'متن لایحه اعتراض به رد پرونده تابعیت فرزند مادر ایرانی به دلیل استعلام امنیتی منفی، اثبات عدم سوءپیشینه و تقاضای رفع تشابه اسمی و مصاحبه حضوری.',
   keywords: [
     'اعتراض به رد تابعیت به علت مشکل امنیتی',
@@ -180,7 +180,7 @@ export const sampleCitizenshipSecurityRejectionObjectionMetadata: Metadata = {
     canonical: 'https://www.negaresh-yar.ir/samples/citizenship-security-rejection-objection',
   },
   openGraph: {
-    title: 'نمونه اعتراض به رد تابعیت به علت مشکل امنیتی [رایگان، دانلود فایل Word و PDF] | نگارش یار',
+    title: 'نمونه اعتراض به رد تابعیت به علت مشکل امنیتی | نگارش یار',
     description: 'متن دفاعیه اداری در خصوص رد امنیتی پرونده تابعیت با تقاضای بررسی مجدد، مصاحبه و احراز هویت بیومتریک.',
     url: 'https://www.negaresh-yar.ir/samples/citizenship-security-rejection-objection',
     siteName: 'نگارش یار',

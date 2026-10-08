@@ -230,7 +230,7 @@ export const sampleCheckPaymentDemandData: SampleLandingData = {
 };
 
 export const sampleCheckPaymentDemandMetadata: Metadata = {
-  title: 'نمونه اظهارنامه مطالبه وجه چک [رایگان، دانلود فایل Word و PDF] | نگارش یار',
+  title: 'نمونه اظهارنامه مطالبه وجه چک و خسارت تأخیر تأدیه | نگارش یار',
   description: 'متن آماده اظهارنامه رسمی مطالبه وجه چک صیادی برگشتی و خسارت تاخیر تادیه مستند به ماده ۱۵۶ آیین دادرسی مدنی جهت ابلاغ در سامانه ثنا به صادرکننده و ظهرنویس.',
   keywords: [
     'نمونه اظهارنامه مطالبه وجه چک',
@@ -244,7 +244,7 @@ export const sampleCheckPaymentDemandMetadata: Metadata = {
     canonical: 'https://www.negaresh-yar.ir/samples/check-payment-demand',
   },
   openGraph: {
-    title: 'نمونه اظهارنامه مطالبه وجه چک [رایگان، دانلود فایل Word و PDF] | نگارش یار',
+    title: 'نمونه اظهارنامه مطالبه وجه چک و خسارت تأخیر تأدیه | نگارش یار',
   description: 'متن آماده اظهارنامه رسمی مطالبه وجه چک صیادی برگشتی و خسارت تاخیر تادیه در سامانه ثنا.',
     url: 'https://www.negaresh-yar.ir/samples/check-payment-demand',
     siteName: 'نگارش یار',

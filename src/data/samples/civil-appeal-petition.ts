@@ -133,14 +133,14 @@ export const sampleCivilAppealPetitionData: SampleLandingData = {
 };
 
 export const sampleCivilAppealPetitionMetadata: Metadata = {
-  title: "نمونه دادخواست تجدیدنظرخواهی حقوقی [رایگان، دانلود فایل Word و PDF] | نگارش یار",
+  title: "نمونه دادخواست تجدیدنظرخواهی حقوقی (ماده ۳۳۹) | نگارش یار",
   description: "دانلود نمونه متن رسمی دادخواست تجدیدنظرخواهی حقوقی در مهلت ۲۰ روزه مستند به مواد ۳۳۹ و جهات ماده ۳۴۸ قانون آیین دادرسی مدنی جهت نقض رأی بدوی.",
   keywords: ["دادخواست تجدیدنظرخواهی حقوقی", "ماده ۳۴۸ قانون آیین دادرسی مدنی", "مهلت ۲۰ روزه تجدیدنظرخواهی", "نقض رأی در دادگاه تجدیدنظر استان", "نگارش یار"],
   alternates: {
     canonical: 'https://www.negaresh-yar.ir/samples/civil-appeal-petition',
   },
   openGraph: {
-    title: "نمونه دادخواست تجدیدنظرخواهی حقوقی [رایگان، دانلود فایل Word و PDF] | نگارش یار",
+    title: "نمونه دادخواست تجدیدنظرخواهی حقوقی (ماده ۳۳۹) | نگارش یار",
     description: "دانلود نمونه متن رسمی دادخواست تجدیدنظرخواهی حقوقی در مهلت ۲۰ روزه مستند به مواد ۳۳۹ و جهات ماده ۳۴۸ قانون آیین دادرسی مدنی جهت نقض رأی بدوی.",
     url: 'https://www.negaresh-yar.ir/samples/civil-appeal-petition',
     siteName: 'نگارش یار',

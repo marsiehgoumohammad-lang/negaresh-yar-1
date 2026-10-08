@@ -153,14 +153,14 @@ export const sampleEvidencePreservationPetitionData: SampleLandingData = {
 };
 
 export const sampleEvidencePreservationPetitionMetadata: Metadata = {
-  title: "نمونه دادخواست تامین دلیل [رایگان، دانلود فایل Word و PDF] | نگارش یار",
+  title: "نمونه دادخواست تأمین دلیل (ماده ۱۴۹) | نگارش یار",
   description: "دانلود نمونه متن رسمی دادخواست تأمین دلیل با جلب نظر کارشناس رسمی دادگستری مستند به مواد ۱۴۹، ۱۵۰ و ۱۵۲ قانون آیین دادرسی مدنی.",
   keywords: ["دادخواست تأمین دلیل", "ماده ۱۴۹ قانون آیین دادرسی مدنی", "تأمین دلیل خسارت ساختمان", "تأمین دلیل شورای حل اختلاف", "نگارش یار"],
   alternates: {
     canonical: 'https://www.negaresh-yar.ir/samples/evidence-preservation-petition',
   },
   openGraph: {
-    title: "نمونه دادخواست تامین دلیل [رایگان، دانلود فایل Word و PDF] | نگارش یار",
+    title: "نمونه دادخواست تأمین دلیل (ماده ۱۴۹) | نگارش یار",
     description: "دانلود نمونه متن رسمی دادخواست تأمین دلیل با جلب نظر کارشناس رسمی دادگستری مستند به مواد ۱۴۹، ۱۵۰ و ۱۵۲ قانون آیین دادرسی مدنی.",
     url: 'https://www.negaresh-yar.ir/samples/evidence-preservation-petition',
     siteName: 'نگارش یار',

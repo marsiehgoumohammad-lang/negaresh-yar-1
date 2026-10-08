@@ -221,7 +221,7 @@ export const sampleIntoleranceOfPunishmentRequestData: SampleLandingData = {
 };
 
 export const sampleIntoleranceOfPunishmentRequestMetadata: Metadata = {
-  title: 'نمونه لایحه درخواست عدم تحمل کیفر و حبس به دلیل بیماری [رایگان، دانلود فایل Word و PDF] | نگارش یار',
+  title: 'نمونه لایحه درخواست عدم تحمل کیفر و حبس به دلیل بیماری (ماده ۵۰۲) | نگارش یار',
   description: 'متن استاندارد لایحه تقاضای عدم تحمل کیفر، ارجاع به پزشکی قانونی و توقف یا تبدیل حبس به دلیل بیماری مستند به ماده ۵۰۲ قانون آیین دادرسی کیفری در نگارش یار.',
   keywords: [
     'نمونه لایحه عدم تحمل کیفر',
@@ -235,7 +235,7 @@ export const sampleIntoleranceOfPunishmentRequestMetadata: Metadata = {
     canonical: 'https://www.negaresh-yar.ir/samples/intolerance-of-punishment-request',
   },
   openGraph: {
-    title: 'نمونه لایحه درخواست عدم تحمل کیفر و حبس به دلیل بیماری [رایگان، دانلود فایل Word و PDF] | نگارش یار',
+    title: 'نمونه لایحه درخواست عدم تحمل کیفر و حبس به دلیل بیماری (ماده ۵۰۲) | نگارش یار',
     description: 'متن لایحه تقاضای عدم تحمل کیفر و توقف حبس به دلیل بیماری صعب‌العلاج.',
     url: 'https://www.negaresh-yar.ir/samples/intolerance-of-punishment-request',
     siteName: 'نگارش یار',

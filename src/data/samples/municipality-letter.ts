@@ -321,7 +321,7 @@ export const sampleMunicipalityLetterData: SampleLandingData = {
 };
 
 export const sampleMunicipalityLetterMetadata: Metadata = {
-  title: 'نمونه نامه درخواست از شهرداری [رایگان، دانلود فایل Word و PDF] | نگارش یار',
+  title: 'نمونه نامه به شهرداری | متن تقسیط عوارض، پروانه و ماده ۱۰۰ | نگارش یار',
   description:
     'دانلود و کپی ۴ متن آماده نامه به شهرداری: درخواست تقسیط عوارض نوسازی، دفاعیه کمیسیون ماده ۱۰۰، تسریع در پایان کار و رفع سد معبر همراه با فرمول تنظیم و مشاوره تخصصی.',
   keywords: [

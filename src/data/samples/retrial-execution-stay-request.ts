@@ -125,14 +125,14 @@ export const sampleRetrialExecutionStayRequestData: SampleLandingData = {
 };
 
 export const sampleRetrialExecutionStayRequestMetadata: Metadata = {
-  title: "نمونه درخواست توقف اجرای حکم در اعاده دادرسی [رایگان، دانلود فایل Word و PDF] | نگارش یار",
+  title: "نمونه تقاضای توقف اجرای حکم در اعاده دادرسی (ماده ۴۳۷) | نگارش یار",
   description: "دانلود نمونه متن رسمی درخواست توقف عملیات اجرایی حکم قطعی به سبب صدور قرار قبولی اعاده دادرسی مستند به ماده ۴۳۷ قانون آیین دادرسی مدنی.",
   keywords: ["توقف اجرای حکم در اعاده دادرسی", "ماده ۴۳۷ قانون آیین دادرسی مدنی", "قرار قبولی اعاده دادرسی", "توقف مزایده با اعاده دادرسی", "نگارش یار"],
   alternates: {
     canonical: 'https://www.negaresh-yar.ir/samples/retrial-execution-stay-request',
   },
   openGraph: {
-    title: "نمونه درخواست توقف اجرای حکم در اعاده دادرسی [رایگان، دانلود فایل Word و PDF] | نگارش یار",
+    title: "نمونه تقاضای توقف اجرای حکم در اعاده دادرسی (ماده ۴۳۷) | نگارش یار",
     description: "دانلود نمونه متن رسمی درخواست توقف عملیات اجرایی حکم قطعی به سبب صدور قرار قبولی اعاده دادرسی مستند به ماده ۴۳۷ قانون آیین دادرسی مدنی.",
     url: 'https://www.negaresh-yar.ir/samples/retrial-execution-stay-request',
     siteName: 'نگارش یار',

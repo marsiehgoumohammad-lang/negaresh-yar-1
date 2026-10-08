@@ -133,14 +133,14 @@ export const sampleLitigationDamagesPetitionData: SampleLandingData = {
 };
 
 export const sampleLitigationDamagesPetitionMetadata: Metadata = {
-  title: "نمونه دادخواست مطالبه خسارات دادرسی [رایگان، دانلود فایل Word و PDF] | نگارش یار",
+  title: "نمونه دادخواست مطالبه خسارات دادرسی (ماده ۵۱۵) | نگارش یار",
   description: "دانلود نمونه متن رسمی دادخواست مطالبه خسارات دادرسی، حق‌الوکاله و خسارت تأخیر تأدیه مستند به مواد ۵۱۵، ۵۱۹ و ۵۲۲ قانون آیین دادرسی مدنی.",
   keywords: ["مطالبه خسارات دادرسی", "ماده ۵۱۵ قانون آیین دادرسی مدنی", "خسارت تأخیر تأدیه بانک مرکزی", "وصول هزینه دادرسی و حق‌الوکاله", "نگارش یار"],
   alternates: {
     canonical: 'https://www.negaresh-yar.ir/samples/litigation-damages-petition',
   },
   openGraph: {
-    title: "نمونه دادخواست مطالبه خسارات دادرسی [رایگان، دانلود فایل Word و PDF] | نگارش یار",
+    title: "نمونه دادخواست مطالبه خسارات دادرسی (ماده ۵۱۵) | نگارش یار",
     description: "دانلود نمونه متن رسمی دادخواست مطالبه خسارات دادرسی، حق‌الوکاله و خسارت تأخیر تأدیه مستند به مواد ۵۱۵، ۵۱۹ و ۵۲۲ قانون آیین دادرسی مدنی.",
     url: 'https://www.negaresh-yar.ir/samples/litigation-damages-petition',
     siteName: 'نگارش یار',

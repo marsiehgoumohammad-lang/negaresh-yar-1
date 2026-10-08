@@ -125,14 +125,14 @@ export const sampleForgedDocumentOriginalSubmissionDemandData: SampleLandingData
 };
 
 export const sampleForgedDocumentOriginalSubmissionDemandMetadata: Metadata = {
-  title: "نمونه تقاضای تسلیم اصل سند مجعول [رایگان، دانلود فایل Word و PDF] | نگارش یار",
+  title: "نمونه تقاضای تسلیم اصل سند مجعول (ماده ۲۲۰) | نگارش یار",
   description: "دانلود نمونه متن رسمی درخواست صدور اخطار تسلیم اصل سند موضوع ادعای جعل ظرف ۱۰ روز و خروج آن از دلایل مستند به ماده ۲۲۰ قانون آیین دادرسی مدنی.",
   keywords: ["تسلیم اصل سند به دادگاه", "ماده ۲۲۰ قانون آیین دادرسی مدنی", "خروج سند از عداد دلایل", "اخطاریه ۱۰ روزه تسلیم اصل سند", "نگارش یار"],
   alternates: {
     canonical: 'https://www.negaresh-yar.ir/samples/forged-document-original-submission-demand',
   },
   openGraph: {
-    title: "نمونه تقاضای تسلیم اصل سند مجعول [رایگان، دانلود فایل Word و PDF] | نگارش یار",
+    title: "نمونه تقاضای تسلیم اصل سند مجعول (ماده ۲۲۰) | نگارش یار",
     description: "دانلود نمونه متن رسمی درخواست صدور اخطار تسلیم اصل سند موضوع ادعای جعل ظرف ۱۰ روز و خروج آن از دلایل مستند به ماده ۲۲۰ قانون آیین دادرسی مدنی.",
     url: 'https://www.negaresh-yar.ir/samples/forged-document-original-submission-demand',
     siteName: 'نگارش یار',

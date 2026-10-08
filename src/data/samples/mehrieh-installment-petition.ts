@@ -203,7 +203,7 @@ export const sampleMehriehInstallmentPetitionData: SampleDocument = {
       badge: 'ابزار محاسباتی',
     },
     {
-      title: 'نمونه دادخواست اعسار از محکوم به و تقسیط مهریه [رایگان، دانلود فایل Word و PDF] | نگارش یار',
+      title: 'تنظیم دادخواست اعسار از محکوم‌به و تقسیط مهریه',
       href: '/services/insolvency-from-judgment',
       desc: 'تنظیم تخصصی دادخواست اعسار از پرداخت مهریه، تعدیل اقساط سکه، جدول دارایی ماده ۸ و استشهادیه شهود.',
       badge: 'خدمت تخصصی اعسار',

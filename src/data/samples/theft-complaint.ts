@@ -3,8 +3,8 @@ import { SampleLandingData } from './types';
 export const sampleTheftComplaintData: SampleLandingData = {
   slug: 'theft-complaint',
   category: 'اوراق و دادخواست‌های قضایی',
-  title: 'نمونه شکواییه سرقت [رایگان، دانلود فایل Word و PDF] | نگارش یار',
-  metaTitle: 'نمونه شکواییه سرقت [رایگان، دانلود فایل Word و PDF] | نگارش یار',
+  title: 'نمونه شکواییه سرقت | نگارش یار',
+  metaTitle: 'نمونه شکواییه سرقت | نگارش یار',
   metaDescription: 'دانلود نمونه شکواییه سرقت عادی، سرقت مسلحانه، کیف‌قاپی و سرقت از منزل و خودرو.',
   keywords: ['نمونه شکواییه سرقت (منزل، خودرو، کیف‌قاپی)', 'نمونه دادخواست', 'نمونه شکواییه', 'نگارش یار', 'دانلود'],
   h1Title: 'نمونه شکواییه سرقت (منزل، خودرو، کیف‌قاپی)',

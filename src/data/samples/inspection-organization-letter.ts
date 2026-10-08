@@ -312,7 +312,7 @@ export const sampleInspectionOrganizationLetterData: SampleLandingData = {
 };
 
 export const sampleInspectionOrganizationLetterMetadata: Metadata = {
-  title: 'نمونه نامه به سازمان بازرسی کل کشور برای گزارش تخلف [رایگان، دانلود فایل Word و PDF] | نگارش یار',
+  title: 'نمونه نامه به سازمان بازرسی کل کشور | گزارش تخلفات و ترک فعل | نگارش یار',
   description:
     'دانلود ۴ نمونه متن آماده نامه و گزارش به سازمان بازرسی کل کشور و سامانه ۱۳۶: گزارش ترک فعل مدیران، تبانی در مناقصات، فساد مالی و تقاضای بازرسی ویژه.',
   keywords: [

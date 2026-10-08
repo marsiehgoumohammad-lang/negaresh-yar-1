@@ -299,7 +299,7 @@ export const sampleBailReductionData: SampleLandingData = {
 };
 
 export const sampleBailReductionMetadata: Metadata = {
-  title: 'نمونه درخواست تخفیف قرار وثیقه [رایگان، دانلود فایل Word و PDF] | نگارش یار',
+  title: 'نمونه درخواست تخفیف و کاهش مبلغ وثیقه و قرار تامین کیفری | نگارش یار',
   description: 'دانلود و مشاهده الگوی رسمی لایحه تقاضای تخفیف و تعدیل مبلغ ریالی قرار وثیقه به علت عدم تناسب با خسارت پرونده مستند به مواد ۲۱۷ و ۲۴۳ قانون آیین دادرسی کیفری.',
   keywords: [
     'نمونه درخواست تخفیف قرار وثیقه',
@@ -316,7 +316,7 @@ export const sampleBailReductionMetadata: Metadata = {
     canonical: 'https://www.negaresh-yar.ir/samples/bail-reduction',
   },
   openGraph: {
-    title: 'نمونه درخواست تخفیف قرار وثیقه [رایگان، دانلود فایل Word و PDF] | نگارش یار',
+    title: 'نمونه درخواست تخفیف و کاهش مبلغ وثیقه و قرار تامین کیفری | نگارش یار',
   description: 'الگوی کاربردی درخواست تعدیل و کاهش مبلغ قرار وثیقه جهت آزادی متهم.',
     url: 'https://www.negaresh-yar.ir/samples/bail-reduction',
     siteName: 'نگارش یار',

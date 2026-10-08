@@ -129,14 +129,14 @@ export const sampleLitigantDeathIncapacitySuspensionBriefData: SampleLandingData
 };
 
 export const sampleLitigantDeathIncapacitySuspensionBriefMetadata: Metadata = {
-  title: "نمونه لایحه اعلام فوت و توقف دادرسی [رایگان، دانلود فایل Word و PDF] | نگارش یار",
+  title: "نمونه لایحه اعلام فوت و توقف دادرسی (ماده ۱۰۵) | نگارش یار",
   description: "دانلود نمونه متن رسمی لایحه اعلام فوت یا حجر یکی از اصحاب دعوا و تقاضای صدور قرار توقیف دادرسی مستند به ماده ۱۰۵ قانون آیین دادرسی مدنی.",
   keywords: ["توقیف دادرسی به دلیل فوت خوانده", "ماده ۱۰۵ قانون آیین دادرسی مدنی", "اعلام فوت خواهان در دادگاه", "زوال سمت در دادرسی مدنی", "نگارش یار"],
   alternates: {
     canonical: 'https://www.negaresh-yar.ir/samples/litigant-death-incapacity-suspension-brief',
   },
   openGraph: {
-    title: "نمونه لایحه اعلام فوت و توقف دادرسی [رایگان، دانلود فایل Word و PDF] | نگارش یار",
+    title: "نمونه لایحه اعلام فوت و توقف دادرسی (ماده ۱۰۵) | نگارش یار",
     description: "دانلود نمونه متن رسمی لایحه اعلام فوت یا حجر یکی از اصحاب دعوا و تقاضای صدور قرار توقیف دادرسی مستند به ماده ۱۰۵ قانون آیین دادرسی مدنی.",
     url: 'https://www.negaresh-yar.ir/samples/litigant-death-incapacity-suspension-brief',
     siteName: 'نگارش یار',

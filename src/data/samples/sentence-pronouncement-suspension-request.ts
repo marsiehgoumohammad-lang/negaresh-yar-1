@@ -211,7 +211,7 @@ export const sampleSentencePronouncementSuspensionRequestData: SampleLandingData
 };
 
 export const sampleSentencePronouncementSuspensionRequestMetadata: Metadata = {
-  title: 'نمونه لایحه درخواست تعویق صدور حکم [رایگان، دانلود فایل Word و PDF] | نگارش یار',
+  title: 'نمونه لایحه درخواست تعویق صدور حکم (ماده ۴۰ قانون مجازات) | نگارش یار',
   description: 'متن آماده لایحه تقاضای تعویق صدور حکم به مدت ۶ ماه تا ۲ سال در جرایم تعزیری درجه ۶ تا ۸ جهت جلوگیری از ایجاد سوءپیشینه کیفری در نگارش یار.',
   keywords: [
     'نمونه لایحه تعویق صدور حکم',
@@ -226,7 +226,7 @@ export const sampleSentencePronouncementSuspensionRequestMetadata: Metadata = {
     canonical: 'https://www.negaresh-yar.ir/samples/sentence-pronouncement-suspension-request',
   },
   openGraph: {
-    title: 'نمونه لایحه درخواست تعویق صدور حکم [رایگان، دانلود فایل Word و PDF] | نگارش یار',
+    title: 'نمونه لایحه درخواست تعویق صدور حکم (ماده ۴۰ قانون مجازات) | نگارش یار',
     description: 'متن استاندارد لایحه تقاضای تعویق صدور دادنامه بر اساس ماده ۴۰ قانون مجازات.',
     url: 'https://www.negaresh-yar.ir/samples/sentence-pronouncement-suspension-request',
     siteName: 'نگارش یار',

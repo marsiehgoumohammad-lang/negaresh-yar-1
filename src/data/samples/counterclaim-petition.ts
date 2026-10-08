@@ -133,14 +133,14 @@ export const sampleCounterclaimPetitionData: SampleLandingData = {
 };
 
 export const sampleCounterclaimPetitionMetadata: Metadata = {
-  title: "نمونه دادخواست دعوای متقابل [رایگان، دانلود فایل Word و PDF] | نگارش یار",
+  title: "نمونه دادخواست دعوای متقابل (ماده ۱۴۱) | نگارش یار",
   description: "دانلود نمونه متن رسمی دادخواست دعوای متقابل تا پایان اولین جلسه دادرسی مستند به مواد ۱۴۱، ۱۴۲ و ۱۴۳ قانون آیین دادرسی مدنی با وحدت منشأ.",
   keywords: ["دادخواست دعوای متقابل", "ماده ۱۴۱ قانون آیین دادرسی مدنی", "مهلت تقدیم دعوای متقابل", "وحدت منشأ دعوای متقابل", "نگارش یار"],
   alternates: {
     canonical: 'https://www.negaresh-yar.ir/samples/counterclaim-petition',
   },
   openGraph: {
-    title: "نمونه دادخواست دعوای متقابل [رایگان، دانلود فایل Word و PDF] | نگارش یار",
+    title: "نمونه دادخواست دعوای متقابل (ماده ۱۴۱) | نگارش یار",
     description: "دانلود نمونه متن رسمی دادخواست دعوای متقابل تا پایان اولین جلسه دادرسی مستند به مواد ۱۴۱، ۱۴۲ و ۱۴۳ قانون آیین دادرسی مدنی با وحدت منشأ.",
     url: 'https://www.negaresh-yar.ir/samples/counterclaim-petition',
     siteName: 'نگارش یار',

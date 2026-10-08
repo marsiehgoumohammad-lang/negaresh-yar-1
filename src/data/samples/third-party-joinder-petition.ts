@@ -133,14 +133,14 @@ export const sampleThirdPartyJoinderPetitionData: SampleLandingData = {
 };
 
 export const sampleThirdPartyJoinderPetitionMetadata: Metadata = {
-  title: "نمونه دادخواست جلب شخص ثالث [رایگان، دانلود فایل Word و PDF] | نگارش یار",
+  title: "نمونه دادخواست جلب شخص ثالث (ماده ۱۳۵) | نگارش یار",
   description: "دانلود نمونه متن رسمی دادخواست جلب شخص ثالث ظرف ۳ روز پس از اولین جلسه دادرسی مستند به مواد ۱۳۵، ۱۳۶ و ۱۳۷ قانون آیین دادرسی مدنی.",
   keywords: ["دادخواست جلب شخص ثالث", "ماده ۱۳۵ قانون آیین دادرسی مدنی", "مهلت سه روزه جلب ثالث", "ماده ۱۳۷ ق.آ.د.م", "نگارش یار"],
   alternates: {
     canonical: 'https://www.negaresh-yar.ir/samples/third-party-joinder-petition',
   },
   openGraph: {
-    title: "نمونه دادخواست جلب شخص ثالث [رایگان، دانلود فایل Word و PDF] | نگارش یار",
+    title: "نمونه دادخواست جلب شخص ثالث (ماده ۱۳۵) | نگارش یار",
     description: "دانلود نمونه متن رسمی دادخواست جلب شخص ثالث ظرف ۳ روز پس از اولین جلسه دادرسی مستند به مواد ۱۳۵، ۱۳۶ و ۱۳۷ قانون آیین دادرسی مدنی.",
     url: 'https://www.negaresh-yar.ir/samples/third-party-joinder-petition',
     siteName: 'نگارش یار',

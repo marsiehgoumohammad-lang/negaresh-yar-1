@@ -1,13 +1,8 @@
 import React from 'react';
 import Link from 'next/link';
 import {
- Scale,
- ShieldCheck,
  FileText,
  AlertTriangle,
- HelpCircle,
- Clock,
- DollarSign,
  ChevronLeft,
  Sparkles,
  BookOpen,

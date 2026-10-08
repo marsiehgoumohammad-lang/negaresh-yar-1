@@ -129,14 +129,14 @@ export const sampleDocumentSignatureDenialBriefData: SampleLandingData = {
 };
 
 export const sampleDocumentSignatureDenialBriefMetadata: Metadata = {
-  title: "نمونه لایحه انکار خط و امضا [رایگان، دانلود فایل Word و PDF] | نگارش یار",
+  title: "نمونه لایحه انکار خط و امضا (ماده ۲۱۶) | نگارش یار",
   description: "دانلود نمونه متن رسمی لایحه انکار خط و امضا و اظهار تردید در سند عادی منتسب مستند به مواد ۲۱۶ و ۲۱۷ قانون آیین دادرسی مدنی با نکات کاربردی.",
   keywords: ["انکار خط و امضا در دادگاه", "ماده ۲۱۶ قانون آیین دادرسی مدنی", "تردید در سند عادی مورث", "خروج سند از عداد دلایل", "نگارش یار"],
   alternates: {
     canonical: 'https://www.negaresh-yar.ir/samples/document-signature-denial-brief',
   },
   openGraph: {
-    title: "نمونه لایحه انکار خط و امضا [رایگان، دانلود فایل Word و PDF] | نگارش یار",
+    title: "نمونه لایحه انکار خط و امضا (ماده ۲۱۶) | نگارش یار",
     description: "دانلود نمونه متن رسمی لایحه انکار خط و امضا و اظهار تردید در سند عادی منتسب مستند به مواد ۲۱۶ و ۲۱۷ قانون آیین دادرسی مدنی با نکات کاربردی.",
     url: 'https://www.negaresh-yar.ir/samples/document-signature-denial-brief',
     siteName: 'نگارش یار',

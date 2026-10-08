@@ -54,6 +54,18 @@ import {
   lawyerInGishaTehranCourtsGuideData,
   lawyerInGishaTehranCourtsGuideMetadata,
 } from './lawyer-in-gisha-tehran-courts-guide';
+import {
+  freeLawyerAndLegalAidGuideData,
+  freeLawyerAndLegalAidGuideMetadata,
+} from './free-lawyer-and-legal-aid-guide';
+import {
+  howToSearchAndVerifyLawyerGuideData,
+  howToSearchAndVerifyLawyerGuideMetadata,
+} from './how-to-search-and-verify-lawyer-guide';
+import {
+  criminalCourtJurisdictionGuideData,
+  criminalCourtJurisdictionGuideMetadata,
+} from './criminal-court-jurisdiction-guide';
 
 export * from './types';
 
@@ -165,6 +177,9 @@ export const ALL_KNOWLEDGE_ARTICLES: KnowledgeArticleData[] = [
   onlineCafeRegistrationGuideData,
   contentWritingAndProductionGuideData,
   lawyerInGishaTehranCourtsGuideData,
+  freeLawyerAndLegalAidGuideData,
+  howToSearchAndVerifyLawyerGuideData,
+  criminalCourtJurisdictionGuideData,
 ];
 
 export const KNOWLEDGE_METADATA_MAP = {
@@ -208,6 +223,9 @@ export const KNOWLEDGE_METADATA_MAP = {
   'online-cafe-registration-guide': onlineCafeRegistrationGuideMetadata,
   'content-writing-and-production-guide': contentWritingAndProductionGuideMetadata,
   'lawyer-in-gisha-tehran-courts-guide': lawyerInGishaTehranCourtsGuideMetadata,
+  'free-lawyer-and-legal-aid-guide': freeLawyerAndLegalAidGuideMetadata,
+  'how-to-search-and-verify-lawyer-guide': howToSearchAndVerifyLawyerGuideMetadata,
+  'criminal-court-jurisdiction-guide': criminalCourtJurisdictionGuideMetadata,
 };
 
 export function getKnowledgeArticleBySlug(slug: string): KnowledgeArticleData | undefined {

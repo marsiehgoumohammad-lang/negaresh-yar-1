@@ -220,7 +220,7 @@ export const sampleRemainingFourMonthsImprisonmentPardonRequestData: SampleLandi
 };
 
 export const sampleRemainingFourMonthsImprisonmentPardonRequestMetadata: Metadata = {
-  title: 'نمونه درخواست بخشش چهار ماه پایانی حبس [رایگان، دانلود فایل Word و PDF] | نگارش یار',
+  title: 'نمونه درخواست بخشش چهارماه پایانی حبس به رئیس زندان و قاضی ناظر | نگارش یار',
   description: 'متن آماده نامه تقاضای عفو موردی، طرح در شورای طبقه‌بندی و اعطای مرخصی متصل به آزادی برای ماه‌های پایانی حبس در نگارش یار.',
   keywords: [
     'درخواست بخشش چهارماه پایانی حبس',
@@ -235,7 +235,7 @@ export const sampleRemainingFourMonthsImprisonmentPardonRequestMetadata: Metadat
     canonical: 'https://www.negaresh-yar.ir/samples/remaining-four-months-imprisonment-pardon-request',
   },
   openGraph: {
-    title: 'نمونه درخواست بخشش چهار ماه پایانی حبس [رایگان، دانلود فایل Word و PDF] | نگارش یار',
+    title: 'نمونه درخواست بخشش چهارماه پایانی حبس به رئیس زندان و قاضی ناظر | نگارش یار',
     description: 'متن استاندارد نامه تقاضای عفو موردی و مرخصی متصل به آزادی ماه‌های پایانی حبس به رئیس زندان.',
     url: 'https://www.negaresh-yar.ir/samples/remaining-four-months-imprisonment-pardon-request',
     siteName: 'نگارش یار',

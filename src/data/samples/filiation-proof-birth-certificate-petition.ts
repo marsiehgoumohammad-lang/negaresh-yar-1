@@ -193,7 +193,7 @@ export const sampleFiliationProofBirthCertificatePetitionData: SampleLandingData
 };
 
 export const sampleFiliationProofBirthCertificatePetitionMetadata: Metadata = {
-  title: 'نمونه دادخواست اثبات نسب و الزام ثبت احوال به صدور شناسنامه [رایگان، دانلود فایل Word و PDF] | نگارش یار',
+  title: 'نمونه دادخواست اثبات نسب و الزام ثبت احوال به صدور شناسنامه | نگارش یار',
   description: 'متن دادخواست اثبات نسب و الزام ثبت احوال به صدور شناسنامه مستند به رأی وحدت رویه ۷۴۸ دیوان عالی کشور و تست ژنتیک DNA پزشکی قانونی در دادگاه.',
   keywords: [
     'دادخواست اثبات نسب و صدور شناسنامه',
@@ -207,7 +207,7 @@ export const sampleFiliationProofBirthCertificatePetitionMetadata: Metadata = {
     canonical: 'https://www.negaresh-yar.ir/samples/filiation-proof-birth-certificate-petition',
   },
   openGraph: {
-    title: 'نمونه دادخواست اثبات نسب و الزام ثبت احوال به صدور شناسنامه [رایگان، دانلود فایل Word و PDF] | نگارش یار',
+    title: 'نمونه دادخواست اثبات نسب و الزام ثبت احوال به صدور شناسنامه | نگارش یار',
     description: 'متن استاندارد دادخواست حقوقی جهت اثبات نسب و صدور شناسنامه برای افراد فاقد سند سجلی در دادگاه.',
     url: 'https://www.negaresh-yar.ir/samples/filiation-proof-birth-certificate-petition',
     siteName: 'نگارش یار',

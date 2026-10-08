@@ -228,7 +228,7 @@ export const sampleBankMortgageReleaseData: SampleLandingData = {
       badge: 'هاب اصلی',
     },
     {
-      title: 'نمونه نامه درخواست فک رهن سند از بانک [رایگان، دانلود فایل Word و PDF] | نگارش یار',
+      title: 'نامه بخشودگی جرایم بانکی',
       href: '/samples/bank-penalty-waiver',
       desc: 'بخشش خسارت دیرکرد قبل از پرداخت و فک رهن.',
       badge: 'بخشودگی جرایم',

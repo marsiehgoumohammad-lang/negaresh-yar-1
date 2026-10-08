@@ -125,14 +125,14 @@ export const sampleProvisionalAttachmentDamagesClaimRequestData: SampleLandingDa
 };
 
 export const sampleProvisionalAttachmentDamagesClaimRequestMetadata: Metadata = {
-  title: "نمونه درخواست مطالبه خسارت تامین خواسته [رایگان، دانلود فایل Word و PDF] | نگارش یار",
+  title: "نمونه درخواست مطالبه خسارت تأمین خواسته (ماده ۱۲۰) | نگارش یار",
   description: "دانلود نمونه متن رسمی درخواست مطالبه خسارت ناشی از قرار تأمین خواسته مستند به ماده ۱۲۰ قانون آیین دادرسی مدنی بدون تشریفات و هزینه دادرسی.",
   keywords: ["مطالبه خسارت ناشی از تأمین خواسته", "ماده ۱۲۰ قانون آیین دادرسی مدنی", "خسارت احتمالی تأمین خواسته", "مهلت ۲۰ روزه مطالبه خسارت تأمین", "نگارش یار"],
   alternates: {
     canonical: 'https://www.negaresh-yar.ir/samples/provisional-attachment-damages-claim-request',
   },
   openGraph: {
-    title: "نمونه درخواست مطالبه خسارت تامین خواسته [رایگان، دانلود فایل Word و PDF] | نگارش یار",
+    title: "نمونه درخواست مطالبه خسارت تأمین خواسته (ماده ۱۲۰) | نگارش یار",
     description: "دانلود نمونه متن رسمی درخواست مطالبه خسارت ناشی از قرار تأمین خواسته مستند به ماده ۱۲۰ قانون آیین دادرسی مدنی بدون تشریفات و هزینه دادرسی.",
     url: 'https://www.negaresh-yar.ir/samples/provisional-attachment-damages-claim-request',
     siteName: 'نگارش یار',

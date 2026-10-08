@@ -259,7 +259,7 @@ export const sampleCourtFeeInsolvencyData: SampleLandingData = {
 };
 
 export const sampleCourtFeeInsolvencyMetadata: Metadata = {
-  title: 'نمونه دادخواست اعسار از هزینه دادرسی در مرحله بدوی و تجدیدنظر [رایگان، دانلود فایل Word و PDF] | نگارش یار',
+  title: 'نمونه دادخواست اعسار از هزینه دادرسی بدوی و تجدیدنظر | نگارش یار',
   description: 'متن آماده دادخواست اعسار از پرداخت هزینه دادرسی در مرحله بدوی و تجدیدنظر، همراه با فرم استشهادیه شهود، مستند به ماده ۵۰۴ تا ۵۱۳ قانون آیین دادرسی مدنی.',
   keywords: [
     'نمونه دادخواست اعسار از هزینه دادرسی',
@@ -273,7 +273,7 @@ export const sampleCourtFeeInsolvencyMetadata: Metadata = {
     canonical: 'https://www.negaresh-yar.ir/samples/court-fee-insolvency',
   },
   openGraph: {
-    title: 'نمونه دادخواست اعسار از هزینه دادرسی در مرحله بدوی و تجدیدنظر [رایگان، دانلود فایل Word و PDF] | نگارش یار',
+    title: 'نمونه دادخواست اعسار از هزینه دادرسی بدوی و تجدیدنظر | نگارش یار',
   description: 'متن آماده دادخواست اعسار از پرداخت هزینه دادرسی در مرحله بدوی و تجدیدنظر همراه با استشهادیه.',
     url: 'https://www.negaresh-yar.ir/samples/court-fee-insolvency',
     siteName: 'نگارش یار',

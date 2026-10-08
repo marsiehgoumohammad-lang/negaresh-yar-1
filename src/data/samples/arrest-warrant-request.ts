@@ -171,7 +171,7 @@ export const sampleArrestWarrantRequestData: SampleLandingData = {
 };
 
 export const sampleArrestWarrantRequestMetadata: Metadata = {
-  title: 'نمونه درخواست جلب محکوم علیه [رایگان، دانلود فایل Word و PDF] | نگارش یار',
+  title: 'نمونه لایحه تقاضای صدور برگ جلب محکوم علیه مالی | ماده ۳ - نگارش یار',
   description: 'متن آماده لایحه تقاضای صدور برگ جلب محکوم علیه در دایره اجرای احکام مدنی مستند به ماده ۳ قانون نحوه اجرای محکومیت های مالی و ماده ۱۹ جهت وصول محکوم به.',
   keywords: [
     'نمونه درخواست صدور دستور جلب',
@@ -186,7 +186,7 @@ export const sampleArrestWarrantRequestMetadata: Metadata = {
     canonical: 'https://www.negaresh-yar.ir/samples/arrest-warrant-request',
   },
   openGraph: {
-    title: 'نمونه درخواست جلب محکوم علیه [رایگان، دانلود فایل Word و PDF] | نگارش یار',
+    title: 'نمونه لایحه تقاضای صدور برگ جلب محکوم علیه مالی | ماده ۳ - نگارش یار',
     description: 'دانلود رایگان متن استاندارد لایحه تقاضای صدور برگ جلب محکوم علیه در اجرای احکام مدنی مستند به ماده ۳ قانون نحوه اجرای محکومیت های مالی.',
     url: 'https://www.negaresh-yar.ir/samples/arrest-warrant-request',
     siteName: 'نگارش یار',

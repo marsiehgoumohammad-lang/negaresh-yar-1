@@ -125,14 +125,14 @@ export const sampleSupremeCourtExecutionStayRequestData: SampleLandingData = {
 };
 
 export const sampleSupremeCourtExecutionStayRequestMetadata: Metadata = {
-  title: "نمونه درخواست توقف اجرای حکم در دیوان عالی کشور [رایگان، دانلود فایل Word و PDF] | نگارش یار",
+  title: "نمونه تقاضای توقف اجرای حکم در دیوان عالی کشور (ماده ۳۸۶) | نگارش یار",
   description: "دانلود نمونه متن رسمی درخواست توقف عملیات اجرایی حکم در مرحله فرجام‌خواهی دیوان عالی کشور مستند به ماده ۳۸۶ قانون آیین دادرسی مدنی.",
   keywords: ["توقف اجرای حکم در دیوان عالی کشور", "ماده ۳۸۶ قانون آیین دادرسی مدنی", "تأمین خسارت احتمالی فرجام‌خواهی", "توقف تخریب بنا در فرجام‌خواهی", "نگارش یار"],
   alternates: {
     canonical: 'https://www.negaresh-yar.ir/samples/supreme-court-execution-stay-request',
   },
   openGraph: {
-    title: "نمونه درخواست توقف اجرای حکم در دیوان عالی کشور [رایگان، دانلود فایل Word و PDF] | نگارش یار",
+    title: "نمونه تقاضای توقف اجرای حکم در دیوان عالی کشور (ماده ۳۸۶) | نگارش یار",
     description: "دانلود نمونه متن رسمی درخواست توقف عملیات اجرایی حکم در مرحله فرجام‌خواهی دیوان عالی کشور مستند به ماده ۳۸۶ قانون آیین دادرسی مدنی.",
     url: 'https://www.negaresh-yar.ir/samples/supreme-court-execution-stay-request',
     siteName: 'نگارش یار',

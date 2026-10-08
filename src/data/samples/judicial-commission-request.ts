@@ -172,7 +172,7 @@ export const sampleJudicialCommissionRequestData: SampleLandingData = {
 };
 
 export const sampleJudicialCommissionRequestMetadata: Metadata = {
-  title: 'نمونه درخواست صدور نیابت قضایی به دادگاه شهرستان دیگر [رایگان، دانلود فایل Word و PDF] | نگارش یار',
+  title: 'نمونه درخواست صدور نیابت قضایی به دادگاه شهرستان دیگر | نگارش یار',
   description: 'متن استاندارد لایحه تقاضای اعطای نیابت قضایی جهت کارشناسی ملک، معاینه محل، توقیف اموال و جلب متهم مستند به ماده ۶۷ ق.آ.د.م و ۱۱۹ ق.آ.د.ک در نگارش یار.',
   keywords: [
     'نمونه درخواست نیابت قضایی',
@@ -188,7 +188,7 @@ export const sampleJudicialCommissionRequestMetadata: Metadata = {
     canonical: 'https://www.negaresh-yar.ir/samples/judicial-commission-request',
   },
   openGraph: {
-    title: 'نمونه درخواست صدور نیابت قضایی به دادگاه شهرستان دیگر [رایگان، دانلود فایل Word و PDF] | نگارش یار',
+    title: 'نمونه درخواست صدور نیابت قضایی به دادگاه شهرستان دیگر | نگارش یار',
     description: 'دانلود رایگان متن لایحه تقاضای صدور نیابت قضایی به همراه استنادات قانونی و نکات مهم دادرسی.',
     url: 'https://www.negaresh-yar.ir/samples/judicial-commission-request',
     siteName: 'نگارش یار',

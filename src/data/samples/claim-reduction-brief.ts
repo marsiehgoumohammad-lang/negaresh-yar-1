@@ -121,14 +121,14 @@ export const sampleClaimReductionBriefData: SampleLandingData = {
 };
 
 export const sampleClaimReductionBriefMetadata: Metadata = {
-  title: "نمونه لایحه کاهش خواسته دعوا [رایگان، دانلود فایل Word و PDF] | نگارش یار",
+  title: "نمونه لایحه کاهش خواسته دعوا (ماده ۹۸) | نگارش یار",
   description: "دانلود نمونه متن رسمی لایحه تقلیل و کاهش خواسته دعوا در تمام مراحل دادرسی مستند به ماده ۹۸ قانون آیین دادرسی مدنی با نکات کاربردی.",
   keywords: ["کاهش خواسته دعوا", "ماده ۹۸ قانون آیین دادرسی مدنی", "تقلیل خواسته در دادگاه", "لایحه تغییر خواسته", "نگارش یار"],
   alternates: {
     canonical: 'https://www.negaresh-yar.ir/samples/claim-reduction-brief',
   },
   openGraph: {
-    title: "نمونه لایحه کاهش خواسته دعوا [رایگان، دانلود فایل Word و PDF] | نگارش یار",
+    title: "نمونه لایحه کاهش خواسته دعوا (ماده ۹۸) | نگارش یار",
     description: "دانلود نمونه متن رسمی لایحه تقلیل و کاهش خواسته دعوا در تمام مراحل دادرسی مستند به ماده ۹۸ قانون آیین دادرسی مدنی با نکات کاربردی.",
     url: 'https://www.negaresh-yar.ir/samples/claim-reduction-brief',
     siteName: 'نگارش یار',

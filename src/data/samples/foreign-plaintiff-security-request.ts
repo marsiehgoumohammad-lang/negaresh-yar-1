@@ -129,14 +129,14 @@ export const sampleForeignPlaintiffSecurityRequestData: SampleLandingData = {
 };
 
 export const sampleForeignPlaintiffSecurityRequestMetadata: Metadata = {
-  title: "نمونه لایحه تقاضای اخذ تامین از اتباع بیگانه [رایگان، دانلود فایل Word و PDF] | نگارش یار",
+  title: "نمونه لایحه تقاضای اخذ تأمین از اتباع بیگانه (ماده ۱۴۴) | نگارش یار",
   description: "دانلود نمونه متن رسمی لایحه تقاضای اخذ تأمین از خواهان تبعه بیگانه تا پایان جلسه اول دادرسی مستند به ماده ۱۴۴ قانون آیین دادرسی مدنی.",
   keywords: ["تأمین اتباع بیگانه", "ماده ۱۴۴ قانون آیین دادرسی مدنی", "تأمین اتباع خارجه در دادگاه", "توقف دادرسی به دلیل عدم تأمین تبعه خارجی", "نگارش یار"],
   alternates: {
     canonical: 'https://www.negaresh-yar.ir/samples/foreign-plaintiff-security-request',
   },
   openGraph: {
-    title: "نمونه لایحه تقاضای اخذ تامین از اتباع بیگانه [رایگان، دانلود فایل Word و PDF] | نگارش یار",
+    title: "نمونه لایحه تقاضای اخذ تأمین از اتباع بیگانه (ماده ۱۴۴) | نگارش یار",
     description: "دانلود نمونه متن رسمی لایحه تقاضای اخذ تأمین از خواهان تبعه بیگانه تا پایان جلسه اول دادرسی مستند به ماده ۱۴۴ قانون آیین دادرسی مدنی.",
     url: 'https://www.negaresh-yar.ir/samples/foreign-plaintiff-security-request',
     siteName: 'نگارش یار',
