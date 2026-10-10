@@ -66,6 +66,10 @@ import {
   criminalCourtJurisdictionGuideData,
   criminalCourtJurisdictionGuideMetadata,
 } from './criminal-court-jurisdiction-guide';
+import {
+  lawyerInDezfulGuideData,
+  lawyerInDezfulGuideMetadata,
+} from './lawyer-in-dezful-guide';
 
 export * from './types';
 
@@ -180,6 +184,7 @@ export const ALL_KNOWLEDGE_ARTICLES: KnowledgeArticleData[] = [
   freeLawyerAndLegalAidGuideData,
   howToSearchAndVerifyLawyerGuideData,
   criminalCourtJurisdictionGuideData,
+  lawyerInDezfulGuideData,
 ];
 
 export const KNOWLEDGE_METADATA_MAP = {
@@ -226,6 +231,7 @@ export const KNOWLEDGE_METADATA_MAP = {
   'free-lawyer-and-legal-aid-guide': freeLawyerAndLegalAidGuideMetadata,
   'how-to-search-and-verify-lawyer-guide': howToSearchAndVerifyLawyerGuideMetadata,
   'criminal-court-jurisdiction-guide': criminalCourtJurisdictionGuideMetadata,
+  'lawyer-in-dezful-guide': lawyerInDezfulGuideMetadata,
 };
 
 export function getKnowledgeArticleBySlug(slug: string): KnowledgeArticleData | undefined {
