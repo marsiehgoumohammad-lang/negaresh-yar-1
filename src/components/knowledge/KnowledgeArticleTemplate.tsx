@@ -31,6 +31,74 @@ import { KnowledgeArticleData } from '@/data/knowledge/types';
 import { ThreeServiceDiscovery } from '@/components/common/ThreeServiceDiscovery';
 import { PreferredSourceCTA } from '@/components/common/PreferredSourceCTA';
 
+function jalaliToGregorian(jy: number, jm: number, jd: number): string {
+  jy += 1595;
+  let days = -355668 + 365 * jy + Math.floor(jy / 33) * 8 + Math.floor(((jy % 33) + 3) / 4) + jd;
+  if (jm < 7) {
+    days += (jm - 1) * 31;
+  } else {
+    days += (jm - 7) * 30 + 186;
+  }
+  let gy = 400 * Math.floor(days / 146097);
+  days %= 146097;
+  if (days > 36524) {
+    days -= 1;
+    gy += 100 * Math.floor(days / 36524);
+    days %= 36524;
+    if (days >= 365) days += 1;
+  }
+  gy += 4 * Math.floor(days / 1461);
+  days %= 1461;
+  if (days > 365) {
+    days -= 1;
+    gy += Math.floor(days / 365);
+    days %= 365;
+  }
+  let gd = days + 1;
+  const isLeap = (gy % 4 === 0 && gy % 100 !== 0) || gy % 400 === 0;
+  const sal_a = isLeap
+    ? [0, 31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+    : [0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+  let gm = 0;
+  while (gm < 12 && gd > sal_a[gm + 1]) {
+    gm += 1;
+    gd -= sal_a[gm];
+  }
+  gm += 1;
+  const pad = (n: number) => String(n).padStart(2, '0');
+  return `${gy}-${pad(gm)}-${pad(gd)}`;
+}
+
+function resolveIsoDate(val?: string | null): string | undefined {
+  if (!val || typeof val !== 'string') return undefined;
+  const trimmed = val.trim();
+  if (!trimmed) return undefined;
+
+  const isoMatch = trimmed.match(/^(\d{4})-(\d{2})-(\d{2})(?:T.*)?$/);
+  if (isoMatch) {
+    const d = new Date(trimmed);
+    if (!isNaN(d.getTime())) {
+      return `${isoMatch[1]}-${isoMatch[2]}-${isoMatch[3]}`;
+    }
+  }
+
+  const normalized = trimmed
+    .replace(/[۰-۹]/g, (w) => String.fromCharCode(w.charCodeAt(0) - 1728))
+    .replace(/[٠-٩]/g, (w) => String.fromCharCode(w.charCodeAt(0) - 1584));
+
+  const shamsiMatch = normalized.match(/(\d{4})[\/-](\d{1,2})[\/-](\d{1,2})/);
+  if (shamsiMatch) {
+    const jy = parseInt(shamsiMatch[1], 10);
+    const jm = parseInt(shamsiMatch[2], 10);
+    const jd = parseInt(shamsiMatch[3], 10);
+    if (jy >= 1300 && jy <= 1500 && jm >= 1 && jm <= 12 && jd >= 1 && jd <= 31) {
+      return jalaliToGregorian(jy, jm, jd);
+    }
+  }
+
+  return undefined;
+}
+
 export function KnowledgeArticleTemplate({ data }: { data: KnowledgeArticleData }) {
   const [openFaq, setOpenFaq] = useState<number | null>(0);
   const [copiedLink, setCopiedLink] = useState(false);
@@ -49,6 +117,40 @@ export function KnowledgeArticleTemplate({ data }: { data: KnowledgeArticleData 
 
   // Generate Unified Entity Graph Schema JSON-LD
   const canonicalUrl = `https://www.negaresh-yar.ir/knowledge/${data.slug}`;
+
+  // Build Article Entity with actual dates, omitting fields if no valid date exists
+  const articleEntity: Record<string, unknown> = {
+    '@type': 'Article',
+    '@id': `${canonicalUrl}#article`,
+    isPartOf: {
+      '@id': canonicalUrl,
+    },
+    headline: data.h1Title,
+    description: data.heroSubtitle,
+    inLanguage: 'fa-IR',
+    mainEntityOfPage: {
+      '@id': canonicalUrl,
+    },
+    author: {
+      '@type': 'Organization',
+      name: 'پژوهشگاه و کارشناسان حقوقی نگارش یار',
+      url: 'https://www.negaresh-yar.ir',
+    },
+    publisher: {
+      '@id': 'https://www.negaresh-yar.ir/#organization',
+    },
+  };
+
+  const resolvedDatePublished = resolveIsoDate(data.datePublished);
+  const resolvedDateModified = resolveIsoDate(data.dateModified || data.lastUpdated);
+
+  if (resolvedDatePublished) {
+    articleEntity.datePublished = resolvedDatePublished;
+  }
+  if (resolvedDateModified) {
+    articleEntity.dateModified = resolvedDateModified;
+  }
+
   const graphEntities: Record<string, unknown>[] = [
     {
       '@type': 'Organization',
@@ -94,29 +196,7 @@ export function KnowledgeArticleTemplate({ data }: { data: KnowledgeArticleData 
         '@id': `${canonicalUrl}#breadcrumb`,
       },
     },
-    {
-      '@type': 'Article',
-      '@id': `${canonicalUrl}#article`,
-      isPartOf: {
-        '@id': canonicalUrl,
-      },
-      headline: data.h1Title,
-      description: data.heroSubtitle,
-      inLanguage: 'fa-IR',
-      mainEntityOfPage: {
-        '@id': canonicalUrl,
-      },
-      author: {
-        '@type': 'Organization',
-        name: 'پژوهشگاه و کارشناسان حقوقی نگارش یار',
-        url: 'https://www.negaresh-yar.ir',
-      },
-      publisher: {
-        '@id': 'https://www.negaresh-yar.ir/#organization',
-      },
-      datePublished: '2026-05-01',
-      dateModified: '2026-08-01',
-    },
+    articleEntity,
     {
       '@type': 'BreadcrumbList',
       '@id': `${canonicalUrl}#breadcrumb`,

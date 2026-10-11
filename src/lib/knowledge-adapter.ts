@@ -98,9 +98,9 @@ export function adaptArticleToKnowledgeData(article: Article): KnowledgeArticleD
       h1Title: article.title || staticMatch.h1Title,
       heroSubtitle: article.excerpt || staticMatch.heroSubtitle,
       category: article.category || staticMatch.category,
-      lastUpdated: article.updatedAt
-        ? new Date(article.updatedAt).toLocaleDateString('fa-IR')
-        : staticMatch.lastUpdated,
+      lastUpdated: staticMatch.lastUpdated,
+      datePublished: staticMatch.datePublished,
+      dateModified: staticMatch.dateModified,
     };
   }
 
@@ -168,9 +168,11 @@ export function adaptArticleToKnowledgeData(article: Article): KnowledgeArticleD
     h1Title: article.title,
     heroSubtitle: article.excerpt || article.metaDescription || '',
     readTime: `${readTimeMinutes} دقیقه`,
-    lastUpdated: article.updatedAt
+    lastUpdated: staticMatch?.lastUpdated || (article.updatedAt
       ? new Date(article.updatedAt).toLocaleDateString('fa-IR')
-      : '۱۴۰۳/۱۱/۰۱',
+      : '۱۴۰۳/۱۱/۰۱'),
+    datePublished: staticMatch?.datePublished,
+    dateModified: staticMatch?.dateModified,
     heroTrustChips: [
       'مطابق با قوانین موضوعه کشور',
       'تایید شده توسط کارشناسان حقوقی',

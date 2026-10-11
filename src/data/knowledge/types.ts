@@ -21,6 +21,8 @@ export interface KnowledgeArticleData {
   heroSubtitle: string;
   readTime: string;
   lastUpdated: string;
+  datePublished?: string;
+  dateModified?: string;
   heroTrustChips: string[];
 
   // Direct clear answer in first paragraph (SEO Feature Snippet optimized)
