@@ -20,10 +20,10 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     };
   }
 
-  const baseTitle = article.metaTitle || article.title;
-  const seoTitle = baseTitle.includes('نگارش یار')
-    ? baseTitle
-    : `${baseTitle} [راهنمای کامل + نمونه متن] | نگارش یار`;
+  const rawTitle = (article.metaTitle || article.title || '').trim();
+  const cleanTitle = rawTitle.replace(/\s*[-|]\s*نگارش یار\s*$/g, '').trim();
+  const baseTitle = cleanTitle;
+  const fullSeoTitle = `${cleanTitle} | نگارش یار`;
   
   const rawDesc = (article.metaDescription || article.excerpt || '').trim();
   let description = '';
@@ -32,7 +32,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   } else if (rawDesc && rawDesc.length >= 30 && rawDesc.length <= 100) {
     description = `راهنمای کامل ${baseTitle}؛ ${rawDesc.replace(/\.$/, '')} + دانلود نمونه متن و مشاوره تخصصی در نگارش یار.`;
   } else {
-    description = `راهنمای گام‌به‌گام و حقوقی ${baseTitle} همراه با تشریح مواد قانونی، مواعد رسمی، دانلود رایگان نمونه متن و مشاوره تنظیم در نگارش یار.`;
+    description = `راهنمای گام به گام و حقوقی ${baseTitle} همراه با تشریح مواد قانونی، مواعد رسمی، دانلود رایگان نمونه متن و مشاوره تنظیم در نگارش یار.`;
   }
 
   const keywords = article.keywords && article.keywords.length > 0
@@ -40,14 +40,16 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     : [article.category || 'حقوقی', baseTitle, `راهنمای ${baseTitle}`, 'نگارش یار', 'پایگاه دانش'];
 
   return {
-    title: seoTitle,
+    title: {
+      absolute: fullSeoTitle,
+    },
     description,
     keywords,
     alternates: {
       canonical: `https://www.negaresh-yar.ir/knowledge/${article.slug}`,
     },
     openGraph: {
-      title: seoTitle,
+      title: fullSeoTitle,
       description,
       url: `https://www.negaresh-yar.ir/knowledge/${article.slug}`,
       siteName: 'نگارش یار',
@@ -55,7 +57,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     },
     twitter: {
       card: 'summary_large_image',
-      title: seoTitle,
+      title: fullSeoTitle,
       description,
     },
   };
