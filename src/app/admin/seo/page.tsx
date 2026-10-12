@@ -2,7 +2,7 @@
 
 import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
-import { Search, CheckCircle2, ShieldCheck, LineChart } from 'lucide-react';
+import { Search, CheckCircle2, AlertTriangle, XCircle, HelpCircle, ShieldCheck, LineChart } from 'lucide-react';
 import { AdminLayout } from '@/components/admin/AdminLayout';
 import { AuditCheckItem } from '@/app/api/admin/seo/audit/route';
 
@@ -29,6 +29,9 @@ export default function SeoAuditOverviewPage() {
     loadData();
   }, []);
 
+  const testedCount = technicalChecks.filter((c) => c.status !== 'not_tested').length;
+  const goodCount = technicalChecks.filter((c) => c.status === 'good').length;
+
   return (
     <AdminLayout>
       <div className="space-y-6">
@@ -40,7 +43,7 @@ export default function SeoAuditOverviewPage() {
               <span>پایش فنی و آنالیز سئوی وب‌سایت نگارش یار</span>
             </h1>
             <p className="text-xs text-slate-400 mt-1">
-              بررسی سلامت متاتگ‌ها، فایل‌های نقشه سایت، دستورات ربات‌ها و اسکیمای ارگانیک
+              بررسی سلامت متاتگ‌ها، فایل‌های نقشه سایت، دستورات ربات‌ها و اسکیمای ارگانیک بر مبنای پیکربندی واقعی
             </p>
           </div>
 
@@ -83,16 +86,16 @@ export default function SeoAuditOverviewPage() {
               ٪{overallScore}
             </div>
             <div>
-              <div className="text-base font-black text-white">امتیاز سلامت فنی و سئوی ارگانیک</div>
+              <div className="text-base font-black text-white">امتیاز آزمون‌های فنی اجراشده</div>
               <div className="text-xs text-slate-400 mt-1">
-                تمامی اصول سئوی On-Page، تگ‌های کانونیکال و اسکیماهای استاندارد رعایت گردیده‌اند.
+                {goodCount} مورد از {testedCount} شاخص فنی ارزیابی‌شده در وضعیت مطلوب قرار دارند. موارد نیازمند ابزار کراول زنده در امتیازدهی لحاظ نشده‌اند.
               </div>
             </div>
           </div>
 
           <div className="flex items-center gap-2 text-xs font-bold text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 px-3 py-1.5 rounded-xl">
             <ShieldCheck className="w-4 h-4" />
-            <span>وضعیت فنی استاندارد</span>
+            <span>محاسبه شفاف بر مبنای آزمون‌های فعال</span>
           </div>
         </div>
 
@@ -106,20 +109,44 @@ export default function SeoAuditOverviewPage() {
             <div className="py-8 text-center text-slate-400 text-xs">در حال بارگیری چک‌لیست سئو...</div>
           ) : (
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              {technicalChecks.map((check) => (
-                <div
-                  key={check.id}
-                  className="bg-[#070B15] border border-slate-800 rounded-xl p-4 space-y-2"
-                >
-                  <div className="flex items-center justify-between">
-                    <span className="font-bold text-white text-xs">{check.title}</span>
-                    <span className="px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 flex items-center gap-1">
-                      <CheckCircle2 className="w-3 h-3" /> {check.statusText}
-                    </span>
+              {technicalChecks.map((check) => {
+                const isGood = check.status === 'good';
+                const isWarning = check.status === 'warning';
+                const isError = check.status === 'error';
+                const isNotTested = check.status === 'not_tested';
+
+                return (
+                  <div
+                    key={check.id}
+                    className="bg-[#070B15] border border-slate-800 rounded-xl p-4 space-y-2"
+                  >
+                    <div className="flex items-center justify-between">
+                      <span className="font-bold text-white text-xs">{check.title}</span>
+                      {isGood && (
+                        <span className="px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 flex items-center gap-1">
+                          <CheckCircle2 className="w-3 h-3" /> {check.statusText}
+                        </span>
+                      )}
+                      {isWarning && (
+                        <span className="px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-amber-500/10 text-amber-400 border border-amber-500/20 flex items-center gap-1">
+                          <AlertTriangle className="w-3 h-3" /> {check.statusText}
+                        </span>
+                      )}
+                      {isError && (
+                        <span className="px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-rose-500/10 text-rose-400 border border-rose-500/20 flex items-center gap-1">
+                          <XCircle className="w-3 h-3" /> {check.statusText}
+                        </span>
+                      )}
+                      {isNotTested && (
+                        <span className="px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-slate-500/10 text-slate-400 border border-slate-700 flex items-center gap-1">
+                          <HelpCircle className="w-3 h-3" /> {check.statusText}
+                        </span>
+                      )}
+                    </div>
+                    <p className="text-xs text-slate-400 leading-relaxed">{check.explanation}</p>
                   </div>
-                  <p className="text-xs text-slate-400 leading-relaxed">{check.explanation}</p>
-                </div>
-              ))}
+                );
+              })}
             </div>
           )}
         </div>

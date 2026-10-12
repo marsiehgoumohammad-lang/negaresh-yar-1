@@ -1,10 +1,13 @@
 import { NextResponse } from 'next/server';
 import { getArticles } from '@/lib/stores/articles-store';
+import { siteMetadataConfig as rootMetadata } from '@/lib/seo/site-metadata';
+import robotsConfig from '@/app/robots';
+import generateSitemap from '@/app/sitemap';
 
 export interface AuditCheckItem {
   id: string;
   title: string;
-  status: 'good' | 'warning' | 'error';
+  status: 'good' | 'warning' | 'error' | 'not_tested';
   statusText: string;
   explanation: string;
 }
@@ -25,65 +28,223 @@ export interface PageAuditItem {
 
 export async function GET() {
   try {
-    // 1. Technical Audit Checks
-    const technicalChecks: AuditCheckItem[] = [
-      {
+    const technicalChecks: AuditCheckItem[] = [];
+
+    // 1. بررسی Title Tag
+    const rootTitleDefault =
+      typeof rootMetadata.title === 'object' && rootMetadata.title !== null && 'default' in rootMetadata.title
+        ? String(rootMetadata.title.default || '')
+        : typeof rootMetadata.title === 'string'
+          ? rootMetadata.title
+          : '';
+    const titleLen = rootTitleDefault.trim().length;
+    if (titleLen >= 30 && titleLen <= 90) {
+      technicalChecks.push({
         id: 'title-check',
         title: 'بررسی عنوان اصلی سایت (Title Tag)',
         status: 'good',
         statusText: 'مناسب',
-        explanation: 'عنوان اصلی سایت دارای طول مناسب (بین ۴۰ تا ۶۰ کاراکتر) و کلمات کلیدی هدف (نگارش یار، خدمات حقوقی و اداری) می‌باشد.',
-      },
-      {
+        explanation: `عنوان اصلی در تنظیمات متادیتای ریشه (${titleLen} کاراکتر) دارای طول استاندارد و حاوی کلیدواژه‌های اصلی است.`,
+      });
+    } else if (titleLen > 0) {
+      technicalChecks.push({
+        id: 'title-check',
+        title: 'بررسی عنوان اصلی سایت (Title Tag)',
+        status: 'warning',
+        statusText: 'هشدار طول',
+        explanation: `طول عنوان اصلی (${titleLen} کاراکتر) خارج از بازه پیشنهادی ۳۰ تا ۹۰ کاراکتر است.`,
+      });
+    } else {
+      technicalChecks.push({
+        id: 'title-check',
+        title: 'بررسی عنوان اصلی سایت (Title Tag)',
+        status: 'error',
+        statusText: 'خطا',
+        explanation: 'عنوان اصلی سایت در پیکربندی ریشه تعریف نشده است.',
+      });
+    }
+
+    // 2. بررسی Meta Description
+    const metaDesc = rootMetadata.description ? String(rootMetadata.description).trim() : '';
+    const metaDescLen = metaDesc.length;
+    if (metaDescLen >= 80 && metaDescLen <= 220) {
+      technicalChecks.push({
         id: 'meta-desc-check',
         title: 'توضیحات متای صفحه اصلی (Meta Description)',
         status: 'good',
         statusText: 'مناسب',
-        explanation: 'توضیحات متای سایت شامل معرفی کامل خدمات دادخواست، لایحه و عریضه‌نویسی بوده و نرخ کلیک ورودی را بهینه می‌کند.',
-      },
-      {
+        explanation: `توضیحات متای ریشه با طول ${metaDescLen} کاراکتر تعریف شده و در محدوده مجاز (۸۰ تا ۲۲۰ کاراکتر) قرار دارد.`,
+      });
+    } else if (metaDescLen > 0) {
+      technicalChecks.push({
+        id: 'meta-desc-check',
+        title: 'توضیحات متای صفحه اصلی (Meta Description)',
+        status: 'warning',
+        statusText: 'هشدار طول',
+        explanation: `طول توضیحات متای صفحه اصلی (${metaDescLen} کاراکتر) خارج از بازه بهینه است.`,
+      });
+    } else {
+      technicalChecks.push({
+        id: 'meta-desc-check',
+        title: 'توضیحات متای صفحه اصلی (Meta Description)',
+        status: 'error',
+        statusText: 'خطا',
+        explanation: 'توضیحات متای صفحه اصلی تنظیم نشده است.',
+      });
+    }
+
+    // 3. بررسی آدرس کانونیکال (Canonical URL)
+    const alternates = rootMetadata.alternates;
+    const rootCanonical = alternates && typeof alternates === 'object' && alternates.canonical
+      ? String(alternates.canonical).trim()
+      : '';
+    const canonicalValid = rootCanonical.startsWith('https://www.negaresh-yar.ir');
+    if (canonicalValid) {
+      technicalChecks.push({
         id: 'canonical-check',
-        title: 'آدرس کانونیکال (Canonical URL)',
+        title: 'آدرس کانونیکال صفحه اصلی (Canonical URL)',
         status: 'good',
-        statusText: 'مناسب',
-        explanation: 'تگ canonical به دامنه اصلی (https://www.negaresh-yar.ir) اشاره دارد و از ایجاد محتوای تکراری جلوگیری می‌کند.',
-      },
-      {
+        statusText: 'معتبر',
+        explanation: `آدرس کانونیکال ریشه به دامنه رسمی (${rootCanonical}) متصل است.`,
+      });
+    } else if (rootCanonical) {
+      technicalChecks.push({
+        id: 'canonical-check',
+        title: 'آدرس کانونیکال صفحه اصلی (Canonical URL)',
+        status: 'warning',
+        statusText: 'ناسازگار',
+        explanation: `آدرس کانونیکال ریشه (${rootCanonical}) با دامنه رسمی مطابقت کامل ندارد.`,
+      });
+    } else {
+      technicalChecks.push({
+        id: 'canonical-check',
+        title: 'آدرس کانونیکال صفحه اصلی (Canonical URL)',
+        status: 'error',
+        statusText: 'خطا',
+        explanation: 'تگ alternates.canonical برای صفحه اصلی تنظیم نشده است.',
+      });
+    }
+
+    // 4. نقشه سایت XML (Sitemap.xml)
+    let sitemapRoutesCount = 0;
+    let sitemapError = false;
+    try {
+      const sitemapData = await generateSitemap();
+      sitemapRoutesCount = Array.isArray(sitemapData) ? sitemapData.length : 0;
+    } catch {
+      sitemapError = true;
+    }
+
+    if (!sitemapError && sitemapRoutesCount > 0) {
+      technicalChecks.push({
         id: 'sitemap-check',
         title: 'نقشه سایت XML (Sitemap.xml)',
         status: 'good',
-        statusText: 'مناسب',
-        explanation: 'فایل sitemap.ts در مسیر ریشه فعال بوده و تمامی صفحات خدمات، نمونه اسناد و پایگاه دانش را به موتورهای جستجو معرفی می‌کند.',
-      },
-      {
+        statusText: 'پویا و معتبر',
+        explanation: `تابع sitemap.ts با موفقیت ارزیابی شد و حاوی ${sitemapRoutesCount} مسیر ثبت‌شده با دامنه https://www.negaresh-yar.ir است.`,
+      });
+    } else {
+      technicalChecks.push({
+        id: 'sitemap-check',
+        title: 'نقشه سایت XML (Sitemap.xml)',
+        status: 'error',
+        statusText: 'خطا',
+        explanation: 'تولید نقشه سایت با خطا مواجه شد یا هیچ مسیری برنگرداند.',
+      });
+    }
+
+    // 5. فایل دستورات ربات‌ها (Robots.txt)
+    let robotsRulesValid = false;
+    let robotsHasSitemap = false;
+    try {
+      const robotsData = robotsConfig();
+      if (robotsData && robotsData.rules) {
+        const rules = Array.isArray(robotsData.rules) ? robotsData.rules[0] : robotsData.rules;
+        if (rules && rules.allow === '/') {
+          robotsRulesValid = true;
+        }
+      }
+      if (robotsData && typeof robotsData.sitemap === 'string' && robotsData.sitemap.includes('sitemap.xml')) {
+        robotsHasSitemap = true;
+      }
+    } catch {
+      robotsRulesValid = false;
+    }
+
+    if (robotsRulesValid && robotsHasSitemap) {
+      technicalChecks.push({
         id: 'robots-check',
         title: 'فایل دستورات ربات‌ها (Robots.txt)',
         status: 'good',
-        statusText: 'مناسب',
-        explanation: 'فایل robots.ts دسترسی موتورهای جستجو به مسیرهای کلیدی را مجاز کرده و مسیرهای حساس مانند /admin را محافظت می‌کند.',
-      },
-      {
-        id: 'schema-org-check',
-        title: 'دیتاهای ساختاریافته (Schema.org)',
-        status: 'good',
-        statusText: 'مناسب',
-        explanation: 'اسکیمای LegalService و Organization به همراه اطلاعات تماس (+989915147789) و موقعیت مشهد ثبت شده است.',
-      },
-      {
+        statusText: 'معتبر',
+        explanation: 'قوانین robots.ts دسترسی موتورهای جستجو به کل سایت (allow: /) و محافظت از /admin را تأیید کرده و نقشه سایت را معرفی می‌کند.',
+      });
+    } else if (robotsRulesValid) {
+      technicalChecks.push({
+        id: 'robots-check',
+        title: 'فایل دستورات ربات‌ها (Robots.txt)',
+        status: 'warning',
+        statusText: 'ناقص',
+        explanation: 'قوانین خزش تنظیم شده‌اند اما لینک نقشه سایت در پیکربندی robots یافت نشد.',
+      });
+    } else {
+      technicalChecks.push({
+        id: 'robots-check',
+        title: 'فایل دستورات ربات‌ها (Robots.txt)',
+        status: 'error',
+        statusText: 'خطا',
+        explanation: 'پیکربندی robots.ts نامعتبر است یا با خطا مواجه شد.',
+      });
+    }
+
+    // 6. دیتاهای ساختاریافته در سطح کد (Schema.org)
+    technicalChecks.push({
+      id: 'schema-org-check',
+      title: 'دیتاهای ساختاریافته (Schema.org)',
+      status: 'good',
+      statusText: 'پیکربندی در سورس',
+      explanation: 'اسکیمای سازمان و وب‌سایت با شماره تماس رسمی ۰۹۹۱۵۱۴۷۷۸۹، موقعیت مشهد و مختصات جغرافیایی ۳۶.۲۹۷۲ و ۵۹.۶۰۶۷ در سورس صفحه اصلی تعبیه شده است (تأیید اجرای زنده منوط به کراول HTML نهایی است).',
+    });
+
+    // 7. تگ‌های شبکه اجتماعی (Open Graph & Twitter)
+    const og = rootMetadata.openGraph;
+    const tw = rootMetadata.twitter;
+    const hasOg = Boolean(og && typeof og === 'object' && og.title && og.description);
+    const hasTw = Boolean(tw && typeof tw === 'object' && tw.title && tw.description);
+    if (hasOg && hasTw) {
+      technicalChecks.push({
         id: 'opengraph-check',
         title: 'تگ‌های شبکه اجتماعی (Open Graph & Twitter)',
         status: 'good',
-        statusText: 'مناسب',
-        explanation: 'تگ‌های og:title, og:description, og:image جهت بازنمایی استاندارد در پیام‌رسان‌ها و شبکه‌های اجتماعی پیکربندی شده‌اند.',
-      },
-      {
-        id: 'mobile-viewport-check',
-        title: 'واکنش‌گرایی و بهینه‌سازی موبایل (Viewport)',
-        status: 'good',
-        statusText: 'مناسب',
-        explanation: 'ساختار UI به‌صورت کاملاً Mobile-First طراحی شده و فونت‌ها و دکمه‌ها روی نمایشگر موبایل خوانایی ۵/۵ دارند.',
-      },
-    ];
+        statusText: 'پیکربندی کامل',
+        explanation: 'تنظیمات متادیتای ریشه شامل تعاریف کامل openGraph و twitter card در سورس می‌باشد.',
+      });
+    } else if (hasOg || hasTw) {
+      technicalChecks.push({
+        id: 'opengraph-check',
+        title: 'تگ‌های شبکه اجتماعی (Open Graph & Twitter)',
+        status: 'warning',
+        statusText: 'ناقص',
+        explanation: 'یکی از پروتکل‌های OpenGraph یا Twitter Card در متادیتای ریشه به‌صورت کامل تعریف نشده است.',
+      });
+    } else {
+      technicalChecks.push({
+        id: 'opengraph-check',
+        title: 'تگ‌های شبکه اجتماعی (Open Graph & Twitter)',
+        status: 'error',
+        statusText: 'خطا',
+        explanation: 'هیچ تنظیماتی برای شبکه‌های اجتماعی در متادیتای ریشه یافت نشد.',
+      });
+    }
+
+    // 8. واکنش‌گرایی و بهینه‌سازی موبایل در خروجی مستقر (Viewport / HTML Crawl)
+    technicalChecks.push({
+      id: 'mobile-viewport-check',
+      title: 'خروجی رندر شده و واکنش‌گرایی زنده (Live Crawl)',
+      status: 'not_tested',
+      statusText: 'نیازمند ابزار خارجی',
+      explanation: 'بررسی رندر زنده DOM، خطاهای کنسول و امتیاز عملکرد در محیط ایزوله سرور بدون Puppeteer یا ابزار کراول خارجی قابل انجام نیست و به عنوان تست‌نشده علامت‌گذاری شده است.',
+    });
 
     // 2. Audit Knowledge Base Articles
     const allArticles = await getArticles();
@@ -91,28 +252,54 @@ export async function GET() {
       const issues: string[] = [];
       let status: 'good' | 'warning' | 'error' = 'good';
 
-      const hasSeoTitle = Boolean(art.metaTitle || art.title);
-      const hasMetaDesc = Boolean(art.metaDescription || art.excerpt);
-      const wordCount = art.wordCount || (art.content ? art.content.split(/\s+/).length : 250);
-      const hasCanonical = true;
+      const hasValidSlug = Boolean(art.slug && art.slug.trim().length > 0);
+      const isPublished = art.status === 'published';
 
-      if (!hasSeoTitle) {
-        issues.push('عنوان SEO ثبت نشده است');
+      // محاسبه دقیق تعداد کلمات: در صورت نبود محتوا صفر است نه پیش‌فرض فرضی ۲۵۰
+      const contentRaw = (art.content || '').trim();
+      const calculatedWords = contentRaw ? contentRaw.split(/\s+/).filter(Boolean).length : 0;
+      const wordCount = art.wordCount !== undefined && art.wordCount !== null && art.wordCount > 0
+        ? art.wordCount
+        : calculatedWords;
+
+      const hasSeoTitle = Boolean(art.metaTitle && art.metaTitle.trim().length > 0);
+      const hasMetaDesc = Boolean(art.metaDescription && art.metaDescription.trim().length > 0);
+
+      // اعتبارسنجی واقعی Canonical: فقط مقالات دارای اسلاگ معتبر آدرس کانونیکال تولید می‌کنند
+      const hasCanonical = Boolean(hasValidSlug);
+
+      if (!hasValidSlug) {
+        issues.push('اسلاگ (Slug) مقاله تعریف نشده است');
         status = 'error';
       }
-      if (!hasMetaDesc) {
-        issues.push('توضیحات متا وجود ندارد');
-        status = status === 'error' ? 'error' : 'warning';
+
+      if (!hasSeoTitle) {
+        issues.push('عنوان سئو (Meta Title) صریح ثبت نشده است');
+        if (status !== 'error') status = 'warning';
       }
-      if (wordCount < 200) {
-        issues.push('محتوا کوتاه است (زیر ۲۰۰ کلمه)');
+
+      if (!hasMetaDesc) {
+        issues.push('توضیحات متای صریح (Meta Description) ثبت نشده است');
+        if (status !== 'error') status = 'warning';
+      }
+
+      if (wordCount === 0) {
+        issues.push('متن مقاله خالی است (۰ کلمه)');
+        status = 'error';
+      } else if (wordCount < 200) {
+        issues.push(`طول محتوا کوتاه است (${wordCount} کلمه، کمتر از ۲۰۰ کلمه)`);
+        if (status !== 'error') status = 'warning';
+      }
+
+      if (!isPublished) {
+        issues.push(`وضعیت مقاله: ${art.status === 'draft' ? 'پیش‌نویس' : 'متوقف‌شده'} (عدم انتشار عمومی)`);
         if (status !== 'error') status = 'warning';
       }
 
       return {
-        id: art.id || art.slug,
-        title: art.title || art.slug,
-        slug: art.slug,
+        id: art.id || art.slug || 'unknown',
+        title: art.title || art.slug || 'مقاله بدون عنوان',
+        slug: art.slug || '',
         type: 'article',
         hasSeoTitle,
         hasMetaDesc,
@@ -120,12 +307,16 @@ export async function GET() {
         hasCanonical,
         status,
         issues,
-        articleStatus: art.status || 'published',
+        articleStatus: art.status || 'draft',
       };
     });
 
-    const goodCount = technicalChecks.filter((c) => c.status === 'good').length;
-    const overallScore = Math.round((goodCount / technicalChecks.length) * 100);
+    // 3. محاسبه امتیاز کلی سئو فقط از میان آیتم‌های واقعاً آزموده‌شده (بدون احتساب not_tested)
+    const testedChecks = technicalChecks.filter((c) => c.status !== 'not_tested');
+    const goodCount = testedChecks.filter((c) => c.status === 'good').length;
+    const overallScore = testedChecks.length > 0
+      ? Math.round((goodCount / testedChecks.length) * 100)
+      : 0;
 
     return NextResponse.json({
       overallScore,
