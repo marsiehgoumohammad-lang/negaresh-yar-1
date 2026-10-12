@@ -132,8 +132,10 @@ export function resolveIsoDate(val?: string | null): string | undefined {
     .replace(/[۰-۹]/g, (w) => String.fromCharCode(w.charCodeAt(0) - 1728))
     .replace(/[٠-٩]/g, (w) => String.fromCharCode(w.charCodeAt(0) - 1584));
 
-  // Check for Gregorian format: YYYY-MM-DD or YYYY/MM/DD (years 1800..2200)
-  const gregMatch = normalized.match(/^(\d{4})[-/](\d{1,2})[-/](\d{1,2})(?:[T\s].*)?$/);
+  // Check for Gregorian format: YYYY-MM-DD or YYYY/MM/DD (years 1800..2200), optional exact ISO time
+  const gregMatch = normalized.match(
+    /^(\d{4})[-/](\d{1,2})[-/](\d{1,2})(?:[T\s]\d{2}:\d{2}(?::\d{2}(?:\.\d+)?)?(?:Z|[+-]\d{2}:?\d{2})?)?$/
+  );
   if (gregMatch) {
     const y = parseInt(gregMatch[1], 10);
     const m = parseInt(gregMatch[2], 10);
@@ -148,8 +150,8 @@ export function resolveIsoDate(val?: string | null): string | undefined {
     }
   }
 
-  // Check for Shamsi format: YYYY/MM/DD or YYYY-MM-DD (years 1300..1500)
-  const shamsiMatch = normalized.match(/(\d{4})[-/](\d{1,2})[-/](\d{1,2})/);
+  // Check for Shamsi format: full string exact match YYYY/MM/DD or YYYY-MM-DD (years 1300..1500)
+  const shamsiMatch = normalized.match(/^(\d{4})[-/](\d{1,2})[-/](\d{1,2})$/);
   if (shamsiMatch) {
     const jy = parseInt(shamsiMatch[1], 10);
     const jm = parseInt(shamsiMatch[2], 10);

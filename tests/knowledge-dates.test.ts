@@ -106,6 +106,16 @@ test('5. Empty, incomplete, or malformed inputs are rejected safely', () => {
   assert.strictEqual(resolveIsoDate('invalid-string'), undefined);
   assert.strictEqual(resolveIsoDate('1403'), undefined);
   assert.strictEqual(resolveIsoDate('2026'), undefined);
+
+  // Exact matching enforcement: strings containing a date plus prefix or suffix text must be rejected
+  assert.strictEqual(resolveIsoDate('تاریخ ۱۴۰۳/۰۷/۰۸'), undefined);
+  assert.strictEqual(resolveIsoDate('۱۴۰۳/۰۷/۰۸ توضیحات'), undefined);
+  assert.strictEqual(resolveIsoDate('abc2024-09-29'), undefined);
+  assert.strictEqual(resolveIsoDate('2024-09-29xyz'), undefined);
+  assert.strictEqual(resolveIsoDate('2024-09-29 blah'), undefined);
+  assert.strictEqual(resolveIsoDate('1403/07/08 extra'), undefined);
+  assert.strictEqual(resolveIsoDate('prefix 1403-07-08'), undefined);
+  assert.strictEqual(resolveIsoDate('1403.07.08'), undefined); // unsupported separator
 });
 
 test('6. Approximate month/year dates without exact day are never synthesized', () => {
