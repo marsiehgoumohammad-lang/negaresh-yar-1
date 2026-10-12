@@ -171,8 +171,8 @@ export function adaptArticleToKnowledgeData(article: Article): KnowledgeArticleD
     lastUpdated: staticMatch?.lastUpdated || (article.updatedAt
       ? new Date(article.updatedAt).toLocaleDateString('fa-IR')
       : '۱۴۰۳/۱۱/۰۱'),
-    datePublished: staticMatch?.datePublished,
-    dateModified: staticMatch?.dateModified,
+    datePublished: (staticMatch ? staticMatch.datePublished : article.publishedAt) || undefined,
+    dateModified: (staticMatch ? staticMatch.dateModified : article.updatedAt) || undefined,
     heroTrustChips: [
       'مطابق با قوانین موضوعه کشور',
       'تایید شده توسط کارشناسان حقوقی',

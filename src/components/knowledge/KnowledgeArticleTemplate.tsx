@@ -31,7 +31,61 @@ import { KnowledgeArticleData } from '@/data/knowledge/types';
 import { ThreeServiceDiscovery } from '@/components/common/ThreeServiceDiscovery';
 import { PreferredSourceCTA } from '@/components/common/PreferredSourceCTA';
 
-function jalaliToGregorian(jy: number, jm: number, jd: number): string {
+const breaks = [
+  -61, 9, 38, 199, 426, 686, 756, 818, 1111, 1181, 1210, 1635, 2060, 2097, 2192, 2262, 2324, 2394, 2456, 3178,
+];
+
+export function isLeapJalaaliYear(jy: number): boolean {
+  const bl = breaks.length;
+  let jp = breaks[0];
+  let jump = 0;
+  let n = 0;
+
+  if (jy < jp || jy >= breaks[bl - 1]) return false;
+
+  for (let i = 1; i < bl; i += 1) {
+    const jm_val = breaks[i];
+    jump = jm_val - jp;
+    if (jy < jm_val) break;
+    jp = jm_val;
+  }
+  n = jy - jp;
+
+  if (jump - n < 6) n = n - jump + Math.floor((jump + 4) / 33) * 33;
+  let leap = (((n + 1) % 33) - 1) % 4;
+  if (leap === -1) leap = 4;
+
+  return leap === 0;
+}
+
+export function isValidJalaaliDate(jy: number, jm: number, jd: number): boolean {
+  if (jy < 1200 || jy > 1500) return false;
+  if (jm < 1 || jm > 12) return false;
+  if (jd < 1) return false;
+  if (jm <= 6 && jd > 31) return false;
+  if (jm >= 7 && jm <= 11 && jd > 30) return false;
+  if (jm === 12) {
+    const isLeap = isLeapJalaaliYear(jy);
+    if (isLeap && jd > 30) return false;
+    if (!isLeap && jd > 29) return false;
+  }
+  return true;
+}
+
+export function isLeapGregorianYear(gy: number): boolean {
+  return (gy % 4 === 0 && gy % 100 !== 0) || gy % 400 === 0;
+}
+
+export function isValidGregorianDate(gy: number, gm: number, gd: number): boolean {
+  if (gy < 1000 || gy > 9999) return false;
+  if (gm < 1 || gm > 12) return false;
+  if (gd < 1) return false;
+  const daysInMonths = [0, 31, isLeapGregorianYear(gy) ? 29 : 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+  if (gd > daysInMonths[gm]) return false;
+  return true;
+}
+
+export function jalaliToGregorian(jy: number, jm: number, jd: number): string {
   jy += 1595;
   let days = -355668 + 365 * jy + Math.floor(jy / 33) * 8 + Math.floor(((jy % 33) + 3) / 4) + jd;
   if (jm < 7) {
@@ -55,7 +109,7 @@ function jalaliToGregorian(jy: number, jm: number, jd: number): string {
     days %= 365;
   }
   let gd = days + 1;
-  const isLeap = (gy % 4 === 0 && gy % 100 !== 0) || gy % 400 === 0;
+  const isLeap = isLeapGregorianYear(gy);
   const sal_a = isLeap
     ? [0, 31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
     : [0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
@@ -69,33 +123,47 @@ function jalaliToGregorian(jy: number, jm: number, jd: number): string {
   return `${gy}-${pad(gm)}-${pad(gd)}`;
 }
 
-function resolveIsoDate(val?: string | null): string | undefined {
+export function resolveIsoDate(val?: string | null): string | undefined {
   if (!val || typeof val !== 'string') return undefined;
   const trimmed = val.trim();
   if (!trimmed) return undefined;
-
-  const isoMatch = trimmed.match(/^(\d{4})-(\d{2})-(\d{2})(?:T.*)?$/);
-  if (isoMatch) {
-    const d = new Date(trimmed);
-    if (!isNaN(d.getTime())) {
-      return `${isoMatch[1]}-${isoMatch[2]}-${isoMatch[3]}`;
-    }
-  }
 
   const normalized = trimmed
     .replace(/[۰-۹]/g, (w) => String.fromCharCode(w.charCodeAt(0) - 1728))
     .replace(/[٠-٩]/g, (w) => String.fromCharCode(w.charCodeAt(0) - 1584));
 
-  const shamsiMatch = normalized.match(/(\d{4})[\/-](\d{1,2})[\/-](\d{1,2})/);
+  // Check for Gregorian format: YYYY-MM-DD or YYYY/MM/DD (years 1800..2200)
+  const gregMatch = normalized.match(/^(\d{4})[-/](\d{1,2})[-/](\d{1,2})(?:[T\s].*)?$/);
+  if (gregMatch) {
+    const y = parseInt(gregMatch[1], 10);
+    const m = parseInt(gregMatch[2], 10);
+    const d = parseInt(gregMatch[3], 10);
+
+    if (y >= 1800 && y <= 2200) {
+      if (isValidGregorianDate(y, m, d)) {
+        const pad = (n: number) => String(n).padStart(2, '0');
+        return `${y}-${pad(m)}-${pad(d)}`;
+      }
+      return undefined; // Invalid Gregorian calendar date (e.g. 2026-06-31, 2025-02-29)
+    }
+  }
+
+  // Check for Shamsi format: YYYY/MM/DD or YYYY-MM-DD (years 1300..1500)
+  const shamsiMatch = normalized.match(/(\d{4})[-/](\d{1,2})[-/](\d{1,2})/);
   if (shamsiMatch) {
     const jy = parseInt(shamsiMatch[1], 10);
     const jm = parseInt(shamsiMatch[2], 10);
     const jd = parseInt(shamsiMatch[3], 10);
-    if (jy >= 1300 && jy <= 1500 && jm >= 1 && jm <= 12 && jd >= 1 && jd <= 31) {
-      return jalaliToGregorian(jy, jm, jd);
+
+    if (jy >= 1300 && jy <= 1500) {
+      if (isValidJalaaliDate(jy, jm, jd)) {
+        return jalaliToGregorian(jy, jm, jd);
+      }
+      return undefined; // Invalid Shamsi calendar date (e.g. 1405/12/30, 1403/07/31)
     }
   }
 
+  // Approximate dates without day (e.g. 'مرداد ۱۴۰۵', '۱۴۰۵/۰۷') or unsupported formats are rejected
   return undefined;
 }
 
