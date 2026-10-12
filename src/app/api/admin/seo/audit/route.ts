@@ -3,6 +3,12 @@ import { getArticles } from '@/lib/stores/articles-store';
 import { siteMetadataConfig as rootMetadata } from '@/lib/seo/site-metadata';
 import robotsConfig from '@/app/robots';
 import generateSitemap from '@/app/sitemap';
+import {
+  validateCanonicalUrl,
+  validateHomepageSchemaConfig,
+  buildHomepageSchemaGraph,
+  countWordsFromContent,
+} from '@/lib/seo/audit-validators';
 
 export interface AuditCheckItem {
   id: string;
@@ -11,6 +17,8 @@ export interface AuditCheckItem {
   statusText: string;
   explanation: string;
 }
+
+export type CanonicalStatus = 'valid' | 'invalid' | 'not_applicable' | 'unknown';
 
 export interface PageAuditItem {
   id: string;
@@ -21,6 +29,9 @@ export interface PageAuditItem {
   hasMetaDesc: boolean;
   wordCount: number;
   hasCanonical: boolean;
+  canonicalStatus: CanonicalStatus;
+  canonicalUrl?: string;
+  canonicalReason?: string;
   status: 'good' | 'warning' | 'error';
   issues: string[];
   articleStatus?: 'draft' | 'published' | 'paused';
@@ -93,27 +104,29 @@ export async function GET() {
       });
     }
 
-    // 3. بررسی آدرس کانونیکال (Canonical URL)
+    // 3. اعتبارسنجی کانونیکال دامنه (Canonical URL) با URL Parser معتبر
     const alternates = rootMetadata.alternates;
-    const rootCanonical = alternates && typeof alternates === 'object' && alternates.canonical
-      ? String(alternates.canonical).trim()
-      : '';
-    const canonicalValid = rootCanonical.startsWith('https://www.negaresh-yar.ir');
-    if (canonicalValid) {
+    const rootCanonical =
+      alternates && typeof alternates === 'object' && alternates.canonical
+        ? String(alternates.canonical).trim()
+        : '';
+
+    const rootCanonicalValidation = validateCanonicalUrl(rootCanonical, '/');
+    if (rootCanonicalValidation.isValid) {
       technicalChecks.push({
         id: 'canonical-check',
         title: 'آدرس کانونیکال صفحه اصلی (Canonical URL)',
         status: 'good',
         statusText: 'معتبر',
-        explanation: `آدرس کانونیکال ریشه به دامنه رسمی (${rootCanonical}) متصل است.`,
+        explanation: `آدرس کانونیکال ریشه به دامنه رسمی (${rootCanonical}) با پروتکل HTTPS و هاست دقیق www.negaresh-yar.ir متصل است.`,
       });
     } else if (rootCanonical) {
       technicalChecks.push({
         id: 'canonical-check',
         title: 'آدرس کانونیکال صفحه اصلی (Canonical URL)',
         status: 'warning',
-        statusText: 'ناسازگار',
-        explanation: `آدرس کانونیکال ریشه (${rootCanonical}) با دامنه رسمی مطابقت کامل ندارد.`,
+        statusText: 'نامعتبر',
+        explanation: `آدرس کانونیکال ریشه (${rootCanonical}) نامعتبر است: ${rootCanonicalValidation.reason}`,
       });
     } else {
       technicalChecks.push({
@@ -197,14 +210,37 @@ export async function GET() {
       });
     }
 
-    // 6. دیتاهای ساختاریافته در سطح کد (Schema.org)
-    technicalChecks.push({
-      id: 'schema-org-check',
-      title: 'دیتاهای ساختاریافته (Schema.org)',
-      status: 'good',
-      statusText: 'پیکربندی در سورس',
-      explanation: 'اسکیمای سازمان و وب‌سایت با شماره تماس رسمی ۰۹۹۱۵۱۴۷۷۸۹، موقعیت مشهد و مختصات جغرافیایی ۳۶.۲۹۷۲ و ۵۹.۶۰۶۷ در سورس صفحه اصلی تعبیه شده است (تأیید اجرای زنده منوط به کراول HTML نهایی است).',
-    });
+    // 6. بررسی پیکربندی سورس Schema.org (بررسی ساختار موجود در سورس بدون ادعای کراول زنده خروجی)
+    try {
+      const homepageGraph = buildHomepageSchemaGraph();
+      const schemaValidation = validateHomepageSchemaConfig(homepageGraph);
+
+      if (schemaValidation.isValid) {
+        technicalChecks.push({
+          id: 'schema-org-check',
+          title: 'بررسی پیکربندی سورس Schema.org',
+          status: 'good',
+          statusText: 'پیکربندی معتبر در سورس',
+          explanation: `پیکربندی گراف سورس شامل ${schemaValidation.checkedEntitiesCount} موجودیت استاندارد (Organization با تلفن ۰۹۹۱۵۱۴۷۷۸۹ و مختصات مشهد، WebSite و WebPage) است. این آزمون فقط به بررسی ساختار در سطح کد اختصاص دارد.`,
+        });
+      } else {
+        technicalChecks.push({
+          id: 'schema-org-check',
+          title: 'بررسی پیکربندی سورس Schema.org',
+          status: 'warning',
+          statusText: 'پیکربندی ناقص در سورس',
+          explanation: `پیکربندی سورس Schema.org دارای نواقص است: ${schemaValidation.issues.join(' | ')}`,
+        });
+      }
+    } catch (schemaErr) {
+      technicalChecks.push({
+        id: 'schema-org-check',
+        title: 'بررسی پیکربندی سورس Schema.org',
+        status: 'error',
+        statusText: 'خطا در سورس Schema',
+        explanation: `ارزیابی پیکربندی سورس Schema با خطا مواجه شد: ${schemaErr instanceof Error ? schemaErr.message : 'ناشناخته'}`,
+      });
+    }
 
     // 7. تگ‌های شبکه اجتماعی (Open Graph & Twitter)
     const og = rootMetadata.openGraph;
@@ -255,23 +291,44 @@ export async function GET() {
       const hasValidSlug = Boolean(art.slug && art.slug.trim().length > 0);
       const isPublished = art.status === 'published';
 
-      // محاسبه دقیق تعداد کلمات: در صورت نبود محتوا صفر است نه پیش‌فرض فرضی ۲۵۰
-      const contentRaw = (art.content || '').trim();
-      const calculatedWords = contentRaw ? contentRaw.split(/\s+/).filter(Boolean).length : 0;
-      const wordCount = art.wordCount !== undefined && art.wordCount !== null && art.wordCount > 0
-        ? art.wordCount
-        : calculatedWords;
+      // محاسبه واقعی کلمات از متن پس از پاکسازی کامل تگ‌های HTML و کاراکترهای زائد
+      const realWordCount = countWordsFromContent(art.content);
+      const wordCount = realWordCount;
 
       const hasSeoTitle = Boolean(art.metaTitle && art.metaTitle.trim().length > 0);
       const hasMetaDesc = Boolean(art.metaDescription && art.metaDescription.trim().length > 0);
 
-      // اعتبارسنجی واقعی Canonical: فقط مقالات دارای اسلاگ معتبر آدرس کانونیکال تولید می‌کنند
-      const hasCanonical = Boolean(hasValidSlug);
+      // منطق کانونیکال مقالات
+      let canonicalStatus: CanonicalStatus = 'unknown';
+      let canonicalUrl: string | undefined = undefined;
+      let canonicalReason: string | undefined = undefined;
 
-      if (!hasValidSlug) {
+      if (!isPublished) {
+        canonicalStatus = 'not_applicable';
+        canonicalReason = 'صفحه پیش‌نویس یا متوقف‌شده است و فاقد URL کانونیکال عمومی است';
+      } else if (!hasValidSlug) {
+        canonicalStatus = 'invalid';
+        canonicalReason = 'اسلاگ مقاله تعریف نشده است';
         issues.push('اسلاگ (Slug) مقاله تعریف نشده است');
         status = 'error';
+      } else {
+        const expectedPath = `/knowledge/${art.slug}`;
+        const generatedCanonical = `https://www.negaresh-yar.ir${expectedPath}`;
+        const canonicalValidation = validateCanonicalUrl(generatedCanonical, expectedPath);
+
+        if (canonicalValidation.isValid) {
+          canonicalStatus = 'valid';
+          canonicalUrl = generatedCanonical;
+        } else {
+          canonicalStatus = 'invalid';
+          canonicalUrl = generatedCanonical;
+          canonicalReason = canonicalValidation.reason;
+          issues.push(`آدرس کانونیکال نامعتبر است: ${canonicalValidation.reason}`);
+          status = 'error';
+        }
       }
+
+      const hasCanonical = canonicalStatus === 'valid';
 
       if (!hasSeoTitle) {
         issues.push('عنوان سئو (Meta Title) صریح ثبت نشده است');
@@ -305,6 +362,9 @@ export async function GET() {
         hasMetaDesc,
         wordCount,
         hasCanonical,
+        canonicalStatus,
+        canonicalUrl,
+        canonicalReason,
         status,
         issues,
         articleStatus: art.status || 'draft',
@@ -312,11 +372,11 @@ export async function GET() {
     });
 
     // 3. محاسبه امتیاز کلی سئو فقط از میان آیتم‌های واقعاً آزموده‌شده (بدون احتساب not_tested)
+    // در نبود هیچ آزمون معتبر (testedChecks.length === 0)، امتیاز باید null باشد نه صفر
     const testedChecks = technicalChecks.filter((c) => c.status !== 'not_tested');
     const goodCount = testedChecks.filter((c) => c.status === 'good').length;
-    const overallScore = testedChecks.length > 0
-      ? Math.round((goodCount / testedChecks.length) * 100)
-      : 0;
+    const overallScore: number | null =
+      testedChecks.length > 0 ? Math.round((goodCount / testedChecks.length) * 100) : null;
 
     return NextResponse.json({
       overallScore,

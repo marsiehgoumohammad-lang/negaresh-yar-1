@@ -7,7 +7,7 @@ import { AdminLayout } from '@/components/admin/AdminLayout';
 import { AuditCheckItem } from '@/app/api/admin/seo/audit/route';
 
 export default function SeoAuditOverviewPage() {
-  const [overallScore, setOverallScore] = useState<number>(0);
+  const [overallScore, setOverallScore] = useState<number | null>(null);
   const [technicalChecks, setTechnicalChecks] = useState<AuditCheckItem[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
 
@@ -17,7 +17,7 @@ export default function SeoAuditOverviewPage() {
         const res = await fetch('/api/admin/seo/audit');
         if (res.ok) {
           const data = await res.json();
-          setOverallScore(data.overallScore || 0);
+          setOverallScore(data.overallScore ?? null);
           setTechnicalChecks(data.technicalChecks || []);
         }
       } catch (err) {
@@ -43,7 +43,7 @@ export default function SeoAuditOverviewPage() {
               <span>پایش فنی و آنالیز سئوی وب‌سایت نگارش یار</span>
             </h1>
             <p className="text-xs text-slate-400 mt-1">
-              بررسی سلامت متاتگ‌ها، فایل‌های نقشه سایت، دستورات ربات‌ها و اسکیمای ارگانیک بر مبنای پیکربندی واقعی
+              بررسی سلامت متاتگ‌ها، فایل‌های نقشه سایت، دستورات ربات‌ها و پیکربندی سورس اسکیمای ارگانیک بر مبنای پیکربندی واقعی
             </p>
           </div>
 
@@ -82,13 +82,19 @@ export default function SeoAuditOverviewPage() {
         {/* Technical Score Card */}
         <div className="bg-[#0D1424] border border-slate-800 rounded-2xl p-6 flex flex-col sm:flex-row items-center justify-between gap-6">
           <div className="flex items-center gap-4">
-            <div className="w-16 h-16 rounded-2xl bg-[#E5C158]/10 border border-[#E5C158]/30 flex items-center justify-center text-[#E5C158] shrink-0 font-black text-xl">
-              ٪{overallScore}
+            <div className="w-20 h-16 rounded-2xl bg-[#E5C158]/10 border border-[#E5C158]/30 flex items-center justify-center text-[#E5C158] shrink-0 font-black text-sm px-2 text-center">
+              {overallScore !== null ? `٪${overallScore}` : 'نامشخص'}
             </div>
             <div>
               <div className="text-base font-black text-white">امتیاز آزمون‌های فنی اجراشده</div>
               <div className="text-xs text-slate-400 mt-1">
-                {goodCount} مورد از {testedCount} شاخص فنی ارزیابی‌شده در وضعیت مطلوب قرار دارند. موارد نیازمند ابزار کراول زنده در امتیازدهی لحاظ نشده‌اند.
+                {overallScore !== null ? (
+                  <>
+                    {goodCount} مورد از {testedCount} شاخص فنی ارزیابی‌شده در وضعیت مطلوب قرار دارند. موارد تست‌نشده در شمارنده‌ها و امتیازدهی لحاظ نشده‌اند.
+                  </>
+                ) : (
+                  'در نبود آزمون‌های فنی فعال، امتیاز کلی قابل محاسبه نیست.'
+                )}
               </div>
             </div>
           </div>
