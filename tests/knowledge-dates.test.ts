@@ -116,6 +116,35 @@ test('5. Empty, incomplete, or malformed inputs are rejected safely', () => {
   assert.strictEqual(resolveIsoDate('1403/07/08 extra'), undefined);
   assert.strictEqual(resolveIsoDate('prefix 1403-07-08'), undefined);
   assert.strictEqual(resolveIsoDate('1403.07.08'), undefined); // unsupported separator
+
+  // Mixed separators are strictly disallowed (must use uniform '-' or '/')
+  assert.strictEqual(resolveIsoDate('2024-09/29'), undefined);
+  assert.strictEqual(resolveIsoDate('2024/09-29'), undefined);
+  assert.strictEqual(resolveIsoDate('1403/07-08'), undefined);
+  assert.strictEqual(resolveIsoDate('1403-07/08'), undefined);
+  assert.strictEqual(resolveIsoDate('۱۴۰۳/۰۷-۰۸'), undefined);
+  assert.strictEqual(resolveIsoDate('۱۴۰۳-۰۷/۰۸'), undefined);
+
+  // Invalid time components (hour, minute, second out of range)
+  assert.strictEqual(resolveIsoDate('2024-09-29T99:99Z'), undefined);
+  assert.strictEqual(resolveIsoDate('2024-09-29T24:00Z'), undefined);
+  assert.strictEqual(resolveIsoDate('2024-09-29T12:60Z'), undefined);
+  assert.strictEqual(resolveIsoDate('2024-09-29T12:30:60Z'), undefined);
+  assert.strictEqual(resolveIsoDate('2024-09-29 25:00:00'), undefined);
+
+  // Invalid timezone offset components
+  assert.strictEqual(resolveIsoDate('2024-09-29T12:30:00+25:00'), undefined);
+  assert.strictEqual(resolveIsoDate('2024-09-29T12:30:00-24:00'), undefined);
+  assert.strictEqual(resolveIsoDate('2024-09-29T12:30:00+03:60'), undefined);
+  assert.strictEqual(resolveIsoDate('2024-09-29T12:30:00-03:70'), undefined);
+
+  // Valid dates with time and offset
+  assert.strictEqual(resolveIsoDate('2024-09-29T12:30:45Z'), '2024-09-29');
+  assert.strictEqual(resolveIsoDate('2024-09-29T12:30:45+03:30'), '2024-09-29');
+  assert.strictEqual(resolveIsoDate('2024-09-29T00:00:00Z'), '2024-09-29');
+  assert.strictEqual(resolveIsoDate('2024-09-29T23:59:59Z'), '2024-09-29');
+  assert.strictEqual(resolveIsoDate('2024-09-29 14:20:00'), '2024-09-29');
+  assert.strictEqual(resolveIsoDate('2024/09/29T12:30:00Z'), '2024-09-29');
 });
 
 test('6. Approximate month/year dates without exact day are never synthesized', () => {

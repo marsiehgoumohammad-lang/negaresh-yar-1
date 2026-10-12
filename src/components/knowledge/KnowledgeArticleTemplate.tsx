@@ -133,13 +133,35 @@ export function resolveIsoDate(val?: string | null): string | undefined {
     .replace(/[٠-٩]/g, (w) => String.fromCharCode(w.charCodeAt(0) - 1584));
 
   // Check for Gregorian format: YYYY-MM-DD or YYYY/MM/DD (years 1800..2200), optional exact ISO time
+  // Rejects mixed separators like 2024-09/29 and validates time/offset bounds
   const gregMatch = normalized.match(
-    /^(\d{4})[-/](\d{1,2})[-/](\d{1,2})(?:[T\s]\d{2}:\d{2}(?::\d{2}(?:\.\d+)?)?(?:Z|[+-]\d{2}:?\d{2})?)?$/
+    /^(\d{4})([-/])(\d{1,2})\2(\d{1,2})(?:[T\s](\d{2}):(\d{2})(?::(\d{2})(?:\.\d+)?)?(?:Z|([+-])(\d{2}):?(\d{2}))?)?$/
   );
   if (gregMatch) {
     const y = parseInt(gregMatch[1], 10);
-    const m = parseInt(gregMatch[2], 10);
-    const d = parseInt(gregMatch[3], 10);
+    const m = parseInt(gregMatch[3], 10);
+    const d = parseInt(gregMatch[4], 10);
+    const hourStr = gregMatch[5];
+    const minStr = gregMatch[6];
+    const secStr = gregMatch[7];
+    const tzHStr = gregMatch[9];
+    const tzMStr = gregMatch[10];
+
+    if (hourStr !== undefined && minStr !== undefined) {
+      const hh = parseInt(hourStr, 10);
+      const mm = parseInt(minStr, 10);
+      if (hh < 0 || hh > 23 || mm < 0 || mm > 59) return undefined;
+      if (secStr !== undefined) {
+        const ss = parseInt(secStr, 10);
+        if (ss < 0 || ss > 59) return undefined;
+      }
+    }
+
+    if (tzHStr !== undefined && tzMStr !== undefined) {
+      const th = parseInt(tzHStr, 10);
+      const tm = parseInt(tzMStr, 10);
+      if (th < 0 || th > 23 || tm < 0 || tm > 59) return undefined;
+    }
 
     if (y >= 1800 && y <= 2200) {
       if (isValidGregorianDate(y, m, d)) {
@@ -151,11 +173,12 @@ export function resolveIsoDate(val?: string | null): string | undefined {
   }
 
   // Check for Shamsi format: full string exact match YYYY/MM/DD or YYYY-MM-DD (years 1300..1500)
-  const shamsiMatch = normalized.match(/^(\d{4})[-/](\d{1,2})[-/](\d{1,2})$/);
+  // Rejects mixed separators like 1403/07-08
+  const shamsiMatch = normalized.match(/^(\d{4})([-/])(\d{1,2})\2(\d{1,2})$/);
   if (shamsiMatch) {
     const jy = parseInt(shamsiMatch[1], 10);
-    const jm = parseInt(shamsiMatch[2], 10);
-    const jd = parseInt(shamsiMatch[3], 10);
+    const jm = parseInt(shamsiMatch[3], 10);
+    const jd = parseInt(shamsiMatch[4], 10);
 
     if (jy >= 1300 && jy <= 1500) {
       if (isValidJalaaliDate(jy, jm, jd)) {
