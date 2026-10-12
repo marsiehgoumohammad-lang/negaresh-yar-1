@@ -160,7 +160,10 @@ export function resolveIsoDate(val?: string | null): string | undefined {
     if (tzHStr !== undefined && tzMStr !== undefined) {
       const th = parseInt(tzHStr, 10);
       const tm = parseInt(tzMStr, 10);
-      if (th < 0 || th > 23 || tm < 0 || tm > 59) return undefined;
+      // Valid RFC 3339 / ISO 8601 civil timezone offset range: -14:00 to +14:00
+      // Any offset exceeding 14:00 (e.g. +14:01, -14:01, +15:00, +23:59) is rejected
+      if (th < 0 || th > 14 || tm < 0 || tm > 59) return undefined;
+      if (th === 14 && tm > 0) return undefined;
     }
 
     if (y >= 1800 && y <= 2200) {

@@ -132,15 +132,28 @@ test('5. Empty, incomplete, or malformed inputs are rejected safely', () => {
   assert.strictEqual(resolveIsoDate('2024-09-29T12:30:60Z'), undefined);
   assert.strictEqual(resolveIsoDate('2024-09-29 25:00:00'), undefined);
 
-  // Invalid timezone offset components
+  // Invalid timezone offset components (RFC 3339 / ISO 8601 offset must be within [-14:00, +14:00])
   assert.strictEqual(resolveIsoDate('2024-09-29T12:30:00+25:00'), undefined);
   assert.strictEqual(resolveIsoDate('2024-09-29T12:30:00-24:00'), undefined);
+  assert.strictEqual(resolveIsoDate('2024-09-29T12:30:00+23:59'), undefined);
+  assert.strictEqual(resolveIsoDate('2024-09-29T12:30:00-23:59'), undefined);
+  assert.strictEqual(resolveIsoDate('2024-09-29T12:30:00+15:00'), undefined);
+  assert.strictEqual(resolveIsoDate('2024-09-29T12:30:00-15:00'), undefined);
+  assert.strictEqual(resolveIsoDate('2024-09-29T12:30:00+14:01'), undefined);
+  assert.strictEqual(resolveIsoDate('2024-09-29T12:30:00-14:01'), undefined);
   assert.strictEqual(resolveIsoDate('2024-09-29T12:30:00+03:60'), undefined);
   assert.strictEqual(resolveIsoDate('2024-09-29T12:30:00-03:70'), undefined);
 
   // Valid dates with time and offset
   assert.strictEqual(resolveIsoDate('2024-09-29T12:30:45Z'), '2024-09-29');
   assert.strictEqual(resolveIsoDate('2024-09-29T12:30:45+03:30'), '2024-09-29');
+  assert.strictEqual(resolveIsoDate('2024-09-29T12:30:45-03:30'), '2024-09-29');
+  assert.strictEqual(resolveIsoDate('2024-09-29T12:30:45+14:00'), '2024-09-29');
+  assert.strictEqual(resolveIsoDate('2024-09-29T12:30:45-14:00'), '2024-09-29');
+  assert.strictEqual(resolveIsoDate('2024-09-29T12:30:45-12:00'), '2024-09-29');
+  assert.strictEqual(resolveIsoDate('2024-09-29T12:30:45+13:45'), '2024-09-29');
+  assert.strictEqual(resolveIsoDate('2024-09-29T12:30:45+00:00'), '2024-09-29');
+  assert.strictEqual(resolveIsoDate('2024-09-29T12:30:45-00:00'), '2024-09-29');
   assert.strictEqual(resolveIsoDate('2024-09-29T00:00:00Z'), '2024-09-29');
   assert.strictEqual(resolveIsoDate('2024-09-29T23:59:59Z'), '2024-09-29');
   assert.strictEqual(resolveIsoDate('2024-09-29 14:20:00'), '2024-09-29');
