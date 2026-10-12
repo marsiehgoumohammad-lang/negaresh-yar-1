@@ -1,5 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import path from 'node:path';
 import {
   stripHtmlToPlainText,
   countWordsFromContent,
@@ -8,6 +10,7 @@ import {
   buildHomepageSchemaGraph,
 } from '../src/lib/seo/audit-validators';
 import { GET } from '../src/app/api/admin/seo/audit/route';
+import Home from '../src/app/page';
 
 test('1. Canonical URL validation: HTTPS, exact domain, and pathname parsing', () => {
   // معتبر: دامنه دقیق و بدون پورت یا کوئری
@@ -104,13 +107,20 @@ test('2. HTML word counting: strips tags, scripts, styles, attributes and entiti
   assert.ok(wordCount >= 15 && wordCount <= 22);
 });
 
-test('3. Schema.org source configuration validation', () => {
+test('3. Schema.org source configuration validation and entity checks', () => {
   // ۱. ساختار معتبر سورس پروژه
   const validGraph = buildHomepageSchemaGraph();
   const validRes = validateHomepageSchemaConfig(validGraph);
   assert.equal(validRes.isValid, true);
   assert.equal(validRes.issues.length, 0);
-  assert.ok(validRes.checkedEntitiesCount >= 3);
+  assert.ok(validRes.checkedEntitiesCount >= 4); // Organization, WebSite, WebPage, FAQPage
+
+  // بررسی دقیق تمام موجودیت‌های ضروری در گراف
+  const types = validGraph['@graph'].map((e) => e['@type']);
+  assert.ok(types.includes('Organization'));
+  assert.ok(types.includes('WebSite'));
+  assert.ok(types.includes('WebPage'));
+  assert.ok(types.includes('FAQPage'));
 
   // ۲. ساختار خالی یا نامعتبر
   const emptyRes = validateHomepageSchemaConfig(undefined);
@@ -146,9 +156,74 @@ test('3. Schema.org source configuration validation', () => {
   const phoneRes = validateHomepageSchemaConfig(wrongPhoneGraph as unknown as typeof validGraph);
   assert.equal(phoneRes.isValid, false);
   assert.ok(phoneRes.issues.some((i) => i.includes('+989915147789')));
+
+  // ۵. نقص در WebSite
+  const missingWebSite = {
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': 'Organization',
+        telephone: '+989915147789',
+        geo: { latitude: '36.2972', longitude: '59.6067' },
+      },
+      { '@type': 'WebPage' },
+    ],
+  };
+  const webSiteRes = validateHomepageSchemaConfig(missingWebSite as unknown as typeof validGraph);
+  assert.equal(webSiteRes.isValid, false);
+  assert.ok(webSiteRes.issues.some((i) => i.includes('WebSite')));
 });
 
-test('4. Overall score null behavior when no valid tests exist', () => {
+test('4. Unified Schema Source: Homepage renders the exact same graph validated by SEO audit', () => {
+  // ۱. بررسی فراخوانی buildHomepageSchemaGraph در سورس src/app/page.tsx
+  const pageSource = fs.readFileSync(path.join(process.cwd(), 'src/app/page.tsx'), 'utf-8');
+  assert.ok(
+    pageSource.includes("import { buildHomepageSchemaGraph } from '@/lib/seo/homepage-schema-builder'"),
+    'src/app/page.tsx must import buildHomepageSchemaGraph from homepage-schema-builder'
+  );
+  assert.ok(
+    pageSource.includes('const homepageGraph = buildHomepageSchemaGraph()'),
+    'src/app/page.tsx must call buildHomepageSchemaGraph() for its JSON-LD generation'
+  );
+  assert.equal(
+    pageSource.includes("'@context': 'https://schema.org'"),
+    false,
+    'src/app/page.tsx must not declare an independent parallel Schema graph'
+  );
+
+  // ۲. بررسی خروجی رندر مؤلفه صفحه اصلی
+  const renderedComponent = Home();
+  assert.ok(renderedComponent, 'Home component must render successfully');
+
+  // استخراج المان script حاوی application/ld+json
+  const children = Array.isArray(renderedComponent.props.children)
+    ? renderedComponent.props.children
+    : [renderedComponent.props.children];
+
+  const scriptTag = children.find(
+    (c: { type?: string; props?: { type?: string } }) =>
+      c && c.type === 'script' && c.props?.type === 'application/ld+json'
+  );
+  assert.ok(scriptTag, 'Home component must include application/ld+json script tag');
+
+  const jsonString = scriptTag.props.dangerouslySetInnerHTML.__html;
+  const parsedFromRender = JSON.parse(jsonString);
+
+  // ۳. بررسی برابری کامل گراف رندردیده با گراف Builder مشترک
+  const builderGraph = buildHomepageSchemaGraph();
+  assert.deepEqual(
+    parsedFromRender,
+    builderGraph,
+    'Rendered JSON-LD graph must be deeply identical to buildHomepageSchemaGraph output'
+  );
+
+  // ۴. بررسی اعتبارسنجی گراف مشترک
+  const validationResult = validateHomepageSchemaConfig(parsedFromRender);
+  assert.equal(validationResult.isValid, true);
+  assert.equal(validationResult.issues.length, 0);
+});
+
+test('5. Overall score null behavior when no valid tests exist', () => {
   // تابع شبیه‌ساز محاسبه امتیاز مطابق منطق audit route
   function calculateScore(checks: Array<{ status: 'good' | 'warning' | 'error' | 'not_tested' }>): number | null {
     const testedChecks = checks.filter((c) => c.status !== 'not_tested');
@@ -177,7 +252,7 @@ test('4. Overall score null behavior when no valid tests exist', () => {
   assert.equal(mixedChecks, 50); // 1 good out of 2 tested = 50%
 });
 
-test('5. Full SEO audit route execution and honest reporting', async () => {
+test('6. Full SEO audit route execution and honest reporting', async () => {
   const res = await GET();
   assert.equal(res.status, 200);
 
