@@ -131,8 +131,8 @@ export function validateHomepageSchemaConfig(graphObj?: SchemaOrgGraph): SchemaC
   const entities = graphObj['@graph'];
   const entityTypes = entities.map((e) => String(e['@type'] || ''));
 
-  // بررسی الزامی بودن موجودیت‌های Organization، WebSite و WebPage
-  const requiredTypes = ['Organization', 'WebSite', 'WebPage'];
+  // بررسی الزامی بودن موجودیت‌های Organization، WebSite، WebPage و FAQPage
+  const requiredTypes = ['Organization', 'WebSite', 'WebPage', 'FAQPage'];
   for (const req of requiredTypes) {
     if (!entityTypes.includes(req)) {
       issues.push(`موجودیت ضروری ${req} در گراف Schema یافت نشد`);

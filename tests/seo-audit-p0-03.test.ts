@@ -167,11 +167,39 @@ test('3. Schema.org source configuration validation and entity checks', () => {
         geo: { latitude: '36.2972', longitude: '59.6067' },
       },
       { '@type': 'WebPage' },
+      { '@type': 'FAQPage' },
     ],
   };
   const webSiteRes = validateHomepageSchemaConfig(missingWebSite as unknown as typeof validGraph);
   assert.equal(webSiteRes.isValid, false);
   assert.ok(webSiteRes.issues.some((i) => i.includes('WebSite')));
+
+  // ۶. نقص در FAQPage: حذف FAQPage از نسخه کپی‌شده از گراف معتبر
+  const graphWithoutFaq = {
+    ...validGraph,
+    '@graph': validGraph['@graph'].filter((e) => e['@type'] !== 'FAQPage'),
+  };
+  const missingFaqRes = validateHomepageSchemaConfig(graphWithoutFaq);
+  assert.equal(missingFaqRes.isValid, false);
+  assert.ok(missingFaqRes.issues.some((i) => i.includes('FAQPage')));
+
+  // ۷. نقص در WebPage: حذف WebPage از گراف معتبر
+  const graphWithoutWebPage = {
+    ...validGraph,
+    '@graph': validGraph['@graph'].filter((e) => e['@type'] !== 'WebPage'),
+  };
+  const missingWebPageRes = validateHomepageSchemaConfig(graphWithoutWebPage);
+  assert.equal(missingWebPageRes.isValid, false);
+  assert.ok(missingWebPageRes.issues.some((i) => i.includes('WebPage')));
+
+  // ۸. نقص در Organization: حذف Organization از گراف معتبر
+  const graphWithoutOrg = {
+    ...validGraph,
+    '@graph': validGraph['@graph'].filter((e) => e['@type'] !== 'Organization'),
+  };
+  const missingOrgRes = validateHomepageSchemaConfig(graphWithoutOrg);
+  assert.equal(missingOrgRes.isValid, false);
+  assert.ok(missingOrgRes.issues.some((i) => i.includes('Organization')));
 });
 
 test('4. Unified Schema Source: Homepage renders the exact same graph validated by SEO audit', () => {
