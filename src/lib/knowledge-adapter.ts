@@ -168,9 +168,9 @@ export function adaptArticleToKnowledgeData(article: Article): KnowledgeArticleD
     h1Title: article.title,
     heroSubtitle: article.excerpt || article.metaDescription || '',
     readTime: `${readTimeMinutes} دقیقه`,
-    lastUpdated: staticMatch?.lastUpdated || (article.updatedAt
+    lastUpdated: (staticMatch ? (staticMatch.lastUpdated ?? '') : (article.updatedAt
       ? new Date(article.updatedAt).toLocaleDateString('fa-IR')
-      : '۱۴۰۳/۱۱/۰۱'),
+      : '۱۴۰۳/۱۱/۰۱')),
     datePublished: (staticMatch ? staticMatch.datePublished : article.publishedAt) || undefined,
     dateModified: (staticMatch ? staticMatch.dateModified : article.updatedAt) || undefined,
     heroTrustChips: [

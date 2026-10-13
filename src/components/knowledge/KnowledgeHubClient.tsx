@@ -46,7 +46,9 @@ export function KnowledgeHubClient({ initialArticles }: KnowledgeHubClientProps)
           excerpt: art.excerpt || art.metaDescription || staticMatch?.heroSubtitle || '',
           category: art.category || art.primaryKeyword || staticMatch?.category || 'حقوقی',
           readTime: staticMatch?.readTime || `${readTimeMinutes} دقیقه`,
-          lastUpdated: art.updatedAt ? new Date(art.updatedAt).toLocaleDateString('fa-IR') : (staticMatch?.lastUpdated || '۱۴۰۳/۱۱/۰۱'),
+          lastUpdated: staticMatch
+            ? (staticMatch.lastUpdated ?? '')
+            : (art.updatedAt ? new Date(art.updatedAt).toLocaleDateString('fa-IR') : '۱۴۰۳/۱۱/۰۱'),
           raw: art,
         };
       })
@@ -274,7 +276,11 @@ export function KnowledgeHubClient({ initialArticles }: KnowledgeHubClientProps)
 
                 {/* Footer Link */}
                 <div className="pt-6 mt-6 border-t border-slate-800/80 flex items-center justify-between">
-                  <span className="text-xs text-slate-400">بروزرسانی: {article.lastUpdated}</span>
+                  {article.lastUpdated && article.lastUpdated.trim() !== '' ? (
+                    <span className="text-xs text-slate-400">بروزرسانی: {article.lastUpdated}</span>
+                  ) : (
+                    <span className="text-xs text-slate-500">{article.category}</span>
+                  )}
                   <Link
                     href={`/knowledge/${encodeURIComponent(article.slug.replace(/\//g, ''))}`}
                     className="inline-flex items-center gap-1.5 text-xs font-bold text-[#E5C158] group-hover:translate-x-1 transition-transform"

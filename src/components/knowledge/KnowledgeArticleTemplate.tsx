@@ -394,10 +394,12 @@ export function KnowledgeArticleTemplate({ data }: { data: KnowledgeArticleData 
               <Clock className="w-3.5 h-3.5 text-slate-400" />
               {data.readTime}
             </span>
-            <span className="inline-flex items-center gap-1.5 text-xs text-slate-400 bg-slate-900/80 px-3 py-1.5 rounded-full border border-slate-800">
-              <Calendar className="w-3.5 h-3.5 text-slate-400" />
-              بروزرسانی: {data.lastUpdated}
-            </span>
+            {data.lastUpdated && data.lastUpdated.trim() !== '' && (
+              <span className="inline-flex items-center gap-1.5 text-xs text-slate-400 bg-slate-900/80 px-3 py-1.5 rounded-full border border-slate-800">
+                <Calendar className="w-3.5 h-3.5 text-slate-400" />
+                بروزرسانی: {data.lastUpdated}
+              </span>
+            )}
           </div>
 
           {/* H1 Title */}
