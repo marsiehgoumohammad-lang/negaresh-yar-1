@@ -268,7 +268,7 @@ export const sampleMunicipalityLetterData: SampleLandingData = {
 امضا و تاریخ: [...]`,
 
   writingTipsTitle: 'نکات کلیدی برای موافقت شهردار و کارشناسان شهرسازی',
-  writingTipsSubtitle: 'اصولی که زمان رسیدگی به پرونده شهرداری را از ماه ها به چند روز کاهش می دهد',
+  writingTipsSubtitle: 'اصولی که به بررسی دقیق تر، جلوگیری از سرگردانی در دوایر منطقه و پیگیری موثرتر اداری کمک می کند',
   writingTipsList: [
     {
       title: 'ذکر دقیق مشخصات ثبتی و شماره پرونده',
