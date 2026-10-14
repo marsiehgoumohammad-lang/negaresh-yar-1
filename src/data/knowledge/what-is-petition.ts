@@ -8,7 +8,7 @@ export const whatIsPetitionData: KnowledgeArticleData = {
   h1Title: 'دادخواست چیست؟ نحوه تنظیم، شرایط قانونی و نکات کلیدی دادرسی مدنی',
   heroSubtitle: 'بررسی دقیق تعریف دادخواست، الزامات قانونی ماده ۵۱ قانون آیین دادرسی مدنی، نحوه ثبت در دفاتر خدمات الکترونیک قضایی و تفاوت اخطار رفع نقص با قرارهای نهایی.',
   readTime: '۱۲ دقیقه مطالعه',
-  lastUpdated: '',
+  lastUpdated: 'مهر ۱۴۰۵',
   datePublished: undefined,
   dateModified: undefined,
   heroTrustChips: [

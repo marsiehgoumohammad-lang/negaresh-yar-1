@@ -58,6 +58,16 @@ interface OrgItem {
 
 const ORGANIZATIONS_DIRECTORY: OrgItem[] = [
   {
+    id: 'general-administrative',
+    name: 'الگوی عمومی نامه اداری و درخواست رسمی',
+    category: 'قالب های پایه',
+    badge: 'فرمت استاندارد',
+    topics: ['ساختار ۳ بخشی سربرگ و متن', 'اصول نگارش خواسته و هامش', 'لحن رسمی و احترامات', 'فایل Word و PDF قابل ویرایش'],
+    href: '/samples/administrative-letter',
+    icon: FileText,
+    popular: true,
+  },
+  {
     id: 'bank',
     name: 'بانک ها و موسسات اعتباری',
     category: 'بانک و مالی',
@@ -72,7 +82,7 @@ const ORGANIZATIONS_DIRECTORY: OrgItem[] = [
     name: 'شهرداری ها و کمیسیون ماده ۱۰۰',
     category: 'شهرداری و شهرسازی',
     badge: 'بسیار حساس',
-    topics: ['لایحه دفاعیه کمیسیون ماده ۱۰۰', 'تقسیط عوارض نوسازی', 'تسریع در صدور پایان کار', 'رفع سد معبر'],
+    topics: ['مشکلات محله، اسفالت و جدول کشی', 'رفع سد معبر اصناف و ساختمانی', 'تقسیط عوارض نوسازی', 'دفاعیه کمیسیون ماده ۱۰۰'],
     href: '/samples/municipality-letter',
     icon: Building,
     popular: true,
@@ -205,7 +215,7 @@ const ORGANIZATIONS_DIRECTORY: OrgItem[] = [
     name: 'کمیته امداد، بهزیستی و بنیاد شهید',
     category: 'نهادهای حمایتی و ایثارگران',
     badge: 'استمداد و مستمری',
-    topics: ['برقراری مستمری ماهانه', 'وام اشتغال قرض الحسنه ۴٪', 'کمک هزینه ودیعه مسکن و جهیزیه', 'تسهیلات جانبازان و ایثارگران'],
+    topics: ['تحت پوشش قرار گرفتن و مستمری', 'درخواست کمک مالی از بهزیستی', 'وام اشتغال قرض الحسنه خودکفایی', 'کمک هزینه ودیعه مسکن و جهیزیه'],
     href: '/samples/relief-foundation-letter',
     icon: HeartHandshake,
   },

@@ -230,8 +230,20 @@ export const howToWriteAdministrativeLetterData: KnowledgeArticleData = {
     {
       title: "نمونه نامه به شهرداری",
       href: "/samples/municipality-letter",
-      desc: "الگوی آماده تقسیط عوارض نوسازی و دفاعیه کمیسیون ماده ۱۰۰.",
+      desc: "الگوی آماده تقسیط عوارض نوسازی، مشکلات محله و کمیسیون ماده ۱۰۰.",
       badge: "شهرداری",
+    },
+    {
+      title: "نمونه نامه به بانک و تقسیط تسهیلات",
+      href: "/samples/bank-letter",
+      desc: "متن درخواست وام، تقسیط معوقات و بخشودگی جرایم بانکی.",
+      badge: "بانکی",
+    },
+    {
+      title: "نمونه نامه به کمیته امداد و بهزیستی",
+      href: "/samples/relief-foundation-letter",
+      desc: "متن استمداد، تحت پوشش قرار گرفتن، کمک مالی و وام اشتغال.",
+      badge: "حمایتی",
     },
   ],
 
