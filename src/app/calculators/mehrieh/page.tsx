@@ -21,12 +21,12 @@ export const metadata: Metadata = {
     'نحوه مطالبه مهریه وجه نقد',
   ],
   alternates: {
-    canonical: 'https://negaresh-yar.ir/calculators/mehrieh',
+    canonical: 'https://www.negaresh-yar.ir/calculators/mehrieh',
   },
   openGraph: {
     title: 'محاسبه آنلاین مهریه به نرخ روز با شاخص بانک مرکزی | نگارش یار',
     description: 'محاسبه فوری و دقیق ارزش روز مهریه بر اساس ماده ۱۰۸۲ قانون مدنی و شاخص تورم بانک مرکزی.',
-    url: 'https://negaresh-yar.ir/calculators/mehrieh',
+    url: 'https://www.negaresh-yar.ir/calculators/mehrieh',
     siteName: 'نگارش یار',
     locale: 'fa_IR',
     type: 'website',
@@ -81,9 +81,9 @@ export default function MehriehCalculatorPage() {
       {
         '@type': 'BreadcrumbList',
         itemListElement: [
-          { '@type': 'ListItem', position: 1, name: 'صفحه اصلی', item: 'https://negaresh-yar.ir' },
-          { '@type': 'ListItem', position: 2, name: 'محاسبه‌گرهای حقوقی', item: 'https://negaresh-yar.ir/calculators' },
-          { '@type': 'ListItem', position: 3, name: 'محاسبه‌گر مهریه به نرخ روز', item: 'https://negaresh-yar.ir/calculators/mehrieh' },
+          { '@type': 'ListItem', position: 1, name: 'صفحه اصلی', item: 'https://www.negaresh-yar.ir' },
+          { '@type': 'ListItem', position: 2, name: 'محاسبه‌گرهای حقوقی', item: 'https://www.negaresh-yar.ir/calculators' },
+          { '@type': 'ListItem', position: 3, name: 'محاسبه‌گر مهریه به نرخ روز', item: 'https://www.negaresh-yar.ir/calculators/mehrieh' },
         ],
       },
     ],

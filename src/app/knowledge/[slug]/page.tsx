@@ -54,11 +54,20 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       url: `https://www.negaresh-yar.ir/knowledge/${article.slug}`,
       siteName: 'نگارش یار',
       type: 'article',
+      images: [
+        {
+          url: 'https://www.negaresh-yar.ir/og-image.png',
+          width: 1200,
+          height: 630,
+          alt: 'نگارش یار',
+        },
+      ],
     },
     twitter: {
       card: 'summary_large_image',
       title: fullSeoTitle,
       description,
+      images: ['https://www.negaresh-yar.ir/og-image.png'],
     },
   };
 }

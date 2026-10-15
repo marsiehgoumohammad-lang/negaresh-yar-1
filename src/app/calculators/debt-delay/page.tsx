@@ -19,12 +19,12 @@ export const metadata: Metadata = {
     'محاسبه دیرکرد چک برگشتی',
   ],
   alternates: {
-    canonical: 'https://negaresh-yar.ir/calculators/debt-delay',
+    canonical: 'https://www.negaresh-yar.ir/calculators/debt-delay',
   },
   openGraph: {
     title: 'محاسبه‌گر خسارت تاخیر تادیه بدهی و دین (ماده ۵۲۲) | نگارش یار',
     description: 'محاسبه آنلاین خسارت تاخیر تادیه چک، سفته و طلب مالی با فرمول رسمی دادگاه و شاخص بانک مرکزی.',
-    url: 'https://negaresh-yar.ir/calculators/debt-delay',
+    url: 'https://www.negaresh-yar.ir/calculators/debt-delay',
     siteName: 'نگارش یار',
     locale: 'fa_IR',
     type: 'website',
@@ -50,9 +50,9 @@ export default function DebtDelayCalculatorPage() {
       {
         '@type': 'BreadcrumbList',
         itemListElement: [
-          { '@type': 'ListItem', position: 1, name: 'صفحه اصلی', item: 'https://negaresh-yar.ir' },
-          { '@type': 'ListItem', position: 2, name: 'محاسبه‌گرهای حقوقی', item: 'https://negaresh-yar.ir/calculators' },
-          { '@type': 'ListItem', position: 3, name: 'محاسبه‌گر تاخیر تادیه دین', item: 'https://negaresh-yar.ir/calculators/debt-delay' },
+          { '@type': 'ListItem', position: 1, name: 'صفحه اصلی', item: 'https://www.negaresh-yar.ir' },
+          { '@type': 'ListItem', position: 2, name: 'محاسبه‌گرهای حقوقی', item: 'https://www.negaresh-yar.ir/calculators' },
+          { '@type': 'ListItem', position: 3, name: 'محاسبه‌گر تاخیر تادیه دین', item: 'https://www.negaresh-yar.ir/calculators/debt-delay' },
         ],
       },
     ],

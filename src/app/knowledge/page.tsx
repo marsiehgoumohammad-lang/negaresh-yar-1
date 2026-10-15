@@ -26,11 +26,20 @@ export const metadata: Metadata = {
     url: 'https://www.negaresh-yar.ir/knowledge',
     siteName: 'نگارش یار',
     type: 'website',
+    images: [
+      {
+        url: 'https://www.negaresh-yar.ir/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: 'نگارش یار',
+      },
+    ],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'پایگاه دانش حقوقی و اداری [آموزش گام‌به‌گام + دانلود رایگان نمونه] | نگارش یار',
     description: 'آموزش صفر تا صد تنظیم اوراق قضایی و نامه‌های اداری همراه با مواد قانونی در نگارش یار.',
+    images: ['https://www.negaresh-yar.ir/og-image.png'],
   },
 };
 

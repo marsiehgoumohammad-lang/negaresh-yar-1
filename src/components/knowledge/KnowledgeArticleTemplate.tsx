@@ -223,6 +223,12 @@ export function KnowledgeArticleTemplate({ data }: { data: KnowledgeArticleData 
     },
     headline: data.h1Title,
     description: data.heroSubtitle,
+    image: {
+      '@type': 'ImageObject',
+      url: 'https://www.negaresh-yar.ir/og-image.png',
+      width: 1200,
+      height: 630,
+    },
     inLanguage: 'fa-IR',
     mainEntityOfPage: {
       '@id': canonicalUrl,
@@ -268,7 +274,9 @@ export function KnowledgeArticleTemplate({ data }: { data: KnowledgeArticleData 
       logo: {
         '@type': 'ImageObject',
         '@id': 'https://www.negaresh-yar.ir/#logo',
-        url: 'https://www.negaresh-yar.ir/logo.jpg',
+        url: 'https://www.negaresh-yar.ir/logo.png',
+        width: 1024,
+        height: 1024,
       },
     },
     {

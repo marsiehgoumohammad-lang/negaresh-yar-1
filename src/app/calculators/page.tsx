@@ -19,12 +19,12 @@ export const metadata: Metadata = {
     'محاسبه گر حقوقی نگارش یار',
   ],
   alternates: {
-    canonical: 'https://negaresh-yar.ir/calculators',
+    canonical: 'https://www.negaresh-yar.ir/calculators',
   },
   openGraph: {
     title: 'محاسبه‌گرهای حقوقی آنلاین و هوشمند | نگارش یار',
     description: 'محاسبه دقیق مهریه به نرخ روز، تاخیر تادیه دین، و دیه کامل سال ۱۴۰۳ طبق فرمول‌های رسمی دادگستری.',
-    url: 'https://negaresh-yar.ir/calculators',
+    url: 'https://www.negaresh-yar.ir/calculators',
     siteName: 'نگارش یار',
     locale: 'fa_IR',
     type: 'website',
@@ -73,12 +73,12 @@ export default function CalculatorsHubPage() {
     '@type': 'WebPage',
     name: 'محاسبه‌گرهای حقوقی آنلاین نگارش یار',
     description: 'ابزارهای آنلاین محاسبه مهریه به نرخ روز، تاخیر تادیه بدهی و دیه مصوب قوه قضاییه',
-    url: 'https://negaresh-yar.ir/calculators',
+    url: 'https://www.negaresh-yar.ir/calculators',
     breadcrumb: {
       '@type': 'BreadcrumbList',
       itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'صفحه اصلی', item: 'https://negaresh-yar.ir' },
-        { '@type': 'ListItem', position: 2, name: 'محاسبه‌گرهای حقوقی', item: 'https://negaresh-yar.ir/calculators' },
+        { '@type': 'ListItem', position: 1, name: 'صفحه اصلی', item: 'https://www.negaresh-yar.ir' },
+        { '@type': 'ListItem', position: 2, name: 'محاسبه‌گرهای حقوقی', item: 'https://www.negaresh-yar.ir/calculators' },
       ],
     },
   };

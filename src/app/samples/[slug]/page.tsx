@@ -80,11 +80,21 @@ export async function generateMetadata({
       publishedTime: sample.publishedAt,
       modifiedTime: sample.updatedAt,
       authors: [sample.author?.name || 'تیم حقوقی نگارش یار'],
+      images: [
+        {
+          url: 'https://www.negaresh-yar.ir/og-image.png',
+          width: 1200,
+          height: 630,
+          alt: 'نگارش یار',
+          type: 'image/png',
+        },
+      ],
     },
     twitter: {
       card: 'summary_large_image',
       title: seoTitle,
       description,
+      images: ['https://www.negaresh-yar.ir/og-image.png'],
     },
   };
 }
@@ -167,7 +177,9 @@ export default async function DynamicSamplePage({ params }: SamplePageProps) {
       logo: {
         '@type': 'ImageObject',
         '@id': 'https://www.negaresh-yar.ir/#logo',
-        url: 'https://www.negaresh-yar.ir/logo.jpg',
+        url: 'https://www.negaresh-yar.ir/logo.png',
+        width: 1024,
+        height: 1024,
       },
     },
     {
@@ -233,6 +245,12 @@ export default async function DynamicSamplePage({ params }: SamplePageProps) {
       '@id': `${canonicalUrl}#article`,
       headline: title,
       description: description,
+      image: {
+        '@type': 'ImageObject',
+        url: 'https://www.negaresh-yar.ir/og-image.png',
+        width: 1200,
+        height: 630,
+      },
       url: canonicalUrl,
       datePublished: sample.publishedAt || '2026-01-15T08:00:00.000Z',
       dateModified: sample.updatedAt || '2026-08-16T12:00:00.000Z',

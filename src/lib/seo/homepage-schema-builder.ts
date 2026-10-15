@@ -18,9 +18,12 @@ export function buildHomepageSchemaGraph(): SchemaOrgGraph {
         logo: {
           '@type': 'ImageObject',
           '@id': 'https://www.negaresh-yar.ir/#logo',
-          url: 'https://www.negaresh-yar.ir/logo.jpg',
+          url: 'https://www.negaresh-yar.ir/logo.png',
+          contentUrl: 'https://www.negaresh-yar.ir/logo.png',
+          width: 1024,
+          height: 1024,
         },
-        image: 'https://www.negaresh-yar.ir/logo.jpg',
+        image: 'https://www.negaresh-yar.ir/og-image.png',
         description:
           'مرکز جامع تخصصی تنظیم دادخواست حقوقی، شکواییه، لایحه دفاعیه، نامه‌های اداری و تفسیر هوشمند اوراق قضایی.',
         telephone: '+989915147789',

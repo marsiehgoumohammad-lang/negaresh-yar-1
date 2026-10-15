@@ -17,11 +17,21 @@ export const siteMetadataConfig: Metadata = {
     siteName: 'نگارش یار',
     locale: 'fa_IR',
     type: 'website',
+    images: [
+      {
+        url: '/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: 'نگارش یار',
+        type: 'image/png',
+      },
+    ],
   },
   twitter: {
     card: 'summary_large_image',
     title: "نگارش یار | سامانه تنظیم دادخواست، لایحه و نامه اداری [دانلود رایگان + مشاوره]",
     description: "دانلود رایگان نمونه متن دادخواست، لایحه، شکواییه و نامه اداری + تنظیم تخصصی و مشاوره آنلاین در نگارش یار.",
+    images: ['/og-image.png'],
   },
   robots: {
     index: true,
@@ -47,12 +57,6 @@ export const siteMetadataConfig: Metadata = {
     shortcut: ['/favicon.ico'],
     apple: [
       { url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' },
-    ],
-    other: [
-      {
-        rel: 'mask-icon',
-        url: '/icon-512x512.png',
-      },
     ],
   },
   manifest: '/site.webmanifest',

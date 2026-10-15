@@ -20,12 +20,12 @@ export const metadata: Metadata = {
     'فرمول محاسبه دیه به روز',
   ],
   alternates: {
-    canonical: 'https://negaresh-yar.ir/calculators/diya',
+    canonical: 'https://www.negaresh-yar.ir/calculators/diya',
   },
   openGraph: {
     title: 'محاسبه‌گر آنلاین دیه ۱۴۰۳ و اعضای بدن | نگارش یار',
     description: 'محاسبه دقیق دیه سال ۱۴۰۳، درصد پزشکی قانونی، جراحات سر و صورت، شکستگی‌ها و اعضای بدن.',
-    url: 'https://negaresh-yar.ir/calculators/diya',
+    url: 'https://www.negaresh-yar.ir/calculators/diya',
     siteName: 'نگارش یار',
     locale: 'fa_IR',
     type: 'website',
@@ -51,9 +51,9 @@ export default function DiyaCalculatorPage() {
       {
         '@type': 'BreadcrumbList',
         itemListElement: [
-          { '@type': 'ListItem', position: 1, name: 'صفحه اصلی', item: 'https://negaresh-yar.ir' },
-          { '@type': 'ListItem', position: 2, name: 'محاسبه‌گرهای حقوقی', item: 'https://negaresh-yar.ir/calculators' },
-          { '@type': 'ListItem', position: 3, name: 'محاسبه‌گر دیه سال ۱۴۰۳', item: 'https://negaresh-yar.ir/calculators/diya' },
+          { '@type': 'ListItem', position: 1, name: 'صفحه اصلی', item: 'https://www.negaresh-yar.ir' },
+          { '@type': 'ListItem', position: 2, name: 'محاسبه‌گرهای حقوقی', item: 'https://www.negaresh-yar.ir/calculators' },
+          { '@type': 'ListItem', position: 3, name: 'محاسبه‌گر دیه سال ۱۴۰۳', item: 'https://www.negaresh-yar.ir/calculators/diya' },
         ],
       },
     ],
