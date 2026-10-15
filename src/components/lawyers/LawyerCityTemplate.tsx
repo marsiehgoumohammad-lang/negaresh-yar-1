@@ -83,7 +83,7 @@ export function LawyerCityTemplate({ cityData }: LawyerCityTemplateProps) {
           {
             '@type': 'ListItem',
             position: 3,
-            name: cityData.slug === 'tehran' ? 'بهترین وکیل در تهران' : `وکیل منصف در ${cityData.city}`,
+            name: cityData.slug === 'tehran' ? 'وکیل در تهران' : `وکیل منصف در ${cityData.city}`,
             item: pageUrl,
           },
         ],
@@ -105,11 +105,10 @@ export function LawyerCityTemplate({ cityData }: LawyerCityTemplateProps) {
             {
               '@type': 'LegalService',
               '@id': `${pageUrl}#legalservice`,
-              name: 'معرفی بهترین وکیل در تهران و وکیل منصف - نگارش یار',
+              name: 'ارجاع به وکیل در تهران - نگارش یار',
               description: 'خدمات آنلاین نگارش اوراق قضایی و راهنمای تسهیل ارتباط با وکلای دادگستری در تهران',
               url: pageUrl,
               telephone: '+989915147789',
-              priceRange: '$$',
               address: {
                 '@type': 'PostalAddress',
                 addressLocality: 'مشهد',
@@ -126,10 +125,10 @@ export function LawyerCityTemplate({ cityData }: LawyerCityTemplateProps) {
                 name: 'تهران',
               },
               serviceType: [
-                'بهترین وکیل در تهران',
-                'بهترین وکیل ملکی در تهران',
-                'بهترین وکیل خانواده و طلاق در تهران',
-                'بهترین وکیل قرارداد و شرکت ها در تهران',
+                'ارجاع به وکیل در تهران',
+                'وکیل ملکی در تهران',
+                'وکیل خانواده و طلاق در تهران',
+                'وکیل قرارداد و شرکت ها در تهران',
                 'معرفی وکیل منصف در تهران',
               ],
             },
@@ -169,7 +168,7 @@ export function LawyerCityTemplate({ cityData }: LawyerCityTemplateProps) {
               </li>
               <li aria-hidden="true" className="text-slate-600">/</li>
               <li className="text-[#E5C158] font-medium" aria-current="page">
-                {cityData.slug === 'tehran' ? 'بهترین وکیل در تهران' : `${cityData.city} (${cityData.province})`}
+                {cityData.slug === 'tehran' ? 'وکیل در تهران' : `${cityData.city} (${cityData.province})`}
               </li>
             </ol>
           </nav>
