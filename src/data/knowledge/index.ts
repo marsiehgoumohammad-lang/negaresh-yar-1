@@ -1,3 +1,4 @@
+import { debtCollectionGuideData, debtCollectionGuideMetadata } from './debt-collection-guide';
 import {
   propertyRentEvictionGuideData,
   propertyRentEvictionGuideMetadata,
@@ -85,14 +86,14 @@ export const KNOWLEDGE_CATEGORIES: KnowledgeCategoryInfo[] = [
   {
     id: 'dadvakht',
     name: 'دادخواست و دعاوی حقوقی',
-    description: 'راهنمای جامع ثبت دادخواست‌های مالی، ملکی، چک و امور خانواده',
+    description: 'راهنمای جامع ثبت دادخواستهای مالی، ملکی، چک و امور خانواده',
     iconName: 'FileText',
     articleCount: 2,
   },
   {
     id: 'shekaviyeh',
     name: 'شکواییه و امور کیفری',
-    description: 'آموزش شکایت در دادسرا، جرایم کلاهبرداری، سرقت و پرونده‌های کیفری',
+    description: 'آموزش شکایت در دادسرا، جرایم کلاهبرداری، سرقت و پروندههای کیفری',
     iconName: 'ShieldAlert',
     articleCount: 2,
   },
@@ -106,7 +107,7 @@ export const KNOWLEDGE_CATEGORIES: KnowledgeCategoryInfo[] = [
   {
     id: 'objections',
     name: 'اعتراض به آرا و تصمیمات قضایی',
-    description: 'راهنمای تجدیدنظرخواهی، واخواهی، فرجام‌خواهی و تحلیل دادنامه دادگاه',
+    description: 'راهنمای تجدیدنظرخواهی، واخواهی، فرجامخواهی و تحلیل دادنامه دادگاه',
     iconName: 'Gavel',
     articleCount: 2,
   },
@@ -119,28 +120,29 @@ export const KNOWLEDGE_CATEGORIES: KnowledgeCategoryInfo[] = [
   },
   {
     id: 'administrative',
-    name: 'نامه‌های اداری و سازمانی',
-    description: 'اصول نامه‌نگاری رسمی به وزارخانه‌ها، عریضه سامد ۱۱۱ و درخواست‌های دولتی',
+    name: 'نامههای اداری و سازمانی',
+    description: 'اصول نامهنگاری رسمی به وزارخانهها، عریضه سامد ۱۱۱ و درخواستهای دولتی',
     iconName: 'Building2',
     articleCount: 2,
   },
   {
     id: 'systems',
-    name: 'سامانه‌های دولتی و کافی نت آنلاین',
-    description: 'آموزش ابلاغیه ثنا، عدل ایران، ساجد و سامانه‌های استعلام الکترونیکی',
+    name: 'سامانههای دولتی و کافی نت آنلاین',
+    description: 'آموزش ابلاغیه ثنا، عدل ایران، ساجد و سامانههای استعلام الکترونیکی',
     iconName: 'Laptop',
     articleCount: 5,
   },
   {
     id: 'tax-commercial',
     name: 'مالیات، بیمه و امور تجاری',
-    description: 'قوانین اظهارنامه مالیاتی، اعتراض به مالیات، مزایده‌های دولتی و چک صیادی',
+    description: 'قوانین اظهارنامه مالیاتی، اعتراض به مالیات، مزایدههای دولتی و چک صیادی',
     iconName: 'Receipt',
     articleCount: 2,
   },
 ];
 
 export const ALL_KNOWLEDGE_ARTICLES: KnowledgeArticleData[] = [
+  debtCollectionGuideData,
   whatIsPetitionData,
   petitionVsComplaintData,
   whatIsLegalBriefData,
@@ -188,6 +190,7 @@ export const ALL_KNOWLEDGE_ARTICLES: KnowledgeArticleData[] = [
 ];
 
 export const KNOWLEDGE_METADATA_MAP = {
+  'debt-collection-guide': debtCollectionGuideMetadata,
   'what-is-petition': whatIsPetitionMetadata,
   'petition-vs-complaint': petitionVsComplaintMetadata,
   'what-is-legal-brief': whatIsLegalBriefMetadata,
