@@ -2,7 +2,7 @@ import { Metadata } from 'next';
 import { KnowledgeArticleData } from './types';
 
 export const lawyerInGishaTehranCourtsGuideMetadata: Metadata = {
-  title: 'وکیل در گیشا و غرب تهران | راهنمای انتخاب و بررسی صلاحیت - نگارش یار',
+  title: 'وکیل در گیشا و غرب تهران | راهنمای انتخاب، استعلام و ارجاع - نگارش یار',
   description:
     'راهنمای کاربردی انتخاب وکیل در محله گیشا و مراجع قضایی غرب تهران؛ معیارهای ارزیابی وکیل، تفکیک صلاحیت دادگاه ها، استعلام پروانه، مدارک ضروری و هزینه ها.',
   keywords: [
@@ -20,7 +20,7 @@ export const lawyerInGishaTehranCourtsGuideMetadata: Metadata = {
     canonical: 'https://www.negaresh-yar.ir/knowledge/lawyer-in-gisha-tehran-courts-guide',
   },
   openGraph: {
-    title: 'وکیل در گیشا و غرب تهران | راهنمای انتخاب و بررسی صلاحیت - نگارش یار',
+    title: 'وکیل در گیشا و غرب تهران | راهنمای انتخاب، استعلام و ارجاع - نگارش یار',
     description:
       'راهنمای کاربردی انتخاب وکیل در محله گیشا و مراجع قضایی غرب تهران؛ معیارهای ارزیابی وکیل، تفکیک صلاحیت دادگاه ها، استعلام پروانه، مدارک ضروری و هزینه ها.',
     url: 'https://www.negaresh-yar.ir/knowledge/lawyer-in-gisha-tehran-courts-guide',
@@ -38,7 +38,7 @@ export const lawyerInGishaTehranCourtsGuideData: KnowledgeArticleData = {
   heroSubtitle:
     'چگونه بر اساس تخصص موضوعی، قواعد صلاحیت دادگاه ها و استعلام رسمی پروانه، بهترین تصمیم حقوقی را برای پرونده های ملکی، قراردادها و دعاوی خانواده اتخاذ کنیم؟',
   readTime: '۱۲ دقیقه مطالعه',
-  lastUpdated: '۱۴۰۵/۰۷/۱۳',
+  lastUpdated: '۱۴۰۵/۰۷/۲۳',
   heroTrustChips: [
     'تشریح صلاحیت قانونی دادگاه های تهران',
     'راهنمای رسمی استعلام پروانه وکالت',
@@ -266,7 +266,7 @@ export const lawyerInGishaTehranCourtsGuideData: KnowledgeArticleData = {
 
   relatedServices: [
     {
-      title: 'معرفی بهترین وکیل در تهران و وکیل منصف',
+      title: 'انتخاب وکیل در تهران و ارجاع بر اساس نوع پرونده',
       href: '/lawyer-referral/tehran',
       badge: 'پیلار تهران',
       desc: 'راهنمای جامع انتخاب وکیل متخصص در دادگاه های پایتخت با تعرفه عادلانه.',

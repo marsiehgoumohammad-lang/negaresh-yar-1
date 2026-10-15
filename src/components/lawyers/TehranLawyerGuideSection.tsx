@@ -20,7 +20,7 @@ export function TehranLawyerGuideSection() {
   const branches = [
     {
       id: 'tehran-real-estate-lawyer',
-      title: 'بهترین وکیل ملکی در تهران',
+      title: 'وکیل ملکی در تهران',
       badge: 'دعاوی املاک، سرقفلی و مشارکت',
       icon: Building,
       description:
@@ -54,7 +54,7 @@ export function TehranLawyerGuideSection() {
     },
     {
       id: 'tehran-family-lawyer',
-      title: 'بهترین وکیل خانواده و طلاق در تهران',
+      title: 'وکیل خانواده و طلاق در تهران',
       badge: 'طلاق، مهریه و حضانت فرزند',
       icon: Users,
       description:
@@ -88,7 +88,7 @@ export function TehranLawyerGuideSection() {
     },
     {
       id: 'tehran-corporate-lawyer',
-      title: 'بهترین وکیل قرارداد و شرکت ها در تهران',
+      title: 'وکیل قرارداد و شرکت ها در تهران',
       badge: 'اسناد تجاری، چک صیادی و دعاوی شرکتی',
       icon: Briefcase,
       description:
