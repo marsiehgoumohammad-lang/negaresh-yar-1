@@ -1,5 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  output: 'standalone',
   allowedDevOrigins: ['*.run.app'],
   async redirects() {
     return [
