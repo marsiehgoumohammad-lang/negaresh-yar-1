@@ -2,9 +2,9 @@ import { Metadata } from 'next';
 import { KnowledgeArticleData } from './types';
 
 export const lawyerInGishaTehranCourtsGuideMetadata: Metadata = {
-  title: 'وکیل در گیشا و غرب تهران | راهنمای انتخاب، استعلام و ارجاع - نگارش یار',
+  title: 'وکیل در گیشا و غرب تهران | راهنمای انتخاب، استعلام و ارجاع',
   description:
-    'راهنمای کاربردی انتخاب وکیل در محله گیشا و مراجع قضایی غرب تهران؛ معیارهای ارزیابی وکیل، تفکیک صلاحیت دادگاه ها، استعلام پروانه، مدارک ضروری و هزینه ها.',
+    'راهنمای انتخاب وکیل در گیشا و غرب تهران: استعلام پروانه، تفاوت تخصصها، مراجع قضایی هر منطقه و ارجاع به وکلای همکار بر اساس نوع پرونده.',
   keywords: [
     'وکیل در گیشا',
     'وکیل غرب تهران',
@@ -20,9 +20,9 @@ export const lawyerInGishaTehranCourtsGuideMetadata: Metadata = {
     canonical: 'https://www.negaresh-yar.ir/knowledge/lawyer-in-gisha-tehran-courts-guide',
   },
   openGraph: {
-    title: 'وکیل در گیشا و غرب تهران | راهنمای انتخاب، استعلام و ارجاع - نگارش یار',
+    title: 'وکیل در گیشا و غرب تهران | راهنمای انتخاب، استعلام و ارجاع',
     description:
-      'راهنمای کاربردی انتخاب وکیل در محله گیشا و مراجع قضایی غرب تهران؛ معیارهای ارزیابی وکیل، تفکیک صلاحیت دادگاه ها، استعلام پروانه، مدارک ضروری و هزینه ها.',
+      'راهنمای انتخاب وکیل در گیشا و غرب تهران: استعلام پروانه، تفاوت تخصصها، مراجع قضایی هر منطقه و ارجاع به وکلای همکار بر اساس نوع پرونده.',
     url: 'https://www.negaresh-yar.ir/knowledge/lawyer-in-gisha-tehran-courts-guide',
     siteName: 'نگارش یار',
     locale: 'fa_IR',

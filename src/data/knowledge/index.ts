@@ -71,6 +71,10 @@ import {
   lawyerInDezfulGuideData,
   lawyerInDezfulGuideMetadata,
 } from './lawyer-in-dezful-guide';
+import {
+  howToChooseExperiencedLawyerTehranData,
+  howToChooseExperiencedLawyerTehranMetadata,
+} from './how-to-choose-experienced-lawyer-tehran';
 
 export * from './types';
 
@@ -187,6 +191,7 @@ export const ALL_KNOWLEDGE_ARTICLES: KnowledgeArticleData[] = [
   howToSearchAndVerifyLawyerGuideData,
   criminalCourtJurisdictionGuideData,
   lawyerInDezfulGuideData,
+  howToChooseExperiencedLawyerTehranData,
 ];
 
 export const KNOWLEDGE_METADATA_MAP = {
@@ -235,6 +240,7 @@ export const KNOWLEDGE_METADATA_MAP = {
   'how-to-search-and-verify-lawyer-guide': howToSearchAndVerifyLawyerGuideMetadata,
   'criminal-court-jurisdiction-guide': criminalCourtJurisdictionGuideMetadata,
   'lawyer-in-dezful-guide': lawyerInDezfulGuideMetadata,
+  'how-to-choose-experienced-lawyer-tehran': howToChooseExperiencedLawyerTehranMetadata,
 };
 
 export function getKnowledgeArticleBySlug(slug: string): KnowledgeArticleData | undefined {
