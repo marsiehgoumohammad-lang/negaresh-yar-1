@@ -75,6 +75,14 @@ import {
   howToChooseExperiencedLawyerTehranData,
   howToChooseExperiencedLawyerTehranMetadata,
 } from './how-to-choose-experienced-lawyer-tehran';
+import {
+  childSupportClaimGuideData,
+  childSupportClaimGuideMetadata,
+} from './child-support-claim-guide';
+import {
+  spousalMaintenanceClaimData,
+  spousalMaintenanceClaimMetadata,
+} from './spousal-maintenance-claim';
 
 export * from './types';
 
@@ -192,6 +200,8 @@ export const ALL_KNOWLEDGE_ARTICLES: KnowledgeArticleData[] = [
   criminalCourtJurisdictionGuideData,
   lawyerInDezfulGuideData,
   howToChooseExperiencedLawyerTehranData,
+  childSupportClaimGuideData,
+  spousalMaintenanceClaimData,
 ];
 
 export const KNOWLEDGE_METADATA_MAP = {
@@ -241,6 +251,8 @@ export const KNOWLEDGE_METADATA_MAP = {
   'criminal-court-jurisdiction-guide': criminalCourtJurisdictionGuideMetadata,
   'lawyer-in-dezful-guide': lawyerInDezfulGuideMetadata,
   'how-to-choose-experienced-lawyer-tehran': howToChooseExperiencedLawyerTehranMetadata,
+  'child-support-claim-guide': childSupportClaimGuideMetadata,
+  'spousal-maintenance-claim': spousalMaintenanceClaimMetadata,
 };
 
 export function getKnowledgeArticleBySlug(slug: string): KnowledgeArticleData | undefined {
