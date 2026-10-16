@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import { CourthouseMapSection } from './CourthouseMapSection';
 import {
   Scale,
   Building,
@@ -457,6 +458,8 @@ export function TehranLawyerGuideSection() {
           </Link>
         </div>
       </div>
+
+      <CourthouseMapSection />
     </section>
   );
 }

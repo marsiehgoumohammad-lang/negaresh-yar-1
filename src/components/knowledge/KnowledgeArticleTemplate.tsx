@@ -30,6 +30,7 @@ import {
 import { KnowledgeArticleData } from '@/data/knowledge/types';
 import { ThreeServiceDiscovery } from '@/components/common/ThreeServiceDiscovery';
 import { PreferredSourceCTA } from '@/components/common/PreferredSourceCTA';
+import { CourthouseMapSection } from '@/components/lawyers/CourthouseMapSection';
 
 const breaks = [
   -61, 9, 38, 199, 426, 686, 756, 818, 1111, 1181, 1210, 1635, 2060, 2097, 2192, 2262, 2324, 2394, 2456, 3178,
@@ -718,6 +719,10 @@ export function KnowledgeArticleTemplate({ data }: { data: KnowledgeArticleData 
             </section>
           )}
 
+          {data.slug === 'lawyer-in-gisha-tehran-courts-guide' && (
+            <CourthouseMapSection heading="مراجع قضایی غرب و مرکز تهران روی نقشه" />
+          )}
+
           {/* G. FREQUENTLY ASKED QUESTIONS (FAQ ACCORDION) */}
           {data.faqs && data.faqs.length > 0 && (
             <section className="p-6 md:p-8 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-6">
@@ -844,7 +849,7 @@ export function KnowledgeArticleTemplate({ data }: { data: KnowledgeArticleData 
                 <Award className="w-4 h-4 text-[#E5C158]" />
               </div>
               <p className="text-slate-400">
-                این مقاله مطابق جدیدترین آیین‌نامه‌ها و قوانین موضوعه کشور توسط کارشناسان ارشد حقوقی بررسی و تایید شده است.
+                این مقاله جنبه آموزشی دارد و جایگزین مشاوره حقوقی نیست؛ پیش از هر اقدام قضایی با وکیل مشورت کنید.
               </p>
             </div>
           </div>
