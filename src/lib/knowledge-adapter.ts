@@ -128,6 +128,10 @@ export function adaptArticleToKnowledgeData(article: Article): KnowledgeArticleD
     title: sec.title,
   }));
 
+  const updateYear = article.updatedAt
+    ? new Date(article.updatedAt).toLocaleDateString('fa-IR', { year: 'numeric' })
+    : '';
+
   const readTimeMinutes = article.wordCount
     ? Math.max(1, Math.ceil(article.wordCount / 200))
     : Math.max(1, Math.ceil(rawContent.split(/\s+/).length / 200));
@@ -174,9 +178,9 @@ export function adaptArticleToKnowledgeData(article: Article): KnowledgeArticleD
     datePublished: (staticMatch ? staticMatch.datePublished : article.publishedAt) || undefined,
     dateModified: (staticMatch ? staticMatch.dateModified : article.updatedAt) || undefined,
     heroTrustChips: [
-      'مطابق با قوانین موضوعه کشور',
-      'تایید شده توسط کارشناسان حقوقی',
-      'بروزرسانی ۱۴۰۳',
+      'بر پایه قوانین و منابع رسمی',
+      'مقاله آموزشی، نه مشاوره حقوقی',
+      ...(updateYear ? [`بروزرسانی ${updateYear}`] : []),
       'پاسخگویی و پشتیبانی آنلاین',
     ],
     quickAnswerTitle: `پاسخ خلاصه به ${article.title}`,
@@ -184,7 +188,7 @@ export function adaptArticleToKnowledgeData(article: Article): KnowledgeArticleD
     quickAnswerHighlights: [
       'بررسی دقیق آخرین قوانین و آیین‌نامه‌ها',
       'راهنمای عملی جهت جلوگیری از اطاله دادرسی',
-      'تنظیم توسط کارشناسان ارشد حقوقی',
+      'راهنمای عملی برای تنظیم و پیگیری پرونده',
     ],
     tableOfContents,
     sections: parsedSections,
