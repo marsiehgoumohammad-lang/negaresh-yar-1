@@ -76,6 +76,10 @@ import {
   howToChooseExperiencedLawyerTehranMetadata,
 } from './how-to-choose-experienced-lawyer-tehran';
 import {
+  lawyerContractAndFeeGuideData,
+  lawyerContractAndFeeGuideMetadata,
+} from './lawyer-contract-and-fee-guide';
+import {
   childSupportClaimGuideData,
   childSupportClaimGuideMetadata,
 } from './child-support-claim-guide';
@@ -200,6 +204,7 @@ export const ALL_KNOWLEDGE_ARTICLES: KnowledgeArticleData[] = [
   criminalCourtJurisdictionGuideData,
   lawyerInDezfulGuideData,
   howToChooseExperiencedLawyerTehranData,
+  lawyerContractAndFeeGuideData,
   childSupportClaimGuideData,
   spousalMaintenanceClaimData,
 ];
@@ -251,6 +256,7 @@ export const KNOWLEDGE_METADATA_MAP = {
   'criminal-court-jurisdiction-guide': criminalCourtJurisdictionGuideMetadata,
   'lawyer-in-dezful-guide': lawyerInDezfulGuideMetadata,
   'how-to-choose-experienced-lawyer-tehran': howToChooseExperiencedLawyerTehranMetadata,
+  'lawyer-contract-and-fee-guide': lawyerContractAndFeeGuideMetadata,
   'child-support-claim-guide': childSupportClaimGuideMetadata,
   'spousal-maintenance-claim': spousalMaintenanceClaimMetadata,
 };

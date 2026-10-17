@@ -79,6 +79,7 @@ export const tehranCityData: LawyerCityData = {
     { title: 'نمونه دادخواست تخلیه ید و دستور تخلیه فوری', href: '/samples/eviction-expired-lease', badge: 'اجاره', desc: 'تخلیه ملک مسکونی و تجاری در دادگاه های تهران' },
   ],
   relatedKnowledge: [
+    { title: 'قرارداد وکالت و حق الوکاله؛ تعرفه قانونی و بندهای ضروری', href: '/knowledge/lawyer-contract-and-fee-guide', badge: 'حق الوکاله', desc: 'ثبت الکترونیک قرارداد، تعرفه ۱۳۹۸ و چک لیست بندهای قرارداد' },
     { title: 'وکیل با تجربه در تهران؛ چک لیست ۱۰ سؤال قبل از وکالت', href: '/knowledge/how-to-choose-experienced-lawyer-tehran', badge: 'انتخاب وکیل', desc: '۱۰ سؤال کلیدی، نشانه های هشدار و سنجش تجربه در پرونده ها' },
     { title: 'راهنمای جستجوی وکیل کانون و مرکز وکلا', href: '/knowledge/how-to-search-and-verify-lawyer-guide', badge: 'استعلام وکیل', desc: 'استعلام پروانه وکالت و مراجع رسمی در تهران' },
     { title: 'راهنمای دریافت وکیل رایگان و معاضدت قضایی', href: '/knowledge/free-lawyer-and-legal-aid-guide', badge: 'معاضدت', desc: 'شرایط وکیل معاضدتی و شماره های مشاوره رایگان' },
