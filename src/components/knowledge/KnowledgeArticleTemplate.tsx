@@ -509,7 +509,7 @@ export function KnowledgeArticleTemplate({ data }: { data: KnowledgeArticleData 
           {data.featuredImage && (
             <div className="relative w-full rounded-2xl overflow-hidden border border-slate-800 shadow-2xl bg-slate-900/50 mb-8">
               <Image
-                src={data.featuredImage.url}
+                src={data.featuredImage.url.replace(/^https?:\/\/(?:www\.)?negaresh-yar\.ir/, '')}
                 alt={data.featuredImage.alt || data.h1Title}
                 width={data.featuredImage.width || 1200}
                 height={data.featuredImage.height || 675}
