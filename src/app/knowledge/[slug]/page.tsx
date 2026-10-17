@@ -3,6 +3,7 @@ import { notFound } from 'next/navigation';
 import { getArticleBySlug } from '@/lib/stores/articles-store';
 import { adaptArticleToKnowledgeData } from '@/lib/knowledge-adapter';
 import { KnowledgeArticleTemplate } from '@/components/knowledge/KnowledgeArticleTemplate';
+import { KNOWLEDGE_METADATA_MAP } from '@/data/knowledge';
 
 export const dynamic = 'force-dynamic';
 
@@ -39,6 +40,24 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     ? article.keywords
     : [article.category || 'حقوقی', baseTitle, `راهنمای ${baseTitle}`, 'نگارش یار', 'پایگاه دانش'];
 
+  const staticMeta = KNOWLEDGE_METADATA_MAP[slug as keyof typeof KNOWLEDGE_METADATA_MAP];
+  const customOgImages = staticMeta?.openGraph && 'images' in staticMeta.openGraph ? staticMeta.openGraph.images : undefined;
+  const ogImages = Array.isArray(customOgImages) && customOgImages.length > 0
+    ? customOgImages
+    : [
+        {
+          url: 'https://www.negaresh-yar.ir/og-image.png',
+          width: 1200,
+          height: 630,
+          alt: 'نگارش یار',
+        },
+      ];
+
+  const customTwitterImages = staticMeta?.twitter && 'images' in staticMeta.twitter ? staticMeta.twitter.images : undefined;
+  const twitterImages = Array.isArray(customTwitterImages) && customTwitterImages.length > 0
+    ? customTwitterImages
+    : ['https://www.negaresh-yar.ir/og-image.png'];
+
   return {
     title: {
       absolute: fullSeoTitle,
@@ -53,21 +72,15 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       description,
       url: `https://www.negaresh-yar.ir/knowledge/${article.slug}`,
       siteName: 'نگارش یار',
+      locale: 'fa_IR',
       type: 'article',
-      images: [
-        {
-          url: 'https://www.negaresh-yar.ir/og-image.png',
-          width: 1200,
-          height: 630,
-          alt: 'نگارش یار',
-        },
-      ],
+      images: ogImages,
     },
     twitter: {
       card: 'summary_large_image',
       title: fullSeoTitle,
       description,
-      images: ['https://www.negaresh-yar.ir/og-image.png'],
+      images: twitterImages,
     },
   };
 }

@@ -25,6 +25,14 @@ export interface KnowledgeArticleData {
   dateModified?: string;
   heroTrustChips: string[];
 
+  // Featured Image
+  featuredImage?: {
+    url: string;
+    width?: number;
+    height?: number;
+    alt?: string;
+  };
+
   // Direct clear answer in first paragraph (SEO Feature Snippet optimized)
   quickAnswerTitle: string;
   quickAnswerParagraph: string;

@@ -167,53 +167,63 @@ export function adaptArticleToKnowledgeData(article: Article): KnowledgeArticleD
 
   return {
     slug: article.slug,
-    category: article.category || article.primaryKeyword || 'پایگاه دانش حقوقی',
-    badge: 'راهنمای تخصصی نگارش یار',
-    h1Title: article.title,
-    heroSubtitle: article.excerpt || article.metaDescription || '',
-    readTime: `${readTimeMinutes} دقیقه`,
+    category: staticMatch?.category || article.category || article.primaryKeyword || 'پایگاه دانش حقوقی',
+    badge: staticMatch?.badge || 'راهنمای تخصصی نگارش یار',
+    h1Title: staticMatch?.h1Title || article.title,
+    heroSubtitle: staticMatch?.heroSubtitle || article.excerpt || article.metaDescription || '',
+    readTime: staticMatch?.readTime || `${readTimeMinutes} دقیقه`,
     lastUpdated: (staticMatch ? (staticMatch.lastUpdated ?? '') : (article.updatedAt
       ? new Date(article.updatedAt).toLocaleDateString('fa-IR')
       : '۱۴۰۳/۱۱/۰۱')),
     datePublished: (staticMatch ? staticMatch.datePublished : article.publishedAt) || undefined,
     dateModified: (staticMatch ? staticMatch.dateModified : article.updatedAt) || undefined,
-    heroTrustChips: [
-      'بر پایه قوانین و منابع رسمی',
-      'مقاله آموزشی، نه مشاوره حقوقی',
-      ...(updateYear ? [`بروزرسانی ${updateYear}`] : []),
-      'پاسخگویی و پشتیبانی آنلاین',
-    ],
-    quickAnswerTitle: `پاسخ خلاصه به ${article.title}`,
-    quickAnswerParagraph: article.excerpt || (parsedSections[0]?.paragraphs?.[0] ?? article.title),
-    quickAnswerHighlights: [
-      'بررسی دقیق آخرین قوانین و آیین‌نامه‌ها',
-      'راهنمای عملی جهت جلوگیری از اطاله دادرسی',
-      'راهنمای عملی برای تنظیم و پیگیری پرونده',
-    ],
-    tableOfContents,
-    sections: parsedSections,
-    examplesTitle: 'نمونه سناریوها و کاربردهای عملی',
-    examplesList: [
+    heroTrustChips: (staticMatch?.heroTrustChips && staticMatch.heroTrustChips.length > 0)
+      ? staticMatch.heroTrustChips
+      : [
+          'بر پایه قوانین و منابع رسمی',
+          'مقاله آموزشی، نه مشاوره حقوقی',
+          ...(updateYear ? [`بروزرسانی ${updateYear}`] : []),
+          'پاسخگویی و پشتیبانی آنلاین',
+        ],
+    featuredImage: staticMatch?.featuredImage,
+    quickAnswerTitle: staticMatch?.quickAnswerTitle || `پاسخ خلاصه به ${article.title}`,
+    quickAnswerParagraph: staticMatch?.quickAnswerParagraph || article.excerpt || (parsedSections[0]?.paragraphs?.[0] ?? article.title),
+    quickAnswerHighlights: (staticMatch?.quickAnswerHighlights && staticMatch.quickAnswerHighlights.length > 0)
+      ? staticMatch.quickAnswerHighlights
+      : [
+          'بررسی دقیق آخرین قوانین و آیین‌نامه‌ها',
+          'راهنمای عملی جهت جلوگیری از اطاله دادرسی',
+          'راهنمای عملی برای تنظیم و پیگیری پرونده',
+        ],
+    tableOfContents: (staticMatch?.tableOfContents && staticMatch.tableOfContents.length > 0)
+      ? staticMatch.tableOfContents
+      : tableOfContents,
+    sections: (staticMatch?.sections && staticMatch.sections.length > 0)
+      ? staticMatch.sections
+      : parsedSections,
+    examplesTitle: staticMatch?.examplesTitle || 'نمونه سناریوها و کاربردهای عملی',
+    examplesList: staticMatch?.examplesList || [
       {
         scenarioTitle: `کاربرد در پرونده‌های ${article.primaryKeyword || 'حقوقی'}`,
         description: article.excerpt || 'بررسی نحوه استناد به اصول نگارشی و قوانین مربوطه جهت تسریع در رسیدگی.',
         legalOutcome: 'جلوگیری از رد درخواست و صدور دستور مقتضی توسط مرجع ذی‌صلاح.',
       },
     ],
-    commonMistakesTitle: 'اشتباهات رایج و نکات کلیدی',
-    commonMistakesSubtitle: 'مواردی که عدم رعایت آن‌ها موجب بطلان یا رد درخواست می‌شود',
-    commonMistakesList: [
+    commonMistakesTitle: staticMatch?.commonMistakesTitle || 'اشتباهات رایج و نکات کلیدی',
+    commonMistakesSubtitle: staticMatch?.commonMistakesSubtitle || 'مواردی که عدم رعایت آن‌ها موجب بطلان یا رد درخواست می‌شود',
+    commonMistakesList: staticMatch?.commonMistakesList || [
       {
         mistake: 'عدم رعایت فرمت و متن استاندارد قانون',
         risk: 'صدور قرار رد دادخواست یا عدم استماع در مرجع اداری/قضایی',
         correctAction: 'استفاده از نمونه اسناد تاییدشده یا سفارش تنظیم به کارشناس حقوقی',
       },
     ],
-    legalNotesTitle: 'ملاحظات قانونی و آیین‌نامه‌ای',
-    legalNotesList: [
+    legalNotesTitle: staticMatch?.legalNotesTitle || 'ملاحظات قانونی و آیین‌نامه‌ای',
+    legalNotesList: staticMatch?.legalNotesList || [
       'رعایت مهلت‌های قانونی مقرر در قانون آئین دادرسی مدنی و کیفری الزامی است.',
       'تنظیم صحیح اوراق قضایی تاثیر مستقیم در موفقیت پرونده دارد.',
     ],
+    officialPortalSection: staticMatch?.officialPortalSection,
     faqTitle: staticMatch?.faqTitle || 'سوالات متداول',
     faqs: staticMatch?.faqs ? staticMatch.faqs.map(f => ({ q: f.q || f.question || '', a: f.a || f.answer || '' })) : faqs,
     relatedServices: staticMatch?.relatedServices || [

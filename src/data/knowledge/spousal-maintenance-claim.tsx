@@ -58,6 +58,14 @@ export const spousalMaintenanceClaimData: KnowledgeArticleData = {
     'بررسی جامع نفقه زن در عقد دائم، شرایط استحقاق و تمکین، نحوه مطالبه نفقه معوقه، صدور دستور موقت فوری و تفکیک مسیر حقوقی از شکایت کیفری ترک انفاق.',
   readTime: '۱۳ دقیقه مطالعه',
   lastUpdated: 'مهر ۱۴۰۵',
+  datePublished: '1403/07/25',
+  dateModified: '1403/07/25',
+  featuredImage: {
+    url: 'https://www.negaresh-yar.ir/images/seo/spousal-maintenance-claim.webp',
+    width: 1200,
+    height: 675,
+    alt: 'راهنمای حقوقی مطالبه نفقه زن و شکایت ترک انفاق',
+  },
   heroTrustChips: [
     'مستند به مواد ۱۱۰۶، ۱۱۰۷، ۱۱۰۸ و ۱۲۰۶ قانون مدنی',
     'مطابق مواد ۷ و ۵۳ قانون حمایت خانواده',

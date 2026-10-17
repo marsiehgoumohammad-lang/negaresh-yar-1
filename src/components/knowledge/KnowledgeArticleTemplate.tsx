@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { motion, AnimatePresence } from 'motion/react';
 import { Container } from '@/components/ui/container';
 import {
@@ -226,9 +227,9 @@ export function KnowledgeArticleTemplate({ data }: { data: KnowledgeArticleData 
     description: data.heroSubtitle,
     image: {
       '@type': 'ImageObject',
-      url: 'https://www.negaresh-yar.ir/og-image.png',
-      width: 1200,
-      height: 630,
+      url: data.featuredImage?.url || 'https://www.negaresh-yar.ir/og-image.png',
+      width: data.featuredImage?.width || 1200,
+      height: data.featuredImage?.height || 675,
     },
     inLanguage: 'fa-IR',
     mainEntityOfPage: {
@@ -502,6 +503,21 @@ export function KnowledgeArticleTemplate({ data }: { data: KnowledgeArticleData 
                 <span>{data.officialPortalSection.disclaimer}</span>
               </div>
             </section>
+          )}
+
+          {/* FEATURED IMAGE */}
+          {data.featuredImage && (
+            <div className="relative w-full rounded-2xl overflow-hidden border border-slate-800 shadow-2xl bg-slate-900/50 mb-8">
+              <Image
+                src={data.featuredImage.url}
+                alt={data.featuredImage.alt || data.h1Title}
+                width={data.featuredImage.width || 1200}
+                height={data.featuredImage.height || 675}
+                className="w-full h-auto object-cover max-h-[460px]"
+                loading="lazy"
+                referrerPolicy="no-referrer"
+              />
+            </div>
           )}
 
           {/* A. QUICK FEATURED ANSWER BOX (SEO FEATURED SNIPPET) */}
