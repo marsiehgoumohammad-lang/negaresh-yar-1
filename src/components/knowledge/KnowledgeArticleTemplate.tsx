@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { motion, AnimatePresence } from 'motion/react';
+import { motion } from 'motion/react';
 import { Container } from '@/components/ui/container';
 import {
   BookOpen,
@@ -514,7 +514,7 @@ export function KnowledgeArticleTemplate({ data }: { data: KnowledgeArticleData 
                 width={data.featuredImage.width || 1200}
                 height={data.featuredImage.height || 675}
                 className="w-full h-auto object-cover max-h-[460px]"
-                loading="lazy"
+                priority
                 referrerPolicy="no-referrer"
               />
             </div>
@@ -762,6 +762,9 @@ export function KnowledgeArticleTemplate({ data }: { data: KnowledgeArticleData 
                       className="border border-slate-800 rounded-xl overflow-hidden bg-[#070B15]/60 transition-colors"
                     >
                       <button
+                        id={`faq-trigger-${idx}`}
+                        aria-expanded={isOpen}
+                        aria-controls={`faq-panel-${idx}`}
                         onClick={() => toggleFaq(idx)}
                         className="w-full text-right p-4 font-bold text-sm md:text-base text-white flex items-center justify-between gap-4 hover:text-[#E5C158] transition-colors"
                       >
@@ -770,20 +773,24 @@ export function KnowledgeArticleTemplate({ data }: { data: KnowledgeArticleData 
                           className={`w-4 h-4 text-[#E5C158] transition-transform duration-200 shrink-0 ${
                             isOpen ? 'rotate-180' : ''
                           }`}
+                          aria-hidden="true"
                         />
                       </button>
-                      <AnimatePresence>
-                        {isOpen && (
-                          <motion.div
-                            initial={{ height: 0, opacity: 0 }}
-                            animate={{ height: 'auto', opacity: 1 }}
-                            exit={{ height: 0, opacity: 0 }}
-                            className="px-4 pb-4 pt-1 text-xs md:text-sm text-slate-300 leading-relaxed border-t border-slate-800/60"
-                          >
+                      <div
+                        id={`faq-panel-${idx}`}
+                        role="region"
+                        aria-labelledby={`faq-trigger-${idx}`}
+                        inert={!isOpen}
+                        className={`grid transition-[grid-template-rows,opacity] duration-200 ease-in-out ${
+                          isOpen ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'
+                        }`}
+                      >
+                        <div className="overflow-hidden min-h-0">
+                          <div className="px-4 pb-4 pt-1 text-xs md:text-sm text-slate-300 leading-relaxed border-t border-slate-800/60">
                             {answerText}
-                          </motion.div>
-                        )}
-                      </AnimatePresence>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   );
                 })}
