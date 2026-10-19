@@ -42,6 +42,7 @@ export function InterpreterJsonLd() {
     '@type': 'SoftwareApplication',
     name: 'سامانه هوشمند تفسیر رای دادگاه و اوراق قضایی نگارش یار',
     applicationCategory: 'BusinessApplication',
+    dateModified: '2026-10-20',
     operatingSystem: 'All',
     url: `${baseUrl}/ai-interpreter`,
     description:
