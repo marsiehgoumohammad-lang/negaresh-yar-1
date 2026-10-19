@@ -3,6 +3,8 @@ import { Metadata } from 'next';
 
 export const judiciaryAuctionData: ServiceLandingData = {
   slug: 'judiciary-auction',
+  lastUpdated: '2026-10-20',
+  lastUpdatedDisplay: '۱۴۰۵/۰۷/۲۸',
   categoryName: 'مزایده، مناقصه و فرصت های سرمایه گذاری',
   badge: 'قوه قضاییه و اجرای احکام مدنی',
   h1Title: 'ثبت نام و شرکت در مزایده های قوه قضاییه و اجرای احکام دادگستری',
@@ -262,8 +264,8 @@ export const judiciaryAuctionData: ServiceLandingData = {
 };
 
 export const judiciaryAuctionMetadata: Metadata = {
-  title: 'ثبت نام و شرکت در مزایده قوه قضاییه و اجرای احکام | نگارش یار',
-  description: 'خدمات کامل ثبت نام، احراز هویت ثنا، اخذ اسناد و شرکت در مزایده های قوه قضاییه و اجرای احکام دادگستری در سامانه ستاد، ارزیابی کارشناسی و تنظیم لوایح ابطال و استرداد ودیعه.',
+  title: 'ثبت‌نام و شرکت در مزایده قوه قضاییه و اجرای احکام با منصفانه‌ترین هزینه | نگارش یار',
+  description: 'خدمات کامل ثبت نام، احراز هویت ثنا، اخذ اسناد و شرکت در مزایده های قوه قضاییه و اجرای احکام دادگستری در سامانه ستاد، ارزیابی کارشناسی و تنظیم لوایح ابطال و استرداد ودیعه با مناسب ترین قیمت',
   keywords: [
     'شرکت در مزایده قوه قضاییه',
     'سامانه مزایده املاک قوه قضاییه',
@@ -281,8 +283,8 @@ export const judiciaryAuctionMetadata: Metadata = {
     canonical: 'https://www.negaresh-yar.ir/services/judiciary-auction',
   },
   openGraph: {
-    title: 'ثبت نام و شرکت در مزایده قوه قضاییه و اجرای احکام | نگارش یار',
-    description: 'خدمات تخصصی شرکت در مزایده های دادگستری و تنظیم لوایح اجرای احکام مدنی.',
+    title: 'ثبت‌نام و شرکت در مزایده قوه قضاییه و اجرای احکام با منصفانه‌ترین هزینه | نگارش یار',
+    description: 'خدمات کامل ثبت نام، احراز هویت ثنا، اخذ اسناد و شرکت در مزایده های قوه قضاییه و اجرای احکام دادگستری در سامانه ستاد، ارزیابی کارشناسی و تنظیم لوایح ابطال و استرداد ودیعه با مناسب ترین قیمت',
     url: 'https://www.negaresh-yar.ir/services/judiciary-auction',
     siteName: 'نگارش یار',
     type: 'website',
