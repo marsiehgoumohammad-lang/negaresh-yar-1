@@ -24,6 +24,8 @@ import {
 
 export interface ServiceLandingData {
   slug: string;
+  lastUpdated?: string;
+  lastUpdatedDisplay?: string;
   categoryName: string;
   badge: string;
   h1Title: string;
@@ -128,6 +130,7 @@ export function LandingPageTemplate({ data }: { data: ServiceLandingData }) {
         '@id': canonicalUrl,
         url: canonicalUrl,
         name: data.h1Title,
+        ...(data.lastUpdated ? { dateModified: data.lastUpdated } : {}),
         isPartOf: {
           '@id': 'https://www.negaresh-yar.ir/#website',
         },
@@ -261,6 +264,11 @@ export function LandingPageTemplate({ data }: { data: ServiceLandingData }) {
             >
               {data.heroSubtitle}
             </motion.p>
+            {data.lastUpdatedDisplay && (
+              <p className="text-xs text-slate-500" dir="rtl">
+                آخرین به‌روزرسانی: {data.lastUpdatedDisplay}
+              </p>
+            )}
 
             {/* Primary & Secondary Action CTAs */}
             <motion.div

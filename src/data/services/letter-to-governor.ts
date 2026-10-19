@@ -3,6 +3,8 @@ import { Metadata } from 'next';
 
 export const letterToGovernorData: ServiceLandingData = {
   slug: 'letter-to-governor',
+  lastUpdated: '2026-10-20',
+  lastUpdatedDisplay: '۱۴۰۵/۰۷/۲۸',
   categoryName: 'نامه نگاری اداری و مقامات استانی',
   badge: 'استانداری و فرمانداری',
   h1Title: 'تنظیم نامه اداری به استاندار، فرماندار و بخشداری',
@@ -244,8 +246,8 @@ export const letterToGovernorData: ServiceLandingData = {
 };
 
 export const letterToGovernorMetadata: Metadata = {
-  title: 'تنظیم نامه اداری به استاندار، فرماندار و بخشداری | نگارش یار',
-  description: 'تنظیم تخصصی و رسمی نامه اداری، عریضه و تقاضانامه خطابی به استاندار، فرماندار و بخشدار جهت ملاقات مردمی، درخواست وام، مسکن، کارگشایی و سامانه ۱۱۱ سامد.',
+  title: 'تنظیم نامه به استاندار، فرماندار و بخشدار با حداقل هزینه',
+  description: 'برای درخواست وام، مساعدت مالی یا پیگیری مشکلات اداری، نامه‌ای حرفه‌ای، رسمی و متناسب با موضوع شما با کمترین هزینه تنظیم می‌کنیم. شرح مسئله و مدارک را ارسال کنید.',
   keywords: [
     'نامه به استاندار',
     'نامه اداری به فرماندار',
@@ -259,8 +261,8 @@ export const letterToGovernorMetadata: Metadata = {
     canonical: 'https://www.negaresh-yar.ir/services/letter-to-governor',
   },
   openGraph: {
-    title: 'تنظیم نامه اداری به استاندار، فرماندار و بخشداری | نگارش یار',
-    description: 'تنظیم تخصصی نامه به استاندار و فرماندار جهت جلب دستور پیگیری مستقیم.',
+    title: 'تنظیم نامه به استاندار، فرماندار و بخشدار با حداقل هزینه',
+    description: 'برای درخواست وام، مساعدت مالی یا پیگیری مشکلات اداری، نامه‌ای حرفه‌ای، رسمی و متناسب با موضوع شما با کمترین هزینه تنظیم می‌کنیم. شرح مسئله و مدارک را ارسال کنید.',
     url: 'https://www.negaresh-yar.ir/services/letter-to-governor',
     siteName: 'نگارش یار',
     type: 'website',
