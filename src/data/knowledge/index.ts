@@ -91,6 +91,10 @@ import {
   cybercrimeGuideData,
   cybercrimeGuideMetadata,
 } from './cybercrime-guide';
+import {
+  cybercrimeHubGuideData,
+  cybercrimeHubGuideMetadata,
+} from './cybercrime-hub-guide';
 
 export * from './types';
 
@@ -212,6 +216,7 @@ export const ALL_KNOWLEDGE_ARTICLES: KnowledgeArticleData[] = [
   childSupportClaimGuideData,
   spousalMaintenanceClaimData,
   cybercrimeGuideData,
+  cybercrimeHubGuideData,
 ];
 
 export const KNOWLEDGE_METADATA_MAP = {
@@ -265,6 +270,7 @@ export const KNOWLEDGE_METADATA_MAP = {
   'child-support-claim-guide': childSupportClaimGuideMetadata,
   'spousal-maintenance-claim': spousalMaintenanceClaimMetadata,
   'cybercrime-complaint-guide': cybercrimeGuideMetadata,
+  'cybercrime-guide': cybercrimeHubGuideMetadata,
 };
 
 export function getKnowledgeArticleBySlug(slug: string): KnowledgeArticleData | undefined {
