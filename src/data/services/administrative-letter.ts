@@ -3,6 +3,8 @@ import { Metadata } from 'next';
 
 export const administrativeLetterData: ServiceLandingData = {
   slug: 'administrative-letter',
+  lastUpdated: '2026-10-21',
+  lastUpdatedDisplay: '۱۴۰۵/۰۷/۲۹',
   categoryName: 'نامه نگاری اداری و عریضه نویسی',
   badge: 'تخصصی اداری و سازمانی',
   h1Title: 'تنظیم تخصصی نامه اداری، عریضه و مکاتبات رسمی',
@@ -343,8 +345,8 @@ export const administrativeLetterData: ServiceLandingData = {
 };
 
 export const administrativeLetterMetadata: Metadata = {
-  title: 'تنظیم نامه اداری و عریضه نویسی رسمی | نگارش یار',
-  description: 'تنظیم تخصصی و فوری انواع نامه های اداری، عریضه، درخواست وام، مساعدت، انتقالی و امور شهرداری و دارایی بر اساس فرمت استاندارد دبیرخانه ای.',
+  title: 'تنظیم انواع نامه اداری و درخواست رسمی اختصاصی | کمترین و نازلترین قیمت | نگارش یار',
+  description: 'برای مکاتبه با ادارات، سازمان ها و نهادهای دولتی، نامه ای متناسب با موضوع و شرایط خود سفارش دهید. متن حرفه ای با لحن رسمی، ساختار اداری قوی و بیان روشن خواسته تنظیم می شود.',
   keywords: [
     'تنظیم نامه اداری',
     'عریضه نویسی',
@@ -358,8 +360,8 @@ export const administrativeLetterMetadata: Metadata = {
     canonical: 'https://www.negaresh-yar.ir/services/administrative-letter',
   },
   openGraph: {
-    title: 'تنظیم نامه اداری و عریضه نویسی رسمی | نگارش یار',
-    description: 'تنظیم تخصصی انواع نامه های اداری و عریضه با لحن رسمی و اثرگذار به صورت ۱۰۰٪ غیرحضوری.',
+    title: 'تنظیم انواع نامه اداری و درخواست رسمی اختصاصی | کمترین و نازلترین قیمت | نگارش یار',
+    description: 'برای مکاتبه با ادارات، سازمان ها و نهادهای دولتی، نامه ای متناسب با موضوع و شرایط خود سفارش دهید. متن حرفه ای با لحن رسمی، ساختار اداری قوی و بیان روشن خواسته تنظیم می شود.',
     url: 'https://www.negaresh-yar.ir/services/administrative-letter',
     siteName: 'نگارش یار',
     type: 'website',
