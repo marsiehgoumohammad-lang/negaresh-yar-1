@@ -97,7 +97,7 @@ export function Hero() {
                 alt="صحنه سه‌بعدی خدمات نگارشیار"
                 width={1037}
                 height={921}
-                sizes="(max-width: 544px) calc(100vw - 32px), (max-width: 1023px) 512px, (max-width: 1279px) 38vw, 480px"
+                sizes="(max-width: 544px) calc(100vw - 32px), (max-width: 1023px) 512px, (max-width: 1279px) calc(41.6667vw - 54.67px), 480px"
                 priority
                 className="w-full h-auto object-contain rounded-2xl drop-shadow-2xl select-none pointer-events-none"
                 referrerPolicy="no-referrer"
