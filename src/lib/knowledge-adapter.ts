@@ -254,7 +254,7 @@ export function adaptArticleToKnowledgeData(article: Article): KnowledgeArticleD
         badge: 'نمونه رایگان',
       },
     ],
-    relatedArticles: staticMatch?.relatedArticles || ALL_KNOWLEDGE_ARTICLES.slice(0, 3).map((art) => ({
+    relatedArticles: staticMatch?.relatedArticles || ALL_KNOWLEDGE_ARTICLES.filter((art) => (art.status || 'published') === 'published').slice(0, 3).map((art) => ({
       title: art.h1Title,
       desc: art.heroSubtitle,
       href: `/knowledge/${encodeURIComponent(art.slug.replace(/\//g, ''))}`,

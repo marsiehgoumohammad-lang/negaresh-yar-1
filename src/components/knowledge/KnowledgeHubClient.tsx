@@ -34,9 +34,15 @@ export function KnowledgeHubClient({ initialArticles }: KnowledgeHubClientProps)
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [openFaq, setOpenFaq] = useState<number | null>(0);
 
-  // Combine store articles with fallback static articles metadata if available
-  const displayArticles = (initialArticles && initialArticles.length > 0)
-    ? initialArticles.map((art) => {
+  // Combine store articles with fallback static articles metadata if available (excluding drafts)
+  const publishedInitialArticles = (initialArticles || []).filter((art) => {
+    const staticMatch = ALL_KNOWLEDGE_ARTICLES.find((s) => s.slug === art.slug);
+    if (staticMatch?.status === 'draft') return false;
+    return (art.status || 'published') === 'published';
+  });
+
+  const displayArticles = publishedInitialArticles.length > 0
+    ? publishedInitialArticles.map((art) => {
         const staticMatch = ALL_KNOWLEDGE_ARTICLES.find((s) => s.slug === art.slug);
         const readTimeMinutes = art.wordCount ? Math.max(1, Math.ceil(art.wordCount / 200)) : 5;
 
@@ -52,7 +58,7 @@ export function KnowledgeHubClient({ initialArticles }: KnowledgeHubClientProps)
           raw: art,
         };
       })
-    : ALL_KNOWLEDGE_ARTICLES.map((art) => ({
+    : ALL_KNOWLEDGE_ARTICLES.filter((art) => (art.status || 'published') === 'published').map((art) => ({
         slug: art.slug,
         title: art.h1Title,
         excerpt: art.heroSubtitle,

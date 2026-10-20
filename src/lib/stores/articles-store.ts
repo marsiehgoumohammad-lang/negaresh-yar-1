@@ -52,11 +52,17 @@ function mapRowToArticle(row: Record<string, unknown>): Article {
     category = 'مالیات، بیمه و امور تجاری';
   }
 
+  const staticArticle = ALL_KNOWLEDGE_ARTICLES.find((a) => a.slug === slug);
+  const effectiveStatus: ArticleStatus =
+    staticArticle?.status === 'draft'
+      ? 'draft'
+      : ((row.status as ArticleStatus) || 'draft');
+
   return {
     id: (row.id as string) || (meta.customId as string) || slug,
     title: (row.title as string) || '',
     slug,
-    status: (row.status as ArticleStatus) || 'draft',
+    status: effectiveStatus,
     excerpt: (row.excerpt as string) || (row.seo_description as string) || '',
     content: contentText,
     metaTitle: (row.seo_title as string) || (row.title as string) || '',
@@ -101,7 +107,7 @@ async function seedInitialArticlesIfEmpty(supabase: SupabaseClient) {
   try {
     const { count, error } = await supabase.from('articles').select('*', { count: 'exact', head: true });
     if (!error && (count === 0 || count === null)) {
-      const initial = getInitialArticles();
+      const initial = getInitialArticles().filter((art) => art.status === 'published');
       const rows = initial.map((art) => mapArticleToRow(art));
       await supabase.from('articles').upsert(rows, { onConflict: 'slug' });
     }
@@ -158,9 +164,10 @@ export async function getArticles(): Promise<Article[]> {
     const dbSlugs = new Set(dbArticles.map((a) => a.slug));
     const initial = getInitialArticles();
     const missing = initial.filter((a) => !dbSlugs.has(a.slug));
+    const syncableMissing = missing.filter((a) => a.status === 'published');
 
-    if (missing.length > 0) {
-      const missingRows = missing.map((art) => mapArticleToRow(art));
+    if (syncableMissing.length > 0) {
+      const missingRows = syncableMissing.map((art) => mapArticleToRow(art));
       supabase.from('articles').upsert(missingRows, { onConflict: 'slug' }).then(
         () => {},
         (err) => console.error('Error syncing missing initial articles to Supabase:', err)
@@ -201,7 +208,9 @@ export async function getPublishedArticles(): Promise<Article[]> {
       return all.filter((a) => a.status === 'published');
     }
 
-    const dbArticles = (data as Record<string, unknown>[]).map(mapRowToArticle);
+    const dbArticles = (data as Record<string, unknown>[])
+      .map(mapRowToArticle)
+      .filter((a) => a.status === 'published');
     const dbSlugs = new Set(dbArticles.map((a) => a.slug));
     const initial = getInitialArticles().filter((a) => a.status === 'published');
     const missing = initial.filter((a) => !dbSlugs.has(a.slug));
