@@ -213,8 +213,8 @@ export const samplePrisonerFurloughRequestData: SampleLandingData = {
 };
 
 export const samplePrisonerFurloughRequestMetadata: Metadata = {
-  title: 'نمونه درخواست مرخصی زندانی و اعطای مرخصی اضطراری | نگارش یار',
-  description: 'دانلود و مشاهده کامل‌ترین الگوی رسمی تقاضای مرخصی استحقاقی، اضطراری و استعلاجی زندانی به دادیار ناظر و قاضی اجرای احکام با ضمانت فیش حقوقی و وثیقه.',
+  title: 'فرم رایگان درخواست مرخصی زندانی؛ نمونه متن و تمدید مرخصی زندانی (دانلود PDF و Word)',
+  description: 'فرم و نمونه متن درخواست مرخصی زندانی، تمدید مرخصی و تقاضای مرخصی از مقام قضایی. نکات تنظیم درخواست و اطلاعات لازم برای توضیح دلایل مرخصی.',
   keywords: [
     'نمونه درخواست مرخصی زندانی',
     'متن نامه مرخصی زندانی',
@@ -229,8 +229,8 @@ export const samplePrisonerFurloughRequestMetadata: Metadata = {
     canonical: 'https://www.negaresh-yar.ir/samples/prisoner-furlough-request',
   },
   openGraph: {
-    title: 'نمونه درخواست مرخصی زندانی و اعطای مرخصی اضطراری | نگارش یار',
-  description: 'الگوی قانونی تقاضای مرخصی زندانی جهت ارائه به دادیاری ناظر بر زندان و اجرای احکام.',
+    title: 'فرم رایگان درخواست مرخصی زندانی؛ نمونه متن و تمدید مرخصی زندانی (دانلود PDF و Word)',
+  description: 'فرم و نمونه متن درخواست مرخصی زندانی، تمدید مرخصی و تقاضای مرخصی از مقام قضایی. نکات تنظیم درخواست و اطلاعات لازم برای توضیح دلایل مرخصی.',
     url: 'https://www.negaresh-yar.ir/samples/prisoner-furlough-request',
     siteName: 'نگارش یار',
     type: 'article',

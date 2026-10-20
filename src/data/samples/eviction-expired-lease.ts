@@ -244,8 +244,8 @@ export const sampleEvictionExpiredLeaseData: SampleLandingData = {
 };
 
 export const sampleEvictionExpiredLeaseMetadata: Metadata = {
-  title: 'نمونه درخواست و دادخواست دستور تخلیه فوری ملک (پایان مدت اجاره) | نگارش یار',
-  description: 'متن آماده درخواست صدور دستور تخلیه فوری و حکم تخلیه شورای حل اختلاف به علت اتمام مدت قرارداد اجاره مستند به قانون روابط موجر و مستاجر ۱۳۷۶ در سامانه ثنا.',
+  title: 'نمونه رایگان درخواست دستور تخلیه ملک پس از پایان مدت اجاره (دانلود PDF و Word) | نگارش یار',
+  description: 'نمونه درخواست تخلیه ملک پس از پایان قرارداد اجاره. با تفاوت دستور تخلیه و حکم تخلیه، اطلاعات لازم برای تنظیم درخواست و نکات مربوط به وضعیت قرارداد آشنا شوید.',
   keywords: [
     'نمونه دستور تخلیه فوری',
     'دادخواست تخلیه پایان مدت اجاره',
@@ -258,8 +258,8 @@ export const sampleEvictionExpiredLeaseMetadata: Metadata = {
     canonical: 'https://www.negaresh-yar.ir/samples/eviction-expired-lease',
   },
   openGraph: {
-    title: 'نمونه درخواست و دادخواست دستور تخلیه فوری ملک (پایان مدت اجاره) | نگارش یار',
-  description: 'متن آماده درخواست صدور دستور تخلیه فوری ملک به علت اتمام مدت قرارداد اجاره در ثنا.',
+    title: 'نمونه رایگان درخواست دستور تخلیه ملک پس از پایان مدت اجاره (دانلود PDF و Word) | نگارش یار',
+  description: 'نمونه درخواست تخلیه ملک پس از پایان قرارداد اجاره. با تفاوت دستور تخلیه و حکم تخلیه، اطلاعات لازم برای تنظیم درخواست و نکات مربوط به وضعیت قرارداد آشنا شوید.',
     url: 'https://www.negaresh-yar.ir/samples/eviction-expired-lease',
     siteName: 'نگارش یار',
     type: 'article',

@@ -232,8 +232,8 @@ export const sampleRentDepositClaimData: SampleLandingData = {
 };
 
 export const sampleRentDepositClaimMetadata: Metadata = {
-  title: 'نمونه دادخواست مطالبه ودیعه مسکن (استرداد پول پیش) | نگارش یار',
-  description: 'متن آماده دادخواست حقوقی استرداد ودیعه و قرض‌الحسنه اجاره به انضمام تامین خواسته، خسارت تاخیر تادیه و تامین دلیل تحویل کلید مستند به قانون ۷۶ در ثنا.',
+  title: 'نمونه رایگان دادخواست استرداد ودیعه اجاره و پول پیش خانه (دانلود PDF و Word)',
+  description: 'نمونه دادخواست مطالبه و استرداد پول پیش از مالک. متن دادخواست، مدارک لازم و نکات مربوط به تحویل ملک و مطالبه ودیعه پس از پایان اجاره از صاحب خانه.',
   keywords: [
     'نمونه دادخواست مطالبه ودیعه مسکن',
     'دادخواست پس گرفتن پول پیش خانه',
@@ -246,8 +246,8 @@ export const sampleRentDepositClaimMetadata: Metadata = {
     canonical: 'https://www.negaresh-yar.ir/samples/rent-deposit-claim',
   },
   openGraph: {
-    title: 'نمونه دادخواست مطالبه ودیعه مسکن (استرداد پول پیش) | نگارش یار',
-  description: 'متن آماده دادخواست حقوقی استرداد ودیعه و قرض‌الحسنه اجاره به انضمام تامین خواسته در ثنا.',
+    title: 'نمونه رایگان دادخواست استرداد ودیعه اجاره و پول پیش خانه (دانلود PDF و Word)',
+  description: 'نمونه دادخواست مطالبه و استرداد پول پیش از مالک. متن دادخواست، مدارک لازم و نکات مربوط به تحویل ملک و مطالبه ودیعه پس از پایان اجاره از صاحب خانه.',
     url: 'https://www.negaresh-yar.ir/samples/rent-deposit-claim',
     siteName: 'نگارش یار',
     type: 'article',

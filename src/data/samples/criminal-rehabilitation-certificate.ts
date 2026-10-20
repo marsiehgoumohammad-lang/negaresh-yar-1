@@ -235,8 +235,8 @@ export const sampleCriminalRehabilitationCertificateData: SampleLandingData = {
 };
 
 export const sampleCriminalRehabilitationCertificateMetadata: Metadata = {
-  title: 'نمونه درخواست صدور گواهی اعاده حیثیت و رفع سوء پیشینه | نگارش یار',
-  description: 'متن آماده درخواست صدور گواهی اعاده حیثیت، رفع محرومیت از حقوق اجتماعی و پاکسازی سابقه کیفری مستند به ماده ۲۵ و ۲۶ قانون مجازات اسلامی.',
+  title: 'نمونه رایگان درخواست اعاده حیثیت و رفع سوء پیشینه کیفری (دانلود PDF و Word) | نگارش یار',
+  description: 'نمونه درخواست اعاده حیثیت و رفع سوء پیشینه کیفری با مواد قانونی. تفاوت اعاده حیثیت و گواهی عدم سوء پیشینه و نکات تنظیم درخواست متناسب با وضعیت قانونی.',
   keywords: [
     'نمونه درخواست اعاده حیثیت',
     'ماده ۲۵ قانون مجازات اسلامی',
@@ -249,8 +249,8 @@ export const sampleCriminalRehabilitationCertificateMetadata: Metadata = {
     canonical: 'https://www.negaresh-yar.ir/samples/criminal-rehabilitation-certificate',
   },
   openGraph: {
-    title: 'نمونه درخواست صدور گواهی اعاده حیثیت و رفع سوء پیشینه | نگارش یار',
-  description: 'متن آماده درخواست صدور گواهی اعاده حیثیت و پاکسازی سابقه کیفری در دادسرا.',
+    title: 'نمونه رایگان درخواست اعاده حیثیت و رفع سوء پیشینه کیفری (دانلود PDF و Word) | نگارش یار',
+  description: 'نمونه درخواست اعاده حیثیت و رفع سوء پیشینه کیفری با مواد قانونی. تفاوت اعاده حیثیت و گواهی عدم سوء پیشینه و نکات تنظیم درخواست متناسب با وضعیت قانونی.',
     url: 'https://www.negaresh-yar.ir/samples/criminal-rehabilitation-certificate',
     siteName: 'نگارش یار',
     type: 'article',

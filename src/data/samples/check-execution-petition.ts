@@ -238,8 +238,8 @@ export const sampleCheckExecutionPetitionData: SampleLandingData = {
 };
 
 export const sampleCheckExecutionPetitionMetadata: Metadata = {
-  title: 'نمونه درخواست صدور اجراییه چک صیادی (ماده ۲۳) | نگارش یار',
-  description: 'متن آماده درخواست صدور اجراییه مستقیم چک صیادی برگشتی از دادگاه طبق ماده ۲۳ قانون صدور چک بدون نیاز به جلسه رسیدگی و با حداقل هزینه دادرسی در ثنا.',
+  title: 'نمونه رایگان دادخواست ابطال اجراییه چک و توقف عملیات اجرایی (دانلود PDF و Word) | نگارش یار',
+  description: 'نمونه دادخواست ابطال اجراییه چک صیادی و درخواست توقف عملیات اجرایی. ساختار دادخواست، درخواست دستور موقت و نکات مهم تنظیم متن متناسب با علت اعتراض.',
   keywords: [
     'نمونه درخواست صدور اجراییه چک',
     'ماده ۲۳ قانون صدور چک',
@@ -252,8 +252,8 @@ export const sampleCheckExecutionPetitionMetadata: Metadata = {
     canonical: 'https://www.negaresh-yar.ir/samples/check-execution-petition',
   },
   openGraph: {
-    title: 'نمونه درخواست صدور اجراییه چک صیادی (ماده ۲۳) | نگارش یار',
-  description: 'متن آماده درخواست صدور اجراییه مستقیم چک صیادی برگشتی از دادگاه طبق ماده ۲۳ قانون صدور چک.',
+    title: 'نمونه رایگان دادخواست ابطال اجراییه چک و توقف عملیات اجرایی (دانلود PDF و Word) | نگارش یار',
+  description: 'نمونه دادخواست ابطال اجراییه چک صیادی و درخواست توقف عملیات اجرایی. ساختار دادخواست، درخواست دستور موقت و نکات مهم تنظیم متن متناسب با علت اعتراض.',
     url: 'https://www.negaresh-yar.ir/samples/check-execution-petition',
     siteName: 'نگارش یار',
     type: 'article',
