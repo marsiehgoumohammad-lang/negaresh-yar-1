@@ -58,6 +58,7 @@ export function Hero() {
 
               <Link
                 href="/samples"
+                prefetch={false}
                 className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-[#0D1424] hover:bg-[#121A2D] text-slate-200 hover:text-white font-bold text-sm sm:text-base border border-slate-700/80 hover:border-[#E5C158]/50 transition-all"
               >
                 <FileText className="w-4 h-4 text-[#E5C158]" />
@@ -96,6 +97,7 @@ export function Hero() {
                 alt="صحنه سه‌بعدی خدمات نگارشیار"
                 width={1037}
                 height={921}
+                sizes="(max-width: 544px) calc(100vw - 32px), (max-width: 1023px) 512px, (max-width: 1279px) 38vw, 480px"
                 priority
                 className="w-full h-auto object-contain rounded-2xl drop-shadow-2xl select-none pointer-events-none"
                 referrerPolicy="no-referrer"

@@ -94,7 +94,7 @@ export function Footer() {
             </h3>
             <ul className="space-y-2.5 text-xs sm:text-sm text-slate-300">
               <li>
-                <Link href="/samples" className="hover:text-[#E5C158] transition-colors">
+                <Link href="/samples" prefetch={false} className="hover:text-[#E5C158] transition-colors">
                   بانک نمونه
                 </Link>
               </li>
@@ -164,7 +164,7 @@ export function Footer() {
           </p>
           <div className="flex items-center gap-4 flex-wrap justify-center sm:justify-end text-slate-400">
             <Link href="/services" className="hover:text-[#E5C158] transition-colors">خدمات</Link>
-            <Link href="/samples" className="hover:text-[#E5C158] transition-colors">بانک نمونه</Link>
+            <Link href="/samples" prefetch={false} className="hover:text-[#E5C158] transition-colors">بانک نمونه</Link>
             <Link href="/knowledge" className="hover:text-[#E5C158] transition-colors">راهنما</Link>
             <Link href="/lawyer-referral" className="hover:text-[#E5C158] transition-colors">معرفی وکیل</Link>
             <Link href="/contact" className="hover:text-[#E5C158] transition-colors">تماس</Link>

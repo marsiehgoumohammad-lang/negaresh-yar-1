@@ -105,6 +105,7 @@ export function SampleLibraryHub() {
         <div className="text-center">
           <Link
             href="/samples"
+            prefetch={false}
             className="inline-flex items-center justify-center gap-2.5 px-8 py-3.5 rounded-xl bg-[#162036] hover:bg-[#1E2C4A] text-slate-200 hover:text-white font-bold text-sm sm:text-base border border-slate-700 hover:border-[#E5C158]/50 shadow-md transition-all"
           >
             <span>ورود به بانک نمونه</span>
