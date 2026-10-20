@@ -236,6 +236,7 @@ import { sampleThirdPartyObjectionExecutionStayRequestData, sampleThirdPartyObje
 import { sampleThirdPartyObjectionPetitionData, sampleThirdPartyObjectionPetitionMetadata } from './third-party-objection-petition';
 import { sampleUnknownResidenceNewspaperPublicationRequestData, sampleUnknownResidenceNewspaperPublicationRequestMetadata } from './unknown-residence-newspaper-publication-request';
 import { sampleWitnessRebuttalObjectionBriefData, sampleWitnessRebuttalObjectionBriefMetadata } from './witness-rebuttal-objection-brief';
+import { samplePhishingUnauthorizedWithdrawalComplaintData, samplePhishingUnauthorizedWithdrawalComplaintMetadata } from './phishing-unauthorized-withdrawal-complaint';
 
 import { SampleLandingData } from './types';
 
@@ -2363,6 +2364,15 @@ export const allSamplesList: {
     href: '/samples/witness-rebuttal-objection-brief',
     data: sampleWitnessRebuttalObjectionBriefData,
   },
+  {
+    slug: 'phishing-unauthorized-withdrawal-complaint',
+    title: samplePhishingUnauthorizedWithdrawalComplaintData.title || samplePhishingUnauthorizedWithdrawalComplaintData.h1Title || '',
+    description: samplePhishingUnauthorizedWithdrawalComplaintData.heroSubtitle || samplePhishingUnauthorizedWithdrawalComplaintData.shortDescription || '',
+    category: 'اوراق و دادخواست های قضایی',
+    badge: 'شکواییه جرایم رایانه ای و بانکی',
+    href: '/samples/phishing-unauthorized-withdrawal-complaint',
+    data: samplePhishingUnauthorizedWithdrawalComplaintData,
+  },
 ];
 
 export {
@@ -2798,6 +2808,8 @@ export {
   sampleUnknownResidenceNewspaperPublicationRequestMetadata,
   sampleWitnessRebuttalObjectionBriefData,
   sampleWitnessRebuttalObjectionBriefMetadata,
+  samplePhishingUnauthorizedWithdrawalComplaintData,
+  samplePhishingUnauthorizedWithdrawalComplaintMetadata,
 };
 
 
