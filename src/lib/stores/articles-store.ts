@@ -22,7 +22,7 @@ export function getInitialArticles(): Article[] {
       id: art.slug,
       title: art.h1Title || art.slug,
       slug: art.slug,
-      status: 'published' as ArticleStatus,
+      status: (art.status || 'published') as ArticleStatus,
       excerpt: art.heroSubtitle || art.quickAnswerParagraph || '',
       content: contentText,
       metaTitle: (meta?.title as string) || art.h1Title || '',

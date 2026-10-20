@@ -17,6 +17,7 @@ export interface KnowledgeArticleData {
   slug: string;
   category: string;
   badge: string;
+  status?: 'published' | 'draft';
   h1Title: string;
   heroSubtitle: string;
   readTime: string;
