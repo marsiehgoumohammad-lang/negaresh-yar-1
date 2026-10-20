@@ -131,6 +131,7 @@ export function RealSamplePreview() {
             <div className="pt-2">
               <Link
                 href="/samples"
+                prefetch={false}
                 className="w-full inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl bg-[#162036] hover:bg-[#1D2B4A] text-slate-200 hover:text-white font-bold text-xs sm:text-sm border border-slate-700 hover:border-[#E5C158]/50 transition-all"
               >
                 <span>مشاهده همه نمونه‌ها در بانک اسناد</span>

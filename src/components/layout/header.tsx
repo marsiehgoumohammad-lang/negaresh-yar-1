@@ -223,6 +223,7 @@ export function Header() {
               <Link
                 key={item.href}
                 href={item.href}
+                prefetch={item.href === '/samples' ? false : undefined}
                 className="whitespace-nowrap px-2.5 py-1.5 rounded-lg text-xs 2xl:text-[13px] font-bold text-slate-300 hover:text-[#E5C158] hover:bg-slate-800/40 transition-colors"
               >
                 {item.title}
@@ -361,6 +362,7 @@ export function Header() {
                       >
                         <Link
                           href={item.href}
+                          prefetch={item.href === '/samples' ? false : undefined}
                           onClick={handleCloseMenu}
                           className="flex items-center justify-between p-3 rounded-xl bg-[#0D1424]/60 hover:bg-[#121A2D] border border-slate-800/80 hover:border-[#E5C158]/40 text-slate-200 hover:text-white transition-all group"
                         >
