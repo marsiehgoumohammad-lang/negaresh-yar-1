@@ -237,6 +237,7 @@ import { sampleThirdPartyObjectionPetitionData, sampleThirdPartyObjectionPetitio
 import { sampleUnknownResidenceNewspaperPublicationRequestData, sampleUnknownResidenceNewspaperPublicationRequestMetadata } from './unknown-residence-newspaper-publication-request';
 import { sampleWitnessRebuttalObjectionBriefData, sampleWitnessRebuttalObjectionBriefMetadata } from './witness-rebuttal-objection-brief';
 import { samplePhishingUnauthorizedWithdrawalComplaintData, samplePhishingUnauthorizedWithdrawalComplaintMetadata } from './phishing-unauthorized-withdrawal-complaint';
+import { sampleOnlineShoppingFraudComplaintData, sampleOnlineShoppingFraudComplaintMetadata } from './online-shopping-fraud-complaint';
 
 import { SampleLandingData } from './types';
 
@@ -2373,6 +2374,15 @@ export const allSamplesList: {
     href: '/samples/phishing-unauthorized-withdrawal-complaint',
     data: samplePhishingUnauthorizedWithdrawalComplaintData,
   },
+  {
+    slug: 'online-shopping-fraud-complaint',
+    title: sampleOnlineShoppingFraudComplaintData.title || sampleOnlineShoppingFraudComplaintData.h1Title || '',
+    description: sampleOnlineShoppingFraudComplaintData.heroSubtitle || sampleOnlineShoppingFraudComplaintData.shortDescription || '',
+    category: 'شکواییه و امور کیفری',
+    badge: 'شکواییه خرید اینترنتی',
+    href: '/samples/online-shopping-fraud-complaint',
+    data: sampleOnlineShoppingFraudComplaintData,
+  },
 ].filter((item) => item.data.status !== 'draft');
 
 export {
@@ -2810,6 +2820,8 @@ export {
   sampleWitnessRebuttalObjectionBriefMetadata,
   samplePhishingUnauthorizedWithdrawalComplaintData,
   samplePhishingUnauthorizedWithdrawalComplaintMetadata,
+  sampleOnlineShoppingFraudComplaintData,
+  sampleOnlineShoppingFraudComplaintMetadata,
 };
 
 
