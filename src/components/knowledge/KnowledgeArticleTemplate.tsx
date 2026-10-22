@@ -422,7 +422,7 @@ export function KnowledgeArticleTemplate({ data }: { data: KnowledgeArticleData 
           </motion.h1>
 
           {/* Hero Subtitle */}
-          <p className="text-slate-300 text-sm sm:text-base md:text-lg max-w-3xl mx-auto leading-relaxed md:leading-loose font-normal mb-8">
+          <p className="text-slate-100 text-sm sm:text-base md:text-lg max-w-3xl mx-auto leading-relaxed md:leading-loose font-normal mb-8">
             {data.heroSubtitle}
           </p>
 
@@ -431,7 +431,7 @@ export function KnowledgeArticleTemplate({ data }: { data: KnowledgeArticleData 
             {data.heroTrustChips.map((chip, i) => (
               <div
                 key={i}
-                className="flex items-center gap-2 p-2.5 rounded-xl bg-slate-900/60 border border-slate-800 text-xs text-slate-300"
+                className="flex items-center gap-2 p-2.5 rounded-xl bg-slate-900/90 border border-slate-800 text-xs text-slate-100"
               >
                 <CheckCircle2 className="w-4 h-4 text-[#E5C158] shrink-0" />
                 <span className="line-clamp-1">{chip}</span>
@@ -479,18 +479,18 @@ export function KnowledgeArticleTemplate({ data }: { data: KnowledgeArticleData 
                 </a>
               </div>
 
-              <p className="text-slate-300 text-sm md:text-base leading-relaxed mb-4">
+              <p className="text-slate-100 text-sm md:text-base leading-relaxed mb-4">
                 {data.officialPortalSection.description}
               </p>
 
               {data.officialPortalSection.quickActions && data.officialPortalSection.quickActions.length > 0 && (
                 <div className="flex flex-wrap items-center gap-2 pt-3 border-t border-slate-800/80">
-                  <span className="text-xs text-slate-400 font-semibold ml-1">دسترسی سریع به بخش‌های راهنما:</span>
+                  <span className="text-xs text-slate-300 font-semibold ml-1">دسترسی سریع به بخش‌های راهنما:</span>
                   {data.officialPortalSection.quickActions.map((action, idx) => (
                     <a
                       key={idx}
                       href={action.href}
-                      className="text-xs font-semibold px-3 py-1.5 rounded-lg bg-slate-900/80 hover:bg-slate-800 text-[#E5C158] border border-slate-800 hover:border-[#E5C158]/40 transition-colors"
+                      className="text-xs font-semibold px-3 py-1.5 rounded-lg bg-slate-900 hover:bg-slate-800 text-[#E5C158] border border-slate-800 hover:border-[#E5C158]/40 transition-colors"
                     >
                       {action.label}
                     </a>
@@ -498,7 +498,7 @@ export function KnowledgeArticleTemplate({ data }: { data: KnowledgeArticleData 
                 </div>
               )}
 
-              <div className="mt-4 p-3.5 rounded-xl bg-slate-950/70 border border-slate-800/90 text-xs text-slate-300 flex items-start gap-2.5 leading-relaxed">
+              <div className="mt-4 p-3.5 rounded-xl bg-slate-950/90 border border-slate-800 text-xs text-slate-100 flex items-start gap-2.5 leading-relaxed">
                 <ShieldAlert className="w-4 h-4 text-amber-400 shrink-0 mt-0.5" />
                 <span>{data.officialPortalSection.disclaimer}</span>
               </div>
@@ -507,7 +507,7 @@ export function KnowledgeArticleTemplate({ data }: { data: KnowledgeArticleData 
 
           {/* FEATURED IMAGE */}
           {data.featuredImage && (
-            <div className="relative w-full rounded-2xl overflow-hidden border border-slate-800 shadow-2xl bg-slate-900/50 mb-8">
+            <div className="relative w-full rounded-2xl overflow-hidden border border-slate-800 shadow-2xl bg-slate-900 mb-8">
               <Image
                 src={data.featuredImage.url.replace(/^https?:\/\/(?:www\.)?negaresh-yar\.ir/, '')}
                 alt={data.featuredImage.alt || data.h1Title}
@@ -532,12 +532,12 @@ export function KnowledgeArticleTemplate({ data }: { data: KnowledgeArticleData 
               </h2>
             </div>
             <div
-              className="text-slate-200 text-sm md:text-base leading-relaxed md:leading-loose mb-5 font-medium [&_a]:text-[#E5C158] [&_a]:underline [&_a]:underline-offset-4 hover:[&_a]:text-amber-300"
+              className="text-white [&_p]:text-white text-sm md:text-base leading-relaxed md:leading-loose mb-5 font-medium [&_a]:text-[#E5C158] [&_a]:underline [&_a]:underline-offset-4 hover:[&_a]:text-amber-300"
               dangerouslySetInnerHTML={{ __html: data.quickAnswerParagraph }}
             />
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 pt-4 border-t border-slate-800">
               {data.quickAnswerHighlights.map((hl, idx) => (
-                <div key={idx} className="flex items-start gap-2 text-xs text-slate-300">
+                <div key={idx} className="flex items-start gap-2 text-xs text-slate-100">
                   <Check className="w-4 h-4 text-[#E5C158] shrink-0 mt-0.5" />
                   <span>{hl}</span>
                 </div>
@@ -547,12 +547,12 @@ export function KnowledgeArticleTemplate({ data }: { data: KnowledgeArticleData 
 
           {/* B. MOBILE TABLE OF CONTENTS (COLLAPSIBLE) */}
           {data.tableOfContents && data.tableOfContents.length > 0 && (
-            <div className="block lg:hidden bg-slate-900/80 border border-slate-800 rounded-2xl p-5">
+            <div className="block lg:hidden bg-[#0D1424] border border-slate-800 rounded-2xl p-5 shadow-lg">
               <div className="flex items-center gap-2 mb-3 text-[#E5C158] font-bold text-sm">
                 <ListOrdered className="w-4 h-4" />
                 <span>فهرست مطالب مقاله</span>
               </div>
-              <ul className="space-y-2 text-xs text-slate-300">
+              <ul className="space-y-2 text-xs text-slate-100">
                 {data.tableOfContents?.map((item) => (
                   <li key={item.id}>
                     <a
@@ -569,7 +569,7 @@ export function KnowledgeArticleTemplate({ data }: { data: KnowledgeArticleData 
 
           {/* CUSTOM GUIDE CONTENT */}
           {(data.customGuideContent || data.customComponent) && (
-            <div className="my-8">
+            <div className="my-8 p-4 sm:p-6 rounded-3xl bg-[#070B15] border border-slate-800 shadow-xl text-white [&_p]:text-slate-100">
               {data.customGuideContent || data.customComponent}
             </div>
           )}
@@ -581,7 +581,7 @@ export function KnowledgeArticleTemplate({ data }: { data: KnowledgeArticleData 
                 <section
                   key={section.id}
                   id={section.id}
-                  className="scroll-mt-24 p-6 md:p-8 rounded-2xl bg-slate-900/40 border border-slate-800/80 space-y-4"
+                  className="scroll-mt-24 p-6 md:p-8 rounded-2xl bg-[#0D1424] border border-slate-800 shadow-lg space-y-4"
                 >
               <h2 className="text-xl md:text-2xl font-bold text-white border-b border-slate-800 pb-3 flex items-center gap-2">
                 <span className="w-2 h-6 bg-[#E5C158] rounded-full inline-block" />
@@ -589,11 +589,11 @@ export function KnowledgeArticleTemplate({ data }: { data: KnowledgeArticleData 
               </h2>
 
               {section.content ? (
-                <div className="text-slate-300 text-sm md:text-base leading-relaxed md:leading-loose">
+                <div className="text-white [&_p]:text-white [&_li]:text-white [&_h2]:text-white [&_h3]:text-white [&_h4]:text-white text-sm md:text-base leading-relaxed md:leading-loose">
                   {section.content}
                 </div>
               ) : (
-                <div className="space-y-4 text-slate-300 text-sm md:text-base leading-relaxed md:leading-loose [&_a]:text-[#E5C158] [&_a]:underline [&_a]:underline-offset-4 [&_a]:font-semibold hover:[&_a]:text-amber-300 hover:[&_a]:decoration-amber-300 [&_a]:transition-colors [&_strong]:text-white [&_strong]:font-bold [&_ul]:list-disc [&_ul]:pr-5 [&_ul]:space-y-1.5 [&_ol]:list-decimal [&_ol]:pr-5 [&_ol]:space-y-1.5 [&_li]:text-slate-300 [&_blockquote]:border-r-4 [&_blockquote]:border-[#E5C158] [&_blockquote]:pr-4 [&_blockquote]:py-1 [&_blockquote]:italic [&_blockquote]:text-slate-300 [&_blockquote]:bg-slate-900/50 [&_blockquote]:rounded-l-lg [&_table]:w-full [&_table]:border-collapse [&_th]:border [&_th]:border-slate-700 [&_th]:p-2.5 [&_th]:bg-slate-800 [&_th]:text-white [&_td]:border [&_td]:border-slate-800 [&_td]:p-2.5">
+                <div className="space-y-4 text-white [&_p]:text-white [&_h2]:text-white [&_h3]:text-white [&_h4]:text-white text-sm md:text-base leading-relaxed md:leading-loose [&_a]:text-[#E5C158] [&_a]:underline [&_a]:underline-offset-4 [&_a]:font-semibold hover:[&_a]:text-amber-300 hover:[&_a]:decoration-amber-300 [&_a]:transition-colors [&_strong]:text-white [&_strong]:font-bold [&_ul]:list-disc [&_ul]:pr-5 [&_ul]:space-y-1.5 [&_ol]:list-decimal [&_ol]:pr-5 [&_ol]:space-y-1.5 [&_li]:text-white [&_blockquote]:border-r-4 [&_blockquote]:border-[#E5C158] [&_blockquote]:pr-4 [&_blockquote]:py-1 [&_blockquote]:italic [&_blockquote]:text-slate-100 [&_blockquote]:bg-slate-900 [&_blockquote]:rounded-l-lg [&_table]:w-full [&_table]:border-collapse [&_th]:border [&_th]:border-slate-700 [&_th]:p-2.5 [&_th]:bg-slate-800 [&_th]:text-white [&_td]:border [&_td]:border-slate-800 [&_td]:p-2.5 [&_td]:text-white">
                   {section.paragraphs?.map((p, idx) => (
                     <div
                       key={idx}
@@ -606,7 +606,7 @@ export function KnowledgeArticleTemplate({ data }: { data: KnowledgeArticleData 
               {section.bulletPoints && section.bulletPoints.length > 0 && (
                 <ul className="space-y-2.5 pt-2 pr-2">
                   {section.bulletPoints.map((bp, idx) => (
-                    <li key={idx} className="flex items-start gap-2.5 text-sm text-slate-200">
+                    <li key={idx} className="flex items-start gap-2.5 text-sm text-white">
                       <span className="w-1.5 h-1.5 rounded-full bg-[#E5C158] shrink-0 mt-2" />
                       <span>{bp}</span>
                     </li>
@@ -618,13 +618,13 @@ export function KnowledgeArticleTemplate({ data }: { data: KnowledgeArticleData 
                 <div
                   className={`p-4 md:p-5 rounded-xl border text-xs md:text-sm my-4 ${
                     section.calloutBox.type === 'warning'
-                      ? 'bg-amber-950/30 border-amber-500/40 text-amber-200'
+                      ? 'bg-amber-950 border-amber-500/50 text-amber-100'
                       : section.calloutBox.type === 'law'
-                      ? 'bg-emerald-950/30 border-emerald-500/40 text-emerald-200'
-                      : 'bg-blue-950/30 border-blue-500/40 text-blue-200'
+                      ? 'bg-emerald-950 border-emerald-500/50 text-emerald-100'
+                      : 'bg-blue-950 border-blue-500/50 text-blue-100'
                   }`}
                 >
-                  <div className="flex items-center gap-2 font-bold mb-1.5 text-sm">
+                  <div className="flex items-center gap-2 font-bold mb-1.5 text-sm text-white">
                     {section.calloutBox.type === 'warning' ? (
                       <AlertTriangle className="w-4 h-4 text-amber-400" />
                     ) : (
@@ -632,7 +632,7 @@ export function KnowledgeArticleTemplate({ data }: { data: KnowledgeArticleData 
                     )}
                     <span>{section.calloutBox.title}</span>
                   </div>
-                  <p className="leading-relaxed">{section.calloutBox.text}</p>
+                  <p className="leading-relaxed text-white text-xs md:text-sm">{section.calloutBox.text}</p>
                 </div>
               )}
             </section>
@@ -642,7 +642,7 @@ export function KnowledgeArticleTemplate({ data }: { data: KnowledgeArticleData 
 
           {/* D. REAL-WORLD CASE EXAMPLES */}
           {data.examplesList && data.examplesList.length > 0 && (
-            <section className="p-6 md:p-8 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-6">
+            <section className="p-6 md:p-8 rounded-2xl bg-[#0D1424] border border-slate-800 shadow-lg space-y-6">
               <div className="flex items-center gap-3 border-b border-slate-800 pb-4">
                 <div className="p-2 rounded-lg bg-indigo-500/10 text-indigo-400">
                   <FileText className="w-5 h-5" />
@@ -662,7 +662,7 @@ export function KnowledgeArticleTemplate({ data }: { data: KnowledgeArticleData 
                       <CheckCircle2 className="w-4 h-4 text-[#E5C158]" />
                       {item.scenarioTitle}
                     </h3>
-                    <p className="text-xs md:text-sm text-slate-300 leading-relaxed">
+                    <p className="text-xs md:text-sm text-slate-100 leading-relaxed">
                       <strong className="text-white">توضیحات پرونده: </strong>
                       {item.description}
                     </p>
@@ -678,7 +678,7 @@ export function KnowledgeArticleTemplate({ data }: { data: KnowledgeArticleData 
 
           {/* E. COMMON MISTAKES & TRAPS */}
           {data.commonMistakesList && data.commonMistakesList.length > 0 && (
-            <section className="p-6 md:p-8 rounded-2xl bg-rose-950/20 border border-rose-900/30 space-y-6">
+            <section className="p-6 md:p-8 rounded-2xl bg-[#1A0B12] border border-rose-900/50 shadow-lg space-y-6">
               <div className="flex items-center gap-3 border-b border-rose-900/40 pb-4">
                 <div className="p-2 rounded-lg bg-rose-500/10 text-rose-400">
                   <AlertTriangle className="w-5 h-5" />
@@ -688,7 +688,7 @@ export function KnowledgeArticleTemplate({ data }: { data: KnowledgeArticleData 
                     {data.commonMistakesTitle || 'اشتباهات رایج'}
                   </h2>
                   {data.commonMistakesSubtitle && (
-                    <p className="text-xs text-rose-300/80">{data.commonMistakesSubtitle}</p>
+                    <p className="text-xs text-rose-200">{data.commonMistakesSubtitle}</p>
                   )}
                 </div>
               </div>
@@ -697,13 +697,13 @@ export function KnowledgeArticleTemplate({ data }: { data: KnowledgeArticleData 
                 {data.commonMistakesList.map((item, idx) => (
                   <div
                     key={idx}
-                    className="p-4 rounded-xl bg-[#070B15]/80 border border-rose-900/20 space-y-2"
+                    className="p-4 rounded-xl bg-[#070B15] border border-rose-900/30 space-y-2"
                   >
                     <div className="text-sm font-bold text-rose-300 flex items-start gap-2">
                       <span className="w-2 h-2 rounded-full bg-rose-500 shrink-0 mt-1.5" />
                       <span>خطا: {item.mistake}</span>
                     </div>
-                    <p className="text-xs text-slate-400 pr-4">
+                    <p className="text-xs text-slate-100 pr-4">
                       <span className="text-rose-400 font-semibold">ریسک قانونی: </span>
                       {item.risk}
                     </p>
@@ -719,12 +719,12 @@ export function KnowledgeArticleTemplate({ data }: { data: KnowledgeArticleData 
 
           {/* F. STATUTORY & LEGAL NOTES */}
           {data.legalNotesList && data.legalNotesList.length > 0 && (
-            <section className="p-6 md:p-8 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-4">
+            <section className="p-6 md:p-8 rounded-2xl bg-[#0D1424] border border-slate-800 shadow-lg space-y-4">
               <h2 className="text-xl font-bold text-white flex items-center gap-2 border-b border-slate-800 pb-3">
                 <ShieldCheck className="w-5 h-5 text-[#E5C158]" />
                 {data.legalNotesTitle || 'مستندات قانونی و مواد مصوب'}
               </h2>
-              <ul className="space-y-2.5 text-xs md:text-sm text-slate-300">
+              <ul className="space-y-2.5 text-xs md:text-sm text-white">
                 {data.legalNotesList.map((note, idx) => (
                   <li key={idx} className="flex items-start gap-2.5">
                     <span className="w-1.5 h-1.5 rounded-full bg-[#E5C158] shrink-0 mt-2" />
@@ -741,7 +741,7 @@ export function KnowledgeArticleTemplate({ data }: { data: KnowledgeArticleData 
 
           {/* G. FREQUENTLY ASKED QUESTIONS (FAQ ACCORDION) */}
           {data.faqs && data.faqs.length > 0 && (
-            <section className="p-6 md:p-8 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-6">
+            <section className="p-6 md:p-8 rounded-2xl bg-[#0D1424] border border-slate-800 shadow-lg space-y-6">
               <div className="flex items-center gap-3 border-b border-slate-800 pb-4">
                 <div className="p-2 rounded-lg bg-[#E5C158]/10 text-[#E5C158]">
                   <HelpCircle className="w-5 h-5" />
@@ -759,7 +759,7 @@ export function KnowledgeArticleTemplate({ data }: { data: KnowledgeArticleData 
                   return (
                     <div
                       key={idx}
-                      className="border border-slate-800 rounded-xl overflow-hidden bg-[#070B15]/60 transition-colors"
+                      className="border border-slate-800 rounded-xl overflow-hidden bg-[#070B15] transition-colors"
                     >
                       <button
                         id={`faq-trigger-${idx}`}
@@ -786,7 +786,7 @@ export function KnowledgeArticleTemplate({ data }: { data: KnowledgeArticleData 
                         }`}
                       >
                         <div className="overflow-hidden min-h-0">
-                          <div className="px-4 pb-4 pt-1 text-xs md:text-sm text-slate-300 leading-relaxed border-t border-slate-800/60">
+                          <div className="px-4 pb-4 pt-2 text-xs md:text-sm text-white [&_p]:text-white leading-relaxed border-t border-slate-800/60">
                             {answerText}
                           </div>
                         </div>
@@ -803,7 +803,7 @@ export function KnowledgeArticleTemplate({ data }: { data: KnowledgeArticleData 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {/* Related Services */}
               {data.relatedServices && data.relatedServices.length > 0 && (
-                <div className="p-6 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-4">
+                <div className="p-6 rounded-2xl bg-[#0D1424] border border-slate-800 shadow-lg space-y-4">
                   <h3 className="font-bold text-base text-white flex items-center gap-2 border-b border-slate-800 pb-3">
                     <Send className="w-4 h-4 text-[#E5C158]" />
                     خدمات تخصصی مرتبط نگارش یار
@@ -816,14 +816,14 @@ export function KnowledgeArticleTemplate({ data }: { data: KnowledgeArticleData 
                         className="group block p-3.5 rounded-xl bg-[#070B15] border border-slate-800 hover:border-[#E5C158]/50 transition-all"
                       >
                         <div className="flex items-center justify-between gap-2 mb-1">
-                          <span className="font-bold text-sm text-slate-200 group-hover:text-[#E5C158] transition-colors">
+                          <span className="font-bold text-sm text-white group-hover:text-[#E5C158] transition-colors">
                             {srv.title}
                           </span>
                           <span className="text-[10px] px-2 py-0.5 rounded-full bg-[#E5C158]/10 text-[#E5C158]">
                             {srv.badge}
                           </span>
                         </div>
-                        <p className="text-xs text-slate-400">{srv.desc}</p>
+                        <p className="text-xs text-slate-200">{srv.desc}</p>
                       </Link>
                     ))}
                   </div>
@@ -832,7 +832,7 @@ export function KnowledgeArticleTemplate({ data }: { data: KnowledgeArticleData 
 
               {/* Related Samples */}
               {data.relatedSamples && data.relatedSamples.length > 0 && (
-                <div className="p-6 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-4">
+                <div className="p-6 rounded-2xl bg-[#0D1424] border border-slate-800 shadow-lg space-y-4">
                   <h3 className="font-bold text-base text-white flex items-center gap-2 border-b border-slate-800 pb-3">
                     <FileText className="w-4 h-4 text-[#E5C158]" />
                     نمونه اسناد رسمی مرتبط
@@ -845,14 +845,14 @@ export function KnowledgeArticleTemplate({ data }: { data: KnowledgeArticleData 
                         className="group block p-3.5 rounded-xl bg-[#070B15] border border-slate-800 hover:border-[#E5C158]/50 transition-all"
                       >
                         <div className="flex items-center justify-between gap-2 mb-1">
-                          <span className="font-bold text-sm text-slate-200 group-hover:text-[#E5C158] transition-colors">
+                          <span className="font-bold text-sm text-white group-hover:text-[#E5C158] transition-colors">
                             {smp.title}
                           </span>
                           <span className="text-[10px] px-2 py-0.5 rounded-full bg-indigo-500/10 text-indigo-400">
                             {smp.badge}
                           </span>
                         </div>
-                        <p className="text-xs text-slate-400">{smp.desc}</p>
+                        <p className="text-xs text-slate-200">{smp.desc}</p>
                       </Link>
                     ))}
                   </div>
@@ -862,16 +862,16 @@ export function KnowledgeArticleTemplate({ data }: { data: KnowledgeArticleData 
           )}
 
           {/* I. AUTHOR / EXPERT REVIEW BOX */}
-          <div className="p-6 rounded-2xl bg-slate-900/40 border border-slate-800 flex items-center gap-4">
+          <div className="p-6 rounded-2xl bg-[#0D1424] border border-slate-800 shadow-lg flex items-center gap-4">
             <div className="w-12 h-12 rounded-full bg-[#E5C158]/10 border border-[#E5C158]/30 flex items-center justify-center text-[#E5C158] shrink-0">
               <UserCheck className="w-6 h-6" />
             </div>
-            <div className="text-xs md:text-sm text-slate-300 space-y-1">
+            <div className="text-xs md:text-sm text-slate-100 space-y-1">
               <div className="font-bold text-white flex items-center gap-2">
                 <span>تاییدشده توسط هیئت تحریریه نگارش یار</span>
                 <Award className="w-4 h-4 text-[#E5C158]" />
               </div>
-              <p className="text-slate-400">
+              <p className="text-slate-200">
                 این مقاله جنبه آموزشی دارد و جایگزین مشاوره حقوقی نیست؛ پیش از هر اقدام قضایی با وکیل مشورت کنید.
               </p>
             </div>
@@ -885,12 +885,12 @@ export function KnowledgeArticleTemplate({ data }: { data: KnowledgeArticleData 
         <aside className="lg:col-span-4 space-y-6 lg:sticky lg:top-24 text-right">
           {/* 1. STICKY TABLE OF CONTENTS (DESKTOP) */}
           {data.tableOfContents && data.tableOfContents.length > 0 && (
-            <div className="hidden lg:block p-6 rounded-2xl bg-slate-900/80 border border-slate-800">
+            <div className="hidden lg:block p-6 rounded-2xl bg-[#0D1424] border border-slate-800 shadow-lg">
               <div className="flex items-center gap-2 mb-4 text-[#E5C158] font-bold text-base border-b border-slate-800 pb-3">
                 <ListOrdered className="w-5 h-5" />
                 <span>فهرست مطالب مقاله</span>
               </div>
-              <ul className="space-y-2 text-xs text-slate-300">
+              <ul className="space-y-2 text-xs text-slate-100">
                 {data.tableOfContents?.map((item) => (
                   <li key={item.id}>
                     <a
@@ -906,7 +906,7 @@ export function KnowledgeArticleTemplate({ data }: { data: KnowledgeArticleData 
               {/* Share link button */}
               <button
                 onClick={handleShare}
-                className="mt-5 w-full flex items-center justify-center gap-2 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-xs font-semibold text-slate-200 transition-colors"
+                className="mt-5 w-full flex items-center justify-center gap-2 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-xs font-semibold text-white transition-colors"
               >
                 {copiedLink ? (
                   <>
@@ -932,7 +932,7 @@ export function KnowledgeArticleTemplate({ data }: { data: KnowledgeArticleData 
             <h3 className="text-lg font-bold text-white leading-snug">
               نیاز به نگارش تخصصی توسط وکیل دارید؟
             </h3>
-            <p className="text-xs text-slate-300 leading-relaxed">
+            <p className="text-xs text-slate-100 leading-relaxed">
               تیم تخصصی نگارش یار با استناد به مواد قانونی و رویه قضایی، سند قضایی یا اداری شما را تنظیم می‌کند.
             </p>
             <Link
@@ -945,7 +945,7 @@ export function KnowledgeArticleTemplate({ data }: { data: KnowledgeArticleData 
           </div>
 
           {/* 2.5. LAWYER REFERRAL CONTEXTUAL CARD */}
-          <div className="p-5 rounded-2xl bg-slate-900/80 border border-blue-500/30 shadow-lg space-y-3">
+          <div className="p-5 rounded-2xl bg-[#0D1424] border border-blue-500/30 shadow-lg space-y-3">
             <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-blue-500/10 text-blue-400 text-xs font-bold">
               <Scale className="w-3.5 h-3.5" />
               <span>پوشش سراسری دادرسی</span>
@@ -953,7 +953,7 @@ export function KnowledgeArticleTemplate({ data }: { data: KnowledgeArticleData 
             <h3 className="text-sm font-bold text-white leading-snug">
               نیاز به وکیل منصف برای پیگیری پرونده دارید؟
             </h3>
-            <p className="text-xs text-slate-300 leading-relaxed">
+            <p className="text-xs text-slate-100 leading-relaxed">
               اگر ترجیح می‌دهید پیگیری پرونده توسط وکیل پایه یک دادگستری با دستمزد عادلانه و شفاف انجام شود، نگارش یار شما را به وکلای منصف متصل می‌کند.
             </p>
             <Link
@@ -968,7 +968,7 @@ export function KnowledgeArticleTemplate({ data }: { data: KnowledgeArticleData 
 
           {/* 3. RELATED ARTICLES SIDEBAR */}
           {data.relatedArticles && data.relatedArticles.length > 0 && (
-            <div className="p-6 rounded-2xl bg-slate-900/60 border border-slate-800 space-y-4">
+            <div className="p-6 rounded-2xl bg-[#0D1424] border border-slate-800 shadow-lg space-y-4">
               <h3 className="font-bold text-sm text-white border-b border-slate-800 pb-3 flex items-center gap-2">
                 <BookOpen className="w-4 h-4 text-[#E5C158]" />
                 مقالات مرتبط پایگاه دانش
@@ -980,10 +980,10 @@ export function KnowledgeArticleTemplate({ data }: { data: KnowledgeArticleData 
                     href={getSafeUrl(art.href)}
                     className="block p-3 rounded-xl bg-[#070B15] border border-slate-800/80 hover:border-[#E5C158]/40 transition-colors"
                   >
-                    <div className="font-bold text-slate-200 hover:text-[#E5C158] transition-colors mb-1">
+                    <div className="font-bold text-white hover:text-[#E5C158] transition-colors mb-1">
                       {art.title}
                     </div>
-                    <p className="text-slate-400 text-[11px] line-clamp-1">{art.desc}</p>
+                    <p className="text-slate-200 text-[11px] line-clamp-1">{art.desc}</p>
                   </Link>
                 ))}
               </div>
@@ -1014,7 +1014,7 @@ export function KnowledgeArticleTemplate({ data }: { data: KnowledgeArticleData 
               {data.ctaTitle}
             </h2>
             {data.ctaDescription && (
-              <p className="text-slate-300 text-sm md:text-base leading-relaxed">
+              <p className="text-slate-100 text-sm md:text-base leading-relaxed">
                 {data.ctaDescription}
               </p>
             )}
