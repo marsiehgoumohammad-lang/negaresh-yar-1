@@ -175,6 +175,7 @@ import {
   sampleSuspectedNationalityDecisionObjectionData,
   sampleAbroadBornMotherIranianCitizenshipRequestData,
   sampleLitigationCostInsolvencyPetitionData,
+  samplePhishingUnauthorizedWithdrawalComplaintData,
 } from '@/data/samples';
 
 // Helper to normalize and ensure all required fields for a SampleDocument
@@ -187,7 +188,7 @@ function normalizeSample(item: SampleDocument): SampleDocument {
     : (item.heroSubtitle && item.heroSubtitle !== 'undefined')
     ? item.heroSubtitle
     : '';
-  const content = item.content || item.sampleStructureContent || '';
+  const content = item.content || item.sampleStructureContent || item.sampleText || '';
   const excerpt =
     item.excerpt ||
     (item.whatIsParagraphs && item.whatIsParagraphs.length > 0
@@ -460,6 +461,7 @@ const rawSamples: SampleDocument[] = [
   sampleSuspectedNationalityDecisionObjectionData,
   sampleAbroadBornMotherIranianCitizenshipRequestData,
   sampleLitigationCostInsolvencyPetitionData,
+  samplePhishingUnauthorizedWithdrawalComplaintData,
 ];
 const normalizedSamples = rawSamples.map(normalizeSample);
 

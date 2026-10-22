@@ -14,8 +14,8 @@
 
 ## ۲. دلایل فنی و سئویی عدم ساخت خدمت جدید در `/services/*`
 
-1. **محدودیت معماری انتشار در مسیر `/services/[slug]`**:
-   برخلاف مسیرهای `/knowledge/[slug]` و `/samples/[slug]` که فیلد `status: 'draft'` را بررسی کرده و صفحات پیش نویس را از دسترس عمومی و `sitemap.xml` خارج می کنند، در معماری فعلی پروژه (`src/app/services/[slug]/page.tsx` و `src/app/sitemap.ts`) تمامی خدمات ثبت شده در `src/data/services/index.ts` فاقد فیلد `status` بوده و بلافاصله به صورت عمومی منتشر و وارد نقشه سایت می شوند. بنابراین ساخت یک خدمت جدید بدون مجوز انتشار عمومی، ناقض دستور صریح حفظ وضعیت `draft` است.
+1. **محدودیت معماری انتشار در مسیر `/services/<slug>`**:
+   برخلاف مسیرهای `/knowledge/[slug]` و `/samples/[slug]` که فیلد `status: 'draft'` را بررسی کرده و صفحات پیش نویس را از دسترس عمومی و `sitemap.xml` خارج می کنند، در معماری فعلی پروژه (`src/app/services/<slug>/page.tsx`، `src/data/services/<slug>.ts` و `src/app/sitemap.ts`) صفحات خدمتی فاقد مکانیزم ایزولاسیون `status: 'draft'` در سطح روت هستند و به صورت مسیر استاتیک عمومی بیلد می شوند. بنابراین ساخت یک مسیر خدمت جدید بدون مجوز انتشار عمومی، ناقض دستور صریح حفظ وضعیت `draft` است.
 2. **جلوگیری از هم پوشانی نیت جستجو (Keyword Cannibalization)**:
    نیت تراکنشی کاربر برای برون سپاری نگارش شکواییه کیفری در صفحه تثبیت شده `/services/petition-writing` و فرم سفارش `/request?service=petition-writing` پوشش داده شده است. ایجاد صفحات خدمتی متعدد برای هر مصداق جرم کیفری، اعتبار دامنه را میان صفحات موازی تقسیم می کند.
 
@@ -40,15 +40,15 @@
 
 | صفحه مبدا (`draft`) | لینک های خروجی فعال به صفحات منتشرشده (`published`) |
 | :--- | :--- |
-| `/knowledge/phishing-and-unauthorized-withdrawal-complaint` | ۱. خدمت اصلی: `/services/petition-writing` و `/request?service=petition-writing`<br>۲. خدمات مکمل: `/services/legal-brief`، `/services/objection-non-prosecution-order`<br>۳. نمونه های مکمل منتشرشده: `/samples/provisional-attachment-petition`، `/samples/evidence-preservation-petition`، `/samples/fraud-complaint`، `/samples/complaint`<br>۴. مقالات آموزشی منتشرشده: `/knowledge/how-to-write-complaint`، `/knowledge/criminal-court-jurisdiction-guide`، `/knowledge/what-is-e-notification`، `/knowledge/online-judicial-services-guide`، `/knowledge/how-to-object-prosecution-orders` |
-| `/samples/phishing-unauthorized-withdrawal-complaint` | ۱. خدمت اصلی: `/services/petition-writing` و `/request?service=petition-writing`<br>۲. خدمات مکمل: `/services/legal-brief`، `/services/objection-non-prosecution-order`<br>۳. نمونه های مرتبط منتشرشده: `/samples/provisional-attachment-petition`، `/samples/evidence-preservation-petition`، `/samples/fraud-complaint`، `/samples/complaint`<br>۴. مقالات مرتبط منتشرشده: `/knowledge/how-to-write-complaint`، `/knowledge/criminal-court-jurisdiction-guide`، `/knowledge/what-is-e-notification`، `/knowledge/online-judicial-services-guide`، `/knowledge/how-to-object-prosecution-orders` |
+| `/knowledge/phishing-and-unauthorized-withdrawal-complaint` | ۱. خدمت اصلی (در متن و `relatedServices`): `/services/petition-writing` و `/request?service=petition-writing`<br>۲. خدمات مکمل (در متن و `relatedServices`): `/services/legal-brief`، `/services/objection-non-prosecution-order`<br>۳. نمونه های مکمل منتشرشده (در متن و `relatedSamples`): `/samples/complaint`، `/samples/fraud-complaint`، `/samples/objection-non-prosecution-order`، `/samples/legal-brief`<br>۴. مقالات آموزشی منتشرشده (در متن و `relatedArticles`): `/knowledge/how-to-write-complaint`، `/knowledge/criminal-court-jurisdiction-guide`، `/knowledge/what-is-e-notification`، `/knowledge/online-judicial-services-guide`، `/knowledge/how-to-object-prosecution-orders`، `/knowledge/petition-vs-complaint`، `/knowledge/what-is-legal-brief` |
+| `/samples/phishing-unauthorized-withdrawal-complaint` | ۱. خدمت اصلی (`serviceLink`، `relatedServices` و CTA): `/services/petition-writing` و `/request?service=petition-writing`<br>۲. خدمات مکمل (`relatedServices`): `/services/legal-brief`، `/services/objection-non-prosecution-order`<br>۳. نمونه های مرتبط منتشرشده (`relatedSamples`): `/samples/complaint`، `/samples/fraud-complaint`، `/samples/objection-non-prosecution-order`، `/samples/legal-brief`<br>۴. مقالات مرتبط منتشرشده (`relatedArticles`): `/knowledge/how-to-write-complaint`، `/knowledge/what-is-e-notification`، `/knowledge/how-to-object-prosecution-orders`، `/knowledge/criminal-court-jurisdiction-guide`، `/knowledge/online-judicial-services-guide` |
 
 ### ب) لینک های برنامه ریزی شده خوشه (برای فعال سازی همزمان با تغییر وضعیت به `published`)
 
 هنگامی که کارفرما مجوز تغییر وضعیت هاب مادر و خوشه اول را از `draft` به `published` صادر نماید، لینک های سه طرفه زیر فعال می شوند:
-1. از هاب مادر (`/knowledge/cybercrime-guide` بخش ۲) $\leftarrow$ به مقاله `/knowledge/phishing-and-unauthorized-withdrawal-complaint` و نمونه `/samples/phishing-unauthorized-withdrawal-complaint`.
+1. از هاب مادر (`/knowledge/cybercrime-guide` بخش ۱، بخش ۲ و `relatedArticles`) $\leftarrow$ به مقاله `/knowledge/phishing-and-unauthorized-withdrawal-complaint`، مقاله `/knowledge/cybercrime-complaint-guide` و نمونه `/samples/phishing-unauthorized-withdrawal-complaint`.
 2. از مقاله `/knowledge/phishing-and-unauthorized-withdrawal-complaint` $\leftarrow$ به هاب مادر `/knowledge/cybercrime-guide`، مقاله `/knowledge/cybercrime-complaint-guide` و نمونه اختصاصی `/samples/phishing-unauthorized-withdrawal-complaint`.
-3. از نمونه `/samples/phishing-unauthorized-withdrawal-complaint` $\leftarrow$ به مقاله `/knowledge/phishing-and-unauthorized-withdrawal-complaint` و هاب مادر `/knowledge/cybercrime-guide`.
+3. از نمونه `/samples/phishing-unauthorized-withdrawal-complaint` $\leftarrow$ به مقاله `/knowledge/phishing-and-unauthorized-withdrawal-complaint`، هاب مادر `/knowledge/cybercrime-guide` و مقاله `/knowledge/cybercrime-complaint-guide`.
 
 ---
 
@@ -58,21 +58,23 @@
   - **Title**: `شکایت از فیشینگ و برداشت غیرمجاز از حساب بانکی؛ مراحل و مدارک لازم`
   - **Meta Description**: `راهنمای شکایت از فیشینگ، درگاه جعلی و برداشت غیرمجاز از حساب بانکی؛ اقدامات فوری بانکی، مدارک لازم، ثبت شکواییه در دادسرا و پیگیری قضایی.`
   - **Canonical**: `https://www.negaresh-yar.ir/knowledge/phishing-and-unauthorized-withdrawal-complaint`
-  - **Featured Image URL**: `https://www.negaresh-yar.ir/images/seo/phishing-and-unauthorized-withdrawal-complaint.webp` (ابعاد `1200x675`)
-  - **Featured Image ALT**: `شکایت از فیشینگ و برداشت غیرمجاز از حساب بانکی؛ مراحل و مدارک لازم`
-  - **Schema Graph**: تولید خودکار در `KnowledgeArticleTemplate.tsx` شامل `Organization` (مشهد، خراسان رضوی، تلفن `+989915147789`، مختصات `36.2972, 59.6067`)، `WebSite`، `WebPage`، `Article`، `BreadcrumbList` و `FAQPage`.
+  - **Active Image Asset (موجود در `public/og-image.png`)**: `https://www.negaresh-yar.ir/og-image.png` (ابعاد `1200x630` — فعال در OpenGraph و Schema تا زمان تولید تصویر اختصاصی)
+  - **Proposed Featured Image Spec (پیشنهاد تصویر اختصاصی پیش از انتشار؛ فاقد فایل فیزیکی فعلی در `public/images/seo`)**: مسیر پیشنهادی `/images/seo/phishing-and-unauthorized-withdrawal-complaint.webp` (ابعاد `1200x675`) با `alt`: `شکایت از فیشینگ و برداشت غیرمجاز از حساب بانکی؛ مراحل و مدارک لازم`
+  - **Schema Graph**: تولید خودکار در `src/components/knowledge/KnowledgeArticleTemplate.tsx` شامل `Organization` (`#organization`: مشهد، خراسان رضوی، تلفن `+989915147789`، مختصات `36.2972, 59.6067`)، `WebSite`، `WebPage`، `Article`، `BreadcrumbList` و `FAQPage`.
 
 - **نمونه شکواییه اختصاصی (`/samples/phishing-unauthorized-withdrawal-complaint`)**:
   - **Title**: `نمونه شکواییه فیشینگ و برداشت غیرمجاز از حساب بانکی [متن آماده] | نگارش یار`
   - **Meta Description**: `متن آماده نمونه شکواییه فیشینگ، درگاه جعلی و برداشت غیرمجاز از حساب بانکی مستند به ماده ۱۳ قانون جرایم رایانه ای همراه با تقاضای تامین خواسته و مدارک بانکی.`
   - **Canonical**: `https://www.negaresh-yar.ir/samples/phishing-unauthorized-withdrawal-complaint`
-  - **Schema Graph**: تولید خودکار در `SampleLandingPageTemplate.tsx` شامل `WebPage`، `Article`، `BreadcrumbList`، `FAQPage` و `HowTo`.
+  - **Schema Graph**: تولید خودکار در `src/app/samples/[slug]/page.tsx` شامل `Organization` (`#organization`: مشهد، خراسان رضوی، تلفن `+989915147789`، مختصات `36.2972, 59.6067`)، `WebSite`، `WebPage`، `BreadcrumbList`، `Article`، `DigitalDocument` (به همراه `MediaObject`) و `FAQPage` (بدون `HowTo`).
+  - **ایزولاسیون وضعیت `draft`**: ثبت در `src/lib/stores/samples-store.ts` و فیلتر شدن خودکار از `allSamplesList` در `src/data/samples/index.ts`، `generateStaticParams`، `generateMetadata`، `DynamicSamplePage` و `sitemap.ts` تا زمان تغییر وضعیت به `published`.
 
 ---
 
 ## ۶. نکات نیازمند بررسی حقوقی انسانی (`[تأیید وکیل]`)
 
-در متن مقاله تخصصی، موارد ظریف حقوقی که بسته به شعبه دادیاری یا بازپرسی و اوضاع و احوال پرونده ممکن است تحلیل های متفاوتی داشته باشند با برچسب `[تأیید وکیل]` مشخص شده اند:
-1. مرز دقیق شمول ماده ۱۲ (سرقت رایانه ای داده ها) و ماده ۱۳ (کلاهبرداری مرتبط با رایانه) در فروض مختلف ربودن اطلاعات کارت و برداشت وجه.
-2. نحوه اعمال رای وحدت رویه شماره ۷۲۹ دیوان عالی کشور در فرض تعدد حساب های مبدا در حوزه های قضایی مختلف.
-3. تشخیص مسئولیت کیفری (معاونت در جرم) در برابر مسئولیت مدنی (ضمان قهری و استرداد مال مسروقه) برای دارندگان حساب های مقصد و حساب های اجاره ای.
+در متن مقاله تخصصی و نمونه شکواییه، موارد ظریف حقوقی که بسته به شعبه دادیاری یا بازپرسی و اوضاع و احوال پرونده ممکن است تحلیل های متفاوتی داشته باشند با برچسب `[تأیید وکیل]` مشخص شده اند:
+1. مرز دقیق شمول ماده ۱۲ (سرقت رایانه ای داده ها)، ماده ۱۳ (کلاهبرداری مرتبط با رایانه) و ماده ۶ (جعل رایانه ای) در فروض مختلف ربودن اطلاعات کارت و برداشت وجه.
+2. نحوه اعمال رای وحدت رویه شماره ۷۲۹ دیوان عالی کشور در فرض تعدد حساب های مبدا در حوزه های قضایی مختلف یا تعدد عناوین مجرمانه سایبری.
+3. تفکیک قرار تامین خواسته کیفری (ماده ۱۰۷ ق.آ.د.ک در دادسرا) از تامین خواسته حقوقی (ماده ۱۰۸ ق.آ.د.م) و عدم یکسانی رویه قضایی در شمول ماده ۱۴۸ ق.آ.د.ک (و تبصره ۲ آن) نسبت به استرداد مستقیم وجوه نقد در حساب های بانکی پیش از صدور حکم ماهوی.
+4. تفکیک مسئولیت کیفری (مستلزم احراز علم و عمد موضوع ماده ۱۲۶ قانون مجازات اسلامی) از مسئولیت مدنی (مستلزم طرح دادخواست حقوقی مستقل در صورت عدم احراز سوءنیت کیفری) برای دارندگان حساب های مقصد و حساب های اجاره ای.

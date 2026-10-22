@@ -2368,12 +2368,12 @@ export const allSamplesList: {
     slug: 'phishing-unauthorized-withdrawal-complaint',
     title: samplePhishingUnauthorizedWithdrawalComplaintData.title || samplePhishingUnauthorizedWithdrawalComplaintData.h1Title || '',
     description: samplePhishingUnauthorizedWithdrawalComplaintData.heroSubtitle || samplePhishingUnauthorizedWithdrawalComplaintData.shortDescription || '',
-    category: 'اوراق و دادخواست های قضایی',
+    category: 'شکواییه و امور کیفری',
     badge: 'شکواییه جرایم رایانه ای و بانکی',
     href: '/samples/phishing-unauthorized-withdrawal-complaint',
     data: samplePhishingUnauthorizedWithdrawalComplaintData,
   },
-];
+].filter((item) => item.data.status !== 'draft');
 
 export {
   sampleAdministrativeLetterData,

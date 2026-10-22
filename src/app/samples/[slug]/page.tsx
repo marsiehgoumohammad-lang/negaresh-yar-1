@@ -26,10 +26,14 @@ export async function generateMetadata({
   const { slug } = await params;
   const sample = getSampleBySlug(slug);
 
-  if (!sample) {
+  if (!sample || sample.status === 'draft') {
     return {
       title: 'نمونه سند یافت نشد | نگارش یار',
       description: 'نمونه سند حقوقی یا اداری موردنظر یافت نشد.',
+      robots: {
+        index: false,
+        follow: false,
+      },
     };
   }
 
