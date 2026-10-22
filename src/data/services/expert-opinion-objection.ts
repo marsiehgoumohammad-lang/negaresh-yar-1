@@ -3,6 +3,8 @@ import { Metadata } from 'next';
 
 export const expertOpinionObjectionData: ServiceLandingData = {
   slug: 'expert-opinion-objection',
+  lastUpdated: '2026-10-21',
+  lastUpdatedDisplay: '۱۴۰۵/۰۷/۲۹',
   categoryName: 'اعتراضات قضایی و امور کارشناسی',
   badge: 'اعتراض به نظریه کارشناسی رسمی دادگستری (ماده ۲۶۰ ق.آ.د.م)',
   h1Title: 'تنظیم لایحه اعتراض به نظریه کارشناسی رسمی دادگستری',
@@ -223,8 +225,8 @@ export const expertOpinionObjectionData: ServiceLandingData = {
 };
 
 export const expertOpinionObjectionMetadata: Metadata = {
-  title: 'تنظیم لایحه اعتراض به نظریه کارشناسی دادگستری | مهلت ماده ۲۶۰ - نگارش یار',
-  description: 'تنظیم تخصصی لایحه اعتراض به نظریه کارشناس رسمی دادگستری ظرف مهلت یک هفته ای ماده ۲۶۰ قانون آیین دادرسی مدنی جهت نقض گزارش و ارجاع پرونده به هیئت ۳ نفره کارشناسان.',
+  title: 'تنظیم لایحه اعتراض به نظریه کارشناسی رسمی دادگستری با کمترین هزینه',
+  description: 'تنظیم لایحه اعتراض به نظریه کارشناسی با بررسی گزارش، مدارک و ایرادهای فنی و حقوقی پرونده. متن نهایی متناسب با موضوع و دلایل شما آماده می شود.',
   keywords: [
     'اعتراض به نظریه کارشناسی',
     'لایحه اعتراض به کارشناسی',
@@ -239,8 +241,8 @@ export const expertOpinionObjectionMetadata: Metadata = {
     canonical: 'https://www.negaresh-yar.ir/services/expert-opinion-objection',
   },
   openGraph: {
-    title: 'تنظیم لایحه اعتراض به نظریه کارشناسی دادگستری | نگارش یار',
-    description: 'نگارش فنی و مستدل لایحه اعتراض به نظریه کارشناسی رسمی دادگستری ظرف مهلت قانونی یک هفته ای ماده ۲۶۰ ق.آ.د.م.',
+    title: 'تنظیم لایحه اعتراض به نظریه کارشناسی رسمی دادگستری با کمترین هزینه',
+    description: 'تنظیم لایحه اعتراض به نظریه کارشناسی با بررسی گزارش، مدارک و ایرادهای فنی و حقوقی پرونده. متن نهایی متناسب با موضوع و دلایل شما آماده می شود.',
     url: 'https://www.negaresh-yar.ir/services/expert-opinion-objection',
     type: 'website',
   },
