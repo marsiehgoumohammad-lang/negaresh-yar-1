@@ -176,6 +176,7 @@ import {
   sampleAbroadBornMotherIranianCitizenshipRequestData,
   sampleLitigationCostInsolvencyPetitionData,
   samplePhishingUnauthorizedWithdrawalComplaintData,
+  sampleUnauthorizedAccessHackingComplaintData,
 } from '@/data/samples';
 
 // Helper to normalize and ensure all required fields for a SampleDocument
@@ -462,6 +463,7 @@ const rawSamples: SampleDocument[] = [
   sampleAbroadBornMotherIranianCitizenshipRequestData,
   sampleLitigationCostInsolvencyPetitionData,
   samplePhishingUnauthorizedWithdrawalComplaintData,
+  sampleUnauthorizedAccessHackingComplaintData,
 ];
 const normalizedSamples = rawSamples.map(normalizeSample);
 

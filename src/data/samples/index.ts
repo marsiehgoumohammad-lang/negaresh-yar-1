@@ -237,6 +237,7 @@ import { sampleThirdPartyObjectionPetitionData, sampleThirdPartyObjectionPetitio
 import { sampleUnknownResidenceNewspaperPublicationRequestData, sampleUnknownResidenceNewspaperPublicationRequestMetadata } from './unknown-residence-newspaper-publication-request';
 import { sampleWitnessRebuttalObjectionBriefData, sampleWitnessRebuttalObjectionBriefMetadata } from './witness-rebuttal-objection-brief';
 import { samplePhishingUnauthorizedWithdrawalComplaintData, samplePhishingUnauthorizedWithdrawalComplaintMetadata } from './phishing-unauthorized-withdrawal-complaint';
+import { sampleUnauthorizedAccessHackingComplaintData, sampleUnauthorizedAccessHackingComplaintMetadata } from './unauthorized-access-hacking-complaint';
 
 import { SampleLandingData } from './types';
 
@@ -2373,6 +2374,15 @@ export const allSamplesList: {
     href: '/samples/phishing-unauthorized-withdrawal-complaint',
     data: samplePhishingUnauthorizedWithdrawalComplaintData,
   },
+  {
+    slug: 'unauthorized-access-hacking-complaint',
+    title: sampleUnauthorizedAccessHackingComplaintData.title || sampleUnauthorizedAccessHackingComplaintData.h1Title || '',
+    description: sampleUnauthorizedAccessHackingComplaintData.heroSubtitle || sampleUnauthorizedAccessHackingComplaintData.shortDescription || '',
+    category: 'شکواییه و امور کیفری',
+    badge: 'شکواییه هک و اخلال در سامانه',
+    href: '/samples/unauthorized-access-hacking-complaint',
+    data: sampleUnauthorizedAccessHackingComplaintData,
+  },
 ].filter((item) => item.data.status !== 'draft');
 
 export {
@@ -2810,6 +2820,8 @@ export {
   sampleWitnessRebuttalObjectionBriefMetadata,
   samplePhishingUnauthorizedWithdrawalComplaintData,
   samplePhishingUnauthorizedWithdrawalComplaintMetadata,
+  sampleUnauthorizedAccessHackingComplaintData,
+  sampleUnauthorizedAccessHackingComplaintMetadata,
 };
 
 

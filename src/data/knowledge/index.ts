@@ -99,6 +99,10 @@ import {
   phishingAndUnauthorizedWithdrawalComplaintData,
   phishingAndUnauthorizedWithdrawalComplaintMetadata,
 } from './phishing-and-unauthorized-withdrawal-complaint';
+import {
+  unauthorizedAccessHackingComplaintData,
+  unauthorizedAccessHackingComplaintMetadata,
+} from './unauthorized-access-hacking-complaint';
 
 export * from './types';
 
@@ -222,6 +226,7 @@ export const ALL_KNOWLEDGE_ARTICLES: KnowledgeArticleData[] = [
   cybercrimeGuideData,
   cybercrimeHubGuideData,
   phishingAndUnauthorizedWithdrawalComplaintData,
+  unauthorizedAccessHackingComplaintData,
 ];
 
 export const KNOWLEDGE_METADATA_MAP = {
@@ -278,6 +283,8 @@ export const KNOWLEDGE_METADATA_MAP = {
   'cybercrime-guide': cybercrimeHubGuideMetadata,
   'phishing-and-unauthorized-withdrawal-complaint':
     phishingAndUnauthorizedWithdrawalComplaintMetadata,
+  'unauthorized-access-hacking-complaint':
+    unauthorizedAccessHackingComplaintMetadata,
 };
 
 export function getKnowledgeArticleBySlug(slug: string): KnowledgeArticleData | undefined {
