@@ -237,6 +237,7 @@ import { sampleThirdPartyObjectionPetitionData, sampleThirdPartyObjectionPetitio
 import { sampleUnknownResidenceNewspaperPublicationRequestData, sampleUnknownResidenceNewspaperPublicationRequestMetadata } from './unknown-residence-newspaper-publication-request';
 import { sampleWitnessRebuttalObjectionBriefData, sampleWitnessRebuttalObjectionBriefMetadata } from './witness-rebuttal-objection-brief';
 import { samplePhishingUnauthorizedWithdrawalComplaintData, samplePhishingUnauthorizedWithdrawalComplaintMetadata } from './phishing-unauthorized-withdrawal-complaint';
+import { sampleFakeIdentityImpersonationData, sampleFakeIdentityImpersonationMetadata } from './fake-account-identity-impersonation-complaint';
 
 import { SampleLandingData } from './types';
 
@@ -2373,6 +2374,15 @@ export const allSamplesList: {
     href: '/samples/phishing-unauthorized-withdrawal-complaint',
     data: samplePhishingUnauthorizedWithdrawalComplaintData,
   },
+  {
+    slug: 'fake-account-identity-impersonation-complaint',
+    title: sampleFakeIdentityImpersonationData.title || sampleFakeIdentityImpersonationData.h1Title || '',
+    description: sampleFakeIdentityImpersonationData.heroSubtitle || sampleFakeIdentityImpersonationData.shortDescription || '',
+    category: 'شکواییه و امور کیفری',
+    badge: 'شکواییه جرایم هویت و حساب جعلی',
+    href: '/samples/fake-account-identity-impersonation-complaint',
+    data: sampleFakeIdentityImpersonationData,
+  },
 ].filter((item) => item.data.status !== 'draft');
 
 export {
@@ -2810,6 +2820,8 @@ export {
   sampleWitnessRebuttalObjectionBriefMetadata,
   samplePhishingUnauthorizedWithdrawalComplaintData,
   samplePhishingUnauthorizedWithdrawalComplaintMetadata,
+  sampleFakeIdentityImpersonationData,
+  sampleFakeIdentityImpersonationMetadata,
 };
 
 
