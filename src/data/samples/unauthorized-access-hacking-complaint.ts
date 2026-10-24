@@ -327,8 +327,7 @@ export const sampleUnauthorizedAccessHackingComplaintData: SampleLandingData = {
   messengerMessage:
     'سلام، برای تنظیم شکواییه تخصصی هک، دسترسی غیرمجاز و اخلال در سامانه رایانه ای نیاز به راهنمایی دارم.',
 
-  publishedAt: '2026-04-14T08:00:00.000Z',
-  updatedAt: '2026-04-14T12:00:00.000Z',
+  updatedAt: '2026-10-24T16:20:00.000Z',
   author: {
     name: 'تیم حقوقی نگارش یار',
     role: 'متخصص تنظیم اوراق قضایی و جرایم رایانه ای',
@@ -336,7 +335,7 @@ export const sampleUnauthorizedAccessHackingComplaintData: SampleLandingData = {
   reviewer: {
     name: 'بررسی و نظارت حقوقی نگارش یار',
     role: 'دپارتمان نظارت بر متون و استانداردهای دادرسی کیفری',
-    date: '2026-04-14',
+    date: '2026-10-24',
   },
 
   // Active links strictly target published 200 OK routes.
