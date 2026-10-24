@@ -15,6 +15,11 @@ export async function GET(request: NextRequest) {
     return new NextResponse('نمونه سند یافت نشد.', { status: 404 });
   }
 
+  // Draft samples must never be exposed through direct download requests.
+  if (sample.status !== 'published') {
+    return new NextResponse('نمونه سند یافت نشد.', { status: 404 });
+  }
+
   const title = sample.title || sample.h1Title || 'سند رسمی نگارش یار';
   const cleanTitle = title.replace(/[/\\?%*:|"<>]/g, '-');
   const textContent = (
