@@ -56,6 +56,8 @@ function mapRowToArticle(row: Record<string, unknown>): Article {
   const effectiveStatus: ArticleStatus =
     staticArticle?.status === 'draft'
       ? 'draft'
+      : staticArticle?.status === 'published'
+      ? 'published'
       : ((row.status as ArticleStatus) || 'draft');
 
   return {

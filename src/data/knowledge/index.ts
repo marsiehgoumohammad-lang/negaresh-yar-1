@@ -99,6 +99,26 @@ import {
   phishingAndUnauthorizedWithdrawalComplaintData,
   phishingAndUnauthorizedWithdrawalComplaintMetadata,
 } from './phishing-and-unauthorized-withdrawal-complaint';
+import {
+  onlineShoppingFraudComplaintData,
+  onlineShoppingFraudComplaintMetadata,
+} from './online-shopping-fraud-complaint';
+import {
+  unauthorizedAccessHackingComplaintData,
+  unauthorizedAccessHackingComplaintMetadata,
+} from './unauthorized-access-hacking-complaint';
+import {
+  privateImagePublicationThreatsData,
+  privateImagePublicationThreatsMetadata,
+} from './private-image-publication-threats-extortion-complaint';
+import {
+  fakeIdentityImpersonationData,
+  fakeIdentityImpersonationMetadata,
+} from './fake-account-identity-impersonation-complaint';
+import {
+  cybercrimeContentGapArticles,
+  cybercrimeContentGapMetadataMap,
+} from './cybercrime-content-gap-suite';
 
 export * from './types';
 
@@ -222,6 +242,11 @@ export const ALL_KNOWLEDGE_ARTICLES: KnowledgeArticleData[] = [
   cybercrimeGuideData,
   cybercrimeHubGuideData,
   phishingAndUnauthorizedWithdrawalComplaintData,
+  onlineShoppingFraudComplaintData,
+  unauthorizedAccessHackingComplaintData,
+  privateImagePublicationThreatsData,
+  fakeIdentityImpersonationData,
+  ...cybercrimeContentGapArticles,
 ];
 
 export const KNOWLEDGE_METADATA_MAP = {
@@ -278,6 +303,14 @@ export const KNOWLEDGE_METADATA_MAP = {
   'cybercrime-guide': cybercrimeHubGuideMetadata,
   'phishing-and-unauthorized-withdrawal-complaint':
     phishingAndUnauthorizedWithdrawalComplaintMetadata,
+  'online-shopping-fraud-complaint': onlineShoppingFraudComplaintMetadata,
+  'unauthorized-access-hacking-complaint':
+    unauthorizedAccessHackingComplaintMetadata,
+  'private-image-publication-threats-extortion-complaint':
+    privateImagePublicationThreatsMetadata,
+  'fake-account-identity-impersonation-complaint':
+    fakeIdentityImpersonationMetadata,
+  ...cybercrimeContentGapMetadataMap,
 };
 
 export function getKnowledgeArticleBySlug(slug: string): KnowledgeArticleData | undefined {

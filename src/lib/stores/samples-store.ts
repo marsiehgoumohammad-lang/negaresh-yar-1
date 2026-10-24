@@ -176,6 +176,10 @@ import {
   sampleAbroadBornMotherIranianCitizenshipRequestData,
   sampleLitigationCostInsolvencyPetitionData,
   samplePhishingUnauthorizedWithdrawalComplaintData,
+  sampleOnlineShoppingFraudComplaintData,
+  sampleUnauthorizedAccessHackingComplaintData,
+  samplePrivateImagePublicationThreatsData,
+  sampleFakeIdentityImpersonationData,
 } from '@/data/samples';
 
 // Helper to normalize and ensure all required fields for a SampleDocument
@@ -462,6 +466,10 @@ const rawSamples: SampleDocument[] = [
   sampleAbroadBornMotherIranianCitizenshipRequestData,
   sampleLitigationCostInsolvencyPetitionData,
   samplePhishingUnauthorizedWithdrawalComplaintData,
+  sampleOnlineShoppingFraudComplaintData,
+  sampleUnauthorizedAccessHackingComplaintData,
+  samplePrivateImagePublicationThreatsData,
+  sampleFakeIdentityImpersonationData,
 ];
 const normalizedSamples = rawSamples.map(normalizeSample);
 
@@ -475,7 +483,7 @@ export function getPublishedSamples(): SampleDocument[] {
 
 export function getSampleBySlug(slug: string): SampleDocument | undefined {
   if (!slug) return undefined;
-  return normalizedSamples.find((sample) => sample.slug === slug);
+  return normalizedSamples.find((sample) => sample.slug === slug && sample.status === 'published');
 }
 
 export function getSamplesByCategory(category: string): SampleDocument[] {

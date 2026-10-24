@@ -237,6 +237,10 @@ import { sampleThirdPartyObjectionPetitionData, sampleThirdPartyObjectionPetitio
 import { sampleUnknownResidenceNewspaperPublicationRequestData, sampleUnknownResidenceNewspaperPublicationRequestMetadata } from './unknown-residence-newspaper-publication-request';
 import { sampleWitnessRebuttalObjectionBriefData, sampleWitnessRebuttalObjectionBriefMetadata } from './witness-rebuttal-objection-brief';
 import { samplePhishingUnauthorizedWithdrawalComplaintData, samplePhishingUnauthorizedWithdrawalComplaintMetadata } from './phishing-unauthorized-withdrawal-complaint';
+import { sampleOnlineShoppingFraudComplaintData, sampleOnlineShoppingFraudComplaintMetadata } from './online-shopping-fraud-complaint';
+import { sampleUnauthorizedAccessHackingComplaintData, sampleUnauthorizedAccessHackingComplaintMetadata } from './unauthorized-access-hacking-complaint';
+import { samplePrivateImagePublicationThreatsData, samplePrivateImagePublicationThreatsMetadata } from './private-image-publication-threats-extortion-complaint';
+import { sampleFakeIdentityImpersonationData, sampleFakeIdentityImpersonationMetadata } from './fake-account-identity-impersonation-complaint';
 
 import { SampleLandingData } from './types';
 
@@ -2373,6 +2377,42 @@ export const allSamplesList: {
     href: '/samples/phishing-unauthorized-withdrawal-complaint',
     data: samplePhishingUnauthorizedWithdrawalComplaintData,
   },
+  {
+    slug: 'online-shopping-fraud-complaint',
+    title: sampleOnlineShoppingFraudComplaintData.title || sampleOnlineShoppingFraudComplaintData.h1Title || '',
+    description: sampleOnlineShoppingFraudComplaintData.heroSubtitle || sampleOnlineShoppingFraudComplaintData.shortDescription || '',
+    category: 'شکواییه و امور کیفری',
+    badge: 'شکواییه کلاهبرداری خرید اینترنتی',
+    href: '/samples/online-shopping-fraud-complaint',
+    data: sampleOnlineShoppingFraudComplaintData,
+  },
+  {
+    slug: 'unauthorized-access-hacking-complaint',
+    title: sampleUnauthorizedAccessHackingComplaintData.title || sampleUnauthorizedAccessHackingComplaintData.h1Title || '',
+    description: sampleUnauthorizedAccessHackingComplaintData.heroSubtitle || sampleUnauthorizedAccessHackingComplaintData.shortDescription || '',
+    category: 'شکواییه و امور کیفری',
+    badge: 'شکواییه جرایم رایانه ای و هک',
+    href: '/samples/unauthorized-access-hacking-complaint',
+    data: sampleUnauthorizedAccessHackingComplaintData,
+  },
+  {
+    slug: 'private-image-publication-threats-extortion-complaint',
+    title: samplePrivateImagePublicationThreatsData.title || samplePrivateImagePublicationThreatsData.h1Title || '',
+    description: samplePrivateImagePublicationThreatsData.heroSubtitle || samplePrivateImagePublicationThreatsData.shortDescription || '',
+    category: 'شکواییه و امور کیفری',
+    badge: 'شکواییه حریم خصوصی و تهدید اینترنتی',
+    href: '/samples/private-image-publication-threats-extortion-complaint',
+    data: samplePrivateImagePublicationThreatsData,
+  },
+  {
+    slug: 'fake-account-identity-impersonation-complaint',
+    title: sampleFakeIdentityImpersonationData.title || sampleFakeIdentityImpersonationData.h1Title || '',
+    description: sampleFakeIdentityImpersonationData.heroSubtitle || sampleFakeIdentityImpersonationData.shortDescription || '',
+    category: 'شکواییه و امور کیفری',
+    badge: 'شکواییه جرایم هویت و حساب جعلی',
+    href: '/samples/fake-account-identity-impersonation-complaint',
+    data: sampleFakeIdentityImpersonationData,
+  },
 ].filter((item) => item.data.status !== 'draft');
 
 export {
@@ -2810,6 +2850,14 @@ export {
   sampleWitnessRebuttalObjectionBriefMetadata,
   samplePhishingUnauthorizedWithdrawalComplaintData,
   samplePhishingUnauthorizedWithdrawalComplaintMetadata,
+  sampleOnlineShoppingFraudComplaintData,
+  sampleOnlineShoppingFraudComplaintMetadata,
+  sampleUnauthorizedAccessHackingComplaintData,
+  sampleUnauthorizedAccessHackingComplaintMetadata,
+  samplePrivateImagePublicationThreatsData,
+  samplePrivateImagePublicationThreatsMetadata,
+  sampleFakeIdentityImpersonationData,
+  sampleFakeIdentityImpersonationMetadata,
 };
 
 
