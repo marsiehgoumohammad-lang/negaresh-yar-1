@@ -58,12 +58,14 @@ export const phishingAndUnauthorizedWithdrawalComplaintData: KnowledgeArticleDat
   slug: 'phishing-and-unauthorized-withdrawal-complaint',
   category: 'شکایت کیفری و جرایم رایانه ای',
   badge: 'راهنمای تخصصی فیشینگ و جرایم بانکی',
-  status: 'draft',
+  status: 'published',
   h1Title: 'شکایت از فیشینگ و برداشت غیرمجاز از حساب بانکی؛ مراحل و مدارک لازم',
   heroSubtitle:
     'راهنمای گام به گام اقدام فوری پس از خالی شدن حساب بانکی از طریق درگاه جعلی یا پیامک آلوده، مدارک بانکی مورد نیاز، نحوه ثبت شکواییه در دفاتر خدمات قضایی و پیگیری در دادسرا.',
   readTime: '۱۶ دقیقه مطالعه',
-  lastUpdated: 'مهر ۱۴۰۵',
+  lastUpdated: '۱۴۰۵/۰۸/۰۲',
+  datePublished: '2026-10-24',
+  dateModified: '2026-10-24',
   heroTrustChips: [
     'مستند به مواد ۱۲ و ۱۳ قانون جرایم رایانه ای (مواد ۷۴۰ و ۷۴۱ تعزیرات)',
     'تعیین دادسرای صالح طبق رای وحدت رویه ۷۲۹ دیوان عالی کشور',
@@ -343,20 +345,24 @@ export const phishingAndUnauthorizedWithdrawalComplaintData: KnowledgeArticleDat
     },
   ],
 
-  // یادداشت معماری خوشه: نمونه اختصاصی /samples/phishing-unauthorized-withdrawal-complaint در وضعیت draft ایجاد شده است
-  // و پس از تایید و انتشار همزمان خوشه، در صدر relatedSamples قرار می گیرد تا در حالت فعلی لینک فعالی به مقصد منتشرنشده وجود نداشته باشد.
   relatedSamples: [
+    {
+      title: 'نمونه شکواییه فیشینگ و برداشت غیرمجاز از حساب بانکی',
+      href: '/samples/phishing-unauthorized-withdrawal-complaint',
+      desc: 'متن آماده و تخصصی شکواییه فیشینگ، درگاه جعلی و تقاضای تامین خواسته کیفری (ماده ۱۰۷ ق.آ.د.ک).',
+      badge: 'نمونه اختصاصی فیشینگ',
+    },
+    {
+      title: 'نمونه شکواییه کلاهبرداری خرید اینترنتی و عدم ارسال کالا',
+      href: '/samples/online-shopping-fraud-complaint',
+      desc: 'الگوی شکواییه برای موارد پرداخت در فروشگاه یا پیج جعلی و عدم ارسال کالا.',
+      badge: 'خرید اینترنتی',
+    },
     {
       title: 'نمونه شکواییه کیفری دادسرا',
       href: '/samples/complaint',
       desc: 'چارچوب و ساختار استاندارد شکواییه کیفری برای طرح شکایت در دادسرای عمومی و انقلاب.',
       badge: 'شکواییه کیفری',
-    },
-    {
-      title: 'نمونه شکواییه کلاهبرداری',
-      href: '/samples/fraud-complaint',
-      desc: 'الگوی شکواییه کلاهبرداری در مواردی که انتقال وجه ناشی از فریب و مانور متقلبانه بوده است.',
-      badge: 'کلاهبرداری',
     },
     {
       title: 'نمونه لایحه اعتراض به قرار منع تعقیب',
@@ -372,32 +378,36 @@ export const phishingAndUnauthorizedWithdrawalComplaintData: KnowledgeArticleDat
     },
   ],
 
-  // یادداشت معماری خوشه: مقالات /knowledge/cybercrime-guide و /knowledge/cybercrime-complaint-guide در وضعیت draft هستند
-  // و پس از انتشار، به عنوان لینک های دوطرفه خوشه در relatedArticles فعال می شوند.
   relatedArticles: [
     {
-      title: 'چگونه شکواییه کیفری بنویسیم؟ راهنمای کامل تنظیم شکایت نامه دادسرا',
-      href: '/knowledge/how-to-write-complaint',
-      desc: 'آموزش ارکان شکواییه، نحوه تنظیم شرح شکایت و ثبت در دفاتر خدمات الکترونیک قضایی.',
-      category: 'شکواییه و امور کیفری',
+      title: 'راهنمای جامع جرایم فضای مجازی و پیگیری قانونی آنها',
+      href: '/knowledge/cybercrime-guide',
+      desc: 'هاب مرجع شناخت انواع جرایم سایبری، حفظ ادله دیجیتال و مراحل ثبت شکواییه در دادسرا.',
+      category: 'شکایت کیفری و جرایم رایانه ای',
+    },
+    {
+      title: 'راهنمای شکایت پلیس فتا و پیگیری قانونی جرایم رایانه ای',
+      href: '/knowledge/cybercrime-complaint-guide',
+      desc: 'تفکیک وظایف دفاتر خدمات قضایی و ضابطان، مواد ۳۷، ۴۴ تا ۴۶، ۱۰۷ و ۱۴۸ آیین دادرسی کیفری.',
+      category: 'شکایت کیفری و جرایم رایانه ای',
+    },
+    {
+      title: 'شکایت از کلاهبرداری خرید اینترنتی، فروشگاه جعلی و عدم ارسال کالا',
+      href: '/knowledge/online-shopping-fraud-complaint',
+      desc: 'مرز اختلاف قراردادی با کلاهبرداری، ماده ۶۷ قانون تجارت الکترونیکی و رای وحدت رویه ۸۵۳ دیوان عالی کشور.',
+      category: 'شکایت کیفری و جرایم رایانه ای',
+    },
+    {
+      title: 'شکایت از هک و دسترسی غیرمجاز به حساب کاربری و سامانه رایانه ای',
+      href: '/knowledge/unauthorized-access-hacking-complaint',
+      desc: 'تفکیک مواد ۷۲۹ تا ۷۳۸ تعزیرات، دستور حفاظت فوری داده های ترافیکی و صلاحیت دادسرا.',
+      category: 'شکایت کیفری و جرایم رایانه ای',
     },
     {
       title: 'ابلاغیه الکترونیکی ثنا چیست؟ و روش تشخیص پیامک های جعلی فیشینگ',
       href: '/knowledge/what-is-e-notification',
       desc: 'راهنمای مشاهده ابلاغیه در سامانه عدل ایران و شناسایی پیامک های جعلی ابلاغیه قضایی.',
       category: 'سامانه های دولتی و کافی نت آنلاین',
-    },
-    {
-      title: 'راهنمای اعتراض به قرار منع تعقیب و موقوفی تعقیب در دادسرا',
-      href: '/knowledge/how-to-object-prosecution-orders',
-      desc: 'بررسی مهلت ۱۰ روزه اعتراض، جهات نقض قرار منع تعقیب و تقاضای تکمیل تحقیقات در دادسرا.',
-      category: 'اعتراض به آرا و تصمیمات قضایی',
-    },
-    {
-      title: 'تفاوت دادخواست و شکواییه چیست؟ جدول مقایسه و راهنمای انتخاب',
-      href: '/knowledge/petition-vs-complaint',
-      desc: 'تشخیص مرز شکایت کیفری در دادسرا با دادخواست حقوقی مطالبه وجه در دادگاه.',
-      category: 'دادخواست و دعاوی حقوقی',
     },
     {
       title: 'راهنمای صلاحیت دادگاه های کیفری و مراجع رسیدگی',

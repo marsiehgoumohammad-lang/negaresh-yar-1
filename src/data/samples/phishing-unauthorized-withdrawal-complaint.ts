@@ -280,14 +280,24 @@ export const samplePhishingUnauthorizedWithdrawalComplaintData: SampleLandingDat
     },
   ],
 
-  // یادداشت معماری خوشه: مقالات /knowledge/phishing-and-unauthorized-withdrawal-complaint، /knowledge/cybercrime-guide
-  // و /knowledge/cybercrime-complaint-guide در وضعیت draft هستند و پس از انتشار خوشه، در صدر relatedArticles قرار می گیرند.
   relatedArticles: [
     {
-      title: 'چگونه شکواییه کیفری بنویسیم؟ راهنمای کامل تنظیم شکایت نامه دادسرا',
-      href: '/knowledge/how-to-write-complaint',
-      desc: 'آموزش ارکان شکواییه، نحوه تنظیم شرح شکایت و ثبت در دفاتر خدمات الکترونیک قضایی.',
-      badge: 'راهنمای شکواییه',
+      title: 'شکایت از فیشینگ، لینک جعلی و برداشت غیرمجاز از حساب بانکی',
+      href: '/knowledge/phishing-and-unauthorized-withdrawal-complaint',
+      desc: 'راهنمای تخصصی مراحل مسدودسازی، استناد به ماده ۱۳ قانون جرایم رایانه ای و رای وحدت رویه ۷۲۹.',
+      badge: 'راهنمای فیشینگ',
+    },
+    {
+      title: 'راهنمای جامع جرایم فضای مجازی و پیگیری قانونی آنها',
+      href: '/knowledge/cybercrime-guide',
+      desc: 'هاب مرجع شناخت انواع جرایم سایبری، حفظ ادله دیجیتال و مراحل ثبت شکواییه در دادسرا.',
+      badge: 'هاب جرایم سایبری',
+    },
+    {
+      title: 'راهنمای شکایت پلیس فتا و پیگیری قانونی جرایم رایانه ای',
+      href: '/knowledge/cybercrime-complaint-guide',
+      desc: 'تفکیک وظایف دفاتر خدمات قضایی و ضابطان و شرایط مواد ۱۰۷ و ۱۴۸ آیین دادرسی کیفری.',
+      badge: 'راهنمای پلیس فتا',
     },
     {
       title: 'ابلاغیه الکترونیکی ثنا چیست؟ و روش تشخیص پیامک های جعلی فیشینگ',
@@ -296,26 +306,26 @@ export const samplePhishingUnauthorizedWithdrawalComplaintData: SampleLandingDat
       badge: 'سامانه ثنا',
     },
     {
-      title: 'راهنمای اعتراض به قرار منع تعقیب و موقوفی تعقیب در دادسرا',
-      href: '/knowledge/how-to-object-prosecution-orders',
-      desc: 'مراحل و مهلت قانونی اعتراض به قرارهای دادسرا در پرونده های کیفری.',
-      badge: 'اعتراض به قرار',
-    },
-    {
       title: 'راهنمای صلاحیت دادگاه های کیفری و مراجع رسیدگی',
       href: '/knowledge/criminal-court-jurisdiction-guide',
       desc: 'آشنایی با قواعد صلاحیت محلی و ذاتی دادسراها و دادگاه های کیفری در حقوق ایران.',
       badge: 'صلاحیت کیفری',
     },
-    {
-      title: 'راهنمای جامع دفاتر خدمات الکترونیک قضایی و ثبت شکواییه',
-      href: '/knowledge/online-judicial-services-guide',
-      desc: 'مراحل ثبت شکواییه، ارسال لوایح و پیگیری پرونده از طریق دفاتر خدمات الکترونیک قضایی.',
-      badge: 'خدمات قضایی',
-    },
   ],
 
   relatedSamples: [
+    {
+      title: 'نمونه شکواییه کلاهبرداری خرید اینترنتی و عدم ارسال کالا',
+      href: '/samples/online-shopping-fraud-complaint',
+      desc: 'متن آماده شکواییه برای موارد پرداخت در فروشگاه یا پیج جعلی و عدم ارسال کالا.',
+      badge: 'خرید اینترنتی',
+    },
+    {
+      title: 'نمونه شکواییه هک، دسترسی غیرمجاز و اخلال در سامانه رایانه ای',
+      href: '/samples/unauthorized-access-hacking-complaint',
+      desc: 'فرمت رسمی شکایت از نفوذ به حساب کاربری، تغییر رمز و اخلال در داده ها.',
+      badge: 'هک و نفوذ',
+    },
     {
       title: 'نمونه شکواییه کیفری دادسرا',
       href: '/samples/complaint',
@@ -323,22 +333,10 @@ export const samplePhishingUnauthorizedWithdrawalComplaintData: SampleLandingDat
       badge: 'شکواییه عام',
     },
     {
-      title: 'نمونه شکواییه کلاهبرداری',
-      href: '/samples/fraud-complaint',
-      desc: 'نمونه شکواییه برای موارد انتقال وجه ناشی از فریب و مانور متقلبانه (ماده ۱ قانون تشدید).',
-      badge: 'کلاهبرداری',
-    },
-    {
       title: 'نمونه لایحه اعتراض به قرار منع تعقیب',
       href: '/samples/objection-non-prosecution-order',
       desc: 'الگوی اعتراض قانونی به قرار منع تعقیب صادره از شعبه بازپرسی یا دادیاری دادسرا.',
       badge: 'اعتراض کیفری',
-    },
-    {
-      title: 'نمونه لایحه دفاعیه و تکمیلی',
-      href: '/samples/legal-brief',
-      desc: 'فرمت رسمی تقدیم لایحه تکمیلی به بازپرس جهت اعلام حساب های مقصد و تقاضای استعلام.',
-      badge: 'لایحه قضایی',
     },
   ],
 
@@ -350,7 +348,8 @@ export const samplePhishingUnauthorizedWithdrawalComplaintData: SampleLandingDat
   messengerMessage:
     'سلام، برای تنظیم شکواییه اختصاصی در مورد فیشینگ و برداشت غیرمجاز از حساب بانکی راهنمایی می خواستم.',
 
-  updatedAt: '2026-10-21T08:00:00.000Z',
+  publishedAt: '2026-10-24T08:00:00.000Z',
+  updatedAt: '2026-10-24T23:00:00.000Z',
   author: {
     name: 'دپارتمان حقوق کیفری و جرایم رایانه ای نگارش یار',
     role: 'پژوهش مقررات جرایم سایبری و بانکی',
@@ -358,8 +357,9 @@ export const samplePhishingUnauthorizedWithdrawalComplaintData: SampleLandingDat
   reviewer: {
     name: 'شورای نظارت حقوقی نگارش یار',
     role: 'بررسی تطبیقی قانون جرایم رایانه ای و آیین دادرسی کیفری',
+    date: '2026-10-24',
   },
-  status: 'draft',
+  status: 'published',
 };
 
 export const samplePhishingUnauthorizedWithdrawalComplaintMetadata: Metadata = {
@@ -387,5 +387,11 @@ export const samplePhishingUnauthorizedWithdrawalComplaintMetadata: Metadata = {
     siteName: 'نگارش یار',
     locale: 'fa_IR',
     type: 'article',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'نمونه شکواییه فیشینگ و برداشت غیرمجاز از حساب بانکی [متن آماده] | نگارش یار',
+    description:
+      'الگوی رسمی شکواییه کیفری برداشت غیرمجاز از حساب بانکی و فیشینگ به همراه چک لیست مدارک بانکی و تقاضای تامین خواسته.',
   },
 };
