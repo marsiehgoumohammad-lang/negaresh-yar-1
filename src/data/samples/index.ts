@@ -237,6 +237,7 @@ import { sampleThirdPartyObjectionPetitionData, sampleThirdPartyObjectionPetitio
 import { sampleUnknownResidenceNewspaperPublicationRequestData, sampleUnknownResidenceNewspaperPublicationRequestMetadata } from './unknown-residence-newspaper-publication-request';
 import { sampleWitnessRebuttalObjectionBriefData, sampleWitnessRebuttalObjectionBriefMetadata } from './witness-rebuttal-objection-brief';
 import { samplePhishingUnauthorizedWithdrawalComplaintData, samplePhishingUnauthorizedWithdrawalComplaintMetadata } from './phishing-unauthorized-withdrawal-complaint';
+import { samplePrivateImagePublicationThreatsData, samplePrivateImagePublicationThreatsMetadata } from './private-image-publication-threats-extortion-complaint';
 
 import { SampleLandingData } from './types';
 
@@ -2373,6 +2374,15 @@ export const allSamplesList: {
     href: '/samples/phishing-unauthorized-withdrawal-complaint',
     data: samplePhishingUnauthorizedWithdrawalComplaintData,
   },
+  {
+    slug: 'private-image-publication-threats-extortion-complaint',
+    title: samplePrivateImagePublicationThreatsData.title || samplePrivateImagePublicationThreatsData.h1Title || '',
+    description: samplePrivateImagePublicationThreatsData.heroSubtitle || samplePrivateImagePublicationThreatsData.shortDescription || '',
+    category: 'شکواییه و امور کیفری',
+    badge: 'شکواییه حریم خصوصی و تهدید اینترنتی',
+    href: '/samples/private-image-publication-threats-extortion-complaint',
+    data: samplePrivateImagePublicationThreatsData,
+  },
 ].filter((item) => item.data.status !== 'draft');
 
 export {
@@ -2810,6 +2820,8 @@ export {
   sampleWitnessRebuttalObjectionBriefMetadata,
   samplePhishingUnauthorizedWithdrawalComplaintData,
   samplePhishingUnauthorizedWithdrawalComplaintMetadata,
+  samplePrivateImagePublicationThreatsData,
+  samplePrivateImagePublicationThreatsMetadata,
 };
 
 
