@@ -436,5 +436,5 @@ export const cybercrimeContentGapMetadataMap: Record<string, Metadata> = Object.
     alternates: { canonical: `${base}/knowledge/${spec.slug}` },
     openGraph: { title: seoTitleFor(spec), description: spec.description, url: `${base}/knowledge/${spec.slug}`, siteName: 'نگارشیار', locale: 'fa_IR', type: 'article' },
     twitter: { card: 'summary_large_image', title: seoTitleFor(spec), description: spec.description },
-  } satisfies Metadata]),
+  } satisfies Metadata] as const),
 );
