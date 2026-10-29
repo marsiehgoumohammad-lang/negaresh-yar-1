@@ -95,9 +95,9 @@ export function adaptArticleToKnowledgeData(article: Article): KnowledgeArticleD
   if (staticMatch && parsedSections.length === 0) {
     return {
       ...staticMatch,
-      h1Title: article.title || staticMatch.h1Title,
-      heroSubtitle: article.excerpt || staticMatch.heroSubtitle,
-      category: article.category || staticMatch.category,
+      h1Title: staticMatch.h1Title || article.title,
+      heroSubtitle: staticMatch.heroSubtitle || article.excerpt || '',
+      category: staticMatch.category || article.category || '',
       lastUpdated: staticMatch.lastUpdated,
       datePublished: staticMatch.datePublished,
       dateModified: staticMatch.dateModified,

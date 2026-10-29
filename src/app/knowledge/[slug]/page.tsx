@@ -21,14 +21,25 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     };
   }
 
-  const rawTitle = (article.metaTitle || article.title || '').trim();
+  const staticMeta = KNOWLEDGE_METADATA_MAP[slug as keyof typeof KNOWLEDGE_METADATA_MAP];
+  const staticTitle =
+    typeof staticMeta?.title === 'string'
+      ? staticMeta.title
+      : staticMeta?.title && typeof staticMeta.title === 'object' && 'absolute' in staticMeta.title
+      ? String(staticMeta.title.absolute || '')
+      : '';
+
+  const rawTitle = (staticTitle || article.metaTitle || article.title || '').trim();
   const cleanTitle = rawTitle.replace(/\s*[-|]\s*نگارش یار\s*$/g, '').trim();
   const baseTitle = cleanTitle;
   const fullSeoTitle = `${cleanTitle} | نگارش یار`;
-  
-  const rawDesc = (article.metaDescription || article.excerpt || '').trim();
+
+  const staticDesc = typeof staticMeta?.description === 'string' ? staticMeta.description.trim() : '';
+  const rawDesc = (staticDesc || article.metaDescription || article.excerpt || '').trim();
   let description = '';
-  if (article.metaDescription && article.metaDescription.trim().length >= 30) {
+  if (staticDesc && staticDesc.length >= 30) {
+    description = staticDesc;
+  } else if (article.metaDescription && article.metaDescription.trim().length >= 30) {
     description = article.metaDescription.trim();
   } else if (rawDesc && rawDesc.length >= 30 && rawDesc.length <= 100) {
     description = `راهنمای کامل ${baseTitle}؛ ${rawDesc.replace(/\.$/, '')} + دانلود نمونه متن و مشاوره تخصصی در نگارش یار.`;
@@ -36,11 +47,17 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     description = `راهنمای گام به گام و حقوقی ${baseTitle} همراه با تشریح مواد قانونی، مواعد رسمی، دانلود رایگان نمونه متن و مشاوره تنظیم در نگارش یار.`;
   }
 
-  const keywords = article.keywords && article.keywords.length > 0
+  const staticKeywords = Array.isArray(staticMeta?.keywords)
+    ? staticMeta.keywords
+    : typeof staticMeta?.keywords === 'string'
+    ? [staticMeta.keywords]
+    : undefined;
+
+  const keywords = staticKeywords && staticKeywords.length > 0
+    ? staticKeywords
+    : article.keywords && article.keywords.length > 0
     ? article.keywords
     : [article.category || 'حقوقی', baseTitle, `راهنمای ${baseTitle}`, 'نگارش یار', 'پایگاه دانش'];
-
-  const staticMeta = KNOWLEDGE_METADATA_MAP[slug as keyof typeof KNOWLEDGE_METADATA_MAP];
   const customOgImages = staticMeta?.openGraph && 'images' in staticMeta.openGraph ? staticMeta.openGraph.images : undefined;
   const ogImages = Array.isArray(customOgImages) && customOgImages.length > 0
     ? customOgImages
