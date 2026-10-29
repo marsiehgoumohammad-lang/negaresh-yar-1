@@ -3,7 +3,7 @@ import { notFound } from 'next/navigation';
 import { getArticleBySlug } from '@/lib/stores/articles-store';
 import { adaptArticleToKnowledgeData } from '@/lib/knowledge-adapter';
 import { KnowledgeArticleTemplate } from '@/components/knowledge/KnowledgeArticleTemplate';
-import { KNOWLEDGE_METADATA_MAP } from '@/data/knowledge';
+import { ALL_KNOWLEDGE_ARTICLES, KNOWLEDGE_METADATA_MAP } from '@/data/knowledge';
 
 export const dynamic = 'force-dynamic';
 
@@ -21,6 +21,13 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     };
   }
 
+  const staticArticle = ALL_KNOWLEDGE_ARTICLES.find((a) => a.slug === slug);
+  const isStaticNewer = Boolean(
+    staticArticle?.dateModified &&
+      article.updatedAt &&
+      Date.parse(staticArticle.dateModified) > Date.parse(article.updatedAt)
+  );
+
   const staticMeta = KNOWLEDGE_METADATA_MAP[slug as keyof typeof KNOWLEDGE_METADATA_MAP];
   const staticTitle =
     typeof staticMeta?.title === 'string'
@@ -29,18 +36,23 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       ? String(staticMeta.title.absolute || '')
       : '';
 
-  const rawTitle = (staticTitle || article.metaTitle || article.title || '').trim();
+  const rawTitle = (
+    (isStaticNewer ? staticTitle : '') ||
+    article.metaTitle ||
+    article.title ||
+    staticTitle ||
+    ''
+  ).trim();
   const cleanTitle = rawTitle.replace(/\s*[-|]\s*نگارش یار\s*$/g, '').trim();
   const baseTitle = cleanTitle;
   const fullSeoTitle = `${cleanTitle} | نگارش یار`;
 
   const staticDesc = typeof staticMeta?.description === 'string' ? staticMeta.description.trim() : '';
-  const rawDesc = (staticDesc || article.metaDescription || article.excerpt || '').trim();
+  const preferredMetaDesc = isStaticNewer && staticDesc ? staticDesc : (article.metaDescription || '').trim();
+  const rawDesc = (preferredMetaDesc || article.excerpt || staticDesc || '').trim();
   let description = '';
-  if (staticDesc && staticDesc.length >= 30) {
-    description = staticDesc;
-  } else if (article.metaDescription && article.metaDescription.trim().length >= 30) {
-    description = article.metaDescription.trim();
+  if (preferredMetaDesc && preferredMetaDesc.length >= 30) {
+    description = preferredMetaDesc;
   } else if (rawDesc && rawDesc.length >= 30 && rawDesc.length <= 100) {
     description = `راهنمای کامل ${baseTitle}؛ ${rawDesc.replace(/\.$/, '')} + دانلود نمونه متن و مشاوره تخصصی در نگارش یار.`;
   } else {
@@ -53,11 +65,14 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     ? [staticMeta.keywords]
     : undefined;
 
-  const keywords = staticKeywords && staticKeywords.length > 0
-    ? staticKeywords
-    : article.keywords && article.keywords.length > 0
-    ? article.keywords
-    : [article.category || 'حقوقی', baseTitle, `راهنمای ${baseTitle}`, 'نگارش یار', 'پایگاه دانش'];
+  const keywords =
+    isStaticNewer && staticKeywords && staticKeywords.length > 0
+      ? staticKeywords
+      : article.keywords && article.keywords.length > 0
+      ? article.keywords
+      : staticKeywords && staticKeywords.length > 0
+      ? staticKeywords
+      : [article.category || 'حقوقی', baseTitle, `راهنمای ${baseTitle}`, 'نگارش یار', 'پایگاه دانش'];
   const customOgImages = staticMeta?.openGraph && 'images' in staticMeta.openGraph ? staticMeta.openGraph.images : undefined;
   const ogImages = Array.isArray(customOgImages) && customOgImages.length > 0
     ? customOgImages

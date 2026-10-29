@@ -93,11 +93,24 @@ export function adaptArticleToKnowledgeData(article: Article): KnowledgeArticleD
 
   // If staticMatch exists and no custom parsed sections were found, or if static match is exact
   if (staticMatch && parsedSections.length === 0) {
+    const isStaticNewer = Boolean(
+      staticMatch.dateModified &&
+        article.updatedAt &&
+        Date.parse(staticMatch.dateModified) > Date.parse(article.updatedAt)
+    );
     return {
       ...staticMatch,
-      h1Title: staticMatch.h1Title || article.title,
-      heroSubtitle: staticMatch.heroSubtitle || article.excerpt || '',
-      category: staticMatch.category || article.category || '',
+      h1Title: (isStaticNewer ? staticMatch.h1Title : article.title) || staticMatch.h1Title || article.title,
+      heroSubtitle:
+        (isStaticNewer ? staticMatch.heroSubtitle : article.excerpt) ||
+        staticMatch.heroSubtitle ||
+        article.excerpt ||
+        '',
+      category:
+        (isStaticNewer ? staticMatch.category : article.category) ||
+        staticMatch.category ||
+        article.category ||
+        '',
       lastUpdated: staticMatch.lastUpdated,
       datePublished: staticMatch.datePublished,
       dateModified: staticMatch.dateModified,
