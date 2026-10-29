@@ -37,35 +37,43 @@ export async function generateMetadata({
     };
   }
 
-  const rawTitle = sample.title || sample.h1Title || 'نمونه سند';
+  const rawTitle = (sample.title || sample.h1Title || 'نمونه سند').trim();
   const isSamplePrefixed = rawTitle.startsWith('نمونه') || rawTitle.includes('نمونه');
   const titleDisplay = isSamplePrefixed ? rawTitle : `نمونه ${rawTitle}`;
-  const seoTitle = sample.metaTitle || `${titleDisplay} [دانلود رایگان متن + نکات قانونی] | نگارش یار`;
+  const rawSeoTitle = sample.metaTitle || `${titleDisplay} [دانلود رایگان متن + نکات قانونی]`;
+  const cleanSeoTitle = rawSeoTitle.replace(/(?:\s*[-|]\s*نگارش یار\s*)+$/g, '').trim();
+  const fullSeoTitle = `${cleanSeoTitle} | نگارش یار`;
 
   // Persuasive high-CTR meta description with explicit CTA & free value hook
+  const descSubject = rawTitle.startsWith('نمونه متن ')
+    ? rawTitle
+    : rawTitle.startsWith('نمونه ')
+    ? `نمونه متن ${rawTitle.slice('نمونه '.length).trim()}`
+    : `نمونه متن ${rawTitle}`;
   let description = sample.metaDescription || '';
   if (!description) {
     const baseDesc = (sample.shortDescription || sample.heroSubtitle || '').trim();
     if (baseDesc && baseDesc.length >= 25 && baseDesc.length <= 95) {
-      description = `دانلود رایگان نمونه متن ${rawTitle}؛ ${baseDesc.replace(/\.$/, '')} + استناد به مواد قانونی و مشاوره تنظیم در نگارش یار.`;
+      description = `دانلود رایگان ${descSubject}؛ ${baseDesc.replace(/\.$/, '')} + استناد به مواد قانونی و مشاوره تنظیم در نگارش یار.`;
     } else {
-      description = `دانلود و کپی رایگان نمونه متن ${rawTitle} با فرمت رسمی دادگستری، استناد به مواد قانونی و راهنمای گام‌به‌گام + مشاوره تخصصی تنظیم در نگارش یار.`;
+      description = `دانلود و کپی رایگان ${descSubject} با فرمت رسمی دادگستری، استناد به مواد قانونی و راهنمای گام به گام + مشاوره تخصصی تنظیم در نگارش یار.`;
     }
   }
 
   const canonicalUrl = `https://www.negaresh-yar.ir/samples/${sample.slug}`;
 
   return {
-    title: seoTitle,
+    title: {
+      absolute: fullSeoTitle,
+    },
     description,
     keywords: [
       rawTitle,
       `دانلود رایگان ${rawTitle}`,
       `دانلود فایل ورد ${rawTitle}`,
       `دانلود فایل word ${rawTitle}`,
-      `دانلود pdf ${rawTitle}`,
       `دانلود فرم خام ${rawTitle}`,
-      `نمونه متن ${rawTitle}`,
+      descSubject,
       `کپی متن ${rawTitle}`,
       sample.category || sample.categoryName || 'اسناد حقوقی و اداری',
       'مشاوره تنظیم لایحه و دادخواست',
@@ -75,7 +83,7 @@ export async function generateMetadata({
       canonical: canonicalUrl,
     },
     openGraph: {
-      title: seoTitle,
+      title: fullSeoTitle,
       description,
       url: canonicalUrl,
       siteName: 'نگارش یار',
@@ -96,7 +104,7 @@ export async function generateMetadata({
     },
     twitter: {
       card: 'summary_large_image',
-      title: seoTitle,
+      title: fullSeoTitle,
       description,
       images: ['https://www.negaresh-yar.ir/og-image.png'],
     },
