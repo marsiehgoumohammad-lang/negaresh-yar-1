@@ -4,7 +4,9 @@ import { KnowledgeArticleData } from './types';
 const base = 'https://www.negaresh-yar.ir';
 
 type ContentSpec = {
-  slug: string; title: string; description: string; keywords: string[]; answer: string;
+  slug: string; title: string; metaTitle?: string; description: string; keywords: string[]; answer: string;
+  status?: 'published' | 'draft'; datePublished?: string; dateModified?: string; lastUpdated?: string;
+  featuredImage?: { url: string; width: number; height: number; alt: string };
   highlights: string[]; sections: { id: string; title: string; paragraphs: string[]; bulletPoints?: string[] }[];
   faqs: { q: string; a: string }[]; links?: { title: string; href: string; desc: string; category: string }[];
 };
@@ -12,7 +14,9 @@ type ContentSpec = {
 const specs: ContentSpec[] = [
 {
  slug:'digital-evidence-preservation-guide', title:'حفظ ادله دیجیتال برای شکایت؛ اسکرینشات، پیام و رسید بانکی',
- description:'راهنمای حفظ ادله دیجیتال برای شکایت اینترنتی؛ روش ثبت پیامها، لینک، شناسه حساب، رسید بانکی و فایل اصلی و اشتباهاتی که ممکن است ارزش اثباتی مدارک را کاهش دهد.',
+ status:'published', datePublished:'2026-10-31', dateModified:'2026-10-31', lastUpdated:'۹ آبان ۱۴۰۵',
+ featuredImage:{url:'https://www.negaresh-yar.ir/images/seo/digital-evidence-preservation-guide.webp',width:1200,height:675,alt:'حفظ ادله دیجیتال و مدارک الکترونیکی برای شکایت پلیس فتا'},
+ description:'راهنمای حفظ ادله دیجیتال برای شکایت اینترنتی؛ روش ثبت پیام، لینک، شناسه حساب و رسید بانکی و اشتباهاتی که ارزش مدرک را کم میکنند.',
  keywords:['حفظ ادله دیجیتال','مدارک شکایت پلیس فتا','اسکرین شات به عنوان مدرک','ادله الکترونیکی','مدارک شکایت اینترنتی'],
  answer:'برای شکایت از جرم اینترنتی، پیامها، نشانی صفحه، شناسه کاربری، زمان رخداد، رسید بانکی و فایلهای اصلی را بدون دستکاری نگهداری کنید. اسکرینشات میتواند سرنخ و قرینه مهمی باشد، اما ارزش اثباتی آن به اصالت، امکان انتساب و ارزیابی مرجع قضایی بستگی دارد؛ بنابراین فقط به تصویر بریدهشده اکتفا نکنید و اصل دادهها را تا حد امکان حفظ کنید.',
  highlights:['پیامها و فایلهای اصلی را حذف یا ویرایش نکنید.','URL کامل، نام کاربری و شناسه عددی حساب را ثبت کنید.','رسید بانکی، شماره پیگیری و زمان تراکنش را جداگانه نگه دارید.','در صورت احتمال حذف سریع دادهها، فوریت را در درخواست قضایی توضیح دهید.'],
@@ -138,6 +142,8 @@ const specs: ContentSpec[] = [
 },
 {
  slug:'telegram-messenger-scam-complaint',title:'کلاهبرداری در تلگرام و پیامرسانها؛ مدارک و مراحل شکایت',
+ status:'published', datePublished:'2026-10-31', dateModified:'2026-10-31', lastUpdated:'۹ آبان ۱۴۰۵',
+ featuredImage:{url:'https://www.negaresh-yar.ir/images/seo/telegram-messenger-scam-complaint.webp',width:1200,height:675,alt:'شکایت از کلاهبرداری در تلگرام و پیامرسانها؛ مدارک و مراحل'},
  description:'اگر در تلگرام یا پیامرسانها فریب خوردهاید، راهنمای حفظ شناسه حساب، پیامها، رسید پرداخت، گزارش حساب و ثبت شکایت را بخوانید.',
  keywords:['کلاهبرداری تلگرام','شکایت از کانال تلگرام','کلاهبرداری در پیام رسان','شکایت از اکانت تلگرام','کلاهبرداری آنلاین پیام رسان'],
  answer:'در کلاهبرداری احتمالی تلگرام یا پیامرسانها، قبل از بلاک کردن یا پاک کردن گفتوگو، پیامها، شناسه کاربری، پیوند حساب یا کانال، تاریخ، مبلغ و رسید پرداخت را حفظ کنید. سپس از ابزار گزارش خود پلتفرم در صورت تناسب استفاده کنید و برای پیگیری قضایی، شکواییهای با شرح دقیق وعده، پرداخت و زیان ثبت کنید. گزارش داخل برنامه به تنهایی جای رسیدگی رسمی را نمیگیرد.',
@@ -159,6 +165,9 @@ const specs: ContentSpec[] = [
 },
 {
  slug:'online-job-task-scam-complaint',title:'کلاهبرداری استخدام اینترنتی و کار در خانه؛ چگونه شکایت کنیم؟',
+ metaTitle:'کلاهبرداری استخدام اینترنتی؛ مدارک و مراحل شکایت',
+ status:'published', datePublished:'2026-10-31', dateModified:'2026-10-31', lastUpdated:'۹ آبان ۱۴۰۵',
+ featuredImage:{url:'https://www.negaresh-yar.ir/images/seo/online-job-task-scam-complaint.webp',width:1200,height:675,alt:'کلاهبرداری استخدام اینترنتی و کار در خانه'},
  description:'راهنمای تشخیص و پیگیری کلاهبرداری با وعده استخدام، درآمد تضمینی، تسک آنلاین و کار در خانه؛ مدارک لازم و تفاوت آگهی جعلی با اختلاف کاری.',
  keywords:['کلاهبرداری استخدام اینترنتی','کلاهبرداری کار در خانه','کلاهبرداری تسک آنلاین','شکایت از آگهی استخدام جعلی','درآمد اینترنتی جعلی'],
  answer:'اگر برای استخدام اینترنتی، انجام تسک یا دریافت شغل در خانه از شما پول خواستهاند، پیامها، آگهی، قرارداد، شماره حساب مقصد و رسیدها را حفظ کنید و بررسی کنید وجه بابت چه عنوانی دریافت شده و آیا وعدهها از ابتدا فریبنده بودهاند. هر پیشنهاد ناموفق یا اختلاف کاری لزوماً کلاهبرداری نیست؛ اما مطالبه وجه با وعده استخدام غیرواقعی یا طرحهای مرحلهای برای گرفتن مبالغ بیشتر میتواند نیازمند بررسی کیفری باشد.',
@@ -180,6 +189,8 @@ const specs: ContentSpec[] = [
 },
 {
  slug:'crypto-extortion-complaint-guide',title:'اخاذی اینترنتی با رمزارز؛ حفظ مدارک و پیگیری قانونی',
+ status:'published', datePublished:'2026-10-31', dateModified:'2026-10-31', lastUpdated:'۹ آبان ۱۴۰۵',
+ featuredImage:{url:'https://www.negaresh-yar.ir/images/seo/crypto-extortion-complaint-guide.webp',width:1200,height:675,alt:'اخاذی اینترنتی با رمزارز و حفظ مدارک برای شکایت'},
  description:'اگر تهدیدکننده با درخواست بیتکوین یا رمزارز شما را تهدید میکند، اقدامات فوری، حفظ شناسه تراکنش، پیامها و نکات شکایت را بخوانید.',
  keywords:['اخاذی با رمزارز','تهدید به پرداخت بیت کوین','کلاهبرداری رمزارز','شکایت اخاذی اینترنتی','تهدید آنلاین برای پول'],
  answer:'اگر فردی با تهدید به افشای اطلاعات، آسیب یا انتشار محتوای خصوصی از شما رمزارز میخواهد، پیش از هر چیز پیامها، شناسه حساب، آدرس کیف پول، شبکه انتقال، شناسه تراکنش و مهلت تهدید را حفظ کنید. پرداخت رمزارز معمولاً برگشتپذیری سادهای ندارد و پرداخت نیز تضمین نمیکند تهدید متوقف شود؛ از اقدام عجولانه، افشای عمومی اطلاعات و اعتماد به واسطههای ناشناس برای بازگرداندن وجه خودداری کنید.',
@@ -243,6 +254,8 @@ const specs: ContentSpec[] = [
 },
 {
  slug:'cybercrime-complaint-follow-up-guide',title:'پیگیری شکایت پلیس فتا بعد از ثبت گزارش؛ مراحل و مدارک',
+ status:'published', datePublished:'2026-10-31', dateModified:'2026-10-31', lastUpdated:'۹ آبان ۱۴۰۵',
+ featuredImage:{url:'https://www.negaresh-yar.ir/images/seo/cybercrime-complaint-follow-up-guide.webp',width:1200,height:675,alt:'پیگیری شکایت پلیس فتا بعد از ثبت گزارش'},
  description:'بعد از ثبت گزارش یا شکایت جرایم سایبری چه کنید؟ تفاوت گزارش و شکواییه، حفظ کد رهگیری، پیگیری ابلاغیه و آمادهسازی مدارک را بخوانید.',
  keywords:['پیگیری شکایت پلیس فتا','کد رهگیری شکایت سایبری','بعد از ثبت گزارش پلیس فتا','پیگیری پرونده جرایم رایانه ای','گزارش پلیس فتا و شکواییه'],
  answer:'پس از ثبت گزارش یا شکایت سایبری، کد رهگیری، رسید ثبت، شماره پرونده و ابلاغیههای رسمی را نگهداری کنید و از مسیر رسمی اعلامشده وضعیت را پیگیری کنید. گزارش اولیه به پلیس فتا و شکواییه ثبتشده در مسیر قضایی الزاماً یکسان نیستند؛ برای دانستن مرحله پرونده، باید مشخص شود کدام اقدام ثبت شده، پرونده به کدام مرجع ارجاع شده و آیا ابلاغ یا درخواست تکمیل مدارک وجود دارد.',
@@ -264,6 +277,9 @@ const specs: ContentSpec[] = [
 },
 {
  slug:'unknown-cybercrime-suspect-destination-account',title:'اگر هویت کلاهبردار اینترنتی را نمیدانیم، چگونه شکایت کنیم؟',
+ metaTitle:'شکایت از کلاهبردار ناشناس؛ اگر هویت او را نمیدانیم',
+ status:'published', datePublished:'2026-10-31', dateModified:'2026-10-31', lastUpdated:'۹ آبان ۱۴۰۵',
+ featuredImage:{url:'https://www.negaresh-yar.ir/images/seo/unknown-cybercrime-suspect-destination-account.webp',width:1200,height:675,alt:'شکایت از کلاهبردار ناشناس و حساب مقصد در جرایم اینترنتی'},
  description:'راهنمای شکایت از متهم ناشناس در جرایم اینترنتی؛ اطلاعات حساب مقصد، شماره تماس، شناسه کاربری، مدارک پرداخت و تفاوت صاحب حساب با مرتکب واقعی.',
  keywords:['شکایت از کلاهبردار ناشناس','هویت کلاهبردار اینترنتی نامعلوم','صاحب حساب مقصد کلاهبرداری','حساب اجاره ای و شکایت','شکایت با شماره کارت کلاهبردار'],
  answer:'برای شکایت از کلاهبردار اینترنتی لازم نیست حتماً نام واقعی و نشانی قطعی متهم را از ابتدا بدانید. اطلاعاتی مانند شماره حساب یا کارت مقصد، رسید و شماره پیگیری، شماره تماس، شناسه کاربری، URL و مکالمات را ارائه کنید و درخواست بررسی قانونی هویت و مسیر وجوه را مطرح کنید. با این حال، صاحب حساب مقصد الزاماً مرتکب اصلی نیست؛ نقش و آگاهی هر شخص باید با ادله بررسی شود.',
@@ -391,6 +407,7 @@ const specs: ContentSpec[] = [
 ];
 
 function seoTitleFor(spec: ContentSpec): string {
+  if (spec.metaTitle) return spec.metaTitle;
   if (spec.title.length <= 56) return spec.title;
   const candidate = spec.title.slice(0, 56);
   const boundary = candidate.lastIndexOf(' ');
@@ -402,11 +419,14 @@ function toKnowledgeData(spec: ContentSpec): KnowledgeArticleData {
     slug: spec.slug,
     category: 'شکایت کیفری و جرایم فضای مجازی',
     badge: 'راهنمای تخصصی جرایم فضای مجازی',
-    status: 'draft',
+    status: spec.status ?? 'draft',
     h1Title: spec.title,
     heroSubtitle: spec.description,
     readTime: '۹ دقیقه مطالعه',
-    lastUpdated: 'آبان ۱۴۰۵',
+    lastUpdated: spec.lastUpdated ?? 'آبان ۱۴۰۵',
+    ...(spec.datePublished ? { datePublished: spec.datePublished } : {}),
+    ...(spec.dateModified ? { dateModified: spec.dateModified } : {}),
+    ...(spec.featuredImage ? { featuredImage: spec.featuredImage } : {}),
     heroTrustChips: ['پاسخ کوتاه و راهنمای عملی', 'دارای پرسشهای متداول', 'محتوای آموزشی؛ نه مشاوره اختصاصی'],
     quickAnswerTitle: `پاسخ کوتاه: ${spec.title}`,
     quickAnswerParagraph: spec.answer,
@@ -434,7 +454,20 @@ export const cybercrimeContentGapMetadataMap: Record<string, Metadata> = Object.
     description: spec.description,
     keywords: spec.keywords,
     alternates: { canonical: `${base}/knowledge/${spec.slug}` },
-    openGraph: { title: seoTitleFor(spec), description: spec.description, url: `${base}/knowledge/${spec.slug}`, siteName: 'نگارشیار', locale: 'fa_IR', type: 'article' },
-    twitter: { card: 'summary_large_image', title: seoTitleFor(spec), description: spec.description },
+    openGraph: {
+      title: seoTitleFor(spec),
+      description: spec.description,
+      url: `${base}/knowledge/${spec.slug}`,
+      siteName: 'نگارشیار',
+      locale: 'fa_IR',
+      type: 'article',
+      ...(spec.featuredImage ? { images: [spec.featuredImage] } : {}),
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: seoTitleFor(spec),
+      description: spec.description,
+      ...(spec.featuredImage ? { images: [spec.featuredImage.url] } : {}),
+    },
   } satisfies Metadata] as const),
 );
