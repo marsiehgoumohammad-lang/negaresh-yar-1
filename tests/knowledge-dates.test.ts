@@ -5,11 +5,14 @@ import {
   isValidJalaaliDate,
   isLeapGregorianYear,
   isValidGregorianDate,
-  jalaliToGregorian,
   resolveIsoDate,
 } from '../src/components/knowledge/KnowledgeArticleTemplate';
 import { ALL_KNOWLEDGE_ARTICLES } from '../src/data/knowledge';
-import { adaptArticleToKnowledgeData } from '../src/lib/knowledge-adapter';
+import {
+  adaptArticleToKnowledgeData,
+  parseValidModificationTimestamp,
+  isStaticArticleNewer,
+} from '../src/lib/knowledge-adapter';
 import { Article } from '../src/lib/stores/types';
 
 test('1. Valid Shamsi calendar dates convert accurately to Gregorian ISO 8601', () => {
@@ -275,3 +278,107 @@ test('9. Knowledge adapter preserves static article dates and avoids synthetic o
   assert.strictEqual(resolveIsoDate(adapted.datePublished), undefined);
   assert.strictEqual(resolveIsoDate(adapted.lastUpdated), '2024-09-29');
 });
+
+test('10. parseValidModificationTimestamp and isStaticArticleNewer validate dates strictly', () => {
+  // Missing, empty, whitespace, malformed, or calendar-invalid values return null
+  assert.strictEqual(parseValidModificationTimestamp(undefined), null);
+  assert.strictEqual(parseValidModificationTimestamp(null), null);
+  assert.strictEqual(parseValidModificationTimestamp(''), null);
+  assert.strictEqual(parseValidModificationTimestamp('   '), null);
+  assert.strictEqual(parseValidModificationTimestamp('not-a-date'), null);
+  assert.strictEqual(parseValidModificationTimestamp('مرداد ۱۴۰۵'), null);
+  assert.strictEqual(parseValidModificationTimestamp('2026-06-31'), null); // Invalid June 31
+  assert.strictEqual(parseValidModificationTimestamp('2025-02-29'), null); // Invalid non-leap Feb 29
+  assert.strictEqual(parseValidModificationTimestamp('1405/12/30'), null); // Invalid Shamsi non-leap Esfand 30
+  assert.strictEqual(parseValidModificationTimestamp('2026-10/28'), null); // Mixed separators
+
+  // Valid Gregorian and Shamsi dates return finite millisecond timestamps
+  const tsOct28 = parseValidModificationTimestamp('2026-10-28');
+  const tsOct11 = parseValidModificationTimestamp('2026-10-11T12:00:00.000Z');
+  const tsShamsi = parseValidModificationTimestamp('۱۴۰۵/۰۷/۱۷'); // 2026-10-09
+  assert.ok(typeof tsOct28 === 'number' && Number.isFinite(tsOct28));
+  assert.ok(typeof tsOct11 === 'number' && Number.isFinite(tsOct11));
+  assert.ok(typeof tsShamsi === 'number' && Number.isFinite(tsShamsi));
+  assert.ok(tsOct28 > tsOct11);
+  assert.ok(tsOct11 > tsShamsi);
+
+  // isStaticArticleNewer: returns true ONLY when both are valid and static > db
+  assert.strictEqual(isStaticArticleNewer('2026-10-28', '2026-10-11T12:00:00.000Z'), true);
+  assert.strictEqual(isStaticArticleNewer('2026-10-28', '2026-10-30T08:00:00.000Z'), false);
+  assert.strictEqual(isStaticArticleNewer('2026-10-28', '2026-10-28T00:00:00.000Z'), false);
+
+  // Invalid or missing dates on either side must strictly return false
+  assert.strictEqual(isStaticArticleNewer(undefined, '2026-10-11T12:00:00.000Z'), false);
+  assert.strictEqual(isStaticArticleNewer('2026-10-28', undefined), false);
+  assert.strictEqual(isStaticArticleNewer('2026-06-31', '2026-01-01T00:00:00.000Z'), false);
+  assert.strictEqual(isStaticArticleNewer('2026-10-28', 'invalid-db-date'), false);
+  assert.strictEqual(isStaticArticleNewer('مرداد ۱۴۰۵', '2020-01-01T00:00:00.000Z'), false);
+});
+
+test('11. adaptArticleToKnowledgeData respects newer DB edits vs newer static updates', () => {
+  // what-is-e-notification has static dateModified: '2026-10-28'
+  const staticENotif = ALL_KNOWLEDGE_ARTICLES.find((a) => a.slug === 'what-is-e-notification');
+  assert.ok(staticENotif, 'what-is-e-notification must exist in static data');
+  assert.strictEqual(staticENotif.dateModified, '2026-10-28');
+
+  // Case A: Stale seeded DB row (updatedAt: 2026-10-11) -> static article is newer and wins
+  const staleDbRow: Article = {
+    id: 'art-enotif-1',
+    slug: 'what-is-e-notification',
+    title: 'عنوان قدیمی در دیتابیس',
+    excerpt: 'خلاصه قدیمی در دیتابیس',
+    content: '<h2>تیتر قدیمی دیتابیس</h2><p>محتوای قدیمی دیتابیس که نباید جایگزین نسخه جدید کد شود.</p>',
+    category: 'دسته قدیمی',
+    status: 'published',
+    createdAt: '2026-10-11T10:00:00.000Z',
+    updatedAt: '2026-10-11T10:00:00.000Z',
+    publishedAt: '2026-10-11T10:00:00.000Z',
+  };
+  const adaptedFromStale = adaptArticleToKnowledgeData(staleDbRow);
+  assert.strictEqual(adaptedFromStale.h1Title, staticENotif.h1Title);
+  assert.strictEqual(adaptedFromStale.heroSubtitle, staticENotif.heroSubtitle);
+  assert.strictEqual(adaptedFromStale.sections?.length, staticENotif.sections?.length);
+  assert.strictEqual(adaptedFromStale.dateModified, '2026-10-28');
+
+  // Case B: Newer CMS/admin DB row (updatedAt: 2026-11-15) -> DB edit is newer and wins
+  const newerDbRow: Article = {
+    id: 'art-enotif-2',
+    slug: 'what-is-e-notification',
+    title: 'عنوان جدید ویرایش شده در پنل مدیریت',
+    excerpt: 'خلاصه جدید ویرایش شده توسط مدیر سایت در آبان ۱۴۰۵',
+    content: '<h2>بخش اول ویرایش شده در پنل</h2><p>این متن توسط مدیر در پنل مدیریت به روزرسانی شده و باید حفظ شود.</p>',
+    category: 'راهنمای سامانه ثنا',
+    status: 'published',
+    createdAt: '2026-10-11T10:00:00.000Z',
+    updatedAt: '2026-11-15T14:30:00.000Z',
+    publishedAt: '2026-10-11T10:00:00.000Z',
+  };
+  const adaptedFromNewer = adaptArticleToKnowledgeData(newerDbRow);
+  assert.strictEqual(adaptedFromNewer.h1Title, 'عنوان جدید ویرایش شده در پنل مدیریت');
+  assert.strictEqual(adaptedFromNewer.heroSubtitle, 'خلاصه جدید ویرایش شده توسط مدیر سایت در آبان ۱۴۰۵');
+  assert.strictEqual(adaptedFromNewer.category, 'راهنمای سامانه ثنا');
+  assert.strictEqual(adaptedFromNewer.sections?.length, 1);
+  assert.strictEqual(adaptedFromNewer.sections?.[0]?.title, 'بخش اول ویرایش شده در پنل');
+  assert.strictEqual(adaptedFromNewer.dateModified, '2026-11-15');
+
+  // Case C: Pure DB article with no static counterpart
+  const pureDbRow: Article = {
+    id: 'art-custom-1',
+    slug: 'custom-cms-only-article',
+    title: 'مقاله اختصاصی پنل مدیریت',
+    excerpt: 'توضیحات مقاله اختصاصی پنل',
+    content: '<h2>گفتار اول</h2><p>متن کامل گفتار اول در مقاله اختصاصی.</p>',
+    category: 'عمومی',
+    status: 'published',
+    createdAt: '2026-10-20T09:00:00.000Z',
+    updatedAt: '2026-10-21T11:00:00.000Z',
+    publishedAt: '2026-10-20T09:00:00.000Z',
+  };
+  const adaptedCustom = adaptArticleToKnowledgeData(pureDbRow);
+  assert.strictEqual(adaptedCustom.slug, 'custom-cms-only-article');
+  assert.strictEqual(adaptedCustom.h1Title, 'مقاله اختصاصی پنل مدیریت');
+  assert.strictEqual(adaptedCustom.sections?.length, 1);
+  assert.strictEqual(adaptedCustom.dateModified, '2026-10-21');
+  assert.strictEqual(adaptedCustom.datePublished, '2026-10-20');
+});
+
