@@ -27,41 +27,43 @@ export function SamplesPageClient() {
 
   const categories = [
     'همه',
-    'قراردادها و توافق‌نامه‌ها',
-    'نامه‌ها و عریضه‌های اداری',
+    'قراردادها و توافق نامه ها',
+    'نامه ها و عریضه های اداری',
     'دادخواست و لوایح قضایی',
     'شکواییه و امور کیفری',
   ];
 
   const filteredSamples = useMemo(() => {
+    const norm = (s: string) => s.replace(/\u200c/g, ' ');
     return allSamplesList.filter((item) => {
+      const cat = norm(item.category);
       let matchesCategory = false;
       if (selectedCategory === 'همه') {
         matchesCategory = true;
-      } else if (selectedCategory === 'قراردادها و توافق‌نامه‌ها') {
-        matchesCategory = item.category === 'قراردادها و توافق‌نامه‌ها';
-      } else if (selectedCategory === 'نامه‌ها و عریضه‌های اداری') {
+      } else if (selectedCategory === 'قراردادها و توافق نامه ها') {
+        matchesCategory = cat === 'قراردادها و توافق نامه ها';
+      } else if (selectedCategory === 'نامه ها و عریضه های اداری') {
         matchesCategory =
-          item.category === 'نامه‌ها و عریضه‌های اداری' ||
-          item.category === 'نامه‌ها و درخواست‌های اداری';
+          cat === 'نامه ها و عریضه های اداری' ||
+          cat === 'نامه ها و درخواست های اداری';
       } else if (selectedCategory === 'دادخواست و لوایح قضایی') {
         matchesCategory =
-          item.category === 'درخواست‌های قضایی' ||
-          item.category === 'اوراق و دادخواست‌های قضایی' ||
-          item.category === 'وثیقه و قرارهای تأمین' ||
-          item.category === 'اعسار و محکومیت مالی' ||
-          item.category === 'اجرای احکام و مزایده' ||
-          item.category === 'اظهارنامه';
+          cat === 'درخواست های قضایی' ||
+          cat === 'اوراق و دادخواست های قضایی' ||
+          cat === 'وثیقه و قرارهای تأمین' ||
+          cat === 'اعسار و محکومیت مالی' ||
+          cat === 'اجرای احکام و مزایده' ||
+          cat === 'اظهارنامه';
       } else if (selectedCategory === 'شکواییه و امور کیفری') {
-        matchesCategory = item.category === 'شکواییه و امور کیفری';
+        matchesCategory = cat === 'شکواییه و امور کیفری';
       } else {
-        matchesCategory = item.category === selectedCategory;
+        matchesCategory = cat === norm(selectedCategory);
       }
 
       const matchesSearch =
-        item.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        item.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        item.badge.toLowerCase().includes(searchQuery.toLowerCase());
+        norm(item.title).toLowerCase().includes(norm(searchQuery).toLowerCase()) ||
+        norm(item.description).toLowerCase().includes(norm(searchQuery).toLowerCase()) ||
+        norm(item.badge).toLowerCase().includes(norm(searchQuery).toLowerCase());
       return matchesCategory && matchesSearch;
     });
   }, [searchQuery, selectedCategory]);
@@ -72,20 +74,20 @@ export function SamplesPageClient() {
 
   const hubFaqs = [
     {
-      q: 'آیا متون ارائه شده در بانک نمونه اسناد رایگان و قابل ویرایش هستند؟',
-      a: 'بله، تمامی متون نمونه اسناد حقوقی و اداری در نگارش یار به صورت کاملا رایگان قابل مشاهده، کپی‌برداری و ویرایش بر اساس مشخصات شخصی شما هستند.',
+      q: 'آیا متون ارائه شده در بانک دادخواست های حقوقی و نمونه لایحه ها رایگان و قابل ویرایش هستند؟',
+      a: 'بله، تمامی متون موجود در بانک دادخواست های حقوقی، نمونه لایحه حقوقی و دفاعیه، شکواییه و نامه های اداری در نگارش یار به صورت رایگان قابل مشاهده، کپی برداری و دانلود در فرمت Word و TXT هستند.',
     },
     {
-      q: 'تفاوت نمونه متون رایگان با سفارش تنظیم اختصاصی توسط نگارش یار چیست؟',
-      a: 'متون نمونه، قالبی عام و استاندارد را برای آشنایی با ساختار سند ارائه می‌دهند؛ اما در سفارش اختصاصی، متن سند دقیقاً منطبق بر جزئیات پرونده، مدارک، مواد قانونی مرتبط و ادله اختصاصی شما تنظیم می‌شود تا احتمال پذیرش و پیشبرد موثر درخواست به حداکثر برسد.',
+      q: 'برای لوایح کاربردی دادگاه (مانند لایحه ارسال مدارک به شعبه، استعلام سه گانه، مطالعه پرونده یا ایراد امر مختومه) از کدام الگو استفاده کنیم؟',
+      a: 'برای نگارش نمونه لایحه ارسال مدارک به شعبه، نمونه لایحه درخواست مطالعه و کپی از پرونده حقوقی، نمونه لایحه اعتبار امر مختومه، لایحه استعلام از مراجع رسمی (نظیر آموزش و پرورش یا استعلام سه گانه بانکی، ثبتی و راهور) و نمونه لایحه ارسال پرونده به اجرای احکام، می توانید از صفحه «نمونه لایحه دفاعیه حقوقی و کیفری» و بخش لوایح اجرایی استفاده نمایید.',
     },
     {
-      q: 'آیا این نمونه‌ها مطابق با آخرین آیین‌نامه‌ها و سامانه‌های ثنا و سامد هستند؟',
-      a: 'بله، کلیه متون، فرمت‌ها و ساختارهای موجود در بانک اسناد نگارش یار بر اساس جدیدترین اصلاحات قوانین سال ۱۴۰۵ و فرم‌های استاندارد دفاتر خدمات قضایی و مرکز ارتباطات مردمی تنظیم شده‌اند.',
+      q: 'تفاوت نمونه متون رایگان با سفارش تنظیم اختصاصی لایحه یا دادخواست در نگارش یار چیست؟',
+      a: 'متون نمونه، قالبی استاندارد برای آشنایی با ساختار سند ارائه می دهند؛ اما در سفارش اختصاصی، متن دادخواست یا لایحه دقیقا منطبق بر جزئیات پرونده، مدارک، مواد قانونی مرتبط و ادله اختصاصی شما تنظیم می شود.',
     },
     {
-      q: 'چگونه می‌توانم سفارش تنظیم سند اختصاصی ثبت کنم؟',
-      a: 'کافی است روی دکمه «ثبت درخواست» کلیک کنید و در فرم مربوطه یا پیام‌رسان دلخواه خود مشخصات موضوع را بفرستید تا کارشناسان ما سریعا اقدام نمایند.',
+      q: 'آیا این نمونه ها مطابق با آخرین ضوابط سامانه ثنا و دفاتر خدمات قضایی هستند؟',
+      a: 'بله، کلیه متون، فرمت ها و ساختارهای موجود در بانک اسناد نگارش یار بر اساس قوانین جاری و فرم های استاندارد دفاتر خدمات الکترونیک قضایی (ثنا) و سامانه های اداری تنظیم شده اند.',
     },
   ];
 
@@ -129,7 +131,7 @@ export function SamplesPageClient() {
             transition={{ delay: 0.1 }}
             className="text-2xl sm:text-4xl md:text-5xl font-black text-white leading-tight md:leading-tight max-w-4xl mx-auto tracking-tight mb-6"
           >
-            بانک کامل نمونه اسناد حقوقی، قضایی و نامه‌های رسمی اداری
+            بانک دادخواست های حقوقی، نمونه لایحه حقوقی و نامه های رسمی اداری
           </motion.h1>
 
           {/* Subtitle */}
@@ -139,7 +141,7 @@ export function SamplesPageClient() {
             transition={{ delay: 0.2 }}
             className="text-slate-300 text-sm sm:text-base md:text-lg max-w-3xl mx-auto leading-relaxed md:leading-loose font-normal mb-8"
           >
-            مجموعه‌ای کاملاً جامع، کارشناسی‌شده و رایگان از الگوهای آماده دادخواست، شکواییه، لایحه دفاعیه، اظهارنامه ثنا و نامه‌های رسمی اداری به همراه راهنمای نگارش و FAQ تخصصی.
+            مجموعه جامع و رایگان از الگوهای آماده بانک دادخواست های حقوقی، نمونه لایحه دفاعیه و لوایح کاربردی شعبه (ارسال مدارک، استعلام سه گانه، مطالعه پرونده و ایراد امر مختومه)، شکواییه، اظهارنامه ثنا و نامه های رسمی اداری با دانلود Word و PDF.
           </motion.p>
 
           {/* Search Box */}
@@ -154,7 +156,7 @@ export function SamplesPageClient() {
                 type="text"
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                placeholder="جستجو در نمونه دادخواست‌ها، شکواییه‌ها، لوایح و نامه‌های اداری..."
+                placeholder="جستجو در نمونه دادخواست ها، شکواییه ها، لوایح و نامه های اداری..."
                 className="w-full pl-12 pr-12 py-3.5 rounded-2xl bg-slate-900/90 border border-slate-700/80 text-white placeholder-slate-400 text-sm focus:outline-none focus:border-[#E5C158] transition-colors shadow-xl"
               />
               <Search className="w-5 h-5 text-slate-400 absolute right-4 pointer-events-none" />
@@ -212,14 +214,14 @@ export function SamplesPageClient() {
                 <span className="text-xs text-slate-400 font-medium">۲۸ قرارداد رسمی</span>
               </div>
               <h3 className="text-lg sm:text-xl font-black text-white group-hover:text-[#E5C158] transition-colors">
-                مرجع تخصصی قراردادها و توافق‌نامه‌ها
+                مرجع تخصصی قراردادها و توافق نامه ها
               </h3>
               <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
-                مجموعه کامل الگوهای آماده قراردادهای ملکی، خودرویی، استخدامی، مشارکت کسب‌وکار، صلح‌نامه‌ها و تعهدات مالی با شروط وجه التزام و نکات طلایی پیشگیری از دعوا.
+                مجموعه کامل الگوهای آماده قراردادهای ملکی، خودرویی، استخدامی، مشارکت کسب و کار، صلح نامه ها و تعهدات مالی با شروط وجه التزام و نکات طلایی پیشگیری از دعوا.
               </p>
             </div>
             <div className="pt-4 mt-4 border-t border-slate-800/80 flex items-center justify-between text-xs font-bold text-[#E5C158]">
-              <span>مشاهده و دسته‌بندی قراردادها</span>
+              <span>مشاهده و دسته بندی قراردادها</span>
               <ArrowLeft className="w-4 h-4 transition-transform group-hover:-translate-x-1" />
             </div>
           </Link>
@@ -233,19 +235,19 @@ export function SamplesPageClient() {
               <div className="flex items-center justify-between">
                 <span className="px-3 py-1 rounded-full bg-blue-500/10 text-blue-400 border border-blue-500/20 text-xs font-bold flex items-center gap-1.5">
                   <Building2 className="w-3.5 h-3.5" />
-                  <span>هاب نامه‌نگاری اداری</span>
+                  <span>هاب نامه نگاری اداری</span>
                 </span>
                 <span className="text-xs text-slate-400 font-medium">مکاتبات سازمانی</span>
               </div>
               <h3 className="text-lg sm:text-xl font-black text-white group-hover:text-blue-400 transition-colors">
-                مرجع جامع نامه‌های اداری و رسمی
+                مرجع جامع نامه های اداری و رسمی
               </h3>
               <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
-                الگوهای استاندارد مکاتبه و عریضه‌نویسی به شهرداری‌ها، بانک‌ها، بیمه، دانشگاه‌ها و سازمان‌های دولتی با رعایت اصول ۶ گانه نگارش رسمی و فرمول طلایی درخواست.
+                الگوهای استاندارد مکاتبه و عریضه نویسی به شهرداری ها، بانک ها، بیمه، دانشگاه ها و سازمان های دولتی با رعایت اصول ۶ گانه نگارش رسمی و فرمول طلایی درخواست.
               </p>
             </div>
             <div className="pt-4 mt-4 border-t border-slate-800/80 flex items-center justify-between text-xs font-bold text-blue-400">
-              <span>مشاهده الگوهای نامه‌های اداری</span>
+              <span>مشاهده الگوهای نامه های اداری</span>
               <ArrowLeft className="w-4 h-4 transition-transform group-hover:-translate-x-1" />
             </div>
           </Link>
@@ -336,7 +338,7 @@ export function SamplesPageClient() {
               برگه قضایی، ابلاغیه ثنا یا رای دادگاه در دست دارید؟
             </h3>
             <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
-              تصویر یا PDF سند خود را ارسال کنید تا هوش مصنوعی نگارش یار متن آن را به زبان کاملاً ساده برای شما توضیح دهد.
+              تصویر یا PDF سند خود را ارسال کنید تا هوش مصنوعی نگارش یار متن آن را به زبان کاملا ساده برای شما توضیح دهد.
             </p>
           </div>
           <Link
@@ -354,13 +356,13 @@ export function SamplesPageClient() {
         <section className="p-6 sm:p-10 rounded-3xl bg-slate-900/40 border border-slate-800">
           <div className="text-center max-w-3xl mx-auto mb-10">
             <span className="inline-block px-3 py-1 rounded-md bg-[#E5C158]/10 text-[#E5C158] text-xs font-semibold mb-2">
-              ویژگی‌های الگوی اسناد نگارش یار
+              ویژگی های الگوی اسناد نگارش یار
             </span>
             <h2 className="text-2xl sm:text-3xl font-bold text-white mb-3">
               چرا بانک اسناد نگارش یار معتبرترین مرجع کشور است؟
             </h2>
             <p className="text-slate-400 text-sm sm:text-base">
-              تمامی اسناد بر اساس قوانین و آیین دادرسی‌های به‌روز و استانداردهای ثنا فرموله‌شده‌اند.
+              تمامی اسناد بر اساس قوانین و آیین دادرسی های به روز و استانداردهای ثنا فرموله شده اند.
             </p>
           </div>
 
@@ -369,9 +371,9 @@ export function SamplesPageClient() {
               <div className="p-2.5 rounded-xl bg-[#E5C158]/10 text-[#E5C158] w-fit">
                 <ShieldCheck className="w-6 h-6" />
               </div>
-              <h3 className="text-base font-bold text-white">انطباق با قوانین و رویه‌های جاری</h3>
+              <h3 className="text-base font-bold text-white">انطباق با قوانین و رویه های جاری</h3>
               <p className="text-xs sm:text-sm text-slate-400 leading-relaxed">
-                بازبینی مداوم متون اسناد بر اساس جدیدترین بخشنامه‌ها و آیین‌نامه‌های قضایی کشور.
+                بازبینی مداوم متون اسناد بر اساس جدیدترین بخشنامه ها و آیین نامه های قضایی کشور.
               </p>
             </div>
 
@@ -381,7 +383,7 @@ export function SamplesPageClient() {
               </div>
               <h3 className="text-base font-bold text-white">ساختار آماده دفاتر قضایی</h3>
               <p className="text-xs sm:text-sm text-slate-400 leading-relaxed">
-                طراحی متون دقیقاً متناسب با فیلدها و کادرهای سامانه‌های ثنا و سامد (۱۱۱).
+                طراحی متون دقیقا متناسب با فیلدها و کادرهای سامانه های ثنا و سامد (۱۱۱).
               </p>
             </div>
 
@@ -391,7 +393,7 @@ export function SamplesPageClient() {
               </div>
               <h3 className="text-base font-bold text-white">امکان سفارش تنظیم اختصاصی</h3>
               <p className="text-xs sm:text-sm text-slate-400 leading-relaxed">
-                ارتقای سند عمومی به متنی تخصصی و منحصر به‌فرد توسط کارشناسان ارشد حقوقی نگارش یار.
+                ارتقای سند عمومی به متنی تخصصی و منحصر به فرد توسط کارشناسان ارشد حقوقی نگارش یار.
               </p>
             </div>
           </div>
@@ -407,7 +409,7 @@ export function SamplesPageClient() {
               <span>سوالات متداول بانک اسناد</span>
             </div>
             <h2 className="text-2xl sm:text-3xl font-bold text-white mb-3">
-              پرسش‌های متداول درباره استفاده از نمونه اسناد
+              پرسش های متداول درباره استفاده از نمونه اسناد
             </h2>
           </div>
 
@@ -458,13 +460,13 @@ export function SamplesPageClient() {
         <section className="relative overflow-hidden rounded-3xl p-8 sm:p-12 text-center bg-gradient-to-r from-[#111A2E] via-[#0E1729] to-[#111A2E] border border-[#E5C158]/30 shadow-2xl shadow-[#E5C158]/5">
           <div className="relative z-10 max-w-3xl mx-auto space-y-6">
             <span className="inline-block px-3.5 py-1 rounded-full bg-[#E5C158]/20 border border-[#E5C158]/40 text-[#E5C158] text-xs font-bold">
-              تنظیم کاملاً سفارشی و بدون خطای حقوقی
+              تنظیم کاملا سفارشی و بدون خطای حقوقی
             </span>
             <h2 className="text-2xl sm:text-4xl font-black text-white leading-tight">
               نیازمند تنظیم سند تخصصی بر اساس مدارک پرونده خود هستید؟
             </h2>
             <p className="text-slate-300 text-sm sm:text-base leading-relaxed">
-              کارشناسان ارشد نگارش یار، دادخواست، شکواییه یا لایحه شما را با نهایت دقت حقوقی و بدون هیچ‌گونه نقص شکلی تنظیم و تحویل می‌دهند.
+              کارشناسان ارشد نگارش یار، دادخواست، شکواییه یا لایحه شما را با نهایت دقت حقوقی و بدون هیچ گونه نقص شکلی تنظیم و تحویل می دهند.
             </p>
             <div className="pt-2">
               <Link

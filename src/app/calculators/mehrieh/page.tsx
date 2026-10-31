@@ -6,10 +6,11 @@ import { MehriehCalculatorClient } from '@/components/calculators/MehriehCalcula
 import { ChevronLeft, Calculator, ArrowLeft } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'محاسبه آنلاین مهریه به نرخ روز با شاخص تورم بانک مرکزی ۱۴۰۳ - نگارش یار',
+  title: 'سامانه محاسبه آنلاین مهریه به نرخ روز با شاخص بانک مرکزی (۱۴۰۵)',
   description:
-    'محاسبه آنلاین و رایگان مهریه وجه نقد به نرخ روز بر اساس آخرین جدول شاخص تورم بانک مرکزی جمهوری اسلامی ایران، طبق آیین‌نامه اجرایی تبصره الحاقی به ماده ۱۰۸۲ قانون مدنی.',
+    'سامانه محاسبه آنلاین مهریه به نرخ روز (وجه نقد و ریالی) بر اساس آخرین جدول شاخص تورم بانک مرکزی جمهوری اسلامی ایران و فرمول تبصره ماده ۱۰۸۲ قانون مدنی.',
   keywords: [
+    'سامانه محاسبه آنلاین مهریه به نرخ روز',
     'محاسبه آنلاین مهریه به نرخ روز',
     'محاسبه مهریه با شاخص بانک مرکزی',
     'فرمول محاسبه مهریه وجه نقد',
@@ -17,15 +18,15 @@ export const metadata: Metadata = {
     'محاسبه مهریه سال ۱۳۷۰',
     'محاسبه مهریه سال ۱۳۸۰',
     'جدول شاخص بهای کالاها برای مهریه',
-    'محاسبه مهریه در سال ۱۴۰۳',
+    'محاسبه مهریه به نرخ روز ۱۴۰۵',
     'نحوه مطالبه مهریه وجه نقد',
   ],
   alternates: {
     canonical: 'https://www.negaresh-yar.ir/calculators/mehrieh',
   },
   openGraph: {
-    title: 'محاسبه آنلاین مهریه به نرخ روز با شاخص بانک مرکزی | نگارش یار',
-    description: 'محاسبه فوری و دقیق ارزش روز مهریه بر اساس ماده ۱۰۸۲ قانون مدنی و شاخص تورم بانک مرکزی.',
+    title: 'سامانه محاسبه آنلاین مهریه به نرخ روز با شاخص بانک مرکزی | نگارش یار',
+    description: 'سامانه محاسبه فوری و دقیق ارزش روز مهریه وجه نقد بر اساس ماده ۱۰۸۲ قانون مدنی و آخرین جدول شاخص تورم بانک مرکزی.',
     url: 'https://www.negaresh-yar.ir/calculators/mehrieh',
     siteName: 'نگارش یار',
     locale: 'fa_IR',
@@ -39,7 +40,7 @@ export default function MehriehCalculatorPage() {
     '@graph': [
       {
         '@type': 'SoftwareApplication',
-        name: 'محاسبه‌گر آنلاین مهریه به نرخ روز نگارش یار',
+        name: 'سامانه محاسبه آنلاین مهریه به نرخ روز نگارش یار',
         operatingSystem: 'All',
         applicationCategory: 'BusinessApplication',
         offers: {
@@ -47,33 +48,33 @@ export default function MehriehCalculatorPage() {
           price: '0',
           priceCurrency: 'IRR',
         },
-        description: 'ابزار محاسبه مهریه وجه نقد بر اساس شاخص بانک مرکزی جمهوری اسلامی ایران و قانون مدنی',
+        description: 'سامانه محاسبه آنلاین مهریه وجه نقد به نرخ روز بر اساس شاخص بانک مرکزی جمهوری اسلامی ایران و تبصره ماده ۱۰۸۲ قانون مدنی',
       },
       {
         '@type': 'FAQPage',
         mainEntity: [
           {
             '@type': 'Question',
-            name: 'فرمول محاسبه مهریه وجه نقد به نرخ روز چیست؟',
+            name: 'فرمول سامانه محاسبه آنلاین مهریه به نرخ روز چیست؟',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'فرمول قانونی دادگاه‌ها عبارت است از: شاخص سال قبل از وصول مهریه تقسیم بر شاخص سال وقوع عقد ضربدر مبلغ اولیه مهریه مندرج در سند ازدواج.',
+              text: 'طبق آیین نامه اجرایی تبصره الحاقی به ماده ۱۰۸۲ قانون مدنی، فرمول قانونی دادگاه ها و اجرای ثبت عبارت است از: متوسط شاخص بهای سال قبل از وصول و تادیه مهریه تقسیم بر متوسط شاخص سال وقوع عقد، ضربدر مبلغ اولیه مهریه وجه نقد مندرج در سند ازدواج.',
             },
           },
           {
             '@type': 'Question',
-            name: 'آیا مهریه سکه طلا هم شامل محاسبه به نرخ روز می‌شود؟',
+            name: 'آیا مهریه سکه طلا هم در سامانه محاسبه مهریه به نرخ روز با شاخص بانک مرکزی محاسبه می شود؟',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'خیر، سکه طلا عین معین است و تعدیل با شاخص بانک مرکزی فقط برای مهریه وجه نقد (ریال و تومان) اعمال می‌شود. برای سکه، عینا سکه یا بهای روز آن در بازار مطالبه می‌شود.',
+              text: 'خیر، سکه طلا عین معین (یا کلی در معین) است و تعدیل با شاخص تورم بانک مرکزی صرفا برای مهریه وجه نقد رایج (ریال و تومان) اعمال می شود. در مهریه سکه، اصل سکه یا قیمت روز بازار آن در زمان اجرا مطالبه می گردد.',
             },
           },
           {
             '@type': 'Question',
-            name: 'مهریه زوجه بعد از فوت شوهر چگونه محاسبه می‌شود؟',
+            name: 'مهریه وجه نقد زوجه بعد از فوت شوهر چگونه به نرخ روز محاسبه می شود؟',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'بر اساس ماده ۳ آیین‌نامه اجرایی، تاریخ فوت همسر ملاک قرار گرفته و شاخص سال فوت شوهر بر شاخص سال عقد تقسیم می‌شود.',
+              text: 'بر اساس ماده ۳ آیین نامه اجرایی قانون الحاق یک تبصره به ماده ۱۰۸۲ قانون مدنی و آرای وحدت رویه دیوان عالی کشور، در صورت فوت زوج، تاریخ فوت مبنای محاسبه قرار گرفته و شاخص سال فوت شوهر بر شاخص سال عقد تقسیم می شود.',
             },
           },
         ],
@@ -82,8 +83,8 @@ export default function MehriehCalculatorPage() {
         '@type': 'BreadcrumbList',
         itemListElement: [
           { '@type': 'ListItem', position: 1, name: 'صفحه اصلی', item: 'https://www.negaresh-yar.ir' },
-          { '@type': 'ListItem', position: 2, name: 'محاسبه‌گرهای حقوقی', item: 'https://www.negaresh-yar.ir/calculators' },
-          { '@type': 'ListItem', position: 3, name: 'محاسبه‌گر مهریه به نرخ روز', item: 'https://www.negaresh-yar.ir/calculators/mehrieh' },
+          { '@type': 'ListItem', position: 2, name: 'محاسبه گرهای حقوقی', item: 'https://www.negaresh-yar.ir/calculators' },
+          { '@type': 'ListItem', position: 3, name: 'سامانه محاسبه آنلاین مهریه به نرخ روز', item: 'https://www.negaresh-yar.ir/calculators/mehrieh' },
         ],
       },
     ],
@@ -103,28 +104,55 @@ export default function MehriehCalculatorPage() {
           </Link>
           <ChevronLeft className="w-3.5 h-3.5" />
           <Link href="/calculators" className="hover:text-white transition-colors">
-            محاسبه‌گرهای حقوقی
+            محاسبه گرهای حقوقی
           </Link>
           <ChevronLeft className="w-3.5 h-3.5" />
-          <span className="text-[#E5C158] font-bold">محاسبه‌گر مهریه به نرخ روز</span>
+          <span className="text-[#E5C158] font-bold">سامانه محاسبه آنلاین مهریه به نرخ روز</span>
         </nav>
 
         {/* Header Hero */}
         <div className="max-w-3xl mb-10 space-y-3">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-amber-500/10 border border-amber-500/30 text-amber-300 text-xs font-bold">
             <Calculator className="w-3.5 h-3.5" />
-            <span>محاسبه رسمی شاخص بهای کالاها و خدمات مصرفی (CPI)</span>
+            <span>منطبق بر جدول رسمی شاخص بهای کالاها و خدمات مصرفی بانک مرکزی (CPI)</span>
           </div>
           <h1 className="text-2xl sm:text-4xl font-black text-white leading-tight">
-            محاسبه آنلاین مهریه به نرخ روز با شاخص بانک مرکزی
+            سامانه محاسبه آنلاین مهریه به نرخ روز با شاخص بانک مرکزی
           </h1>
           <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
-            با وارد کردن مبلغ مهریه ثبت‌شده در عقدنامه و انتخاب سال عقد و سال وصول، ارزش ریالی روز مهریه را مطابق با فرمول دادگاه‌های خانواده و شاخص رسمی بانک مرکزی محاسبه کنید.
+            در سامانه محاسبه آنلاین مهریه به نرخ روز نگارش یار، با وارد کردن مبلغ مهریه وجه نقد درج شده در قباله ازدواج و انتخاب سال عقد و سال مطالبه (یا سال فوت زوج)، ارزش روز مهریه را دقیقا مطابق فرمول رسمی دادگاه های خانواده و دوایر اجرای ثبت اسناد محاسبه کنید.
           </p>
         </div>
 
         {/* Client Interactive Calculator Component */}
         <MehriehCalculatorClient />
+
+        {/* Legal Formula & Rules Explanation Section */}
+        <section className="mt-12 p-6 sm:p-8 rounded-2xl bg-slate-900/50 border border-slate-800 space-y-6">
+          <h2 className="text-lg sm:text-xl font-black text-white">
+            فرمول قانونی و ضوابط محاسبه مهریه به نرخ روز (ماده ۱۰۸۲ قانون مدنی)
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-5 text-xs sm:text-sm text-slate-300 leading-relaxed">
+            <div className="p-4 rounded-xl bg-slate-950/60 border border-slate-800/80 space-y-2">
+              <h3 className="font-bold text-[#E5C158]">۱. فرمول شاخص سالانه بانک مرکزی</h3>
+              <p>
+                بر اساس ماده ۲ آیین نامه اجرایی قانون الحاق یک تبصره به ماده ۱۰۸۲ قانون مدنی، میزان مهریه وجه نقد از تقسیم «عدد شاخص در سال قبل از وصول» بر «عدد شاخص در سال وقوع عقد» و ضرب حاصل در مبلغ اولیه مهریه مندرج در عقدنامه به دست می آید.
+              </p>
+            </div>
+            <div className="p-4 rounded-xl bg-slate-950/60 border border-slate-800/80 space-y-2">
+              <h3 className="font-bold text-[#E5C158]">۲. تفاوت مطالبه از زوج در قید حیات با زوج متوفی</h3>
+              <p>
+                هنگامی که زوجه مهریه وجه نقد را از شوهر در قید حیات مطالبه می کند، شاخص سال قبل از تاریخ پرداخت ملاک است؛ اما در صورت فوت شوهر و مطالبه مهریه از ماترک، طبق ماده ۳ آیین نامه، شاخص سال فوت زوج مبنای محاسبه قرار می گیرد.
+              </p>
+            </div>
+            <div className="p-4 rounded-xl bg-slate-950/60 border border-slate-800/80 space-y-2">
+              <h3 className="font-bold text-[#E5C158]">۳. تفکیک مهریه وجه نقد از مهریه سکه طلا</h3>
+              <p>
+                محاسبه با شاخص تورم بانک مرکزی مخصوص مهریه هایی است که در سند نکاحیه به صورت «وجه رایج کشور (ریال یا تومان)» تعیین شده اند. اگر مهریه سکه بهار آزادی یا طلا باشد، عین سکه یا ارزش روز بازار آن در یوم الادا مطالبه می شود.
+              </p>
+            </div>
+          </div>
+        </section>
 
         {/* Related Cluster Resources */}
         <section className="mt-16 pt-12 border-t border-slate-800 space-y-6">
@@ -134,7 +162,7 @@ export default function MehriehCalculatorPage() {
                 راهنماها و خدمات مرتبط با مطالبه و تقسیط مهریه
               </h2>
               <p className="text-xs sm:text-sm text-slate-400 mt-1">
-                دسترسی مستقیم به الگوهای رسمی اجرای ثبت، دادخواست های خانواده و مقالات تخصصی مهریه
+                دسترسی مستقیم به الگوهای رسمی اجرای ثبت، دادخواست مطالبه مهریه در دادگاه خانواده و تقسیط مهریه
               </p>
             </div>
             <Link
@@ -147,6 +175,27 @@ export default function MehriehCalculatorPage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+            <Link
+              href="/samples/mahrieh-court-petition"
+              className="p-5 rounded-2xl bg-slate-900/60 border border-slate-800 hover:border-[#E5C158]/50 transition-all flex flex-col justify-between group"
+            >
+              <div className="space-y-2">
+                <span className="text-[11px] font-semibold px-2 py-0.5 rounded bg-purple-500/10 text-purple-300 inline-block">
+                  دادگاه خانواده
+                </span>
+                <h3 className="text-sm font-bold text-white group-hover:text-[#E5C158] transition-colors">
+                  نمونه دادخواست مطالبه مهریه (سکه و وجه نقد)
+                </h3>
+                <p className="text-xs text-slate-400 leading-relaxed">
+                  الگوی رسمی دادخواست مطالبه مهریه به نرخ روز همراه با تامین خواسته و اعمال ماده ۵.
+                </p>
+              </div>
+              <div className="pt-4 flex items-center text-xs font-bold text-slate-300 group-hover:text-[#E5C158] transition-colors">
+                <span>مشاهده نمونه سند</span>
+                <ArrowLeft className="w-3 h-3 mr-1 group-hover:-translate-x-1 transition-transform" />
+              </div>
+            </Link>
+
             <Link
               href="/samples/mehrieh-execution-registry-petition"
               className="p-5 rounded-2xl bg-slate-900/60 border border-slate-800 hover:border-[#E5C158]/50 transition-all flex flex-col justify-between group"
@@ -180,7 +229,7 @@ export default function MehriehCalculatorPage() {
                   دادخواست اعسار و تقسیط مهریه
                 </h3>
                 <p className="text-xs text-slate-400 leading-relaxed">
-                  الگوی استاندارد تقسیط سکه، استشهادیه شهود و تعدیل اقساط در دادگاه خانواده.
+                  الگوی استاندارد تقسیط سکه و مهریه وجه نقد، استشهادیه شهود و تعدیل اقساط در دادگاه خانواده.
                 </p>
               </div>
               <div className="pt-4 flex items-center text-xs font-bold text-slate-300 group-hover:text-[#E5C158] transition-colors">
@@ -190,28 +239,7 @@ export default function MehriehCalculatorPage() {
             </Link>
 
             <Link
-              href="/knowledge/how-to-install-debt-and-mahrieh"
-              className="p-5 rounded-2xl bg-slate-900/60 border border-slate-800 hover:border-[#E5C158]/50 transition-all flex flex-col justify-between group"
-            >
-              <div className="space-y-2">
-                <span className="text-[11px] font-semibold px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-400 inline-block">
-                  راهنمای حقوقی
-                </span>
-                <h3 className="text-sm font-bold text-white group-hover:text-[#E5C158] transition-colors">
-                  چگونه مهریه و بدهی را قسطی کنیم؟
-                </h3>
-                <p className="text-xs text-slate-400 leading-relaxed">
-                  راهنمای کامل فرجه ۳۰ روزه قانون محکومیت های مالی، فرم اموال و توقف حکم جلب.
-                </p>
-              </div>
-              <div className="pt-4 flex items-center text-xs font-bold text-slate-300 group-hover:text-[#E5C158] transition-colors">
-                <span>مطالعه راهنما</span>
-                <ArrowLeft className="w-3 h-3 mr-1 group-hover:-translate-x-1 transition-transform" />
-              </div>
-            </Link>
-
-            <Link
-              href="/services/insolvency-from-judgment"
+              href="/services/mahrieh-claim"
               className="p-5 rounded-2xl bg-slate-900/60 border border-slate-800 hover:border-[#E5C158]/50 transition-all flex flex-col justify-between group"
             >
               <div className="space-y-2">
@@ -219,10 +247,10 @@ export default function MehriehCalculatorPage() {
                   خدمت نگارش تخصصی
                 </span>
                 <h3 className="text-sm font-bold text-white group-hover:text-[#E5C158] transition-colors">
-                  سفارش تنظیم دادخواست اعسار مهریه
+                  سفارش تنظیم دادخواست مطالبه مهریه
                 </h3>
                 <p className="text-xs text-slate-400 leading-relaxed">
-                  تنظیم فوری دادخواست، لیست دارایی های ماده ۸ و استشهادیه شهود توسط متخصصین.
+                  تنظیم فوری دادخواست مهریه به نرخ روز، تامین خواسته و تقاضای اجرای ثبت توسط متخصصین.
                 </p>
               </div>
               <div className="pt-4 flex items-center text-xs font-bold text-[#E5C158] group-hover:text-amber-300 transition-colors">
