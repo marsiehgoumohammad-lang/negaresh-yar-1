@@ -37,26 +37,33 @@ export async function generateMetadata({
     };
   }
 
-  const rawTitle = sample.title || sample.h1Title || 'نمونه سند';
+  const rawTitle = (sample.title || sample.h1Title || 'نمونه سند').trim();
   const isSamplePrefixed = rawTitle.startsWith('نمونه') || rawTitle.includes('نمونه');
   const titleDisplay = isSamplePrefixed ? rawTitle : `نمونه ${rawTitle}`;
-  const seoTitle = sample.metaTitle || `${titleDisplay} [دانلود رایگان متن + نکات قانونی] | نگارش یار`;
+  const rawSeoTitle = (
+    sample.metaTitle || `${titleDisplay} رایگان [دانلود فایل PDF و Word]`
+  ).trim();
+  const cleanSeoTitle = rawSeoTitle.replace(/\s*[-|]\s*نگارش یار\s*$/g, '').trim();
+  const fullSeoTitle = `${cleanSeoTitle} | نگارش یار`;
 
   // Persuasive high-CTR meta description with explicit CTA & free value hook
-  let description = sample.metaDescription || '';
+  let description = (sample.metaDescription || '').trim();
   if (!description) {
     const baseDesc = (sample.shortDescription || sample.heroSubtitle || '').trim();
+    const descSubject = isSamplePrefixed ? rawTitle : `نمونه متن ${rawTitle}`;
     if (baseDesc && baseDesc.length >= 25 && baseDesc.length <= 95) {
-      description = `دانلود رایگان نمونه متن ${rawTitle}؛ ${baseDesc.replace(/\.$/, '')} + استناد به مواد قانونی و مشاوره تنظیم در نگارش یار.`;
+      description = `دانلود رایگان فایل PDF و Word ${descSubject}؛ ${baseDesc.replace(/\.$/, '')} + استناد به مواد قانونی در نگارش یار.`;
     } else {
-      description = `دانلود و کپی رایگان نمونه متن ${rawTitle} با فرمت رسمی دادگستری، استناد به مواد قانونی و راهنمای گام‌به‌گام + مشاوره تخصصی تنظیم در نگارش یار.`;
+      description = `دانلود رایگان فایل PDF و Word و کپی ${descSubject} با فرمت رسمی دادگستری، استناد به مواد قانونی و راهنمای گام به گام در نگارش یار.`;
     }
   }
 
   const canonicalUrl = `https://www.negaresh-yar.ir/samples/${sample.slug}`;
 
   return {
-    title: seoTitle,
+    title: {
+      absolute: fullSeoTitle,
+    },
     description,
     keywords: [
       rawTitle,
@@ -75,7 +82,7 @@ export async function generateMetadata({
       canonical: canonicalUrl,
     },
     openGraph: {
-      title: seoTitle,
+      title: fullSeoTitle,
       description,
       url: canonicalUrl,
       siteName: 'نگارش یار',
@@ -96,7 +103,7 @@ export async function generateMetadata({
     },
     twitter: {
       card: 'summary_large_image',
-      title: seoTitle,
+      title: fullSeoTitle,
       description,
       images: ['https://www.negaresh-yar.ir/og-image.png'],
     },

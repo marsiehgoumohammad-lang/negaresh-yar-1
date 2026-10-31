@@ -2,6 +2,204 @@ import { Article } from '@/lib/stores/types';
 import { ALL_KNOWLEDGE_ARTICLES } from '@/data/knowledge';
 import { KnowledgeArticleData, KnowledgeSection } from '@/data/knowledge/types';
 
+const JALAALI_BREAKS = [
+  -61, 9, 38, 199, 426, 686, 756, 818, 1111, 1181, 1210, 1635, 2060, 2097, 2192, 2262, 2324, 2394, 2456, 3178,
+];
+
+function isLeapJalaaliYearInternal(jy: number): boolean {
+  const bl = JALAALI_BREAKS.length;
+  let jp = JALAALI_BREAKS[0];
+  let jump = 0;
+  let n = 0;
+
+  if (jy < jp || jy >= JALAALI_BREAKS[bl - 1]) return false;
+
+  for (let i = 1; i < bl; i += 1) {
+    const jmVal = JALAALI_BREAKS[i];
+    jump = jmVal - jp;
+    if (jy < jmVal) break;
+    jp = jmVal;
+  }
+  n = jy - jp;
+
+  if (jump - n < 6) n = n - jump + Math.floor((jump + 4) / 33) * 33;
+  let leap = (((n + 1) % 33) - 1) % 4;
+  if (leap === -1) leap = 4;
+
+  return leap === 0;
+}
+
+function isValidJalaaliDateInternal(jy: number, jm: number, jd: number): boolean {
+  if (jy < 1200 || jy > 1500) return false;
+  if (jm < 1 || jm > 12) return false;
+  if (jd < 1) return false;
+  if (jm <= 6 && jd > 31) return false;
+  if (jm >= 7 && jm <= 11 && jd > 30) return false;
+  if (jm === 12) {
+    const isLeap = isLeapJalaaliYearInternal(jy);
+    if (isLeap && jd > 30) return false;
+    if (!isLeap && jd > 29) return false;
+  }
+  return true;
+}
+
+function isLeapGregorianYearInternal(gy: number): boolean {
+  return (gy % 4 === 0 && gy % 100 !== 0) || gy % 400 === 0;
+}
+
+function isValidGregorianDateInternal(gy: number, gm: number, gd: number): boolean {
+  if (gy < 1000 || gy > 9999) return false;
+  if (gm < 1 || gm > 12) return false;
+  if (gd < 1) return false;
+  const daysInMonths = [0, 31, isLeapGregorianYearInternal(gy) ? 29 : 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+  return gd <= daysInMonths[gm];
+}
+
+function jalaliToGregorianInternal(jy: number, jm: number, jd: number): string {
+  const y = jy + 1595;
+  let days = -355668 + 365 * y + Math.floor(y / 33) * 8 + Math.floor(((y % 33) + 3) / 4) + jd;
+  if (jm < 7) {
+    days += (jm - 1) * 31;
+  } else {
+    days += (jm - 7) * 30 + 186;
+  }
+  let gy = 400 * Math.floor(days / 146097);
+  days %= 146097;
+  if (days > 36524) {
+    days -= 1;
+    gy += 100 * Math.floor(days / 36524);
+    days %= 36524;
+    if (days >= 365) days += 1;
+  }
+  gy += 4 * Math.floor(days / 1461);
+  days %= 1461;
+  if (days > 365) {
+    days -= 1;
+    gy += Math.floor(days / 365);
+    days %= 365;
+  }
+  let gd = days + 1;
+  const isLeap = isLeapGregorianYearInternal(gy);
+  const salA = isLeap
+    ? [0, 31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+    : [0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+  let gm = 0;
+  while (gm < 12 && gd > salA[gm + 1]) {
+    gm += 1;
+    gd -= salA[gm];
+  }
+  gm += 1;
+  const pad = (n: number) => String(n).padStart(2, '0');
+  return `${gy}-${pad(gm)}-${pad(gd)}`;
+}
+
+function resolveIsoDate(val?: string | null): string | undefined {
+  if (!val || typeof val !== 'string') return undefined;
+  const trimmed = val.trim();
+  if (!trimmed) return undefined;
+
+  const normalized = trimmed
+    .replace(/[۰-۹]/g, (w) => String.fromCharCode(w.charCodeAt(0) - 1728))
+    .replace(/[٠-٩]/g, (w) => String.fromCharCode(w.charCodeAt(0) - 1584));
+
+  const gregMatch = normalized.match(
+    /^(\d{4})([-/])(\d{1,2})\2(\d{1,2})(?:[T\s](\d{2}):(\d{2})(?::(\d{2})(?:\.\d+)?)?(?:Z|([+-])(\d{2}):?(\d{2}))?)?$/
+  );
+  if (gregMatch) {
+    const y = parseInt(gregMatch[1], 10);
+    const m = parseInt(gregMatch[3], 10);
+    const d = parseInt(gregMatch[4], 10);
+    const hourStr = gregMatch[5];
+    const minStr = gregMatch[6];
+    const secStr = gregMatch[7];
+    const tzHStr = gregMatch[9];
+    const tzMStr = gregMatch[10];
+
+    if (hourStr !== undefined && minStr !== undefined) {
+      const hh = parseInt(hourStr, 10);
+      const mm = parseInt(minStr, 10);
+      if (hh < 0 || hh > 23 || mm < 0 || mm > 59) return undefined;
+      if (secStr !== undefined) {
+        const ss = parseInt(secStr, 10);
+        if (ss < 0 || ss > 59) return undefined;
+      }
+    }
+
+    if (tzHStr !== undefined && tzMStr !== undefined) {
+      const th = parseInt(tzHStr, 10);
+      const tm = parseInt(tzMStr, 10);
+      if (th < 0 || th > 14 || tm < 0 || tm > 59) return undefined;
+      if (th === 14 && tm > 0) return undefined;
+    }
+
+    if (y >= 1800 && y <= 2200) {
+      if (isValidGregorianDateInternal(y, m, d)) {
+        const pad = (n: number) => String(n).padStart(2, '0');
+        return `${y}-${pad(m)}-${pad(d)}`;
+      }
+      return undefined;
+    }
+  }
+
+  const shamsiMatch = normalized.match(/^(\d{4})([-/])(\d{1,2})\2(\d{1,2})$/);
+  if (shamsiMatch) {
+    const jy = parseInt(shamsiMatch[1], 10);
+    const jm = parseInt(shamsiMatch[3], 10);
+    const jd = parseInt(shamsiMatch[4], 10);
+
+    if (jy >= 1300 && jy <= 1500 && isValidJalaaliDateInternal(jy, jm, jd)) {
+      return jalaliToGregorianInternal(jy, jm, jd);
+    }
+  }
+
+  return undefined;
+}
+
+export function parseValidModificationTimestamp(val?: string | null): number | null {
+  if (!val || typeof val !== 'string') return null;
+  const trimmed = val.trim();
+  if (!trimmed) return null;
+
+  const normalized = trimmed
+    .replace(/[۰-۹]/g, (w) => String.fromCharCode(w.charCodeAt(0) - 1728))
+    .replace(/[٠-٩]/g, (w) => String.fromCharCode(w.charCodeAt(0) - 1584));
+
+  // Strictly validate calendar date, leap year, days-in-month, time, and timezone offset
+  const isoDate = resolveIsoDate(normalized);
+  if (!isoDate) return null;
+
+  const timeMatch = normalized.match(
+    /^(\d{4})([-/])(\d{1,2})\2(\d{1,2})[T\s](\d{2}):(\d{2})(?::(\d{2})(?:\.(\d+))?)?(Z|([+-])(\d{2}):?(\d{2}))?$/
+  );
+  if (timeMatch) {
+    const hh = timeMatch[5];
+    const mm = timeMatch[6];
+    const ss = timeMatch[7] || '00';
+    const ms = (timeMatch[8] || '000').slice(0, 3).padEnd(3, '0');
+    const tz = timeMatch[9]
+      ? timeMatch[9] === 'Z'
+        ? 'Z'
+        : `${timeMatch[10]}${timeMatch[11]}:${timeMatch[12]}`
+      : 'Z';
+    const ts = Date.parse(`${isoDate}T${hh}:${mm}:${ss}.${ms}${tz}`);
+    return Number.isFinite(ts) ? ts : null;
+  }
+
+  const ts = Date.parse(`${isoDate}T00:00:00.000Z`);
+  return Number.isFinite(ts) ? ts : null;
+}
+
+export function isStaticArticleNewer(
+  staticDateModified?: string | null,
+  dbUpdatedAt?: string | null
+): boolean {
+  const staticTs = parseValidModificationTimestamp(staticDateModified);
+  if (staticTs === null) return false;
+  const dbTs = parseValidModificationTimestamp(dbUpdatedAt);
+  if (dbTs === null) return false;
+  return staticTs > dbTs;
+}
+
 function splitBodyIntoParagraphs(bodyText: string): string[] {
   if (!bodyText || !bodyText.trim()) return [];
 
@@ -43,6 +241,7 @@ function splitBodyIntoParagraphs(bodyText: string): string[] {
 
 export function adaptArticleToKnowledgeData(article: Article): KnowledgeArticleData {
   const staticMatch = ALL_KNOWLEDGE_ARTICLES.find((s) => s.slug === article.slug);
+  const isStaticNewer = isStaticArticleNewer(staticMatch?.dateModified, article.updatedAt);
 
   // Parse sections from content string
   const rawContent = article.content || '';
@@ -91,16 +290,38 @@ export function adaptArticleToKnowledgeData(article: Article): KnowledgeArticleD
     });
   }
 
-  // If staticMatch exists and no custom parsed sections were found, or if static match is exact
-  if (staticMatch && parsedSections.length === 0) {
+  const validStaticDatePublished = staticMatch ? resolveIsoDate(staticMatch.datePublished) : undefined;
+  const validStaticDateModified = staticMatch ? resolveIsoDate(staticMatch.dateModified) : undefined;
+  const validDbUpdatedAt = resolveIsoDate(article.updatedAt);
+  const validDbPublishedAt = resolveIsoDate(article.publishedAt);
+
+  // If staticMatch exists and either no custom parsed sections were found or static is demonstrably newer
+  if (staticMatch && (parsedSections.length === 0 || isStaticNewer)) {
+    const effectiveDateModified = isStaticNewer
+      ? validStaticDateModified
+      : validStaticDateModified && validDbUpdatedAt
+      ? validDbUpdatedAt
+      : validStaticDateModified;
+
     return {
       ...staticMatch,
-      h1Title: article.title || staticMatch.h1Title,
-      heroSubtitle: article.excerpt || staticMatch.heroSubtitle,
-      category: article.category || staticMatch.category,
+      h1Title:
+        (isStaticNewer ? staticMatch.h1Title : (article.title || '').trim()) ||
+        staticMatch.h1Title ||
+        article.title,
+      heroSubtitle:
+        (isStaticNewer ? staticMatch.heroSubtitle : (article.excerpt || '').trim()) ||
+        staticMatch.heroSubtitle ||
+        article.excerpt ||
+        '',
+      category:
+        (isStaticNewer ? staticMatch.category : (article.category || '').trim()) ||
+        staticMatch.category ||
+        article.category ||
+        '',
       lastUpdated: staticMatch.lastUpdated,
-      datePublished: staticMatch.datePublished,
-      dateModified: staticMatch.dateModified,
+      datePublished: validStaticDatePublished,
+      dateModified: effectiveDateModified,
     };
   }
 
@@ -128,8 +349,8 @@ export function adaptArticleToKnowledgeData(article: Article): KnowledgeArticleD
     title: sec.title,
   }));
 
-  const updateYear = article.updatedAt
-    ? new Date(article.updatedAt).toLocaleDateString('fa-IR', { year: 'numeric' })
+  const updateYear = validDbUpdatedAt
+    ? new Date(validDbUpdatedAt).toLocaleDateString('fa-IR', { year: 'numeric' })
     : '';
 
   const readTimeMinutes = article.wordCount
@@ -167,16 +388,30 @@ export function adaptArticleToKnowledgeData(article: Article): KnowledgeArticleD
 
   return {
     slug: article.slug,
-    category: staticMatch?.category || article.category || article.primaryKeyword || 'پایگاه دانش حقوقی',
+    category:
+      (article.category || '').trim() ||
+      staticMatch?.category ||
+      article.primaryKeyword ||
+      'پایگاه دانش حقوقی',
     badge: staticMatch?.badge || 'راهنمای تخصصی نگارش یار',
-    h1Title: staticMatch?.h1Title || article.title,
-    heroSubtitle: staticMatch?.heroSubtitle || article.excerpt || article.metaDescription || '',
+    h1Title: (article.title || '').trim() || staticMatch?.h1Title || article.title,
+    heroSubtitle:
+      (article.excerpt || article.metaDescription || '').trim() ||
+      staticMatch?.heroSubtitle ||
+      '',
     readTime: staticMatch?.readTime || `${readTimeMinutes} دقیقه`,
-    lastUpdated: (staticMatch ? (staticMatch.lastUpdated ?? '') : (article.updatedAt
-      ? new Date(article.updatedAt).toLocaleDateString('fa-IR')
-      : '۱۴۰۳/۱۱/۰۱')),
-    datePublished: (staticMatch ? staticMatch.datePublished : article.publishedAt) || undefined,
-    dateModified: (staticMatch ? staticMatch.dateModified : article.updatedAt) || undefined,
+    lastUpdated: staticMatch
+      ? staticMatch.lastUpdated ?? ''
+      : validDbUpdatedAt
+      ? new Date(validDbUpdatedAt).toLocaleDateString('fa-IR')
+      : '۱۴۰۳/۱۱/۰۱',
+    datePublished: (staticMatch ? validStaticDatePublished : validDbPublishedAt) || undefined,
+    dateModified:
+      (staticMatch
+        ? validStaticDateModified && validDbUpdatedAt
+          ? validDbUpdatedAt
+          : validStaticDateModified
+        : validDbUpdatedAt) || undefined,
     heroTrustChips: (staticMatch?.heroTrustChips && staticMatch.heroTrustChips.length > 0)
       ? staticMatch.heroTrustChips
       : [
@@ -187,7 +422,10 @@ export function adaptArticleToKnowledgeData(article: Article): KnowledgeArticleD
         ],
     featuredImage: staticMatch?.featuredImage,
     quickAnswerTitle: staticMatch?.quickAnswerTitle || `پاسخ خلاصه به ${article.title}`,
-    quickAnswerParagraph: staticMatch?.quickAnswerParagraph || article.excerpt || (parsedSections[0]?.paragraphs?.[0] ?? article.title),
+    quickAnswerParagraph:
+      (article.excerpt || '').trim() ||
+      staticMatch?.quickAnswerParagraph ||
+      (parsedSections[0]?.paragraphs?.[0] ?? article.title),
     quickAnswerHighlights: (staticMatch?.quickAnswerHighlights && staticMatch.quickAnswerHighlights.length > 0)
       ? staticMatch.quickAnswerHighlights
       : [
@@ -195,12 +433,8 @@ export function adaptArticleToKnowledgeData(article: Article): KnowledgeArticleD
           'راهنمای عملی جهت جلوگیری از اطاله دادرسی',
           'راهنمای عملی برای تنظیم و پیگیری پرونده',
         ],
-    tableOfContents: (staticMatch?.tableOfContents && staticMatch.tableOfContents.length > 0)
-      ? staticMatch.tableOfContents
-      : tableOfContents,
-    sections: (staticMatch?.sections && staticMatch.sections.length > 0)
-      ? staticMatch.sections
-      : parsedSections,
+    tableOfContents,
+    sections: parsedSections,
     examplesTitle: staticMatch?.examplesTitle || 'نمونه سناریوها و کاربردهای عملی',
     examplesList: staticMatch?.examplesList || [
       {

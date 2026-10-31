@@ -1,9 +1,9 @@
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { getArticleBySlug } from '@/lib/stores/articles-store';
-import { adaptArticleToKnowledgeData } from '@/lib/knowledge-adapter';
+import { adaptArticleToKnowledgeData, isStaticArticleNewer } from '@/lib/knowledge-adapter';
 import { KnowledgeArticleTemplate } from '@/components/knowledge/KnowledgeArticleTemplate';
-import { KNOWLEDGE_METADATA_MAP } from '@/data/knowledge';
+import { ALL_KNOWLEDGE_ARTICLES, KNOWLEDGE_METADATA_MAP } from '@/data/knowledge';
 
 export const dynamic = 'force-dynamic';
 
@@ -21,26 +21,67 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     };
   }
 
-  const rawTitle = (article.metaTitle || article.title || '').trim();
+  const staticArticle = ALL_KNOWLEDGE_ARTICLES.find((a) => a.slug === slug);
+  const isStaticNewer = isStaticArticleNewer(staticArticle?.dateModified, article.updatedAt);
+
+  const staticMeta = KNOWLEDGE_METADATA_MAP[slug as keyof typeof KNOWLEDGE_METADATA_MAP];
+  const staticTitle =
+    typeof staticMeta?.title === 'string'
+      ? staticMeta.title.trim()
+      : staticMeta?.title && typeof staticMeta.title === 'object' && 'absolute' in staticMeta.title
+      ? String(staticMeta.title.absolute || '').trim()
+      : '';
+  const fallbackStaticTitle = staticTitle || (staticArticle?.h1Title || '').trim();
+
+  const rawTitle = (
+    (isStaticNewer ? fallbackStaticTitle : '') ||
+    (article.metaTitle || '').trim() ||
+    (article.title || '').trim() ||
+    fallbackStaticTitle ||
+    ''
+  ).trim();
   const cleanTitle = rawTitle.replace(/\s*[-|]\s*نگارش یار\s*$/g, '').trim();
   const baseTitle = cleanTitle;
   const fullSeoTitle = `${cleanTitle} | نگارش یار`;
-  
-  const rawDesc = (article.metaDescription || article.excerpt || '').trim();
+
+  const staticDesc = typeof staticMeta?.description === 'string' ? staticMeta.description.trim() : '';
+  const dbMetaDesc = (article.metaDescription || '').trim();
+  const dbExcerpt = (article.excerpt || '').trim();
+  const preferredMetaDesc =
+    isStaticNewer && staticDesc
+      ? staticDesc
+      : dbMetaDesc || (!dbExcerpt ? staticDesc : '');
+  const rawDesc = (
+    preferredMetaDesc ||
+    (isStaticNewer ? (staticArticle?.heroSubtitle || '').trim() : '') ||
+    dbExcerpt ||
+    staticDesc ||
+    (staticArticle?.heroSubtitle || '').trim() ||
+    ''
+  ).trim();
   let description = '';
-  if (article.metaDescription && article.metaDescription.trim().length >= 30) {
-    description = article.metaDescription.trim();
+  if (preferredMetaDesc && preferredMetaDesc.length >= 30) {
+    description = preferredMetaDesc;
   } else if (rawDesc && rawDesc.length >= 30 && rawDesc.length <= 100) {
     description = `راهنمای کامل ${baseTitle}؛ ${rawDesc.replace(/\.$/, '')} + دانلود نمونه متن و مشاوره تخصصی در نگارش یار.`;
   } else {
     description = `راهنمای گام به گام و حقوقی ${baseTitle} همراه با تشریح مواد قانونی، مواعد رسمی، دانلود رایگان نمونه متن و مشاوره تنظیم در نگارش یار.`;
   }
 
-  const keywords = article.keywords && article.keywords.length > 0
-    ? article.keywords
-    : [article.category || 'حقوقی', baseTitle, `راهنمای ${baseTitle}`, 'نگارش یار', 'پایگاه دانش'];
+  const staticKeywords = Array.isArray(staticMeta?.keywords)
+    ? staticMeta.keywords
+    : typeof staticMeta?.keywords === 'string'
+    ? [staticMeta.keywords]
+    : undefined;
 
-  const staticMeta = KNOWLEDGE_METADATA_MAP[slug as keyof typeof KNOWLEDGE_METADATA_MAP];
+  const keywords =
+    isStaticNewer && staticKeywords && staticKeywords.length > 0
+      ? staticKeywords
+      : article.keywords && article.keywords.length > 0
+      ? article.keywords
+      : staticKeywords && staticKeywords.length > 0
+      ? staticKeywords
+      : [article.category || 'حقوقی', baseTitle, `راهنمای ${baseTitle}`, 'نگارش یار', 'پایگاه دانش'];
   const customOgImages = staticMeta?.openGraph && 'images' in staticMeta.openGraph ? staticMeta.openGraph.images : undefined;
   const ogImages = Array.isArray(customOgImages) && customOgImages.length > 0
     ? customOgImages
