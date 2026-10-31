@@ -455,7 +455,7 @@ function toKnowledgeData(spec: ContentSpec): KnowledgeArticleData {
     slug: spec.slug,
     category: 'شکایت کیفری و جرایم فضای مجازی',
     badge: 'راهنمای تخصصی جرایم فضای مجازی',
-    status: spec.status ?? 'published',
+    status: spec.status ?? 'draft',
     h1Title: spec.title,
     heroSubtitle: spec.description,
     readTime: '۹ دقیقه مطالعه',
