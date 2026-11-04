@@ -322,8 +322,8 @@ export const sampleBailReductionMetadata: Metadata = {
     canonical: 'https://www.negaresh-yar.ir/samples/bail-reduction',
   },
   openGraph: {
-    title: 'نمونه رایگان درخواست تخفیف قرار وثیقه کیفری؛ متن لایحه کاهش وثیقه [دانلود فایل PDF و Word]',
-  description: 'نمونه درخواست تخفیف قرار وثیقه و کاهش مبلغ تامین کیفری. متن لایحه، دلایل قابل طرح و نکات تنظیم درخواست را ببینید و متن را با شرایط پرونده خود تطبیق دهید.',
+    title: 'نمونه درخواست تخفیف قرار وثیقه کیفری | متن لایحه',
+    description: 'دانلود رایگان نمونه درخواست تخفیف قرار وثیقه و کاهش مبلغ وثیقه کیفری؛ متن لایحه، دلایل درخواست تعدیل قرار و نکات تنظیم آن در دادسرا، همراه با فایل Word و PDF.',
     url: 'https://www.negaresh-yar.ir/samples/bail-reduction',
     siteName: 'نگارش یار',
     type: 'article',

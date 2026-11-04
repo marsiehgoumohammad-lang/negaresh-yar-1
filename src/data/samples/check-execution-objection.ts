@@ -186,7 +186,7 @@ export const sampleCheckExecutionObjectionData: SampleLandingData = {
     },
   ],
 
-  faqsTitle: 'سوالات متداول توقف عملیات اجرایی و ابطال اجراییه چک'
+  faqsTitle: 'سوالات متداول توقف عملیات اجرایی و ابطال اجراییه چک',
   faqs: [
     {
       q: 'تفاوت دادخواست ابطال اجراییه چک با لایحه توقف عملیات اجرایی چیست؟',
