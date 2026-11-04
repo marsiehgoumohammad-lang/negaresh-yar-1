@@ -5,6 +5,8 @@ export const sampleObjectionToCriminalSecurityData: SampleLandingData = {
   slug: 'objection-to-criminal-security',
   categoryName: 'قرارهای تأمین کیفری و بازداشت',
   badge: 'الگوی لایحه اعتراض به بازپرس',
+  metaTitle: 'نمونه لایحه اعتراض به قرار وثیقه و تأمین کیفری',
+  metaDescription: 'دانلود رایگان نمونه لایحه اعتراض به قرار تأمین کیفری و وثیقه سنگین؛ متن اعتراض به مبلغ نامتناسب، درخواست رسیدگی در دادگاه صالح و راهنمای ثبت لایحه، همراه با فایل Word و PDF.',
   h1Title: 'نمونه لایحه اعتراض به قرار تأمین کیفری نامتناسب و بازداشت متهم',
   heroSubtitle: 'دانلود و مشاهده الگوی رسمی لایحه اعتراض به قرار کفالت یا وثیقه سنگین صادره از دادسرا که منجر به بازداشت متهم شده است، مستند به مواد ۲۲۶ و ۲۴۳ قانون آیین دادرسی کیفری جهت ارجاع به دادگاه کیفری.',
   heroTrustChips: [
@@ -214,8 +216,8 @@ export const sampleObjectionToCriminalSecurityData: SampleLandingData = {
 };
 
 export const sampleObjectionToCriminalSecurityMetadata: Metadata = {
-  title: 'نمونه لایحه اعتراض به قرار تأمین کیفری و وثیقه سنگین در دادسرا | نگارش یار',
-  description: 'دانلود و مشاهده کامل‌ترین نمونه لایحه اعتراض به قرار تأمین کیفری نامتناسب و بازداشت متهم مستند به مواد ۲۲۶ و ۲۴۳ قانون آیین دادرسی کیفری جهت ارجاع به دادگاه.',
+  title: 'نمونه لایحه اعتراض به قرار وثیقه و تأمین کیفری',
+  description: 'دانلود رایگان نمونه لایحه اعتراض به قرار تأمین کیفری و وثیقه سنگین؛ متن اعتراض به مبلغ نامتناسب، درخواست رسیدگی در دادگاه صالح و راهنمای ثبت لایحه، همراه با فایل Word و PDF.',
   keywords: [
     'اعتراض به قرار تامین کیفری',
     'نمونه لایحه اعتراض به قرار وثیقه سنگین',
@@ -230,8 +232,8 @@ export const sampleObjectionToCriminalSecurityMetadata: Metadata = {
     canonical: 'https://www.negaresh-yar.ir/samples/objection-to-criminal-security',
   },
   openGraph: {
-    title: 'نمونه لایحه اعتراض به قرار تأمین کیفری و وثیقه سنگین در دادسرا | نگارش یار',
-  description: 'الگوی قانونی و کاربردی اعتراض به قرارهای تأمین منتهی به بازداشت جهت آزادی سریع متهم.',
+    title: 'نمونه لایحه اعتراض به قرار وثیقه و تأمین کیفری',
+  description: 'دانلود رایگان نمونه لایحه اعتراض به قرار تأمین کیفری و وثیقه سنگین؛ متن اعتراض به مبلغ نامتناسب، درخواست رسیدگی در دادگاه صالح و راهنمای ثبت لایحه، همراه با فایل Word و PDF.',
     url: 'https://www.negaresh-yar.ir/samples/objection-to-criminal-security',
     siteName: 'نگارش یار',
     type: 'article',
