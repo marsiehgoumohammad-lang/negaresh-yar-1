@@ -28,22 +28,27 @@ export function Hero() {
           {/* Column 1: Copywriting & Actions (7 cols on lg) */}
           <div className="lg:col-span-7 text-right flex flex-col items-start">
             
+            {/* Brand Badge */}
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#E5C158]/10 border border-[#E5C158]/30 text-[#E5C158] text-xs sm:text-sm font-bold mb-4">
+              <span>نگارش یار | سایت رسمی نگارش نامه اداری، عریضه نویسی و کافی نت آنلاین</span>
+            </div>
+
             {/* 1. Primary Slogan */}
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[2.85rem] font-black text-white tracking-tight leading-[1.3] mb-4 sm:mb-5">
-              توضیح ماجرا با شما؛{' '}
+              نگارش یار؛ توضیح ماجرا با شما،{' '}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#F7E7A9] via-[#E5C158] to-[#D4AF37]">
-                نگارش حرفه‌ای با ما
+                نگارش حرفه ای با ما
               </span>
             </h1>
 
             {/* 2. Main Descriptive Headline */}
             <h2 className="text-lg sm:text-xl md:text-2xl font-bold text-slate-200 leading-snug max-w-2xl mb-3">
-              نامه‌های اداری، درخواست‌های حقوقی‌ات را متناسب با موضوع و مخاطب حرفه‌ای آماده کن
+              در سایت نگارش یار، نامه های اداری و درخواست های حقوقی خود را متناسب با موضوع و مرجع رسمی آماده کنید
             </h2>
 
             {/* 3. Small Supporting Line (Service Descriptor) */}
             <p className="text-sm sm:text-base text-slate-400 font-normal leading-relaxed max-w-xl mb-7">
-              تنظیم انواع نامه و درخواست اداری، اظهاریه، دادخواست، شکواییه، لایحه
+              سامانه تخصصی تنظیم انواع نامه و درخواست اداری، اظهارنامه، دادخواست، شکواییه، لایحه دفاعیه و خدمات کافی نت آنلاین
             </p>
 
             {/* CTAs */}
@@ -62,7 +67,7 @@ export function Hero() {
                 className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-[#0D1424] hover:bg-[#121A2D] text-slate-200 hover:text-white font-bold text-sm sm:text-base border border-slate-700/80 hover:border-[#E5C158]/50 transition-all"
               >
                 <FileText className="w-4 h-4 text-[#E5C158]" />
-                <span>دیدن نمونه نامه‌ها</span>
+                <span>دیدن نمونه نامه ها</span>
               </Link>
             </div>
 
@@ -94,7 +99,7 @@ export function Hero() {
 
               <Image
                 src="/images/hero_3d_stage.jpg"
-                alt="صحنه سه‌بعدی خدمات نگارشیار"
+                alt="سایت نگارش یار؛ سامانه نگارش نامه اداری، دادخواست، لایحه و کافی نت آنلاین"
                 width={1037}
                 height={921}
                 sizes="(max-width: 544px) calc(100vw - 32px), (max-width: 1023px) 512px, (max-width: 1279px) calc(41.6667vw - 54.67px), 480px"

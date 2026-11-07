@@ -13,7 +13,7 @@ export function buildHomepageSchemaGraph(): SchemaOrgGraph {
         '@type': 'Organization',
         '@id': 'https://www.negaresh-yar.ir/#organization',
         name: 'نگارش یار',
-        alternateName: 'Negaresh Yar',
+        alternateName: ['سایت نگارش یار', 'سامانه نگارش یار', 'Negaresh Yar'],
         url: 'https://www.negaresh-yar.ir/',
         logo: {
           '@type': 'ImageObject',
@@ -25,7 +25,7 @@ export function buildHomepageSchemaGraph(): SchemaOrgGraph {
         },
         image: 'https://www.negaresh-yar.ir/og-image.png',
         description:
-          'مرکز جامع تخصصی تنظیم دادخواست حقوقی، شکواییه، لایحه دفاعیه، نامه‌های اداری و تفسیر هوشمند اوراق قضایی.',
+          'سایت نگارش یار؛ مرکز جامع تخصصی تنظیم دادخواست حقوقی، شکواییه، لایحه دفاعیه، نامه های اداری، عریضه نویسی و کافی نت آنلاین.',
         telephone: '+989915147789',
         contactPoint: {
           '@type': 'ContactPoint',
@@ -50,6 +50,7 @@ export function buildHomepageSchemaGraph(): SchemaOrgGraph {
         '@type': 'WebSite',
         '@id': 'https://www.negaresh-yar.ir/#website',
         name: 'نگارش یار',
+        alternateName: ['سایت نگارش یار', 'سامانه نگارش یار', 'Negaresh Yar'],
         url: 'https://www.negaresh-yar.ir/',
         publisher: {
           '@id': 'https://www.negaresh-yar.ir/#organization',
@@ -67,10 +68,11 @@ export function buildHomepageSchemaGraph(): SchemaOrgGraph {
         '@type': 'WebPage',
         '@id': 'https://www.negaresh-yar.ir/',
         url: 'https://www.negaresh-yar.ir/',
-        name: 'نگارش یار | نگارش نامه اداری، عریضه‌نویسی و خدمات متنی آنلاین',
+        name: 'نگارش یار | سایت رسمی نگارش نامه اداری، دادخواست، لایحه و کافی نت آنلاین',
         description:
-          'حرفت را بگو؛ نامه‌اش را به نگارشیار بسپار. نگارش تخصصی نامه‌های اداری، بانکی، شهرداری، دادخواست و شکواییه با الگوهای استاندارد و رسمی.',
+          'سایت نگارش یار؛ سامانه تخصصی نگارش نامه اداری، عریضه نویسی، تنظیم دادخواست، شکواییه، لایحه دفاعیه و کافی نت آنلاین همراه با دانلود رایگان نمونه متن های حقوقی و اداری.',
         inLanguage: 'fa-IR',
+        dateModified: '2026-11-07',
         isPartOf: {
           '@id': 'https://www.negaresh-yar.ir/#website',
         },
