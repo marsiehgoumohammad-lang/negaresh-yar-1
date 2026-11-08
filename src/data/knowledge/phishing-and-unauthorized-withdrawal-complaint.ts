@@ -326,6 +326,12 @@ export const phishingAndUnauthorizedWithdrawalComplaintData: KnowledgeArticleDat
 
   relatedServices: [
     {
+      title: 'تنظیم شکواییه جرایم رایانه ای و فضای مجازی',
+      href: '/services/cybercrime-complaint',
+      desc: 'نگارش اختصاصی شکواییه فیشینگ، برداشت غیرمجاز بانکی و تقاضای تامین خواسته کیفری (ماده ۱۰۷ ق.آ.د.ک) و ردیابی تراکنش ها.',
+      badge: 'خدمت تخصصی سایبری',
+    },
+    {
       title: 'تنظیم شکواییه و دادخواست تخصصی',
       href: '/services/petition-writing',
       desc: 'نگارش تخصصی شکواییه فیشینگ، برداشت غیرمجاز بانکی و تقاضای تامین خواسته کیفری جهت ثبت در دفاتر خدمات قضایی.',
@@ -359,22 +365,34 @@ export const phishingAndUnauthorizedWithdrawalComplaintData: KnowledgeArticleDat
       badge: 'خرید اینترنتی',
     },
     {
-      title: 'نمونه شکواییه کیفری دادسرا',
-      href: '/samples/complaint',
-      desc: 'چارچوب و ساختار استاندارد شکواییه کیفری برای طرح شکایت در دادسرای عمومی و انقلاب.',
-      badge: 'شکواییه کیفری',
+      title: 'نمونه شکواییه هک، دسترسی غیرمجاز و اخلال در سامانه های رایانه ای',
+      href: '/samples/unauthorized-access-hacking-complaint',
+      desc: 'متن شکواییه ویژه مواردی که برداشت وجه پس از نفوذ به گوشی یا حساب کاربری یا نصب بدافزار رخ داده است.',
+      badge: 'شکواییه هک',
+    },
+    {
+      title: 'نمونه شکواییه اکانت فیک و جعل هویت در فضای مجازی',
+      href: '/samples/fake-account-identity-impersonation-complaint',
+      desc: 'الگوی شکواییه در مواردی که لینک فیشینگ یا درخواست وجه از طریق حساب جعلی به نام دیگران ارسال شده است.',
+      badge: 'شکواییه جعل هویت',
+    },
+    {
+      title: 'نمونه شکواییه انتشار عکس خصوصی و تهدید به افشا',
+      href: '/samples/private-image-publication-threats-extortion-complaint',
+      desc: 'الگوی شکواییه برای تهدیدهای سایبری، اخاذی و انتشار بدون رضایت تصاویر خصوصی.',
+      badge: 'حریم خصوصی و تهدید',
+    },
+    {
+      title: 'نمونه دادخواست تامین دلیل و حفظ مستندات دیجیتال',
+      href: '/samples/evidence-preservation-petition',
+      desc: 'درخواست رسمی صورتجلسه کردن پیامک فیشینگ، درگاه جعلی و مستندات الکترونیکی در معرض حذف.',
+      badge: 'تامین دلیل',
     },
     {
       title: 'نمونه لایحه اعتراض به قرار منع تعقیب',
       href: '/samples/objection-non-prosecution-order',
       desc: 'الگوی اعتراض قانونی به قرار منع تعقیب دادسرا در صورت نقص تحقیقات یا رد شکایت اولیه.',
       badge: 'اعتراض کیفری',
-    },
-    {
-      title: 'نمونه لایحه دفاعیه و تکمیلی',
-      href: '/samples/legal-brief',
-      desc: 'فرمت رسمی تقدیم لایحه تکمیلی به بازپرس جهت اعلام حساب های مقصد و تقاضای استعلام.',
-      badge: 'لایحه قضایی',
     },
   ],
 
@@ -404,16 +422,22 @@ export const phishingAndUnauthorizedWithdrawalComplaintData: KnowledgeArticleDat
       category: 'شکایت کیفری و جرایم رایانه ای',
     },
     {
+      title: 'شکایت از اکانت فیک و جعل هویت در فضای مجازی',
+      href: '/knowledge/fake-account-identity-impersonation-complaint',
+      desc: 'بررسی صفحات جعلی و فریب مخاطبان با استفاده از نام یا مشخصات دیگران در فضای مجازی.',
+      category: 'شکواییه و امور کیفری',
+    },
+    {
+      title: 'شکایت از انتشار تصاویر خصوصی و تهدید به افشای عکس',
+      href: '/knowledge/private-image-publication-threats-extortion-complaint',
+      desc: 'مواد ۷۴۵ و ۶۶۹ تعزیرات در پرونده های تهدید اینترنتی، اخاذی و افشای اسرار خصوصی.',
+      category: 'شکواییه و امور کیفری',
+    },
+    {
       title: 'ابلاغیه الکترونیکی ثنا چیست؟ و روش تشخیص پیامک های جعلی فیشینگ',
       href: '/knowledge/what-is-e-notification',
       desc: 'راهنمای مشاهده ابلاغیه در سامانه عدل ایران و شناسایی پیامک های جعلی ابلاغیه قضایی.',
       category: 'سامانه های دولتی و کافی نت آنلاین',
-    },
-    {
-      title: 'راهنمای صلاحیت دادگاه های کیفری و مراجع رسیدگی',
-      href: '/knowledge/criminal-court-jurisdiction-guide',
-      desc: 'آشنایی با قواعد صلاحیت محلی و ذاتی دادسراها و دادگاه های کیفری در قوانین ایران.',
-      category: 'شکواییه و امور کیفری',
     },
   ],
 
@@ -436,7 +460,7 @@ export const phishingAndUnauthorizedWithdrawalComplaintData: KnowledgeArticleDat
   ctaDescription:
     'تنظیم دقیق شکواییه کیفری با درج استاندارد شماره مرجع تراکنش ها، استناد به ماده ۱۳ قانون جرایم رایانه ای و رای وحدت رویه ۷۲۹، و تقاضای قرار تامین خواسته (ماده ۱۰۷ ق.آ.د.ک) گام اساسی برای پیگیری قانونی پرونده در دادسرا است.',
   ctaPrimaryBtnText: 'ثبت سفارش تنظیم شکواییه فیشینگ',
-  ctaPrimaryHref: '/request?service=petition-writing',
+  ctaPrimaryHref: '/services/cybercrime-complaint',
   messengerMessage:
     'سلام، برای تنظیم شکواییه در خصوص فیشینگ و برداشت غیرمجاز از حساب بانکی راهنمایی می خواستم.',
 };

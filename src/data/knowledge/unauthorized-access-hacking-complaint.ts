@@ -279,7 +279,7 @@ export const unauthorizedAccessHackingComplaintData: KnowledgeArticleData = {
   ctaDescription:
     'در پرونده های هک حساب کاربری، نفوذ به سرور شرکتی و تخریب داده ها، انتخاب نادرست عنوان اتهامی یا عدم درج تقاضای فوری حفاظت از داده های رایانه ای ذخیره شده (ماده ۶۶۹ ق.آ.د.ک) می تواند به از بین رفتن لاگ ها و صدور قرار منع تعقیب منجر شود. برای مشاهده الگوی آماده یا ثبت سفارش تنظیم اختصاصی شکواییه و لایحه فنی اقدام کنید.',
   ctaPrimaryBtnText: 'ثبت سفارش تنظیم شکواییه تخصصی جرایم سایبری',
-  ctaPrimaryHref: '/request?service=petition-writing',
+  ctaPrimaryHref: '/services/cybercrime-complaint',
   messengerMessage:
     'سلام، برای تنظیم شکواییه هک، دسترسی غیرمجاز و اخلال در سامانه رایانه ای نیاز به راهنمایی دارم.',
 
@@ -294,6 +294,18 @@ export const unauthorizedAccessHackingComplaintData: KnowledgeArticleData = {
       title: 'مراحل شکایت از جرایم رایانه ای و اینترنتی در دادسرا و پلیس فتا',
       href: '/knowledge/cybercrime-complaint-guide',
       desc: 'راهنمای گام به گام حفظ لاگ و ادله دیجیتال، ثبت شکواییه در دفاتر خدمات قضایی و ارجاع به پلیس فتا.',
+      category: 'جرایم رایانه ای و فضای مجازی',
+    },
+    {
+      title: 'شکایت از فیشینگ و برداشت غیرمجاز از حساب بانکی',
+      href: '/knowledge/phishing-and-unauthorized-withdrawal-complaint',
+      desc: 'بررسی مواردی که نفوذ به حساب یا دستگاه منجر به سرقت اطلاعات بانکی و برداشت غیرمجاز وجه شده است.',
+      category: 'جرایم رایانه ای و فضای مجازی',
+    },
+    {
+      title: 'شکایت از کلاهبرداری خرید اینترنتی و فروشگاه جعلی',
+      href: '/knowledge/online-shopping-fraud-complaint',
+      desc: 'تفکیک نفوذ فنی به سامانه از بردن مال در بستر فروشگاه های اینترنتی و صفحات ساختگی.',
       category: 'جرایم رایانه ای و فضای مجازی',
     },
     {
@@ -329,16 +341,28 @@ export const unauthorizedAccessHackingComplaintData: KnowledgeArticleData = {
       badge: 'شکواییه فیشینگ',
     },
     {
+      title: 'نمونه شکواییه انتشار عکس خصوصی و تهدید به افشا',
+      href: '/samples/private-image-publication-threats-extortion-complaint',
+      desc: 'الگوی شکواییه ویژه مواردی که پس از هک حساب، تصاویر خصوصی منتشر شده یا تهدید به افشا صورت گرفته است.',
+      badge: 'حریم خصوصی و تهدید',
+    },
+    {
+      title: 'نمونه شکواییه اکانت فیک و جعل هویت در فضای مجازی',
+      href: '/samples/fake-account-identity-impersonation-complaint',
+      desc: 'الگوی شکواییه برای ساخت صفحه جعلی به نام یا تصویر شاکی و انتساب خلاف واقع.',
+      badge: 'شکواییه جعل هویت',
+    },
+    {
+      title: 'نمونه شکواییه کلاهبرداری خرید اینترنتی و عدم ارسال کالا',
+      href: '/samples/online-shopping-fraud-complaint',
+      desc: 'متن آماده شکواییه برای موارد فریب مالی در فروشگاه های اینترنتی و صفحات ساختگی.',
+      badge: 'خرید اینترنتی',
+    },
+    {
       title: 'نمونه دادخواست تامین دلیل و حفظ مستندات',
       href: '/samples/evidence-preservation-petition',
       desc: 'ثبت رسمی وضعیت فنی سامانه و دلایل در معرض امحا با حضور کارشناس.',
       badge: 'تامین دلیل',
-    },
-    {
-      title: 'نمونه لایحه دفاعیه و توضیحی کیفری',
-      href: '/samples/legal-brief',
-      desc: 'الگوی تقدیم توضیحات فنی و مستندات تکمیلی به شعبه بازپرسی.',
-      badge: 'لایحه قضایی',
     },
     {
       title: 'نمونه درخواست محدودیت دسترسی به محتویات پرونده',
@@ -348,6 +372,12 @@ export const unauthorizedAccessHackingComplaintData: KnowledgeArticleData = {
     },
   ],
   relatedServices: [
+    {
+      title: 'تنظیم شکواییه جرایم رایانه ای و فضای مجازی',
+      href: '/services/cybercrime-complaint',
+      desc: 'نگارش تخصصی شکواییه هک، دسترسی غیرمجاز، تخریب داده ها و تقاضای حفاظت فوری از لاگ ها (ماده ۶۶۹ ق.آ.د.ک).',
+      badge: 'خدمت تخصصی سایبری',
+    },
     {
       title: 'تنظیم تخصصی شکواییه و دادخواست قضایی',
       href: '/services/petition-writing',
