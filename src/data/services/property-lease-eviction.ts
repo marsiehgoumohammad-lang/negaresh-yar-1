@@ -267,8 +267,20 @@ export const propertyLeaseEvictionData: ServiceLandingData = {
     {
       title: 'نمونه دادخواست الزام به تنظیم سند رسمی ملک',
       href: '/samples/official-deed-compulsion-petition',
-      desc: 'دعوای الزام متعهد به حضور در دفترخانه و انتقال سند قطعی غیرمنقول.',
+      desc: 'دعوای الزام متعهد به حضور در دفترخانه، اخذ پایان کار، تفکیک و انتقال سند قطعی.',
       badge: 'الزام به سند',
+    },
+    {
+      title: 'نمونه دادخواست تایید فسخ قرارداد و استرداد ثمن',
+      href: '/samples/contract-cancellation-notice-petition',
+      desc: 'الگوی دادخواست تایید فسخ مبایعه نامه ملک و خودرو به علت عدم پرداخت ثمن یا غبن و عیب.',
+      badge: 'فسخ قرارداد',
+    },
+    {
+      title: 'نمونه دادخواست ابطال قرارداد و اعلام بطلان معامله',
+      href: '/samples/contract-nullification-petition',
+      desc: 'دادخواست اعلام بطلان معامله مستحق للغیر و مطالبه غرامات به نرخ روز.',
+      badge: 'ابطال معامله',
     },
   ],
 
