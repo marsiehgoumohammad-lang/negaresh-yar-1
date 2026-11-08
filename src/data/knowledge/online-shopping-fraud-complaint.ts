@@ -347,6 +347,12 @@ export const onlineShoppingFraudComplaintData: KnowledgeArticleData = {
 
   relatedServices: [
     {
+      title: 'تنظیم شکواییه جرایم رایانه ای و فضای مجازی',
+      href: '/services/cybercrime-complaint',
+      desc: 'نگارش تخصصی شکواییه کلاهبرداری خرید اینترنتی، فروشگاه جعلی و تقاضای تامین خواسته کیفری (ماده ۱۰۷ ق.آ.د.ک).',
+      badge: 'خدمت تخصصی سایبری',
+    },
+    {
       title: 'تنظیم اختصاصی شکواییه و دادخواست',
       href: '/services/petition-writing',
       desc: 'تنظیم شکواییه کلاهبرداری خرید اینترنتی یا دادخواست مطالبه وجه متناسب با مدارک پرونده شما.',
@@ -380,10 +386,22 @@ export const onlineShoppingFraudComplaintData: KnowledgeArticleData = {
       badge: 'شکواییه فیشینگ',
     },
     {
-      title: 'نمونه شکواییه کلاهبرداری',
-      href: '/samples/fraud-complaint',
-      desc: 'الگوی رسمی شکایت کیفری کلاهبرداری در مواردی که قرائن مانور متقلبانه و بردن مال وجود دارد.',
-      badge: 'شکواییه کلاهبرداری',
+      title: 'نمونه شکواییه اکانت فیک و جعل هویت در فضای مجازی',
+      href: '/samples/fake-account-identity-impersonation-complaint',
+      desc: 'الگوی شکواییه در مواردی که صفحه فروشگاهی با جعل نام یا نشان برند معتبر اقدام به فریب خریداران کرده است.',
+      badge: 'شکواییه جعل هویت',
+    },
+    {
+      title: 'نمونه شکواییه هک و دسترسی غیرمجاز به سامانه',
+      href: '/samples/unauthorized-access-hacking-complaint',
+      desc: 'متن شکواییه ویژه نفوذ غیرمجاز به حساب کاربری یا سامانه های فروشگاهی و تغییر اطلاعات.',
+      badge: 'شکواییه هک',
+    },
+    {
+      title: 'نمونه دادخواست تامین دلیل و حفظ مستندات دیجیتال',
+      href: '/samples/evidence-preservation-petition',
+      desc: 'درخواست رسمی صورتجلسه کردن آگهی فروش، مکاتبات و صفحه فروشگاه اینترنتی پیش از حذف توسط فروشنده.',
+      badge: 'تامین دلیل',
     },
     {
       title: 'نمونه دادخواست استرداد وجه',
@@ -419,9 +437,21 @@ export const onlineShoppingFraudComplaintData: KnowledgeArticleData = {
       category: 'جرایم رایانه ای و فضای مجازی',
     },
     {
+      title: 'شکایت از هک و دسترسی غیرمجاز به حساب کاربری',
+      href: '/knowledge/unauthorized-access-hacking-complaint',
+      desc: 'بررسی مواد ۷۲۹ تا ۷۳۸ تعزیرات در پرونده های نفوذ به حساب کاربری و سامانه های رایانه ای.',
+      category: 'جرایم رایانه ای و فضای مجازی',
+    },
+    {
       title: 'شکایت از اکانت فیک و جعل هویت در فضای مجازی',
       href: '/knowledge/fake-account-identity-impersonation-complaint',
       desc: 'بررسی صفحات جعلی که با سوءاستفاده از نام یا نشان دیگران اقدام به فریب مخاطبان می کنند.',
+      category: 'شکواییه و امور کیفری',
+    },
+    {
+      title: 'شکایت از انتشار تصاویر خصوصی و تهدید به افشای عکس',
+      href: '/knowledge/private-image-publication-threats-extortion-complaint',
+      desc: 'راهنمای پیگیری تهدید اینترنتی، اخاذی و انتشار بدون رضایت تصاویر خصوصی.',
       category: 'شکواییه و امور کیفری',
     },
     {
@@ -435,6 +465,6 @@ export const onlineShoppingFraudComplaintData: KnowledgeArticleData = {
   ctaTitle: 'برای تنظیم شکواییه یا دادخواست خرید اینترنتی متناسب با مدارک خود نیاز به راهنمایی دارید؟',
   ctaDescription:
     'رسید تراکنش بانکی، تصاویر آگهی و مکاتبات سفارش خود را آماده کنید تا کارشناسان نگارش یار بر اساس واقعیت های پرونده شما، متن شکواییه کیفری یا دادخواست مطالبه وجه را به صورت دقیق و مستند تنظیم نمایند.',
-  ctaPrimaryBtnText: 'ثبت سفارش تنظیم شکواییه',
-  ctaPrimaryHref: '/request?service=petition-writing',
+  ctaPrimaryBtnText: 'ثبت سفارش تنظیم شکواییه خرید اینترنتی',
+  ctaPrimaryHref: '/services/cybercrime-complaint',
 };
