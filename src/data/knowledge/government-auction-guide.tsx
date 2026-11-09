@@ -387,6 +387,12 @@ export const governmentAuctionGuideData: KnowledgeArticleData = {
       desc: 'شرایط، مهلت قانونی و نحوه اعتراض به ارزیابی کارشناس رسمی در قیمت پایه مزایده.',
       category: 'کارشناسی دادگاه',
     },
+    {
+      title: 'شکایت از فیشینگ و برداشت غیرمجاز',
+      href: '/knowledge/phishing-and-unauthorized-withdrawal-complaint',
+      desc: 'راهنمای شناسایی درگاه های پرداخت جعلی و مراحل شکایت از برداشت غیرمجاز بانکی.',
+      category: 'جرایم رایانه ای و فضای مجازی',
+    },
   ],
 
   ctaTitle: 'نیاز به ثبت نام در مزایده قوه قضاییه، تنظیم لایحه ابطال یا انتقال سند دارید؟',

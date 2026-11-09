@@ -289,6 +289,12 @@ export const sampleCheckExecutionObjectionData: SampleLandingData = {
       desc: 'ویژه صادرکنندگانی که اصل بدهی چک را قبول دارند اما متقاضی تقسیط در مهلت ۳۰ روزه هستند.',
       badge: 'اعسار از چک',
     },
+    {
+      title: 'نمونه شکواییه کلاهبرداری اینترنتی و عدم ارسال کالا',
+      href: '/samples/online-shopping-fraud-complaint',
+      desc: 'متن آماده شکواییه برای موارد پرداخت وجه در معاملات آنلاین و عدم ایفای تعهد یا فریب فروشنده.',
+      badge: 'شکواییه کیفری',
+    },
   ],
 
   relatedServices: [

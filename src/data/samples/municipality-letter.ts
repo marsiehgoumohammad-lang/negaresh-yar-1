@@ -442,6 +442,12 @@ export const sampleMunicipalityLetterData: SampleLandingData = {
       desc: 'اصول تنظیم مکاتبات رسمی، اداری و استعلامات شهری.',
       badge: 'راهنمای مرجع',
     },
+    {
+      title: 'مراحل شکایت در پلیس فتا و دادسرا',
+      href: '/knowledge/cybercrime-complaint-guide',
+      desc: 'راهنمای گام به گام ثبت شکواییه جرایم رایانه ای در دفاتر خدمات قضایی و ارجاع به پلیس فتا.',
+      badge: 'راهنمای قضایی',
+    },
   ],
 
   ctaTitle: 'نیاز به تنظیم لایحه یا نامه اختصاصی به شهرداری دارید؟',
