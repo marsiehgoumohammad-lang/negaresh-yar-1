@@ -291,6 +291,12 @@ export const sampleVerdictSurrenderDiscountData: SampleLandingData = {
       desc: 'الگوی تقاضای مهلت قانونی در مرحله اجرای احکام جهت تدارک پرداخت یا جلب رضایت شاکی.',
       badge: 'اجرای احکام',
     },
+    {
+      title: 'نمونه شکواییه هک و دسترسی غیرمجاز',
+      href: '/samples/unauthorized-access-hacking-complaint',
+      desc: 'الگوی رسمی شکواییه نفوذ به حساب کاربری، دسترسی غیرمجاز و اخلال در داده ها.',
+      badge: 'جرایم رایانه ای',
+    },
   ],
 
   relatedArticles: [

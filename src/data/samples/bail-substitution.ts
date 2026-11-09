@@ -259,6 +259,12 @@ export const sampleBailSubstitutionData: SampleLandingData = {
       desc: 'درخواست فک قرار بازداشت و تعیین وثیقه جهت آزادی متهم.',
       badge: 'تبدیل بازداشت',
     },
+    {
+      title: 'نمونه شکواییه اکانت فیک و جعل هویت',
+      href: '/samples/fake-account-identity-impersonation-complaint',
+      desc: 'الگوی شکواییه کیفری در خصوص ساخت حساب کاربری جعلی و سوءاستفاده از نام یا مشخصات هویتی.',
+      badge: 'جرایم رایانه ای',
+    },
   ],
 
   relatedArticles: [

@@ -414,6 +414,12 @@ export const sampleLeaderOfficeLetterData: SampleLandingData = {
       desc: 'آموزش ثبت الکترونیکی دادخواست ها و لوایح دیوان عدالت.',
       badge: 'مقاله آموزشی',
     },
+    {
+      title: 'راهنمای جرایم فضای مجازی و مسیر شکایت',
+      href: '/knowledge/cybercrime-guide',
+      desc: 'آشنایی با مصادیق جرایم رایانه ای و نحوه پیگیری قانونی در دادسرا و پلیس فتا.',
+      badge: 'راهنمای حقوقی',
+    },
   ],
 
   ctaTitle: 'سفارش تنظیم اختصاصی نامه به بیت رهبری',

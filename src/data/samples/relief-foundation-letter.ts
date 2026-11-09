@@ -572,6 +572,12 @@ export const sampleReliefFoundationLetterData: SampleLandingData = {
       desc: 'اصول و چارچوب تنظیم نامه های اداری رسمی، عریضه ها و تقاضانامه ها.',
       badge: 'راهنمای مرجع',
     },
+    {
+      title: 'شکایت از کلاهبرداری خرید اینترنتی',
+      href: '/knowledge/online-shopping-fraud-complaint',
+      desc: 'راهنمای پیگیری قانونی عدم ارسال کالا، صفحات فروشگاهی جعلی و استرداد وجه.',
+      badge: 'راهنمای حقوقی',
+    },
   ],
 
   messengerMessage:
