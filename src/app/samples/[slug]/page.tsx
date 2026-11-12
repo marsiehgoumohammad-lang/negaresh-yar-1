@@ -121,28 +121,72 @@ export default async function DynamicSamplePage({ params }: SamplePageProps) {
   const title = sample.title || sample.h1Title || 'نمونه سند';
   const description = sample.shortDescription || sample.heroSubtitle || '';
 
+  const normalizeCategory = (value?: string) =>
+    (value || '').replace(/\u200c/g, '').replace(/\s+/g, ' ').trim();
+
+  const contractCategories = new Set([
+    'قراردادها و توافقنامهها',
+    'قراردادها و توافق نامه ها',
+  ]);
+
   const administrativeCategories = new Set([
     'نامه‌ها و عریضه‌های اداری',
+    'نامهها و عریضههای اداری',
+    'نامه ها و عریضه های اداری',
     'نمونه نامه‌های اداری و عریضه‌ها',
+    'نمونه نامههای اداری و عریضهها',
+    'نمونه نامه های اداری و عریضه ها',
     'نمونه نامه‌ها و عریضه‌های اداری',
+    'نمونه نامهها و عریضههای اداری',
+    'نمونه نامه ها و عریضه های اداری',
     'نمونه نامه‌ها و لوایح اداری و مالیاتی',
+    'نمونه نامهها و لوایح اداری و مالیاتی',
+    'نمونه نامه ها و لوایح اداری و مالیاتی',
     'نامه‌ها و درخواست‌های اداری',
+    'نامهها و درخواستهای اداری',
+    'نامه ها و درخواست های اداری',
     'نامه‌ها و مکاتبات اداری و بانکی',
+    'نامهها و مکاتبات اداری و بانکی',
+    'نامه ها و مکاتبات اداری و بانکی',
     'نامه‌ها و مکاتبات اداری و شهرداری',
+    'نامهها و مکاتبات اداری و شهرداری',
+    'نامه ها و مکاتبات اداری و شهرداری',
     'نامه‌ها و مکاتبات اداری و ثبت احوال',
+    'نامهها و مکاتبات اداری و ثبت احوال',
+    'نامه ها و مکاتبات اداری و ثبت احوال',
     'نامه‌ها و مکاتبات اداری و اداره کار',
+    'نامهها و مکاتبات اداری و اداره کار',
+    'نامه ها و مکاتبات اداری و اداره کار',
     'نامه‌ها و مکاتبات اداری و تامین اجتماعی',
+    'نامهها و مکاتبات اداری و تامین اجتماعی',
+    'نامه ها و مکاتبات اداری و تامین اجتماعی',
     'نامه‌ها و مکاتبات اداری و تعزیراتی',
+    'نامهها و مکاتبات اداری و تعزیراتی',
+    'نامه ها و مکاتبات اداری و تعزیراتی',
     'نامه‌ها و مکاتبات اداری و انتظامی',
+    'نامهها و مکاتبات اداری و انتظامی',
+    'نامه ها و مکاتبات اداری و انتظامی',
     'نامه‌ها و مکاتبات اداری و حمایتی',
+    'نامهها و مکاتبات اداری و حمایتی',
+    'نامه ها و مکاتبات اداری و حمایتی',
     'نامه‌ها و مکاتبات اداری و آموزشی',
+    'نامهها و مکاتبات اداری و آموزشی',
+    'نامه ها و مکاتبات اداری و آموزشی',
     'نامه‌ها و مکاتبات اداری و دانشگاهی',
+    'نامهها و مکاتبات اداری و دانشگاهی',
+    'نامه ها و مکاتبات اداری و دانشگاهی',
     'نامه‌ها و مکاتبات اداری و ثبتی',
+    'نامهها و مکاتبات اداری و ثبتی',
+    'نامه ها و مکاتبات اداری و ثبتی',
     'نامه‌ها و مکاتبات اداری و سازمان بازرسی',
+    'نامهها و مکاتبات اداری و سازمان بازرسی',
+    'نامه ها و مکاتبات اداری و سازمان بازرسی',
     'نمونه نامه به رئیس جمهور',
     'نمونه نامه به دفتر مقام معظم رهبری',
     'دعاوی اداری و دیوان عدالت',
   ]);
+
+  const normalizedCategory = normalizeCategory(sample.category);
 
   const canonicalUrl = `https://www.negaresh-yar.ir/samples/${sample.slug}`;
 
@@ -234,14 +278,11 @@ export default async function DynamicSamplePage({ params }: SamplePageProps) {
           '@type': 'ListItem',
           position: 3,
           name: sample.category || 'درخواست‌های قضایی',
-          item:
-            sample.category === 'قراردادها و توافق‌نامه‌ها'
-              ? 'https://www.negaresh-yar.ir/samples/contracts'
-              : sample.category && administrativeCategories.has(sample.category)
-              ? 'https://www.negaresh-yar.ir/samples/administrative-letters'
-              : `https://www.negaresh-yar.ir/samples?category=${encodeURIComponent(
-                  sample.category || ''
-                )}`,
+          item: contractCategories.has(normalizedCategory)
+            ? 'https://www.negaresh-yar.ir/samples/contracts'
+            : normalizedCategory && administrativeCategories.has(normalizedCategory)
+            ? 'https://www.negaresh-yar.ir/samples/administrative-letters'
+            : 'https://www.negaresh-yar.ir/samples',
         },
         {
           '@type': 'ListItem',
