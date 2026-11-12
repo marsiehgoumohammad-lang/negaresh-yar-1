@@ -119,6 +119,10 @@ import {
   cybercrimeContentGapArticles,
   cybercrimeContentGapMetadataMap,
 } from './cybercrime-content-gap-suite';
+import {
+  cryptoFraudClusterArticles,
+  cryptoFraudClusterMetadataMap,
+} from './crypto-fraud-cluster-suite';
 
 export * from './types';
 
@@ -247,6 +251,7 @@ export const ALL_KNOWLEDGE_ARTICLES: KnowledgeArticleData[] = [
   privateImagePublicationThreatsData,
   fakeIdentityImpersonationData,
   ...cybercrimeContentGapArticles,
+  ...cryptoFraudClusterArticles,
 ];
 
 export const KNOWLEDGE_METADATA_MAP = {
@@ -311,6 +316,7 @@ export const KNOWLEDGE_METADATA_MAP = {
   'fake-account-identity-impersonation-complaint':
     fakeIdentityImpersonationMetadata,
   ...cybercrimeContentGapMetadataMap,
+  ...cryptoFraudClusterMetadataMap,
 };
 
 export function getKnowledgeArticleBySlug(slug: string): KnowledgeArticleData | undefined {
