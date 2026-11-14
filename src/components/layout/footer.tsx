@@ -48,6 +48,113 @@ export function Footer() {
                 </a>
               </p>
             </div>
+
+            {/* Social Media & Official Messengers (Instagram Primary Priority) */}
+            <div className="pt-3 border-t border-slate-800/80 space-y-2.5">
+              <span className="block text-[11px] font-bold text-slate-400">
+                شبکه های اجتماعی و پیام رسان های رسمی:
+              </span>
+              <div className="flex items-center flex-wrap gap-2">
+                <a
+                  href="https://www.instagram.com/negaresh_yar.ir/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="اینستاگرام نگارش یار"
+                  title="اینستاگرام نگارش یار"
+                  className="inline-flex items-center gap-2 h-10 px-3 rounded-xl bg-gradient-to-r from-[#833ab4]/25 via-[#fd1d1d]/20 to-[#fcb045]/20 hover:from-[#833ab4]/40 hover:via-[#fd1d1d]/35 hover:to-[#fcb045]/35 border border-[#E1306C]/60 hover:border-[#E5C158] text-white shadow-[0_0_15px_rgba(225,48,108,0.22)] transition-all group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#E5C158]"
+                >
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src="/icons/messengers/instagram.svg"
+                    alt="اینستاگرام نگارش یار"
+                    className="w-5 h-5 object-contain group-hover:scale-110 transition-transform shrink-0"
+                  />
+                  <span className="text-xs font-extrabold text-white group-hover:text-[#E5C158] transition-colors">
+                    اینستاگرام
+                  </span>
+                </a>
+
+                <a
+                  href="https://wa.me/989915147789"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="واتساپ نگارش یار"
+                  title="واتساپ نگارش یار"
+                  className="w-9 h-9 rounded-xl bg-[#0D1424] hover:bg-[#121A2D] border border-slate-800 hover:border-[#E5C158]/50 flex items-center justify-center transition-all group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#E5C158]"
+                >
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src="/icons/messengers/whatsapp.svg"
+                    alt="واتساپ نگارش یار"
+                    className="w-4 h-4 object-contain group-hover:scale-110 transition-transform"
+                  />
+                </a>
+
+                <a
+                  href="https://t.me/negareshyar_support"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="تلگرام نگارش یار"
+                  title="تلگرام نگارش یار"
+                  className="w-9 h-9 rounded-xl bg-[#0D1424] hover:bg-[#121A2D] border border-slate-800 hover:border-[#E5C158]/50 flex items-center justify-center transition-all group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#E5C158]"
+                >
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src="/icons/messengers/telegram.svg"
+                    alt="تلگرام نگارش یار"
+                    className="w-4 h-4 object-contain group-hover:scale-110 transition-transform"
+                  />
+                </a>
+
+                <a
+                  href="https://eitaa.com/negareshyar_admin"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="ایتا نگارش یار"
+                  title="ایتا نگارش یار"
+                  className="w-9 h-9 rounded-xl bg-[#0D1424] hover:bg-[#121A2D] border border-slate-800 hover:border-[#E5C158]/50 flex items-center justify-center transition-all group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#E5C158]"
+                >
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src="/icons/messengers/eitaa.svg"
+                    alt="ایتا نگارش یار"
+                    className="w-4 h-4 object-contain group-hover:scale-110 transition-transform"
+                  />
+                </a>
+
+                <a
+                  href="https://rubika.ir/negareshyar"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="روبیکا نگارش یار"
+                  title="روبیکا نگارش یار"
+                  className="w-9 h-9 rounded-xl bg-[#0D1424] hover:bg-[#121A2D] border border-slate-800 hover:border-[#E5C158]/50 flex items-center justify-center transition-all group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#E5C158]"
+                >
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src="/icons/messengers/rubika.svg"
+                    alt="روبیکا نگارش یار"
+                    className="w-4 h-4 object-contain group-hover:scale-110 transition-transform"
+                  />
+                </a>
+
+                <a
+                  href="https://ble.ir/negareshyar"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="بله نگارش یار"
+                  title="بله نگارش یار"
+                  className="w-9 h-9 rounded-xl bg-[#0D1424] hover:bg-[#121A2D] border border-slate-800 hover:border-[#E5C158]/50 flex items-center justify-center transition-all group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#E5C158]"
+                >
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src="/icons/messengers/bale.svg"
+                    alt="بله نگارش یار"
+                    className="w-4 h-4 object-contain group-hover:scale-110 transition-transform"
+                  />
+                </a>
+              </div>
+            </div>
           </div>
           
           {/* Column 2: خدمات */}
