@@ -77,6 +77,142 @@ export default function ContactPage() {
                   </div>
                 </div>
               </div>
+
+              {/* Social Media & Messengers Section (Instagram Primary Priority) */}
+              <div className="bg-[#0D1424] border border-slate-800 rounded-3xl p-6 sm:p-8 shadow-xl hover:border-slate-700 transition-colors space-y-5">
+                <div>
+                  <h2 className="text-lg font-bold text-white mb-1">
+                    شبکه های اجتماعی و پیام رسان ها
+                  </h2>
+                  <p className="text-xs sm:text-sm text-slate-400">
+                    صفحه رسمی اینستاگرام و درگاه های ارتباط مستقیم با کارشناسان نگارش یار
+                  </p>
+                </div>
+
+                {/* Featured Instagram Profile Link */}
+                <a
+                  href="https://www.instagram.com/negaresh_yar.ir/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="اینستاگرام نگارش یار"
+                  className="flex items-center justify-between gap-4 p-4 rounded-2xl bg-gradient-to-r from-[#833ab4]/20 via-[#fd1d1d]/15 to-[#fcb045]/20 hover:from-[#833ab4]/30 hover:via-[#fd1d1d]/25 hover:to-[#fcb045]/30 border border-[#E1306C]/50 hover:border-[#E5C158] shadow-[0_0_20px_rgba(225,48,108,0.18)] transition-all group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#E5C158]"
+                >
+                  <div className="flex items-center gap-3.5 min-w-0">
+                    <div className="w-12 h-12 rounded-2xl bg-[#070B15]/80 border border-white/15 flex items-center justify-center shrink-0 shadow-md">
+                      {/* eslint-disable-next-line @next/next/no-img-element */}
+                      <img
+                        src="/icons/messengers/instagram.svg"
+                        alt="اینستاگرام نگارش یار"
+                        className="w-7 h-7 object-contain group-hover:scale-110 transition-transform"
+                      />
+                    </div>
+                    <div className="min-w-0">
+                      <span className="block text-sm sm:text-base font-extrabold text-white group-hover:text-[#E5C158] transition-colors">
+                        اینستاگرام نگارش یار
+                      </span>
+                      <span className="block text-xs font-mono text-slate-300 truncate" dir="ltr">
+                        @negaresh_yar.ir
+                      </span>
+                    </div>
+                  </div>
+                  <span className="text-xs font-bold text-[#E5C158] bg-[#070B15]/70 px-3 py-1.5 rounded-xl border border-[#E5C158]/30 group-hover:border-[#E5C158] shrink-0 transition-colors">
+                    مشاهده صفحه ←
+                  </span>
+                </a>
+
+                {/* Official Messengers Grid */}
+                <div className="grid grid-cols-2 sm:grid-cols-3 gap-2.5">
+                  <a
+                    href="https://wa.me/989915147789"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="واتساپ نگارش یار"
+                    className="flex items-center gap-2.5 p-3 rounded-2xl bg-[#070B15] hover:bg-[#121A2D] border border-slate-800 hover:border-[#E5C158]/50 transition-all group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#E5C158]"
+                  >
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img
+                      src="/icons/messengers/whatsapp.svg"
+                      alt="واتساپ نگارش یار"
+                      className="w-5 h-5 object-contain group-hover:scale-110 transition-transform shrink-0"
+                    />
+                    <span className="text-xs font-bold text-slate-200 group-hover:text-[#E5C158] transition-colors">
+                      واتساپ
+                    </span>
+                  </a>
+
+                  <a
+                    href="https://t.me/negareshyar_support"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="تلگرام نگارش یار"
+                    className="flex items-center gap-2.5 p-3 rounded-2xl bg-[#070B15] hover:bg-[#121A2D] border border-slate-800 hover:border-[#E5C158]/50 transition-all group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#E5C158]"
+                  >
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img
+                      src="/icons/messengers/telegram.svg"
+                      alt="تلگرام نگارش یار"
+                      className="w-5 h-5 object-contain group-hover:scale-110 transition-transform shrink-0"
+                    />
+                    <span className="text-xs font-bold text-slate-200 group-hover:text-[#E5C158] transition-colors">
+                      تلگرام
+                    </span>
+                  </a>
+
+                  <a
+                    href="https://eitaa.com/negareshyar_admin"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="ایتا نگارش یار"
+                    className="flex items-center gap-2.5 p-3 rounded-2xl bg-[#070B15] hover:bg-[#121A2D] border border-slate-800 hover:border-[#E5C158]/50 transition-all group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#E5C158]"
+                  >
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img
+                      src="/icons/messengers/eitaa.svg"
+                      alt="ایتا نگارش یار"
+                      className="w-5 h-5 object-contain group-hover:scale-110 transition-transform shrink-0"
+                    />
+                    <span className="text-xs font-bold text-slate-200 group-hover:text-[#E5C158] transition-colors">
+                      ایتا
+                    </span>
+                  </a>
+
+                  <a
+                    href="https://rubika.ir/negareshyar"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="روبیکا نگارش یار"
+                    className="flex items-center gap-2.5 p-3 rounded-2xl bg-[#070B15] hover:bg-[#121A2D] border border-slate-800 hover:border-[#E5C158]/50 transition-all group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#E5C158]"
+                  >
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img
+                      src="/icons/messengers/rubika.svg"
+                      alt="روبیکا نگارش یار"
+                      className="w-5 h-5 object-contain group-hover:scale-110 transition-transform shrink-0"
+                    />
+                    <span className="text-xs font-bold text-slate-200 group-hover:text-[#E5C158] transition-colors">
+                      روبیکا
+                    </span>
+                  </a>
+
+                  <a
+                    href="https://ble.ir/negareshyar"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="بله نگارش یار"
+                    className="flex items-center gap-2.5 p-3 rounded-2xl bg-[#070B15] hover:bg-[#121A2D] border border-slate-800 hover:border-[#E5C158]/50 transition-all group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#E5C158]"
+                  >
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img
+                      src="/icons/messengers/bale.svg"
+                      alt="بله نگارش یار"
+                      className="w-5 h-5 object-contain group-hover:scale-110 transition-transform shrink-0"
+                    />
+                    <span className="text-xs font-bold text-slate-200 group-hover:text-[#E5C158] transition-colors">
+                      بله
+                    </span>
+                  </a>
+                </div>
+              </div>
             </div>
 
             {/* Contact Form Side */}
