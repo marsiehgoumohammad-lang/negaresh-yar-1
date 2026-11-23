@@ -164,7 +164,7 @@ export const sampleCryptoFraudComplaintData: SampleLandingData = {
   ctaTitle: 'برای تنظیم شکواییه متناسب با پرونده رمزارزی خود اقدام کنید',
   ctaDescription: 'شرح ماجرا، مدارک ارتباطی و اطلاعات عمومی تراکنش را آماده کنید. بررسی و نگارش متن بر اساس واقعیت پرونده انجام می شود؛ نتیجه رسیدگی یا بازگشت دارایی قابل تضمین نیست.',
   ctaPrimaryBtnText: 'درخواست تنظیم شکواییه رمزارزی',
-  ctaPrimaryHref: '/request?service=cybercrime-complaint',
+  ctaPrimaryHref: '/request',
   messengerMessage: 'برای بررسی و تنظیم شکواییه مرتبط با انتقال رمزارز، می خواهم شرح ماجرا و مدارک تراکنش را ارائه کنم.',
   publishedAt: '2026-11-23T00:00:00.000Z',
   updatedAt: '2026-11-23T00:00:00.000Z',
