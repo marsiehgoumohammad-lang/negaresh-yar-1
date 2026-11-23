@@ -47,7 +47,7 @@ export const cryptoPart3: CryptoContentSpec[] = [
   { q: 'اگر خودم کسی را جذب کرده ام چه؟', a: 'ممکن است وضعیت حقوقی شما متفاوت باشد؛ پیش از هر اقدام با وکیل مشورت کنید.' },
   { q: 'آیا بازگشت سرمایه تضمین میشود؟', a: 'خیر. به شناسایی مسئولان، قابل پیگیری بودن وجوه و تصمیم مرجع قضایی بستگی دارد.' },
  ],
- links: [K.pillar, K.exch, K.p2p, K.recover, K.civil, L.tg, L.shop, L.complaint, L.evid, L.sFraud],
+ links: [K.pillar, K.exch, K.p2p, K.recover, K.civil, L.tg, L.shop, L.complaint, L.evid, L.sCrypto, L.sFraud],
 },
 {
  slug: 'crypto-evidence-txid-guide',
@@ -72,6 +72,6 @@ export const cryptoPart3: CryptoContentSpec[] = [
   { q: 'آیا TXID هویت کلاهبردار را نشان میدهد؟', a: 'خیر. هویت از خود آدرس یا شناسه روشن نمیشود.' },
   { q: 'نام شبکه چرا مهم است؟', a: 'چون یک آدرس یا شناسه بدون شبکه ممکن است قابل ردیابی نباشد و باید با شبکه صحیح بررسی شود.' },
  ],
- links: [K.pillar, K.usdt, K.btc, K.wallet, K.recover, L.evid, L.sEvid, L.complaint, L.unk, L.follow],
+ links: [K.pillar, K.usdt, K.btc, K.wallet, K.recover, L.evid, L.sCrypto, L.sEvid, L.complaint, L.unk, L.follow],
 },
 ];

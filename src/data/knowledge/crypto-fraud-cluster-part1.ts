@@ -41,7 +41,7 @@ export const cryptoPart1: CryptoContentSpec[] = [
   { q: 'اگر هویت کلاهبردار را نمیدانم میتوانم شکایت کنم؟', a: 'بله. اطلاعات حساب، شماره و آدرس کیف پول را به عنوان سرنخ ارائه کنید؛ شناسایی قطعی تضمینشده نیست.' },
   { q: 'آیا شکایت از صرافی خارجی ممکن است؟', a: 'ممکن است دشوارتر باشد، چون شناسایی مسئولان و دسترسی به اطلاعات به صلاحیت و همکاری مراجع بستگی دارد. وضعیت را با وکیل بررسی کنید.' },
  ],
- links: [K.exch, K.p2p, K.usdt, K.btc, K.wallet, K.invest, K.txid, K.civil, K.recover, L.ext, L.complaint, L.follow, L.evid, L.howto, L.sFraud, L.sGeneral],
+ links: [K.exch, K.p2p, K.usdt, K.btc, K.wallet, K.invest, K.txid, K.civil, K.recover, L.ext, L.complaint, L.follow, L.evid, L.howto, L.sCrypto, L.sFraud, L.sGeneral],
 },
 {
  slug: 'crypto-exchange-complaint-guide',
@@ -67,6 +67,6 @@ export const cryptoPart1: CryptoContentSpec[] = [
   { q: 'آیا از صرافی خارجی هم میتوان شکایت کرد؟', a: 'میتوان بررسی کرد، اما شناسایی و دسترسی به اطلاعات دشوارتر است و باید وضعیت با وکیل ارزیابی شود.' },
   { q: 'آیا بازگشت دارایی تضمین میشود؟', a: 'خیر. بازگشت به شناسایی مسئولان، قابل پیگیری بودن دارایی و تصمیم مرجع قضایی بستگی دارد.' },
  ],
- links: [K.pillar, K.txid, K.civil, K.recover, K.p2p, L.complaint, L.follow, L.evid, L.sFraud, L.sTrust],
+ links: [K.pillar, K.txid, K.civil, K.recover, K.p2p, L.complaint, L.follow, L.evid, L.sCrypto, L.sFraud, L.sTrust],
 },
 ];

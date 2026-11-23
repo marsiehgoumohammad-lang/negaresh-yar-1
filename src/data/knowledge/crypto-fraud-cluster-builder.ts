@@ -35,6 +35,7 @@ export const L = {
   access: rel('هک و دسترسی غیرمجاز', '/knowledge/unauthorized-access-hacking-complaint', 'شکایت از هک حساب و داده'),
   howto: rel('چگونه شکواییه کیفری بنویسیم؟', '/knowledge/how-to-write-complaint', 'راهنمای تنظیم شکواییه دادسرا'),
   sFraud: rel('نمونه شکواییه کلاهبرداری', '/samples/fraud-complaint', 'الگوی شکواییه کلاهبرداری کیفری', 'نمونه سند'),
+  sCrypto: rel('نمونه شکواییه کلاهبرداری ارز دیجیتال و تتر', '/samples/crypto-fraud-complaint', 'الگوی اختصاصی با فیلدهای TXID، شبکه و آدرس کیف پول', 'نمونه سند'),
   sTrust: rel('نمونه شکواییه خیانت در امانت', '/samples/breach-of-trust-complaint', 'الگوی شکواییه خیانت در امانت', 'نمونه سند'),
   sPhish: rel('نمونه شکواییه فیشینگ و برداشت غیرمجاز', '/samples/phishing-unauthorized-withdrawal-complaint', 'الگوی شکواییه برداشت غیرمجاز', 'نمونه سند'),
   sAccess: rel('نمونه شکواییه هک و دسترسی غیرمجاز', '/samples/unauthorized-access-hacking-complaint', 'الگوی شکواییه هک', 'نمونه سند'),
@@ -88,7 +89,7 @@ export function toCryptoKnowledgeData(spec: CryptoContentSpec): KnowledgeArticle
     relatedArticles: Array.from(new Map((spec.links || []).concat([
       { title: 'راهنمای جامع جرایم فضای مجازی', href: '/knowledge/cybercrime-guide', desc: 'صفحه مادر خوشه جرایم فضای مجازی', category: 'صفحه مادر' },
     ]).map((link) => [link.href, link] as const)).values()),
-    relatedServices: [{ title: 'درخواست تنظیم شکواییه', href: '/request', desc: 'شرح ماجرا و مدارک خود را برای بررسی و تنظیم متن متناسب ارائه کنید.', badge: 'خدمت نگارشیار' }],
+    relatedServices: [{ title: 'تنظیم شکواییه جرایم رایانه ای و کلاهبرداری ارز دیجیتال', href: '/services/cybercrime-complaint', desc: 'بررسی مدارک رمزارزی، TXID، سوابق صرافی و تنظیم متن متناسب با پرونده.', badge: 'خدمت نگارش یار' }],
     ctaTitle: 'برای تنظیم شکواییه متناسب با پرونده خود آمادهاید؟',
     ctaDescription: 'مدارک و شرح دقیق واقعه را آماده کنید؛ عنوان قانونی و خواسته باید با جزئیات پرونده تطبیق داده شود.',
     ctaPrimaryBtnText: 'درخواست تنظیم متن حقوقی',
