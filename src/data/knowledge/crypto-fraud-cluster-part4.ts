@@ -24,7 +24,7 @@ export const cryptoPart4: CryptoContentSpec[] = [
   { q: 'آیا دعوای حقوقی ارز دیجیتال مشکل خاصی دارد؟', a: 'تعیین خواسته و ارزش گذاری دارایی ممکن است چالش داشته باشد و باید با وکیل بررسی شود.' },
   { q: 'آیا نمونه سند کافی است؟', a: 'نمونه فقط الگوی کار است و باید با واقعه و مدارک شما تطبیق داده شود.' },
  ],
- links: [K.pillar, K.recover, K.exch, K.invest, L.howto, L.complaint, L.sAttach, L.sNotice, L.sFraud, L.sTrust],
+ links: [K.pillar, K.recover, K.exch, K.invest, L.howto, L.complaint, L.sAttach, L.sNotice, L.sCrypto, L.sFraud, L.sTrust],
 },
 {
  slug: 'can-crypto-fraud-money-be-recovered',
@@ -48,6 +48,6 @@ export const cryptoPart4: CryptoContentSpec[] = [
   { q: 'اگر وجه به صرافی رفته باشد چه؟', a: 'اطلاعات حساب معمولاً با دستور یا استعلام مرجع قضایی قابل بررسی است و نتیجه تضمینی نیست.' },
   { q: 'چقدر طول میکشد؟', a: 'زمان بندی به پرونده بستگی دارد و عدد قطعی نمیتوان داد.' },
  ],
- links: [K.pillar, K.txid, K.civil, K.usdt, K.btc, L.complaint, L.follow, L.unk, L.evid, L.sFraud],
+ links: [K.pillar, K.txid, K.civil, K.usdt, K.btc, L.complaint, L.follow, L.unk, L.evid, L.sCrypto, L.sFraud],
 },
 ];

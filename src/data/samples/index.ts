@@ -237,6 +237,7 @@ import { sampleThirdPartyObjectionPetitionData, sampleThirdPartyObjectionPetitio
 import { sampleUnknownResidenceNewspaperPublicationRequestData, sampleUnknownResidenceNewspaperPublicationRequestMetadata } from './unknown-residence-newspaper-publication-request';
 import { sampleWitnessRebuttalObjectionBriefData, sampleWitnessRebuttalObjectionBriefMetadata } from './witness-rebuttal-objection-brief';
 import { samplePhishingUnauthorizedWithdrawalComplaintData, samplePhishingUnauthorizedWithdrawalComplaintMetadata } from './phishing-unauthorized-withdrawal-complaint';
+import { sampleCryptoFraudComplaintData, sampleCryptoFraudComplaintMetadata } from './crypto-fraud-complaint';
 import { sampleOnlineShoppingFraudComplaintData, sampleOnlineShoppingFraudComplaintMetadata } from './online-shopping-fraud-complaint';
 import { sampleUnauthorizedAccessHackingComplaintData, sampleUnauthorizedAccessHackingComplaintMetadata } from './unauthorized-access-hacking-complaint';
 import { samplePrivateImagePublicationThreatsData, samplePrivateImagePublicationThreatsMetadata } from './private-image-publication-threats-extortion-complaint';
@@ -2378,6 +2379,15 @@ export const allSamplesList: {
     data: samplePhishingUnauthorizedWithdrawalComplaintData,
   },
   {
+    slug: 'crypto-fraud-complaint',
+    title: sampleCryptoFraudComplaintData.title || sampleCryptoFraudComplaintData.h1Title || '',
+    description: sampleCryptoFraudComplaintData.shortDescription || sampleCryptoFraudComplaintData.heroSubtitle || '',
+    category: 'شکواییه و امور کیفری',
+    badge: 'کلاهبرداری ارز دیجیتال',
+    href: '/samples/crypto-fraud-complaint',
+    data: sampleCryptoFraudComplaintData,
+  },
+  {
     slug: 'online-shopping-fraud-complaint',
     title: sampleOnlineShoppingFraudComplaintData.title || sampleOnlineShoppingFraudComplaintData.h1Title || '',
     description: sampleOnlineShoppingFraudComplaintData.heroSubtitle || sampleOnlineShoppingFraudComplaintData.shortDescription || '',
@@ -2850,6 +2860,8 @@ export {
   sampleWitnessRebuttalObjectionBriefMetadata,
   samplePhishingUnauthorizedWithdrawalComplaintData,
   samplePhishingUnauthorizedWithdrawalComplaintMetadata,
+  sampleCryptoFraudComplaintData,
+  sampleCryptoFraudComplaintMetadata,
   sampleOnlineShoppingFraudComplaintData,
   sampleOnlineShoppingFraudComplaintMetadata,
   sampleUnauthorizedAccessHackingComplaintData,

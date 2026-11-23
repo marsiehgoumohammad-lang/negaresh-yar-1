@@ -24,7 +24,7 @@ export const cryptoPart2: CryptoContentSpec[] = [
   { q: 'آیا میتوانم از پلتفرم واسط هم شکایت کنم؟', a: 'بسته به نقش پلتفرم و مدارک، ممکن است قابل بررسی باشد؛ سوابق سفارش و پشتیبانی را نگه دارید و با وکیل مشورت کنید.' },
   { q: 'آیا وجه برمیگردد؟', a: 'تضمینی نیست و به شناسایی طرف مقابل و قابل پیگیری بودن وجوه و تصمیم مرجع قضایی بستگی دارد.' },
  ],
- links: [K.pillar, K.usdt, K.txid, K.recover, K.exch, L.shop, L.tg, L.unk, L.evid, L.sFraud],
+ links: [K.pillar, K.usdt, K.txid, K.recover, K.exch, L.shop, L.tg, L.unk, L.evid, L.sCrypto, L.sFraud],
 },
 {
  slug: 'tether-usdt-fraud-complaint',
@@ -49,7 +49,7 @@ export const cryptoPart2: CryptoContentSpec[] = [
   { q: 'آیا ناشر تتر میتواند وجه مرا برگرداند؟', a: 'ناشر در برخی موارد آدرس ها را مسدود کرده، اما این اقدام تضمینی نیست و برای هر پرونده در دسترس نیست.' },
   { q: 'اگر تتر را به آدرس اشتباه فرستادم چه کنم؟', a: 'تراکنش معمولاً برگشتپذیر نیست. مدارک را حفظ کنید و بررسی کنید آیا آدرس متعلق به صرافی یا فرد قابل شناسایی است.' },
  ],
- links: [K.pillar, K.txid, K.p2p, K.exch, K.recover, L.complaint, L.follow, L.unk, L.evid, L.sFraud],
+ links: [K.pillar, K.txid, K.p2p, K.exch, K.recover, L.complaint, L.follow, L.unk, L.evid, L.sCrypto, L.sFraud],
 },
 {
  slug: 'bitcoin-ethereum-fraud-complaint',
@@ -74,6 +74,6 @@ export const cryptoPart2: CryptoContentSpec[] = [
   { q: 'سرویس های بازیابی بیت کوین قابل اعتماد هستند؟', a: 'هر سرویسی که بازیابی قطعی یا پیش پرداخت میخواهد مشکوک است. بدون بررسی پرداخت نکنید.' },
   { q: 'آیا شکایت کیفری مسیر درستی است؟', a: 'در کلاهبرداری و هک معمولاً بله، اما انتخاب مسیر به مدارک و هدف شما بستگی دارد و میتواند با دعوای حقوقی ترکیب شود.' },
  ],
- links: [K.pillar, K.usdt, K.wallet, K.invest, K.txid, K.recover, L.complaint, L.follow, L.evid, L.sFraud],
+ links: [K.pillar, K.usdt, K.wallet, K.invest, K.txid, K.recover, L.complaint, L.follow, L.evid, L.sCrypto, L.sFraud],
 },
 ];
