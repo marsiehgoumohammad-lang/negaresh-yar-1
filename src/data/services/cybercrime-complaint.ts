@@ -291,7 +291,7 @@ export const cybercrimeComplaintServiceData: ServiceLandingData = {
 };
 
 export const cybercrimeComplaintServiceMetadata: Metadata = {
-  title: 'تنظیم شکواییه کلاهبرداری ارز دیجیتال و جرایم رایانه ای | نگارش یار',
+  title: 'تنظیم شکواییه کلاهبرداری ارز دیجیتال و جرایم رایانه ای',
   description:
     'تنظیم شکواییه و لایحه جرایم رایانه ای و رمزارزی؛ بررسی مدارک TXID، کیف پول، صرافی جعلی، کلاهبرداری P2P، پروژه سرمایه گذاری جعلی، فیشینگ و هک.',
   keywords: [
