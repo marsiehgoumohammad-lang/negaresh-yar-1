@@ -27,6 +27,8 @@ export interface LawyerCityData {
   directAnswer: string;
   localJudicialContext?: string;
   practicalAdvice?: string;
+  googleMapsQuery?: string;
+  courthouseMapsQuery?: string;
   commonLegalNeeds: CommonLegalNeed[];
   faqs: LawyerFaqItem[];
   messengerMessage: string;

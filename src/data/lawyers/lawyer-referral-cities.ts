@@ -1,6 +1,6 @@
 import { LawyerCityData } from './types';
 import { tehranCityData } from './cities/tehran';
-import { mashhadCityData, bojnurdCityData, birjandCityData } from './cities/khorasan';
+import { mashhadCityData, bojnurdCityData, birjandCityData, torbatHeydariehCityData } from './cities/khorasan';
 import {
   isfahanCityData,
   qomCityData,
@@ -38,6 +38,7 @@ import {
 export const ALL_LAWYER_CITIES: LawyerCityData[] = [
   tehranCityData,
   mashhadCityData,
+  torbatHeydariehCityData,
   shirazCityData,
   isfahanCityData,
   tabrizCityData,
