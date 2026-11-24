@@ -46,10 +46,10 @@ const REQUESTABLE_SERVICES: Record<string, { title: string; description: string 
 export default async function RequestPage({
   searchParams,
 }: {
-  searchParams?: Promise<{ service?: string }>;
+  searchParams?: Promise<Record<string, string | string[] | undefined>>;
 }) {
   const params = (await searchParams) ?? {};
-  const selectedService = params.service ? REQUESTABLE_SERVICES[params.service] : undefined;
+  const selectedService = typeof params.service === 'string' ? REQUESTABLE_SERVICES[params.service] : undefined;
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'LegalService',
