@@ -732,16 +732,16 @@ export function LawyerPillarTemplate() {
           </section>
 
           {/* ---------------------------------------------------- */}
-          {/* SECTION 7: 31 PROVINCIAL CAPITALS DIRECTORY */}
+          {/* SECTION 7: PROVINCIAL CAPITALS AND SELECTED CITIES DIRECTORY */}
           {/* ---------------------------------------------------- */}
           <section id="provincial-capitals" className="relative">
             <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-8">
               <div>
                 <h2 className="text-xl sm:text-2xl font-black text-white">
-                  دسترسی به راهنمای وکیل منصف در ۳۱ مرکز استان کشور
+                  دسترسی به راهنمای وکیل منصف در مراکز استان و شهرهای منتخب کشور
                 </h2>
                 <p className="text-xs sm:text-sm text-slate-300 mt-1">
-                  جهت دریافت راهنمای اختصاصی و ارتباط با وکیل در استان خود، شهر مورد نظر را انتخاب نمایید:
+                  برای مشاهده راهنمای محلی و دسترسی به اطلاعات مرتبط با شهر مورد نظر، آن را انتخاب کنید:
                 </p>
               </div>
 

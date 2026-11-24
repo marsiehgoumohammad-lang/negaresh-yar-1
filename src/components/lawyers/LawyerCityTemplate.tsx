@@ -53,6 +53,14 @@ export function LawyerCityTemplate({ cityData }: LawyerCityTemplateProps) {
         url: pageUrl,
         name: cityData.seoTitle,
         description: cityData.seoDescription,
+        about: {
+          '@type': 'City',
+          name: cityData.city,
+          containedInPlace: {
+            '@type': 'AdministrativeArea',
+            name: cityData.province,
+          },
+        },
         inLanguage: 'fa-IR',
         isPartOf: {
           '@type': 'WebSite',
@@ -267,6 +275,59 @@ export function LawyerCityTemplate({ cityData }: LawyerCityTemplateProps) {
                   )}
                 </div>
               </section>
+
+              {cityData.googleMapsQuery && (
+                <section id="city-map" className="space-y-5" aria-labelledby="city-map-heading">
+                  <div className="flex items-center gap-3">
+                    <div className="w-8 h-8 rounded-lg bg-[#E5C158]/15 border border-[#E5C158]/30 flex items-center justify-center text-[#E5C158]">
+                      <MapPin className="w-4 h-4" />
+                    </div>
+                    <h2 id="city-map-heading" className="text-xl sm:text-2xl font-bold text-white">
+                      نقشه {cityData.city} در گوگل مپ
+                    </h2>
+                  </div>
+                  <p className="text-sm text-slate-300 leading-8">
+                    برای مشاهده موقعیت عمومی شهر {cityData.city} و بررسی مسیرهای دسترسی، نقشه زیر را ببینید. این نقشه نشانی دفتر یا شعبه نگارش یار نیست.
+                  </p>
+                  <div className="rounded-2xl border border-slate-800 bg-slate-900/60 overflow-hidden">
+                    <div className="aspect-video w-full">
+                      <iframe
+                        src={`https://maps.google.com/maps?q=${encodeURIComponent(cityData.googleMapsQuery)}&z=12&output=embed`}
+                        width="100%"
+                        height="100%"
+                        style={{ border: 0 }}
+                        allowFullScreen
+                        loading="lazy"
+                        referrerPolicy="no-referrer-when-downgrade"
+                        title={`نقشه گوگل شهر ${cityData.city}`}
+                      />
+                    </div>
+                    <div className="flex flex-wrap gap-3 p-4">
+                      <a
+                        href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(cityData.googleMapsQuery)}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center justify-center rounded-xl border border-[#E5C158]/40 bg-[#E5C158]/10 px-4 py-2.5 text-xs sm:text-sm font-bold text-[#E5C158] transition-colors hover:bg-[#E5C158]/20"
+                      >
+                        مشاهده تربت حیدریه در گوگل مپ
+                      </a>
+                      {cityData.courthouseMapsQuery && (
+                        <a
+                          href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(cityData.courthouseMapsQuery)}`}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center justify-center rounded-xl border border-slate-700 bg-slate-800 px-4 py-2.5 text-xs sm:text-sm font-semibold text-slate-200 transition-colors hover:border-slate-500"
+                        >
+                          جستجوی دادگستری تربت حیدریه در نقشه
+                        </a>
+                      )}
+                    </div>
+                  </div>
+                  <p className="text-xs text-slate-400 leading-7">
+                    لینک دادگستری، نتیجه جستجو در نقشه است و جایگزین ابلاغیه قضایی نیست. برای مراجعه، نشانی و شعبه درج شده در ابلاغیه یا مرجع رسمی قضایی را ملاک قرار دهید.
+                  </p>
+                </section>
+              )}
 
               {/* Section 2: Common Legal Cases in the City */}
               <section id="common-cases" className="space-y-6">
@@ -547,7 +608,7 @@ export function LawyerCityTemplate({ cityData }: LawyerCityTemplateProps) {
                   href="/lawyer-referral"
                   className="block text-center text-xs text-[#E5C158] font-semibold pt-1 hover:underline"
                 >
-                  مشاهده همه ۳۱ مرکز استان کشور ←
+                  مشاهده راهنمای وکیل در همه شهرهای پوشش داده شده ←
                 </Link>
               </div>
 
