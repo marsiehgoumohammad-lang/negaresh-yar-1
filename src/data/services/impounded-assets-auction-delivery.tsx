@@ -111,7 +111,7 @@ export const impoundedAssetsAuctionDeliveryData: ServiceLandingData = {
 };
 
 export const impoundedAssetsAuctionDeliveryMetadata: Metadata = {
-  title: 'پیگیری برنده مزایده اموال تملیکی و تحویل کالا | نگارش یار',
+  title: 'پیگیری برنده مزایده اموال تملیکی و تحویل کالا',
   description: 'پیگیری بعد از برنده شدن در مزایده اموال تملیکی؛ بررسی وضعیت پرداخت، تایید دستگاه اجرایی، مجوز خروج و هماهنگی تحویل خودرو، ماشین آلات و کالا طبق آگهی.',
   keywords: ['پیگیری بعد از برنده شدن در مزایده اموال تملیکی', 'تحویل کالای مزایده اموال تملیکی', 'پیگیری تایید پرداخت مزایده', 'مجوز خروج کالا از انبار اموال تملیکی', 'تحویل خودرو مزایده اموال تملیکی', 'تحویل ماشین آلات مزایده', 'مهلت دریافت کالا از انبار مزایده', 'پیگیری مجوز خروج کالای برنده شده'],
   alternates: { canonical: 'https://www.negaresh-yar.ir/services/impounded-assets-auction-delivery' },
