@@ -193,6 +193,22 @@ export const impoundedAssetsAuctionData: ServiceLandingData = {
  },
  ],
 
+ relatedSamples: [
+  {
+   title: 'نمونه درخواست پیگیری تایید پرداخت و مجوز خروج کالای مزایده',
+   href: '/samples/impounded-assets-payment-approval-release-request',
+   desc: 'الگوی اداری برای برندگان اعلام شده که پرداخت را انجام داده اند و پیگیر مجوز خروج هستند.',
+   badge: 'پیگیری پرداخت و خروج',
+  },
+  {
+   title: 'چک لیست تحویل کالای مزایده اموال تملیکی',
+   href: '/samples/impounded-assets-handover-checklist',
+   desc: 'کنترل مشخصات، تعداد و ثبت مغایرت هنگام دریافت کالا از انبار.',
+   badge: 'چک لیست تحویل',
+  },
+ ],
+
+
 
  relatedArticles: [
  {
