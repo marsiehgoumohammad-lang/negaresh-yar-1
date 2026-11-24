@@ -62,7 +62,7 @@ export const sampleImpoundedAssetsPaymentApprovalRequestData: SampleLandingData 
   ],
   sampleStructureTitle: 'متن نمونه درخواست پیگیری تایید پرداخت و مجوز خروج',
   sampleStructureIntro: 'قسمت های داخل کروشه را با اطلاعات واقعی همان مزایده تکمیل کنید و مدارک مرتبط را پیوست نمایید.',
-  sampleStructureContent: \`بسمه تعالی
+  sampleStructureContent: `بسمه تعالی
 
 مدیریت محترم اداره کل جمع آوری و فروش اموال تملیکی استان [نام استان]
 واحد یا مسئول محترم رسیدگی به مزایده شماره [شماره مزایده]
@@ -97,7 +97,7 @@ export const sampleImpoundedAssetsPaymentApprovalRequestData: SampleLandingData 
 نام و نام خانوادگی / نام و سمت امضاکننده
 شماره تماس: [شماره]
 تاریخ: [تاریخ]
-امضا\`,
+امضا`,
   sampleStructureFeatures: ['درج شماره مزایده و شناسه پارتی به صورت جداگانه', 'توضیح روشن درباره وضعیت پرداخت موفق و نبود رکورد تحویل', 'درخواست بررسی و اعلام وضعیت، نه مطالبه نتیجه تضمین شده', 'فهرست پیوست های لازم برای تطبیق پرداخت'],
   guideStepsTitle: 'مراحل استفاده از نمونه درخواست',
   guideSteps: [

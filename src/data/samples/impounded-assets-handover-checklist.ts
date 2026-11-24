@@ -62,7 +62,7 @@ export const sampleImpoundedAssetsHandoverChecklistData: SampleLandingData = {
   ],
   sampleStructureTitle: 'فرم پیشنهادی صورت برداری شخصی هنگام تحویل',
   sampleStructureIntro: 'این فرم را می توانید برای نظم دادن به کنترل اقلام تکمیل کنید؛ اگر سازمان فرم اختصاصی دارد، همان فرم مرجع است.',
-  sampleStructureContent: \`چک لیست شخصی تحویل کالای مزایده اموال تملیکی
+  sampleStructureContent: `چک لیست شخصی تحویل کالای مزایده اموال تملیکی
 
 شماره مزایده: [شماره]
 شناسه پارتی: [شناسه]
@@ -103,7 +103,7 @@ export const sampleImpoundedAssetsHandoverChecklistData: SampleLandingData = {
 
 توضیح: این فرم شخصی و کمکی است و جایگزین صورت جلسه یا فرم رسمی مرجع تحویل نیست.
 نام و امضا: [نام]
-تاریخ: [تاریخ]\`,
+تاریخ: [تاریخ]`,
   sampleStructureFeatures: ['چک لیست تطبیق اسناد و مجوز خروج', 'جدول مشخصات، تعداد و شماره های شناسایی', 'بخش مستقل ثبت مغایرت و مستندات', 'کنترل بارگیری و مدارک خروج'],
   guideStepsTitle: 'روش استفاده از چک لیست',
   guideSteps: [
