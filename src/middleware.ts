@@ -9,12 +9,6 @@ export function middleware(request: NextRequest) {
     });
   }
 
-  if (pathname === '/request' && searchParams.has('service')) {
-    return NextResponse.redirect('https://www.negaresh-yar.ir/request', {
-      status: 301,
-    });
-  }
-
   if (searchParams.get('utm_source') === 'chatgpt.com') {
     return NextResponse.redirect(`https://www.negaresh-yar.ir${pathname}`, {
       status: 301,
