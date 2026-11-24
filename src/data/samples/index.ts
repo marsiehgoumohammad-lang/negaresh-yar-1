@@ -86,6 +86,8 @@ import { samplePromissoryNoteProtestObjectionData, samplePromissoryNoteProtestOb
 import { sampleAuctionDepositRefundRequestData, sampleAuctionDepositRefundRequestMetadata } from './auction-deposit-refund-request';
 import { sampleAuctionDeedTransferRequestData, sampleAuctionDeedTransferRequestMetadata } from './auction-deed-transfer-request';
 import { sampleAuctionCancellationObjectionData, sampleAuctionCancellationObjectionMetadata } from './auction-cancellation-objection';
+import { sampleImpoundedAssetsPaymentApprovalRequestData, sampleImpoundedAssetsPaymentApprovalRequestMetadata } from './impounded-assets-payment-approval-release-request';
+import { sampleImpoundedAssetsHandoverChecklistData, sampleImpoundedAssetsHandoverChecklistMetadata } from './impounded-assets-handover-checklist';
 import { sampleMehriehExecutionRegistryPetitionData, sampleMehriehExecutionRegistryPetitionMetadata } from './mehrieh-execution-registry-petition';
 import { sampleMehriehInstallmentPetitionData, sampleMehriehInstallmentPetitionMetadata } from './mehrieh-installment-petition';
 import { sampleNafaqahClaimPetitionData, sampleNafaqahClaimPetitionMetadata } from './nafaqah-claim-petition';
@@ -910,6 +912,24 @@ export const allSamplesList: {
     category: 'مزایده‌های دادگستری و ستاد ایران',
     href: '/samples/auction-cancellation-objection',
     data: sampleAuctionCancellationObjectionData,
+  },
+  {
+    slug: 'impounded-assets-payment-approval-release-request',
+    title: 'نمونه درخواست پیگیری تایید پرداخت و مجوز خروج کالای مزایده',
+    badge: 'پیگیری تایید پرداخت',
+    description: 'الگوی اداری برای بررسی پرداخت موفق، تایید دستگاه اجرایی و پیگیری نمایش مجوز خروج کالای مزایده اموال تملیکی.',
+    category: 'مزایده اموال تملیکی و تحویل کالا',
+    href: '/samples/impounded-assets-payment-approval-release-request',
+    data: sampleImpoundedAssetsPaymentApprovalRequestData,
+  },
+  {
+    slug: 'impounded-assets-handover-checklist',
+    title: 'چک لیست تحویل کالای مزایده اموال تملیکی و ثبت مغایرت',
+    badge: 'چک لیست تحویل',
+    description: 'چک لیست شخصی برای تطبیق تعداد، مشخصات، شماره سریال و وضعیت قابل مشاهده کالا پیش از خروج از انبار.',
+    category: 'مزایده اموال تملیکی و تحویل کالا',
+    href: '/samples/impounded-assets-handover-checklist',
+    data: sampleImpoundedAssetsHandoverChecklistData,
   },
   {
     slug: 'mehrieh-execution-registry-petition',
@@ -2870,6 +2890,10 @@ export {
   samplePrivateImagePublicationThreatsMetadata,
   sampleFakeIdentityImpersonationData,
   sampleFakeIdentityImpersonationMetadata,
+  sampleImpoundedAssetsPaymentApprovalRequestData,
+  sampleImpoundedAssetsPaymentApprovalRequestMetadata,
+  sampleImpoundedAssetsHandoverChecklistData,
+  sampleImpoundedAssetsHandoverChecklistMetadata,
 };
 
 
