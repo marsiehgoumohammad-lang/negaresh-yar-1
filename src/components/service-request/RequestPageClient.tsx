@@ -13,7 +13,11 @@ import {
   Phone,
 } from 'lucide-react';
 
-export function RequestPageClient() {
+type RequestPageClientProps = {
+  selectedService?: { title: string; description: string };
+};
+
+export function RequestPageClient({ selectedService }: RequestPageClientProps) {
   const [messengers, setMessengers] = useState<MessengerConfig[]>(DEFAULT_MESSENGERS);
   const [loading, setLoading] = useState(true);
   const [activeRipple, setActiveRipple] = useState<string | null>(null);
@@ -64,6 +68,18 @@ export function RequestPageClient() {
 
   return (
     <div className="py-6 sm:py-10 space-y-10 selection:bg-[#E5C158] selection:text-[#070B15]">
+      {selectedService && (
+        <section className="px-4" aria-labelledby="selected-service-title">
+          <Container>
+            <div className="max-w-3xl mx-auto rounded-2xl border border-[#E5C158]/30 bg-[#E5C158]/5 p-5 text-right">
+              <p className="text-xs font-bold text-[#E5C158] mb-2">خدمت انتخاب شده</p>
+              <h2 id="selected-service-title" className="text-base sm:text-lg font-black text-white">{selectedService.title}</h2>
+              <p className="mt-2 text-sm leading-7 text-slate-300">{selectedService.description}</p>
+            </div>
+          </Container>
+        </section>
+      )}
+
       {/* ---------------------------------------------------- */}
       {/* 1. COMPACT HERO SECTION */}
       {/* ---------------------------------------------------- */}

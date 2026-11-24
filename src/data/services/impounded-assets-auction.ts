@@ -168,6 +168,12 @@ export const impoundedAssetsAuctionData: ServiceLandingData = {
 
  relatedServices: [
  {
+ title: 'پیگیری امور اداری و تحویل مال پس از برنده شدن',
+ href: '/services/impounded-assets-auction-delivery',
+ desc: 'پیگیری تسویه، مدارک، مجوز خروج و هماهنگی تحویل خودرو، ماشین آلات و کالا پس از اعلام برنده شدن.',
+ badge: 'پس از برنده شدن',
+ },
+ {
  title: 'مزایده قوه قضاییه و اجرای احکام',
  href: '/services/judiciary-auction',
  desc: 'شرکت در مزایده املاک و خودروهای توقیفی دادگاه.',
@@ -187,26 +193,6 @@ export const impoundedAssetsAuctionData: ServiceLandingData = {
  },
  ],
 
- relatedSamples: [
- {
- title: 'نمونه درخواست استرداد ۱۰ درصد سپرده مزایده',
- href: '/samples/auction-deposit-refund-request',
- desc: 'تقاضای عودت وجه تضمین شرکت در حراج دادگاه برای غیربرندگان.',
- badge: 'استرداد ودیعه',
- },
- {
- title: 'نمونه درخواست انتقال سند و ترخیص خودرو',
- href: '/samples/auction-deed-transfer-request',
- desc: 'درخواست صدور معرفی نامه و تحویل کالا و خودروی خریداری شده.',
- badge: 'انتقال سند',
- },
- {
- title: 'نمونه لایحه اعتراض به مزایده و تقاضای ابطال',
- href: '/samples/auction-cancellation-objection',
- desc: 'شکایت از تخلفات برگزاری حراج و تقاضای رسیدگی مجدد.',
- badge: 'ابطال مزایده',
- },
- ],
 
  relatedArticles: [
  {

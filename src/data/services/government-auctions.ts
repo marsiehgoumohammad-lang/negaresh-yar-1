@@ -189,6 +189,12 @@ export const governmentAuctionsData: ServiceLandingData = {
 
  relatedServices: [
  {
+ title: 'پیگیری امور اداری و تحویل اموال تملیکی',
+ href: '/services/impounded-assets-auction-delivery',
+ desc: 'برای برندگان اعلام شده مزایده اموال تملیکی؛ پیگیری مدارک، تسویه و هماهنگی تحویل.',
+ badge: 'پس از مزایده',
+ },
+ {
  title: 'شرکت در مزایده قوه قضاییه و اجرای احکام',
  href: '/services/judiciary-auction',
  desc: 'خدمات تخصصی ثبت نام در ستاد ایران و تنظیم لوایح مزایده های املاک و خودرو دادگستری.',
