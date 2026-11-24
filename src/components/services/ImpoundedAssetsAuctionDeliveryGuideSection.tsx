@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 import { Container } from '@/components/ui/container';
 
 const steps = [
@@ -34,7 +35,7 @@ export function ImpoundedAssetsAuctionDeliveryGuideSection() {
           </header>
           <section className="space-y-5">
             <h3 className="text-xl font-extrabold text-white">۱. محدوده خدمت و تفاوت آن با شرکت در مزایده</h3>
-            <p className="text-sm leading-8 text-slate-300">این خدمت برای کسی است که برنده شدن او اعلام شده و اکنون به پیگیری تسویه، تکمیل مدارک، دریافت تاییدیه ها، هماهنگی با انبار و تحویل فیزیکی مال نیاز دارد. ثبت نام، احراز هویت و ثبت پیشنهاد قیمت موضوع این صفحه نیست و در <a className="text-[#E5C158] underline underline-offset-4" href="/services/impounded-assets-auction">صفحه ثبت نام و شرکت در مزایده اموال تملیکی</a> توضیح داده شده است.</p>
+            <p className="text-sm leading-8 text-slate-300">این خدمت برای کسی است که برنده شدن او اعلام شده و اکنون به پیگیری تسویه، تکمیل مدارک، دریافت تاییدیه ها، هماهنگی با انبار و تحویل فیزیکی مال نیاز دارد. ثبت نام، احراز هویت و ثبت پیشنهاد قیمت موضوع این صفحه نیست و در <Link className="text-[#E5C158] underline underline-offset-4" href="/services/impounded-assets-auction">صفحه ثبت نام و شرکت در مزایده اموال تملیکی</Link> توضیح داده شده است.</p>
             <div className="grid sm:grid-cols-2 gap-4">
               <div className="rounded-2xl border border-slate-700 bg-slate-900/70 p-5"><h4 className="font-bold text-white mb-2">آنچه قابل پیگیری است</h4><p className="text-sm leading-7 text-slate-300">بررسی اسناد، آماده سازی مکاتبه و درخواست، پیگیری اداری با اختیار و توافق روشن، هماهنگی با انبار و تنظیم فهرست تحویل.</p></div>
               <div className="rounded-2xl border border-amber-500/30 bg-amber-500/5 p-5"><h4 className="font-bold text-amber-200 mb-2">آنچه در اختیار ما نیست</h4><p className="text-sm leading-7 text-slate-300">تایید پرداخت، صدور مجوز خروج، تعیین زمان تحویل و تصمیم درباره موانع اداری در اختیار سازمان یا مرجع ذی صلاح است؛ نگارش یار نتیجه یا زمان آن را تضمین نمی کند.</p></div>
@@ -69,12 +70,12 @@ export function ImpoundedAssetsAuctionDeliveryGuideSection() {
           </section>
           <section className="space-y-3">
             <h3 className="text-xl font-extrabold text-white">۸. مسیرهای مرتبط در خوشه مزایده</h3>
-            <div className="grid sm:grid-cols-2 gap-3"><a href="/knowledge/government-auction-guide" className="rounded-xl border border-slate-800 p-4 text-[#E5C158] hover:border-[#E5C158]/50">راهنمای جامع مزایده و سامانه ستاد ایران ←</a><a href="/services/government-auctions" className="rounded-xl border border-slate-800 p-4 text-[#E5C158] hover:border-[#E5C158]/50">ثبت نام و شرکت در مزایده های دولتی ←</a></div>
+            <div className="grid sm:grid-cols-2 gap-3"><Link href="/knowledge/government-auction-guide" className="rounded-xl border border-slate-800 p-4 text-[#E5C158] hover:border-[#E5C158]/50">راهنمای جامع مزایده و سامانه ستاد ایران ←</Link><Link href="/services/government-auctions" className="rounded-xl border border-slate-800 p-4 text-[#E5C158] hover:border-[#E5C158]/50">ثبت نام و شرکت در مزایده های دولتی ←</Link></div>
           </section>
           <section className="rounded-2xl border border-[#E5C158]/30 bg-[#E5C158]/5 p-6 sm:p-8 text-center space-y-3">
             <h3 className="text-xl sm:text-2xl font-black text-white">برای بررسی پرونده تحویل مال مزایده ای آماده اید؟</h3>
             <p className="text-sm leading-7 text-slate-300 max-w-2xl mx-auto">شناسه مزایده، اعلام برنده شدن و محل نگهداری مال را ارسال کنید تا ابتدا امکان و حدود پیگیری بررسی شود.</p>
-            <a href="/request?service=impounded-assets-auction-delivery" className="inline-flex items-center justify-center rounded-xl bg-[#E5C158] px-6 py-3 font-black text-[#101827] hover:bg-[#F0D98C]">ثبت درخواست بررسی و پیگیری</a>
+            <Link href="/request?service=impounded-assets-auction-delivery" className="inline-flex items-center justify-center rounded-xl bg-[#E5C158] px-6 py-3 font-black text-[#101827] hover:bg-[#F0D98C]">ثبت درخواست بررسی و پیگیری</Link>
           </section>
         </div>
       </Container>
