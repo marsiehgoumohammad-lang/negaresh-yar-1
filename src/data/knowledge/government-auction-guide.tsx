@@ -298,6 +298,12 @@ export const governmentAuctionGuideData: KnowledgeArticleData = {
 
   relatedServices: [
     {
+      title: 'پیگیری امور اداری و تحویل اموال تملیکی پس از مزایده',
+      href: '/services/impounded-assets-auction-delivery',
+      desc: 'خدمت مستقل برای برندگان اعلام شده؛ بررسی مدارک، پیگیری تسویه و هماهنگی مجوز خروج و تحویل.',
+      badge: 'پس از برنده شدن',
+    },
+    {
       title: 'شرکت در مزایده قوه قضاییه و اجرای احکام دادگستری',
       href: '/services/judiciary-auction',
       desc: 'خدمات ثبت نام در ستاد ایران، بررسی نظریه کارشناسی، ودیعه ۱۰ درصد و لوایح انتقال سند و ابطال مزایده.',

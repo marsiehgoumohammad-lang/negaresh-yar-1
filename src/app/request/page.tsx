@@ -36,7 +36,20 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RequestPage() {
+const REQUESTABLE_SERVICES: Record<string, { title: string; description: string }> = {
+  'impounded-assets-auction-delivery': {
+    title: 'پیگیری امور اداری و تحویل اموال برنده شده در مزایده اموال تملیکی',
+    description: 'برای بررسی اولیه، آگهی و شناسه مزایده، اعلام برنده شدن، نوع مال، شهر و محل انبار و وضعیت پرداخت را آماده کنید.',
+  },
+};
+
+export default async function RequestPage({
+  searchParams,
+}: {
+  searchParams?: Promise<{ service?: string }>;
+}) {
+  const params = (await searchParams) ?? {};
+  const selectedService = params.service ? REQUESTABLE_SERVICES[params.service] : undefined;
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'LegalService',
@@ -75,7 +88,7 @@ export default function RequestPage() {
 
       {/* Main Content */}
       <main className="flex-1 pb-16">
-        <RequestPageClient />
+        <RequestPageClient selectedService={selectedService} />
       </main>
     </div>
   );
