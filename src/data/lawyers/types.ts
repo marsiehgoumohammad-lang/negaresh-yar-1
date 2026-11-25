@@ -16,6 +16,17 @@ export interface RelatedItem {
   desc: string;
 }
 
+export interface LocalOfficeResource {
+  category: string;
+  name: string;
+  address: string;
+  phone?: string;
+  mapQuery: string;
+  sourceUrl: string;
+  sourceLabel: string;
+  note?: string;
+}
+
 export interface LawyerCityData {
   slug: string;
   city: string;
@@ -29,6 +40,7 @@ export interface LawyerCityData {
   practicalAdvice?: string;
   googleMapsQuery?: string;
   courthouseMapsQuery?: string;
+  localResources?: LocalOfficeResource[];
   commonLegalNeeds: CommonLegalNeed[];
   faqs: LawyerFaqItem[];
   messengerMessage: string;

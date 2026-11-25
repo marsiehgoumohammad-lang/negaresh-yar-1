@@ -329,6 +329,50 @@ export function LawyerCityTemplate({ cityData }: LawyerCityTemplateProps) {
                 </section>
               )}
 
+              {cityData.localResources && cityData.localResources.length > 0 && (
+                <section id="local-judicial-resources" className="space-y-6" aria-labelledby="local-resources-heading">
+                  <div className="space-y-2">
+                    <h2 id="local-resources-heading" className="text-xl sm:text-2xl font-bold text-white">
+                      نشانی مراکز قضایی، انتظامی و دفاتر خدمات در تربت حیدریه
+                    </h2>
+                    <p className="text-sm text-slate-300 leading-8">
+                      برای پیدا کردن دادگستری، دادسرا، مراکز انتظامی، دفاتر خدمات الکترونیک قضایی و پلیس +۱۰، از فهرست زیر و لینک نقشه هر مرکز استفاده کنید.
+                    </p>
+                  </div>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    {cityData.localResources.map((resource, index) => (
+                      <article key={`${resource.name}-${index}`} className="rounded-2xl border border-slate-800 bg-slate-900/60 p-5 space-y-3">
+                        <div className="flex flex-wrap items-center justify-between gap-2">
+                          <span className="text-[11px] font-semibold text-[#E5C158] rounded-full border border-[#E5C158]/30 bg-[#E5C158]/10 px-3 py-1">
+                            {resource.category}
+                          </span>
+                          <span className="text-[10px] text-slate-500">{index + 1}</span>
+                        </div>
+                        <h3 className="text-base font-bold text-white">{resource.name}</h3>
+                        <p className="text-sm text-slate-300 leading-7">{resource.address}</p>
+                        {resource.phone && (
+                          <p className="text-sm text-slate-300">
+                            تلفن: <a href={`tel:${resource.phone.replace(/[^0-9+]/g, '')}`} className="text-[#E5C158] hover:underline">{resource.phone}</a>
+                          </p>
+                        )}
+                        {resource.note && <p className="text-xs text-amber-200/80 leading-6">{resource.note}</p>}
+                        <div className="flex flex-wrap gap-3 pt-1 text-xs font-semibold">
+                          <a href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(resource.mapQuery)}`} target="_blank" rel="noopener noreferrer" className="text-[#E5C158] hover:underline">
+                            مسیریابی در گوگل مپ
+                          </a>
+                          <a href={resource.sourceUrl} target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-slate-200 hover:underline">
+                            منبع نشانی: {resource.sourceLabel}
+                          </a>
+                        </div>
+                      </article>
+                    ))}
+                  </div>
+                  <p className="text-xs text-slate-400 leading-7">
+                    توجه: نشانی ها از فهرست های عمومی و نقشه های در دسترس گردآوری شده اند و جایگزین اعلام رسمی مراجع نیستند. برخی اطلاعات ممکن است به روز نباشد؛ پیش از مراجعه، تلفن مرکز، سامانه رسمی یا ابلاغیه قضایی را ملاک قرار دهید. در موارد فوری انتظامی با ۱۱۰ تماس بگیرید.
+                  </p>
+                </section>
+              )}
+
               {/* Section 2: Common Legal Cases in the City */}
               <section id="common-cases" className="space-y-6">
                 <div className="flex items-center gap-3">
