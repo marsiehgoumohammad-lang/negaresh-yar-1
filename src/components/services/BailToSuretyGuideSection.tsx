@@ -48,13 +48,13 @@ export function BailToSuretyGuideSection() {
 
           <div className="space-y-4 text-slate-300 text-sm sm:text-base leading-relaxed text-justify">
             <p>
-              در پرونده‌های کیفری، هنگامی که بازپرس یا دادیار برای متهم <strong>«قرار وثیقه»</strong> (تودیع سند مالکیت رسمی یا وجه نقد) صادر می‌کند و متهم یا بستگان او به دلیل عدم دسترسی به سند ملکی آزاد توان تودیع آن را ندارند، متهم روانه بازداشتگاه موقت یا زندان می‌شود.
+              در پرونده های کیفری، هنگامی که بازپرس یا دادیار برای متهم <strong>«قرار وثیقه»</strong> (تودیع سند مالکیت رسمی یا وجه نقد) صادر می کند و متهم یا بستگان او به دلیل عدم دسترسی به سند ملکی آزاد توان تودیع آن را ندارند، متهم روانه بازداشتگاه موقت یا زندان می شود.
             </p>
             <p>
-              <strong>«تبدیل وثیقه به کفالت» (Substitution of Bail with Surety)</strong> یک راهکار قانونی و رسمی است که به موجب آن، متهم یا وکیل او از مرجع قضایی تقاضا می‌کنند که به جای الزام به تودیع سند ملکی سنگین، <strong>«قرار کفالت»</strong> صادر شده و ضمانت شخص معتبر (نظیر کارمند رسمی دولت با فیش حقوقی یا کاسب با جواز کسب معتبر) پذیرفته شود تا متهم بلافاصله آزاد گردد.
+              <strong>«تبدیل وثیقه به کفالت» (Substitution of Bail with Surety)</strong> یک راهکار قانونی و رسمی است که به موجب آن، متهم یا وکیل او از مرجع قضایی تقاضا می کنند که به جای الزام به تودیع سند ملکی سنگین، <strong>«قرار کفالت»</strong> صادر شده و ضمانت شخص معتبر (نظیر کارمند رسمی دولت با فیش حقوقی یا کاسب با جواز کسب معتبر) پذیرفته شود تا متهم بلافاصله آزاد گردد.
             </p>
             <div className="p-4 rounded-xl bg-[#070B15] border border-amber-500/20 text-amber-200 text-xs sm:text-sm leading-relaxed">
-              <strong>هدف قانون‌گذار از امکان تبدیل قرار:</strong> اصل بر برائت و آزادی متهم تا زمان صدور حکم قطعی است. هدف قرار تأمین صرفاً تضمین دسترسی به متهم و جبران ضرر احتمالی است، نه مجازات و حبس پیش از محاکمه. بنابراین اگر حضور متهم با معرفی کفیل معتبر تضمین شود، تبدیل وثیقه کاملاً منطبق با عدالت قضایی است.
+              <strong>هدف قانون گذار از امکان تبدیل قرار:</strong> اصل بر برائت و آزادی متهم تا زمان صدور حکم قطعی است. هدف قرار تأمین صرفاً تضمین دسترسی به متهم و جبران ضرر احتمالی است، نه مجازات و حبس پیش از محاکمه. بنابراین اگر حضور متهم با معرفی کفیل معتبر تضمین شود، تبدیل وثیقه کاملاً منطبق با عدالت قضایی است.
             </div>
           </div>
         </div>
@@ -72,18 +72,18 @@ export function BailToSuretyGuideSection() {
 
           <div className="space-y-4 text-slate-300 text-sm sm:text-base leading-relaxed text-justify">
             <p>
-              مبنای بنیادین تبدیل قرار تأمین در <strong>مواد ۲۱۷، ۲۱۹ و ۲۴۳ قانون آیین دادرسی کیفری</strong> مصوب ۱۳۹۲ پیش‌بینی شده است:
+              مبنای بنیادین تبدیل قرار تأمین در <strong>مواد ۲۱۷، ۲۱۹ و ۲۴۳ قانون آیین دادرسی کیفری</strong> مصوب ۱۳۹۲ پیش بینی شده است:
             </p>
             <div className="space-y-3">
               <div className="p-4 rounded-2xl bg-[#070B15] border-r-4 border-[#E5C158] text-slate-200 text-xs sm:text-sm leading-relaxed">
                 <strong>ماده ۲۱۷ ق.آ.د.ک (اصل تناسب قرار):</strong> «صدور قرار تأمین باید مستدل و موجه و با نوع و اهمیت جرم، شدت مجازات، دلایل و اسباب اتهام، احتمال فرار یا مخفی شدن متهم و از بین رفتن آثار جرم، سابقه متهم، وضعیت روحی و جسمی، سن، جنس، شخصیت و حیثیت او متناسب باشد.»
               </div>
               <div className="p-4 rounded-2xl bg-[#070B15] border-r-4 border-sky-500 text-slate-200 text-xs sm:text-sm leading-relaxed">
-                <strong>ماده ۲۴۳ ق.آ.د.ک (اختیار تبدیل و تخفیف تأمین):</strong> «بازپرس می‌تواند در تمام مراحل تحقیقات با رعایت مقررات این قانون، قرار تأمین صادره را تشدید کند یا تخفیف دهد. تشدید یا تخفیف قرار تأمین، اعم از تبدیل نوع قرار یا تغییر مبلغ آن است. پس از طرح پرونده در دادگاه، متهم می‌تواند طبق ماده ۲۴۴ درخواست تخفیف تأمین را مطرح کند.»
+                <strong>ماده ۲۴۳ ق.آ.د.ک (اختیار تبدیل و تخفیف تأمین):</strong> «بازپرس می تواند در تمام مراحل تحقیقات با رعایت مقررات این قانون، قرار تأمین صادره را تشدید کند یا تخفیف دهد. تشدید یا تخفیف قرار تأمین، اعم از تبدیل نوع قرار یا تغییر مبلغ آن است. پس از طرح پرونده در دادگاه، متهم می تواند طبق ماده ۲۴۴ درخواست تخفیف تأمین را مطرح کند.»
               </div>
             </div>
             <p>
-              این احکام قانونی به روشنی بیان می‌کنند که قرار تأمین امری ثابت و تغییرناپذیر نیست و با تغییر شرایط پرونده یا اثبات عدم توانایی مالی متهم، مقام قضایی اختیار تام برای تبدیل وثیقه به کفالت دارد.
+              این احکام قانونی به روشنی بیان می کنند که قرار تأمین امری ثابت و تغییرناپذیر نیست و با تغییر شرایط پرونده یا اثبات عدم توانایی مالی متهم، مقام قضایی اختیار تام برای تبدیل وثیقه به کفالت دارد.
             </p>
           </div>
         </div>
@@ -100,7 +100,7 @@ export function BailToSuretyGuideSection() {
           </div>
 
           <p className="text-slate-300 text-sm sm:text-base leading-relaxed">
-            بازپرس یا قاضی دادگاه بر اساس چهار شاخصه کلیدی زیر با لایحه تبدیل قرار موافقت می‌نماید:
+            بازپرس یا قاضی دادگاه بر اساس چهار شاخصه کلیدی زیر با لایحه تبدیل قرار موافقت می نماید:
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -110,7 +110,7 @@ export function BailToSuretyGuideSection() {
                 <h4>۱. تناسب قرار با نوع اتهام و خسارت</h4>
               </div>
               <p className="text-xs sm:text-sm text-slate-400 leading-relaxed">
-                چنانچه جرم ارتکابی از جرایم سبک، غیرعمدی، مالی کم‌ارزش یا دارای جنبه خصوصی محدود باشد، وثیقه ملکی سنگین نامتناسب بوده و کفالت کفایت می‌کند.
+                چنانچه جرم ارتکابی از جرایم سبک، غیرعمدی، مالی کم ارزش یا دارای جنبه خصوصی محدود باشد، وثیقه ملکی سنگین نامتناسب بوده و کفالت کفایت می کند.
               </p>
             </div>
 
@@ -120,7 +120,7 @@ export function BailToSuretyGuideSection() {
                 <h4>۲. اثبات عجز مالی و شرایط شخصی متهم</h4>
               </div>
               <p className="text-xs sm:text-sm text-slate-400 leading-relaxed">
-                ارائه مستندات فقدان ملک ثبتی، کارگری بودن شغل متهم، مستأجر بودن، سرپرستی خانوار یا بیماری که ادامه بازداشت را غیرقابل تحمل می‌سازد.
+                ارائه مستندات فقدان ملک ثبتی، کارگری بودن شغل متهم، مستأجر بودن، سرپرستی خانوار یا بیماری که ادامه بازداشت را غیرقابل تحمل می سازد.
               </p>
             </div>
 
@@ -130,7 +130,7 @@ export function BailToSuretyGuideSection() {
                 <h4>۳. معرفی کفیل معتبر و دارای ملائت</h4>
               </div>
               <p className="text-xs sm:text-sm text-slate-400 leading-relaxed">
-                معرفی شخص ضامنی که اعتبار مالی یا استخدامی وی (فیش حقوقی رسمی دولتی، حکم کارگزینی یا پروانه کسب فعال) توانایی پاسخگویی به وجه‌الکفاله را تضمین کند.
+                معرفی شخص ضامنی که اعتبار مالی یا استخدامی وی (فیش حقوقی رسمی دولتی، حکم کارگزینی یا پروانه کسب فعال) توانایی پاسخگویی به وجه الکفاله را تضمین کند.
               </p>
             </div>
 
@@ -140,7 +140,7 @@ export function BailToSuretyGuideSection() {
                 <h4>۴. فقدان بیم فرار یا سابقه کیفری مؤثر</h4>
               </div>
               <p className="text-xs sm:text-sm text-slate-400 leading-relaxed">
-                سکونت دائم متهم در حوزه قضایی رسیدگی‌کننده، حسن شهرت و عدم سابقه محکومیت کیفری مؤثر که اطمینان بازپرس را برای حضور در جلسات جلب کند.
+                سکونت دائم متهم در حوزه قضایی رسیدگی کننده، حسن شهرت و عدم سابقه محکومیت کیفری مؤثر که اطمینان بازپرس را برای حضور در جلسات جلب کند.
               </p>
             </div>
           </div>
@@ -164,7 +164,7 @@ export function BailToSuretyGuideSection() {
                 <span>۱. مدارک هویتی کفیل</span>
               </h4>
               <p className="text-slate-400 leading-relaxed">
-                اصل و تصویر کارت ملی هوشمند، شناسنامه کفیل و ثبت‌نام قطعی در سامانه ثنا جهت ارسال ابلاغیه‌ها.
+                اصل و تصویر کارت ملی هوشمند، شناسنامه کفیل و ثبت نام قطعی در سامانه ثنا جهت ارسال ابلاغیه ها.
               </p>
             </div>
 
@@ -207,7 +207,7 @@ export function BailToSuretyGuideSection() {
               <Building className="w-5 h-5" />
             </div>
             <h3 className="text-xl sm:text-2xl font-black text-white">
-              ۵. مراحل گام‌به‌گام درخواست تبدیل وثیقه به کفالت و آزادی متهم
+              ۵. مراحل گام به گام درخواست تبدیل وثیقه به کفالت و آزادی متهم
             </h3>
           </div>
 
@@ -219,7 +219,7 @@ export function BailToSuretyGuideSection() {
               <div className="space-y-1">
                 <h4 className="text-base font-bold text-white">تنظیم لایحه رسمی تبدیل قرار تأمین</h4>
                 <p className="text-xs sm:text-sm text-slate-400 leading-relaxed">
-                  نگارش لایحه مستدل حقوقی خطاب به مرجع رسیدگی‌کننده با استناد متناسب به ماده ۲۴۳ در تحقیقات مقدماتی یا ماده ۲۴۴ برای درخواست تخفیف تأمین در دادگاه توسط کارشناسان نگارش یار.
+                  نگارش لایحه مستدل حقوقی خطاب به مرجع رسیدگی کننده با استناد متناسب به ماده ۲۴۳ در تحقیقات مقدماتی یا ماده ۲۴۴ برای درخواست تخفیف تأمین در دادگاه توسط کارشناسان نگارش یار.
                 </p>
               </div>
             </div>
@@ -229,7 +229,7 @@ export function BailToSuretyGuideSection() {
                 ۲
               </span>
               <div className="space-y-1">
-                <h4 className="text-base font-bold text-white">ارائه درخواست به شعبه رسیدگی‌کننده دادسرا</h4>
+                <h4 className="text-base font-bold text-white">ارائه درخواست به شعبه رسیدگی کننده دادسرا</h4>
                 <p className="text-xs sm:text-sm text-slate-400 leading-relaxed">
                   تسلیم لایحه و مدارک ملائت ضامن به مدیر دفتر شعبه توسط متهم، وکیل یا خانواده درجه یک متهم بازداشتی.
                 </p>
@@ -255,7 +255,7 @@ export function BailToSuretyGuideSection() {
               <div className="space-y-1">
                 <h4 className="text-base font-bold text-white">صدور دستور آزادی متهم و رفع بازداشت</h4>
                 <p className="text-xs sm:text-sm text-slate-400 leading-relaxed">
-                  ارسال دستور آزادی فوری به زندان یا تحت‌نظرگاه و آزادی بدون معطلی متهم تا روز دادرسی نهایی.
+                  ارسال دستور آزادی فوری به زندان یا تحت نظرگاه و آزادی بدون معطلی متهم تا روز دادرسی نهایی.
                 </p>
               </div>
             </div>
@@ -291,10 +291,10 @@ export function BailToSuretyGuideSection() {
               <tbody className="divide-y divide-slate-800 text-slate-300">
                 <tr>
                   <td className="p-3 font-bold text-amber-400">وثیقه ملکی (سند رسمی)</td>
-                  <td className="p-3">اصل سند تک‌برگ ۶ دانگ، نظریه کارشناس رسمی دادگستری، نامه ثبت</td>
+                  <td className="p-3">اصل سند تک برگ ۶ دانگ، نظریه کارشناس رسمی دادگستری، نامه ثبت</td>
                   <td className="p-3 text-red-400 font-bold">کند (۲ تا ۵ روز)</td>
                   <td className="p-3 text-red-400 font-bold">بسیار سخت</td>
-                  <td className="p-3 text-slate-300">جرایم مالی سنگین، کلاهبرداری کلان و پرونده‌های با خسارت بالا</td>
+                  <td className="p-3 text-slate-300">جرایم مالی سنگین، کلاهبرداری کلان و پرونده های با خسارت بالا</td>
                 </tr>
                 <tr>
                   <td className="p-3 font-bold text-yellow-300">وثیقه نقدی</td>
@@ -337,7 +337,7 @@ export function BailToSuretyGuideSection() {
             <div className="p-4 rounded-2xl bg-[#070B15] border border-red-500/20 space-y-2">
               <h4 className="font-bold text-red-400">۱. معرفی کفیل فاقد اعتبار کافی</h4>
               <p className="text-slate-400 leading-relaxed">
-                معرفی ضامنی با فیش حقوقی شرکتی نامعتبر، پروانه کسب منقضی یا حقوق ناکافی که سریعاً توسط بازپرس رد می‌شود.
+                معرفی ضامنی با فیش حقوقی شرکتی نامعتبر، پروانه کسب منقضی یا حقوق ناکافی که سریعاً توسط بازپرس رد می شود.
               </p>
             </div>
 
@@ -351,7 +351,7 @@ export function BailToSuretyGuideSection() {
             <div className="p-4 rounded-2xl bg-[#070B15] border border-blue-500/20 space-y-2">
               <h4 className="font-bold text-sky-400">۳. تأخیر در اقدام پس از صدور قرار</h4>
               <p className="text-slate-400 leading-relaxed">
-                تعلل در تقدیم لایحه که موجب انتقال متهم از بازداشتگاه موقت دادسرا به زندان عمومی و دشوارتر شدن روند می‌گردد.
+                تعلل در تقدیم لایحه که موجب انتقال متهم از بازداشتگاه موقت دادسرا به زندان عمومی و دشوارتر شدن روند می گردد.
               </p>
             </div>
           </div>
@@ -361,7 +361,7 @@ export function BailToSuretyGuideSection() {
         <div className="p-6 rounded-3xl bg-gradient-to-r from-[#0C1222] via-[#0F172A] to-[#0C1222] border border-[#E5C158]/30 space-y-4">
           <div className="flex items-center gap-2 text-[#E5C158] font-bold text-sm">
             <CheckCircle2 className="w-5 h-5" />
-            <span>تفکیک شفاف گزینه‌ها و خدمات نگارش یار در تبدیل قرار تأمین</span>
+            <span>تفکیک شفاف گزینه ها و خدمات نگارش یار در تبدیل قرار تأمین</span>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs sm:text-sm text-slate-300">
             <div className="p-4 rounded-xl bg-[#070B15] border border-slate-800 space-y-1">
@@ -379,7 +379,7 @@ export function BailToSuretyGuideSection() {
             <div className="p-4 rounded-xl bg-[#070B15] border border-slate-800 space-y-1">
               <h4 className="font-bold text-sky-400">۳. معرفی وکیل منصف</h4>
               <p className="text-slate-400">
-                برای پرونده‌های کیفری پیچیده یا با قرارهای میلیاردی که نیاز به حضور وکیل در شعبه دارند، از بخش <Link href="/lawyer-referral" className="text-[#E5C158] underline font-bold">معرفی وکیل منصف</Link> اقدام کنید.
+                برای پرونده های کیفری پیچیده یا با قرارهای میلیاردی که نیاز به حضور وکیل در شعبه دارند، از بخش <Link href="/lawyer-referral" className="text-[#E5C158] underline font-bold">معرفی وکیل منصف</Link> اقدام کنید.
               </p>
             </div>
           </div>
@@ -391,7 +391,7 @@ export function BailToSuretyGuideSection() {
             قصد تبدیل قرار وثیقه به کفالت و نجات متهم از بازداشت را دارید؟
           </h3>
           <p className="text-slate-300 text-xs sm:text-sm max-w-2xl mx-auto leading-relaxed">
-            اجازه ندهید نبود سند ملکی مانع آزادی متهم شود. با تنظیم لایحه‌ای مستدل و حقوقی بر مبنای ماده ۲۴۳ آیین دادرسی کیفری، زمینه موافقت بازپرس با کفالت را فراهم کنید.
+            اجازه ندهید نبود سند ملکی مانع آزادی متهم شود. با تنظیم لایحه ای مستدل و حقوقی بر مبنای ماده ۲۴۳ آیین دادرسی کیفری، زمینه موافقت بازپرس با کفالت را فراهم کنید.
           </p>
           <div className="pt-2 flex flex-col sm:flex-row items-center justify-center gap-3">
             <Link
