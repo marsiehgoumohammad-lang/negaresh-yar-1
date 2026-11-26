@@ -74,7 +74,7 @@ export const bouncedCheckGuideData: KnowledgeArticleData = {
     { id: 'first-action-certificate', title: '۲. اولین اقدام فوری: دریافت گواهی عدم پرداخت با کد رهگیری' },
     { id: 'automatic-bank-restrictions', title: '۳. پیامدهای بانکی و انسداد حساب ها ظرف ۲۴ ساعت (ماده ۵ مکرر)' },
     { id: 'four-recovery-methods', title: '۴. مقایسه ۴ روش قانونی وصول وجه چک برگشتی' },
-    title: '۵. اجراییه مستقیم ماده ۲۳؛ مسیر قانونی بدون دعوای مطالبه وجه',
+    { id: 'article-23-direct-execution', title: '۵. اجراییه مستقیم ماده ۲۳؛ مسیر قانونی بدون دعوای مطالبه وجه' },
     { id: 'civil-lawsuit-and-guarantors', title: '۶. دادخواست حقوقی مطالبه وجه و مسئولیت تضامنی ضامن و ظهرنویس' },
     { id: 'criminal-complaint-conditions', title: '۷. شرایط شکایت کیفری صدور چک بلامحل و استثنائات ماده ۱۳' },
     { id: 'registration-office-execution', title: '۸. وصول چک از طریق دایره اجرای ثبت اسناد رسمی' },
