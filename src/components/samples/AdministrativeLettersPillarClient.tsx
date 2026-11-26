@@ -323,8 +323,8 @@ const BANK_SUB_CLUSTER: BankScenario[] = [
   },
   {
     title: 'بخشودگی جرایم دیرکرد و سود مازاد',
-    badge: 'حذف وجه التزام تا ۱۰۰٪',
-    desc: 'استفاده از اختیارات هیئت مدیره بانک ها جهت بخشودگی ۶ درصد جریمه تاخیر با تسویه نقدی.',
+    badge: 'بررسی امکان بخشودگی وجه التزام',
+    desc: 'درخواست بررسی امکان تخفیف یا بخشودگی وجه التزام و جرایم دیرکرد بر پایه مقررات جاری و اختیارات اعتباری بانک؛ نتیجه به ضوابط بانک و شرایط پرونده بستگی دارد.',
     href: '/samples/bank-penalty-waiver',
   },
   {
@@ -579,10 +579,10 @@ export function AdministrativeLettersPillarClient() {
             <div className="space-y-2">
               <div className="flex items-center gap-2.5 text-[#E5C158] font-bold text-base sm:text-lg">
                 <AlertCircle className="w-5 h-5 text-[#E5C158] shrink-0" />
-                <span>چرا ۶۵٪ نامه های اداری و درخواست ها در کارتابل ها رد یا معطل می شوند؟</span>
+                <span>چرا بعضی نامه های اداری و درخواست ها در کارتابل ها رد یا معطل می شوند؟</span>
               </div>
               <p className="text-xs sm:text-sm text-slate-300 leading-relaxed max-w-2xl">
-                استفاده از لحن نامناسب، عدم استناد به بخشنامه ها و مواد قانونی، یا ابهام در بیان خواسته باعث بایگانی شدن نامه ها می گردد. اگر موضوع شما پیچیده، حساس یا دارای بار مالی است، کارشناسان نگارش یار نامه کاملاً اختصاصی و موثر شما را در کمتر از ۲ ساعت تدوین می کنند.
+                ابهام در خواسته، نقص مدارک، لحن نامتناسب یا استناد نادرست به مقررات می تواند بررسی نامه را دشوار کند. اگر موضوع شما پیچیده، حساس یا دارای بار مالی است، کارشناسان نگارش یار متن اختصاصی و مستند را بر اساس اطلاعات و مدارک شما تنظیم می کنند.
               </p>
             </div>
             <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 shrink-0">
@@ -1198,7 +1198,7 @@ export function AdministrativeLettersPillarClient() {
       <div className="fixed bottom-0 inset-x-0 z-50 p-3 bg-slate-950/95 border-t border-slate-800 backdrop-blur-lg sm:hidden flex items-center justify-between gap-3 shadow-2xl">
         <div className="space-y-0.5">
           <span className="text-[11px] font-bold text-[#E5C158] block">تنظیم نامه اداری اختصاصی</span>
-          <span className="text-[10px] text-slate-400 block">تحویل فوری کمتر از ۲ ساعت</span>
+          <span className="text-[10px] text-slate-400 block">زمان تحویل پیش از ثبت سفارش اعلام می شود</span>
         </div>
         <div className="flex items-center gap-2 shrink-0">
           <a
