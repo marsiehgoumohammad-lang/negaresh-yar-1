@@ -29,7 +29,7 @@ export function BailReductionGuideSection() {
             راهنمای کامل درخواست تقلیل وثیقه، کاهش مبلغ و تبدیل قرار تأمین در دادسرا
           </h2>
           <p className="text-slate-400 text-sm sm:text-base max-w-3xl mx-auto leading-relaxed">
-            بررسی ماده ۲۴۳ آیین دادرسی کیفری، راه‌های رهایی از بازداشت ناشی از عجز از تودیع وثیقه سنگین، شرایط کاهش مبلغ قرار، مدارک مورد نیاز و مراحل ثبت درخواست در مراجع قضایی.
+            بررسی ماده ۲۴۳ آیین دادرسی کیفری، راه های رهایی از بازداشت ناشی از عجز از تودیع وثیقه سنگین، شرایط کاهش مبلغ قرار، مدارک مورد نیاز و مراحل ثبت درخواست در مراجع قضایی.
           </p>
         </div>
 
@@ -40,16 +40,16 @@ export function BailReductionGuideSection() {
               <Gavel className="w-5 h-5" />
             </div>
             <h3 className="text-xl sm:text-2xl font-black text-white">
-              ۱. قرار وثیقه چیست و چه زمانی در دادسرا و دادگاه صادر می‌شود؟
+              ۱. قرار وثیقه چیست و چه زمانی در دادسرا و دادگاه صادر می شود؟
             </h3>
           </div>
 
           <div className="space-y-4 text-slate-300 text-sm sm:text-base leading-relaxed text-justify">
             <p>
-              در دادرسی‌های کیفری، <strong>قرار وثیقه (Bail)</strong> یکی از شدیدترین انواع <strong>قرارهای تأمین کیفری</strong> است که طبق ماده ۲۱۷ قانون آیین دادرسی کیفری توسط بازپرس یا دادیار به منظور دسترسی به متهم، حضور به موقع وی در مراحل رسیدگی و جبران خسارت احتمالی شاکی صادر می‌شود. وثیقه می‌تواند به صورت <strong>سند مالکیت غیرمنقول (ملک مسکونی یا تجاری ۶ دانگ)</strong>، ضمانت‌نامه بانکی یا وجه نقد تودیع گردد.
+              در دادرسی های کیفری، <strong>قرار وثیقه (Bail)</strong> یکی از شدیدترین انواع <strong>قرارهای تأمین کیفری</strong> است که طبق ماده ۲۱۷ قانون آیین دادرسی کیفری توسط بازپرس یا دادیار به منظور دسترسی به متهم، حضور به موقع وی در مراحل رسیدگی و جبران خسارت احتمالی شاکی صادر می شود. وثیقه می تواند به صورت <strong>سند مالکیت غیرمنقول (ملک مسکونی یا تجاری ۶ دانگ)</strong>، ضمانت نامه بانکی یا وجه نقد تودیع گردد.
             </p>
             <p>
-              بر اساس قانون، صدور قرار وثیقه باید با <strong>«اهمیت جرم، شدت مجازات، دلایل و اسناد، احتمال فرار یا مخفی شدن متهم و میزان خسارت وارده به بزه دیده»</strong> تناسب داشته باشد. چنانچه متهم پس از تفهیم اتهام نتواند وثیقه تعیین‌شده را فوراً معرفی و تودیع نماید، مقام قضایی به استناد ماده ۲۲۶ قانون آیین دادرسی کیفری دستور <strong>«بازداشت متهم به علت عجز از تودیع وثیقه»</strong> را صادر کرده و متهم روانه زندان می‌شود.
+              بر اساس قانون، صدور قرار وثیقه باید با <strong>«اهمیت جرم، شدت مجازات، دلایل و اسناد، احتمال فرار یا مخفی شدن متهم و میزان خسارت وارده به بزه دیده»</strong> تناسب داشته باشد. چنانچه متهم پس از تفهیم اتهام نتواند وثیقه تعیین شده را فوراً معرفی و تودیع نماید، مقام قضایی به استناد ماده ۲۲۶ قانون آیین دادرسی کیفری دستور <strong>«بازداشت متهم به علت عجز از تودیع وثیقه»</strong> را صادر کرده و متهم روانه زندان می شود.
             </p>
             <div className="p-4 rounded-xl bg-[#070B15] border border-amber-500/20 text-amber-200 text-xs sm:text-sm leading-relaxed">
               <strong>اصل بنیادین آزادی و تناسب تأمین:</strong> قرار تأمین نباید جنبه مجازات پیش از صدور حکم قطعی به خود بگیرد. اگر مبلغ وثیقه بسیار فراتر از توان مالی متهم یا فراتر از خسارت شاکی تعیین شود، متهم حق قانونی دارد تقاضای تقلیل یا تبدیل آن را مطرح نماید.
@@ -70,16 +70,16 @@ export function BailReductionGuideSection() {
 
           <div className="space-y-4 text-slate-300 text-sm sm:text-base leading-relaxed text-justify">
             <p>
-              <strong>«تقلیل وثیقه» (Bail Reduction)</strong> عبارت است از درخواست رسمی متهم یا وکیل او از مقام قضایی رسیدگی‌کننده (بازپرس، دادیار یا قاضی دادگاه کیفری) جهت <strong>کاهش مبلغ ریالی قرار وثیقه</strong> به میزانی متناسب با توان واقعی متهم و اوضاع‌واحوال پرونده.
+              <strong>«تقلیل وثیقه» (Bail Reduction)</strong> عبارت است از درخواست رسمی متهم یا وکیل او از مقام قضایی رسیدگی کننده (بازپرس، دادیار یا قاضی دادگاه کیفری) جهت <strong>کاهش مبلغ ریالی قرار وثیقه</strong> به میزانی متناسب با توان واقعی متهم و اوضاع واحوال پرونده.
             </p>
             <p>
               مبنای قانونی این حق در <strong>ماده ۲۴۳ قانون آیین دادرسی کیفری</strong> تصریح شده است:
             </p>
             <blockquote className="p-4 rounded-2xl bg-[#070B15] border-r-4 border-[#E5C158] text-slate-200 text-xs sm:text-sm font-medium leading-relaxed">
-              «دادگاه یا دادسرا می‌تواند در تمام مراحل تحقیقات و دادرسی، با در نظر گرفتن اوضاع‌واحوال و خصوصیات متهم، قرار تأمین صادره را به قرار خفیف‌تر تبدیل کند یا مبلغ آن را کاهش دهد...»
+              «بازپرس می تواند در تمام مراحل تحقیقات با رعایت مقررات این قانون، قرار تأمین صادره را تشدید کند یا تخفیف دهد. تشدید یا تخفیف قرار تأمین، اعم از تبدیل نوع قرار یا تغییر مبلغ آن است.»
             </blockquote>
             <p>
-              این ماده به صراحت این اختیار و تکلیف را به مقام قضایی می‌دهد که چنانچه متهم با ارائه لایحه مستدل و مدارک کافی، عدم توانایی مالی در فراهم کردن وثیقه سنگین و حسن نیت خود را اثبات کند، قرار وثیقه را تعدیل و تقلیل دهد تا آزادی متهم تا روز دادگاه میسر گردد.
+              این اختیار در مرحله تحقیقات مقدماتی به بازپرس مربوط است. پس از طرح پرونده در دادگاه، ماده ۲۴۴ به متهم اجازه می دهد درخواست تخفیف تأمین را از دادگاه مطرح کند. پذیرش درخواست، تغییر نوع قرار و آزادی متهم به تشخیص مرجع قضایی و شرایط پرونده بستگی دارد.
             </p>
           </div>
         </div>
@@ -96,7 +96,7 @@ export function BailReductionGuideSection() {
           </div>
 
           <p className="text-slate-300 text-sm sm:text-base leading-relaxed">
-            بازپرس یا قاضی دادگاه زمانی با درخواست تقلیل وثیقه موافقت می‌نماید که شرایط و اوضاع‌واحوال زیر در لایحه تقدیمی به اثبات برسد:
+            بازپرس یا قاضی دادگاه زمانی با درخواست تقلیل وثیقه موافقت می نماید که شرایط و اوضاع واحوال زیر در لایحه تقدیمی به اثبات برسد:
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -116,7 +116,7 @@ export function BailReductionGuideSection() {
                 <h4>اثبات عجز و ناتوانی مالی واقعی متهم</h4>
               </div>
               <p className="text-xs sm:text-sm text-slate-400 leading-relaxed">
-                ارائه مستندات فقدان ملک ثبتی، فیش حقوقی کارگری، اجاره‌نشینی، سرپرستی خانوار و ناتوانی در تودیع اسناد ملکی میلیاردی.
+                ارائه مستندات فقدان ملک ثبتی، فیش حقوقی کارگری، اجاره نشینی، سرپرستی خانوار و ناتوانی در تودیع اسناد ملکی میلیاردی.
               </p>
             </div>
 
@@ -136,7 +136,7 @@ export function BailReductionGuideSection() {
                 <h4>جبران بخشی از خسارت یا جلب رضایت</h4>
               </div>
               <p className="text-xs sm:text-sm text-slate-400 leading-relaxed">
-                پرداخت بخشی از طلب شاکی، تودیع مبالغ جزئی یا توافق اولیه با شاکی خصوصی پرونده شانس تقلیل را چند برابر می‌کند.
+                پرداخت بخشی از طلب شاکی، تودیع مبالغ جزئی یا توافق اولیه با شاکی خصوصی پرونده شانس تقلیل را چند برابر می کند.
               </p>
             </div>
           </div>
@@ -155,21 +155,21 @@ export function BailReductionGuideSection() {
 
           <div className="space-y-4 text-slate-300 text-sm sm:text-base leading-relaxed text-justify">
             <p>
-              دو راهکار اصلی برای متهمانی که در تأمین وثیقه ناتوان هستند وجود دارد که بر اساس شرایط متهم انتخاب می‌شوند:
+              دو راهکار اصلی برای متهمانی که در تأمین وثیقه ناتوان هستند وجود دارد که بر اساس شرایط متهم انتخاب می شوند:
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div className="p-5 rounded-2xl bg-[#070B15] border border-[#E5C158]/30 space-y-2">
                 <h4 className="text-base font-bold text-[#E5C158]">تقلیل وثیقه (کاهش رقم)</h4>
                 <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
-                  در این حالت، نوع تأمین همچنان <strong>«وثیقه»</strong> باقی می‌ماند، اما ارزیابی مبلغ کاهش می‌یابد؛ برای مثال وثیقه از ۵ میلیارد تومان به ۱ میلیارد تومان کاهش می‌یابد تا ملکی با ارزش کمتر یا وجه نقد موجود در دسترس تودیع شود.
+                  در این حالت، نوع تأمین همچنان <strong>«وثیقه»</strong> باقی می ماند، اما ارزیابی مبلغ کاهش می یابد؛ برای مثال وثیقه از ۵ میلیارد تومان به ۱ میلیارد تومان کاهش می یابد تا ملکی با ارزش کمتر یا وجه نقد موجود در دسترس تودیع شود.
                 </p>
               </div>
 
               <div className="p-5 rounded-2xl bg-[#070B15] border border-sky-500/30 space-y-2">
                 <h4 className="text-base font-bold text-sky-400">تبدیل وثیقه به کفالت</h4>
                 <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
-                  در این حالت، <strong>ماهیت قرار تأمین</strong> به طور کلی از وثیقه ملکی به <strong>قرار کفالت</strong> با معرفی ضامن معتبر (کارمند رسمی دارای فیش حقوقی یا کاسب دارای پروانه کسب فعال) تغییر می‌یابد. برای اطلاعات بیشتر صفحه <Link href="/services/bail-to-surety" className="text-[#E5C158] underline font-bold">تبدیل وثیقه به کفالت</Link> را ببینید.
+                  در این حالت، <strong>ماهیت قرار تأمین</strong> به طور کلی از وثیقه ملکی به <strong>قرار کفالت</strong> با معرفی ضامن معتبر (کارمند رسمی دارای فیش حقوقی یا کاسب دارای پروانه کسب فعال) تغییر می یابد. برای اطلاعات بیشتر صفحه <Link href="/services/bail-to-surety" className="text-[#E5C158] underline font-bold">تبدیل وثیقه به کفالت</Link> را ببینید.
                 </p>
               </div>
             </div>
@@ -183,7 +183,7 @@ export function BailReductionGuideSection() {
               <Scale className="w-5 h-5" />
             </div>
             <h3 className="text-xl sm:text-2xl font-black text-white">
-              ۵. جدول مقایسه انواع قرارهای تأمین کیفری و شیوه‌های تعدیل
+              ۵. جدول مقایسه انواع قرارهای تأمین کیفری و شیوه های تعدیل
             </h3>
           </div>
 
@@ -205,10 +205,10 @@ export function BailReductionGuideSection() {
               <tbody className="divide-y divide-slate-800 text-slate-300">
                 <tr>
                   <td className="p-3 font-bold text-amber-400">قرار وثیقه (سند ملکی / وجه نقد)</td>
-                  <td className="p-3">سند رسمی تک‌برگ ۶ دانگ، نظریه کارشناس ثبتی یا فیش واریز نقدی</td>
+                  <td className="p-3">سند رسمی تک برگ ۶ دانگ، نظریه کارشناس ثبتی یا فیش واریز نقدی</td>
                   <td className="p-3 text-red-400 font-bold">بسیار سنگین</td>
                   <td className="p-3 text-red-400 font-bold">بازداشت فوری در زندان</td>
-                  <td className="p-3 text-emerald-400 font-bold">قابل تقلیل یا تبدیل (ماده ۲۴۳)</td>
+                  <td className="p-3 text-emerald-400 font-bold">قابل بررسی در تحقیقات مقدماتی (ماده ۲۴۳)</td>
                 </tr>
                 <tr>
                   <td className="p-3 font-bold text-sky-400">قرار کفالت</td>
@@ -222,21 +222,21 @@ export function BailReductionGuideSection() {
                   <td className="p-3">تعهد کتبی و امضای شخص متهم بدون نیاز به ضامن یا سند</td>
                   <td className="p-3 text-emerald-400 font-bold">بسیار آسان</td>
                   <td className="p-3 text-slate-300 font-medium">عدم بازداشت (آزادی فوری)</td>
-                  <td className="p-3 text-slate-400">خفیف‌ترین قرار مالی</td>
+                  <td className="p-3 text-slate-400">خفیف ترین قرار مالی</td>
                 </tr>
                 <tr>
                   <td className="p-3 font-bold text-purple-400">تقلیل مبلغ وثیقه</td>
                   <td className="p-3">لایحه مستند به عدم تناسب، مدارک عدم تمکن مالی و سوابق متهم</td>
                   <td className="p-3 text-sky-300 font-bold">راهکار قانونی</td>
                   <td className="p-3 text-emerald-400 font-bold">کاهش ارزش سند و آزادی</td>
-                  <td className="p-3 text-emerald-400 font-bold">طبق ماده ۲۴۳ ق.آ.د.ک</td>
+                  <td className="p-3 text-emerald-400 font-bold">با توجه به مرحله پرونده و مواد ۲۴۳ و ۲۴۴ ق.آ.د.ک</td>
                 </tr>
                 <tr>
                   <td className="p-3 font-bold text-blue-400">تبدیل قرار تأمین</td>
-                  <td className="p-3">معرفی کفیل یا وثیقه خفیف‌تر همراه لایحه تعویض قرار</td>
+                  <td className="p-3">معرفی کفیل یا وثیقه خفیف تر همراه لایحه تعویض قرار</td>
                   <td className="p-3 text-sky-300 font-bold">راهکار جایگزین</td>
                   <td className="p-3 text-emerald-400 font-bold">فک سند ملکی یا رهایی از بند</td>
-                  <td className="p-3 text-emerald-400 font-bold">در تمام مراحل دادرسی</td>
+                  <td className="p-3 text-emerald-400 font-bold">در تحقیقات: ماده ۲۴۳؛ در دادگاه: درخواست تخفیف تأمین طبق ماده ۲۴۴</td>
                 </tr>
               </tbody>
             </table>
@@ -271,7 +271,7 @@ export function BailReductionGuideSection() {
                 <span>۲. مدارک اثبات عدم تمکن مالی متهم</span>
               </h4>
               <p className="text-slate-400 leading-relaxed">
-                گواهی اشتغال، فیش حقوقی، استشهاد محلی ناتوانی مالی، اجاره‌نامه مسکونی و مدارک افراد تحت تکفل.
+                گواهی اشتغال، فیش حقوقی، استشهاد محلی ناتوانی مالی، اجاره نامه مسکونی و مدارک افراد تحت تکفل.
               </p>
             </div>
 
@@ -281,7 +281,7 @@ export function BailReductionGuideSection() {
                 <span>۳. مدارک تأمین جایگزین پیشنهادی</span>
               </h4>
               <p className="text-slate-400 leading-relaxed">
-                در صورت تقاضای تبدیل، تصویر فیش حقوقی کفیل یا سند ملکی با ارزش کمتر جهت بررسی بازپرس ضمیمه می‌گردد.
+                در صورت تقاضای تبدیل، تصویر فیش حقوقی کفیل یا سند ملکی با ارزش کمتر جهت بررسی بازپرس ضمیمه می گردد.
               </p>
             </div>
 
@@ -291,7 +291,7 @@ export function BailReductionGuideSection() {
                 <span>۴. گواهی فقدان سوءپیشینه یا حسن شهرت</span>
               </h4>
               <p className="text-slate-400 leading-relaxed">
-                مدارک اثبات کننده سابقه پاک متهم، عدم محکومیت کیفری مؤثر و سکونت دائمی در حوزه قضایی رسیدگی‌کننده.
+                مدارک اثبات کننده سابقه پاک متهم، عدم محکومیت کیفری مؤثر و سکونت دائمی در حوزه قضایی رسیدگی کننده.
               </p>
             </div>
           </div>
@@ -326,7 +326,7 @@ export function BailReductionGuideSection() {
                 ۲
               </span>
               <div className="space-y-1">
-                <h4 className="text-base font-bold text-white">ارائه درخواست به شعبه رسیدگی‌کننده</h4>
+                <h4 className="text-base font-bold text-white">ارائه درخواست به شعبه رسیدگی کننده</h4>
                 <p className="text-xs sm:text-sm text-slate-400 leading-relaxed">
                   تقدیم لایحه به دفتر بازپرسی یا دادیاری شعبه (در دادسرا) یا دفتر شعبه دادگاه کیفری توسط متهم، وکیل یا اعضای درجه یک خانواده.
                 </p>
@@ -340,7 +340,7 @@ export function BailReductionGuideSection() {
               <div className="space-y-1">
                 <h4 className="text-base font-bold text-white">بررسی بازپرس و اتخاذ تصمیم قضایی</h4>
                 <p className="text-xs sm:text-sm text-slate-400 leading-relaxed">
-                  مقام قضایی لایحه و مدارک را بررسی کرده و در صورت احراز تناسب و عجز، دستور کاهش مبلغ وثیقه یا تبدیل آن را صادر می‌نماید.
+                  مقام قضایی لایحه و مدارک را بررسی کرده و در صورت احراز تناسب و عجز، دستور کاهش مبلغ وثیقه یا تبدیل آن را صادر می نماید.
                 </p>
               </div>
             </div>
@@ -350,9 +350,9 @@ export function BailReductionGuideSection() {
                 ۴
               </span>
               <div className="space-y-1">
-                <h4 className="text-base font-bold text-white">تودیع تأمین تعدیل‌شده و آزادی فوری متهم</h4>
+                <h4 className="text-base font-bold text-white">تودیع تأمین تعدیل شده و آزادی فوری متهم</h4>
                 <p className="text-xs sm:text-sm text-slate-400 leading-relaxed">
-                  تودیع وثیقه با رقم جدید یا قبولی کفالت و صدور دستور رفع بازداشت و آزادی متهم به زندان یا تحت‌نظرگاه.
+                  تودیع وثیقه با رقم جدید یا قبولی کفالت و صدور دستور رفع بازداشت و آزادی متهم به زندان یا تحت نظرگاه.
                 </p>
               </div>
             </div>
@@ -372,10 +372,10 @@ export function BailReductionGuideSection() {
 
           <div className="space-y-4 text-slate-300 text-sm sm:text-base leading-relaxed text-justify">
             <p>
-              درخواست‌های شفاهی خانواده‌ها در راهروهای دادسرا اغلب به علت مشغله شدید بازپرسان بی‌پاسخ می‌ماند. مقام قضایی برای تغییر تصمیم خود نیازمند <strong>«مستند کتبی ثبتی در پرونده»</strong> است که در مراجع نظارتی و دادستانی قابل دفاع باشد.
+              درخواست های شفاهی خانواده ها در راهروهای دادسرا اغلب به علت مشغله شدید بازپرسان بی پاسخ می ماند. مقام قضایی برای تغییر تصمیم خود نیازمند <strong>«مستند کتبی ثبتی در پرونده»</strong> است که در مراجع نظارتی و دادستانی قابل دفاع باشد.
             </p>
             <p>
-              یک لایحه تخصصی تقلیل وثیقه با تنظیم منسجم، نگارش در قالب فرمت دادسرا، ارجاع به مواد ۲۱۷ و ۲۴۳ آیین دادرسی کیفری، و ارائه ادله منطقی مبنی بر عدم خطر فرار متهم، قاضی را از نظر وجدانی و قانونی مجاب به پذیرش تقاضای تعدیل قرار می‌سازد.
+              یک لایحه تخصصی تقلیل وثیقه با تنظیم منسجم، نگارش در قالب فرمت دادسرا، ارجاع به مواد ۲۱۷ و ۲۴۳ آیین دادرسی کیفری، و ارائه ادله منطقی مبنی بر عدم خطر فرار متهم، قاضی را از نظر وجدانی و قانونی مجاب به پذیرش تقاضای تعدیل قرار می سازد.
             </p>
           </div>
         </div>
@@ -384,13 +384,13 @@ export function BailReductionGuideSection() {
         <div className="p-6 rounded-3xl bg-gradient-to-r from-[#0C1222] via-[#0F172A] to-[#0C1222] border border-[#E5C158]/30 space-y-4">
           <div className="flex items-center gap-2 text-[#E5C158] font-bold text-sm">
             <CheckCircle2 className="w-5 h-5" />
-            <span>تفکیک شفاف خدمات و گزینه‌های شما در خصوص قرار وثیقه</span>
+            <span>تفکیک شفاف خدمات و گزینه های شما در خصوص قرار وثیقه</span>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs sm:text-sm text-slate-300">
             <div className="p-4 rounded-xl bg-[#070B15] border border-slate-800 space-y-1">
               <h4 className="font-bold text-white">۱. آموزش حقوقی رایگان</h4>
               <p className="text-slate-400">
-                مطالعه راهنماها و مقالات پایگاه دانش نگارش یار پیرامون انواع قرارهای تأمین، ماده ۲۱۷ و روش‌های فک وثیقه به صورت کاملاً رایگان.
+                مطالعه راهنماها و مقالات پایگاه دانش نگارش یار پیرامون انواع قرارهای تأمین، ماده ۲۱۷ و روش های فک وثیقه به صورت کاملاً رایگان.
               </p>
             </div>
             <div className="p-4 rounded-xl bg-[#070B15] border border-slate-800 space-y-1">
@@ -402,7 +402,7 @@ export function BailReductionGuideSection() {
             <div className="p-4 rounded-xl bg-[#070B15] border border-slate-800 space-y-1">
               <h4 className="font-bold text-sky-400">۳. معرفی وکیل منصف</h4>
               <p className="text-slate-400">
-                برای پرونده‌های حساس کیفری یک و دادگاه انقلاب که نیاز به حضور فیزیکی وکیل در شعبه دارند، از بخش <Link href="/lawyer-referral" className="text-[#E5C158] underline font-bold">معرفی وکیل منصف</Link> اقدام نمایید.
+                برای پرونده های حساس کیفری یک و دادگاه انقلاب که نیاز به حضور فیزیکی وکیل در شعبه دارند، از بخش <Link href="/lawyer-referral" className="text-[#E5C158] underline font-bold">معرفی وکیل منصف</Link> اقدام نمایید.
               </p>
             </div>
           </div>
