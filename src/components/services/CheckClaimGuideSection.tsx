@@ -144,7 +144,7 @@ export function CheckClaimGuideSection() {
                   <div className="w-8 h-8 rounded-full bg-white flex items-center justify-center border border-slate-200 shrink-0 font-bold text-slate-700 shadow-sm">۳</div>
                   <div>
                     <h3 className="font-bold text-slate-900 text-lg mb-1">ثبت در دفتر خدمات قضایی و دادگاه</h3>
-                    <p className="text-slate-600 text-sm leading-relaxed">پس از ثبت دادخواست در سامانه ثنا، پرونده به شورای حل اختلاف (زیر ۲۰ میلیون تومان) یا دادگاه حقوقی ارجاع می‌شود و وقت رسیدگی تعیین می‌گردد.</p>
+                    دعاوی مالی تا نصاب یک میلیارد ریال (۱۰۰ میلیون تومان) در دادگاه صلح و در مبالغ بالاتر در دادگاه عمومی حقوقی رسیدگی می شود؛ تشخیص مرجع نهایی تابع نوع خواسته و قواعد صلاحیت است.
                   </div>
                 </li>
               </ul>
