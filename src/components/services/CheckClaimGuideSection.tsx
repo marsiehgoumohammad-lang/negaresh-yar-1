@@ -60,8 +60,8 @@ export function CheckClaimGuideSection() {
                   </tr>
                   <tr>
                     <td className="p-4 font-medium text-slate-900">اشخاص قابل تعقیب</td>
-                    <td className="p-4 text-slate-600 bg-brand-50/30">صادرکننده و تمام ظهرنویسان (تضامنی)</td>
-                    <td className="p-4 text-slate-600">فقط شخص صادرکننده چک</td>
+                    <td className="p-4 text-slate-600 bg-brand-50/30">صادرکننده و حسب مورد ظهرنویس یا ضامن، با رعایت مواعد و شرایط قانونی</td>
+                    <td className="p-4 text-slate-600">صادرکننده و صاحب حساب، حسب مورد، طبق ماده ۲۳</td>
                     <td className="p-4 text-slate-600">فقط صادرکننده چک</td>
                   </tr>
                   <tr>
@@ -144,7 +144,7 @@ export function CheckClaimGuideSection() {
                   <div className="w-8 h-8 rounded-full bg-white flex items-center justify-center border border-slate-200 shrink-0 font-bold text-slate-700 shadow-sm">۳</div>
                   <div>
                     <h3 className="font-bold text-slate-900 text-lg mb-1">ثبت در دفتر خدمات قضایی و دادگاه</h3>
-                    <p className="text-slate-600 text-sm leading-relaxed">پس از ثبت دادخواست در سامانه ثنا، پرونده به شورای حل اختلاف (زیر ۲۰ میلیون تومان) یا دادگاه حقوقی ارجاع می‌شود و وقت رسیدگی تعیین می‌گردد.</p>
+                    دعاوی مالی تا نصاب یک میلیارد ریال (۱۰۰ میلیون تومان) در دادگاه صلح و در مبالغ بالاتر در دادگاه عمومی حقوقی رسیدگی می شود؛ تشخیص مرجع نهایی تابع نوع خواسته و قواعد صلاحیت است.
                   </div>
                 </li>
               </ul>
