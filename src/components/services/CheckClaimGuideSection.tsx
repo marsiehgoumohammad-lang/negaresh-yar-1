@@ -61,7 +61,7 @@ export function CheckClaimGuideSection() {
                   <tr>
                     <td className="p-4 font-medium text-slate-900">اشخاص قابل تعقیب</td>
                     <td className="p-4 text-slate-600 bg-brand-50/30">صادرکننده و حسب مورد ظهرنویس یا ضامن، با رعایت مواعد و شرایط قانونی</td>
-                    <td className="p-4 text-slate-600">فقط شخص صادرکننده چک</td>
+                    <td className="p-4 text-slate-600">صادرکننده و صاحب حساب، حسب مورد، طبق ماده ۲۳</td>
                     <td className="p-4 text-slate-600">فقط صادرکننده چک</td>
                   </tr>
                   <tr>
