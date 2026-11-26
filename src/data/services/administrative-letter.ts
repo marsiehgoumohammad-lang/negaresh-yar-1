@@ -318,6 +318,12 @@ export const administrativeLetterData: ServiceLandingData = {
       badge: "بانک",
     },
     {
+      title: "نمونه درخواست بخشودگی جرایم بانکی",
+      href: "/samples/bank-penalty-waiver",
+      desc: "نمونه درخواست بررسی بخشودگی وجه التزام و بازنگری محاسبات تسهیلات.",
+      badge: "بخشودگی بانکی",
+    },
+    {
       title: "نمونه نامه رسمی به استاندار و فرمانداری",
       href: "/samples/letter-to-governor",
       desc: "درخواست رسیدگی به معضلات شهری و کارگروه رفع موانع تولید.",
