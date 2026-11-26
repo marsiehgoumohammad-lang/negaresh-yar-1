@@ -76,10 +76,10 @@ export function BailReductionGuideSection() {
               مبنای قانونی این حق در <strong>ماده ۲۴۳ قانون آیین دادرسی کیفری</strong> تصریح شده است:
             </p>
             <blockquote className="p-4 rounded-2xl bg-[#070B15] border-r-4 border-[#E5C158] text-slate-200 text-xs sm:text-sm font-medium leading-relaxed">
-              «دادگاه یا دادسرا می‌تواند در تمام مراحل تحقیقات و دادرسی، با در نظر گرفتن اوضاع‌واحوال و خصوصیات متهم، قرار تأمین صادره را به قرار خفیف‌تر تبدیل کند یا مبلغ آن را کاهش دهد...»
+              «بازپرس می‌تواند در تمام مراحل تحقیقات با رعایت مقررات این قانون، قرار تأمین صادره را تشدید کند یا تخفیف دهد. تشدید یا تخفیف قرار تأمین، اعم از تبدیل نوع قرار یا تغییر مبلغ آن است.»
             </blockquote>
             <p>
-              این ماده به صراحت این اختیار و تکلیف را به مقام قضایی می‌دهد که چنانچه متهم با ارائه لایحه مستدل و مدارک کافی، عدم توانایی مالی در فراهم کردن وثیقه سنگین و حسن نیت خود را اثبات کند، قرار وثیقه را تعدیل و تقلیل دهد تا آزادی متهم تا روز دادگاه میسر گردد.
+              این اختیار در مرحله تحقیقات مقدماتی به بازپرس مربوط است. پس از طرح پرونده در دادگاه، ماده ۲۴۴ به متهم اجازه می‌دهد درخواست تخفیف تأمین را از دادگاه مطرح کند. پذیرش درخواست، تغییر نوع قرار و آزادی متهم به تشخیص مرجع قضایی و شرایط پرونده بستگی دارد.
             </p>
           </div>
         </div>
@@ -208,7 +208,7 @@ export function BailReductionGuideSection() {
                   <td className="p-3">سند رسمی تک‌برگ ۶ دانگ، نظریه کارشناس ثبتی یا فیش واریز نقدی</td>
                   <td className="p-3 text-red-400 font-bold">بسیار سنگین</td>
                   <td className="p-3 text-red-400 font-bold">بازداشت فوری در زندان</td>
-                  <td className="p-3 text-emerald-400 font-bold">قابل تقلیل یا تبدیل (ماده ۲۴۳)</td>
+                  <td className="p-3 text-emerald-400 font-bold">قابل بررسی در تحقیقات مقدماتی (ماده ۲۴۳)</td>
                 </tr>
                 <tr>
                   <td className="p-3 font-bold text-sky-400">قرار کفالت</td>
@@ -229,14 +229,14 @@ export function BailReductionGuideSection() {
                   <td className="p-3">لایحه مستند به عدم تناسب، مدارک عدم تمکن مالی و سوابق متهم</td>
                   <td className="p-3 text-sky-300 font-bold">راهکار قانونی</td>
                   <td className="p-3 text-emerald-400 font-bold">کاهش ارزش سند و آزادی</td>
-                  <td className="p-3 text-emerald-400 font-bold">طبق ماده ۲۴۳ ق.آ.د.ک</td>
+                  <td className="p-3 text-emerald-400 font-bold">با توجه به مرحله پرونده و مواد ۲۴۳ و ۲۴۴ ق.آ.د.ک</td>
                 </tr>
                 <tr>
                   <td className="p-3 font-bold text-blue-400">تبدیل قرار تأمین</td>
                   <td className="p-3">معرفی کفیل یا وثیقه خفیف‌تر همراه لایحه تعویض قرار</td>
                   <td className="p-3 text-sky-300 font-bold">راهکار جایگزین</td>
                   <td className="p-3 text-emerald-400 font-bold">فک سند ملکی یا رهایی از بند</td>
-                  <td className="p-3 text-emerald-400 font-bold">در تمام مراحل دادرسی</td>
+                  <td className="p-3 text-emerald-400 font-bold">متناسب با مرحله پرونده (مواد ۲۴۳ و ۲۴۴)</td>
                 </tr>
               </tbody>
             </table>
