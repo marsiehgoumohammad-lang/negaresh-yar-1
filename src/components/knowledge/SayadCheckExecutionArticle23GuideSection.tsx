@@ -45,7 +45,7 @@ export function SayadCheckExecutionArticle23GuideSection() {
     if (userGoal === 'object-execution' || userGoal === 'stop-execution') {
       if (isConditionalOrGuarantee) {
         return {
-          title: 'طرح دعوای ابطال اجراییه به همراه درخواست دستور موقت توقف عملیات اجرایی',
+          title: 'طرح دعوای ماهوی متناسب و درخواست توقف عملیات اجرایی',
           badge: 'دفاع متعهد و صادرکننده',
           badgeColor: 'bg-amber-50 text-amber-800 border-amber-200',
           statusSummary:
@@ -63,11 +63,11 @@ export function SayadCheckExecutionArticle23GuideSection() {
           legalWarning:
             'صرف ادعای شفاهی کافی نیست. دادگاه با بررسی مدارک، در صورت احراز ظن قوی یا احتمال ضرر جبران ناپذیر می تواند با اخذ تامین مناسب قرار توقف صادر کند؛ در موارد مقرر در ماده ۲۳، توقف بدون تامین نیز ممکن است.',
           serviceLink: {
-            title: 'تنظیم تخصصی لایحه اعتراض و ابطال اجراییه چک',
+            title: 'تنظیم دعوای ماهوی متناسب و درخواست توقف عملیات اجرایی چک',
             href: '/services/check-claim',
           },
           sampleLink: {
-            title: 'نمونه دادخواست ابطال اجراییه چک ماده ۲۳',
+            title: 'نمونه دعوای ماهوی و درخواست توقف عملیات اجرایی چک ماده ۲۳',
             href: '/samples/check-execution-objection',
           },
         };
