@@ -361,7 +361,7 @@ export const administrativeLetterData: ServiceLandingData = {
   ],
 
   ctaTitle: 'سفارش تنظیم اختصاصی نامه اداری و عریضه رسمی',
-  ctaDescription: 'تنظیم تخصصی و فوری نامه اداری با رعایت تمامی اصول دبیرخانه ای همراه با پشتیبانی و بازبینی تکمیلی.',
+  ctaDescription: 'تنظیم تخصصی نامه اداری با رعایت اصول دبیرخانه ای، همراه با پشتیبانی و بازبینی تکمیلی.',
   ctaPrimaryBtnText: 'ثبت سفارش نامه اداری در پیام رسان',
   ctaPrimaryHref: '/request?service=administrative-letter',
 };
