@@ -6,10 +6,11 @@ import { MehriehCalculatorClient } from '@/components/calculators/MehriehCalcula
 import { ChevronLeft, Calculator, ArrowLeft } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'محاسبه آنلاین مهریه به نرخ روز با شاخص تورم بانک مرکزی ۱۴۰۳ - نگارش یار',
+  title: 'سامانه محاسبه آنلاین مهریه به نرخ روز | شاخص بانک مرکزی تا ۱۴۰۳ - نگارش یار',
   description:
-    'محاسبه آنلاین و رایگان مهریه وجه نقد به نرخ روز بر اساس آخرین جدول شاخص تورم بانک مرکزی جمهوری اسلامی ایران، طبق آیین‌نامه اجرایی تبصره الحاقی به ماده ۱۰۸۲ قانون مدنی.',
+    'سامانه محاسبه آنلاین مهریه به نرخ روز برای مهریه وجه نقد؛ محاسبه بر پایه شاخص سالانه بانک مرکزی تا ۱۴۰۳ انجام می شود. سال عقد و سال محاسبه را انتخاب کنید.',
   keywords: [
+    'سامانه محاسبه آنلاین مهریه به نرخ روز',
     'محاسبه آنلاین مهریه به نرخ روز',
     'محاسبه مهریه با شاخص بانک مرکزی',
     'فرمول محاسبه مهریه وجه نقد',
@@ -24,8 +25,8 @@ export const metadata: Metadata = {
     canonical: 'https://www.negaresh-yar.ir/calculators/mehrieh',
   },
   openGraph: {
-    title: 'محاسبه آنلاین مهریه به نرخ روز با شاخص بانک مرکزی | نگارش یار',
-    description: 'محاسبه فوری و دقیق ارزش روز مهریه بر اساس ماده ۱۰۸۲ قانون مدنی و شاخص تورم بانک مرکزی.',
+    title: 'سامانه محاسبه آنلاین مهریه به نرخ روز | شاخص بانک مرکزی تا ۱۴۰۳ | نگارش یار',
+    description: 'محاسبه مهریه وجه نقد با شاخص سالانه بانک مرکزی تا ۱۴۰۳؛ سال عقد و سال محاسبه را انتخاب کنید.',
     url: 'https://www.negaresh-yar.ir/calculators/mehrieh',
     siteName: 'نگارش یار',
     locale: 'fa_IR',
@@ -39,7 +40,7 @@ export default function MehriehCalculatorPage() {
     '@graph': [
       {
         '@type': 'SoftwareApplication',
-        name: 'محاسبه‌گر آنلاین مهریه به نرخ روز نگارش یار',
+        name: 'سامانه محاسبه آنلاین مهریه به نرخ روز نگارش یار',
         operatingSystem: 'All',
         applicationCategory: 'BusinessApplication',
         offers: {
@@ -47,7 +48,7 @@ export default function MehriehCalculatorPage() {
           price: '0',
           priceCurrency: 'IRR',
         },
-        description: 'ابزار محاسبه مهریه وجه نقد بر اساس شاخص بانک مرکزی جمهوری اسلامی ایران و قانون مدنی',
+        description: 'ابزار محاسبه مهریه وجه نقد بر پایه شاخص سالانه بانک مرکزی؛ داده های قابل انتخاب در نسخه فعلی تا سال ۱۴۰۳ ثبت شده است.',
       },
       {
         '@type': 'FAQPage',
@@ -83,7 +84,7 @@ export default function MehriehCalculatorPage() {
         itemListElement: [
           { '@type': 'ListItem', position: 1, name: 'صفحه اصلی', item: 'https://www.negaresh-yar.ir' },
           { '@type': 'ListItem', position: 2, name: 'محاسبه‌گرهای حقوقی', item: 'https://www.negaresh-yar.ir/calculators' },
-          { '@type': 'ListItem', position: 3, name: 'محاسبه‌گر مهریه به نرخ روز', item: 'https://www.negaresh-yar.ir/calculators/mehrieh' },
+          { '@type': 'ListItem', position: 3, name: 'سامانه محاسبه آنلاین مهریه به نرخ روز', item: 'https://www.negaresh-yar.ir/calculators/mehrieh' },
         ],
       },
     ],
@@ -106,7 +107,7 @@ export default function MehriehCalculatorPage() {
             محاسبه‌گرهای حقوقی
           </Link>
           <ChevronLeft className="w-3.5 h-3.5" />
-          <span className="text-[#E5C158] font-bold">محاسبه‌گر مهریه به نرخ روز</span>
+          <span className="text-[#E5C158] font-bold">سامانه محاسبه آنلاین مهریه به نرخ روز</span>
         </nav>
 
         {/* Header Hero */}
@@ -116,15 +117,44 @@ export default function MehriehCalculatorPage() {
             <span>محاسبه رسمی شاخص بهای کالاها و خدمات مصرفی (CPI)</span>
           </div>
           <h1 className="text-2xl sm:text-4xl font-black text-white leading-tight">
-            محاسبه آنلاین مهریه به نرخ روز با شاخص بانک مرکزی
+            سامانه محاسبه آنلاین مهریه به نرخ روز
           </h1>
           <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
-            با وارد کردن مبلغ مهریه ثبت‌شده در عقدنامه و انتخاب سال عقد و سال وصول، ارزش ریالی روز مهریه را مطابق با فرمول دادگاه‌های خانواده و شاخص رسمی بانک مرکزی محاسبه کنید.
+            مبلغ مهریه وجه نقد را وارد کنید و سال عقد و سال محاسبه یا وصول را انتخاب کنید. این ابزار بر پایه شاخص سالانه بانک مرکزی تا ۱۴۰۳ محاسبه می کند.
           </p>
         </div>
 
         {/* Client Interactive Calculator Component */}
         <MehriehCalculatorClient />
+
+        <section className="mt-12 rounded-2xl border border-slate-800 bg-slate-900/50 p-6 sm:p-8 space-y-6">
+          <div className="max-w-3xl space-y-3">
+            <h2 className="text-xl sm:text-2xl font-black text-white">روش محاسبه مهریه وجه نقد با شاخص سالانه</h2>
+            <p className="text-sm text-slate-300 leading-8">در این سامانه، مبلغ اولیه مهریه در نسبت شاخص سال محاسبه به شاخص سال وقوع عقد ضرب می شود. این محاسبه برای مهریه وجه نقد است و شاخص تورم برای تبدیل تعداد سکه به مبلغ ریالی به کار نمی رود.</p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+            <div className="rounded-xl bg-slate-800/60 p-5 space-y-3">
+              <h3 className="text-base font-bold text-white">مراحل استفاده از سامانه</h3>
+              <ol className="list-decimal pr-5 space-y-2 text-sm text-slate-300 leading-7">
+                <li>مبلغ مهریه درج شده در عقدنامه را وارد کنید.</li>
+                <li>واحد مبلغ را بین ریال و تومان انتخاب کنید.</li>
+                <li>سال وقوع عقد و سال محاسبه یا وصول را مشخص کنید.</li>
+                <li>مبلغ محاسبه شده و شاخص های نمایش داده شده را بررسی کنید.</li>
+              </ol>
+            </div>
+            <div className="rounded-xl bg-slate-800/60 p-5 space-y-3">
+              <h3 className="text-base font-bold text-white">محدوده شاخص های قابل انتخاب</h3>
+              <p className="text-sm text-slate-300 leading-7">در داده های فعلی این ابزار، شاخص سالانه تا ۱۴۰۳ ثبت شده است. برای محاسبه سال های بعد، باید داده رسمی مربوط به آن سال به مجموعه شاخص ها افزوده و اعتبارسنجی شود؛ بنابراین نسخه فعلی برای سال های بعد از ۱۴۰۳ خروجی قابل اتکا ارائه نمی کند.</p>
+            </div>
+          </div>
+
+          <div className="max-w-3xl space-y-3">
+            <h3 className="text-base font-bold text-white">این ابزار برای مهریه سکه ای نیست</h3>
+            <p className="text-sm text-slate-300 leading-7">اگر مهریه در عقدنامه به تعداد سکه تعیین شده باشد، محاسبه با شاخص CPI انجام نمی شود. این ابزار برای مهریه وجه نقد، یعنی مبلغ ریالی یا تومانی، طراحی شده است.</p>
+            <p className="text-sm text-slate-300 leading-7">برای آشنایی با مراحل طرح دعوای مهریه، <Link href="/samples/mahrieh-court-petition" className="font-bold text-[#E5C158] hover:text-amber-300">نمونه دادخواست مطالبه مهریه</Link> را ببینید.</p>
+          </div>
+        </section>
 
         {/* Related Cluster Resources */}
         <section className="mt-16 pt-12 border-t border-slate-800 space-y-6">
